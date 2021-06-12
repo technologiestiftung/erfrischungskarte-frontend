@@ -13,11 +13,11 @@ const WIND_DATA: PolygonLayerType = {
   },
   fillColorProperty: '9Uhr',
   fillColorMap: new Map([
-    [1, '#ffffff'],
-    [2, '#CAEAC3'],
-    [3, '#7BC87C'],
-    [4, '#2A924A'],
-    [5, '#00441B'],
+    [1, 'rgba(0,68,27,100)'],
+    [2, 'rgba(42,146,74,100)'],
+    [3, 'rgba(123,200,124,100)'],
+    [4, 'rgba(202,234,195,100)'],
+    [5, 'rgba(255,255,255,0)'],
   ]),
 }
 
@@ -29,11 +29,11 @@ const TEMPERATURE_DATA: PolygonLayerType = {
   },
   fillColorProperty: '9Uhr',
   fillColorMap: new Map([
-    [1, '#ffffff'],
-    [2, '#C8DDF0'],
-    [3, '#73B3D8'],
-    [4, '#2879B9'],
-    [5, '#08306B'],
+    [1, 'rgba(8,48,107,100)'],
+    [2, 'rgba(40,121,185,100)'],
+    [3, 'rgba(115,179,216,100)'],
+    [4, 'rgba(200,221,240,100)'],
+    [5, 'rgba(255,255,255,0)'],
   ]),
 }
 

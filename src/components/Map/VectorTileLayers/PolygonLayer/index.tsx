@@ -1,6 +1,5 @@
 import { FC } from 'react'
 import { Source, Layer, LayerProps } from 'react-map-gl'
-
 export interface PolygonLayerType {
   id: string
   tileset: {
@@ -28,8 +27,8 @@ export const PolygonLayer: FC<PolygonLayerType> = ({
         'match',
         ['get', `${fillColorProperty}`],
         ...flattenedFillColorMap,
-        /* fallback color */
-        '#fff',
+        /* fallback color (transparent) */
+        'rgba(255,255,255,0)',
       ],
       'fill-opacity': 0.5,
     },
