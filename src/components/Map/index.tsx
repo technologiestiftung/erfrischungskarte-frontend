@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import { useState } from 'react'
 import ReactMapGL from 'react-map-gl'
+import 'mapbox-gl/dist/mapbox-gl.css'
 
 export const Map: FC<{ width?: number; height?: number }> = ({
   width = 800,
