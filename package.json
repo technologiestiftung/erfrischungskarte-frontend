@@ -32,8 +32,8 @@
     "react-map-gl": "6.1.16"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "5.14.1",
     "@testing-library/react": "^11.2.5",
-    "@types/jest": "^26.0.20",
     "@types/node": "^14.14.25",
     "@types/react": "^17.0.1",
     "@types/react-map-gl": "5.2.9",
