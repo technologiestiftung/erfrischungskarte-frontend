@@ -1,4 +1,5 @@
-import { FC } from 'react'
+import { FC, useState } from 'react'
+import { FullScreenMapWrapper } from '../../layouts/FullScreenMapWrapper'
 import { Map as MapRoot } from '../../components/Map'
 import {
   PolygonLayer,
@@ -6,11 +7,25 @@ import {
 } from '../../components/Map/VectorTileLayers'
 import { TilesetFeatureKeys } from './RefreshmentMap.types'
 
-const defaultActiveHour: TilesetFeatureKeys = '14Uhr'
+export const RefreshmentMap: FC = () => {
+  const HOUR_KEYS: TilesetFeatureKeys[] = [
+    '9Uhr',
+    '10Uhr',
+    '11Uhr',
+    '12Uhr',
+    '13Uhr',
+    '14Uhr',
+    '15Uhr',
+    '16Uhr',
+    '17Uhr',
+    '18Uhr',
+    '19Uhr',
+    '20Uhr',
+    '21Uhr',
+  ]
 
-export const RefreshmentMap: FC<{ activeHour: TilesetFeatureKeys }> = ({
-  activeHour = defaultActiveHour,
-}) => {
+  const [activeHour, setActiveHour] = useState(HOUR_KEYS[0])
+
   const WIND_DATA: PolygonLayerType = {
     id: 'wind-data',
     tileset: {
@@ -44,9 +59,38 @@ export const RefreshmentMap: FC<{ activeHour: TilesetFeatureKeys }> = ({
   }
 
   return (
-    <MapRoot>
-      <PolygonLayer {...WIND_DATA} />
-      <PolygonLayer {...TEMPERATURE_DATA} />
-    </MapRoot>
+    <FullScreenMapWrapper
+      topLeft={<div className="bg-white shadow">Top left placeholder</div>}
+      topRight={
+        <select
+          name="hours"
+          id="hour-select"
+          className="bg-white shadow"
+          // Just a placeholder, so ts-ignored for now:
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+          // @ts-ignore
+          onChange={(e) => setActiveHour(e.target.value)}
+        >
+          {HOUR_KEYS.map((hourKey) => {
+            return (
+              <option key={hourKey} value={hourKey}>
+                {hourKey}
+              </option>
+            )
+          })}
+        </select>
+      }
+      bottomLeft={
+        <div className="bg-white shadow">Bottom left placeholder</div>
+      }
+      bottomRight={
+        <div className="bg-white shadow">Bottom right placeholder</div>
+      }
+    >
+      <MapRoot>
+        <PolygonLayer {...WIND_DATA} />
+        <PolygonLayer {...TEMPERATURE_DATA} />
+      </MapRoot>
+    </FullScreenMapWrapper>
   )
 }

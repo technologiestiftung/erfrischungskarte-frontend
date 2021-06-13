@@ -3,16 +3,122 @@
 exports[`Home page matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    style="position: relative; width: 800px; height: 500px; cursor: grab; outline: none;"
-    tabindex="0"
+    class="w-screen h-screen"
   >
     <div
-      style="position: relative; width: 100%; height: 100%;"
+      style="position: relative; width: 800px; height: 500px; cursor: grab; outline: none;"
+      tabindex="0"
     >
       <div
-        class=""
-        style="position: absolute; width: 100%; height: 100%; overflow: hidden; visibility: inherit;"
-      />
+        style="position: relative; width: 100%; height: 100%;"
+      >
+        <div
+          class=""
+          style="position: absolute; width: 100%; height: 100%; overflow: hidden; visibility: inherit;"
+        />
+      </div>
+    </div>
+    <div
+      class="fixed top-4 left-4"
+    >
+      <div
+        class="bg-white shadow"
+      >
+        Top left placeholder
+      </div>
+    </div>
+    <div
+      class="fixed top-4 right-4"
+    >
+      <select
+        class="bg-white shadow"
+        id="hour-select"
+        name="hours"
+      >
+        <option
+          value="9Uhr"
+        >
+          9Uhr
+        </option>
+        <option
+          value="10Uhr"
+        >
+          10Uhr
+        </option>
+        <option
+          value="11Uhr"
+        >
+          11Uhr
+        </option>
+        <option
+          value="12Uhr"
+        >
+          12Uhr
+        </option>
+        <option
+          value="13Uhr"
+        >
+          13Uhr
+        </option>
+        <option
+          value="14Uhr"
+        >
+          14Uhr
+        </option>
+        <option
+          value="15Uhr"
+        >
+          15Uhr
+        </option>
+        <option
+          value="16Uhr"
+        >
+          16Uhr
+        </option>
+        <option
+          value="17Uhr"
+        >
+          17Uhr
+        </option>
+        <option
+          value="18Uhr"
+        >
+          18Uhr
+        </option>
+        <option
+          value="19Uhr"
+        >
+          19Uhr
+        </option>
+        <option
+          value="20Uhr"
+        >
+          20Uhr
+        </option>
+        <option
+          value="21Uhr"
+        >
+          21Uhr
+        </option>
+      </select>
+    </div>
+    <div
+      class="fixed bottom-4 left-4"
+    >
+      <div
+        class="bg-white shadow"
+      >
+        Bottom left placeholder
+      </div>
+    </div>
+    <div
+      class="fixed bottom-4 right-4"
+    >
+      <div
+        class="bg-white shadow"
+      >
+        Bottom right placeholder
+      </div>
     </div>
   </div>
 </DocumentFragment>
