@@ -34,6 +34,7 @@ export const RefreshmentMap: FC = () => {
     },
     fillColorProperty: activeHour,
     fillColorMap: new Map([
+      // TODO: confirm if this is the right order/meaning of values. Might have to be reversed
       [1, 'rgba(0,68,27,100)'],
       [2, 'rgba(42,146,74,100)'],
       [3, 'rgba(123,200,124,100)'],
