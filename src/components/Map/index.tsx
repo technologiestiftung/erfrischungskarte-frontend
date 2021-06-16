@@ -3,12 +3,17 @@ import { useState } from 'react'
 import ReactMapGL, { ViewportProps } from 'react-map-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 
-export const Map: FC<ViewportProps> = ({
+interface MapProps extends ViewportProps {
+  mapStyle: string
+}
+
+export const Map: FC<MapProps> = ({
   width,
   height,
   latitude,
   longitude,
   zoom,
+  mapStyle,
   children,
   ...otherViewportProps
 }) => {
@@ -33,6 +38,7 @@ export const Map: FC<ViewportProps> = ({
   return (
     <ReactMapGL
       {...viewport}
+      mapStyle={mapStyle}
       mapboxApiAccessToken={process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN}
       onViewportChange={(nextViewport: ViewportProps) =>
         setViewport(nextViewport)
