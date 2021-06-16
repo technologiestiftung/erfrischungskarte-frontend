@@ -14,9 +14,9 @@ interface SidebarPropType {
 }
 
 const pages = [
-  { path: '/filters', icon: <FunnelIcon /> },
-  { path: '/search', icon: <MagnifyingGlassIcon /> },
-  { path: '/about', icon: <InfoIcon /> },
+  { title: 'Filters', path: '/filters', icon: <FunnelIcon /> },
+  { title: 'Suche', path: '/search', icon: <MagnifyingGlassIcon /> },
+  { title: 'Über das Projekt', path: '/about', icon: <InfoIcon /> },
 ]
 
 export const Sidebar: FC<SidebarPropType> = ({ title, children }) => {
@@ -70,19 +70,28 @@ export const Sidebar: FC<SidebarPropType> = ({ title, children }) => {
         }}
       >
         <ul
-          className={classNames(
-            'flex flex-col bg-white rounded',
-            'shadow-lg overflow-hidden'
-          )}
+          className={classNames('flex flex-col bg-white rounded', 'shadow-lg')}
         >
-          {pages.map(({ path, icon }) => (
+          {pages.map(({ path, icon, title }) => (
             <li
               key={path}
               className={classNames(
-                'h-16',
+                'h-16 group relative first:rounded-t last:rounded-b',
                 pathname === path && 'bg-gray-800 text-white'
               )}
             >
+              <span
+                className={classNames(
+                  'transition opacity-0 px-3 py-1',
+                  'rounded bg-gray-800 text-white transform',
+                  'absolute left-full top-1/2 whitespace-nowrap',
+                  'translate-x-2 delay-1000 pointer-events-none',
+                  '-translate-y-1/2 group-hover:opacity-100',
+                  'group-hover:delay-0 bg-opacity-90'
+                )}
+              >
+                {title}
+              </span>
               <InternalLink
                 href={pathname === path ? '/map' : path}
                 className={classNames(
