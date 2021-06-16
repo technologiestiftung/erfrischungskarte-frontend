@@ -32,12 +32,7 @@ const SidebarNavLink: FC<SidebarNavLinkPropType> = ({
   icon,
   isActive,
 }) => (
-  <li
-    className={classNames(
-      'h-16 group relative first:rounded-t last:rounded-b',
-      isActive && 'bg-gray-800 text-white active'
-    )}
-  >
+  <li className={classNames('h-16 group relative')}>
     <span
       className={classNames(
         'transition opacity-0 px-3 py-1',
@@ -52,7 +47,14 @@ const SidebarNavLink: FC<SidebarNavLinkPropType> = ({
     </span>
     <InternalLink
       href={isActive ? '/map' : path}
-      className={classNames('w-full h-full', 'grid place-items-center')}
+      className={classNames(
+        'transition',
+        'group-first:rounded-t group-last:rounded-b',
+        'w-full h-full grid place-items-center focus:rounded',
+        'hover:bg-gray-200 focus:ring-offset-2 focus:ring-offset-white',
+        'focus:ring-2 focus:ring-gray-800 focus:outline-none',
+        isActive && 'bg-gray-800 text-white active'
+      )}
     >
       {isActive ? <CrossIcon /> : icon}
     </InternalLink>
