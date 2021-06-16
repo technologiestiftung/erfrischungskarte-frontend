@@ -4,7 +4,7 @@ import ReactMapGL, { ViewportProps } from 'react-map-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 
 interface MapProps extends ViewportProps {
-  mapStyle: string
+  mapStyle?: string
 }
 
 export const Map: FC<MapProps> = ({
