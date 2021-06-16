@@ -3,10 +3,16 @@ import { FullScreenMapWrapper } from '../../layouts/FullScreenMapWrapper'
 import { Map as MapRoot } from '../../components/Map'
 import { MapFilledPolygonLayer as FilledPolygonLayer } from '../../components/MapFilledPolygonLayer'
 import { useWindowSize } from '../../lib/hooks/useWindowSize'
-import { HOURS, TEMPERATURE_DATA, WIND_DATA } from './content'
 import { isMobile } from 'react-device-detect'
 import { MapControls } from '../../components/MapControls'
+import {
+  EXTRUDED_BUILDINGS_DATA,
+  HOURS,
+  TEMPERATURE_DATA,
+  WIND_DATA,
+} from './content'
 import { MapRasterLayer as RasterLayer } from '../../components/MapRasterLayer'
+import { MapExtrusionLayer as ExtrusionLayer } from '../../components/MapExtrusionLayer'
 
 export const RefreshmentMap: FC = () => {
   const { width: windowWidth, height: windowHeight } = useWindowSize()
@@ -61,9 +67,10 @@ export const RefreshmentMap: FC = () => {
           id="shade-data"
           url={activeHour.shadeTilesetId}
           bounds={[13.06, 52.33, 13.77, 52.69]}
-          minZoom={17}
+          minZoom={14}
           opacity={0.5}
         />
+        <ExtrusionLayer {...EXTRUDED_BUILDINGS_DATA} />
       </MapRoot>
     </FullScreenMapWrapper>
   )

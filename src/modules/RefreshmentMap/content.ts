@@ -1,3 +1,4 @@
+import { MapExtrusionLayerType } from '../../components/MapExtrusionLayer'
 import { MapFilledPolygonLayerType } from '../../components/MapFilledPolygonLayer'
 
 export const HOURS = {
@@ -100,4 +101,17 @@ export const TEMPERATURE_DATA: Pick<
     [4, 'rgba(200,221,240,100)'],
     [5, 'rgba(255,255,255,0)'],
   ]),
+}
+
+export const EXTRUDED_BUILDINGS_DATA: MapExtrusionLayerType = {
+  id: '3d-buildings',
+  url: 'mapbox://mapbox.mapbox-streets-v8',
+  source: 'composite',
+  sourceLayer: 'building',
+  minzoom: 15.5,
+  extrusionProperties: {
+    base: 'min_height',
+    height: 'height',
+  },
+  extrusionColor: '#eee',
 }
