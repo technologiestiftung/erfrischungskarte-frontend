@@ -12,18 +12,13 @@ interface ViewportType {
   zoom: number
 }
 
-interface MapProps extends ViewportType {
-  isMobile: boolean
-}
-
-export const Map: FC<MapProps> = ({
+export const Map: FC<ViewportType> = ({
   width,
   height,
   latitude,
   longitude,
   zoom,
   children,
-  isMobile,
 }) => {
   const [viewport, setViewport] = useState<ViewportType>({
     width,
@@ -50,7 +45,6 @@ export const Map: FC<MapProps> = ({
         setViewport(nextViewport)
       }
     >
-      <MapControls isMobile={isMobile} />
       {children}
     </ReactMapGL>
   )

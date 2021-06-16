@@ -2,10 +2,10 @@ import React, { FC } from 'react'
 import { NavigationControl, GeolocateControl } from 'react-map-gl'
 
 export const MapControls: FC<{
-  isMobile: boolean
-}> = ({ isMobile }) => {
+  className: string
+}> = ({ className }) => {
   return (
-    <div className={`absolute right-4 ${isMobile ? 'top-4' : 'bottom-4'}`}>
+    <div className={className}>
       <GeolocateControl
         positionOptions={{ enableHighAccuracy: true }}
         style={{ position: 'static' }}
