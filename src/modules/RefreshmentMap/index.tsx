@@ -10,9 +10,11 @@ import {
   HOURS,
   TEMPERATURE_DATA,
   WIND_DATA,
+  POI_DATA,
 } from './content'
 import { MapRasterLayer as RasterLayer } from '../../components/MapRasterLayer'
 import { MapExtrusionLayer as ExtrusionLayer } from '../../components/MapExtrusionLayer'
+import { MapPointLayer } from '@components/MapPointLayer'
 
 export const RefreshmentMap: FC = () => {
   const { width: windowWidth, height: windowHeight } = useWindowSize()
@@ -74,6 +76,7 @@ export const RefreshmentMap: FC = () => {
           opacity={0.5}
         />
         <ExtrusionLayer {...EXTRUDED_BUILDINGS_DATA} />
+        <MapPointLayer {...POI_DATA} />
       </MapRoot>
     </FullScreenMapWrapper>
   )

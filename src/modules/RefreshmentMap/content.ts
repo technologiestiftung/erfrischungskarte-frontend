@@ -1,3 +1,4 @@
+import { MapPointLayerType } from '@components/MapPointLayer'
 import { MapExtrusionLayerType } from '../../components/MapExtrusionLayer'
 import { MapFilledPolygonLayerType } from '../../components/MapFilledPolygonLayer'
 
@@ -114,4 +115,42 @@ export const EXTRUDED_BUILDINGS_DATA: MapExtrusionLayerType = {
     height: 'height',
   },
   extrusionColor: '#eee',
+}
+
+type PoiCategory =
+  | 'Sitzbank'
+  | 'Picknicktisch'
+  | 'Gruenanlage'
+  | 'Trinkbrunnen'
+  | 'Brunnen'
+  | 'Wasserspielplatz'
+  | 'Badestelle'
+  | 'Strandbad'
+  | 'Freibad'
+  | 'Schwimmhalle'
+
+export interface PoiDataType extends MapPointLayerType {
+  fillColorMap: Map<PoiCategory, string>
+}
+
+export const POI_DATA: PoiDataType = {
+  id: 'poi-data',
+  tileset: {
+    url: 'mapbox://technologiestiftung.a9f6qix2',
+    layerName: 'erfrischungskarte_poi-0mftmq',
+  },
+  minzoom: 12,
+  fillColorProperty: 'category',
+  fillColorMap: new Map([
+    ['Gruenanlage', '#B2DF8A'],
+    ['Badestelle', '#09AAA4'],
+    ['Strandbad', '#09AAA4'],
+    ['Badestelle', '#09AAA4'],
+    ['Freibad', '#09AAA4'],
+    ['Schwimmhalle', '#09AAA4'],
+    ['Brunnen', '#A6CEE3'],
+    ['Trinkbrunnen', '#A6CEE3'],
+    ['Sitzbank', '#C37D3C'],
+    ['Picknicktisch', '#C37D3C'],
+  ]),
 }
