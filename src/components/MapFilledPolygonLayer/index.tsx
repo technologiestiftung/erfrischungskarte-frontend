@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { Source, Layer, LayerProps } from 'react-map-gl'
-export interface PolygonLayerType {
+export interface MapFilledPolygonLayerType {
   id: string
   tileset: {
     url: string
@@ -10,7 +10,7 @@ export interface PolygonLayerType {
   fillColorProperty: string
 }
 
-export const PolygonLayer: FC<PolygonLayerType> = ({
+export const MapFilledPolygonLayer: FC<MapFilledPolygonLayerType> = ({
   id,
   tileset,
   fillColorMap,

@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react'
 import { FullScreenMapWrapper } from '../../layouts/FullScreenMapWrapper'
 import { Map as MapRoot } from '../../components/Map'
-import { PolygonLayer } from '../../components/Map/VectorTileLayers'
+import { MapFilledPolygonLayer as FilledPolygonLayer } from '../../components/MapFilledPolygonLayer'
 import { useWindowSize } from '../../lib/hooks/useWindowSize'
 import { HOURS, TEMPERATURE_DATA, WIND_DATA } from './content'
 
@@ -46,8 +46,11 @@ export const RefreshmentMap: FC = () => {
         longitude={13.400033}
         zoom={13}
       >
-        <PolygonLayer {...WIND_DATA} fillColorProperty={activeHour} />
-        <PolygonLayer {...TEMPERATURE_DATA} fillColorProperty={activeHour} />
+        <FilledPolygonLayer {...WIND_DATA} fillColorProperty={activeHour} />
+        <FilledPolygonLayer
+          {...TEMPERATURE_DATA}
+          fillColorProperty={activeHour}
+        />
       </MapRoot>
     </FullScreenMapWrapper>
   )

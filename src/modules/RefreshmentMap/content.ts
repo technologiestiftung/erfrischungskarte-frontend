@@ -1,4 +1,4 @@
-import { PolygonLayerType } from '../../components/Map/VectorTileLayers'
+import { MapFilledPolygonLayerType } from '../../components/MapFilledPolygonLayer'
 
 export const HOURS = [
   {
@@ -54,7 +54,7 @@ export const HOURS = [
 export type QuantileValues = 1 | 2 | 3 | 4 | 5
 
 export const WIND_DATA: Pick<
-  PolygonLayerType,
+  MapFilledPolygonLayerType,
   'id' | 'tileset' | 'fillColorMap'
 > = {
   id: 'wind-data',
@@ -73,7 +73,7 @@ export const WIND_DATA: Pick<
 }
 
 export const TEMPERATURE_DATA: Pick<
-  PolygonLayerType,
+  MapFilledPolygonLayerType,
   'id' | 'tileset' | 'fillColorMap'
 > = {
   id: 'temperature-data',
