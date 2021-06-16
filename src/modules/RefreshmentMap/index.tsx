@@ -43,7 +43,9 @@ export const RefreshmentMap: FC = () => {
         longitude={13.400033}
         zoom={13}
       >
-        <MapControls className={`absolute right-4 ${isMobile ? 'top-4' : 'bottom-4'}`} />
+        <MapControls
+          className={`absolute right-4 ${isMobile ? 'top-4' : 'bottom-4'}`}
+        />
         <FilledPolygonLayer {...WIND_DATA} fillColorProperty={activeHour} />
         <FilledPolygonLayer
           {...TEMPERATURE_DATA}
