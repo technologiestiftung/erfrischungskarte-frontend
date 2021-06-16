@@ -51,6 +51,8 @@ export const HOURS = [
   },
 ]
 
+export type QuantileValues = 1 | 2 | 3 | 4 | 5
+
 export const WIND_DATA: Pick<
   PolygonLayerType,
   'id' | 'tileset' | 'fillColorMap'
