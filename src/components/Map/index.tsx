@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react'
+import { FC, ReactNode, useEffect } from 'react'
 import { useState } from 'react'
 import ReactMapGL from 'react-map-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
@@ -7,7 +7,7 @@ export const Map: FC<{
   width?: number
   height?: number
   children?: ReactNode
-}> = ({ width = 800, height = 500, children }) => {
+}> = ({ width, height, children }) => {
   const [viewport, setViewport] = useState({
     width,
     height,
@@ -15,6 +15,14 @@ export const Map: FC<{
     longitude: 13.400033,
     zoom: 13,
   })
+
+  useEffect(() => {
+    setViewport({
+      ...viewport,
+      width,
+      height,
+    })
+  }, [width, height])
 
   return (
     <ReactMapGL

@@ -6,7 +6,7 @@ exports[`Home page matches snapshot 1`] = `
     class="w-screen h-screen"
   >
     <div
-      style="position: relative; width: 800px; height: 500px; cursor: grab; outline: none;"
+      style="position: relative; cursor: grab; outline: none; width: 1024px; height: 768px;"
       tabindex="0"
     >
       <div
@@ -35,11 +35,6 @@ exports[`Home page matches snapshot 1`] = `
         id="hour-select"
         name="hours"
       >
-        <option
-          value="9Uhr"
-        >
-          9Uhr
-        </option>
         <option
           value="10Uhr"
         >
