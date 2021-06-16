@@ -16,6 +16,7 @@ export interface MapExtrusionLayerType
 }
 
 export const MapExtrusionLayer: FC<MapExtrusionLayerType> = ({
+  id,
   url,
   source,
   sourceLayer,
@@ -25,7 +26,7 @@ export const MapExtrusionLayer: FC<MapExtrusionLayerType> = ({
 }) => {
   return (
     <>
-      <Source id="3d-buildings" type="vector" url={url} />
+      <Source id={id} type="vector" url={url} />
       <Layer
         type="fill-extrusion"
         source={source}
