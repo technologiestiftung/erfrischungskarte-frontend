@@ -4,6 +4,8 @@ import { Map as MapRoot } from '../../components/Map'
 import { MapFilledPolygonLayer as FilledPolygonLayer } from '../../components/MapFilledPolygonLayer'
 import { useWindowSize } from '../../lib/hooks/useWindowSize'
 import { HOURS, TEMPERATURE_DATA, WIND_DATA } from './content'
+import { isMobile } from 'react-device-detect'
+import { MapControls } from '../../components/MapControls'
 
 export const RefreshmentMap: FC = () => {
   const { width: windowWidth, height: windowHeight } = useWindowSize()
@@ -33,9 +35,6 @@ export const RefreshmentMap: FC = () => {
       bottomLeft={
         <div className="bg-white shadow">Bottom left placeholder</div>
       }
-      bottomRight={
-        <div className="bg-white shadow">Bottom right placeholder</div>
-      }
     >
       <MapRoot
         width={windowWidth}
@@ -44,6 +43,9 @@ export const RefreshmentMap: FC = () => {
         longitude={13.400033}
         zoom={13}
       >
+        <MapControls
+          className={`absolute right-4 ${isMobile ? 'top-4' : 'bottom-4'}`}
+        />
         <FilledPolygonLayer {...WIND_DATA} fillColorProperty={activeHour} />
         <FilledPolygonLayer
           {...TEMPERATURE_DATA}
