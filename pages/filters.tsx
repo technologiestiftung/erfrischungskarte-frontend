@@ -6,12 +6,12 @@ import { FC } from 'react'
 // eslint-disable-next-line @typescript-eslint/require-await
 export const getServerSideProps: GetServerSideProps = async ({ query }) => ({
   props: {
-    title: 'Über das Projekt',
+    title: 'Ansicht filtern',
     query,
   },
 })
 
-export const About: FC<{
+export const Filters: FC<{
   query: ReturnType<typeof mapRawQueryToState>
 }> = ({ query }) => (
   <div>
@@ -20,4 +20,4 @@ export const About: FC<{
   </div>
 )
 
-export default About
+export default Filters

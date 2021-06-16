@@ -5,6 +5,7 @@ import { mapRawQueryToState } from '@lib/utils/queryUtil'
 
 interface InternalLinkPropType extends LinkProps {
   href: string
+  className?: string
 }
 
 const serialize = (obj: Record<string, unknown>): string => {
@@ -16,7 +17,12 @@ const serialize = (obj: Record<string, unknown>): string => {
   return str.join('&')
 }
 
-export const InternalLink: FC<InternalLinkPropType> = ({ href, ...rest }) => {
+export const InternalLink: FC<InternalLinkPropType> = ({
+  href,
+  children,
+  className = '',
+  ...rest
+}) => {
   const { query } = useRouter()
   const cleanedQuery = mapRawQueryToState(query)
   const queryAsString = serialize(cleanedQuery)
@@ -29,7 +35,9 @@ export const InternalLink: FC<InternalLinkPropType> = ({ href, ...rest }) => {
       }}
       {...rest}
     >
-      <a href="/">Home</a>
+      <a href={href} className={className}>
+        {children}
+      </a>
     </Link>
   )
 }
