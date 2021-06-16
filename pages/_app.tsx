@@ -4,6 +4,7 @@ import { ParsedUrlQuery } from 'querystring'
 import { StrictMode, FC } from 'react'
 import Head from 'next/head'
 import '../src/style/global.css'
+import '../src/components/MapControls/mapControls.css'
 
 interface PagePropType extends Record<string, unknown> {
   title?: string
