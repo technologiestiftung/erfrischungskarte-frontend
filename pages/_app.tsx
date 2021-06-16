@@ -1,5 +1,6 @@
 import { StrictMode, FC } from 'react'
 import '../src/style/global.css'
+import '../src/components/MapControls/mapControls.css'
 
 const App: FC<{
   Component: FC
