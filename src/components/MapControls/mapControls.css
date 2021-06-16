@@ -12,6 +12,11 @@
 .mapboxgl-ctrl-zoom-in {
   margin: 1em 0;
 }
+
+.mapboxgl-ctrl-group button:focus {
+    box-shadow: 0px 2px 16px -8px #000000e5 !important;
+}
+
 .mapboxgl-ctrl-group button {
   box-shadow: 0px 2px 16px -8px #000000e5;
   border-radius: 100%;
