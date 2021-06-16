@@ -6,7 +6,7 @@ import { FC } from 'react'
 // eslint-disable-next-line @typescript-eslint/require-await
 export const getServerSideProps: GetServerSideProps = async ({ query }) => ({
   props: {
-    title: 'Karte',
+    title: 'Über das Projekt',
     query,
   },
 })
@@ -15,8 +15,8 @@ export const Home: FC<{
   query: ReturnType<typeof mapRawQueryToState>
 }> = ({ query }) => (
   <div>
-    <InternalLink href="/about">
-      <a href="/about">Home</a>
+    <InternalLink href="/">
+      <a href="/">Home</a>
     </InternalLink>
     <pre>{JSON.stringify(query, null, 2)}</pre>
   </div>
