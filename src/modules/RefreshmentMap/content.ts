@@ -1,55 +1,67 @@
 import { MapFilledPolygonLayerType } from '../../components/MapFilledPolygonLayer'
 
-export const HOURS = [
-  {
-    id: 10,
-    vectorTilesetId: '10Uhr',
+export const HOURS = {
+  '10': {
+    displayName: '10 Uhr',
+    vectorTilesetKey: '10Uhr',
+    shadeTilesetId: 'mapbox://technologiestiftung.atdnvldm',
   },
-  {
-    id: 11,
-    vectorTilesetId: '11Uhr',
+  '11': {
+    displayName: '11 Uhr',
+    vectorTilesetKey: '11Uhr',
+    shadeTilesetId: 'mapbox://technologiestiftung.atdnvldm',
   },
-  {
-    id: 12,
-    vectorTilesetId: '12Uhr',
+  '12': {
+    displayName: '12 Uhr',
+    vectorTilesetKey: '12Uhr',
+    shadeTilesetId: 'mapbox://technologiestiftung.atdnvldm',
   },
-  {
-    id: 13,
-    vectorTilesetId: '13Uhr',
+  '13': {
+    displayName: '13 Uhr',
+    vectorTilesetKey: '13Uhr',
+    shadeTilesetId: 'mapbox://technologiestiftung.atdnvldm',
   },
-  {
-    id: 14,
-    vectorTilesetId: '14Uhr',
+  '14': {
+    displayName: '14 Uhr',
+    vectorTilesetKey: '14Uhr',
+    shadeTilesetId: 'mapbox://technologiestiftung.atdnvldm',
   },
-  {
-    id: 15,
-    vectorTilesetId: '15Uhr',
+  '15': {
+    displayName: '15 Uhr',
+    vectorTilesetKey: '15Uhr',
+    shadeTilesetId: 'mapbox://technologiestiftung.atdnvldm',
   },
-  {
-    id: 16,
-    vectorTilesetId: '16Uhr',
+  '16': {
+    displayName: '16 Uhr',
+    vectorTilesetKey: '16Uhr',
+    shadeTilesetId: 'mapbox://technologiestiftung.atdnvldm',
   },
-  {
-    id: 17,
-    vectorTilesetId: '17Uhr',
+  '17': {
+    displayName: '17 Uhr',
+    vectorTilesetKey: '17Uhr',
+    shadeTilesetId: 'mapbox://technologiestiftung.atdnvldm',
   },
-  {
-    id: 18,
-    vectorTilesetId: '18Uhr',
+  '18': {
+    displayName: '18 Uhr',
+    vectorTilesetKey: '18Uhr',
+    shadeTilesetId: 'mapbox://technologiestiftung.atdnvldm',
   },
-  {
-    id: 19,
-    vectorTilesetId: '19Uhr',
+  '19': {
+    displayName: '19 Uhr',
+    vectorTilesetKey: '19Uhr',
+    shadeTilesetId: 'mapbox://technologiestiftung.atdnvldm',
   },
-  {
-    id: 20,
-    vectorTilesetId: '20Uhr',
+  '20': {
+    displayName: '20 Uhr',
+    vectorTilesetKey: '20Uhr',
+    shadeTilesetId: 'mapbox://technologiestiftung.atdnvldm',
   },
-  {
-    id: 21,
-    vectorTilesetId: '21Uhr',
+  '21': {
+    displayName: '21 Uhr',
+    vectorTilesetKey: '21Uhr',
+    shadeTilesetId: 'mapbox://technologiestiftung.atdnvldm',
   },
-]
+}
 
 export type QuantileValues = 1 | 2 | 3 | 4 | 5
 
