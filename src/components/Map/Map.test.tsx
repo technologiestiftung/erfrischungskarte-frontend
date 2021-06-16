@@ -7,6 +7,7 @@ const testViewport = {
   latitude: 15.123,
   longitude: 16.456,
   zoom: 10,
+  isMobile: false,
 }
 
 describe('Map component', () => {
