@@ -48,7 +48,7 @@ export const RefreshmentMap: FC = () => {
       }
     >
       <MapRoot
-        mapStyle="mapbox://styles/technologiestiftung/ckpzm4a0d07t617p8hbbl73qa"
+        mapStyle="mapbox://styles/mapbox/light-v10"
         width={windowWidth}
         height={windowHeight}
         latitude={52.520952}
