@@ -13,7 +13,6 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => ({
 
 export const Search: FC<{
   query: ReturnType<typeof mapRawQueryToState>
-  title: string
 }> = ({ query }) => (
   <div>
     <InternalLink href="/">Home</InternalLink>
