@@ -1,16 +1,22 @@
+import {
+  FunnelIcon,
+  InfoIcon,
+  MagnifyingGlassIcon,
+  CrossIcon,
+} from '@components/Icons'
 import { InternalLink } from '@components/InternalLink'
 import classNames from 'classnames'
 import { useRouter } from 'next/router'
-import { FC } from 'react'
+import React, { FC } from 'react'
 
 interface SidebarPropType {
   title?: string
 }
 
 const pages = [
-  { path: '/filters', icon: 'A' },
-  { path: '/search', icon: 'B' },
-  { path: '/about', icon: 'C' },
+  { path: '/filters', icon: <FunnelIcon /> },
+  { path: '/search', icon: <MagnifyingGlassIcon /> },
+  { path: '/about', icon: <InfoIcon /> },
 ]
 
 export const Sidebar: FC<SidebarPropType> = ({ title, children }) => {
@@ -84,7 +90,7 @@ export const Sidebar: FC<SidebarPropType> = ({ title, children }) => {
                   'grid place-items-center'
                 )}
               >
-                {pathname === path ? 'X' : icon}
+                {pathname === path ? <CrossIcon /> : icon}
               </InternalLink>
             </li>
           ))}
