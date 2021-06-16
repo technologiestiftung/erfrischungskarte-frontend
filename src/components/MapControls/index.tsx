@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { NavigationControl, GeolocateControl } from 'react-map-gl'
 
-export const Controls: FC<{
+export const MapControls: FC<{
   isMobile: boolean
 }> = ({ isMobile }) => {
   return (
