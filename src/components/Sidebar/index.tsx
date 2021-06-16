@@ -20,7 +20,7 @@ export const Sidebar: FC<SidebarPropType> = ({ title, children }) => {
       <aside
         className={classNames(
           'fixed inset-0 transform',
-          'shadow-lg right-auto transition',
+          'right-auto transition',
           isOpened ? 'translate-x-0' : '-translate-x-full'
         )}
         style={{
