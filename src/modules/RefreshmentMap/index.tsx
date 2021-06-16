@@ -39,7 +39,13 @@ export const RefreshmentMap: FC = () => {
         <div className="bg-white shadow">Bottom right placeholder</div>
       }
     >
-      <MapRoot width={windowWidth} height={windowHeight}>
+      <MapRoot
+        width={windowWidth}
+        height={windowHeight}
+        latitude={52.520952}
+        longitude={13.400033}
+        zoom={13}
+      >
         <PolygonLayer {...WIND_DATA} fillColorProperty={activeHour} />
         <PolygonLayer {...TEMPERATURE_DATA} fillColorProperty={activeHour} />
       </MapRoot>

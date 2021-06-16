@@ -4,16 +4,19 @@ import ReactMapGL from 'react-map-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 
 export const Map: FC<{
-  width?: number
-  height?: number
+  width: number
+  height: number
+  latitude: number
+  longitude: number
+  zoom: number
   children?: ReactNode
-}> = ({ width, height, children }) => {
+}> = ({ width, height, latitude, longitude, zoom, children }) => {
   const [viewport, setViewport] = useState({
     width,
     height,
-    latitude: 52.520952,
-    longitude: 13.400033,
-    zoom: 13,
+    latitude,
+    longitude,
+    zoom,
   })
 
   useEffect(() => {
