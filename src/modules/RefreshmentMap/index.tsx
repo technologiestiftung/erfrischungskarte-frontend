@@ -14,13 +14,11 @@ export const RefreshmentMap: FC = () => {
     <FullScreenMapWrapper
       topLeft={<div className="bg-white shadow">Top left placeholder</div>}
       topRight={
+        // eslint-disable-next-line jsx-a11y/no-onchange
         <select
           name="hours"
           id="hour-select"
           className="bg-white shadow"
-          // Just a placeholder, so ts-ignored for now:
-          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-          // @ts-ignore
           onChange={(e) => setActiveHour(e.target.value)}
         >
           {HOURS.map((hour) => {

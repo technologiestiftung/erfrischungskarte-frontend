@@ -1,3 +1,7 @@
 **/node_modules/*
 **/out/*
 **/.next/*
+*.config.js
+*.setup.js
+.*.js
+storybook-static
