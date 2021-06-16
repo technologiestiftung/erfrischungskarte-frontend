@@ -63,7 +63,7 @@ export const Sidebar: FC<SidebarPropType> = ({ title, children }) => {
               {title}
             </h1>
           )}
-          <div className="p-8 pt-0">{children}</div>
+          <div className="p-8 pt-0 min-h-full">{children}</div>
         </div>
       </aside>
       <SidebarNav isOpened={isOpened} pathname={pathname} />

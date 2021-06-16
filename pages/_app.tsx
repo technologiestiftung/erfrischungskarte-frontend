@@ -11,13 +11,16 @@ interface PagePropType extends Record<string, unknown> {
   query: ParsedUrlQuery
 }
 
+interface ComponentPropType {
+  title?: string
+  query?: ReturnType<typeof mapRawQueryToState>
+}
+
 const App: FC<{
-  Component: FC<{
-    query: ReturnType<typeof mapRawQueryToState>
-  }>
+  Component: FC<ComponentPropType>
   pageProps: PagePropType
 }> = ({ Component, pageProps }) => {
-  const parsedQuery = mapRawQueryToState(pageProps.query)
+  const parsedQuery = pageProps.query ? mapRawQueryToState(pageProps.query) : {}
   return (
     <StrictMode>
       <RefreshmentMap {...pageProps}>
