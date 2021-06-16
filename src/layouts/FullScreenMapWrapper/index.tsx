@@ -1,12 +1,13 @@
 import { forwardRef, HTMLProps, ReactNode } from 'react'
 
-interface FullScreenMapWrapperType extends HTMLProps<HTMLDivElement> {
+export interface FullScreenMapWrapperType extends HTMLProps<HTMLDivElement> {
   topLeft?: ReactNode
   topRight?: ReactNode
   bottomLeft?: ReactNode
   bottomRight?: ReactNode
 }
 
+// eslint-disable-next-line react/display-name
 export const FullScreenMapWrapper = forwardRef<
   HTMLDivElement,
   FullScreenMapWrapperType

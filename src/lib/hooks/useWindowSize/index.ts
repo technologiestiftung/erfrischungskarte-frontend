@@ -5,21 +5,26 @@ interface WindowSizeType {
   height: number
 }
 
+interface WindowSizePayloadType {
+  width: number
+  height: number
+}
+
 export const useWindowSize = (): WindowSizeType => {
-  const getWindowSize = () => {
-    return {
-      width: window.innerWidth,
-      height: window.innerHeight,
-    }
-  }
+  const getWindowSize = (): WindowSizePayloadType => ({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  })
 
-  const [windowSize, setWindowSize] = useState({ width: null, height: null })
-
-  function handleResize() {
-    setWindowSize(getWindowSize())
-  }
+  const [windowSize, setWindowSize] = useState<WindowSizePayloadType>({
+    width: 1440,
+    height: 960,
+  })
 
   useEffect(() => {
+    function handleResize(): void {
+      setWindowSize(getWindowSize())
+    }
     setWindowSize(getWindowSize())
 
     window.addEventListener('resize', handleResize)

@@ -1,25 +1,57 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
-    "skipLibCheck": true,
-    "strict": false,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
+    "alwaysStrict": true,
     "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
+    "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "lib": [
+      "dom",
+      "es2019"
+    ],
+    "module": "esnext",
+    "noEmit": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "esnext",
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": [
+        "./src/components/*"
+      ],
+      "@modules/*": [
+        "./src/modules/*"
+      ],
+      "@lib/*": [
+        "./src/lib/*"
+      ],
+      "@layouts/*": [
+        "./src/layouts/*"
+      ],
+    },
+    "moduleResolution": "node"
   },
-  "exclude": ["node_modules", ".next", "out"],
   "include": [
     "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "**/*.js",
-    "./jest-setup.ts"
+    "./test/**/*.ts",
+    "./test/**/*.tsx",
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "./pages/**/*.ts",
+    "./pages/**/*.tsx",
+  ],
+  "exclude": [
+    "node_modules",
+    "*.setup.js",
+    ".eslintrc.js",
+    ".importjs.js",
+    "*.config.js",
+    ".prettierrc.js",
+    "i18n.js"
   ]
 }
