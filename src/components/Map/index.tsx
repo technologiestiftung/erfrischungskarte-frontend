@@ -2,7 +2,6 @@ import { FC, useEffect } from 'react'
 import { useState } from 'react'
 import ReactMapGL from 'react-map-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
-import { MapControls } from '../MapControls'
 
 interface ViewportType {
   width: number
