@@ -10,10 +10,13 @@ interface ViewportType {
   latitude: number
   longitude: number
   zoom: number
+}
+
+interface MapProps extends ViewportType {
   isMobile: boolean
 }
 
-export const Map: FC<ViewportType> = ({
+export const Map: FC<MapProps> = ({
   width,
   height,
   latitude,
