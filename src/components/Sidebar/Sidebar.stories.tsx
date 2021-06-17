@@ -32,14 +32,26 @@ ClosedWithNoActiveTab.parameters = {
 }
 ClosedWithNoActiveTab.args = {}
 
-export const WithTitle = Template.bind({})
-WithTitle.parameters = {
+export const WithTitleAndShortContent = Template.bind({})
+WithTitleAndShortContent.parameters = {
   nextRouter: {
     query: {},
     pathname: '/about',
   },
 }
-WithTitle.args = {
+WithTitleAndShortContent.args = {
+  title: 'Hello',
+  children: 'Hello',
+}
+
+export const WithTitleAndLongContent = Template.bind({})
+WithTitleAndLongContent.parameters = {
+  nextRouter: {
+    query: {},
+    pathname: '/about',
+  },
+}
+WithTitleAndLongContent.args = {
   title: 'About',
   children: (
     <>
