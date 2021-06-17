@@ -71,6 +71,7 @@ export const HourSelector: FC<HourSelectorPropType> = ({
     <div className="w-48 h-48 relative">
       {isOpened && (
         <button
+          aria-label="close-hour-selector"
           className={classNames(
             'absolute',
             'w-10 h-10 rounded-full shadow-lg bg-white transition',
@@ -102,6 +103,7 @@ export const HourSelector: FC<HourSelectorPropType> = ({
       </div>
       <div className="absolute w-48 h-48 grid place-items-center inset-0">
         <button
+          aria-label={!isOpened ? 'open-hour-selector' : undefined}
           onClick={() => !isOpened && setIsOpened(true)}
           tabIndex={isOpened ? -1 : 0}
           className={classNames(
@@ -149,6 +151,12 @@ export const HourSelector: FC<HourSelectorPropType> = ({
             return (
               <g
                 key={key}
+                role="button"
+                aria-label={
+                  key === activeHourKey
+                    ? `active-hour-${key}`
+                    : `select-hour-${key}`
+                }
                 className={classNames(
                   styles.hourButton,
                   key === activeHourKey && styles.hourButtonActive
