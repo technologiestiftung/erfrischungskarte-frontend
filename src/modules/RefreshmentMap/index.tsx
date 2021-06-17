@@ -16,6 +16,7 @@ import { MapRasterLayer as RasterLayer } from '../../components/MapRasterLayer'
 import { MapExtrusionLayer as ExtrusionLayer } from '../../components/MapExtrusionLayer'
 import { MapPointLayer } from '@components/MapPointLayer'
 import { HourSelector } from '@components/HourSelector'
+import classNames from 'classnames'
 
 interface RefreshmentMapPropType {
   title?: string
@@ -62,7 +63,13 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
         <MapPointLayer {...POI_DATA} />
       </MapRoot>
       <Sidebar {...pageProps} />
-      <div className="absolute top-8 right-8">
+      <div
+        className={classNames(
+          'absolute transform z-50',
+          hasMobileSize && 'right-16 bottom-24',
+          !hasMobileSize && 'top-8 right-8'
+        )}
+      >
         <HourSelector
           activeHourKey={activeHourKey}
           onChange={setActiveHourKey}

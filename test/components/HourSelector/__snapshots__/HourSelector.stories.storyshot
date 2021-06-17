@@ -8,7 +8,7 @@ exports[`Storyshots UI Elements/HourSelector Default 1`] = `
     className="w-48 h-48 relative"
   >
     <button
-      className="absolute -top-4 right-6 transform translate-x-full w-10 h-10 rounded-full shadow-lg bg-white transition grid place-items-center hover:bg-gray-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-2 focus:ring-offset-white z-50"
+      className="absolute w-10 h-10 rounded-full shadow-lg bg-white transition grid place-items-center hover:bg-gray-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-2 focus:ring-offset-white z-50 -top-4 right-6 transform translate-x-full"
       onClick={[Function]}
     >
       <svg
@@ -43,7 +43,7 @@ exports[`Storyshots UI Elements/HourSelector Default 1`] = `
       className="absolute w-48 h-48 grid place-items-center inset-0"
     >
       <button
-        className="inner-ring w-24 h-24 flex flex-col place-items-center justify-center rounded-full bg-white shadow-lg delay-100 transform origin-top-right transition focus:outline-none scale-100 translate-x-0 translate-y-0"
+        className="inner-ring w-24 h-24 flex flex-col place-items-center justify-center rounded-full bg-white shadow-lg delay-100 transform origin-top-right transition focus:outline-none"
         onClick={[Function]}
         tabIndex={-1}
       >

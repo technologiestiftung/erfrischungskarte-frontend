@@ -1,4 +1,5 @@
 import { CrossIcon } from '@components/Icons'
+import { useHasMobileSize } from '@lib/hooks/useHasMobileSize'
 import { HOURS } from '@modules/RefreshmentMap/content'
 import classNames from 'classnames'
 import React, { FC, useState } from 'react'
@@ -59,17 +60,20 @@ export const HourSelector: FC<HourSelectorPropType> = ({
   onChange,
 }) => {
   const [isOpened, setIsOpened] = useState<boolean>(true)
+  const hasMobileSize = useHasMobileSize()
 
   return (
     <div className="w-48 h-48 relative">
       {isOpened && (
         <button
           className={classNames(
-            'absolute -top-4 right-6 transform translate-x-full',
+            'absolute',
             'w-10 h-10 rounded-full shadow-lg bg-white transition',
             'grid place-items-center hover:bg-gray-800 hover:text-white',
             'focus:outline-none focus:ring-2 focus:ring-gray-800',
-            'focus:ring-offset-2 focus:ring-offset-white z-50'
+            'focus:ring-offset-2 focus:ring-offset-white z-50',
+            !hasMobileSize && '-top-4 right-6 transform translate-x-full',
+            hasMobileSize && 'top-1/2 -right-12 transform -translate-y-1/2'
           )}
           onClick={() => setIsOpened(false)}
         >
@@ -106,9 +110,9 @@ export const HourSelector: FC<HourSelectorPropType> = ({
               'hover:bg-gray-800 hover:text-white',
               'select-none cursor-pointer',
             ],
-            isOpened
-              ? 'scale-100 translate-x-0 translate-y-0'
-              : 'scale-75 translate-x-16 -translate-y-14'
+            styles.centerPill,
+            !isOpened && !hasMobileSize && styles.centerPillDesktopClosed,
+            !isOpened && hasMobileSize && styles.centerPillMobileClosed
           )}
         >
           <span className="text-4xl leading-8">{activeHourKey}</span>
