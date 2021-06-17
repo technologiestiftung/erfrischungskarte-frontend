@@ -45,12 +45,12 @@ export const SplashScreen: FC = () => {
             </a>
           </Link>
           <Link href="/">
-            <a className="md:px-4 cursor-pointer bg-white p-1.5 rounded-lg border-2 border-layer-turquoise-300 text-layer-turquoise-300">
+            <a className="md:px-4 cursor-pointer bg-white p-1.5 rounded-lg border-2 border-layer-turquoise-300 text-layer-turquoise-400">
               Standortsuche
             </a>
           </Link>
           <Link href="/">
-            <a className="md:px-4 cursor-pointer bg-white p-1.5 rounded-lg border-2 border-gray-400 text-gray-400">
+            <a className="md:px-4 cursor-pointer bg-white p-1.5 rounded-lg border-2 border-gray-400 text-gray-500">
               Mehr Infos
             </a>
           </Link>
