@@ -114,7 +114,7 @@ export const EXTRUDED_BUILDINGS_DATA: MapExtrusionLayerType = {
     base: 'min_height',
     height: 'height',
   },
-  extrusionColor: '#eee',
+  extrusionColor: '#ddd',
 }
 
 type PoiCategory =
