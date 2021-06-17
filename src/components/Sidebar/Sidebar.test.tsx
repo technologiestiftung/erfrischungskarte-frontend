@@ -1,6 +1,12 @@
 import { fireEvent, render, screen } from '@testing-library/react'
 import { Sidebar } from '.'
 import * as nextRouter from 'next/router'
+import * as hasMobileSizeModule from '@lib/hooks/useHasMobileSize'
+
+const useHasMobileSize = jest.fn()
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+hasMobileSizeModule.useHasMobileSize = useHasMobileSize
 
 const testRouter = jest.fn()
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -11,6 +17,7 @@ nextRouter.useRouter = testRouter.mockReturnValue({
 
 describe('SidebarNav', () => {
   test('should render its children', () => {
+    useHasMobileSize.mockReturnValue(true)
     render(
       <Sidebar>
         <button>Buongiorno</button>

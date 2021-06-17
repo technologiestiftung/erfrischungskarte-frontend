@@ -10,28 +10,36 @@ nextRouter.useRouter = jest.fn().mockReturnValue({
 
 describe('SidebarNav', () => {
   test('should render 3 links', () => {
-    render(<SidebarNav isOpened={true} pathname="/about" />)
+    render(
+      <SidebarNav hasMobileSize={true} isOpened={true} pathname="/about" />
+    )
 
     const links = screen.getAllByRole('link')
 
     expect(links).toHaveLength(3)
   })
   test('should render no active link if no active page', () => {
-    render(<SidebarNav isOpened={true} pathname="/nope" />)
+    render(
+      <SidebarNav hasMobileSize={false} isOpened={true} pathname="/nope" />
+    )
 
     const activeLink = document.querySelector('.active')
 
     expect(activeLink).not.toBeInTheDocument()
   })
   test('should render an active link if active page', () => {
-    render(<SidebarNav isOpened={true} pathname="/about" />)
+    render(
+      <SidebarNav hasMobileSize={false} isOpened={true} pathname="/about" />
+    )
 
     const activeLink = document.querySelector('.active')
 
     expect(activeLink).toBeInTheDocument()
   })
   test('should be slidden left if closed', () => {
-    render(<SidebarNav isOpened={false} pathname="/about" />)
+    render(
+      <SidebarNav hasMobileSize={false} isOpened={false} pathname="/about" />
+    )
 
     const closed = document.querySelector('.closed')
     const opened = document.querySelector('.opened')
@@ -40,7 +48,9 @@ describe('SidebarNav', () => {
     expect(opened).not.toBeInTheDocument()
   })
   test('should be slidden right if opened', () => {
-    render(<SidebarNav isOpened={true} pathname="/about" />)
+    render(
+      <SidebarNav hasMobileSize={false} isOpened={true} pathname="/about" />
+    )
 
     const closed = document.querySelector('.closed')
     const opened = document.querySelector('.opened')
