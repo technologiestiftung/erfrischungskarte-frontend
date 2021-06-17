@@ -30,10 +30,10 @@ export const SplashScreen: FC = () => {
           </div>
         </div>
         <p className="mt-4 md:mr-12">
-          Die Berliner Erfrischungskarte zeigt{' '}
-          <b className="text-layer-blue-300">kühle</b>,
-          <b className="text-layer-green-300">windige</b> und{' '}
-          <b className="text-layer-black">schattige</b> Flächen in der Stadt,
+          Die Berliner Erfrischungskarte zeigt
+          <b className="text-layer-blue-300"> kühle</b>,
+          <b className="text-layer-green-300"> windige</b> und
+          <b className="text-layer-black"> schattige</b> Flächen in der Stadt,
           und führt zu Orten zum Erfrischen und Verweilen im Sommer.
         </p>
         <div className="mt-16 gap-2 text-center grid grid-cols-2 grid-rows-2 md:flex">
