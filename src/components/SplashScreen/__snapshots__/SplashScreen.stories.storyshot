@@ -8,7 +8,7 @@ exports[`Storyshots Content/SplashScreen Default 1`] = `
     className="bg-white p-6 max-w-xs md:max-w-none filter drop-shadow-lg rounded-lg md:min-w-xl md:w-1/2 mx-auto"
   >
     <svg
-      className="hidden md:block absolute right-8 top-8 cursor-pointer"
+      className="hidden md:block absolute right-8 top-8 cursor-pointer text-gray-700 hover:text-gray-500 transform active:scale-90"
       fill="none"
       height="14"
       viewBox="0 0 14 14"
@@ -16,6 +16,7 @@ exports[`Storyshots Content/SplashScreen Default 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
+        className="stroke-current"
         d="M1 1L13 13M1 13L13 1L1 13Z"
         stroke="#333333"
         strokeLinecap="round"
@@ -84,7 +85,7 @@ exports[`Storyshots Content/SplashScreen Default 1`] = `
       className="mt-16 gap-2 text-center grid grid-cols-2 grid-rows-2 md:flex"
     >
       <a
-        className="md:px-4 col-start-1 col-end-3 cursor-pointer bg-layer-turquoise-300 p-1.5 rounded-lg border-2 border-layer-turquoise-300 text-white"
+        className="md:px-4 col-start-1 col-end-3 cursor-pointer p-1.5 rounded-lg border-2 bg-layer-turquoise-300 border-layer-turquoise-300 hover:bg-layer-turquoise-400 hover:border-layer-turquoise-400 text-white transition transition-colors"
         href="/"
         onClick={[Function]}
         onMouseEnter={[Function]}
@@ -92,7 +93,7 @@ exports[`Storyshots Content/SplashScreen Default 1`] = `
         Erkunden
       </a>
       <a
-        className="md:px-4 cursor-pointer bg-white p-1.5 rounded-lg border-2 border-layer-turquoise-300 text-layer-turquoise-400"
+        className="md:px-4 cursor-pointer bg-white p-1.5 rounded-lg border-2 border-layer-turquoise-300 text-layer-turquoise-300 hover:border-layer-turquoise-400 hover:text-layer-turquoise-400 transition transition-colors"
         href="/"
         onClick={[Function]}
         onMouseEnter={[Function]}
@@ -100,7 +101,7 @@ exports[`Storyshots Content/SplashScreen Default 1`] = `
         Standortsuche
       </a>
       <a
-        className="md:px-4 cursor-pointer bg-white p-1.5 rounded-lg border-2 border-gray-400 text-gray-500"
+        className="md:px-4 cursor-pointer bg-white p-1.5 rounded-lg border-2 border-gray-400 text-gray-400 hover:border-gray-500 hover:text-gray-500 transition transition-colors"
         href="/"
         onClick={[Function]}
         onMouseEnter={[Function]}
