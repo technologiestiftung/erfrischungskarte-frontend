@@ -55,7 +55,7 @@ export const RefreshmentMap: FC = () => {
         longitude={13.400033}
         zoom={12}
         minZoom={11.5}
-        maxZoom={17}
+        maxZoom={18}
       >
         <MapControls
           className={`absolute right-4 ${isMobile ? 'top-4' : 'bottom-4'}`}

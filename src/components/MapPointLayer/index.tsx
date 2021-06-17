@@ -11,6 +11,22 @@ export interface MapPointLayerType extends Omit<LayerProps, 'type' | 'paint'> {
   fillColorProperty: string
 }
 
+type ZoomThresholds = 12 | 15 | 18
+
+type CircleSizeMapType = Map<ZoomThresholds, number>
+
+const CircleRadiusMap: CircleSizeMapType = new Map([
+  [12, 2],
+  [15, 4],
+  [18, 5],
+])
+
+const CircleStrokeWidthMap: CircleSizeMapType = new Map([
+  [12, 1],
+  [15, 4],
+  [18, 5],
+])
+
 export const MapPointLayer: FC<MapPointLayerType> = ({
   id,
   tileset,
@@ -19,6 +35,8 @@ export const MapPointLayer: FC<MapPointLayerType> = ({
   fillColorProperty,
 }) => {
   const flattenedFillColorMap = Array.from(fillColorMap).flat(2)
+  const flattenedCircleRadiusMap = Array.from(CircleRadiusMap).flat(2)
+  const flattenedCircleStrokeWidthMap = Array.from(CircleStrokeWidthMap).flat(2)
 
   const layerStyle: LayerProps = {
     id: id,
@@ -33,8 +51,18 @@ export const MapPointLayer: FC<MapPointLayerType> = ({
         /* fallback color */
         'rgba(100,100,100,100)',
       ],
-      'circle-radius': 6,
-      'circle-stroke-width': 6,
+      'circle-radius': [
+        'interpolate',
+        ['exponential', 0.5],
+        ['zoom'],
+        ...flattenedCircleRadiusMap,
+      ],
+      'circle-stroke-width': [
+        'interpolate',
+        ['exponential', 0.5],
+        ['zoom'],
+        ...flattenedCircleStrokeWidthMap,
+      ],
       'circle-stroke-color': '#ffffff',
     },
   }

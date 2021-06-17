@@ -139,7 +139,7 @@ export const POI_DATA: PoiDataType = {
     url: 'mapbox://technologiestiftung.a9f6qix2',
     layerName: 'erfrischungskarte_poi-0mftmq',
   },
-  minzoom: 12,
+  minzoom: 11.5,
   fillColorProperty: 'category',
   fillColorMap: new Map([
     ['Gruenanlage', '#B2DF8A'],
