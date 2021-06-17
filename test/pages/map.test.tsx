@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react'
 import React from 'react'
 import * as nextRouter from 'next/router'
-import { Home } from '../../pages/index'
+import { Map } from '../../pages/map'
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
@@ -9,8 +9,8 @@ nextRouter.useRouter = jest.fn().mockReturnValue({
   query: {},
 })
 
-describe('Home page', () => {
+describe('Map page', () => {
   it('renders without crashing', () => {
-    render(<Home />)
+    render(<Map />)
   })
 })
