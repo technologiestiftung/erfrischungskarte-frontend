@@ -36,19 +36,19 @@ export const SplashScreen: FC = () => {
           <b className="text-layer-black">schattige</b> Flächen in der Stadt,
           und führt zu Orten zum Erfrischen und Verweilen im Sommer.
         </p>
-        <div className="mt-16 gap-2 text-center grid grid-cols-2 md:grid-cols-3 grid-rows-2 md:grid-rows-1">
+        <div className="mt-16 gap-2 text-center grid grid-cols-2 grid-rows-2 md:flex">
           <Link href="/">
-            <a className="col-start-1 col-end-3 md:col-end-2 w-full cursor-pointer bg-layer-turquoise-300 p-1.5 rounded-lg border-2 border-layer-turquoise-300 text-white">
+            <a className="md:px-4 col-start-1 col-end-3 cursor-pointer bg-layer-turquoise-300 p-1.5 rounded-lg border-2 border-layer-turquoise-300 text-white">
               Erkunden
             </a>
           </Link>
           <Link href="/">
-            <a className="w-full cursor-pointer bg-white p-1.5 rounded-lg border-2 border-layer-turquoise-300 text-layer-turquoise-300">
+            <a className="md:px-4 cursor-pointer bg-white p-1.5 rounded-lg border-2 border-layer-turquoise-300 text-layer-turquoise-300">
               Standortsuche
             </a>
           </Link>
           <Link href="/">
-            <a className="w-full cursor-pointer bg-white p-1.5 rounded-lg border-2 border-gray-400 text-gray-400">
+            <a className="md:px-4 cursor-pointer bg-white p-1.5 rounded-lg border-2 border-gray-400 text-gray-400">
               Mehr Infos
             </a>
           </Link>
