@@ -56,17 +56,17 @@ export const SplashScreen: FC = () => {
         </p>
         <div className="mt-16 gap-2 text-center grid grid-cols-2 grid-rows-2 md:flex">
           <Link href="/">
-            <a className="md:px-4 col-start-1 col-end-3 cursor-pointer bg-layer-turquoise-300 p-1.5 rounded-lg border-2 border-layer-turquoise-300 text-white">
+            <a className="md:px-4 col-start-1 col-end-3 cursor-pointer p-1.5 rounded-lg border-2 bg-layer-turquoise-300 border-layer-turquoise-300 hover:bg-layer-turquoise-400 hover:border-layer-turquoise-400 text-white">
               Erkunden
             </a>
           </Link>
           <Link href="/">
-            <a className="md:px-4 cursor-pointer bg-white p-1.5 rounded-lg border-2 border-layer-turquoise-300 text-layer-turquoise-400">
+            <a className="md:px-4 cursor-pointer bg-white p-1.5 rounded-lg border-2 border-layer-turquoise-300 text-layer-turquoise-300 hover:border-layer-turquoise-400 hover:text-layer-turquoise-400">
               Standortsuche
             </a>
           </Link>
           <Link href="/">
-            <a className="md:px-4 cursor-pointer bg-white p-1.5 rounded-lg border-2 border-gray-400 text-gray-500">
+            <a className="md:px-4 cursor-pointer bg-white p-1.5 rounded-lg border-2 border-gray-400 text-gray-400 hover:border-gray-500 hover:text-gray-500">
               Mehr Infos
             </a>
           </Link>
