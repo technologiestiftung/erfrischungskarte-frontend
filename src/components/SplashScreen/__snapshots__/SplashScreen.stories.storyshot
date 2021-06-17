@@ -7,6 +7,22 @@ exports[`Storyshots Content/SplashScreen Default 1`] = `
   <div
     className="bg-white p-6 max-w-xs md:max-w-none filter drop-shadow-lg rounded-lg md:min-w-xl md:w-1/2 mx-auto"
   >
+    <svg
+      className="hidden md:block absolute right-8 top-8 cursor-pointer"
+      fill="none"
+      height="14"
+      viewBox="0 0 14 14"
+      width="14"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M1 1L13 13M1 13L13 1L1 13Z"
+        stroke="#333333"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+      />
+    </svg>
     <div
       className="flex flex-row-reverse justify-between items-center md:flex-row md:justify-start"
     >
@@ -28,47 +44,47 @@ exports[`Storyshots Content/SplashScreen Default 1`] = `
       </svg>
       <div>
         <h1
-          className="font-bold text-2xl"
+          className="font-bold text-2xl flex flex-col"
         >
-          30°C und kein Schatten?
-        </h1>
-        <h1
-          className="font-bold text-2xl text-layer-turquoise-300"
-        >
-          So findest du Erfrischung!
+          <span>
+            30°C und kein Schatten?
+          </span>
+          <span
+            className="text-layer-turquoise-300"
+          >
+            So findest du Erfrischung!
+          </span>
         </h1>
       </div>
     </div>
     <p
-      className="mt-4 md:mr-12"
+      className="mt-4 md:mr-12 text-gray-500"
     >
       Die Berliner Erfrischungskarte zeigt
-       
       <b
         className="text-layer-blue-300"
       >
-        kühle
+         kühle
       </b>
       ,
       <b
         className="text-layer-green-300"
       >
-        windige
+         windige
       </b>
        und
-       
       <b
-        className="text-layer-black"
+        className="text-black"
       >
-        schattige
+         schattige
       </b>
        Flächen in der Stadt, und führt zu Orten zum Erfrischen und Verweilen im Sommer.
     </p>
     <div
-      className="mt-16 gap-2 text-center grid grid-cols-2 md:grid-cols-3 grid-rows-2 md:grid-rows-1"
+      className="mt-16 gap-2 text-center grid grid-cols-2 grid-rows-2 md:flex"
     >
       <a
-        className="col-start-1 col-end-3 md:col-end-2 w-full cursor-pointer bg-layer-turquoise-300 p-1.5 rounded-lg border-2 border-layer-turquoise-300 text-white"
+        className="md:px-4 col-start-1 col-end-3 cursor-pointer bg-layer-turquoise-300 p-1.5 rounded-lg border-2 border-layer-turquoise-300 text-white"
         href="/"
         onClick={[Function]}
         onMouseEnter={[Function]}
@@ -76,7 +92,7 @@ exports[`Storyshots Content/SplashScreen Default 1`] = `
         Erkunden
       </a>
       <a
-        className="w-full cursor-pointer bg-white p-1.5 rounded-lg border-2 border-layer-turquoise-300 text-layer-turquoise-300"
+        className="md:px-4 cursor-pointer bg-white p-1.5 rounded-lg border-2 border-layer-turquoise-300 text-layer-turquoise-400"
         href="/"
         onClick={[Function]}
         onMouseEnter={[Function]}
@@ -84,7 +100,7 @@ exports[`Storyshots Content/SplashScreen Default 1`] = `
         Standortsuche
       </a>
       <a
-        className="w-full cursor-pointer bg-white p-1.5 rounded-lg border-2 border-gray-400 text-gray-400"
+        className="md:px-4 cursor-pointer bg-white p-1.5 rounded-lg border-2 border-gray-400 text-gray-500"
         href="/"
         onClick={[Function]}
         onMouseEnter={[Function]}
@@ -96,7 +112,7 @@ exports[`Storyshots Content/SplashScreen Default 1`] = `
       className="flex flex-col md:items-center justify-between md:flex-row mt-6"
     >
       <p
-        className="text-xs mb-2 md:mb-0 mr-2"
+        className="text-xs mb-2 md:mb-0 mr-2 text-gray-700"
       >
         <i>
           Eine prototypische Datenvisualisierung der Open Data Informationsstelle Berlin
