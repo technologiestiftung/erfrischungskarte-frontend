@@ -1,16 +1,3 @@
-.centerPill {
-  transform: scale(1) translate(0, 0);
-}
-
-.centerPillDesktopClosed {
-  transform: scale(.75) translate(80px, -80px);
-}
-
-.centerPillMobileClosed {
-  box-shadow: none;
-  transform: scale(.5) translate(145%, 348px);
-}
-
 .hourButton {
   pointer-events: bounding-box;
   user-select: none;

@@ -109,11 +109,17 @@ export const HourSelector: FC<HourSelectorPropType> = ({
               'focus:ring-3 focus:ring-gray-800',
               'hover:bg-gray-800 hover:text-white',
               'select-none cursor-pointer',
-            ],
-            styles.centerPill,
-            !isOpened && !hasMobileSize && styles.centerPillDesktopClosed,
-            !isOpened && hasMobileSize && styles.centerPillMobileClosed
+            ]
           )}
+          style={{
+            transform: classNames(
+              isOpened && 'scale(1) translate(0, 0)',
+              !isOpened &&
+                !hasMobileSize &&
+                'scale(.75) translate(80px, -80px)',
+              !isOpened && hasMobileSize && 'scale(.5) translate(145%, 348px)'
+            ),
+          }}
         >
           <span className="text-4xl leading-8">{activeHourKey}</span>
           <span className="text-sm">Uhr</span>

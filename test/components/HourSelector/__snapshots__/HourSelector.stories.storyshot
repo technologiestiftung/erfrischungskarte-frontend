@@ -45,6 +45,11 @@ exports[`Storyshots UI Elements/HourSelector Default 1`] = `
       <button
         className="inner-ring w-24 h-24 flex flex-col place-items-center justify-center rounded-full bg-white shadow-lg delay-100 transform origin-top-right transition focus:outline-none"
         onClick={[Function]}
+        style={
+          Object {
+            "transform": "scale(1) translate(0, 0)",
+          }
+        }
         tabIndex={-1}
       >
         <span
