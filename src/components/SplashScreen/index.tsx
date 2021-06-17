@@ -5,6 +5,7 @@ import { CrossIcon, OpenDataIcon, SunIcon } from '@components/Icons'
 export const SplashScreen: FC = () => {
   return (
     <div className="fixed grid z-10 inset-0 items-center">
+      <InternalLink href="/map" className="fixed inset-0" />
       <div className="bg-white p-6 max-w-xs md:max-w-none filter drop-shadow-lg rounded-lg md:min-w-xl md:w-1/2 mx-auto">
         <InternalLink href="/map">
           <CrossIcon className="hidden md:block absolute right-8 top-8 cursor-pointer text-gray-700 hover:text-gray-500 transform active:scale-90" />
