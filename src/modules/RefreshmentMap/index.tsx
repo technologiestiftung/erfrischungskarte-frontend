@@ -15,6 +15,7 @@ import {
 import { MapRasterLayer as RasterLayer } from '../../components/MapRasterLayer'
 import { MapExtrusionLayer as ExtrusionLayer } from '../../components/MapExtrusionLayer'
 import { MapPointLayer } from '@components/MapPointLayer'
+import { HourSelector } from '@components/HourSelector'
 
 interface RefreshmentMapPropType {
   title?: string
@@ -24,7 +25,8 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
   const hasMobileSize = useHasMobileSize()
   const { width: windowWidth, height: windowHeight } = useWindowSize()
 
-  const [activeHour, setActiveHour] = useState(HOURS['10'])
+  const [activeHourKey, setActiveHourKey] = useState<keyof typeof HOURS>('10')
+  const activeHour = HOURS[activeHourKey]
 
   return (
     <>
@@ -60,25 +62,13 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
         <MapPointLayer {...POI_DATA} />
       </MapRoot>
       <Sidebar {...pageProps} />
-      {
-        // eslint-disable-next-line jsx-a11y/no-onchange
-        <select
-          name="hours"
-          id="hour-select"
-          className="bg-white shadow fixed top-4 right-4"
-          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-          // @ts-ignore
-          onChange={(e) => setActiveHour(HOURS[e.target.value])}
-        >
-          {Object.entries(HOURS).map(([key, info]) => {
-            return (
-              <option key={key} value={key}>
-                {info.displayName}
-              </option>
-            )
-          })}
-        </select>
-      }
+      <div className="absolute top-8 right-8">
+        <HourSelector
+          isOpened
+          activeHourKey={activeHourKey}
+          onChange={setActiveHourKey}
+        />
+      </div>
     </>
   )
 }
