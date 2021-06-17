@@ -15,6 +15,8 @@ import {
 import { MapRasterLayer as RasterLayer } from '../../components/MapRasterLayer'
 import { MapExtrusionLayer as ExtrusionLayer } from '../../components/MapExtrusionLayer'
 import { MapPointLayer } from '@components/MapPointLayer'
+import { HourSelector } from '@components/HourSelector'
+import classNames from 'classnames'
 import { useRouter } from 'next/router'
 import { SplashScreen } from './../../components/SplashScreen'
 
@@ -27,7 +29,8 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
   const { pathname } = useRouter()
   const { width: windowWidth, height: windowHeight } = useWindowSize()
 
-  const [activeHour, setActiveHour] = useState(HOURS['10'])
+  const [activeHourKey, setActiveHourKey] = useState<keyof typeof HOURS>('10')
+  const activeHour = HOURS[activeHourKey]
 
   return (
     <>
@@ -70,23 +73,18 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
       {pathname !== '/' && (
         <>
           <Sidebar {...pageProps} />
-          {/* eslint-disable-next-line jsx-a11y/no-onchange */}
-          <select
-            name="hours"
-            id="hour-select"
-            className="bg-white shadow fixed top-4 right-4"
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            // @ts-ignore
-            onChange={(e) => setActiveHour(HOURS[e.target.value])}
+          <div
+            className={classNames(
+              'absolute transform z-50',
+              hasMobileSize && 'right-16 bottom-24',
+              !hasMobileSize && 'top-8 right-8'
+            )}
           >
-            {Object.entries(HOURS).map(([key, info]) => {
-              return (
-                <option key={key} value={key}>
-                  {info.displayName}
-                </option>
-              )
-            })}
-          </select>
+            <HourSelector
+              activeHourKey={activeHourKey}
+              onChange={setActiveHourKey}
+            />
+          </div>
         </>
       )}
     </>

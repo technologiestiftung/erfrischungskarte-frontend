@@ -1,0 +1,25 @@
+.hourButton {
+  pointer-events: bounding-box;
+  user-select: none;
+  cursor: pointer;
+}
+
+.hourButton rect {
+  fill: white;
+  transition: fill 200ms ease-in-out;
+}
+
+.hourButtonActive rect,
+.hourButton:hover rect {
+  fill: #1f2937;
+}
+
+.hourButton text {
+  fill: #1f2937;
+  transition: fill 200ms ease-in-out;
+}
+
+.hourButtonActive text,
+.hourButton:hover text {
+  fill: white;
+}
