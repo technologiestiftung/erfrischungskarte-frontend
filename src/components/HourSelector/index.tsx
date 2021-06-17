@@ -2,7 +2,7 @@ import { CrossIcon } from '@components/Icons'
 import { useHasMobileSize } from '@lib/hooks/useHasMobileSize'
 import { HOURS } from '@modules/RefreshmentMap/content'
 import classNames from 'classnames'
-import React, { FC, useState } from 'react'
+import React, { FC, useEffect, useState } from 'react'
 import styles from './HourSelector.module.css'
 
 interface HourSelectorPropType {
@@ -59,8 +59,13 @@ export const HourSelector: FC<HourSelectorPropType> = ({
   activeHourKey,
   onChange,
 }) => {
-  const [isOpened, setIsOpened] = useState<boolean>(true)
   const hasMobileSize = useHasMobileSize()
+  const [isOpened, setIsOpened] = useState<boolean>(false)
+
+  useEffect(() => {
+    if (hasMobileSize) setIsOpened(false)
+    if (!hasMobileSize) setIsOpened(true)
+  }, [hasMobileSize])
 
   return (
     <div className="w-48 h-48 relative">
