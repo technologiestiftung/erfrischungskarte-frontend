@@ -16,7 +16,7 @@ exports[`Storyshots UI Elements/Sidebar Closed With No Active Tab 1`] = `
         "height": "100vh",
         "padding": "var(--sidebarPadding, 20px)",
         "paddingRight": 0,
-        "transform": "translateX(-100%)",
+        "transform": "translateX(0)",
         "width": "var(--sidebarWidth, 320px)",
       }
     }
@@ -36,12 +36,12 @@ exports[`Storyshots UI Elements/Sidebar Closed With No Active Tab 1`] = `
     </div>
   </aside>
   <nav
-    className="fixed inset-0 transition box-content z-10 closed right-auto w-16"
+    className="fixed inset-0 transition box-content z-10 opened right-auto w-16"
     style={
       Object {
         "left": "var(--sidebarWidth, 320px)",
         "padding": "var(--sidebarPadding, 20px) 16px",
-        "transform": "translateX(calc(var(--sidebarWidth, 320px) * -1 + (var(--sidebarPadding, 20px) / 2)))",
+        "transform": "translateX(0)",
       }
     }
   >
@@ -203,8 +203,8 @@ exports[`Storyshots UI Elements/Sidebar Opened With Active Tab 1`] = `
           Filters
         </span>
         <a
-          className="transition group-first:rounded-t group-last:rounded-b w-full h-full grid place-items-center focus:rounded hover:bg-gray-200 focus:ring-offset-2 focus:ring-offset-white hover:text-gray-800 focus:ring-2 focus:ring-gray-800 focus:outline-none bg-gray-800 text-white active"
-          href="/map"
+          className="transition group-first:rounded-t group-last:rounded-b w-full h-full grid place-items-center focus:rounded hover:bg-gray-200 focus:ring-offset-2 focus:ring-offset-white hover:text-gray-800 focus:ring-2 focus:ring-gray-800 focus:outline-none"
+          href="/filters"
           onClick={[Function]}
           onMouseEnter={[Function]}
         >
@@ -216,7 +216,7 @@ exports[`Storyshots UI Elements/Sidebar Opened With Active Tab 1`] = `
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M6 6L18 18M6 18L18 6L6 18Z"
+              d="M3 4C3 3.73478 3.10536 3.48043 3.29289 3.29289C3.48043 3.10536 3.73478 3 4 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4V6.586C20.9999 6.85119 20.8946 7.10551 20.707 7.293L14.293 13.707C14.1055 13.8945 14.0001 14.1488 14 14.414V17L10 21V14.414C9.99994 14.1488 9.89455 13.8945 9.707 13.707L3.293 7.293C3.10545 7.10551 3.00006 6.85119 3 6.586V4Z"
               stroke="currentColor"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -418,8 +418,8 @@ exports[`Storyshots UI Elements/Sidebar With Title And Long Content 1`] = `
           Über das Projekt
         </span>
         <a
-          className="transition group-first:rounded-t group-last:rounded-b w-full h-full grid place-items-center focus:rounded hover:bg-gray-200 focus:ring-offset-2 focus:ring-offset-white hover:text-gray-800 focus:ring-2 focus:ring-gray-800 focus:outline-none bg-gray-800 text-white active"
-          href="/map"
+          className="transition group-first:rounded-t group-last:rounded-b w-full h-full grid place-items-center focus:rounded hover:bg-gray-200 focus:ring-offset-2 focus:ring-offset-white hover:text-gray-800 focus:ring-2 focus:ring-gray-800 focus:outline-none"
+          href="/about"
           onClick={[Function]}
           onMouseEnter={[Function]}
         >
@@ -431,7 +431,7 @@ exports[`Storyshots UI Elements/Sidebar With Title And Long Content 1`] = `
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M6 6L18 18M6 18L18 6L6 18Z"
+              d="M13 16H12V12H11L13 16ZM12 8H12.01H12ZM21 12C21 13.1819 20.7672 14.3522 20.3149 15.4442C19.8626 16.5361 19.1997 17.5282 18.364 18.364C17.5282 19.1997 16.5361 19.8626 15.4442 20.3149C14.3522 20.7672 13.1819 21 12 21C10.8181 21 9.64778 20.7672 8.55585 20.3149C7.46392 19.8626 6.47177 19.1997 5.63604 18.364C4.80031 17.5282 4.13738 16.5361 3.68508 15.4442C3.23279 14.3522 3 13.1819 3 12C3 9.61305 3.94821 7.32387 5.63604 5.63604C7.32387 3.94821 9.61305 3 12 3C14.3869 3 16.6761 3.94821 18.364 5.63604C20.0518 7.32387 21 9.61305 21 12Z"
               stroke="currentColor"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -571,8 +571,8 @@ exports[`Storyshots UI Elements/Sidebar With Title And Short Content 1`] = `
           Über das Projekt
         </span>
         <a
-          className="transition group-first:rounded-t group-last:rounded-b w-full h-full grid place-items-center focus:rounded hover:bg-gray-200 focus:ring-offset-2 focus:ring-offset-white hover:text-gray-800 focus:ring-2 focus:ring-gray-800 focus:outline-none bg-gray-800 text-white active"
-          href="/map"
+          className="transition group-first:rounded-t group-last:rounded-b w-full h-full grid place-items-center focus:rounded hover:bg-gray-200 focus:ring-offset-2 focus:ring-offset-white hover:text-gray-800 focus:ring-2 focus:ring-gray-800 focus:outline-none"
+          href="/about"
           onClick={[Function]}
           onMouseEnter={[Function]}
         >
@@ -584,7 +584,7 @@ exports[`Storyshots UI Elements/Sidebar With Title And Short Content 1`] = `
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M6 6L18 18M6 18L18 6L6 18Z"
+              d="M13 16H12V12H11L13 16ZM12 8H12.01H12ZM21 12C21 13.1819 20.7672 14.3522 20.3149 15.4442C19.8626 16.5361 19.1997 17.5282 18.364 18.364C17.5282 19.1997 16.5361 19.8626 15.4442 20.3149C14.3522 20.7672 13.1819 21 12 21C10.8181 21 9.64778 20.7672 8.55585 20.3149C7.46392 19.8626 6.47177 19.1997 5.63604 18.364C4.80031 17.5282 4.13738 16.5361 3.68508 15.4442C3.23279 14.3522 3 13.1819 3 12C3 9.61305 3.94821 7.32387 5.63604 5.63604C7.32387 3.94821 9.61305 3 12 3C14.3869 3 16.6761 3.94821 18.364 5.63604C20.0518 7.32387 21 9.61305 21 12Z"
               stroke="currentColor"
               strokeLinecap="round"
               strokeLinejoin="round"

@@ -17,6 +17,8 @@ import { MapExtrusionLayer as ExtrusionLayer } from '../../components/MapExtrusi
 import { MapPointLayer } from '@components/MapPointLayer'
 import { HourSelector } from '@components/HourSelector'
 import classNames from 'classnames'
+import { useRouter } from 'next/router'
+import { SplashScreen } from './../../components/SplashScreen'
 
 interface RefreshmentMapPropType {
   title?: string
@@ -24,6 +26,7 @@ interface RefreshmentMapPropType {
 
 export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
   const hasMobileSize = useHasMobileSize()
+  const { pathname } = useRouter()
   const { width: windowWidth, height: windowHeight } = useWindowSize()
 
   const [activeHourKey, setActiveHourKey] = useState<keyof typeof HOURS>('10')
@@ -31,6 +34,7 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
 
   return (
     <>
+      {pathname === '/' && <SplashScreen />}
       <MapRoot
         mapStyle="mapbox://styles/mapbox/light-v10"
         width={windowWidth}
@@ -41,9 +45,13 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
         minZoom={11.5}
         maxZoom={18}
       >
-        <MapControls
-          className={`absolute right-4 ${hasMobileSize ? 'top-4' : 'bottom-4'}`}
-        />
+        {pathname !== '/' && (
+          <MapControls
+            className={`absolute right-4 ${
+              hasMobileSize ? 'top-4' : 'bottom-4'
+            }`}
+          />
+        )}
         <FilledPolygonLayer
           {...WIND_DATA}
           fillColorProperty={activeHour.vectorTilesetKey}
@@ -62,19 +70,23 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
         <ExtrusionLayer {...EXTRUDED_BUILDINGS_DATA} />
         <MapPointLayer {...POI_DATA} />
       </MapRoot>
-      <Sidebar {...pageProps} />
-      <div
-        className={classNames(
-          'absolute transform z-50',
-          hasMobileSize && 'right-16 bottom-24',
-          !hasMobileSize && 'top-8 right-8'
-        )}
-      >
-        <HourSelector
-          activeHourKey={activeHourKey}
-          onChange={setActiveHourKey}
-        />
-      </div>
+      {pathname !== '/' && (
+        <>
+          <Sidebar {...pageProps} />
+          <div
+            className={classNames(
+              'absolute transform z-50',
+              hasMobileSize && 'right-16 bottom-24',
+              !hasMobileSize && 'top-8 right-8'
+            )}
+          >
+            <HourSelector
+              activeHourKey={activeHourKey}
+              onChange={setActiveHourKey}
+            />
+          </div>
+        </>
+      )}
     </>
   )
 }

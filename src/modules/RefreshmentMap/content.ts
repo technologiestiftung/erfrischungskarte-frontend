@@ -131,6 +131,7 @@ type PoiCategory =
 
 export interface PoiDataType extends MapPointLayerType {
   fillColorMap: Map<PoiCategory, string>
+  activePropertyKeys: Partial<PoiCategory>[]
 }
 
 export const POI_DATA: PoiDataType = {
@@ -153,4 +154,15 @@ export const POI_DATA: PoiDataType = {
     ['Sitzbank', '#C37D3C'],
     ['Picknicktisch', '#C37D3C'],
   ]),
+  activePropertyKeys: [
+    'Picknicktisch',
+    'Gruenanlage',
+    'Trinkbrunnen',
+    'Brunnen',
+    'Wasserspielplatz',
+    'Badestelle',
+    'Strandbad',
+    'Freibad',
+    'Schwimmhalle',
+  ],
 }
