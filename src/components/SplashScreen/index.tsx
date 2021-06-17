@@ -31,12 +31,12 @@ export const SplashScreen: FC = () => {
             </h1>
           </div>
         </div>
-        <p className="mt-4 md:mr-12">
+        <p className="mt-4 md:mr-12 text-gray-500">
           Die Berliner Erfrischungskarte zeigt
           <b className="text-layer-blue-300"> kühle</b>,
           <b className="text-layer-green-300"> windige</b> und
-          <b className="text-layer-black"> schattige</b> Flächen in der Stadt,
-          und führt zu Orten zum Erfrischen und Verweilen im Sommer.
+          <b className="text-black"> schattige</b> Flächen in der Stadt, und
+          führt zu Orten zum Erfrischen und Verweilen im Sommer.
         </p>
         <div className="mt-16 gap-2 text-center grid grid-cols-2 grid-rows-2 md:flex">
           <Link href="/">
@@ -56,7 +56,7 @@ export const SplashScreen: FC = () => {
           </Link>
         </div>
         <div className="flex flex-col md:items-center justify-between md:flex-row mt-6">
-          <p className="text-xs mb-2 md:mb-0 mr-2">
+          <p className="text-xs mb-2 md:mb-0 mr-2 text-gray-700">
             <i>
               Eine prototypische Datenvisualisierung der Open Data
               Informationsstelle Berlin
