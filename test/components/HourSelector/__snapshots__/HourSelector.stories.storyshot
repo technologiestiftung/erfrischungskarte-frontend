@@ -23,6 +23,7 @@ exports[`Storyshots UI Elements/HourSelector Default 1`] = `
       className="absolute w-48 h-48 grid place-items-center inset-0"
     >
       <button
+        aria-label="open-hour-selector"
         className="inner-ring w-24 h-24 flex flex-col place-items-center justify-center rounded-full bg-white shadow-lg delay-100 transform origin-top-right transition focus:outline-none focus:ring-3 focus:ring-gray-800 hover:bg-gray-800 hover:text-white select-none cursor-pointer"
         onClick={[Function]}
         style={
@@ -55,8 +56,10 @@ exports[`Storyshots UI Elements/HourSelector Default 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <g
+          aria-label="active-hour-10"
           className=""
           onClick={[Function]}
+          role="button"
         >
           <g
             filter="url(#shadow-10)"
@@ -82,8 +85,10 @@ exports[`Storyshots UI Elements/HourSelector Default 1`] = `
           </text>
         </g>
         <g
+          aria-label="select-hour-11"
           className=""
           onClick={[Function]}
+          role="button"
         >
           <g
             filter="url(#shadow-11)"
@@ -109,8 +114,10 @@ exports[`Storyshots UI Elements/HourSelector Default 1`] = `
           </text>
         </g>
         <g
+          aria-label="select-hour-12"
           className=""
           onClick={[Function]}
+          role="button"
         >
           <g
             filter="url(#shadow-12)"
@@ -136,8 +143,10 @@ exports[`Storyshots UI Elements/HourSelector Default 1`] = `
           </text>
         </g>
         <g
+          aria-label="select-hour-13"
           className=""
           onClick={[Function]}
+          role="button"
         >
           <g
             filter="url(#shadow-13)"
@@ -163,8 +172,10 @@ exports[`Storyshots UI Elements/HourSelector Default 1`] = `
           </text>
         </g>
         <g
+          aria-label="select-hour-14"
           className=""
           onClick={[Function]}
+          role="button"
         >
           <g
             filter="url(#shadow-14)"
@@ -190,8 +201,10 @@ exports[`Storyshots UI Elements/HourSelector Default 1`] = `
           </text>
         </g>
         <g
+          aria-label="select-hour-15"
           className=""
           onClick={[Function]}
+          role="button"
         >
           <g
             filter="url(#shadow-15)"
@@ -217,8 +230,10 @@ exports[`Storyshots UI Elements/HourSelector Default 1`] = `
           </text>
         </g>
         <g
+          aria-label="select-hour-16"
           className=""
           onClick={[Function]}
+          role="button"
         >
           <g
             filter="url(#shadow-16)"
@@ -244,8 +259,10 @@ exports[`Storyshots UI Elements/HourSelector Default 1`] = `
           </text>
         </g>
         <g
+          aria-label="select-hour-17"
           className=""
           onClick={[Function]}
+          role="button"
         >
           <g
             filter="url(#shadow-17)"
@@ -271,8 +288,10 @@ exports[`Storyshots UI Elements/HourSelector Default 1`] = `
           </text>
         </g>
         <g
+          aria-label="select-hour-18"
           className=""
           onClick={[Function]}
+          role="button"
         >
           <g
             filter="url(#shadow-18)"
@@ -298,8 +317,10 @@ exports[`Storyshots UI Elements/HourSelector Default 1`] = `
           </text>
         </g>
         <g
+          aria-label="select-hour-19"
           className=""
           onClick={[Function]}
+          role="button"
         >
           <g
             filter="url(#shadow-19)"
@@ -325,8 +346,10 @@ exports[`Storyshots UI Elements/HourSelector Default 1`] = `
           </text>
         </g>
         <g
+          aria-label="select-hour-20"
           className=""
           onClick={[Function]}
+          role="button"
         >
           <g
             filter="url(#shadow-20)"
@@ -352,8 +375,10 @@ exports[`Storyshots UI Elements/HourSelector Default 1`] = `
           </text>
         </g>
         <g
+          aria-label="select-hour-21"
           className=""
           onClick={[Function]}
+          role="button"
         >
           <g
             filter="url(#shadow-21)"
