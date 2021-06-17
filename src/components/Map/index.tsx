@@ -43,6 +43,7 @@ export const Map: FC<MapProps> = ({
       onViewportChange={(nextViewport: ViewportProps) =>
         setViewport(nextViewport)
       }
+      reuseMaps
     >
       {children}
     </ReactMapGL>
