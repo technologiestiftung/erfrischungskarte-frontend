@@ -5,6 +5,22 @@ export const SplashScreen: FC = () => {
   return (
     <div className="flex flex-col justify-center h-full w-full">
       <div className="bg-white p-6 max-w-xs md:max-w-none filter drop-shadow-lg rounded-lg md:min-w-xl md:w-1/2 mx-auto">
+        <svg
+          width="14"
+          height="14"
+          viewBox="0 0 14 14"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="hidden md:block absolute right-8 top-8 cursor-pointer"
+        >
+          <path
+            d="M1 1L13 13M1 13L13 1L1 13Z"
+            stroke="#333333"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
         <div className="flex flex-row-reverse justify-between items-center md:flex-row md:justify-start">
           <svg
             width="67"
