@@ -2,6 +2,7 @@ import { SidebarNav } from '@components/SidebarNav'
 import classNames from 'classnames'
 import { useRouter } from 'next/router'
 import React, { FC, useEffect, useState } from 'react'
+import { useHasMobileSize } from '@lib/hooks/useHasMobileSize'
 
 interface SidebarPropType {
   title?: string
@@ -9,11 +10,12 @@ interface SidebarPropType {
 
 export const Sidebar: FC<SidebarPropType> = ({ title, children }) => {
   const { pathname } = useRouter()
+  const hasMobileSize = useHasMobileSize()
   const [hasScrolled, setHasScrolled] = useState<boolean>(false)
   const isOpened = pathname !== '/' && pathname !== '/map'
   const cssVariables = {
-    '--sidebarWidth': '400px',
-    '--sidebarPadding': '24px',
+    '--sidebarWidth': hasMobileSize ? '100vw' : '400px',
+    '--sidebarPadding': hasMobileSize ? '16px' : '24px',
   } as React.CSSProperties
 
   useEffect(() => {
@@ -35,14 +37,21 @@ export const Sidebar: FC<SidebarPropType> = ({ title, children }) => {
     <div style={cssVariables}>
       <aside
         className={classNames(
-          'fixed inset-0 transform',
-          'right-auto transition',
-          isOpened ? 'translate-x-0' : '-translate-x-full'
+          'fixed transform z-10',
+          'transition inset-0',
+          hasMobileSize ? 'top-auto bottom-16' : 'right-auto'
         )}
         style={{
           width: 'var(--sidebarWidth, 320px)',
           padding: 'var(--sidebarPadding, 20px)',
-          paddingRight: 16,
+          paddingRight: hasMobileSize ? 'var(--sidebarPadding, 20px)' : 0,
+          height: hasMobileSize ? '50vh' : '100vh',
+          transform: classNames(
+            !isOpened && hasMobileSize && 'translateY(60vh)',
+            isOpened && hasMobileSize && 'translateY(0)',
+            isOpened && !hasMobileSize && 'translateX(0)',
+            !isOpened && !hasMobileSize && 'translateX(-100%)'
+          ),
         }}
       >
         <div
@@ -66,16 +75,24 @@ export const Sidebar: FC<SidebarPropType> = ({ title, children }) => {
           <div
             className="p-8 pt-0"
             style={{
-              minHeight: `calc(100vh - (var(--sidebarPadding, 24px) * 2) - ${
-                title ? 88 : 0
-              }px)`,
+              minHeight: hasMobileSize
+                ? `calc(50vh - (var(--sidebarPadding, 24px) * 2) - ${
+                    title ? 88 : 0
+                  }px)`
+                : `calc(100vh - (var(--sidebarPadding, 24px) * 2) - ${
+                    title ? 88 : 0
+                  }px)`,
             }}
           >
             {children}
           </div>
         </div>
       </aside>
-      <SidebarNav isOpened={isOpened} pathname={pathname} />
+      <SidebarNav
+        isOpened={isOpened}
+        hasMobileSize={hasMobileSize}
+        pathname={pathname}
+      />
     </div>
   )
 }

@@ -2,29 +2,28 @@
 
 exports[`Storyshots UI Elements/SidebarNav Closed With No Active Tab 1`] = `
 <nav
-  className="fixed inset-0  right-auto w-16 transition closed"
+  className="fixed inset-0 transition box-content z-10 closed right-auto w-16"
   style={
     Object {
       "left": "var(--sidebarWidth, 320px)",
-      "paddingBottom": "var(--sidebarPadding, 20px)",
-      "paddingTop": "var(--sidebarPadding, 20px)",
-      "transform": "translateX(calc(var(--sidebarWidth, 320px) * -1 + var(--sidebarPadding, 20px)))",
+      "padding": "var(--sidebarPadding, 20px) 16px",
+      "transform": "translateX(calc(var(--sidebarWidth, 320px) * -1 + (var(--sidebarPadding, 20px) / 2)))",
     }
   }
 >
   <ul
-    className="flex flex-col bg-white rounded shadow-lg"
+    className="flex bg-white rounded shadow-lg  flex-col"
   >
     <li
-      className="h-16 group relative"
+      className="group relative h-16"
     >
       <span
-        className="transition opacity-0 px-3 py-1 rounded bg-gray-800 text-white transform absolute left-full top-1/2 whitespace-nowrap translate-x-2 delay-1000 pointer-events-none -translate-y-1/2 group-hover:opacity-100 group-hover:delay-0 bg-opacity-90"
+        className="transition opacity-0 px-3 py-1 rounded bg-gray-800 text-white transform absolute whitespace-nowrap delay-1000 pointer-events-none group-hover:opacity-100 group-hover:delay-0 bg-opacity-90 left-full top-1/2 translate-x-2 -translate-y-1/2"
       >
         Filters
       </span>
       <a
-        className="transition group-first:rounded-t group-last:rounded-b w-full h-full grid place-items-center focus:rounded hover:bg-gray-200 focus:ring-offset-2 focus:ring-offset-white focus:ring-2 focus:ring-gray-800 focus:outline-none"
+        className="transition group-first:rounded-t group-last:rounded-b w-full h-full grid place-items-center focus:rounded hover:bg-gray-200 focus:ring-offset-2 focus:ring-offset-white hover:text-gray-800 focus:ring-2 focus:ring-gray-800 focus:outline-none"
         href="/filters"
         onClick={[Function]}
         onMouseEnter={[Function]}
@@ -47,15 +46,15 @@ exports[`Storyshots UI Elements/SidebarNav Closed With No Active Tab 1`] = `
       </a>
     </li>
     <li
-      className="h-16 group relative"
+      className="group relative h-16"
     >
       <span
-        className="transition opacity-0 px-3 py-1 rounded bg-gray-800 text-white transform absolute left-full top-1/2 whitespace-nowrap translate-x-2 delay-1000 pointer-events-none -translate-y-1/2 group-hover:opacity-100 group-hover:delay-0 bg-opacity-90"
+        className="transition opacity-0 px-3 py-1 rounded bg-gray-800 text-white transform absolute whitespace-nowrap delay-1000 pointer-events-none group-hover:opacity-100 group-hover:delay-0 bg-opacity-90 left-full top-1/2 translate-x-2 -translate-y-1/2"
       >
         Suche
       </span>
       <a
-        className="transition group-first:rounded-t group-last:rounded-b w-full h-full grid place-items-center focus:rounded hover:bg-gray-200 focus:ring-offset-2 focus:ring-offset-white focus:ring-2 focus:ring-gray-800 focus:outline-none"
+        className="transition group-first:rounded-t group-last:rounded-b w-full h-full grid place-items-center focus:rounded hover:bg-gray-200 focus:ring-offset-2 focus:ring-offset-white hover:text-gray-800 focus:ring-2 focus:ring-gray-800 focus:outline-none"
         href="/search"
         onClick={[Function]}
         onMouseEnter={[Function]}
@@ -78,15 +77,15 @@ exports[`Storyshots UI Elements/SidebarNav Closed With No Active Tab 1`] = `
       </a>
     </li>
     <li
-      className="h-16 group relative"
+      className="group relative h-16"
     >
       <span
-        className="transition opacity-0 px-3 py-1 rounded bg-gray-800 text-white transform absolute left-full top-1/2 whitespace-nowrap translate-x-2 delay-1000 pointer-events-none -translate-y-1/2 group-hover:opacity-100 group-hover:delay-0 bg-opacity-90"
+        className="transition opacity-0 px-3 py-1 rounded bg-gray-800 text-white transform absolute whitespace-nowrap delay-1000 pointer-events-none group-hover:opacity-100 group-hover:delay-0 bg-opacity-90 left-full top-1/2 translate-x-2 -translate-y-1/2"
       >
         Über das Projekt
       </span>
       <a
-        className="transition group-first:rounded-t group-last:rounded-b w-full h-full grid place-items-center focus:rounded hover:bg-gray-200 focus:ring-offset-2 focus:ring-offset-white focus:ring-2 focus:ring-gray-800 focus:outline-none"
+        className="transition group-first:rounded-t group-last:rounded-b w-full h-full grid place-items-center focus:rounded hover:bg-gray-200 focus:ring-offset-2 focus:ring-offset-white hover:text-gray-800 focus:ring-2 focus:ring-gray-800 focus:outline-none"
         href="/about"
         onClick={[Function]}
         onMouseEnter={[Function]}
@@ -114,29 +113,28 @@ exports[`Storyshots UI Elements/SidebarNav Closed With No Active Tab 1`] = `
 
 exports[`Storyshots UI Elements/SidebarNav Opened With Active Tab 1`] = `
 <nav
-  className="fixed inset-0  right-auto w-16 transition opened"
+  className="fixed inset-0 transition box-content z-10 opened right-auto w-16"
   style={
     Object {
       "left": "var(--sidebarWidth, 320px)",
-      "paddingBottom": "var(--sidebarPadding, 20px)",
-      "paddingTop": "var(--sidebarPadding, 20px)",
+      "padding": "var(--sidebarPadding, 20px) 16px",
       "transform": "translateX(0)",
     }
   }
 >
   <ul
-    className="flex flex-col bg-white rounded shadow-lg"
+    className="flex bg-white rounded shadow-lg  flex-col"
   >
     <li
-      className="h-16 group relative"
+      className="group relative h-16"
     >
       <span
-        className="transition opacity-0 px-3 py-1 rounded bg-gray-800 text-white transform absolute left-full top-1/2 whitespace-nowrap translate-x-2 delay-1000 pointer-events-none -translate-y-1/2 group-hover:opacity-100 group-hover:delay-0 bg-opacity-90"
+        className="transition opacity-0 px-3 py-1 rounded bg-gray-800 text-white transform absolute whitespace-nowrap delay-1000 pointer-events-none group-hover:opacity-100 group-hover:delay-0 bg-opacity-90 left-full top-1/2 translate-x-2 -translate-y-1/2"
       >
         Filters
       </span>
       <a
-        className="transition group-first:rounded-t group-last:rounded-b w-full h-full grid place-items-center focus:rounded hover:bg-gray-200 focus:ring-offset-2 focus:ring-offset-white focus:ring-2 focus:ring-gray-800 focus:outline-none bg-gray-800 text-white active"
+        className="transition group-first:rounded-t group-last:rounded-b w-full h-full grid place-items-center focus:rounded hover:bg-gray-200 focus:ring-offset-2 focus:ring-offset-white hover:text-gray-800 focus:ring-2 focus:ring-gray-800 focus:outline-none bg-gray-800 text-white active"
         href="/map"
         onClick={[Function]}
         onMouseEnter={[Function]}
@@ -159,15 +157,15 @@ exports[`Storyshots UI Elements/SidebarNav Opened With Active Tab 1`] = `
       </a>
     </li>
     <li
-      className="h-16 group relative"
+      className="group relative h-16"
     >
       <span
-        className="transition opacity-0 px-3 py-1 rounded bg-gray-800 text-white transform absolute left-full top-1/2 whitespace-nowrap translate-x-2 delay-1000 pointer-events-none -translate-y-1/2 group-hover:opacity-100 group-hover:delay-0 bg-opacity-90"
+        className="transition opacity-0 px-3 py-1 rounded bg-gray-800 text-white transform absolute whitespace-nowrap delay-1000 pointer-events-none group-hover:opacity-100 group-hover:delay-0 bg-opacity-90 left-full top-1/2 translate-x-2 -translate-y-1/2"
       >
         Suche
       </span>
       <a
-        className="transition group-first:rounded-t group-last:rounded-b w-full h-full grid place-items-center focus:rounded hover:bg-gray-200 focus:ring-offset-2 focus:ring-offset-white focus:ring-2 focus:ring-gray-800 focus:outline-none"
+        className="transition group-first:rounded-t group-last:rounded-b w-full h-full grid place-items-center focus:rounded hover:bg-gray-200 focus:ring-offset-2 focus:ring-offset-white hover:text-gray-800 focus:ring-2 focus:ring-gray-800 focus:outline-none"
         href="/search"
         onClick={[Function]}
         onMouseEnter={[Function]}
@@ -190,15 +188,15 @@ exports[`Storyshots UI Elements/SidebarNav Opened With Active Tab 1`] = `
       </a>
     </li>
     <li
-      className="h-16 group relative"
+      className="group relative h-16"
     >
       <span
-        className="transition opacity-0 px-3 py-1 rounded bg-gray-800 text-white transform absolute left-full top-1/2 whitespace-nowrap translate-x-2 delay-1000 pointer-events-none -translate-y-1/2 group-hover:opacity-100 group-hover:delay-0 bg-opacity-90"
+        className="transition opacity-0 px-3 py-1 rounded bg-gray-800 text-white transform absolute whitespace-nowrap delay-1000 pointer-events-none group-hover:opacity-100 group-hover:delay-0 bg-opacity-90 left-full top-1/2 translate-x-2 -translate-y-1/2"
       >
         Über das Projekt
       </span>
       <a
-        className="transition group-first:rounded-t group-last:rounded-b w-full h-full grid place-items-center focus:rounded hover:bg-gray-200 focus:ring-offset-2 focus:ring-offset-white focus:ring-2 focus:ring-gray-800 focus:outline-none"
+        className="transition group-first:rounded-t group-last:rounded-b w-full h-full grid place-items-center focus:rounded hover:bg-gray-200 focus:ring-offset-2 focus:ring-offset-white hover:text-gray-800 focus:ring-2 focus:ring-gray-800 focus:outline-none"
         href="/about"
         onClick={[Function]}
         onMouseEnter={[Function]}
