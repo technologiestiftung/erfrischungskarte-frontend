@@ -1,3 +1,4 @@
+import { useHasMobileSize } from '@lib/hooks/useHasMobileSize'
 import { Story, Meta } from '@storybook/react'
 import { withNextRouter } from 'storybook-addon-next-router'
 import { SidebarNav } from '.'
@@ -11,7 +12,10 @@ export default {
 const Template: Story<{
   isOpened: boolean
   pathname: string
-}> = (args) => <SidebarNav {...args} />
+}> = (args) => {
+  const hasMobileSize = useHasMobileSize()
+  return <SidebarNav {...args} hasMobileSize={hasMobileSize} />
+}
 
 export const OpenedWithActiveTab = Template.bind({})
 OpenedWithActiveTab.parameters = {

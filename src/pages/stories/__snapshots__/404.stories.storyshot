@@ -34,7 +34,7 @@ exports[`Storyshots Pages/FourOFour Default 1`] = `
         }
       >
         <div
-          className="flex flex-col items-center justify-center relative gap-4"
+          className="flex flex-col items-center justify-center relative gap-2 sm:gap-4"
           style={
             Object {
               "height": "calc(100vh - (var(--sidebarPadding, 24px) * 2) - 32px)",
@@ -42,7 +42,7 @@ exports[`Storyshots Pages/FourOFour Default 1`] = `
           }
         >
           <h1
-            className="text-7xl"
+            className="text-5xl sm:text-7xl"
           >
             400
           </h1>
