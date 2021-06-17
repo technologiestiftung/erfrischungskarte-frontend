@@ -19,11 +19,7 @@ const Template: Story = () => {
         'bg-gray-300 h-full fixed inset-0'
       )}
     >
-      <HourSelector
-        onChange={setActiveHourKey}
-        activeHourKey={activeHourKey}
-        isOpened={true}
-      />
+      <HourSelector onChange={setActiveHourKey} activeHourKey={activeHourKey} />
     </div>
   )
 }

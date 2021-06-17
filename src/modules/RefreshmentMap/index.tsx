@@ -64,7 +64,6 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
       <Sidebar {...pageProps} />
       <div className="absolute top-8 right-8">
         <HourSelector
-          isOpened
           activeHourKey={activeHourKey}
           onChange={setActiveHourKey}
         />
