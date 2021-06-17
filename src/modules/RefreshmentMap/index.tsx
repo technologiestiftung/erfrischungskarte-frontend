@@ -15,6 +15,8 @@ import {
 import { MapRasterLayer as RasterLayer } from '../../components/MapRasterLayer'
 import { MapExtrusionLayer as ExtrusionLayer } from '../../components/MapExtrusionLayer'
 import { MapPointLayer } from '@components/MapPointLayer'
+import { useRouter } from 'next/router'
+import { SplashScreen } from './../../components/SplashScreen'
 
 interface RefreshmentMapPropType {
   title?: string
@@ -22,12 +24,14 @@ interface RefreshmentMapPropType {
 
 export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
   const hasMobileSize = useHasMobileSize()
+  const { pathname } = useRouter()
   const { width: windowWidth, height: windowHeight } = useWindowSize()
 
   const [activeHour, setActiveHour] = useState(HOURS['10'])
 
   return (
     <>
+      {pathname === '/' && <SplashScreen />}
       <MapRoot
         mapStyle="mapbox://styles/mapbox/light-v10"
         width={windowWidth}
@@ -38,9 +42,13 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
         minZoom={11.5}
         maxZoom={18}
       >
-        <MapControls
-          className={`absolute right-4 ${hasMobileSize ? 'top-4' : 'bottom-4'}`}
-        />
+        {pathname !== '/' && (
+          <MapControls
+            className={`absolute right-4 ${
+              hasMobileSize ? 'top-4' : 'bottom-4'
+            }`}
+          />
+        )}
         <FilledPolygonLayer
           {...WIND_DATA}
           fillColorProperty={activeHour.vectorTilesetKey}
@@ -59,26 +67,28 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
         <ExtrusionLayer {...EXTRUDED_BUILDINGS_DATA} />
         <MapPointLayer {...POI_DATA} />
       </MapRoot>
-      <Sidebar {...pageProps} />
-      {
-        // eslint-disable-next-line jsx-a11y/no-onchange
-        <select
-          name="hours"
-          id="hour-select"
-          className="bg-white shadow fixed top-4 right-4"
-          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-          // @ts-ignore
-          onChange={(e) => setActiveHour(HOURS[e.target.value])}
-        >
-          {Object.entries(HOURS).map(([key, info]) => {
-            return (
-              <option key={key} value={key}>
-                {info.displayName}
-              </option>
-            )
-          })}
-        </select>
-      }
+      {pathname !== '/' && (
+        <>
+          <Sidebar {...pageProps} />
+          {/* eslint-disable-next-line jsx-a11y/no-onchange */}
+          <select
+            name="hours"
+            id="hour-select"
+            className="bg-white shadow fixed top-4 right-4"
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-ignore
+            onChange={(e) => setActiveHour(HOURS[e.target.value])}
+          >
+            {Object.entries(HOURS).map(([key, info]) => {
+              return (
+                <option key={key} value={key}>
+                  {info.displayName}
+                </option>
+              )
+            })}
+          </select>
+        </>
+      )}
     </>
   )
 }
