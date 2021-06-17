@@ -1,10 +1,10 @@
 import React, { FC, useState } from 'react'
-import { FullScreenMapWrapper } from '../../layouts/FullScreenMapWrapper'
-import { Map as MapRoot } from '../../components/Map'
-import { MapFilledPolygonLayer as FilledPolygonLayer } from '../../components/MapFilledPolygonLayer'
-import { useWindowSize } from '../../lib/hooks/useWindowSize'
-import { isMobile } from 'react-device-detect'
-import { MapControls } from '../../components/MapControls'
+import { Map as MapRoot } from '@components/Map'
+import { Sidebar } from '@components/Sidebar'
+import { MapFilledPolygonLayer as FilledPolygonLayer } from '@components/MapFilledPolygonLayer'
+import { useWindowSize } from '@lib/hooks/useWindowSize'
+import { useHasMobileSize } from '@lib/hooks/useHasMobileSize'
+import { MapControls } from '@components/MapControls'
 import {
   EXTRUDED_BUILDINGS_DATA,
   HOURS,
@@ -16,37 +16,18 @@ import { MapRasterLayer as RasterLayer } from '../../components/MapRasterLayer'
 import { MapExtrusionLayer as ExtrusionLayer } from '../../components/MapExtrusionLayer'
 import { MapPointLayer } from '@components/MapPointLayer'
 
-export const RefreshmentMap: FC = () => {
+interface RefreshmentMapPropType {
+  title?: string
+}
+
+export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
+  const hasMobileSize = useHasMobileSize()
   const { width: windowWidth, height: windowHeight } = useWindowSize()
 
   const [activeHour, setActiveHour] = useState(HOURS['10'])
 
   return (
-    <FullScreenMapWrapper
-      topLeft={<div className="bg-white shadow">Top left placeholder</div>}
-      topRight={
-        // eslint-disable-next-line jsx-a11y/no-onchange
-        <select
-          name="hours"
-          id="hour-select"
-          className="bg-white shadow"
-          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-          // @ts-ignore
-          onChange={(e) => setActiveHour(HOURS[e.target.value])}
-        >
-          {Object.entries(HOURS).map(([key, info]) => {
-            return (
-              <option key={key} value={key}>
-                {info.displayName}
-              </option>
-            )
-          })}
-        </select>
-      }
-      bottomLeft={
-        <div className="bg-white shadow">Bottom left placeholder</div>
-      }
-    >
+    <>
       <MapRoot
         mapStyle="mapbox://styles/mapbox/light-v10"
         width={windowWidth}
@@ -58,7 +39,7 @@ export const RefreshmentMap: FC = () => {
         maxZoom={18}
       >
         <MapControls
-          className={`absolute right-4 ${isMobile ? 'top-4' : 'bottom-4'}`}
+          className={`absolute right-4 ${hasMobileSize ? 'top-4' : 'bottom-4'}`}
         />
         <FilledPolygonLayer
           {...WIND_DATA}
@@ -78,6 +59,26 @@ export const RefreshmentMap: FC = () => {
         <ExtrusionLayer {...EXTRUDED_BUILDINGS_DATA} />
         <MapPointLayer {...POI_DATA} />
       </MapRoot>
-    </FullScreenMapWrapper>
+      <Sidebar {...pageProps} />
+      {
+        // eslint-disable-next-line jsx-a11y/no-onchange
+        <select
+          name="hours"
+          id="hour-select"
+          className="bg-white shadow fixed top-4 right-4"
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+          // @ts-ignore
+          onChange={(e) => setActiveHour(HOURS[e.target.value])}
+        >
+          {Object.entries(HOURS).map(([key, info]) => {
+            return (
+              <option key={key} value={key}>
+                {info.displayName}
+              </option>
+            )
+          })}
+        </select>
+      }
+    </>
   )
 }
