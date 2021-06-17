@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const SplashScreen: FC = () => {
   return (
-    <div className="flex flex-col justify-center h-full w-full">
+    <div className="fixed grid z-10 inset-0 items-center">
       <div className="bg-white p-6 max-w-xs md:max-w-none filter drop-shadow-lg rounded-lg md:min-w-xl md:w-1/2 mx-auto">
         <svg
           width="14"
