@@ -65,7 +65,8 @@ export const Sidebar: FC<SidebarPropType> = ({ title, children }) => {
             <h1
               className={classNames(
                 'sticky inset-0 bottom-auto transition',
-                'p-8 pb-6 text-2xl font-bold bg-white',
+                'p-6 sm:p-8 pb-4 sm:pb-6',
+                'text-xl sm:text-2xl font-bold bg-white',
                 hasScrolled && 'shadow-md'
               )}
             >
@@ -73,11 +74,11 @@ export const Sidebar: FC<SidebarPropType> = ({ title, children }) => {
             </h1>
           )}
           <div
-            className="p-8 pt-0"
+            className="p-6 sm:p-8 pt-0 sm:pt-0"
             style={{
               minHeight: hasMobileSize
                 ? `calc(50vh - (var(--sidebarPadding, 24px) * 2) - ${
-                    title ? 88 : 0
+                    title ? 68 : 0
                   }px)`
                 : `calc(100vh - (var(--sidebarPadding, 24px) * 2) - ${
                     title ? 88 : 0
