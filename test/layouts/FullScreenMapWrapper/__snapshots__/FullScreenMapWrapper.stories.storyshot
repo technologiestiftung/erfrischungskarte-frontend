@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Layouts/FullScreenMapWrapper Default 1`] = `
+<div
+  className="container mx-auto max-w-lg py-8 prose"
+>
+  <div
+    className="w-screen h-screen"
+  >
+    <h1>
+      Hello, I am the children
+    </h1>
+    <div
+      className="fixed top-4 left-4"
+    >
+      <h1>
+        Hello, I am the topLeft
+      </h1>
+    </div>
+    <div
+      className="fixed top-4 right-4"
+    >
+      <h1>
+        Hello, I am the topRight
+      </h1>
+    </div>
+    <div
+      className="fixed bottom-4 left-4"
+    >
+      <h1>
+        Hello, I am the bottomLeft
+      </h1>
+    </div>
+    <div
+      className="fixed bottom-4 right-4"
+    >
+      <h1>
+        Hello, I am the bottomRight
+      </h1>
+    </div>
+  </div>
+</div>
+`;
