@@ -23,9 +23,11 @@ export const SplashScreen: FC = () => {
             />
           </svg>
           <div>
-            <h1 className="font-bold text-2xl">30°C und kein Schatten?</h1>
-            <h1 className="font-bold text-2xl text-layer-turquoise-300">
-              So findest du Erfrischung!
+            <h1 className="font-bold text-2xl flex flex-col">
+              <span>30°C und kein Schatten?</span>
+              <span className="text-layer-turquoise-300">
+                So findest du Erfrischung!
+              </span>
             </h1>
           </div>
         </div>
