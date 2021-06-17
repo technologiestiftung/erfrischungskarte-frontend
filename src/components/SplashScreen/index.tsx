@@ -11,9 +11,10 @@ export const SplashScreen: FC = () => {
           viewBox="0 0 14 14"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="hidden md:block absolute right-8 top-8 cursor-pointer"
+          className="hidden md:block absolute right-8 top-8 cursor-pointer text-gray-700 hover:text-gray-500 transform active:scale-90"
         >
           <path
+            className="stroke-current"
             d="M1 1L13 13M1 13L13 1L1 13Z"
             stroke="#333333"
             strokeWidth="2"
