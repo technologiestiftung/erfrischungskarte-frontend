@@ -42,11 +42,15 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
         mapStyle="mapbox://styles/mapbox/light-v10"
         width={windowWidth}
         height={windowHeight}
-        latitude={52.520952}
-        longitude={13.400033}
-        zoom={12}
-        minZoom={11.5}
-        maxZoom={18}
+        staticViewportProps={{
+          minZoom: 11.5,
+          maxZoom: 18,
+        }}
+        initialViewportProps={{
+          latitude: 52.520952,
+          longitude: 13.400033,
+          zoom: 12,
+        }}
       >
         {pathname !== '/' && (
           <MapControls

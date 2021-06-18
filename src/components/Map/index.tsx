@@ -2,28 +2,30 @@ import { FC, useEffect } from 'react'
 import { useState } from 'react'
 import ReactMapGL, { ViewportProps } from 'react-map-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
+import { InteractiveMapProps } from 'react-map-gl/src/components/interactive-map'
 
-interface MapProps extends ViewportProps {
-  mapStyle?: string
+interface MapProps extends InteractiveMapProps {
+  initialViewportProps: Partial<ViewportProps>
+  staticViewportProps?: Partial<ViewportProps>
+  width: number
+  height: number
+  mapStyle: string
 }
 
 export const Map: FC<MapProps> = ({
+  initialViewportProps,
+  staticViewportProps,
   width,
   height,
-  latitude,
-  longitude,
-  zoom,
   mapStyle,
   children,
-  ...otherViewportProps
+  ...otherMapProps
 }) => {
   const [viewport, setViewport] = useState<ViewportProps>({
     width,
     height,
-    latitude,
-    longitude,
-    zoom,
-    ...otherViewportProps,
+    ...staticViewportProps,
+    ...initialViewportProps,
   })
 
   useEffect(() => {
@@ -44,6 +46,7 @@ export const Map: FC<MapProps> = ({
         setViewport(nextViewport)
       }
       reuseMaps
+      {...otherMapProps}
     >
       {children}
     </ReactMapGL>
