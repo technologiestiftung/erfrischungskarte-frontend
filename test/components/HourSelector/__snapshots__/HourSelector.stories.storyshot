@@ -5,7 +5,7 @@ exports[`Storyshots UI Elements/HourSelector Default 1`] = `
   className="grid place-content-center place-items-center bg-gray-300 h-full fixed inset-0"
 >
   <div
-    className="w-48 h-48 relative pointer-events-none"
+    className="w-48 h-48 relative"
   >
     <div
       className="absolute w-48 h-48 grid place-items-center inset-0"
