@@ -44,6 +44,7 @@ exports[`Storyshots UI Elements/HourSelector Default 1`] = `
       className="absolute w-48 h-48 grid place-items-center inset-0"
     >
       <button
+        aria-label="hour-selector-closed"
         className="inner-ring w-24 h-24 flex flex-col place-items-center justify-center rounded-full bg-white shadow-lg delay-100 transform origin-top-right transition focus:outline-none"
         onClick={[Function]}
         style={
