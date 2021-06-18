@@ -5,7 +5,7 @@ exports[`Storyshots UI Elements/HourSelector Default 1`] = `
   className="grid place-content-center place-items-center bg-gray-300 h-full fixed inset-0"
 >
   <div
-    className="w-48 h-48 relative"
+    className="w-48 h-48 relative pointer-events-none"
   >
     <div
       className="absolute w-48 h-48 grid place-items-center inset-0"
@@ -24,7 +24,7 @@ exports[`Storyshots UI Elements/HourSelector Default 1`] = `
     >
       <button
         aria-label="open-hour-selector"
-        className="inner-ring w-24 h-24 flex flex-col place-items-center justify-center rounded-full bg-white shadow-lg delay-100 transform origin-top-right transition focus:outline-none focus:ring-3 focus:ring-gray-800 hover:bg-gray-800 hover:text-white select-none cursor-pointer"
+        className="inner-ring w-24 h-24 flex flex-col place-items-center justify-center rounded-full bg-white shadow-lg delay-100 transform origin-top-right transition focus:outline-none focus:ring-3 focus:ring-gray-800 hover:bg-gray-800 hover:text-white select-none cursor-pointer pointer-events-auto"
         onClick={[Function]}
         style={
           Object {

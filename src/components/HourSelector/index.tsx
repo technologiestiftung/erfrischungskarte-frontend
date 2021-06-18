@@ -68,12 +68,12 @@ export const HourSelector: FC<HourSelectorPropType> = ({
   }, [hasMobileSize])
 
   return (
-    <div className="w-48 h-48 relative">
+    <div className="w-48 h-48 relative pointer-events-none">
       {isOpened && (
         <button
           aria-label="close-hour-selector"
           className={classNames(
-            'absolute',
+            'absolute pointer-events-auto',
             'w-10 h-10 rounded-full shadow-lg bg-white transition',
             'grid place-items-center hover:bg-gray-800 hover:text-white',
             'focus:outline-none focus:ring-2 focus:ring-gray-800',
@@ -86,11 +86,7 @@ export const HourSelector: FC<HourSelectorPropType> = ({
           <CrossIcon />
         </button>
       )}
-      <div
-        className={classNames(
-          'absolute w-48 h-48 grid place-items-center inset-0'
-        )}
-      >
+      <div className="absolute w-48 h-48 grid place-items-center inset-0">
         <div
           style={{ borderWidth: 40 }}
           className={classNames(
@@ -115,7 +111,7 @@ export const HourSelector: FC<HourSelectorPropType> = ({
             !isOpened && [
               'focus:ring-3 focus:ring-gray-800',
               'hover:bg-gray-800 hover:text-white',
-              'select-none cursor-pointer',
+              'select-none cursor-pointer pointer-events-auto',
             ]
           )}
           style={{
