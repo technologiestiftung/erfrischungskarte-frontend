@@ -1,6 +1,7 @@
 import { MapPointLayerType } from '@components/MapPointLayer'
 import { MapExtrusionLayerType } from '../../components/MapExtrusionLayer'
 import { MapFilledPolygonLayerType } from '../../components/MapFilledPolygonLayer'
+import colors from '../../style/colors'
 
 export const HOURS = {
   '10': {
@@ -143,16 +144,16 @@ export const POI_DATA: PoiDataType = {
   minzoom: 11.5,
   fillColorProperty: 'category',
   fillColorMap: new Map([
-    ['Gruenanlage', '#B2DF8A'],
-    ['Badestelle', '#09AAA4'],
-    ['Strandbad', '#09AAA4'],
-    ['Badestelle', '#09AAA4'],
-    ['Freibad', '#09AAA4'],
-    ['Schwimmhalle', '#09AAA4'],
-    ['Brunnen', '#A6CEE3'],
-    ['Trinkbrunnen', '#A6CEE3'],
-    ['Sitzbank', '#C37D3C'],
-    ['Picknicktisch', '#C37D3C'],
+    ['Gruenanlage', colors['poi-green']],
+    ['Badestelle', colors['poi-darkblue']],
+    ['Strandbad', colors['poi-darkblue']],
+    ['Badestelle', colors['poi-darkblue']],
+    ['Freibad', colors['poi-darkblue']],
+    ['Schwimmhalle', colors['poi-darkblue']],
+    ['Brunnen', colors['poi-turquoise']],
+    ['Trinkbrunnen', colors['poi-lightblue']],
+    ['Sitzbank', colors['poi-yellow']],
+    ['Picknicktisch', colors['poi-red']],
   ]),
   activePropertyKeys: [
     'Picknicktisch',
