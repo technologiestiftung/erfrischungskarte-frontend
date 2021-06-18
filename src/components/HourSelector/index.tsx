@@ -68,7 +68,7 @@ export const HourSelector: FC<HourSelectorPropType> = ({
   }, [hasMobileSize])
 
   return (
-    <div className="w-48 h-48 relative pointer-events-none">
+    <div className="w-48 h-48 relative">
       {isOpened && (
         <button
           aria-label="close-hour-selector"

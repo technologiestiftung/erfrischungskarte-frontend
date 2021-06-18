@@ -75,7 +75,7 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
           <Sidebar {...pageProps} />
           <div
             className={classNames(
-              'absolute transform z-50',
+              'absolute transform z-50 pointer-events-none',
               hasMobileSize && 'right-16 bottom-24',
               !hasMobileSize && 'top-8 right-8'
             )}
