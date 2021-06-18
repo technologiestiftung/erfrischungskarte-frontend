@@ -1,7 +1,10 @@
-import { InternalLink } from '@components/InternalLink'
-import { mapRawQueryToState } from '@lib/utils/queryUtil'
+import { Accordion } from '@components/Accordion'
+import {
+  ABOUT_ACCORDION_ITEMS,
+  ABOUT_INTRODUCTION_TEXT,
+} from '@modules/RefreshmentMap/content'
 import { GetServerSideProps } from 'next'
-import { FC } from 'react'
+import React, { FC } from 'react'
 
 // eslint-disable-next-line @typescript-eslint/require-await
 export const getServerSideProps: GetServerSideProps = async ({ query }) => ({
@@ -11,12 +14,10 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => ({
   },
 })
 
-export const About: FC<{
-  query: ReturnType<typeof mapRawQueryToState>
-}> = ({ query }) => (
+export const About: FC = () => (
   <div>
-    <InternalLink href="/">Home</InternalLink>
-    <pre>{JSON.stringify(query, null, 2)}</pre>
+    <p className="text-gray-500 text-sm pb-6">{ABOUT_INTRODUCTION_TEXT}</p>
+    <Accordion items={ABOUT_ACCORDION_ITEMS} />
   </div>
 )
 

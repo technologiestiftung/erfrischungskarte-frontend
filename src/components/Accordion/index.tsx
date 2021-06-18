@@ -21,11 +21,11 @@ const getStyles: StyleGetterType = ({ isActive }) => ({
     'pt-4 block w-full font-bold text-left border border-white',
     'transition rounded relative focus:outline-none focus:z-10',
     'hover:bg-blue-50 group hover:border-blue-500',
-    isActive ? 'pb-1' : 'pb-4'
+    isActive ? 'pb-3' : 'pb-4'
   ),
   content: classNames(
     borderBottomStyle,
-    'rounded m-0 leading-7 pb-4 pt-0 overflow-hidden',
+    'rounded m-0 pb-6 pt-0 overflow-hidden',
     'max-w-none w-full text-sm text-gray-500'
   ),
 })
