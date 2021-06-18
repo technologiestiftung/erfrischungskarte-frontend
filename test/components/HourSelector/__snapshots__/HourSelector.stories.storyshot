@@ -7,11 +7,32 @@ exports[`Storyshots UI Elements/HourSelector Default 1`] = `
   <div
     className="w-48 h-48 relative"
   >
+    <button
+      aria-label="close-hour-selector"
+      className="absolute pointer-events-auto w-10 h-10 rounded-full shadow-lg bg-white transition grid place-items-center hover:bg-gray-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-2 focus:ring-offset-white z-50 -top-4 right-6 transform translate-x-full"
+      onClick={[Function]}
+    >
+      <svg
+        fill="none"
+        height="24"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M6 6L18 18M6 18L18 6L6 18Z"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+        />
+      </svg>
+    </button>
     <div
       className="absolute w-48 h-48 grid place-items-center inset-0"
     >
       <div
-        className="outer-ring w-24 h-24 rounded-full border-white box-content opacity-90 transform transition scale-50 opacity-0"
+        className="outer-ring w-24 h-24 rounded-full border-white box-content opacity-90 transform transition scale-110 opacity-90 delay-200"
         style={
           Object {
             "borderWidth": 40,
@@ -23,15 +44,14 @@ exports[`Storyshots UI Elements/HourSelector Default 1`] = `
       className="absolute w-48 h-48 grid place-items-center inset-0"
     >
       <button
-        aria-label="open-hour-selector"
-        className="inner-ring w-24 h-24 flex flex-col place-items-center justify-center rounded-full bg-white shadow-lg delay-100 transform origin-top-right transition focus:outline-none focus:ring-3 focus:ring-gray-800 hover:bg-gray-800 hover:text-white select-none cursor-pointer pointer-events-auto"
+        className="inner-ring w-24 h-24 flex flex-col place-items-center justify-center rounded-full bg-white shadow-lg delay-100 transform origin-top-right transition focus:outline-none"
         onClick={[Function]}
         style={
           Object {
-            "transform": "scale(.75) translate(80px, -80px)",
+            "transform": "scale(1) translate(0, 0)",
           }
         }
-        tabIndex={0}
+        tabIndex={-1}
       >
         <span
           className="text-4xl leading-8"
@@ -46,7 +66,7 @@ exports[`Storyshots UI Elements/HourSelector Default 1`] = `
       </button>
     </div>
     <div
-      className="absolute w-48 h-48 grid place-items-center inset-0 transform transition scale-50 opacity-0"
+      className="absolute w-48 h-48 grid place-items-center inset-0 transform transition scale-100 opacity-90 delay-200"
     >
       <svg
         fill="none"

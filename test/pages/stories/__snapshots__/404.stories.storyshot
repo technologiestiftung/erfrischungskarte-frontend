@@ -10,7 +10,7 @@ exports[`Storyshots Pages/FourOFour Default 1`] = `
   }
 >
   <aside
-    className="fixed transform z-10 transition inset-0 right-auto"
+    className="fixed transform z-10 transition inset-0 opacity-100 right-auto"
     style={
       Object {
         "height": "var(--screenHeight)",
@@ -64,7 +64,7 @@ exports[`Storyshots Pages/FourOFour Default 1`] = `
     </div>
   </aside>
   <nav
-    className="fixed inset-0 transition box-content z-10 opened right-auto w-16"
+    className="fixed inset-0 transition box-content z-20 opened right-auto w-16"
     style={
       Object {
         "left": "var(--sidebarWidth, 320px)",
@@ -85,7 +85,7 @@ exports[`Storyshots Pages/FourOFour Default 1`] = `
           Filters
         </span>
         <a
-          className="transition group-first:rounded-t group-last:rounded-b w-full h-full grid place-items-center focus:rounded hover:bg-gray-200 focus:ring-offset-2 focus:ring-offset-white hover:text-gray-800 focus:ring-2 focus:ring-gray-800 focus:outline-none"
+          className="transition w-full h-full grid place-items-center group-first:rounded-t group-last:rounded-b focus:rounded focus:ring-2 focus:ring-gray-800 focus:outline-none focus:ring-offset-2 focus:ring-offset-white focus:z-10 relative hover:bg-gray-200 hover:text-gray-800"
           href="/filters"
           onClick={[Function]}
           onMouseEnter={[Function]}
@@ -116,7 +116,7 @@ exports[`Storyshots Pages/FourOFour Default 1`] = `
           Suche
         </span>
         <a
-          className="transition group-first:rounded-t group-last:rounded-b w-full h-full grid place-items-center focus:rounded hover:bg-gray-200 focus:ring-offset-2 focus:ring-offset-white hover:text-gray-800 focus:ring-2 focus:ring-gray-800 focus:outline-none"
+          className="transition w-full h-full grid place-items-center group-first:rounded-t group-last:rounded-b focus:rounded focus:ring-2 focus:ring-gray-800 focus:outline-none focus:ring-offset-2 focus:ring-offset-white focus:z-10 relative hover:bg-gray-200 hover:text-gray-800"
           href="/search"
           onClick={[Function]}
           onMouseEnter={[Function]}
@@ -147,7 +147,7 @@ exports[`Storyshots Pages/FourOFour Default 1`] = `
           Über das Projekt
         </span>
         <a
-          className="transition group-first:rounded-t group-last:rounded-b w-full h-full grid place-items-center focus:rounded hover:bg-gray-200 focus:ring-offset-2 focus:ring-offset-white hover:text-gray-800 focus:ring-2 focus:ring-gray-800 focus:outline-none"
+          className="transition w-full h-full grid place-items-center group-first:rounded-t group-last:rounded-b focus:rounded focus:ring-2 focus:ring-gray-800 focus:outline-none focus:ring-offset-2 focus:ring-offset-white focus:z-10 relative hover:bg-gray-200 hover:text-gray-800"
           href="/about"
           onClick={[Function]}
           onMouseEnter={[Function]}

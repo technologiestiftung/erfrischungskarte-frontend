@@ -47,8 +47,10 @@ const SidebarNavLink: FC<SidebarNavLinkPropType> = ({
         'rounded bg-gray-800 text-white transform',
         'absolute whitespace-nowrap',
         'delay-1000 pointer-events-none',
-        'group-hover:opacity-100',
-        'group-hover:delay-0 bg-opacity-90',
+        !hasMobileSize && [
+          'group-hover:opacity-100',
+          'group-hover:delay-0 bg-opacity-90',
+        ],
         hasMobileSize
           ? 'bottom-full left-1/2 -translate-y-2 -translate-x-1/2'
           : 'left-full top-1/2 translate-x-2 -translate-y-1/2'
@@ -59,13 +61,14 @@ const SidebarNavLink: FC<SidebarNavLinkPropType> = ({
     <InternalLink
       href={isActive ? '/map' : path}
       className={classNames(
-        'transition',
-        !hasMobileSize && 'group-first:rounded-t group-last:rounded-b',
+        'transition w-full h-full grid place-items-center',
         hasMobileSize && 'group-first:rounded-l',
-        'w-full h-full grid place-items-center focus:rounded',
-        'hover:bg-gray-200 focus:ring-offset-2 focus:ring-offset-white',
-        'hover:text-gray-800',
-        'focus:ring-2 focus:ring-gray-800 focus:outline-none',
+        !hasMobileSize && [
+          'group-first:rounded-t group-last:rounded-b',
+          'focus:rounded focus:ring-2 focus:ring-gray-800 focus:outline-none',
+          'focus:ring-offset-2 focus:ring-offset-white focus:z-10 relative',
+          'hover:bg-gray-200 hover:text-gray-800',
+        ],
         isActive && 'bg-gray-800 text-white active'
       )}
     >
@@ -81,7 +84,7 @@ export const SidebarNav: FC<SidebarNavPropType> = ({
 }) => (
   <nav
     className={classNames(
-      'fixed inset-0 transition box-content z-10',
+      'fixed inset-0 transition box-content z-20',
       isOpened ? 'opened' : 'closed',
       hasMobileSize ? 'top-auto h-14' : 'right-auto w-16'
     )}

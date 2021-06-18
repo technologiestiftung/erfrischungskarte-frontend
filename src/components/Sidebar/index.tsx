@@ -38,8 +38,9 @@ export const Sidebar: FC<SidebarPropType> = ({ title, children }) => {
       <aside
         className={classNames(
           'fixed transform z-10',
-          'transition inset-0',
-          hasMobileSize ? 'top-auto bottom-16' : 'right-auto'
+          'transition inset-0 opacity-100',
+          hasMobileSize ? 'top-auto bottom-16' : 'right-auto',
+          !isOpened && hasMobileSize && 'opacity-0 pointer-events-none'
         )}
         style={{
           width: 'var(--sidebarWidth, 320px)',
@@ -51,7 +52,7 @@ export const Sidebar: FC<SidebarPropType> = ({ title, children }) => {
           transform: classNames(
             !isOpened &&
               hasMobileSize &&
-              'translateY(calc(60 * var(--vh, 1vh)))',
+              'translateY(calc(10 * var(--vh, 1vh)))',
             isOpened && hasMobileSize && 'translateY(0)',
             isOpened && !hasMobileSize && 'translateX(0)',
             !isOpened && !hasMobileSize && 'translateX(-100%)'

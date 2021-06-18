@@ -1,8 +1,10 @@
 import { CrossIcon } from '@components/Icons'
 import { useHasMobileSize } from '@lib/hooks/useHasMobileSize'
+import { mapRawQueryToState } from '@lib/utils/queryUtil'
 import { HOURS } from '@modules/RefreshmentMap/content'
 import classNames from 'classnames'
-import React, { FC, useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
+import React, { FC, useEffect, useRef, useState } from 'react'
 import styles from './HourSelector.module.css'
 
 interface HourSelectorPropType {
@@ -60,12 +62,25 @@ export const HourSelector: FC<HourSelectorPropType> = ({
   onChange,
 }) => {
   const hasMobileSize = useHasMobileSize()
-  const [isOpened, setIsOpened] = useState<boolean>(false)
+  const router = useRouter()
+  const componentIsMounted = useRef(true)
+  const [isOpened, setIsOpened] = useState<boolean>(true)
+
+  useEffect(
+    () => () => {
+      componentIsMounted.current = false
+    },
+    []
+  )
 
   useEffect(() => {
     if (hasMobileSize) setIsOpened(false)
     if (!hasMobileSize) setIsOpened(true)
   }, [hasMobileSize])
+
+  useEffect(() => {
+    if (hasMobileSize && router.pathname !== '/map') setIsOpened(false)
+  }, [hasMobileSize, router.pathname])
 
   return (
     <div className="w-48 h-48 relative">
@@ -99,8 +114,16 @@ export const HourSelector: FC<HourSelectorPropType> = ({
       </div>
       <div className="absolute w-48 h-48 grid place-items-center inset-0">
         <button
-          aria-label={!isOpened ? 'open-hour-selector' : undefined}
-          onClick={() => !isOpened && setIsOpened(true)}
+          aria-label={!isOpened ? 'open-hour-selector' : 'hour-selector-closed'}
+          onClick={async () => {
+            if (isOpened) return
+            if (!hasMobileSize) return setIsOpened(true)
+            await router.push({
+              pathname: '/map',
+              query: mapRawQueryToState(router.query),
+            })
+            componentIsMounted && setIsOpened(true)
+          }}
           tabIndex={isOpened ? -1 : 0}
           className={classNames(
             'inner-ring w-24 h-24',
