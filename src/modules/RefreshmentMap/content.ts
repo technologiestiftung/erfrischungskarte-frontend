@@ -1,6 +1,7 @@
 import { MapPointLayerType } from '@components/MapPointLayer'
 import { MapExtrusionLayerType } from '../../components/MapExtrusionLayer'
 import { MapFilledPolygonLayerType } from '../../components/MapFilledPolygonLayer'
+import colors from '../../style/colors'
 
 export const HOURS = {
   '10': {
@@ -78,10 +79,10 @@ export const WIND_DATA: Pick<
   },
   fillColorMap: new Map([
     // Note: the mapping here is different than the one for the temperature data.
-    [5, 'rgba(0,68,27,100)'],
-    [4, 'rgba(42,146,74,100)'],
-    [3, 'rgba(123,200,124,100)'],
-    [2, 'rgba(202,234,195,100)'],
+    [5, colors['layer-green'][400]],
+    [4, colors['layer-green'][300]],
+    [3, colors['layer-green'][200]],
+    [2, colors['layer-green'][100]],
     [1, 'rgba(255,255,255,0)'],
   ]),
 }
@@ -96,10 +97,10 @@ export const TEMPERATURE_DATA: Pick<
     layerName: 'temperature_data-11wkut',
   },
   fillColorMap: new Map([
-    [1, 'rgba(8,48,107,100)'],
-    [2, 'rgba(40,121,185,100)'],
-    [3, 'rgba(115,179,216,100)'],
-    [4, 'rgba(200,221,240,100)'],
+    [1, colors['layer-blue'][400]],
+    [2, colors['layer-blue'][300]],
+    [3, colors['layer-blue'][200]],
+    [4, colors['layer-blue'][100]],
     [5, 'rgba(255,255,255,0)'],
   ]),
 }
@@ -143,16 +144,17 @@ export const POI_DATA: PoiDataType = {
   minzoom: 11.5,
   fillColorProperty: 'category',
   fillColorMap: new Map([
-    ['Gruenanlage', '#B2DF8A'],
-    ['Badestelle', '#09AAA4'],
-    ['Strandbad', '#09AAA4'],
-    ['Badestelle', '#09AAA4'],
-    ['Freibad', '#09AAA4'],
-    ['Schwimmhalle', '#09AAA4'],
-    ['Brunnen', '#A6CEE3'],
-    ['Trinkbrunnen', '#A6CEE3'],
-    ['Sitzbank', '#C37D3C'],
-    ['Picknicktisch', '#C37D3C'],
+    ['Gruenanlage', colors['poi-green']],
+    ['Badestelle', colors['poi-darkblue']],
+    ['Strandbad', colors['poi-darkblue']],
+    ['Badestelle', colors['poi-darkblue']],
+    ['Freibad', colors['poi-darkblue']],
+    ['Schwimmhalle', colors['poi-darkblue']],
+    ['Wasserspielplatz', colors['poi-pink']],
+    ['Brunnen', colors['poi-turquoise']],
+    ['Trinkbrunnen', colors['poi-lightblue']],
+    ['Sitzbank', colors['poi-yellow']],
+    ['Picknicktisch', colors['poi-red']],
   ]),
   activePropertyKeys: [
     'Picknicktisch',
