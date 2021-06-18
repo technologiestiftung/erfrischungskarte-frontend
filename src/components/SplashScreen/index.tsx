@@ -25,13 +25,13 @@ export const SplashScreen: FC = () => {
           Die Berliner Erfrischungskarte zeigt
           <b className="text-layer-blue-300"> kühle</b>,
           <b className="text-layer-green-300"> windige</b> und
-          <b className="text-black"> schattige</b> Flächen in der Stadt, und
+          <b className="text-gray-800"> schattige</b> Flächen in der Stadt, und
           führt zu Orten zum Erfrischen und Verweilen im Sommer.
         </p>
         <div className="mt-16 gap-2 text-center grid grid-cols-2 grid-rows-2 md:flex">
           <InternalLink
             href="/map"
-            className="md:px-4 col-start-1 col-end-3 cursor-pointer p-1.5 rounded-lg border-2 bg-layer-turquoise-300 border-layer-turquoise-300 hover:bg-layer-turquoise-400 hover:border-layer-turquoise-400 text-white transition transition-colors"
+            className="md:px-4 col-start-1 col-end-3 cursor-pointer p-1.5 rounded-lg border-2 bg-layer-turquoise-300 border-layer-turquoise-300 hover:bg-layer-turquoise-400 hover:border-layer-turquoise-400 text-white transition-colors"
           >
             Erkunden
           </InternalLink>
@@ -43,7 +43,7 @@ export const SplashScreen: FC = () => {
           </InternalLink>
           <InternalLink
             href="/about"
-            className="md:px-4 cursor-pointer bg-white p-1.5 rounded-lg border-2 border-gray-400 text-gray-400 hover:border-gray-500 hover:text-gray-500 transition transition-colors"
+            className="md:px-4 cursor-pointer bg-white p-1.5 rounded-lg border-2 border-gray-400 text-gray-400 hover:border-gray-500 hover:text-gray-500 transition-colors"
           >
             Mehr Infos
           </InternalLink>
