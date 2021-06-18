@@ -14,7 +14,7 @@ export const Sidebar: FC<SidebarPropType> = ({ title, children }) => {
   const [hasScrolled, setHasScrolled] = useState<boolean>(false)
   const isOpened = pathname !== '/' && pathname !== '/map'
   const cssVariables = {
-    '--sidebarWidth': hasMobileSize ? '100vw' : '400px',
+    '--sidebarWidth': hasMobileSize ? '100vw' : '420px',
     '--sidebarPadding': hasMobileSize ? '16px' : '24px',
   } as React.CSSProperties
 
@@ -70,7 +70,7 @@ export const Sidebar: FC<SidebarPropType> = ({ title, children }) => {
             <h1
               className={classNames(
                 'sticky inset-0 bottom-auto transition',
-                'p-6 sm:p-8 pb-4 sm:pb-6',
+                'p-6 sm:p-8 pb-4 sm:pb-6 z-10',
                 'text-xl sm:text-2xl font-bold bg-white',
                 hasScrolled && 'shadow-md'
               )}

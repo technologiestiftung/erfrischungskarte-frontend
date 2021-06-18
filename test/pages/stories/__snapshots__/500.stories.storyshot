@@ -5,7 +5,7 @@ exports[`Storyshots Pages/FiveHundred Default 1`] = `
   style={
     Object {
       "--sidebarPadding": "24px",
-      "--sidebarWidth": "400px",
+      "--sidebarWidth": "420px",
     }
   }
 >

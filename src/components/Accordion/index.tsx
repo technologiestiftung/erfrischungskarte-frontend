@@ -16,10 +16,13 @@ type StyleGetterType = (props: { isActive: boolean }) => Record<string, string>
 
 const borderBottomStyle = 'border-b border-dashed border-gray-300'
 const getStyles: StyleGetterType = ({ isActive }) => ({
-  wrapper: classNames(!isActive && borderBottomStyle, 'text-gray-800'),
+  wrapper: classNames(
+    !isActive && borderBottomStyle,
+    'text-gray-800 relative z-0'
+  ),
   title: classNames(
     'pt-4 block w-full font-bold text-left border border-white',
-    'transition rounded relative focus:outline-none focus:z-10',
+    'transition rounded focus:outline-none focus:z-10',
     'hover:bg-blue-50 group hover:border-blue-500',
     isActive ? 'pb-3' : 'pb-4'
   ),
@@ -47,13 +50,7 @@ export const Accordion: FC<AccordionPropType> = ({ items }) => {
               }}
               tabIndex={isActive ? 1 : 0}
             >
-              <h2
-                style={{ margin: 0 }}
-                id={id}
-                className="group-hover:text-blue-500 inline"
-              >
-                {title}
-              </h2>
+              <h2 className="group-hover:text-blue-500 inline">{title}</h2>
               <ChevronDown
                 className={classNames(
                   'float-right transform transition-transform',

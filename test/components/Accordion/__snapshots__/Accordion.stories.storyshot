@@ -6,21 +6,15 @@ exports[`Storyshots UI Elements/Accordion Default 1`] = `
 >
   <div>
     <div
-      className="border-b border-dashed border-gray-300 text-gray-800"
+      className="border-b border-dashed border-gray-300 text-gray-800 relative z-0"
     >
       <button
-        className="pt-4 block w-full font-bold text-left border border-white transition rounded relative focus:outline-none focus:z-10 hover:bg-blue-50 group hover:border-blue-500 pb-4"
+        className="pt-4 block w-full font-bold text-left border border-white transition rounded focus:outline-none focus:z-10 hover:bg-blue-50 group hover:border-blue-500 pb-4"
         onClick={[Function]}
         tabIndex={0}
       >
         <h2
           className="group-hover:text-blue-500 inline"
-          id="0"
-          style={
-            Object {
-              "margin": 0,
-            }
-          }
         >
           Do you like the number 1?
         </h2>
@@ -43,21 +37,15 @@ exports[`Storyshots UI Elements/Accordion Default 1`] = `
       </button>
     </div>
     <div
-      className="border-b border-dashed border-gray-300 text-gray-800"
+      className="border-b border-dashed border-gray-300 text-gray-800 relative z-0"
     >
       <button
-        className="pt-4 block w-full font-bold text-left border border-white transition rounded relative focus:outline-none focus:z-10 hover:bg-blue-50 group hover:border-blue-500 pb-4"
+        className="pt-4 block w-full font-bold text-left border border-white transition rounded focus:outline-none focus:z-10 hover:bg-blue-50 group hover:border-blue-500 pb-4"
         onClick={[Function]}
         tabIndex={0}
       >
         <h2
           className="group-hover:text-blue-500 inline"
-          id="1"
-          style={
-            Object {
-              "margin": 0,
-            }
-          }
         >
           Do you like the number 2?
         </h2>
@@ -80,21 +68,15 @@ exports[`Storyshots UI Elements/Accordion Default 1`] = `
       </button>
     </div>
     <div
-      className="border-b border-dashed border-gray-300 text-gray-800"
+      className="border-b border-dashed border-gray-300 text-gray-800 relative z-0"
     >
       <button
-        className="pt-4 block w-full font-bold text-left border border-white transition rounded relative focus:outline-none focus:z-10 hover:bg-blue-50 group hover:border-blue-500 pb-4"
+        className="pt-4 block w-full font-bold text-left border border-white transition rounded focus:outline-none focus:z-10 hover:bg-blue-50 group hover:border-blue-500 pb-4"
         onClick={[Function]}
         tabIndex={0}
       >
         <h2
           className="group-hover:text-blue-500 inline"
-          id="2"
-          style={
-            Object {
-              "margin": 0,
-            }
-          }
         >
           Do you like the number 3?
         </h2>
@@ -117,21 +99,15 @@ exports[`Storyshots UI Elements/Accordion Default 1`] = `
       </button>
     </div>
     <div
-      className="border-b border-dashed border-gray-300 text-gray-800"
+      className="border-b border-dashed border-gray-300 text-gray-800 relative z-0"
     >
       <button
-        className="pt-4 block w-full font-bold text-left border border-white transition rounded relative focus:outline-none focus:z-10 hover:bg-blue-50 group hover:border-blue-500 pb-4"
+        className="pt-4 block w-full font-bold text-left border border-white transition rounded focus:outline-none focus:z-10 hover:bg-blue-50 group hover:border-blue-500 pb-4"
         onClick={[Function]}
         tabIndex={0}
       >
         <h2
           className="group-hover:text-blue-500 inline"
-          id="3"
-          style={
-            Object {
-              "margin": 0,
-            }
-          }
         >
           Do you like the number 4?
         </h2>
@@ -154,21 +130,15 @@ exports[`Storyshots UI Elements/Accordion Default 1`] = `
       </button>
     </div>
     <div
-      className="border-b border-dashed border-gray-300 text-gray-800"
+      className="border-b border-dashed border-gray-300 text-gray-800 relative z-0"
     >
       <button
-        className="pt-4 block w-full font-bold text-left border border-white transition rounded relative focus:outline-none focus:z-10 hover:bg-blue-50 group hover:border-blue-500 pb-4"
+        className="pt-4 block w-full font-bold text-left border border-white transition rounded focus:outline-none focus:z-10 hover:bg-blue-50 group hover:border-blue-500 pb-4"
         onClick={[Function]}
         tabIndex={0}
       >
         <h2
           className="group-hover:text-blue-500 inline"
-          id="4"
-          style={
-            Object {
-              "margin": 0,
-            }
-          }
         >
           Do you like the number 5?
         </h2>
@@ -191,21 +161,15 @@ exports[`Storyshots UI Elements/Accordion Default 1`] = `
       </button>
     </div>
     <div
-      className="border-b border-dashed border-gray-300 text-gray-800"
+      className="border-b border-dashed border-gray-300 text-gray-800 relative z-0"
     >
       <button
-        className="pt-4 block w-full font-bold text-left border border-white transition rounded relative focus:outline-none focus:z-10 hover:bg-blue-50 group hover:border-blue-500 pb-4"
+        className="pt-4 block w-full font-bold text-left border border-white transition rounded focus:outline-none focus:z-10 hover:bg-blue-50 group hover:border-blue-500 pb-4"
         onClick={[Function]}
         tabIndex={0}
       >
         <h2
           className="group-hover:text-blue-500 inline"
-          id="5"
-          style={
-            Object {
-              "margin": 0,
-            }
-          }
         >
           Do you like the number 6?
         </h2>
@@ -228,21 +192,15 @@ exports[`Storyshots UI Elements/Accordion Default 1`] = `
       </button>
     </div>
     <div
-      className="border-b border-dashed border-gray-300 text-gray-800"
+      className="border-b border-dashed border-gray-300 text-gray-800 relative z-0"
     >
       <button
-        className="pt-4 block w-full font-bold text-left border border-white transition rounded relative focus:outline-none focus:z-10 hover:bg-blue-50 group hover:border-blue-500 pb-4"
+        className="pt-4 block w-full font-bold text-left border border-white transition rounded focus:outline-none focus:z-10 hover:bg-blue-50 group hover:border-blue-500 pb-4"
         onClick={[Function]}
         tabIndex={0}
       >
         <h2
           className="group-hover:text-blue-500 inline"
-          id="6"
-          style={
-            Object {
-              "margin": 0,
-            }
-          }
         >
           Do you like the number 7?
         </h2>
@@ -265,21 +223,15 @@ exports[`Storyshots UI Elements/Accordion Default 1`] = `
       </button>
     </div>
     <div
-      className="border-b border-dashed border-gray-300 text-gray-800"
+      className="border-b border-dashed border-gray-300 text-gray-800 relative z-0"
     >
       <button
-        className="pt-4 block w-full font-bold text-left border border-white transition rounded relative focus:outline-none focus:z-10 hover:bg-blue-50 group hover:border-blue-500 pb-4"
+        className="pt-4 block w-full font-bold text-left border border-white transition rounded focus:outline-none focus:z-10 hover:bg-blue-50 group hover:border-blue-500 pb-4"
         onClick={[Function]}
         tabIndex={0}
       >
         <h2
           className="group-hover:text-blue-500 inline"
-          id="7"
-          style={
-            Object {
-              "margin": 0,
-            }
-          }
         >
           Do you like the number 8?
         </h2>
@@ -302,21 +254,15 @@ exports[`Storyshots UI Elements/Accordion Default 1`] = `
       </button>
     </div>
     <div
-      className="border-b border-dashed border-gray-300 text-gray-800"
+      className="border-b border-dashed border-gray-300 text-gray-800 relative z-0"
     >
       <button
-        className="pt-4 block w-full font-bold text-left border border-white transition rounded relative focus:outline-none focus:z-10 hover:bg-blue-50 group hover:border-blue-500 pb-4"
+        className="pt-4 block w-full font-bold text-left border border-white transition rounded focus:outline-none focus:z-10 hover:bg-blue-50 group hover:border-blue-500 pb-4"
         onClick={[Function]}
         tabIndex={0}
       >
         <h2
           className="group-hover:text-blue-500 inline"
-          id="8"
-          style={
-            Object {
-              "margin": 0,
-            }
-          }
         >
           Do you like the number 9?
         </h2>
@@ -339,21 +285,15 @@ exports[`Storyshots UI Elements/Accordion Default 1`] = `
       </button>
     </div>
     <div
-      className="border-b border-dashed border-gray-300 text-gray-800"
+      className="border-b border-dashed border-gray-300 text-gray-800 relative z-0"
     >
       <button
-        className="pt-4 block w-full font-bold text-left border border-white transition rounded relative focus:outline-none focus:z-10 hover:bg-blue-50 group hover:border-blue-500 pb-4"
+        className="pt-4 block w-full font-bold text-left border border-white transition rounded focus:outline-none focus:z-10 hover:bg-blue-50 group hover:border-blue-500 pb-4"
         onClick={[Function]}
         tabIndex={0}
       >
         <h2
           className="group-hover:text-blue-500 inline"
-          id="9"
-          style={
-            Object {
-              "margin": 0,
-            }
-          }
         >
           Do you like the number 10?
         </h2>
@@ -376,21 +316,15 @@ exports[`Storyshots UI Elements/Accordion Default 1`] = `
       </button>
     </div>
     <div
-      className="border-b border-dashed border-gray-300 text-gray-800"
+      className="border-b border-dashed border-gray-300 text-gray-800 relative z-0"
     >
       <button
-        className="pt-4 block w-full font-bold text-left border border-white transition rounded relative focus:outline-none focus:z-10 hover:bg-blue-50 group hover:border-blue-500 pb-4"
+        className="pt-4 block w-full font-bold text-left border border-white transition rounded focus:outline-none focus:z-10 hover:bg-blue-50 group hover:border-blue-500 pb-4"
         onClick={[Function]}
         tabIndex={0}
       >
         <h2
           className="group-hover:text-blue-500 inline"
-          id="10"
-          style={
-            Object {
-              "margin": 0,
-            }
-          }
         >
           Do you like the number 11?
         </h2>
@@ -413,21 +347,15 @@ exports[`Storyshots UI Elements/Accordion Default 1`] = `
       </button>
     </div>
     <div
-      className="border-b border-dashed border-gray-300 text-gray-800"
+      className="border-b border-dashed border-gray-300 text-gray-800 relative z-0"
     >
       <button
-        className="pt-4 block w-full font-bold text-left border border-white transition rounded relative focus:outline-none focus:z-10 hover:bg-blue-50 group hover:border-blue-500 pb-4"
+        className="pt-4 block w-full font-bold text-left border border-white transition rounded focus:outline-none focus:z-10 hover:bg-blue-50 group hover:border-blue-500 pb-4"
         onClick={[Function]}
         tabIndex={0}
       >
         <h2
           className="group-hover:text-blue-500 inline"
-          id="11"
-          style={
-            Object {
-              "margin": 0,
-            }
-          }
         >
           Do you like the number 12?
         </h2>
