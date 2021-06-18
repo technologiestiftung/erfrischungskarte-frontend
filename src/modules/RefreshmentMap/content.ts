@@ -150,6 +150,7 @@ export const POI_DATA: PoiDataType = {
     ['Badestelle', colors['poi-darkblue']],
     ['Freibad', colors['poi-darkblue']],
     ['Schwimmhalle', colors['poi-darkblue']],
+    ['Wasserspielplatz', colors['poi-pink']],
     ['Brunnen', colors['poi-turquoise']],
     ['Trinkbrunnen', colors['poi-lightblue']],
     ['Sitzbank', colors['poi-yellow']],
