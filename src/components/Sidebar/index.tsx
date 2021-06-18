@@ -45,9 +45,13 @@ export const Sidebar: FC<SidebarPropType> = ({ title, children }) => {
           width: 'var(--sidebarWidth, 320px)',
           padding: 'var(--sidebarPadding, 20px)',
           paddingRight: hasMobileSize ? 'var(--sidebarPadding, 20px)' : 0,
-          height: hasMobileSize ? '50vh' : '100vh',
+          height: hasMobileSize
+            ? 'var(--screenSemiHeight)'
+            : 'var(--screenHeight)',
           transform: classNames(
-            !isOpened && hasMobileSize && 'translateY(60vh)',
+            !isOpened &&
+              hasMobileSize &&
+              'translateY(calc(60 * var(--vh, 1vh)))',
             isOpened && hasMobileSize && 'translateY(0)',
             isOpened && !hasMobileSize && 'translateX(0)',
             !isOpened && !hasMobileSize && 'translateX(-100%)'
@@ -77,10 +81,10 @@ export const Sidebar: FC<SidebarPropType> = ({ title, children }) => {
             className="p-6 sm:p-8 pt-0 sm:pt-0"
             style={{
               minHeight: hasMobileSize
-                ? `calc(50vh - (var(--sidebarPadding, 24px) * 2) - ${
+                ? `calc(var(--screenSemiHeight) - (var(--sidebarPadding, 24px) * 2) - ${
                     title ? 68 : 0
                   }px)`
-                : `calc(100vh - (var(--sidebarPadding, 24px) * 2) - ${
+                : `calc(var(--screenHeight) - (var(--sidebarPadding, 24px) * 2) - ${
                     title ? 88 : 0
                   }px)`,
             }}

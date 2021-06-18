@@ -13,7 +13,7 @@ exports[`Storyshots UI Elements/Sidebar Closed With No Active Tab 1`] = `
     className="fixed transform z-10 transition inset-0 right-auto"
     style={
       Object {
-        "height": "100vh",
+        "height": "var(--screenHeight)",
         "padding": "var(--sidebarPadding, 20px)",
         "paddingRight": 0,
         "transform": "translateX(0)",
@@ -29,7 +29,7 @@ exports[`Storyshots UI Elements/Sidebar Closed With No Active Tab 1`] = `
         className="p-6 sm:p-8 pt-0 sm:pt-0"
         style={
           Object {
-            "minHeight": "calc(100vh - (var(--sidebarPadding, 24px) * 2) - 0px)",
+            "minHeight": "calc(var(--screenHeight) - (var(--sidebarPadding, 24px) * 2) - 0px)",
           }
         }
       />
@@ -159,7 +159,7 @@ exports[`Storyshots UI Elements/Sidebar Opened With Active Tab 1`] = `
     className="fixed transform z-10 transition inset-0 right-auto"
     style={
       Object {
-        "height": "100vh",
+        "height": "var(--screenHeight)",
         "padding": "var(--sidebarPadding, 20px)",
         "paddingRight": 0,
         "transform": "translateX(0)",
@@ -175,7 +175,7 @@ exports[`Storyshots UI Elements/Sidebar Opened With Active Tab 1`] = `
         className="p-6 sm:p-8 pt-0 sm:pt-0"
         style={
           Object {
-            "minHeight": "calc(100vh - (var(--sidebarPadding, 24px) * 2) - 0px)",
+            "minHeight": "calc(var(--screenHeight) - (var(--sidebarPadding, 24px) * 2) - 0px)",
           }
         }
       />
@@ -305,7 +305,7 @@ exports[`Storyshots UI Elements/Sidebar With Title And Long Content 1`] = `
     className="fixed transform z-10 transition inset-0 right-auto"
     style={
       Object {
-        "height": "100vh",
+        "height": "var(--screenHeight)",
         "padding": "var(--sidebarPadding, 20px)",
         "paddingRight": 0,
         "transform": "translateX(0)",
@@ -326,7 +326,7 @@ exports[`Storyshots UI Elements/Sidebar With Title And Long Content 1`] = `
         className="p-6 sm:p-8 pt-0 sm:pt-0"
         style={
           Object {
-            "minHeight": "calc(100vh - (var(--sidebarPadding, 24px) * 2) - 88px)",
+            "minHeight": "calc(var(--screenHeight) - (var(--sidebarPadding, 24px) * 2) - 88px)",
           }
         }
       >
@@ -458,7 +458,7 @@ exports[`Storyshots UI Elements/Sidebar With Title And Short Content 1`] = `
     className="fixed transform z-10 transition inset-0 right-auto"
     style={
       Object {
-        "height": "100vh",
+        "height": "var(--screenHeight)",
         "padding": "var(--sidebarPadding, 20px)",
         "paddingRight": 0,
         "transform": "translateX(0)",
@@ -479,7 +479,7 @@ exports[`Storyshots UI Elements/Sidebar With Title And Short Content 1`] = `
         className="p-6 sm:p-8 pt-0 sm:pt-0"
         style={
           Object {
-            "minHeight": "calc(100vh - (var(--sidebarPadding, 24px) * 2) - 88px)",
+            "minHeight": "calc(var(--screenHeight) - (var(--sidebarPadding, 24px) * 2) - 88px)",
           }
         }
       >

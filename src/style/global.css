@@ -1,12 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer utilities {
+  .h-screen {
+    height: var(--screenHeight);
+  }
+}
 @layer base {
   html { font-family: 'Asap', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
 
+  :root {
+    --vh: 1vh;
+    --screenHeight: calc(var(--vh, 1vh) * 100);
+    --screenSemiHeight: calc(var(--vh, 1vh) * 50);
+  }
+
   html, body, #__next {
     width: 100vw;
-    height: 100vh;
+    height: var(--screenHeight);
     overflow: hidden;
   }
 }

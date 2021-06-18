@@ -15,8 +15,8 @@ export const ErrorPage: FC<ErrorPagePropType> = ({ statusCode, message }) => {
       className="flex flex-col items-center justify-center relative gap-2 sm:gap-4"
       style={{
         height: hasMobileSize
-          ? 'calc(50vh - (var(--sidebarPadding, 24px) * 2) - 32px)'
-          : 'calc(100vh - (var(--sidebarPadding, 24px) * 2) - 32px)',
+          ? 'calc(var(--screenSemiHeight) - (var(--sidebarPadding, 24px) * 2) - 32px)'
+          : 'calc(var(--screenHeight) - (var(--sidebarPadding, 24px) * 2) - 32px)',
       }}
     >
       <h1 className="text-5xl sm:text-7xl">{statusCode}</h1>

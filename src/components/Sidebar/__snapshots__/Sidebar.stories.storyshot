@@ -13,7 +13,7 @@ exports[`Storyshots UI Elements/Sidebar Closed With No Active Tab 1`] = `
     className="fixed transform z-10 transition inset-0 right-auto"
     style={
       Object {
-        "height": "100vh",
+        "height": "var(--screenHeight)",
         "padding": "var(--sidebarPadding, 20px)",
         "paddingRight": 0,
         "transform": "translateX(-100%)",
