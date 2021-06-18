@@ -1,7 +1,4 @@
-const {
-  colors: { white, gray },
-} = require('tailwindcss/defaultTheme')
-const customColors = require('./src/style/colors')
+const colorPalette = require('./src/style/colors')
 
 module.exports = {
   mode: 'jit',
@@ -14,9 +11,7 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     colors: {
-      white,
-      gray,
-      ...customColors,
+      ...colorPalette,
     },
     extend: {
       minWidth: {

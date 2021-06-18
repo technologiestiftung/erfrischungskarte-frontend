@@ -1,4 +1,10 @@
+const {
+  colors: { white, gray },
+} = require('tailwindcss/defaultTheme')
+
 const colors = {
+  white,
+  gray,
   'layer-green': {
     '100': '#CAEAC3',
     '200': '#7BC87C',
