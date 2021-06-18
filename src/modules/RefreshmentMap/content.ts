@@ -79,10 +79,10 @@ export const WIND_DATA: Pick<
   },
   fillColorMap: new Map([
     // Note: the mapping here is different than the one for the temperature data.
-    [5, 'rgba(0,68,27,100)'],
-    [4, 'rgba(42,146,74,100)'],
-    [3, 'rgba(123,200,124,100)'],
-    [2, 'rgba(202,234,195,100)'],
+    [5, colors['layer-green'][400]],
+    [4, colors['layer-green'][300]],
+    [3, colors['layer-green'][200]],
+    [2, colors['layer-green'][100]],
     [1, 'rgba(255,255,255,0)'],
   ]),
 }
@@ -97,10 +97,10 @@ export const TEMPERATURE_DATA: Pick<
     layerName: 'temperature_data-11wkut',
   },
   fillColorMap: new Map([
-    [1, 'rgba(8,48,107,100)'],
-    [2, 'rgba(40,121,185,100)'],
-    [3, 'rgba(115,179,216,100)'],
-    [4, 'rgba(200,221,240,100)'],
+    [1, colors['layer-blue'][400]],
+    [2, colors['layer-blue'][300]],
+    [3, colors['layer-blue'][200]],
+    [4, colors['layer-blue'][100]],
     [5, 'rgba(255,255,255,0)'],
   ]),
 }
