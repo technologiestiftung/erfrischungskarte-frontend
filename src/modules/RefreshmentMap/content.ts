@@ -168,3 +168,32 @@ export const POI_DATA: PoiDataType = {
     'Schwimmhalle',
   ],
 }
+
+export const ABOUT_INTRODUCTION_TEXT =
+  'Eine Webkarte vom Berliner Stadtgebiet, die Temperatur(-verhältnisse), Wind(-verhältnisse) und Schattenbereiche anzeigt. Diese Daten können für jede Stunde des Tages zwischen 9 -22 Uhr angezeigt werden. Die Karte gibt also Informationen darüber an welchen Orten vergleichsweise höhere oder niedrigere Temperaturen und Windstärken vorherrschen und zu welchen Uhrzeiten wo Schatten und Sonne zu erwarten sind. Mit der Karte werden also unter anderem Bereiche visualisieren, in denen sich die Bürger in Berlin an heißen Tagen erfrischen können.'
+
+const dummyParagraph =
+  'Temperaturen und Windstärken vorherrschen und zu welchen Uhrzeiten wo Schatten und Sonne zu erwarten sind. Mit der Karte werden also unter anderem Bereiche visualisieren, in denen sich die Bürger in Berlin an heißen Tagen erfrischen können.'
+
+export const ABOUT_ACCORDION_ITEMS = [
+  {
+    id: 'shadows',
+    title: 'Schatten',
+    content: dummyParagraph,
+  },
+  {
+    id: 'cool-areas',
+    title: 'Kühle Bereiche',
+    content: dummyParagraph,
+  },
+  {
+    id: 'windy-areas',
+    title: 'Windige Bereiche',
+    content: dummyParagraph,
+  },
+  {
+    id: 'places',
+    title: 'Orte',
+    content: dummyParagraph,
+  },
+]

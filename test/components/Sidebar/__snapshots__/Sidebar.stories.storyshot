@@ -5,7 +5,7 @@ exports[`Storyshots UI Elements/Sidebar Closed With No Active Tab 1`] = `
   style={
     Object {
       "--sidebarPadding": "24px",
-      "--sidebarWidth": "400px",
+      "--sidebarWidth": "420px",
     }
   }
 >
@@ -151,7 +151,7 @@ exports[`Storyshots UI Elements/Sidebar Opened With Active Tab 1`] = `
   style={
     Object {
       "--sidebarPadding": "24px",
-      "--sidebarWidth": "400px",
+      "--sidebarWidth": "420px",
     }
   }
 >
@@ -297,7 +297,7 @@ exports[`Storyshots UI Elements/Sidebar With Title And Long Content 1`] = `
   style={
     Object {
       "--sidebarPadding": "24px",
-      "--sidebarWidth": "400px",
+      "--sidebarWidth": "420px",
     }
   }
 >
@@ -318,7 +318,7 @@ exports[`Storyshots UI Elements/Sidebar With Title And Long Content 1`] = `
       id="sidebar-scroll-container"
     >
       <h1
-        className="sticky inset-0 bottom-auto transition p-6 sm:p-8 pb-4 sm:pb-6 text-xl sm:text-2xl font-bold bg-white"
+        className="sticky inset-0 bottom-auto transition p-6 sm:p-8 pb-4 sm:pb-6 z-10 text-xl sm:text-2xl font-bold bg-white"
       >
         About
       </h1>
@@ -450,7 +450,7 @@ exports[`Storyshots UI Elements/Sidebar With Title And Short Content 1`] = `
   style={
     Object {
       "--sidebarPadding": "24px",
-      "--sidebarWidth": "400px",
+      "--sidebarWidth": "420px",
     }
   }
 >
@@ -471,7 +471,7 @@ exports[`Storyshots UI Elements/Sidebar With Title And Short Content 1`] = `
       id="sidebar-scroll-container"
     >
       <h1
-        className="sticky inset-0 bottom-auto transition p-6 sm:p-8 pb-4 sm:pb-6 text-xl sm:text-2xl font-bold bg-white"
+        className="sticky inset-0 bottom-auto transition p-6 sm:p-8 pb-4 sm:pb-6 z-10 text-xl sm:text-2xl font-bold bg-white"
       >
         Hello
       </h1>
