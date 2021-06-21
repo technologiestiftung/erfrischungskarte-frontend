@@ -3,53 +3,80 @@ import { MapExtrusionLayerType } from '../../components/MapExtrusionLayer'
 import { MapFilledPolygonLayerType } from '../../components/MapFilledPolygonLayer'
 import colors from '../../style/colors'
 
-export const HOURS = {
+export type HourType =
+  | '10'
+  | '11'
+  | '12'
+  | '13'
+  | '14'
+  | '15'
+  | '16'
+  | '17'
+  | '18'
+  | '19'
+  | '20'
+  | '21'
+
+export type HourDataType = {
+  [key in HourType]: {
+    displayName: string
+    vectorTilesetKey: string
+    shadeTilesetId: string
+  }
+}
+
+// Note: Hours are mapped. In mapbox the tiles are labeled with solar time not local time, that is 66 minutes behind. For example the shadow layer '2 am' in mapbox actually shows the shadows for 3 am.
+export const HOURS: HourDataType = {
   '10': {
     displayName: '10 Uhr',
     vectorTilesetKey: '10Uhr',
-    shadeTilesetId: 'mapbox://technologiestiftung.atdnvldm',
+    shadeTilesetId: 'mapbox://technologiestiftung.6pkd1c22',
   },
   '11': {
+    // incomplete, needs to be replaced!
     displayName: '11 Uhr',
     vectorTilesetKey: '11Uhr',
-    shadeTilesetId: 'mapbox://technologiestiftung.atdnvldm',
+    shadeTilesetId: 'mapbox://technologiestiftung.cgvhefjx',
   },
   '12': {
     displayName: '12 Uhr',
     vectorTilesetKey: '12Uhr',
-    shadeTilesetId: 'mapbox://technologiestiftung.atdnvldm',
+    shadeTilesetId: 'mapbox://technologiestiftung.czmr5c6o',
   },
   '13': {
     displayName: '13 Uhr',
     vectorTilesetKey: '13Uhr',
-    shadeTilesetId: 'mapbox://technologiestiftung.atdnvldm',
+    shadeTilesetId: 'mapbox://technologiestiftung.6i6vo02j',
   },
   '14': {
     displayName: '14 Uhr',
     vectorTilesetKey: '14Uhr',
-    shadeTilesetId: 'mapbox://technologiestiftung.atdnvldm',
+    shadeTilesetId: 'mapbox://technologiestiftung.79eus56w',
   },
   '15': {
     displayName: '15 Uhr',
     vectorTilesetKey: '15Uhr',
-    shadeTilesetId: 'mapbox://technologiestiftung.atdnvldm',
+    shadeTilesetId: 'mapbox://technologiestiftung.0gpw7ll3',
   },
   '16': {
     displayName: '16 Uhr',
     vectorTilesetKey: '16Uhr',
-    shadeTilesetId: 'mapbox://technologiestiftung.atdnvldm',
+    shadeTilesetId: 'mapbox://technologiestiftung.b7kilqew',
   },
   '17': {
+    //missing, this is just a placeholder!
     displayName: '17 Uhr',
     vectorTilesetKey: '17Uhr',
     shadeTilesetId: 'mapbox://technologiestiftung.atdnvldm',
   },
   '18': {
+    //missing, this is just a placeholder!
     displayName: '18 Uhr',
     vectorTilesetKey: '18Uhr',
-    shadeTilesetId: 'mapbox://technologiestiftung.atdnvldm',
+    shadeTilesetId: 'mapbox://technologiestiftung.4tg8dy6l',
   },
   '19': {
+    //missing, this is just a placeholder!
     displayName: '19 Uhr',
     vectorTilesetKey: '19Uhr',
     shadeTilesetId: 'mapbox://technologiestiftung.atdnvldm',
@@ -60,6 +87,7 @@ export const HOURS = {
     shadeTilesetId: 'mapbox://technologiestiftung.atdnvldm',
   },
   '21': {
+    //missing, this is just a placeholder!
     displayName: '21 Uhr',
     vectorTilesetKey: '21Uhr',
     shadeTilesetId: 'mapbox://technologiestiftung.atdnvldm',
