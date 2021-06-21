@@ -159,6 +159,7 @@ type PoiCategory =
   | 'Schwimmhalle'
 
 export interface PoiDataType extends MapPointLayerType {
+  id: string
   fillColorMap: Map<PoiCategory, string>
   activePropertyKeys: Partial<PoiCategory>[]
 }
