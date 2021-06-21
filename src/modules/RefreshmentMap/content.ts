@@ -2,8 +2,30 @@ import { MapPointLayerType } from '@components/MapPointLayer'
 import { MapExtrusionLayerType } from '../../components/MapExtrusionLayer'
 import { MapFilledPolygonLayerType } from '../../components/MapFilledPolygonLayer'
 
+export type HourType =
+  | '10'
+  | '11'
+  | '12'
+  | '13'
+  | '14'
+  | '15'
+  | '16'
+  | '17'
+  | '18'
+  | '19'
+  | '20'
+  | '21'
+
+export type HourDataType = {
+  [key in HourType]: {
+    displayName: string
+    vectorTilesetKey: string
+    shadeTilesetId: string
+  }
+}
+
 // Note: Hours are mapped. In mapbox the tiles are labeled with solar time not local time, that is 66 minutes behind. For example the shadow layer '2 am' in mapbox actually shows the shadows for 3 am.
-export const HOURS = {
+export const HOURS: HourDataType = {
   '10': {
     displayName: '10 Uhr',
     vectorTilesetKey: '10Uhr',

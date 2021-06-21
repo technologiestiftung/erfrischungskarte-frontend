@@ -11,6 +11,7 @@ import {
   TEMPERATURE_DATA,
   WIND_DATA,
   POI_DATA,
+  HourType,
 } from './content'
 import { MapRasterLayer as RasterLayer } from '../../components/MapRasterLayer'
 import { MapExtrusionLayer as ExtrusionLayer } from '../../components/MapExtrusionLayer'
@@ -29,8 +30,10 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
   const { pathname } = useRouter()
   const { width: windowWidth, height: windowHeight } = useWindowSize()
 
-  const [activeHourKey, setActiveHourKey] = useState<keyof typeof HOURS>('10')
+  const [activeHourKey, setActiveHourKey] = useState<HourType>('10')
   const activeHour = HOURS[activeHourKey]
+
+  const hourKeys = Object.keys(HOURS) as HourType[]
 
   return (
     <>
@@ -60,13 +63,31 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
           {...TEMPERATURE_DATA}
           fillColorProperty={activeHour.vectorTilesetKey}
         />
-        <RasterLayer
-          id="shade-data"
-          url={activeHour.shadeTilesetId}
-          bounds={[13.06, 52.33, 13.77, 52.69]}
-          minZoom={14}
-          opacity={0.5}
-        />
+        {hourKeys.map((key) => {
+          const item = HOURS[key]
+          if (key !== activeHourKey) {
+            return (
+              <RasterLayer
+                key={`shade-${key}`}
+                id={`shade-${key}`}
+                url={item.shadeTilesetId}
+                bounds={[13.06, 52.33, 13.77, 52.69]}
+                minZoom={14}
+                opacity={0}
+              />
+            )
+          }
+          return (
+            <RasterLayer
+              key={`shade-${key}`}
+              id={`shade-${key}`}
+              url={item.shadeTilesetId}
+              bounds={[13.06, 52.33, 13.77, 52.69]}
+              minZoom={14}
+              opacity={0.5}
+            />
+          )
+        })}
         <ExtrusionLayer {...EXTRUDED_BUILDINGS_DATA} />
         <MapPointLayer {...POI_DATA} />
       </MapRoot>
