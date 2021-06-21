@@ -1,0 +1,3 @@
+.mapboxgl-popup-content {
+  @apply rounded-xl shadow-md
+}
