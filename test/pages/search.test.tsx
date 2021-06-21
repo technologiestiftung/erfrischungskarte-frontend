@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import React from 'react'
 import * as nextRouter from 'next/router'
 import { Search } from '../../pages/search'
@@ -10,7 +10,10 @@ nextRouter.useRouter = jest.fn().mockReturnValue({
 })
 
 describe('Search page', () => {
-  it('renders without crashing', () => {
-    render(<Search query={{}} />)
+  it('should render a heading', () => {
+    render(<Search />)
+
+    const heading = screen.getByRole('heading', { name: 'Standort' })
+    expect(heading).toBeInTheDocument()
   })
 })
