@@ -2,7 +2,7 @@
 
 exports[`Storyshots Content/SplashScreen Default 1`] = `
 <div
-  className="fixed grid z-10 inset-0 items-center"
+  className="fixed z-10 inset-0 flex flex-col justify-center"
 >
   <a
     className="fixed inset-0"
@@ -94,7 +94,7 @@ exports[`Storyshots Content/SplashScreen Default 1`] = `
        Flächen in der Stadt, und führt zu Orten zum Erfrischen und Verweilen im Sommer.
     </p>
     <div
-      className="mt-16 gap-2 text-center grid grid-cols-2 grid-rows-2 md:flex"
+      className="mt-4 md:mt-16 gap-2 text-center grid grid-cols-2 grid-rows-2 md:flex"
     >
       <a
         className="md:px-4 col-start-1 col-end-3 cursor-pointer p-1.5 rounded-lg border-2 bg-layer-turquoise-300 border-layer-turquoise-300 hover:bg-layer-turquoise-400 hover:border-layer-turquoise-400 text-white transition-colors"
@@ -122,7 +122,7 @@ exports[`Storyshots Content/SplashScreen Default 1`] = `
       </a>
     </div>
     <div
-      className="flex flex-col md:items-center justify-between md:flex-row mt-6"
+      className="flex flex-col md:items-center justify-between md:flex-row mt-4 md:mt-6"
     >
       <p
         className="text-xs mb-2 md:mb-0 mr-2 text-gray-700"
