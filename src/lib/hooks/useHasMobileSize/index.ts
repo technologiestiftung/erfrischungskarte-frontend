@@ -13,7 +13,11 @@ export const useHasMobileSize = (): boolean => {
 
     setHasMobileSize(Boolean(mql.matches))
 
-    mql.addEventListener('change', screenTest)
+    try {
+      mql.addEventListener('change', screenTest)
+    } catch (e) {
+      mql.addListener(screenTest)
+    }
   }, [setHasMobileSize])
 
   return hasMobileSize

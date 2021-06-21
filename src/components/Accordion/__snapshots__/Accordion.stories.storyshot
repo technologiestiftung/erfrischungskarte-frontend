@@ -1,0 +1,322 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots UI Elements/Accordion Default 1`] = `
+<div
+  className="container mx-auto max-w-lg py-8 prose"
+>
+  <div>
+    <div
+      className="border-b border-b-gray-50"
+    >
+      <button
+        className="p-4 block w-full text-sm text-left bg-gray-50 border border-white transition rounded relative focus:outline-none focus:z-10 hover:bg-blue-50 group hover:border-blue-500 focus-offset"
+        onClick={[Function]}
+        tabIndex={0}
+      >
+        <h2
+          className="group-hover:text-blue-500 inline"
+          id="0"
+          style={
+            Object {
+              "margin": 0,
+            }
+          }
+        >
+          Do you like the number 1?
+        </h2>
+        <span
+          className="float-right font-light text-xl text-gray-400"
+        >
+          +
+        </span>
+      </button>
+    </div>
+    <div
+      className="border-b border-b-gray-50"
+    >
+      <button
+        className="p-4 block w-full text-sm text-left bg-gray-50 border border-white transition rounded relative focus:outline-none focus:z-10 hover:bg-blue-50 group hover:border-blue-500 focus-offset"
+        onClick={[Function]}
+        tabIndex={0}
+      >
+        <h2
+          className="group-hover:text-blue-500 inline"
+          id="1"
+          style={
+            Object {
+              "margin": 0,
+            }
+          }
+        >
+          Do you like the number 2?
+        </h2>
+        <span
+          className="float-right font-light text-xl text-gray-400"
+        >
+          +
+        </span>
+      </button>
+    </div>
+    <div
+      className="border-b border-b-gray-50"
+    >
+      <button
+        className="p-4 block w-full text-sm text-left bg-gray-50 border border-white transition rounded relative focus:outline-none focus:z-10 hover:bg-blue-50 group hover:border-blue-500 focus-offset"
+        onClick={[Function]}
+        tabIndex={0}
+      >
+        <h2
+          className="group-hover:text-blue-500 inline"
+          id="2"
+          style={
+            Object {
+              "margin": 0,
+            }
+          }
+        >
+          Do you like the number 3?
+        </h2>
+        <span
+          className="float-right font-light text-xl text-gray-400"
+        >
+          +
+        </span>
+      </button>
+    </div>
+    <div
+      className="border-b border-b-gray-50"
+    >
+      <button
+        className="p-4 block w-full text-sm text-left bg-gray-50 border border-white transition rounded relative focus:outline-none focus:z-10 hover:bg-blue-50 group hover:border-blue-500 focus-offset"
+        onClick={[Function]}
+        tabIndex={0}
+      >
+        <h2
+          className="group-hover:text-blue-500 inline"
+          id="3"
+          style={
+            Object {
+              "margin": 0,
+            }
+          }
+        >
+          Do you like the number 4?
+        </h2>
+        <span
+          className="float-right font-light text-xl text-gray-400"
+        >
+          +
+        </span>
+      </button>
+    </div>
+    <div
+      className="border-b border-b-gray-50"
+    >
+      <button
+        className="p-4 block w-full text-sm text-left bg-gray-50 border border-white transition rounded relative focus:outline-none focus:z-10 hover:bg-blue-50 group hover:border-blue-500 focus-offset"
+        onClick={[Function]}
+        tabIndex={0}
+      >
+        <h2
+          className="group-hover:text-blue-500 inline"
+          id="4"
+          style={
+            Object {
+              "margin": 0,
+            }
+          }
+        >
+          Do you like the number 5?
+        </h2>
+        <span
+          className="float-right font-light text-xl text-gray-400"
+        >
+          +
+        </span>
+      </button>
+    </div>
+    <div
+      className="border-b border-b-gray-50"
+    >
+      <button
+        className="p-4 block w-full text-sm text-left bg-gray-50 border border-white transition rounded relative focus:outline-none focus:z-10 hover:bg-blue-50 group hover:border-blue-500 focus-offset"
+        onClick={[Function]}
+        tabIndex={0}
+      >
+        <h2
+          className="group-hover:text-blue-500 inline"
+          id="5"
+          style={
+            Object {
+              "margin": 0,
+            }
+          }
+        >
+          Do you like the number 6?
+        </h2>
+        <span
+          className="float-right font-light text-xl text-gray-400"
+        >
+          +
+        </span>
+      </button>
+    </div>
+    <div
+      className="border-b border-b-gray-50"
+    >
+      <button
+        className="p-4 block w-full text-sm text-left bg-gray-50 border border-white transition rounded relative focus:outline-none focus:z-10 hover:bg-blue-50 group hover:border-blue-500 focus-offset"
+        onClick={[Function]}
+        tabIndex={0}
+      >
+        <h2
+          className="group-hover:text-blue-500 inline"
+          id="6"
+          style={
+            Object {
+              "margin": 0,
+            }
+          }
+        >
+          Do you like the number 7?
+        </h2>
+        <span
+          className="float-right font-light text-xl text-gray-400"
+        >
+          +
+        </span>
+      </button>
+    </div>
+    <div
+      className="border-b border-b-gray-50"
+    >
+      <button
+        className="p-4 block w-full text-sm text-left bg-gray-50 border border-white transition rounded relative focus:outline-none focus:z-10 hover:bg-blue-50 group hover:border-blue-500 focus-offset"
+        onClick={[Function]}
+        tabIndex={0}
+      >
+        <h2
+          className="group-hover:text-blue-500 inline"
+          id="7"
+          style={
+            Object {
+              "margin": 0,
+            }
+          }
+        >
+          Do you like the number 8?
+        </h2>
+        <span
+          className="float-right font-light text-xl text-gray-400"
+        >
+          +
+        </span>
+      </button>
+    </div>
+    <div
+      className="border-b border-b-gray-50"
+    >
+      <button
+        className="p-4 block w-full text-sm text-left bg-gray-50 border border-white transition rounded relative focus:outline-none focus:z-10 hover:bg-blue-50 group hover:border-blue-500 focus-offset"
+        onClick={[Function]}
+        tabIndex={0}
+      >
+        <h2
+          className="group-hover:text-blue-500 inline"
+          id="8"
+          style={
+            Object {
+              "margin": 0,
+            }
+          }
+        >
+          Do you like the number 9?
+        </h2>
+        <span
+          className="float-right font-light text-xl text-gray-400"
+        >
+          +
+        </span>
+      </button>
+    </div>
+    <div
+      className="border-b border-b-gray-50"
+    >
+      <button
+        className="p-4 block w-full text-sm text-left bg-gray-50 border border-white transition rounded relative focus:outline-none focus:z-10 hover:bg-blue-50 group hover:border-blue-500 focus-offset"
+        onClick={[Function]}
+        tabIndex={0}
+      >
+        <h2
+          className="group-hover:text-blue-500 inline"
+          id="9"
+          style={
+            Object {
+              "margin": 0,
+            }
+          }
+        >
+          Do you like the number 10?
+        </h2>
+        <span
+          className="float-right font-light text-xl text-gray-400"
+        >
+          +
+        </span>
+      </button>
+    </div>
+    <div
+      className="border-b border-b-gray-50"
+    >
+      <button
+        className="p-4 block w-full text-sm text-left bg-gray-50 border border-white transition rounded relative focus:outline-none focus:z-10 hover:bg-blue-50 group hover:border-blue-500 focus-offset"
+        onClick={[Function]}
+        tabIndex={0}
+      >
+        <h2
+          className="group-hover:text-blue-500 inline"
+          id="10"
+          style={
+            Object {
+              "margin": 0,
+            }
+          }
+        >
+          Do you like the number 11?
+        </h2>
+        <span
+          className="float-right font-light text-xl text-gray-400"
+        >
+          +
+        </span>
+      </button>
+    </div>
+    <div
+      className="border-b border-b-gray-50"
+    >
+      <button
+        className="p-4 block w-full text-sm text-left bg-gray-50 border border-white transition rounded relative focus:outline-none focus:z-10 hover:bg-blue-50 group hover:border-blue-500 focus-offset"
+        onClick={[Function]}
+        tabIndex={0}
+      >
+        <h2
+          className="group-hover:text-blue-500 inline"
+          id="11"
+          style={
+            Object {
+              "margin": 0,
+            }
+          }
+        >
+          Do you like the number 12?
+        </h2>
+        <span
+          className="float-right font-light text-xl text-gray-400"
+        >
+          +
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;
