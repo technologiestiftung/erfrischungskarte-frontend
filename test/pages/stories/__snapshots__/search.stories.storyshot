@@ -75,6 +75,39 @@ exports[`Storyshots Pages/Search Default 1`] = `
                   className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2"
                   style={
                     Object {
+                      "backgroundColor": "#85B858",
+                    }
+                  }
+                />
+                <div
+                  className="pb-2 border-b border-gray-300 flex-grow border-dashed group-hover:border-opacity-0 group-focus:border-opacity-0 transition"
+                >
+                  <h6
+                    className="text-sm leading-4"
+                  >
+                    Pfaueninsel
+                  </h6>
+                  <span
+                    className="text-sm text-gray-500"
+                  >
+                    Gruenanlage
+                  </span>
+                </div>
+              </button>
+            </li>
+            <li>
+              <button
+                className="flex gap-4 items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                style={
+                  Object {
+                    "width": "calc(100% + 32px)",
+                  }
+                }
+              >
+                <span
+                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2"
+                  style={
+                    Object {
                       "backgroundColor": "#FED914",
                     }
                   }
@@ -85,12 +118,210 @@ exports[`Storyshots Pages/Search Default 1`] = `
                   <h6
                     className="text-sm leading-4"
                   >
-                    Schattenplatz auf der Insel der Jugend
+                    Bank am Neuen See im Tiergarten
                   </h6>
                   <span
                     className="text-sm text-gray-500"
                   >
                     Sitzbank
+                  </span>
+                </div>
+              </button>
+            </li>
+            <li>
+              <button
+                className="flex gap-4 items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                style={
+                  Object {
+                    "width": "calc(100% + 32px)",
+                  }
+                }
+              >
+                <span
+                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2"
+                  style={
+                    Object {
+                      "backgroundColor": "#83E5E2",
+                    }
+                  }
+                />
+                <div
+                  className="pb-2 border-b border-gray-300 flex-grow border-dashed group-hover:border-opacity-0 group-focus:border-opacity-0 transition"
+                >
+                  <h6
+                    className="text-sm leading-4"
+                  >
+                    Kaskade am Lietzensee
+                  </h6>
+                  <span
+                    className="text-sm text-gray-500"
+                  >
+                    Brunnen
+                  </span>
+                </div>
+              </button>
+            </li>
+            <li>
+              <button
+                className="flex gap-4 items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                style={
+                  Object {
+                    "width": "calc(100% + 32px)",
+                  }
+                }
+              >
+                <span
+                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2"
+                  style={
+                    Object {
+                      "backgroundColor": "#1D80C3",
+                    }
+                  }
+                />
+                <div
+                  className="pb-2 border-b border-gray-300 flex-grow border-dashed group-hover:border-opacity-0 group-focus:border-opacity-0 transition"
+                >
+                  <h6
+                    className="text-sm leading-4"
+                  >
+                    Kinderbad im Bürgerpark Marzahn
+                  </h6>
+                  <span
+                    className="text-sm text-gray-500"
+                  >
+                    Freibad
+                  </span>
+                </div>
+              </button>
+            </li>
+            <li>
+              <button
+                className="flex gap-4 items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                style={
+                  Object {
+                    "width": "calc(100% + 32px)",
+                  }
+                }
+              >
+                <span
+                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2"
+                  style={
+                    Object {
+                      "backgroundColor": "#85B858",
+                    }
+                  }
+                />
+                <div
+                  className="pb-2 border-b border-gray-300 flex-grow border-dashed group-hover:border-opacity-0 group-focus:border-opacity-0 transition"
+                >
+                  <h6
+                    className="text-sm leading-4"
+                  >
+                    Britzer Garten
+                  </h6>
+                  <span
+                    className="text-sm text-gray-500"
+                  >
+                    Gruenanlage
+                  </span>
+                </div>
+              </button>
+            </li>
+            <li>
+              <button
+                className="flex gap-4 items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                style={
+                  Object {
+                    "width": "calc(100% + 32px)",
+                  }
+                }
+              >
+                <span
+                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2"
+                  style={
+                    Object {
+                      "backgroundColor": "#F63333",
+                    }
+                  }
+                />
+                <div
+                  className="pb-2 border-b border-gray-300 flex-grow border-dashed group-hover:border-opacity-0 group-focus:border-opacity-0 transition"
+                >
+                  <h6
+                    className="text-sm leading-4"
+                  >
+                    Picknickplatz in der Wuhlheide
+                  </h6>
+                  <span
+                    className="text-sm text-gray-500"
+                  >
+                    Picknicktisch
+                  </span>
+                </div>
+              </button>
+            </li>
+            <li>
+              <button
+                className="flex gap-4 items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                style={
+                  Object {
+                    "width": "calc(100% + 32px)",
+                  }
+                }
+              >
+                <span
+                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2"
+                  style={
+                    Object {
+                      "backgroundColor": "#83E5E2",
+                    }
+                  }
+                />
+                <div
+                  className="pb-2 border-b border-gray-300 flex-grow border-dashed group-hover:border-opacity-0 group-focus:border-opacity-0 transition"
+                >
+                  <h6
+                    className="text-sm leading-4"
+                  >
+                    Wasserfall am Victoriapark
+                  </h6>
+                  <span
+                    className="text-sm text-gray-500"
+                  >
+                    Brunnen
+                  </span>
+                </div>
+              </button>
+            </li>
+            <li>
+              <button
+                className="flex gap-4 items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                style={
+                  Object {
+                    "width": "calc(100% + 32px)",
+                  }
+                }
+              >
+                <span
+                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2"
+                  style={
+                    Object {
+                      "backgroundColor": "#1D80C3",
+                    }
+                  }
+                />
+                <div
+                  className="pb-2 border-b border-gray-300 flex-grow border-dashed group-hover:border-opacity-0 group-focus:border-opacity-0 transition"
+                >
+                  <h6
+                    className="text-sm leading-4"
+                  >
+                    Badestelle an der Unterhavel
+                  </h6>
+                  <span
+                    className="text-sm text-gray-500"
+                  >
+                    Badestelle
                   </span>
                 </div>
               </button>
@@ -151,78 +382,12 @@ exports[`Storyshots Pages/Search Default 1`] = `
                   <h6
                     className="text-sm leading-4"
                   >
-                    Pfaueninsel
+                    Freizeitpark Marienfelde
                   </h6>
                   <span
                     className="text-sm text-gray-500"
                   >
                     Gruenanlage
-                  </span>
-                </div>
-              </button>
-            </li>
-            <li>
-              <button
-                className="flex gap-4 items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
-                style={
-                  Object {
-                    "width": "calc(100% + 32px)",
-                  }
-                }
-              >
-                <span
-                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2"
-                  style={
-                    Object {
-                      "backgroundColor": "#1D80C3",
-                    }
-                  }
-                />
-                <div
-                  className="pb-2 border-b border-gray-300 flex-grow border-dashed group-hover:border-opacity-0 group-focus:border-opacity-0 transition"
-                >
-                  <h6
-                    className="text-sm leading-4"
-                  >
-                    Kinderbad im Bürgerpark Marzahn
-                  </h6>
-                  <span
-                    className="text-sm text-gray-500"
-                  >
-                    Freibad
-                  </span>
-                </div>
-              </button>
-            </li>
-            <li>
-              <button
-                className="flex gap-4 items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
-                style={
-                  Object {
-                    "width": "calc(100% + 32px)",
-                  }
-                }
-              >
-                <span
-                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2"
-                  style={
-                    Object {
-                      "backgroundColor": "#83E5E2",
-                    }
-                  }
-                />
-                <div
-                  className="pb-2 border-b border-gray-300 flex-grow border-dashed group-hover:border-opacity-0 group-focus:border-opacity-0 transition"
-                >
-                  <h6
-                    className="text-sm leading-4"
-                  >
-                    Kaskade am Lietzensee
-                  </h6>
-                  <span
-                    className="text-sm text-gray-500"
-                  >
-                    Brunnen
                   </span>
                 </div>
               </button>
@@ -250,7 +415,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
                   <h6
                     className="text-sm leading-4"
                   >
-                    Freizeitpark Marienfelde
+                    Tempelhofer Feld
                   </h6>
                   <span
                     className="text-sm text-gray-500"
@@ -339,171 +504,6 @@ exports[`Storyshots Pages/Search Default 1`] = `
                   className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2"
                   style={
                     Object {
-                      "backgroundColor": "#1D80C3",
-                    }
-                  }
-                />
-                <div
-                  className="pb-2 border-b border-gray-300 flex-grow border-dashed group-hover:border-opacity-0 group-focus:border-opacity-0 transition"
-                >
-                  <h6
-                    className="text-sm leading-4"
-                  >
-                    Badestelle an der Unterhavel
-                  </h6>
-                  <span
-                    className="text-sm text-gray-500"
-                  >
-                    Badestelle
-                  </span>
-                </div>
-              </button>
-            </li>
-            <li>
-              <button
-                className="flex gap-4 items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
-                style={
-                  Object {
-                    "width": "calc(100% + 32px)",
-                  }
-                }
-              >
-                <span
-                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2"
-                  style={
-                    Object {
-                      "backgroundColor": "#85B858",
-                    }
-                  }
-                />
-                <div
-                  className="pb-2 border-b border-gray-300 flex-grow border-dashed group-hover:border-opacity-0 group-focus:border-opacity-0 transition"
-                >
-                  <h6
-                    className="text-sm leading-4"
-                  >
-                    Tempelhofer Feld
-                  </h6>
-                  <span
-                    className="text-sm text-gray-500"
-                  >
-                    Gruenanlage
-                  </span>
-                </div>
-              </button>
-            </li>
-            <li>
-              <button
-                className="flex gap-4 items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
-                style={
-                  Object {
-                    "width": "calc(100% + 32px)",
-                  }
-                }
-              >
-                <span
-                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2"
-                  style={
-                    Object {
-                      "backgroundColor": "#85B858",
-                    }
-                  }
-                />
-                <div
-                  className="pb-2 border-b border-gray-300 flex-grow border-dashed group-hover:border-opacity-0 group-focus:border-opacity-0 transition"
-                >
-                  <h6
-                    className="text-sm leading-4"
-                  >
-                    Britzer Garten
-                  </h6>
-                  <span
-                    className="text-sm text-gray-500"
-                  >
-                    Gruenanlage
-                  </span>
-                </div>
-              </button>
-            </li>
-            <li>
-              <button
-                className="flex gap-4 items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
-                style={
-                  Object {
-                    "width": "calc(100% + 32px)",
-                  }
-                }
-              >
-                <span
-                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2"
-                  style={
-                    Object {
-                      "backgroundColor": "#83E5E2",
-                    }
-                  }
-                />
-                <div
-                  className="pb-2 border-b border-gray-300 flex-grow border-dashed group-hover:border-opacity-0 group-focus:border-opacity-0 transition"
-                >
-                  <h6
-                    className="text-sm leading-4"
-                  >
-                    Wasserfall am Victoriapark
-                  </h6>
-                  <span
-                    className="text-sm text-gray-500"
-                  >
-                    Brunnen
-                  </span>
-                </div>
-              </button>
-            </li>
-            <li>
-              <button
-                className="flex gap-4 items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
-                style={
-                  Object {
-                    "width": "calc(100% + 32px)",
-                  }
-                }
-              >
-                <span
-                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2"
-                  style={
-                    Object {
-                      "backgroundColor": "#F63333",
-                    }
-                  }
-                />
-                <div
-                  className="pb-2 border-b border-gray-300 flex-grow border-dashed group-hover:border-opacity-0 group-focus:border-opacity-0 transition"
-                >
-                  <h6
-                    className="text-sm leading-4"
-                  >
-                    Picknickplatz in der Wuhlheide
-                  </h6>
-                  <span
-                    className="text-sm text-gray-500"
-                  >
-                    Picknicktisch
-                  </span>
-                </div>
-              </button>
-            </li>
-            <li>
-              <button
-                className="flex gap-4 items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
-                style={
-                  Object {
-                    "width": "calc(100% + 32px)",
-                  }
-                }
-              >
-                <span
-                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2"
-                  style={
-                    Object {
                       "backgroundColor": "#FED914",
                     }
                   }
@@ -514,7 +514,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
                   <h6
                     className="text-sm leading-4"
                   >
-                    Bank am Neuen See im Tiergarten
+                    Schattenplatz auf der Insel der Jugend
                   </h6>
                   <span
                     className="text-sm text-gray-500"
@@ -525,6 +525,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
               </button>
             </li>
           </ul>
+          
         </div>
       </div>
     </div>

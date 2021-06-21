@@ -1,3 +1,5 @@
+import { GeoPinIcon } from '@components/Icons'
+import { SearchResultType, useGeocodedPlace } from '@lib/hooks/useGeocodedPlace'
 import {
   POI_DATA,
   SearchSuggestionItemType,
@@ -46,9 +48,41 @@ const SearchSuggestionItem: FC<SearchSuggestionItemType> = ({ properties }) => (
   </button>
 )
 
+const SearchResultItem: FC<
+  SearchResultType & {
+    searchTerm: string
+  }
+> = ({ name, searchTerm }) => (
+  <button
+    className={classNames(
+      'flex gap-2 items-center pt-3 text-left w-full',
+      'hover:bg-gray-100 rounded transition px-4 -ml-4',
+      'group focus:outline-none focus:ring-2 focus:ring-gray-800',
+      'focus:ring-gray-800 focus:z-10 relative'
+    )}
+    style={{ width: 'calc(100% + 32px)' }}
+  >
+    <span className="text-gray-300 transform -translate-y-2">
+      <GeoPinIcon />
+    </span>
+    <div
+      className={classNames(
+        'pb-2 border-b border-gray-300 flex-grow border-dashed',
+        'group-hover:border-opacity-0 group-focus:border-opacity-0 transition'
+      )}
+    >
+      <h6 className="text-sm leading-4">
+        {name.split(searchTerm)[0]}
+        <span className="text-gray-400 text-light">{searchTerm}</span>
+        {name.split(searchTerm)[1]}
+      </h6>
+    </div>
+  </button>
+)
+
 export const Search: FC = () => {
   const [inputVal, setInpuval] = useState('')
-
+  const { results } = useGeocodedPlace(inputVal)
   return (
     <div>
       <h4 className="font-bold text-xl">Standort</h4>
@@ -80,6 +114,15 @@ export const Search: FC = () => {
             ))}
           </ul>
         </>
+      )}
+      {inputVal && results && (
+        <ul>
+          {results.map((item) => (
+            <li key={`${item.id}`}>
+              <SearchResultItem {...item} searchTerm={inputVal} />
+            </li>
+          ))}
+        </ul>
       )}
     </div>
   )
