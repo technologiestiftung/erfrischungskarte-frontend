@@ -1,6 +1,5 @@
 import { FC } from 'react'
 import { Popup } from 'react-map-gl'
-import './MapPoiTooltip.css'
 
 export interface MapPoiTooltipType {
   title?: string
