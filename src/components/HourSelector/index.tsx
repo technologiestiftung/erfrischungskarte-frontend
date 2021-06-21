@@ -90,7 +90,7 @@ export const HourSelector: FC<HourSelectorPropType> = ({
           className={classNames(
             'absolute pointer-events-auto',
             'w-10 h-10 rounded-full shadow-lg bg-white transition',
-            'grid place-items-center hover:bg-gray-800 hover:text-white',
+            'flex justify-center hover:bg-gray-800 hover:text-white',
             'focus:outline-none focus:ring-2 focus:ring-gray-800',
             'focus:ring-offset-2 focus:ring-offset-white z-50',
             !hasMobileSize && '-top-4 right-6 transform translate-x-full',
