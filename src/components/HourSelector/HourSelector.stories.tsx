@@ -2,12 +2,14 @@ import { HOURS } from '@modules/RefreshmentMap/content'
 import { Story, Meta } from '@storybook/react'
 import classNames from 'classnames'
 import { useState } from 'react'
+import { withNextRouter } from 'storybook-addon-next-router'
 
 import { HourSelector } from '.'
 
 export default {
   title: 'UI Elements/HourSelector',
   component: HourSelector,
+  decorators: [withNextRouter],
 } as Meta
 
 const Template: Story = () => {
@@ -25,4 +27,10 @@ const Template: Story = () => {
 }
 
 export const Default = Template.bind({})
+Default.parameters = {
+  nextRouter: {
+    query: {},
+    pathname: '/map',
+  },
+}
 Default.args = {}
