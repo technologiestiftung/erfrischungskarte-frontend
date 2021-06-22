@@ -1,0 +1,10 @@
+.sharingButton {
+  bottom: 211px;
+}
+
+@media screen and (max-width: 640px) {
+  .sharingButton {
+    bottom: auto;
+    top: 211px
+  }
+}

@@ -25,6 +25,11 @@ describe('SharingOverlay page', () => {
     })
     render(<SharingOverlay />)
 
+    const sharingButton = screen.getByLabelText('Diesen Kartenabschnitt teilen')
+
+    expect(sharingButton).toBeInTheDocument()
+    fireEvent.click(sharingButton)
+
     const gmapsTitle = screen.queryByText('Google Maps')
     const h4s = screen.getAllByRole('heading', { level: 4 })
 
@@ -43,20 +48,29 @@ describe('SharingOverlay page', () => {
     })
     render(<SharingOverlay />)
 
+    const sharingButton = screen.getByLabelText('Diesen Kartenabschnitt teilen')
+
+    expect(sharingButton).toBeInTheDocument()
+    fireEvent.click(sharingButton)
+
     const gmapsTitle = screen.queryByText('Google Maps')
     const h4s = screen.getAllByRole('heading', { level: 4 })
 
     expect(gmapsTitle).toBeInTheDocument()
     expect(h4s).toHaveLength(2)
   })
-  it('clicking on the x button should call the onClose fnc', () => {
+  it('clicking on the x button should close the sharing area', () => {
     useRouter.mockReturnValue({
       query: {},
       push: jest.fn().mockResolvedValue(true),
       pathname: '/map',
     })
-    const testOnClose = jest.fn()
-    render(<SharingOverlay onClose={testOnClose} />)
+    render(<SharingOverlay />)
+
+    const sharingButton = screen.getByLabelText('Diesen Kartenabschnitt teilen')
+
+    expect(sharingButton).toBeInTheDocument()
+    fireEvent.click(sharingButton)
 
     const closeButton = screen.getByRole('button', { name: '' })
 
@@ -64,7 +78,7 @@ describe('SharingOverlay page', () => {
 
     fireEvent.click(closeButton)
 
-    expect(testOnClose).toHaveBeenCalled()
+    expect(closeButton).not.toBeInTheDocument()
   })
   it('clicking on a copy link button should call copy fnc', () => {
     useRouter.mockReturnValue({
@@ -76,8 +90,12 @@ describe('SharingOverlay page', () => {
     useCopyToClipboard.mockReturnValue({
       copyToClipboard: testCopyToClipboard,
     })
-    const testOnClose = jest.fn()
-    render(<SharingOverlay onClose={testOnClose} />)
+    render(<SharingOverlay />)
+
+    const sharingButton = screen.getByLabelText('Diesen Kartenabschnitt teilen')
+
+    expect(sharingButton).toBeInTheDocument()
+    fireEvent.click(sharingButton)
 
     const linkButton = screen.getByRole('button', { name: 'Link kopieren' })
 
@@ -96,25 +114,15 @@ describe('SharingOverlay page', () => {
     useCopyToClipboard.mockReturnValue({
       hasCopied: true,
     })
-    const testOnClose = jest.fn()
-    render(<SharingOverlay onClose={testOnClose} />)
+    render(<SharingOverlay />)
+
+    const sharingButton = screen.getByLabelText('Diesen Kartenabschnitt teilen')
+
+    expect(sharingButton).toBeInTheDocument()
+    fireEvent.click(sharingButton)
 
     const linkButton = screen.getByRole('button', { name: 'Link kopiert!' })
 
     expect(linkButton).toBeInTheDocument()
-  })
-  it('onClose should have a default if not provided', () => {
-    useRouter.mockReturnValue({
-      query: {},
-      push: jest.fn().mockResolvedValue(true),
-      pathname: '/map',
-    })
-    render(<SharingOverlay />)
-
-    const closeButton = screen.getByRole('button', { name: '' })
-
-    expect(closeButton).toBeInTheDocument()
-
-    fireEvent.click(closeButton)
   })
 })

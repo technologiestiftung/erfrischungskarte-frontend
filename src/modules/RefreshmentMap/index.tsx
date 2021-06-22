@@ -28,6 +28,7 @@ import { MapEvent } from 'react-map-gl'
 import { mapRawQueryToState, PageQueryType } from '@lib/utils/queryUtil'
 import { AppTitle } from '@components/AppTitle'
 import { useHasWebPSupport } from '@lib/hooks/useHasWebPSupport'
+import { SharingOverlay } from '@components/SharingOverlay'
 
 interface RefreshmentMapPropType {
   title?: string
@@ -126,11 +127,14 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
         handleHover={handleHover}
       >
         {pathname !== '/' && (
-          <MapControls
-            className={`absolute right-4 ${
-              hasMobileSize ? 'top-4' : 'bottom-4'
-            }`}
-          />
+          <>
+            <MapControls
+              className={`absolute right-4 ${
+                hasMobileSize ? 'top-4' : 'bottom-4'
+              }`}
+            />
+            <SharingOverlay />
+          </>
         )}
         <FilledPolygonLayer
           {...WIND_DATA}
