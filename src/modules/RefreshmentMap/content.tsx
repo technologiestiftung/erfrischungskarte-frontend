@@ -199,17 +199,30 @@ export const POI_DATA: PoiDataType = {
 
 export const ABOUT_INTRODUCTION_TEXT = (
   <>
-    Eine Webkarte vom Berliner Stadtgebiet, die Temperatur(-verhältnisse),
-    Wind(-verhältnisse) und Schattenbereiche anzeigt. Diese Daten können für
-    jede Stunde des Tages zwischen 9 -22 Uhr angezeigt werden. Die Karte gibt
-    also Informationen darüber an welchen Orten vergleichsweise höhere oder
-    niedrigere Temperaturen und Windstärken vorherrschen und zu welchen{' '}
-    <a href="google.com" className="text-gray-800 underline">
-      Uhrzeiten wo Schatten
+    Der Klimawandel sorgt an vielen Orten für immer heißeres, trockenes Wetter.
+    Auch Berlin erlebte in den vergangenen Jahren so viele Hitzetage wie nie
+    zuvor.<br></br>
+    Wo, wann und wie ihr an solchen Tagen Erfrischung findet, seht ihr in dieser
+    Karte, denn aufgrund der differenzierten Topographie kann es zum Teil
+    erhebliche Unterschiede innerhalb des Stadtgebietes geben. Sie zeigt euch
+    für jede Stunde von 10 bis 21 Uhr, wo es tendeziell eher kühl ist, wo für
+    gewöhnlich eine frische Brise weht und wo gerade Schatten ist. Entdeckt
+    außerdem erfrischende Orte, wie Badestellen, Trinkbrunnen und Parks. Mit
+    einem Klick könnt ihr euren neuen Lieblingsplatz teilen.<br></br>
+    <br></br>
+    Diese Anwendung basiert komplett auf offenen Daten, ein Großteil davon sind
+    Verwaltungsdaten. Open Data ist heute ein wichtige Bestandteil im
+    Verwaltungshandeln Berlins und schafft nicht nur Transparenz und Offenheit,
+    sondern ermöglicht auch Analysen und Anwendungen wie diese, um den Alltag
+    ein kleines bisschen angenehmer zu machen.<br></br>
+    Mehr offene Daten findet ihr im{' '}
+    <a
+      target="blank"
+      href="https://daten.berlin.de"
+      className="text-gray-800 underline"
+    >
+      Berliner Datenportal
     </a>{' '}
-    und Sonne zu erwarten sind. Mit der Karte werden also unter anderem Bereiche
-    visualisieren, in denen sich die Bürger in Berlin an heißen Tagen erfrischen
-    können.
   </>
 )
 
@@ -265,9 +278,6 @@ export const ABOUT_COOL_WINDY_TEXT = (
   </>
 )
 
-const dummyParagraph =
-  'Temperaturen und Windstärken vorherrschen und zu welchen Uhrzeiten wo Schatten und Sonne zu erwarten sind. Mit der Karte werden also unter anderem Bereiche visualisieren, in denen sich die Bürger in Berlin an heißen Tagen erfrischen können.'
-
 export const ABOUT_ACCORDION_ITEMS = [
   {
     id: 'shadows',
@@ -276,12 +286,12 @@ export const ABOUT_ACCORDION_ITEMS = [
   },
   {
     id: 'cool-windy-areas',
-    title: 'Kühle Bereiche',
+    title: 'Kühle und Kaltluft-Bereiche',
     content: ABOUT_COOL_WINDY_TEXT,
   },
   {
     id: 'places',
     title: 'Orte',
-    content: dummyParagraph,
+    content: 'this section is coming soon...',
   },
 ]
