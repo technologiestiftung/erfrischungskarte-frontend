@@ -25,6 +25,6 @@ export const useCurrentTime = (): NumberHourType => {
 
   if (roundedTime >= 10 && 21 >= roundedTime)
     return roundedTime as NumberHourType
-  else if (roundedTime > 3) return 10
+  else if (roundedTime > 3 && 10 > roundedTime) return 10
   else return 21
 }
