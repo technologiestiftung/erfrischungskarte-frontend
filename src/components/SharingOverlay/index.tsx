@@ -68,8 +68,8 @@ export const SharingOverlay: FC = () => {
         className={classNames(
           styles.sharingButton,
           'rounded-full bg-white w-12 h-12',
-          'place-content-center fixed right-4',
-          'shadow-lg grid transition',
+          'fixed right-4 text-center py-2',
+          'shadow-lg transition',
           'focus:outline-none focus:ring-2',
           isOpened && 'text-white bg-gray-800',
           isOpened && 'focus:ring-white',
@@ -77,7 +77,7 @@ export const SharingOverlay: FC = () => {
         )}
         style={{ bottom: 176 + 35 }}
       >
-        <SharingIcon className="transform -translate-x-0.5" />
+        <SharingIcon className="inline transform -translate-x-0.5" />
       </button>
       {isOpened && (
         <div

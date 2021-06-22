@@ -6,7 +6,7 @@ exports[`Storyshots UI Elements/SharingOverlay With Google Maps Link 1`] = `
 >
   <button
     aria-label="Diesen Kartenabschnitt teilen"
-    className="rounded-full bg-white w-12 h-12 place-content-center fixed right-4 shadow-lg grid transition focus:outline-none focus:ring-2 focus:ring-gray-800"
+    className="rounded-full bg-white w-12 h-12 fixed right-4 text-center py-2 shadow-lg transition focus:outline-none focus:ring-2 focus:ring-gray-800"
     onClick={[Function]}
     style={
       Object {
@@ -15,7 +15,7 @@ exports[`Storyshots UI Elements/SharingOverlay With Google Maps Link 1`] = `
     }
   >
     <svg
-      className="transform -translate-x-0.5"
+      className="inline transform -translate-x-0.5"
       fill="none"
       height="24"
       viewBox="0 0 24 24"
@@ -40,7 +40,7 @@ exports[`Storyshots UI Elements/SharingOverlay Without Google Maps Link 1`] = `
 >
   <button
     aria-label="Diesen Kartenabschnitt teilen"
-    className="rounded-full bg-white w-12 h-12 place-content-center fixed right-4 shadow-lg grid transition focus:outline-none focus:ring-2 focus:ring-gray-800"
+    className="rounded-full bg-white w-12 h-12 fixed right-4 text-center py-2 shadow-lg transition focus:outline-none focus:ring-2 focus:ring-gray-800"
     onClick={[Function]}
     style={
       Object {
@@ -49,7 +49,7 @@ exports[`Storyshots UI Elements/SharingOverlay Without Google Maps Link 1`] = `
     }
   >
     <svg
-      className="transform -translate-x-0.5"
+      className="inline transform -translate-x-0.5"
       fill="none"
       height="24"
       viewBox="0 0 24 24"
