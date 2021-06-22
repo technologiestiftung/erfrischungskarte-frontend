@@ -161,7 +161,7 @@ export const EXTRUDED_BUILDINGS_DATA: MapExtrusionLayerType = {
   extrusionColor: '#ddd',
 }
 
-type PoiCategory =
+export type PoiCategory =
   | 'Sitzbank'
   | 'Picknicktisch'
   | 'Gruenanlage'
@@ -172,6 +172,19 @@ type PoiCategory =
   | 'Strandbad'
   | 'Freibad'
   | 'Schwimmhalle'
+
+export const POI_CATEGORIES: Map<PoiCategory, string> = new Map([
+  ['Badestelle', colors['poi-darkblue']],
+  ['Strandbad', colors['poi-darkblue']],
+  ['Freibad', colors['poi-darkblue']],
+  ['Schwimmhalle', colors['poi-darkblue']],
+  ['Wasserspielplatz', colors['poi-pink']],
+  ['Trinkbrunnen', colors['poi-lightblue']],
+  ['Brunnen', colors['poi-turquoise']],
+  ['Gruenanlage', colors['poi-green']],
+  ['Sitzbank', colors['poi-yellow']],
+  ['Picknicktisch', colors['poi-red']],
+])
 
 export interface PoiDataType extends MapPointLayerType {
   id: string
@@ -187,19 +200,7 @@ export const POI_DATA: PoiDataType = {
   },
   minzoom: 11.5,
   fillColorProperty: 'category',
-  fillColorMap: new Map([
-    ['Gruenanlage', colors['poi-green']],
-    ['Badestelle', colors['poi-darkblue']],
-    ['Strandbad', colors['poi-darkblue']],
-    ['Badestelle', colors['poi-darkblue']],
-    ['Freibad', colors['poi-darkblue']],
-    ['Schwimmhalle', colors['poi-darkblue']],
-    ['Wasserspielplatz', colors['poi-pink']],
-    ['Brunnen', colors['poi-turquoise']],
-    ['Trinkbrunnen', colors['poi-lightblue']],
-    ['Sitzbank', colors['poi-yellow']],
-    ['Picknicktisch', colors['poi-red']],
-  ]),
+  fillColorMap: POI_CATEGORIES,
   activePropertyKeys: [
     'Picknicktisch',
     'Gruenanlage',
