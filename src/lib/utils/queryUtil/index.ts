@@ -1,6 +1,6 @@
 import { NumberHourType } from '@lib/hooks/useCurrentTime'
 
-interface PageQueryType {
+export interface PageQueryType {
   latitude: number | null
   longitude: number | null
   zoom: number | null

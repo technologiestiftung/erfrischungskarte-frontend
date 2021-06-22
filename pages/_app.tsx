@@ -24,7 +24,7 @@ const App: FC<{
   const parsedQuery = pageProps.query ? mapRawQueryToState(pageProps.query) : {}
   return (
     <StrictMode>
-      <RefreshmentMap {...pageProps}>
+      <RefreshmentMap {...pageProps} query={parsedQuery}>
         <Head>
           <title>{`${
             pageProps.title ? `${pageProps.title} - ` : ' '
