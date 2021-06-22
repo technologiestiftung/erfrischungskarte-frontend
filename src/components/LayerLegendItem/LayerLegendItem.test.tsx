@@ -9,6 +9,8 @@ nextRouter.useRouter = jest.fn().mockReturnValue({
   query: {},
 })
 
+const mockToggle = jest.fn()
+
 const testContent = {
   title: 'I am a title',
   description: 'I am a description for this legend item.',
@@ -24,6 +26,7 @@ describe('LayerLegendItem', () => {
         description={testContent.description}
         icon={testContent.icon}
         legendContent={testContent.legendContent}
+        handleToggle={mockToggle}
       />
     )
 
@@ -46,6 +49,7 @@ describe('LayerLegendItem', () => {
         description={testContent.description}
         icon={testContent.icon}
         legendContent={testContent.legendContent}
+        handleToggle={mockToggle}
       />
     )
 
@@ -60,6 +64,7 @@ describe('LayerLegendItem', () => {
         description={testContent.description}
         icon={testContent.icon}
         legendContent={testContent.legendContent}
+        handleToggle={mockToggle}
       />
     )
 

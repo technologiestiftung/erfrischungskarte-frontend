@@ -93,8 +93,8 @@ exports[`Storyshots UI Elements/LayerLegendItem Default 1`] = `
     >
       <button
         aria-label="I am a title an oder auswählen"
-        className="px-2 py-1 border rounded-md cursor-default focus:rounded focus:ring-2 focus:ring-gray-800 focus:outline-none focus:ring-offset-2 focus:ring-offset-white w-full border-gray-400 text-gray-900"
-        disabled={true}
+        className="px-2 py-1 border rounded-md focus:rounded focus:ring-2 focus:ring-gray-800 focus:outline-none focus:ring-offset-2 focus:ring-offset-white w-full border-gray-400 text-gray-900"
+        onClick={[Function]}
         type="button"
       >
         <p>

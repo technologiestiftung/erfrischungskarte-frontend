@@ -9,6 +9,7 @@ export interface LayerLegendItemType {
   description: string
   icon: ReactNode
   legendContent: ReactNode | HTMLElement
+  handleToggle: () => void
 }
 
 export const LayerLegendItem: FC<LayerLegendItemType> = ({
@@ -16,6 +17,7 @@ export const LayerLegendItem: FC<LayerLegendItemType> = ({
   description,
   icon,
   legendContent,
+  handleToggle,
 }) => {
   const hasMobileSize = useHasMobileSize()
   return (
@@ -53,6 +55,7 @@ export const LayerLegendItem: FC<LayerLegendItemType> = ({
           <FilterChip
             ariaLabel={`${title} an oder auswählen`}
             otherClassNames="w-full"
+            handleClick={handleToggle}
           >
             {legendContent}
           </FilterChip>
