@@ -208,7 +208,8 @@ export const ABOUT_INTRODUCTION_TEXT = (
     für jede Stunde von 10 bis 21 Uhr, wo es tendeziell eher kühl ist, wo für
     gewöhnlich eine frische Brise weht und wo gerade Schatten ist. Entdeckt
     außerdem erfrischende Orte, wie Badestellen, Trinkbrunnen und Parks. Mit
-    einem Klick könnt ihr euren neuen Lieblingsplatz teilen.<br></br>
+    einem Klick über die Teilenfunktion könnt ihr euren neuen Lieblingsplatz mit
+    anderen teilen.<br></br>
     <br></br>
     Diese Anwendung basiert komplett auf offenen Daten, ein Großteil davon sind
     Verwaltungsdaten. Open Data ist heute ein wichtige Bestandteil im
