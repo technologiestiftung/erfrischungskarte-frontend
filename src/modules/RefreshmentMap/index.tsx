@@ -26,6 +26,7 @@ import {
 } from '@components/MapPoiTooltip'
 import { MapEvent } from 'react-map-gl'
 import { mapRawQueryToState, PageQueryType } from '@lib/utils/queryUtil'
+import { useHasWebPSupport } from '@lib/hooks/useHasWebPSupport'
 
 interface RefreshmentMapPropType {
   title?: string
@@ -47,6 +48,7 @@ interface CustomMapEventType extends MapEvent {
 
 export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
   const hasMobileSize = useHasMobileSize()
+  const hasWebPSupport = useHasWebPSupport()
   const { width: windowWidth, height: windowHeight } = useWindowSize()
 
   const { pathname, query, replace: routerReplace } = useRouter()
@@ -136,9 +138,21 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
           {...TEMPERATURE_DATA}
           fillColorProperty={activeHour.vectorTilesetKey}
         />
-        {hourKeys.map((key) => {
-          const item = HOURS[key]
-          if (key !== activeHourKey) {
+        {hasWebPSupport &&
+          hourKeys.map((key) => {
+            const item = HOURS[key]
+            if (key !== activeHourKey) {
+              return (
+                <RasterLayer
+                  key={`shade-${key}`}
+                  id={`shade-${key}`}
+                  url={item.shadeTilesetId}
+                  bounds={[13.06, 52.33, 13.77, 52.69]}
+                  minZoom={14}
+                  opacity={0}
+                />
+              )
+            }
             return (
               <RasterLayer
                 key={`shade-${key}`}
@@ -146,21 +160,10 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
                 url={item.shadeTilesetId}
                 bounds={[13.06, 52.33, 13.77, 52.69]}
                 minZoom={14}
-                opacity={0}
+                opacity={0.5}
               />
             )
-          }
-          return (
-            <RasterLayer
-              key={`shade-${key}`}
-              id={`shade-${key}`}
-              url={item.shadeTilesetId}
-              bounds={[13.06, 52.33, 13.77, 52.69]}
-              minZoom={14}
-              opacity={0.5}
-            />
-          )
-        })}
+          })}
         <ExtrusionLayer {...EXTRUDED_BUILDINGS_DATA} />
         <MapPointLayer {...POI_DATA} />
         {poiTooltipCoordinates &&
