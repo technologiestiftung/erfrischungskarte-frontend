@@ -1,4 +1,4 @@
-interface PageQueryType {
+export interface PageQueryType {
   latitude: number | null
   longitude: number | null
   zoom: number | null
