@@ -3,9 +3,14 @@ import { GetServerSideProps } from 'next'
 import React, { FC } from 'react'
 import { FilterChip } from '@components/FilterChip'
 import { PoiLegendItem } from '@components/PoiLegendItem'
-import { PoiCategory, POI_CATEGORIES } from '@modules/RefreshmentMap/content'
+import {
+  LAYER_LEGEND_ITEMS,
+  PoiCategory,
+  POI_CATEGORIES,
+} from '@modules/RefreshmentMap/content'
 import { useHasMobileSize } from '@lib/hooks/useHasMobileSize'
 import classNames from 'classnames'
+import { LayerLegendBlock } from '@components/LayerLegendBlock'
 
 // eslint-disable-next-line @typescript-eslint/require-await
 export const getServerSideProps: GetServerSideProps = async ({ query }) => ({
@@ -23,7 +28,7 @@ export const Filters: FC<{
   const hasMobileSize = useHasMobileSize()
 
   return (
-    <div className="grid grid-rows-2 grid-cols-1">
+    <div className="grid grid-cols-1">
       <section
         aria-label="Angezeigte Orte auswählen"
         className={classNames(
@@ -61,7 +66,9 @@ export const Filters: FC<{
         aria-label="Angezeigte Flächen auswählen"
         className={classNames(
           'col-span-1',
-          hasMobileSize ? 'row-start-1' : 'row-start-2 mt-8'
+          hasMobileSize ? 'row-start-1' : 'row-start-2',
+          hasMobileSize ? 'pb-6' : 'mt-14',
+          hasMobileSize ? 'border-b border-gray-400 border-dotted' : 'border-0'
         )}
       >
         {!hasMobileSize && (
@@ -73,7 +80,27 @@ export const Filters: FC<{
             </p>
           </>
         )}
-        <p>Layer filter</p>
+        {LAYER_LEGEND_ITEMS.map(
+          ({ title, description, icon, legendContent }, index) => {
+            return (
+              <div
+                key={title}
+                className={classNames(
+                  hasMobileSize ? 'mt-4' : 'mt-6',
+                  index === 0 && hasMobileSize ? '!mt-0' : 'mt-6'
+                )}
+              >
+                <LayerLegendBlock
+                  title={title}
+                  description={description}
+                  icon={icon}
+                  legendContent={legendContent}
+                  handleToggle={() => console.log('clicked')}
+                />
+              </div>
+            )
+          }
+        )}
       </section>
     </div>
   )
