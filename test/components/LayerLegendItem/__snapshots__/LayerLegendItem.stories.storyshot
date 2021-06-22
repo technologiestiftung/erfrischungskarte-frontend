@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots UI Elements/LayerLegendItem Default 1`] = `
+<div
+  className="max-w-[420px] mt-4"
+>
+  <div
+    className="block"
+  >
+    <div
+      className="flex flex-wrap"
+    >
+      <svg
+        className="transform scale-125"
+        fill="none"
+        height="24"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <line
+          stroke="#2879B9"
+          strokeLinecap="round"
+          transform="matrix(-1 0 0 1 12 8)"
+          x1="0.5"
+          x2="5.5"
+          y1="-0.5"
+          y2="-0.5"
+        />
+        <line
+          stroke="#2879B9"
+          strokeLinecap="round"
+          transform="matrix(-1 0 0 1 12 14)"
+          x1="0.5"
+          x2="5.5"
+          y1="-0.5"
+          y2="-0.5"
+        />
+        <line
+          stroke="#2879B9"
+          strokeLinecap="round"
+          transform="matrix(-1 0 0 1 12 5)"
+          x1="0.5"
+          x2="2.5"
+          y1="-0.5"
+          y2="-0.5"
+        />
+        <line
+          stroke="#2879B9"
+          strokeLinecap="round"
+          transform="matrix(-1 0 0 1 12 11)"
+          x1="0.5"
+          x2="2.5"
+          y1="-0.5"
+          y2="-0.5"
+        />
+        <line
+          stroke="#2879B9"
+          strokeLinecap="round"
+          x1="14.5"
+          x2="14.5"
+          y1="7.5"
+          y2="15.5"
+        />
+        <circle
+          cx="14.5"
+          cy="17.5"
+          r="2"
+          stroke="#2879B9"
+        />
+      </svg>
+      <h3
+        className="text-md block"
+      >
+        I am a title
+      </h3>
+      <p
+        className="w-full text-gray-500 text-sm block"
+      >
+        I am a description for this legend item.
+        <a
+          className="underline italic ml-1"
+          href="/about"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+        >
+          Zur Methodik
+        </a>
+      </p>
+    </div>
+    <div
+      className="mt-3"
+    >
+      <button
+        aria-label="I am a title an oder auswählen"
+        className="px-2 py-1 border rounded-md cursor-default focus:rounded focus:ring-2 focus:ring-gray-800 focus:outline-none focus:ring-offset-2 focus:ring-offset-white w-full border-gray-400 text-gray-900"
+        disabled={true}
+        type="button"
+      >
+        <p>
+          Fill this with the actual legend
+        </p>
+      </button>
+    </div>
+  </div>
+</div>
+`;
