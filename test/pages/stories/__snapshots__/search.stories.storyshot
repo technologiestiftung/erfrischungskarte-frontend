@@ -65,6 +65,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
             <li>
               <button
                 className="flex gap-4 items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                onClick={[Function]}
                 style={
                   Object {
                     "width": "calc(100% + 32px)",
@@ -98,6 +99,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
             <li>
               <button
                 className="flex gap-4 items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                onClick={[Function]}
                 style={
                   Object {
                     "width": "calc(100% + 32px)",
@@ -131,6 +133,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
             <li>
               <button
                 className="flex gap-4 items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                onClick={[Function]}
                 style={
                   Object {
                     "width": "calc(100% + 32px)",
@@ -164,6 +167,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
             <li>
               <button
                 className="flex gap-4 items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                onClick={[Function]}
                 style={
                   Object {
                     "width": "calc(100% + 32px)",
@@ -197,6 +201,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
             <li>
               <button
                 className="flex gap-4 items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                onClick={[Function]}
                 style={
                   Object {
                     "width": "calc(100% + 32px)",
@@ -230,6 +235,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
             <li>
               <button
                 className="flex gap-4 items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                onClick={[Function]}
                 style={
                   Object {
                     "width": "calc(100% + 32px)",
@@ -263,6 +269,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
             <li>
               <button
                 className="flex gap-4 items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                onClick={[Function]}
                 style={
                   Object {
                     "width": "calc(100% + 32px)",
@@ -296,6 +303,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
             <li>
               <button
                 className="flex gap-4 items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                onClick={[Function]}
                 style={
                   Object {
                     "width": "calc(100% + 32px)",
@@ -329,6 +337,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
             <li>
               <button
                 className="flex gap-4 items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                onClick={[Function]}
                 style={
                   Object {
                     "width": "calc(100% + 32px)",
@@ -362,6 +371,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
             <li>
               <button
                 className="flex gap-4 items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                onClick={[Function]}
                 style={
                   Object {
                     "width": "calc(100% + 32px)",
@@ -395,6 +405,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
             <li>
               <button
                 className="flex gap-4 items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                onClick={[Function]}
                 style={
                   Object {
                     "width": "calc(100% + 32px)",
@@ -428,6 +439,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
             <li>
               <button
                 className="flex gap-4 items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                onClick={[Function]}
                 style={
                   Object {
                     "width": "calc(100% + 32px)",
@@ -461,6 +473,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
             <li>
               <button
                 className="flex gap-4 items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                onClick={[Function]}
                 style={
                   Object {
                     "width": "calc(100% + 32px)",
@@ -494,6 +507,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
             <li>
               <button
                 className="flex gap-4 items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                onClick={[Function]}
                 style={
                   Object {
                     "width": "calc(100% + 32px)",

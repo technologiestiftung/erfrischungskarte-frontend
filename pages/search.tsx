@@ -1,5 +1,6 @@
 import { GeoPinIcon } from '@components/Icons'
 import { SearchResultType, useGeocodedPlace } from '@lib/hooks/useGeocodedPlace'
+import { mapRawQueryToState } from '@lib/utils/queryUtil'
 import {
   POI_DATA,
   SearchSuggestionItemType,
@@ -7,7 +8,17 @@ import {
 } from '@modules/RefreshmentMap/content'
 import classNames from 'classnames'
 import { GetServerSideProps } from 'next'
-import { FC, useState } from 'react'
+import { useRouter } from 'next/router'
+import { FC, useCallback, useState } from 'react'
+
+interface SearchSuggestionItemPropType extends SearchSuggestionItemType {
+  onClick: () => void
+}
+
+interface SearchResultItemPropType extends SearchResultType {
+  searchTerm: string
+  onClick: () => void
+}
 
 // eslint-disable-next-line @typescript-eslint/require-await
 export const getServerSideProps: GetServerSideProps = async ({ query }) => ({
@@ -17,7 +28,10 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => ({
   },
 })
 
-const SearchSuggestionItem: FC<SearchSuggestionItemType> = ({ properties }) => (
+const SearchSuggestionItem: FC<SearchSuggestionItemPropType> = ({
+  properties,
+  onClick,
+}) => (
   <button
     className={classNames(
       'flex gap-4 items-center pt-3 text-left w-full',
@@ -26,6 +40,7 @@ const SearchSuggestionItem: FC<SearchSuggestionItemType> = ({ properties }) => (
       'focus:ring-gray-800 focus:z-10 relative'
     )}
     style={{ width: 'calc(100% + 32px)' }}
+    onClick={onClick}
   >
     <span
       className={classNames(
@@ -48,12 +63,13 @@ const SearchSuggestionItem: FC<SearchSuggestionItemType> = ({ properties }) => (
   </button>
 )
 
-const SearchResultItem: FC<
-  SearchResultType & {
-    searchTerm: string
-  }
-> = ({ name, searchTerm }) => (
+const SearchResultItem: FC<SearchResultItemPropType> = ({
+  name,
+  searchTerm,
+  onClick,
+}) => (
   <button
+    onClick={onClick}
     className={classNames(
       'flex gap-2 items-center pt-3 text-left w-full',
       'hover:bg-gray-100 rounded transition px-4 -ml-4',
@@ -82,7 +98,23 @@ const SearchResultItem: FC<
 
 export const Search: FC = () => {
   const [inputVal, setInpuval] = useState('')
+  const { pathname, push, query } = useRouter()
+  const mappedQuery = mapRawQueryToState(query)
   const { results } = useGeocodedPlace(inputVal)
+
+  const clickHandler = useCallback(
+    (coordinates: [latitude: number, longitude: number]) => {
+      const nextQuery = {
+        ...mappedQuery,
+        latitude: coordinates[1],
+        longitude: coordinates[0],
+        zoom: 14,
+      }
+      void push({ pathname, query: nextQuery }, undefined, { shallow: true })
+    },
+    [push, pathname, mappedQuery]
+  )
+
   return (
     <div>
       <h4 className="font-bold text-xl">Standort</h4>
@@ -109,7 +141,10 @@ export const Search: FC = () => {
               <li
                 key={`${item.geometry.coordinates[0]}-${item.geometry.coordinates[1]}`}
               >
-                <SearchSuggestionItem {...item} />
+                <SearchSuggestionItem
+                  {...item}
+                  onClick={() => clickHandler(item.geometry.coordinates)}
+                />
               </li>
             ))}
           </ul>
@@ -119,7 +154,11 @@ export const Search: FC = () => {
         <ul>
           {results.map((item) => (
             <li key={`${item.id}`}>
-              <SearchResultItem {...item} searchTerm={inputVal} />
+              <SearchResultItem
+                {...item}
+                searchTerm={inputVal}
+                onClick={() => clickHandler([item.latitude, item.longitude])}
+              />
             </li>
           ))}
         </ul>
