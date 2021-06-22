@@ -32,7 +32,7 @@ export const LayerLegendItem: FC<LayerLegendItemType> = ({
           <h3
             className={classNames(
               'text-md',
-              hasMobileSize ? 'sr-only' : 'block'
+              hasMobileSize ? 'sr-only' : 'block ml-2'
             )}
           >
             {title}
