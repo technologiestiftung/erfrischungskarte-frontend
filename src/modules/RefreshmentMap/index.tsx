@@ -29,6 +29,7 @@ import { mapRawQueryToState, PageQueryType } from '@lib/utils/queryUtil'
 import { AppTitle } from '@components/AppTitle'
 import { useHasWebPSupport } from '@lib/hooks/useHasWebPSupport'
 import { SharingOverlay } from '@components/SharingOverlay'
+import { useCurrentTime } from '@lib/hooks/useCurrentTime'
 
 interface RefreshmentMapPropType {
   title?: string
@@ -51,20 +52,20 @@ interface CustomMapEventType extends MapEvent {
 export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
   const hasMobileSize = useHasMobileSize()
   const hasWebPSupport = useHasWebPSupport()
+  const currentTime = useCurrentTime()
   const { width: windowWidth, height: windowHeight } = useWindowSize()
 
   const { pathname, query, replace: routerReplace } = useRouter()
   const mappedQuery = mapRawQueryToState(query)
 
-  const DEFAULT_HOUR = 10
   const [activeHourKey, setActiveHourKey] = useState<HourType>(
-    `${mappedQuery.visibleHour || DEFAULT_HOUR}`
+    `${mappedQuery.visibleHour || currentTime}`
   )
   const activeHour = HOURS[activeHourKey]
 
   useEffect(() => {
-    setActiveHourKey(`${mappedQuery.visibleHour || DEFAULT_HOUR}`)
-  }, [mappedQuery.visibleHour])
+    setActiveHourKey(`${mappedQuery.visibleHour || currentTime}`)
+  }, [mappedQuery.visibleHour, currentTime])
 
   const hourKeys = Object.keys(HOURS) as HourType[]
   const [poiTooltipContent, setPoiTooltipContent] = useState<Pick<
