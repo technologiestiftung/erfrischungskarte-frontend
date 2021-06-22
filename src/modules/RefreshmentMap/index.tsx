@@ -30,6 +30,19 @@ interface RefreshmentMapPropType {
   title?: string
 }
 
+interface MapFeatureType {
+  source: string
+  properties: {
+    name?: string
+    category?: string
+    info?: string
+  }
+  [key: string]: unknown
+}
+interface CustomMapEventType extends MapEvent {
+  features: MapFeatureType[]
+}
+
 export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
   const hasMobileSize = useHasMobileSize()
   const { pathname } = useRouter()
@@ -50,19 +63,6 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
   } | null>(null)
 
   const handleHover = (e: MapEvent): void => {
-    interface MapFeature {
-      source: string
-      properties: {
-        name?: string
-        category?: string
-        info?: string
-      }
-      [key: string]: unknown
-    }
-    interface CustomMapEventType extends MapEvent {
-      features: MapFeature[]
-    }
-
     if (!e.features || !e.features.length) return
 
     const allHoveredFeatures = e.features as CustomMapEventType['features']
