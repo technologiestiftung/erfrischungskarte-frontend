@@ -1,7 +1,13 @@
+import { TemperatureIcon, WindIcon, ShadeIcon } from '@components/Icons'
+import { LayerLegendBlockType } from '@components/LayerLegendBlock'
 import { MapPointLayerType } from '@components/MapPointLayer'
+import classNames from 'classnames'
 import { MapExtrusionLayerType } from '../../components/MapExtrusionLayer'
 import { MapFilledPolygonLayerType } from '../../components/MapFilledPolygonLayer'
 import colors from '../../style/colors'
+import { LayerLegendContent } from '@components/LayerLegendContent'
+import Image from 'next/image'
+import shadeImage from '../../../public/images/shade-legend.png'
 
 export interface SearchSuggestionItemType {
   type: string
@@ -441,3 +447,69 @@ export const SEARCH_SUGGESTIONS: SearchSuggestionItemType[] = [
     },
   },
 ]
+
+const maxShadeLabel = (
+  <div className="flex items-center">
+    <div className="w-2 h-2 bg-[#808080] rounded-full"></div>
+    <span className="ml-1">Schattig</span>
+  </div>
+)
+
+const minShadeLabel = (
+  <div className="flex items-center">
+    <div className="w-2 h-2 bg-[#F4F4F2] rounded-full"></div>
+    <span className="ml-1">Sonnig</span>
+  </div>
+)
+
+export const LAYER_LEGEND_ITEMS: Pick<
+  LayerLegendBlockType,
+  'title' | 'description' | 'icon' | 'legendContent'
+>[] = [
+  {
+    title: 'Schatten',
+    description: 'Zeigt, wie die Schatten fallen.',
+    icon: <ShadeIcon />,
+    legendContent: (
+      <LayerLegendContent maxLabel={maxShadeLabel} minLabel={minShadeLabel}>
+        <Image
+          src={shadeImage}
+          alt="Beispiel von Schatten auf der Karte"
+          width={400}
+          height={30}
+        />
+      </LayerLegendContent>
+    ),
+  },
+  {
+    title: 'Kühle Bereiche',
+    description: 'Zeigt die vergleichsweise kühlsten Bereiche in der Stadt.',
+    icon: <TemperatureIcon />,
+    legendContent: (
+      <LayerLegendContent maxLabel="Kühl" minLabel="Weniger kühl">
+        <div className={classNames('h-[10px]', 'grid grid-cols-5')}>
+          <div className={classNames('bg-layer-blue-400 opacity-50')}></div>
+          <div className={classNames('bg-layer-blue-300 opacity-50')}></div>
+          <div className={classNames('bg-layer-blue-200 opacity-50')}></div>
+          <div className={classNames('bg-layer-blue-100 opacity-50')}></div>
+          <div className={classNames('bg-white opacity-50')}></div>
+        </div>
+      </LayerLegendContent>
+    ),
+  },
+  {
+    title: 'Windige Bereiche',
+    description: 'Zeigt die vergleichsweise windigsten Bereiche in der Stadt.',
+    icon: <WindIcon />,
+    legendContent: (
+      <LayerLegendContent maxLabel="Windig" minLabel="Weniger windig">
+        <div className={classNames('h-[10px]', 'grid grid-cols-5')}>
+          <div className={classNames('bg-layer-green-400 opacity-50')}></div>
+          <div className={classNames('bg-layer-green-300 opacity-50')}></div>
+          <div className={classNames('bg-layer-green-200 opacity-50')}></div>
+          <div className={classNames('bg-layer-green-100 opacity-50')}></div>
+          <div className={classNames('bg-white opacity-50')}></div>
+        </div>
+      </LayerLegendContent>
+    ),
+  },
