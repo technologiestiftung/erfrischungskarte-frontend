@@ -25,6 +25,7 @@ const Template: Story = (args) => {
       <MapPoiTooltip
         coordinates={{ latitude: 52.520952, longitude: 13.400033 }}
         title="Tooltip for a park"
+        category="Park"
         {...args}
       />
     </Map>
@@ -34,13 +35,7 @@ const Template: Story = (args) => {
 export const Default = Template.bind({})
 Default.args = {}
 
-export const WithCategory = Template.bind({})
-WithCategory.args = {
-  category: 'Park',
-}
-
-export const WithCategoryAndInfo = Template.bind({})
-WithCategoryAndInfo.args = {
-  category: 'Park',
+export const WithInfo = Template.bind({})
+WithInfo.args = {
   info: 'Lots of trees here, some fountains as well',
 }
