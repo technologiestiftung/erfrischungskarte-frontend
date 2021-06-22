@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots UI Elements/AppTitle Default 1`] = `
+<div
+  className="fixed top-6 left-0 z-10 pointer-events-none w-screen grid place-items-center place-content-center"
+>
+  <a
+    className="italic text-2xl font-semibold rounded-lg bg-white px-3 py-2 pointer-events-auto shadow-lg text-gray-800 group hover:bg-gray-200 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-800"
+    href="/"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+  >
+    <span>
+      Berliner
+    </span>
+    <span
+      className="text-layer-turquoise-300"
+    >
+      Erfrischungskarte
+    </span>
+  </a>
+</div>
+`;

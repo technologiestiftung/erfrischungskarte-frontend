@@ -26,6 +26,7 @@ import {
 } from '@components/MapPoiTooltip'
 import { MapEvent } from 'react-map-gl'
 import { mapRawQueryToState } from '@lib/utils/queryUtil'
+import { AppTitle } from '@components/AppTitle'
 
 interface RefreshmentMapPropType {
   title?: string
@@ -102,6 +103,7 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
 
   return (
     <>
+      {pathname === '/map' && <AppTitle />}
       {pathname === '/' && <SplashScreen />}
       <MapRoot
         mapStyle="mapbox://styles/mapbox/light-v10"
