@@ -23,13 +23,19 @@ export const Filters: FC<{
   const hasMobileSize = useHasMobileSize()
 
   return (
-    <>
-      <section aria-label="Angezeigte Orte auswählen">
+    <div className="grid grid-rows-2 grid-cols-1">
+      <section
+        aria-label="Angezeigte Orte auswählen"
+        className={classNames(
+          'col-span-1',
+          hasMobileSize ? 'row-start-2 mt-4' : 'row-start-1'
+        )}
+      >
         {!hasMobileSize && (
           <>
             <h2 className="text-lg font-bold">Orte</h2>
             <p className="text-gray-500">
-              Wähle aus welche Orte zum Verweilen du auf der Karte sehen
+              Wähle aus, welche Orte zum Verweilen du auf der Karte sehen
               möchtest.
             </p>
           </>
@@ -51,7 +57,25 @@ export const Filters: FC<{
           })}
         </div>
       </section>
-    </>
+      <section
+        aria-label="Angezeigte Flächen auswählen"
+        className={classNames(
+          'col-span-1',
+          hasMobileSize ? 'row-start-1' : 'row-start-2 mt-8'
+        )}
+      >
+        {!hasMobileSize && (
+          <>
+            <h2 className="text-lg font-bold">Flächen</h2>
+            <p className="text-gray-500">
+              Wähle aus, welche Art von erfrischenden Bereichen du sehen
+              möchtest.
+            </p>
+          </>
+        )}
+        <p>Layer filter</p>
+      </section>
+    </div>
   )
 }
 
