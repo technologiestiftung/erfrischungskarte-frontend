@@ -28,7 +28,8 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-map-gl": "6.1.16",
-    "swr": "0.5.6"
+    "swr": "0.5.6",
+    "use-debounce": "7.0.0"
   },
   "devDependencies": {
     "@storybook/addon-actions": "6.2.9",
