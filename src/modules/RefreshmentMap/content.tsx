@@ -513,3 +513,4 @@ export const LAYER_LEGEND_ITEMS: Pick<
       </LayerLegendContent>
     ),
   },
+]
