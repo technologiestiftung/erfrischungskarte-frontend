@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots UI Elements/SharingOverlay With Google Maps Link 1`] = `
+<div
+  className="grid place-content-center place-items-center bg-gray-300 h-full fixed inset-0"
+>
+  <div
+    className="fixed bottom-6 right-20 bg-white rounded shadow-xl p-6 sm:p-8 w-96 max-w-full grid grid-flow-row gap-4"
+  >
+    <h3
+      className="font-bold text-2xl pr-20"
+    >
+      Erfrischenden Ort gefunden?
+       
+      <span
+        className="text-layer-turquoise-300"
+      >
+        Teile ihn!
+      </span>
+    </h3>
+    <div
+      className="grid gap-4 grid-cols-2"
+    >
+      <div>
+        <h4
+          className="font-bold text-sm mb-1"
+        >
+          Kartenausschnitt
+        </h4>
+        <p
+          className="text-sm text-gray-400 italic"
+        >
+          Mit diesem Link sehen andere deinen aktu­ellen Karten­aus­schnitt.
+        </p>
+      </div>
+      <div
+        className="grid place-content-center"
+      >
+        <button
+          className="rounded-lg border-2 border-layer-turquoise-300 px-2 py-1 sm:text-xl text-layer-turquoise-300 transition focus:outline-none focus:ring-4 focus:ring-layer-turquoise-200 hover:text-layer-turquoise-400 hover:border-layer-turquoise-400"
+          onClick={[Function]}
+        >
+          Link kopieren
+        </button>
+      </div>
+    </div>
+    <button
+      className="absolute top-6 sm:top-8 right-6 sm:right-8 cursor-pointer w-10 h-10 grid place-content-center rounded-full focus:outline-none focus:ring-2 focus:ring-gray-800 hover:bg-gray-200 transition"
+      onClick={[Function]}
+    >
+      <svg
+        fill="none"
+        height="24"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M6 6L18 18M6 18L18 6L6 18Z"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots UI Elements/SharingOverlay Without Google Maps Link 1`] = `
+<div
+  className="grid place-content-center place-items-center bg-gray-300 h-full fixed inset-0"
+>
+  <div
+    className="fixed bottom-6 right-20 bg-white rounded shadow-xl p-6 sm:p-8 w-96 max-w-full grid grid-flow-row gap-4"
+  >
+    <h3
+      className="font-bold text-2xl pr-20"
+    >
+      Erfrischenden Ort gefunden?
+       
+      <span
+        className="text-layer-turquoise-300"
+      >
+        Teile ihn!
+      </span>
+    </h3>
+    <div
+      className="grid gap-4 grid-cols-2"
+    >
+      <div>
+        <h4
+          className="font-bold text-sm mb-1"
+        >
+          Kartenausschnitt
+        </h4>
+        <p
+          className="text-sm text-gray-400 italic"
+        >
+          Mit diesem Link sehen andere deinen aktu­ellen Karten­aus­schnitt.
+        </p>
+      </div>
+      <div
+        className="grid place-content-center"
+      >
+        <button
+          className="rounded-lg border-2 border-layer-turquoise-300 px-2 py-1 sm:text-xl text-layer-turquoise-300 transition focus:outline-none focus:ring-4 focus:ring-layer-turquoise-200 hover:text-layer-turquoise-400 hover:border-layer-turquoise-400"
+          onClick={[Function]}
+        >
+          Link kopieren
+        </button>
+      </div>
+    </div>
+    <button
+      className="absolute top-6 sm:top-8 right-6 sm:right-8 cursor-pointer w-10 h-10 grid place-content-center rounded-full focus:outline-none focus:ring-2 focus:ring-gray-800 hover:bg-gray-200 transition"
+      onClick={[Function]}
+    >
+      <svg
+        fill="none"
+        height="24"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M6 6L18 18M6 18L18 6L6 18Z"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+`;
