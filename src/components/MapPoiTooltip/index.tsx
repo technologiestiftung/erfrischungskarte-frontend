@@ -22,7 +22,7 @@ export const MapPoiTooltip: FC<MapPoiTooltipType> = ({
       latitude={coordinates.latitude}
       longitude={coordinates.longitude}
       closeButton={false}
-      className="w-64 rounded-2xl"
+      className="w-64"
     >
       {title && <h4 className="text-xl leading-6 text-gray-900">{title}</h4>}
       {category && <p className="text-gray-400">{category}</p>}
