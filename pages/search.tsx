@@ -113,7 +113,7 @@ export const Search: FC = () => {
         ...mappedQuery,
         latitude: coordinates[1],
         longitude: coordinates[0],
-        zoom: 14,
+        zoom: 16,
       }
       void push({ pathname, query: nextQuery }, undefined, { shallow: true })
     },
