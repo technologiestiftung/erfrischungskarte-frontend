@@ -207,17 +207,10 @@ export const ABOUT_ACCORDION_ITEMS = [
   {
     id: 'shadows',
     title: 'Schatten',
-    content: dummyParagraph,
   },
   {
-    id: 'cool-areas',
+    id: 'cool-windy-areas',
     title: 'Kühle Bereiche',
-    content: dummyParagraph,
-  },
-  {
-    id: 'windy-areas',
-    title: 'Windige Bereiche',
-    content: dummyParagraph,
   },
   {
     id: 'places',
