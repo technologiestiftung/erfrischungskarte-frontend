@@ -117,7 +117,7 @@ export const Search: FC = () => {
 
   return (
     <div>
-      <h4 className="font-bold text-xl">Standort</h4>
+      <h4 className="font-bold text-xl hidden sm:block">Standort</h4>
       <p className="text-sm text-gray-500 hidden sm:block">
         Finde deinen Bezirk, deine Straße oder einen anderen Ort in Berlin.
       </p>

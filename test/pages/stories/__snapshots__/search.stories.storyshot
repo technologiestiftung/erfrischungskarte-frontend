@@ -40,7 +40,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
       >
         <div>
           <h4
-            className="font-bold text-xl"
+            className="font-bold text-xl hidden sm:block"
           >
             Standort
           </h4>
