@@ -1,5 +1,32 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 
+function fallbackCopyTextToClipboard(
+  text: string,
+  onSuccess: () => void,
+  onError: (error: Error) => void
+): void {
+  const textArea = document.createElement('textarea')
+  textArea.value = text
+
+  // Avoid scrolling to bottom
+  textArea.style.top = '0'
+  textArea.style.left = '0'
+  textArea.style.position = 'fixed'
+
+  document.body.appendChild(textArea)
+  textArea.focus()
+  textArea.select()
+
+  try {
+    const successful = document.execCommand('copy')
+    successful && onSuccess()
+  } catch (err) {
+    onError(new Error(err))
+  }
+
+  document.body.removeChild(textArea)
+}
+
 export const useCopyToClipboard = (): {
   hasCopied: boolean
   error: Error | null
@@ -24,6 +51,7 @@ export const useCopyToClipboard = (): {
     error,
     copyToClipboard: (text) => {
       if (!navigator.clipboard) {
+        fallbackCopyTextToClipboard(text, startTimeout, setError)
         return
       }
 
