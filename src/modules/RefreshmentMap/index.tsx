@@ -17,7 +17,6 @@ import { MapRasterLayer as RasterLayer } from '../../components/MapRasterLayer'
 import { MapExtrusionLayer as ExtrusionLayer } from '../../components/MapExtrusionLayer'
 import { MapPointLayer } from '@components/MapPointLayer'
 import { HourSelector } from '@components/HourSelector'
-import classNames from 'classnames'
 import { useRouter } from 'next/router'
 import { SplashScreen } from './../../components/SplashScreen'
 import {
@@ -28,6 +27,7 @@ import { MapEvent } from 'react-map-gl'
 import { mapRawQueryToState, PageQueryType } from '@lib/utils/queryUtil'
 import { AppTitle } from '@components/AppTitle'
 import { useHasWebPSupport } from '@lib/hooks/useHasWebPSupport'
+import { SharingOverlay } from '@components/SharingOverlay'
 import { useCurrentTime } from '@lib/hooks/useCurrentTime'
 
 interface RefreshmentMapPropType {
@@ -127,11 +127,14 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
         handleHover={handleHover}
       >
         {pathname !== '/' && (
-          <MapControls
-            className={`absolute right-4 ${
-              hasMobileSize ? 'top-4' : 'bottom-4'
-            }`}
-          />
+          <>
+            <MapControls
+              className={`absolute right-4 ${
+                hasMobileSize ? 'top-4' : 'bottom-4'
+              }`}
+            />
+            <SharingOverlay />
+          </>
         )}
         <FilledPolygonLayer
           {...WIND_DATA}
@@ -186,25 +189,17 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
       {pathname !== '/' && (
         <>
           <Sidebar {...pageProps} />
-          <div
-            className={classNames(
-              'absolute transform z-50 pointer-events-none',
-              hasMobileSize && 'right-16 bottom-24',
-              !hasMobileSize && 'top-8 right-8'
-            )}
-          >
-            <HourSelector
-              activeHourKey={activeHourKey}
-              onChange={(hour) => {
-                void routerReplace(
-                  {
-                    query: { ...mappedQuery, visibleHour: hour },
-                  },
-                  undefined
-                )
-              }}
-            />
-          </div>
+          <HourSelector
+            activeHourKey={activeHourKey}
+            onChange={(hour) => {
+              void routerReplace(
+                {
+                  query: { ...mappedQuery, visibleHour: hour },
+                },
+                undefined
+              )
+            }}
+          />
         </>
       )}
     </>

@@ -83,135 +83,146 @@ export const HourSelector: FC<HourSelectorPropType> = ({
   }, [hasMobileSize, router.pathname])
 
   return (
-    <div className="w-48 h-48 relative">
-      {isOpened && (
-        <button
-          aria-label="close-hour-selector"
-          className={classNames(
-            'absolute pointer-events-auto',
-            'w-10 h-10 rounded-full shadow-lg bg-white transition',
-            'flex items-center justify-center hover:bg-gray-800 hover:text-white',
-            'focus:outline-none focus:ring-2 focus:ring-gray-800',
-            'focus:ring-offset-2 focus:ring-offset-white z-50',
-            !hasMobileSize && '-top-4 right-6 transform translate-x-full',
-            hasMobileSize && 'top-1/2 -right-12 transform -translate-y-1/2'
-          )}
-          onClick={() => setIsOpened(false)}
-        >
-          <CrossIcon />
-        </button>
+    <div
+      className={classNames(
+        'absolute transform z-50',
+        hasMobileSize && 'right-16 bottom-24',
+        !hasMobileSize && 'top-8 right-8',
+        !isOpened && 'pointer-events-none'
       )}
-      <div className="absolute w-48 h-48 grid place-items-center inset-0">
-        <div
-          style={{ borderWidth: 40 }}
-          className={classNames(
-            'outer-ring w-24 h-24 rounded-full',
-            'border-white box-content opacity-90',
-            'transform transition',
-            isOpened ? 'scale-110 opacity-90 delay-200' : 'scale-50 opacity-0'
-          )}
-        />
-      </div>
-      <div className="absolute w-48 h-48 grid place-items-center inset-0">
-        <button
-          aria-label={!isOpened ? 'open-hour-selector' : 'hour-selector-closed'}
-          onClick={async () => {
-            if (isOpened) return
-            if (!hasMobileSize) return setIsOpened(true)
-            await router.push({
-              pathname: '/map',
-              query: mapRawQueryToState(router.query),
-            })
-            componentIsMounted && setIsOpened(true)
-          }}
-          tabIndex={isOpened ? -1 : 0}
-          className={classNames(
-            'inner-ring w-24 h-24',
-            'flex flex-col place-items-center justify-center',
-            'rounded-full bg-white shadow-lg delay-100',
-            'transform origin-top-right transition',
-            'focus:outline-none',
-            !isOpened && [
-              'focus:ring-3 focus:ring-gray-800',
-              'hover:bg-gray-800 hover:text-white',
-              'select-none cursor-pointer pointer-events-auto',
-            ]
-          )}
-          style={{
-            transform: classNames(
-              isOpened && 'scale(1) translate(0, 0)',
-              !isOpened &&
-                !hasMobileSize &&
-                'scale(.75) translate(80px, -80px)',
-              !isOpened && hasMobileSize && 'scale(.5) translate(145%, 348px)'
-            ),
-          }}
-        >
-          <span className="text-4xl leading-8">{activeHourKey}</span>
-          <span className="text-sm">Uhr</span>
-        </button>
-      </div>
-      <div
-        className={classNames(
-          'absolute w-48 h-48 grid place-items-center',
-          'inset-0 transform transition',
-          isOpened ? 'scale-100 opacity-90 delay-200' : 'scale-50 opacity-0'
+    >
+      <div className="w-48 h-48 relative">
+        {isOpened && (
+          <button
+            aria-label="close-hour-selector"
+            className={classNames(
+              'absolute pointer-events-auto',
+              'w-10 h-10 rounded-full shadow-lg bg-white transition',
+              'flex items-center justify-center hover:bg-gray-800 hover:text-white',
+              'focus:outline-none focus:ring-2 focus:ring-gray-800',
+              'focus:ring-offset-2 focus:ring-offset-white z-50',
+              !hasMobileSize && '-top-4 right-6 transform translate-x-full',
+              hasMobileSize && 'top-1/2 -right-12 transform -translate-y-1/2'
+            )}
+            onClick={() => setIsOpened(false)}
+          >
+            <CrossIcon />
+          </button>
         )}
-      >
-        <svg
-          width="195"
-          height="195"
-          viewBox="0 0 195 195"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
+        <div className="absolute w-48 h-48 grid place-items-center inset-0">
+          <div
+            style={{ borderWidth: 40 }}
+            className={classNames(
+              'outer-ring w-24 h-24 rounded-full',
+              'border-white box-content opacity-90',
+              'transform transition',
+              isOpened ? 'scale-110 opacity-90 delay-200' : 'scale-50 opacity-0'
+            )}
+          />
+        </div>
+        <div className="absolute w-48 h-48 grid place-items-center inset-0">
+          <button
+            aria-label={
+              !isOpened ? 'open-hour-selector' : 'hour-selector-closed'
+            }
+            onClick={async () => {
+              if (isOpened) return
+              if (!hasMobileSize) return setIsOpened(true)
+              await router.push({
+                pathname: '/map',
+                query: mapRawQueryToState(router.query),
+              })
+              componentIsMounted && setIsOpened(true)
+            }}
+            tabIndex={isOpened ? -1 : 0}
+            className={classNames(
+              'inner-ring w-24 h-24',
+              'flex flex-col place-items-center justify-center',
+              'rounded-full bg-white shadow-lg delay-100',
+              'transform origin-top-right transition',
+              'focus:outline-none',
+              !isOpened && [
+                'focus:ring-3 focus:ring-gray-800',
+                'hover:bg-gray-800 hover:text-white',
+                'select-none cursor-pointer pointer-events-auto',
+              ]
+            )}
+            style={{
+              transform: classNames(
+                isOpened && 'scale(1) translate(0, 0)',
+                !isOpened &&
+                  !hasMobileSize &&
+                  'scale(.75) translate(80px, -80px)',
+                !isOpened && hasMobileSize && 'scale(.5) translate(145%, 348px)'
+              ),
+            }}
+          >
+            <span className="text-4xl leading-8">{activeHourKey}</span>
+            <span className="text-sm">Uhr</span>
+          </button>
+        </div>
+        <div
+          className={classNames(
+            'absolute w-48 h-48 grid place-items-center',
+            'inset-0 transform transition',
+            isOpened ? 'scale-100 opacity-90 delay-200' : 'scale-50 opacity-0'
+          )}
         >
-          {Object.keys(hoursPositions).map((key) => {
-            const { x, y } = hoursPositions[key]
-            return (
-              <g
-                key={key}
-                role="button"
-                aria-label={
-                  key === activeHourKey
-                    ? `active-hour-${key}`
-                    : `select-hour-${key}`
-                }
-                className={classNames(
-                  styles.hourButton,
-                  key === activeHourKey && styles.hourButtonActive
-                )}
-                onClick={() => onChange(key as keyof typeof HOURS)}
-              >
-                <g filter={`url(#shadow-${key})`}>
-                  <rect x={x} y={y} {...hourButtonCommonProps} />
-                </g>
-                <text
-                  fontSize={14}
-                  fill="#000"
-                  x={x + buttonSize / 2}
-                  y={y + buttonSize / 2 + 1}
-                  dominantBaseline="middle"
-                  textAnchor="middle"
-                >
-                  {key}
-                </text>
-              </g>
-            )
-          })}
-          <defs>
+          <svg
+            width="195"
+            height="195"
+            viewBox="0 0 195 195"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             {Object.keys(hoursPositions).map((key) => {
               const { x, y } = hoursPositions[key]
               return (
-                <HourButtonShadow
-                  x={x}
-                  y={y}
-                  key={`shadow-${key}`}
-                  id={`shadow-${key}`}
-                />
+                <g
+                  key={key}
+                  role="button"
+                  aria-label={
+                    key === activeHourKey
+                      ? `active-hour-${key}`
+                      : `select-hour-${key}`
+                  }
+                  className={classNames(
+                    styles.hourButton,
+                    key === activeHourKey && styles.hourButtonActive
+                  )}
+                  onClick={() => onChange(key as keyof typeof HOURS)}
+                >
+                  <g filter={`url(#shadow-${key})`}>
+                    <rect x={x} y={y} {...hourButtonCommonProps} />
+                  </g>
+                  <text
+                    fontSize={14}
+                    fill="#000"
+                    x={x + buttonSize / 2}
+                    y={y + buttonSize / 2 + 1}
+                    dominantBaseline="middle"
+                    textAnchor="middle"
+                  >
+                    {key}
+                  </text>
+                </g>
               )
             })}
-          </defs>
-        </svg>
+            <defs>
+              {Object.keys(hoursPositions).map((key) => {
+                const { x, y } = hoursPositions[key]
+                return (
+                  <HourButtonShadow
+                    x={x}
+                    y={y}
+                    key={`shadow-${key}`}
+                    id={`shadow-${key}`}
+                  />
+                )
+              })}
+            </defs>
+          </svg>
+        </div>
       </div>
     </div>
   )
