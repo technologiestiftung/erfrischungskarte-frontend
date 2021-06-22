@@ -260,7 +260,7 @@ export const SEARCH_SUGGESTIONS: SearchSuggestionItemType[] = [
   {
     type: 'Feature',
     properties: {
-      name: 'Wasserfall am Victoriapark',
+      name: 'Wasserfall am Viktoriapark',
       conditions: 'vergleichsweise kühl und windig',
       category: 'Brunnen',
       bezirk: 'Friedrichshain-Kreuz',

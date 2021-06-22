@@ -131,7 +131,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
                   <h6
                     className="text-sm leading-4"
                   >
-                    Wasserfall am Victoriapark
+                    Wasserfall am Viktoriapark
                   </h6>
                   <div
                     className="flex gap-x-2 flex-wrap"
