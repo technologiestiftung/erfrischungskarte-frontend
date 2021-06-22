@@ -34,10 +34,14 @@ export const SharingOption: FC<SharingOptionPropType> = ({
       <div className="grid place-content-center">
         <button
           className={classNames(
-            'rounded-lg border-2 border-layer-turquoise-300',
-            'px-2 py-1 sm:text-xl text-layer-turquoise-300 transition',
-            'focus:outline-none focus:ring-4 focus:ring-layer-turquoise-200',
-            'hover:text-layer-turquoise-400 hover:border-layer-turquoise-400'
+            'rounded-lg border-2 px-2 py-1 sm:text-xl transition',
+            'border-layer-turquoise-300 focus:outline-none',
+            !hasCopied && [
+              'text-layer-turquoise-300',
+              'hover:text-layer-turquoise-400 hover:border-layer-turquoise-400',
+              'focus:ring-4 focus:ring-layer-turquoise-200',
+            ],
+            hasCopied && 'bg-layer-turquoise-300 text-white cursor-default'
           )}
           onClick={() => copyToClipboard(link)}
         >
