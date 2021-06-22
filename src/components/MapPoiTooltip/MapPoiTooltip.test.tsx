@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react'
-import { MapPointLayer, MapPointLayerType } from '.'
-import { Map as MapRoot } from '../Map'
+import { MapPoiTooltip } from '.'
+import { Map as MapRoot } from '@components/Map'
 import * as nextRouter from 'next/router'
 
 const useRouter = jest.fn()
@@ -21,27 +21,20 @@ const mapProps = {
     zoom: 10,
   },
 }
-const testPointLayerData: MapPointLayerType = {
-  id: 'some-id',
-  tileset: {
-    url: 'some-url',
-    layerName: 'some-layer-name',
-  },
-  minzoom: 11.5,
-  fillColorProperty: 'some-fill-prop',
-  fillColorMap: new Map([
-    ['key-1', 'value-1'],
-    ['key-2', 'value-2'],
-    ['key-3', 'value-3'],
-  ]),
-}
-describe('MapPointLayer component', () => {
-  it('renders in a map container', () => {
+
+describe('MapPoiTooltip', () => {
+  test('renders in a map container', () => {
     render(
       <MapRoot {...mapProps}>
-        <MapPointLayer {...testPointLayerData} />
+        <MapPoiTooltip
+          coordinates={{ latitude: 52.520952, longitude: 13.400033 }}
+          title="Tooltip title"
+          category="Tooltip category"
+          info="Tooltip info"
+        />
       </MapRoot>
     )
+
     const mapContainer = document.querySelector(
       "div[style^='position: absolute;']"
     )

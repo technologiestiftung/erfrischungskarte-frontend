@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react'
+import React, { FC, useEffect, useState } from 'react'
 import { Map as MapRoot } from '@components/Map'
 import { Sidebar } from '@components/Sidebar'
 import { MapFilledPolygonLayer as FilledPolygonLayer } from '@components/MapFilledPolygonLayer'
@@ -20,20 +20,85 @@ import { HourSelector } from '@components/HourSelector'
 import classNames from 'classnames'
 import { useRouter } from 'next/router'
 import { SplashScreen } from './../../components/SplashScreen'
+import {
+  MapPoiTooltip as PoiTooltip,
+  MapPoiTooltipType,
+} from '@components/MapPoiTooltip'
+import { MapEvent } from 'react-map-gl'
+import { mapRawQueryToState } from '@lib/utils/queryUtil'
 
 interface RefreshmentMapPropType {
   title?: string
 }
 
+interface MapFeatureType {
+  source: string
+  properties: {
+    name?: string
+    category?: string
+    info?: string
+  }
+  [key: string]: unknown
+}
+interface CustomMapEventType extends MapEvent {
+  features: MapFeatureType[]
+}
+
 export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
   const hasMobileSize = useHasMobileSize()
-  const { pathname } = useRouter()
   const { width: windowWidth, height: windowHeight } = useWindowSize()
 
-  const [activeHourKey, setActiveHourKey] = useState<HourType>('10')
+  const { pathname, query, replace: routerReplace } = useRouter()
+  const mappedQuery = mapRawQueryToState(query)
+
+  const DEFAULT_HOUR = 10
+  const [activeHourKey, setActiveHourKey] = useState<HourType>(
+    `${mappedQuery.visibleHour || DEFAULT_HOUR}`
+  )
   const activeHour = HOURS[activeHourKey]
 
+  useEffect(() => {
+    setActiveHourKey(`${mappedQuery.visibleHour || DEFAULT_HOUR}`)
+  }, [mappedQuery.visibleHour])
+
   const hourKeys = Object.keys(HOURS) as HourType[]
+  const [poiTooltipContent, setPoiTooltipContent] = useState<Pick<
+    MapPoiTooltipType,
+    'title' | 'category' | 'info'
+  > | null>(null)
+
+  const [poiTooltipCoordinates, setPoiTooltipCoordinates] = useState<{
+    latitude: number
+    longitude: number
+  } | null>(null)
+
+  const handleHover = (e: MapEvent): void => {
+    if (!e.features || !e.features.length) return
+
+    const allHoveredFeatures = e.features as CustomMapEventType['features']
+
+    const hoveredPoiFeatures = allHoveredFeatures.filter(
+      (f) => f.source === POI_DATA.id
+    )
+
+    setPoiTooltipContent({
+      title: hoveredPoiFeatures[0].properties.name || '',
+      category: hoveredPoiFeatures[0].properties.category || '',
+      info: hoveredPoiFeatures[0].properties.info || '',
+    })
+
+    setPoiTooltipCoordinates({
+      longitude: e.lngLat[0],
+      latitude: e.lngLat[1],
+    })
+  }
+
+  const handleMouseLeave = (): void => setPoiTooltipContent(null)
+
+  const poiTooltipContentIsNotEmpty =
+    poiTooltipContent &&
+    poiTooltipContent.title !== '' &&
+    poiTooltipContent.category !== ''
 
   return (
     <>
@@ -42,11 +107,18 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
         mapStyle="mapbox://styles/mapbox/light-v10"
         width={windowWidth}
         height={windowHeight}
-        initialLatitude={52.520952}
-        initialLongitude={13.400033}
-        initialZoom={12}
-        minZoom={11.5}
-        maxZoom={18}
+        staticViewportProps={{
+          minZoom: 11.5,
+          maxZoom: 18,
+        }}
+        initialViewportProps={{
+          latitude: 52.520952,
+          longitude: 13.400033,
+          zoom: 12,
+        }}
+        interactiveLayerIds={[POI_DATA.id]}
+        handleMouseLeave={handleMouseLeave}
+        handleHover={handleHover}
       >
         {pathname !== '/' && (
           <MapControls
@@ -90,20 +162,40 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
         })}
         <ExtrusionLayer {...EXTRUDED_BUILDINGS_DATA} />
         <MapPointLayer {...POI_DATA} />
+        {poiTooltipCoordinates &&
+          poiTooltipContent &&
+          poiTooltipContentIsNotEmpty && (
+            <PoiTooltip
+              coordinates={{
+                latitude: poiTooltipCoordinates.latitude,
+                longitude: poiTooltipCoordinates.longitude,
+              }}
+              title={poiTooltipContent.title}
+              category={poiTooltipContent.category}
+              info={poiTooltipContent.info}
+            />
+          )}
       </MapRoot>
       {pathname !== '/' && (
         <>
           <Sidebar {...pageProps} />
           <div
             className={classNames(
-              'absolute transform z-50 pointer-events-none',
+              'absolute transform z-50',
               hasMobileSize && 'right-16 bottom-24',
               !hasMobileSize && 'top-8 right-8'
             )}
           >
             <HourSelector
               activeHourKey={activeHourKey}
-              onChange={setActiveHourKey}
+              onChange={(hour) => {
+                void routerReplace(
+                  {
+                    query: { ...mappedQuery, visibleHour: hour },
+                  },
+                  undefined
+                )
+              }}
             />
           </div>
         </>

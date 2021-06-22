@@ -5,6 +5,7 @@ import { StrictMode, FC } from 'react'
 import Head from 'next/head'
 import '../src/style/global.css'
 import '../src/components/MapControls/mapControls.css'
+import '../src/components/MapPoiTooltip/MapPoiTooltip.css'
 
 interface PagePropType extends Record<string, unknown> {
   title?: string

@@ -1,39 +1,43 @@
 import { FC, useEffect } from 'react'
 import { useState } from 'react'
-import ReactMapGL, { ViewportProps } from 'react-map-gl'
+import ReactMapGL, { ViewportProps, MapEvent } from 'react-map-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import { useRouter } from 'next/router'
 import { useDebouncedCallback } from 'use-debounce'
 import { mapRawQueryToState } from '@lib/utils/queryUtil'
+import { InteractiveMapProps } from 'react-map-gl/src/components/interactive-map'
 
-interface MapProps extends ViewportProps {
+interface MapProps extends InteractiveMapProps {
+  initialViewportProps: Partial<ViewportProps>
+  staticViewportProps?: Partial<ViewportProps>
+  width: number
+  height: number
   mapStyle?: string
-  initialLatitude: number
-  initialLongitude: number
-  initialZoom: number
+  handleHover?: (event: MapEvent) => void
+  handleMouseLeave?: (event: MapEvent) => void
 }
 
 type URLViewportType = Pick<ViewportProps, 'latitude' | 'longitude' | 'zoom'>
 
 export const Map: FC<MapProps> = ({
+  initialViewportProps,
+  staticViewportProps,
   width,
   height,
-  initialLatitude,
-  initialLongitude,
-  initialZoom,
   mapStyle,
+  interactiveLayerIds,
+  handleHover,
+  handleMouseLeave,
   children,
-  ...otherViewportProps
+  ...otherMapProps
 }) => {
   const { pathname, query, replace } = useRouter()
   const mappedQuery = mapRawQueryToState(query)
   const [viewport, setViewport] = useState<ViewportProps>({
     width,
     height,
-    latitude: initialLatitude,
-    longitude: initialLongitude,
-    zoom: initialZoom,
-    ...otherViewportProps,
+    ...staticViewportProps,
+    ...initialViewportProps,
   })
 
   const debouncedViewportChange = useDebouncedCallback(
@@ -76,7 +80,11 @@ export const Map: FC<MapProps> = ({
           zoom: nextViewport.zoom,
         })
       }}
+      interactiveLayerIds={interactiveLayerIds}
+      onHover={handleHover}
+      onMouseLeave={handleMouseLeave}
       reuseMaps
+      {...otherMapProps}
     >
       {children}
     </ReactMapGL>

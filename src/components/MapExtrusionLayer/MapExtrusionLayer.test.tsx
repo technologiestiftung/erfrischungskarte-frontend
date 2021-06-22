@@ -12,12 +12,14 @@ nextRouter.useRouter = useRouter.mockReturnValue({
   pathname: '/map',
 })
 
-const testViewport = {
+const mapProps = {
   width: 1440,
   height: 960,
-  initialLatitude: 15.123,
-  initialLongitude: 16.456,
-  initialZoom: 10,
+  initialViewportProps: {
+    latitude: 15.123,
+    longitude: 16.456,
+    zoom: 10,
+  },
 }
 
 const testExtrusionLayerData: MapExtrusionLayerType = {
@@ -35,7 +37,7 @@ const testExtrusionLayerData: MapExtrusionLayerType = {
 describe('MapExtrusionLayer component', () => {
   it('renders in a map container', () => {
     render(
-      <MapRoot {...testViewport}>
+      <MapRoot {...mapProps}>
         <MapExtrusionLayer {...testExtrusionLayerData} />
       </MapRoot>
     )
