@@ -17,7 +17,7 @@ export const useHasWebPSupport = (): boolean => {
     img.onload = () => setSupported(img.width > 0 && img.height > 0)
     img.onerror = () => setSupported(false)
 
-    img.src = 'data:image/webp;base64,' + kTestImages['alpha']
+    img.src = 'data:image/webp;base64,' + kTestImages['lossy']
   }
 
   return supported
