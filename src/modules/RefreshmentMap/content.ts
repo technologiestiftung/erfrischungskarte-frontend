@@ -207,10 +207,14 @@ export const ABOUT_ACCORDION_ITEMS = [
   {
     id: 'shadows',
     title: 'Schatten',
+    content:
+      'Die Schatten wurden mit dem r.sun-Tool des Geographic Resources Analysis Support System (<a target="blank" href="https://grass.osgeo.org">GRASS</a>) geschätzt, einem Open-Source-GIS. Unsere Karte zeigt alle Gebiete ohne direkte Sonneneinstrahlung, berechnet für den 1. Juli. Die Schatten variieren im Laufe des Jahres, unsere Darstellung kann also je nach Zeitpunkt der Betrachtung von der (Realität)[https://fbinter.stadt-berlin.de/fb/index.jsp?loginkey=zoomStart&mapId=k_dom@senstadt&bbox=387046,5818588,391547,5821400] abweichen. Die Berechnungen wurden auf Grundlage der Topographie, nämlich des bildbasierten Digitalen Oberflächenmodells (<a target="blank" href="https://fbinter.stadt-berlin.de/fb/index.jsp?loginkey=zoomStart&mapId=k_dom@senstadt&bbox=387046,5818588,391547,5821400">bDOM</a>) von Berlin erstellt.  Dieser enthält die Höhen der Erdoberfläche mit allen natürlichen (z.B. Vegetation) und künstlichen Objekten (z.B. Bauwerken) für das gesamte Stadtgebiet und hat eine Auflösung von 2 Metern.',
   },
   {
     id: 'cool-windy-areas',
     title: 'Kühle Bereiche',
+    content:
+      'Die Klassifizierung der kühlen und windigen Bereiche beruht auf dem Datensatz <a target="blank" href="https://www.berlin.de/umweltatlas/klima/klimaanalyse/2014/zusammenfassung/">Klimamodell Berlin </a>. Die Temperaturen des originalen Datensatzes wurden in 2 Meter Höhe über dem Boden gemessen. Der Kaltluftvolumenstrom wurde in der Anzahl der Quadratmeter des kalten Windes gemessen, der pro Sekunde einen 10x10-Meter-Bereich passiert. Gebiete mit mehr Vegetation – wie Wälder und Parks – weisen durchschnittlich mehr Wind auf.Dieser enthält Kaltluftvolumen- und Temperaturdaten für 4:00 Uhr, 14:00 Uhr (nur für Temperaturdaten) und 22:00 Uhr. <br>Die Werte für weitere in unserer Anwendung dargestellten Stunden wurden zwischen den Beobachtungszeitpunkten interpoliert. Alle Datenwerte wurden in Quantile unterteilt und dadurch neu klassifiziert: Die Klassen sind also relative Werte im Vergleich zu den anderen Beobachtungen jeder Stunde (1-20%, 21-40%, 41-60%, 61-80% oder 81-100%).',
   },
   {
     id: 'places',
