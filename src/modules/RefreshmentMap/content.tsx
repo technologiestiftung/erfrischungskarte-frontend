@@ -214,8 +214,7 @@ export const ABOUT_INTRODUCTION_TEXT = (
     Verwaltungsdaten. Open Data ist heute ein wichtige Bestandteil im
     Verwaltungshandeln Berlins und schafft nicht nur Transparenz und Offenheit,
     sondern ermöglicht auch Analysen und Anwendungen wie diese, um den Alltag
-    ein kleines bisschen angenehmer zu machen.<br></br>
-    Mehr offene Daten findet ihr im{' '}
+    ein kleines bisschen angenehmer zu machen. Mehr offene Daten findet ihr im{' '}
     <a
       target="blank"
       href="https://daten.berlin.de"
