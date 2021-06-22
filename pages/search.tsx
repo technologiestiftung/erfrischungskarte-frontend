@@ -129,7 +129,7 @@ export const Search: FC = () => {
 
       <input
         type="text"
-        placeholder="Geben Sie einen Ort an"
+        placeholder="Gib hier einen Ort an"
         value={inputVal}
         onChange={(evt) => setInpuval(evt.target.value)}
         className={classNames(

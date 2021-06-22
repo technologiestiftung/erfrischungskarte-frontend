@@ -52,7 +52,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
           <input
             className="block px-3 py-2 border rounded border-gray-400 w-full my-4 focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-2 focus:ring-offset-white"
             onChange={[Function]}
-            placeholder="Geben Sie einen Ort an"
+            placeholder="Gib hier einen Ort an"
             type="text"
             value=""
           />
