@@ -25,12 +25,13 @@ import {
   MapPoiTooltipType,
 } from '@components/MapPoiTooltip'
 import { MapEvent } from 'react-map-gl'
-import { mapRawQueryToState } from '@lib/utils/queryUtil'
+import { mapRawQueryToState, PageQueryType } from '@lib/utils/queryUtil'
 import { AppTitle } from '@components/AppTitle'
 import { useHasWebPSupport } from '@lib/hooks/useHasWebPSupport'
 
 interface RefreshmentMapPropType {
   title?: string
+  query: Partial<PageQueryType>
 }
 
 interface MapFeatureType {
@@ -116,9 +117,9 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
           maxZoom: 18,
         }}
         initialViewportProps={{
-          latitude: 52.520952,
-          longitude: 13.400033,
-          zoom: 12,
+          latitude: pageProps.query.latitude || 52.520952,
+          longitude: pageProps.query.longitude || 13.400033,
+          zoom: pageProps.query.zoom || 12,
         }}
         interactiveLayerIds={[POI_DATA.id]}
         handleMouseLeave={handleMouseLeave}
@@ -186,7 +187,7 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
           <Sidebar {...pageProps} />
           <div
             className={classNames(
-              'absolute transform z-50',
+              'absolute transform z-50 pointer-events-none',
               hasMobileSize && 'right-16 bottom-24',
               !hasMobileSize && 'top-8 right-8'
             )}

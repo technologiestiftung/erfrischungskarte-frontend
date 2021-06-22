@@ -1,6 +1,16 @@
 import { render } from '@testing-library/react'
 import { MapPointLayer, MapPointLayerType } from '.'
 import { Map as MapRoot } from '../Map'
+import * as nextRouter from 'next/router'
+
+const useRouter = jest.fn()
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+nextRouter.useRouter = useRouter.mockReturnValue({
+  query: {},
+  replace: jest.fn().mockResolvedValue(true),
+  pathname: '/map',
+})
 
 const mapProps = {
   width: 1440,
