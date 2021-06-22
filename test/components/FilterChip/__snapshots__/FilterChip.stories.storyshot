@@ -3,8 +3,8 @@
 exports[`Storyshots UI Elements/FilterChip Default 1`] = `
 <button
   aria-label="I am an aria label"
-  className="px-2 py-1 border rounded-md cursor-default focus:rounded focus:ring-2 focus:ring-gray-800 focus:outline-none focus:ring-offset-2 focus:ring-offset-white border-gray-400 text-gray-900"
-  disabled={true}
+  className="px-2 py-1 border rounded-md focus:rounded focus:ring-2 focus:ring-gray-800 focus:outline-none focus:ring-offset-2 focus:ring-offset-white border-gray-400 text-gray-900"
+  onClick={[Function]}
   type="button"
 >
   <p>
@@ -16,8 +16,8 @@ exports[`Storyshots UI Elements/FilterChip Default 1`] = `
 exports[`Storyshots UI Elements/FilterChip Deselected 1`] = `
 <button
   aria-label="I am an aria label"
-  className="px-2 py-1 border rounded-md cursor-default focus:rounded focus:ring-2 focus:ring-gray-800 focus:outline-none focus:ring-offset-2 focus:ring-offset-white border-gray-200 text-gray-500"
-  disabled={true}
+  className="px-2 py-1 border rounded-md focus:rounded focus:ring-2 focus:ring-gray-800 focus:outline-none focus:ring-offset-2 focus:ring-offset-white border-gray-200 text-gray-500"
+  onClick={[Function]}
   type="button"
 >
   <p>

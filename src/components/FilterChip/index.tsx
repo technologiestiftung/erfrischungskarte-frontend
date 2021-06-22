@@ -5,12 +5,14 @@ export interface FilterChipType extends HTMLAttributes<HTMLButtonElement> {
   ariaLabel: string
   isSelected?: boolean
   otherClassNames?: string
+  handleClick?: () => void
 }
 
 export const FilterChip: FC<FilterChipType> = ({
   ariaLabel,
   isSelected = true,
   otherClassNames,
+  handleClick = console.log,
   children,
   ...otherButtonProps
 }) => {
@@ -18,7 +20,7 @@ export const FilterChip: FC<FilterChipType> = ({
     <button
       type="button"
       className={classNames(
-        'px-2 py-1 border rounded-md cursor-default',
+        'px-2 py-1 border rounded-md',
         'focus:rounded focus:ring-2 focus:ring-gray-800 focus:outline-none',
         'focus:ring-offset-2 focus:ring-offset-white',
         otherClassNames,
@@ -27,7 +29,7 @@ export const FilterChip: FC<FilterChipType> = ({
           : 'border-gray-200 text-gray-500'
       )}
       aria-label={ariaLabel}
-      disabled
+      onClick={handleClick}
       {...otherButtonProps}
     >
       {children}
