@@ -197,8 +197,73 @@ export const POI_DATA: PoiDataType = {
   ],
 }
 
-export const ABOUT_INTRODUCTION_TEXT =
-  'Eine Webkarte vom Berliner Stadtgebiet, die Temperatur(-verhältnisse), Wind(-verhältnisse) und Schattenbereiche anzeigt. Diese Daten können für jede Stunde des Tages zwischen 9 -22 Uhr angezeigt werden. Die Karte gibt also Informationen darüber an welchen Orten vergleichsweise höhere oder niedrigere Temperaturen und Windstärken vorherrschen und zu welchen Uhrzeiten wo Schatten und Sonne zu erwarten sind. Mit der Karte werden also unter anderem Bereiche visualisieren, in denen sich die Bürger in Berlin an heißen Tagen erfrischen können.'
+export const ABOUT_INTRODUCTION_TEXT = (
+  <>
+    Eine Webkarte vom Berliner Stadtgebiet, die Temperatur(-verhältnisse),
+    Wind(-verhältnisse) und Schattenbereiche anzeigt. Diese Daten können für
+    jede Stunde des Tages zwischen 9 -22 Uhr angezeigt werden. Die Karte gibt
+    also Informationen darüber an welchen Orten vergleichsweise höhere oder
+    niedrigere Temperaturen und Windstärken vorherrschen und zu welchen{' '}
+    <a href="google.com" className="text-gray-800 underline">
+      Uhrzeiten wo Schatten
+    </a>{' '}
+    und Sonne zu erwarten sind. Mit der Karte werden also unter anderem Bereiche
+    visualisieren, in denen sich die Bürger in Berlin an heißen Tagen erfrischen
+    können.
+  </>
+)
+
+export const ABOUT_SHADOW_TEXT = (
+  <>
+    Die Schatten wurden mit dem r.sun-Tool des{' '}
+    <a
+      target="blank"
+      href="https://grass.osgeo.org"
+      className="text-gray-800 underline"
+    >
+      Geographic Resources Analysis Support System (GRASS)
+    </a>{' '}
+    geschätzt, einem Open-Source-GIS. Unsere Karte zeigt alle Gebiete ohne
+    direkte Sonneneinstrahlung, berechnet für den 1. Juli. Die Schatten
+    variieren im Laufe des Jahres, unsere Darstellung kann also je nach
+    Zeitpunkt der Betrachtung von der Realität abweichen. Die Berechnungen
+    wurden auf Grundlage der Topographie, nämlich des{' '}
+    <a
+      target="blank"
+      href="https://fbinter.stadt-berlin.de/fb/index.jsp?loginkey=zoomStart&mapId=k_dom@senstadt&bbox=387046,5818588,391547,5821400"
+      className="text-gray-800 underline"
+    >
+      bildbasierten Digitalen Oberflächenmodells (bDOM)
+    </a>{' '}
+    von Berlin erstellt. Dieser enthält die Höhen der Erdoberfläche mit allen
+    natürlichen (z.B. Vegetation) und künstlichen Objekten (z.B. Bauwerken) für
+    das gesamte Stadtgebiet und hat eine Auflösung von 2 Metern.
+  </>
+)
+
+export const ABOUT_COOL_WINDY_TEXT = (
+  <>
+    Die Klassifizierung der kühlen und windigen Bereiche beruht auf dem{' '}
+    <a
+      target="blank"
+      href="https://www.berlin.de/umweltatlas/klima/klimaanalyse/2014/zusammenfassung/"
+      className="text-gray-800 underline"
+    >
+      Datensatz zum Klimamodell Berlin
+    </a>
+    . Die Temperaturen des originalen Datensatzes wurden in 2 Metern Höhe über
+    dem Boden gemessen. Der Kaltluftvolumenstrom wurde in der Anzahl der
+    Quadratmeter des kalten Windes gemessen, der pro Sekunde einen
+    10x10-Meter-Bereich passiert. Gebiete mit mehr Vegetation – wie Wälder und
+    Parks – weisen durchschnittlich mehr Wind auf. Der Datensatz enthält
+    Kaltluftvolumen- und Temperaturdaten für 4:00 Uhr, 14:00 Uhr (nur für
+    Temperaturdaten) und 22:00 Uhr. Die Werte für weitere in unserer Anwendung
+    dargestellten Stunden wurden zwischen den Beobachtungszeitpunkten
+    interpoliert. Alle Datenwerte wurden in Quantile unterteilt und dadurch neu
+    klassifiziert: Die Werte sind also relative Einstufungen im Vergleich zu den
+    anderen Beobachtungen (1-20%, 21-40%, 41-60%, 61-80% oder 81-100%).
+  </>
+)
 
 const dummyParagraph =
   'Temperaturen und Windstärken vorherrschen und zu welchen Uhrzeiten wo Schatten und Sonne zu erwarten sind. Mit der Karte werden also unter anderem Bereiche visualisieren, in denen sich die Bürger in Berlin an heißen Tagen erfrischen können.'
@@ -207,14 +272,12 @@ export const ABOUT_ACCORDION_ITEMS = [
   {
     id: 'shadows',
     title: 'Schatten',
-    content:
-      'Die Schatten wurden mit dem r.sun-Tool des Geographic Resources Analysis Support System (<a target="blank" href="https://grass.osgeo.org">GRASS</a>) geschätzt, einem Open-Source-GIS. Unsere Karte zeigt alle Gebiete ohne direkte Sonneneinstrahlung, berechnet für den 1. Juli. Die Schatten variieren im Laufe des Jahres, unsere Darstellung kann also je nach Zeitpunkt der Betrachtung von der (Realität)[https://fbinter.stadt-berlin.de/fb/index.jsp?loginkey=zoomStart&mapId=k_dom@senstadt&bbox=387046,5818588,391547,5821400] abweichen. Die Berechnungen wurden auf Grundlage der Topographie, nämlich des bildbasierten Digitalen Oberflächenmodells (<a target="blank" href="https://fbinter.stadt-berlin.de/fb/index.jsp?loginkey=zoomStart&mapId=k_dom@senstadt&bbox=387046,5818588,391547,5821400">bDOM</a>) von Berlin erstellt.  Dieser enthält die Höhen der Erdoberfläche mit allen natürlichen (z.B. Vegetation) und künstlichen Objekten (z.B. Bauwerken) für das gesamte Stadtgebiet und hat eine Auflösung von 2 Metern.',
+    content: ABOUT_SHADOW_TEXT,
   },
   {
     id: 'cool-windy-areas',
     title: 'Kühle Bereiche',
-    content:
-      'Die Klassifizierung der kühlen und windigen Bereiche beruht auf dem Datensatz <a target="blank" href="https://www.berlin.de/umweltatlas/klima/klimaanalyse/2014/zusammenfassung/">Klimamodell Berlin </a>. Die Temperaturen des originalen Datensatzes wurden in 2 Meter Höhe über dem Boden gemessen. Der Kaltluftvolumenstrom wurde in der Anzahl der Quadratmeter des kalten Windes gemessen, der pro Sekunde einen 10x10-Meter-Bereich passiert. Gebiete mit mehr Vegetation – wie Wälder und Parks – weisen durchschnittlich mehr Wind auf.Dieser enthält Kaltluftvolumen- und Temperaturdaten für 4:00 Uhr, 14:00 Uhr (nur für Temperaturdaten) und 22:00 Uhr. <br>Die Werte für weitere in unserer Anwendung dargestellten Stunden wurden zwischen den Beobachtungszeitpunkten interpoliert. Alle Datenwerte wurden in Quantile unterteilt und dadurch neu klassifiziert: Die Klassen sind also relative Werte im Vergleich zu den anderen Beobachtungen jeder Stunde (1-20%, 21-40%, 41-60%, 61-80% oder 81-100%).',
+    content: ABOUT_COOL_WINDY_TEXT,
   },
   {
     id: 'places',
