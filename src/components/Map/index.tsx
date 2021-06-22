@@ -1,29 +1,36 @@
 import { FC, useEffect } from 'react'
 import { useState } from 'react'
-import ReactMapGL, { ViewportProps } from 'react-map-gl'
+import ReactMapGL, { ViewportProps, MapEvent } from 'react-map-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
+import { InteractiveMapProps } from 'react-map-gl/src/components/interactive-map'
 
-interface MapProps extends ViewportProps {
+interface MapProps extends InteractiveMapProps {
+  initialViewportProps: Partial<ViewportProps>
+  staticViewportProps?: Partial<ViewportProps>
+  width: number
+  height: number
   mapStyle?: string
+  handleHover?: (event: MapEvent) => void
+  handleMouseLeave?: (event: MapEvent) => void
 }
 
 export const Map: FC<MapProps> = ({
+  initialViewportProps,
+  staticViewportProps,
   width,
   height,
-  latitude,
-  longitude,
-  zoom,
   mapStyle,
+  interactiveLayerIds,
+  handleHover,
+  handleMouseLeave,
   children,
-  ...otherViewportProps
+  ...otherMapProps
 }) => {
   const [viewport, setViewport] = useState<ViewportProps>({
     width,
     height,
-    latitude,
-    longitude,
-    zoom,
-    ...otherViewportProps,
+    ...staticViewportProps,
+    ...initialViewportProps,
   })
 
   useEffect(() => {
@@ -43,7 +50,11 @@ export const Map: FC<MapProps> = ({
       onViewportChange={(nextViewport: ViewportProps) =>
         setViewport(nextViewport)
       }
+      interactiveLayerIds={interactiveLayerIds}
+      onHover={handleHover}
+      onMouseLeave={handleMouseLeave}
       reuseMaps
+      {...otherMapProps}
     >
       {children}
     </ReactMapGL>

@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react'
-import { MapRasterLayer, MapRasterLayerType } from '.'
-import { Map as MapRoot } from '../Map'
+import { MapPoiTooltip } from '.'
+import { Map as MapRoot } from '@components/Map'
 
 const mapProps = {
   width: 1440,
@@ -12,17 +12,19 @@ const mapProps = {
   },
 }
 
-const testRasterLayerData: MapRasterLayerType = {
-  id: 'some-id',
-  url: 'some-tileset-url',
-}
-describe('MapRasterLayer component', () => {
-  it('renders in a map container', () => {
+describe('MapPoiTooltip', () => {
+  test('renders in a map container', () => {
     render(
       <MapRoot {...mapProps}>
-        <MapRasterLayer {...testRasterLayerData} />
+        <MapPoiTooltip
+          coordinates={{ latitude: 52.520952, longitude: 13.400033 }}
+          title="Tooltip title"
+          category="Tooltip category"
+          info="Tooltip info"
+        />
       </MapRoot>
     )
+
     const mapContainer = document.querySelector(
       "div[style^='position: absolute;']"
     )

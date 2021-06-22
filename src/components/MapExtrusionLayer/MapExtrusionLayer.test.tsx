@@ -2,12 +2,14 @@ import { render } from '@testing-library/react'
 import { MapExtrusionLayer, MapExtrusionLayerType } from '.'
 import { Map as MapRoot } from '../Map'
 
-const testViewport = {
+const mapProps = {
   width: 1440,
   height: 960,
-  latitude: 15.123,
-  longitude: 16.456,
-  zoom: 10,
+  initialViewportProps: {
+    latitude: 15.123,
+    longitude: 16.456,
+    zoom: 10,
+  },
 }
 
 const testExtrusionLayerData: MapExtrusionLayerType = {
@@ -25,7 +27,7 @@ const testExtrusionLayerData: MapExtrusionLayerType = {
 describe('MapExtrusionLayer component', () => {
   it('renders in a map container', () => {
     render(
-      <MapRoot {...testViewport}>
+      <MapRoot {...mapProps}>
         <MapExtrusionLayer {...testExtrusionLayerData} />
       </MapRoot>
     )
