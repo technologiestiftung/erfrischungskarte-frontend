@@ -85,6 +85,11 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
 
   const handleMouseLeave = (): void => setPoiTooltipContent(null)
 
+  const poiTooltipContentIsNotEmpty =
+    poiTooltipContent &&
+    poiTooltipContent.title !== '' &&
+    poiTooltipContent.category !== ''
+
   return (
     <>
       {pathname === '/' && <SplashScreen />}
@@ -147,17 +152,19 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
         })}
         <ExtrusionLayer {...EXTRUDED_BUILDINGS_DATA} />
         <MapPointLayer {...POI_DATA} />
-        {poiTooltipCoordinates && poiTooltipContent && (
-          <PoiTooltip
-            coordinates={{
-              latitude: poiTooltipCoordinates.latitude,
-              longitude: poiTooltipCoordinates.longitude,
-            }}
-            title={poiTooltipContent.title}
-            category={poiTooltipContent.category}
-            info={poiTooltipContent.info}
-          />
-        )}
+        {poiTooltipCoordinates &&
+          poiTooltipContent &&
+          poiTooltipContentIsNotEmpty && (
+            <PoiTooltip
+              coordinates={{
+                latitude: poiTooltipCoordinates.latitude,
+                longitude: poiTooltipCoordinates.longitude,
+              }}
+              title={poiTooltipContent.title}
+              category={poiTooltipContent.category}
+              info={poiTooltipContent.info}
+            />
+          )}
       </MapRoot>
       {pathname !== '/' && (
         <>
