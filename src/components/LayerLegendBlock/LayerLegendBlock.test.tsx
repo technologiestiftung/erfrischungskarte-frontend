@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import { LayerLegendItem } from '.'
+import { LayerLegendBlock } from '.'
 import { WindIcon } from '@components/Icons'
 import * as nextRouter from 'next/router'
 
@@ -21,7 +21,7 @@ const testContent = {
 describe('LayerLegendItem', () => {
   it('renders title and description', () => {
     render(
-      <LayerLegendItem
+      <LayerLegendBlock
         title={testContent.title}
         description={testContent.description}
         icon={testContent.icon}
@@ -44,7 +44,7 @@ describe('LayerLegendItem', () => {
 
   it('renders a provided icon', () => {
     render(
-      <LayerLegendItem
+      <LayerLegendBlock
         title={testContent.title}
         description={testContent.description}
         icon={testContent.icon}
@@ -59,7 +59,7 @@ describe('LayerLegendItem', () => {
 
   it('renders the legend content', () => {
     render(
-      <LayerLegendItem
+      <LayerLegendBlock
         title={testContent.title}
         description={testContent.description}
         icon={testContent.icon}

@@ -4,7 +4,7 @@ import { InternalLink } from '@components/InternalLink'
 import { FilterChip } from '@components/FilterChip'
 import { useHasMobileSize } from '@lib/hooks/useHasMobileSize'
 
-export interface LayerLegendItemType {
+export interface LayerLegendBlockType {
   title: string
   description: string
   icon: ReactNode
@@ -12,7 +12,7 @@ export interface LayerLegendItemType {
   handleToggle: () => void
 }
 
-export const LayerLegendItem: FC<LayerLegendItemType> = ({
+export const LayerLegendBlock: FC<LayerLegendBlockType> = ({
   title,
   description,
   icon,
@@ -21,9 +21,7 @@ export const LayerLegendItem: FC<LayerLegendItemType> = ({
 }) => {
   const hasMobileSize = useHasMobileSize()
   return (
-    <div
-      className={classNames('max-w-[420px]', hasMobileSize ? 'mt-0' : 'mt-4')}
-    >
+    <div className={classNames('max-w-[420px]')}>
       <div
         className={classNames(hasMobileSize ? 'flex items-center' : 'block')}
       >
