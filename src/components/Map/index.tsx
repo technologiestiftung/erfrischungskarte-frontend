@@ -6,6 +6,7 @@ import { useRouter } from 'next/router'
 import { useDebouncedCallback } from 'use-debounce'
 import { mapRawQueryToState } from '@lib/utils/queryUtil'
 import { InteractiveMapProps } from 'react-map-gl/src/components/interactive-map'
+import { FlyToInterpolator } from 'react-map-gl'
 
 interface MapProps extends InteractiveMapProps {
   initialViewportProps: Partial<ViewportProps>
@@ -33,6 +34,12 @@ export const Map: FC<MapProps> = ({
 }) => {
   const { pathname, query, replace } = useRouter()
   const mappedQuery = mapRawQueryToState(query)
+  const transitionProps = {
+    transitionDuration: 2000,
+    transitionEasing: (t: number) =>
+      t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1,
+    transitionInterpolator: new FlyToInterpolator(),
+  }
   const [viewport, setViewport] = useState<ViewportProps>({
     width,
     height,
@@ -51,6 +58,7 @@ export const Map: FC<MapProps> = ({
   useEffect(() => {
     setViewport({
       ...viewport,
+      ...transitionProps,
       latitude: mappedQuery.latitude || viewport.latitude,
       longitude: mappedQuery.longitude || viewport.longitude,
       zoom: mappedQuery.zoom || viewport.zoom,
@@ -61,6 +69,7 @@ export const Map: FC<MapProps> = ({
   useEffect(() => {
     setViewport({
       ...viewport,
+      ...transitionProps,
       width,
       height,
     })
