@@ -16,26 +16,26 @@ const createTestComponent = (onSuccess: OnSuccessType): FC => {
   return TestComponent
 }
 describe('useCurrentTime', () => {
-  test('should round up from 6 am', () => {
+  test('should round up from 3:30 am', () => {
     const onSuccess = jest.fn()
     const TestComponent = createTestComponent(onSuccess)
 
     global.Date.now = jest.fn(() =>
       new Date(
-        'Fri Jan 01 2021 06:01:00 GMT+0100 (Central European Standard Time)'
+        'Fri Jan 01 2021 03:30:00 GMT+0100 (Central European Standard Time)'
       ).getTime()
     )
 
     render(<TestComponent />)
     expect(onSuccess).toHaveBeenLastCalledWith(10)
   })
-  test('should round down from 1 am', () => {
+  test('should round down from 3:29 am', () => {
     const onSuccess = jest.fn()
     const TestComponent = createTestComponent(onSuccess)
 
     global.Date.now = jest.fn(() =>
       new Date(
-        'Fri Jan 01 2021 01:01:00 GMT+0100 (Central European Standard Time)'
+        'Fri Jan 01 2021 03:29:00 GMT+0100 (Central European Standard Time)'
       ).getTime()
     )
 
