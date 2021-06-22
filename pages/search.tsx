@@ -58,7 +58,12 @@ const SearchSuggestionItem: FC<SearchSuggestionItemPropType> = ({
       )}
     >
       <h6 className="text-sm leading-4">{properties.name}</h6>
-      <span className="text-sm text-gray-500">{properties.category}</span>
+      <div className="flex gap-x-2 flex-wrap">
+        <span className="text-sm text-gray-500">{properties.category}</span>
+        <span className="text-sm text-gray-400 italic">
+          (&thinsp;{properties.conditions}&thinsp;)
+        </span>
+      </div>
     </div>
   </button>
 )

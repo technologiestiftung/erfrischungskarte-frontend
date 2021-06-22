@@ -88,11 +88,22 @@ exports[`Storyshots Pages/Search Default 1`] = `
                   >
                     Volkspark Prenzlauer Berg
                   </h6>
-                  <span
-                    className="text-sm text-gray-500"
+                  <div
+                    className="flex gap-x-2 flex-wrap"
                   >
-                    Gruenanlage
-                  </span>
+                    <span
+                      className="text-sm text-gray-500"
+                    >
+                      Gruenanlage
+                    </span>
+                    <span
+                      className="text-sm text-gray-400 italic"
+                    >
+                      ( 
+                      kühl und schattig
+                       )
+                    </span>
+                  </div>
                 </div>
               </button>
             </li>
@@ -122,11 +133,22 @@ exports[`Storyshots Pages/Search Default 1`] = `
                   >
                     Wasserfall am Victoriapark
                   </h6>
-                  <span
-                    className="text-sm text-gray-500"
+                  <div
+                    className="flex gap-x-2 flex-wrap"
                   >
-                    Brunnen
-                  </span>
+                    <span
+                      className="text-sm text-gray-500"
+                    >
+                      Brunnen
+                    </span>
+                    <span
+                      className="text-sm text-gray-400 italic"
+                    >
+                      ( 
+                      vergleichsweise kühl und windig
+                       )
+                    </span>
+                  </div>
                 </div>
               </button>
             </li>
@@ -156,11 +178,22 @@ exports[`Storyshots Pages/Search Default 1`] = `
                   >
                     Picknickplatz in der Wuhlheide
                   </h6>
-                  <span
-                    className="text-sm text-gray-500"
+                  <div
+                    className="flex gap-x-2 flex-wrap"
                   >
-                    Picknicktisch
-                  </span>
+                    <span
+                      className="text-sm text-gray-500"
+                    >
+                      Picknicktisch
+                    </span>
+                    <span
+                      className="text-sm text-gray-400 italic"
+                    >
+                      ( 
+                      vergleichsweise kühl und schattig
+                       )
+                    </span>
+                  </div>
                 </div>
               </button>
             </li>
@@ -190,11 +223,22 @@ exports[`Storyshots Pages/Search Default 1`] = `
                   >
                     Schattenplatz auf der Insel der Jugend
                   </h6>
-                  <span
-                    className="text-sm text-gray-500"
+                  <div
+                    className="flex gap-x-2 flex-wrap"
                   >
-                    Sitzbank
-                  </span>
+                    <span
+                      className="text-sm text-gray-500"
+                    >
+                      Sitzbank
+                    </span>
+                    <span
+                      className="text-sm text-gray-400 italic"
+                    >
+                      ( 
+                      abends kühl und windig, schattig
+                       )
+                    </span>
+                  </div>
                 </div>
               </button>
             </li>
@@ -224,11 +268,22 @@ exports[`Storyshots Pages/Search Default 1`] = `
                   >
                     Bank am Neuen See im Tiergarten
                   </h6>
-                  <span
-                    className="text-sm text-gray-500"
+                  <div
+                    className="flex gap-x-2 flex-wrap"
                   >
-                    Sitzbank
-                  </span>
+                    <span
+                      className="text-sm text-gray-500"
+                    >
+                      Sitzbank
+                    </span>
+                    <span
+                      className="text-sm text-gray-400 italic"
+                    >
+                      ( 
+                      kühl, windig und schattig
+                       )
+                    </span>
+                  </div>
                 </div>
               </button>
             </li>
@@ -258,11 +313,22 @@ exports[`Storyshots Pages/Search Default 1`] = `
                   >
                     Tempelhofer Feld
                   </h6>
-                  <span
-                    className="text-sm text-gray-500"
+                  <div
+                    className="flex gap-x-2 flex-wrap"
                   >
-                    Gruenanlage
-                  </span>
+                    <span
+                      className="text-sm text-gray-500"
+                    >
+                      Gruenanlage
+                    </span>
+                    <span
+                      className="text-sm text-gray-400 italic"
+                    >
+                      ( 
+                      sonnig und abends kühl
+                       )
+                    </span>
+                  </div>
                 </div>
               </button>
             </li>
@@ -292,11 +358,22 @@ exports[`Storyshots Pages/Search Default 1`] = `
                   >
                     Pfaueninsel
                   </h6>
-                  <span
-                    className="text-sm text-gray-500"
+                  <div
+                    className="flex gap-x-2 flex-wrap"
                   >
-                    Gruenanlage
-                  </span>
+                    <span
+                      className="text-sm text-gray-500"
+                    >
+                      Gruenanlage
+                    </span>
+                    <span
+                      className="text-sm text-gray-400 italic"
+                    >
+                      ( 
+                      windig und schattig
+                       )
+                    </span>
+                  </div>
                 </div>
               </button>
             </li>
@@ -326,11 +403,22 @@ exports[`Storyshots Pages/Search Default 1`] = `
                   >
                     Freizeitpark Marienfelde
                   </h6>
-                  <span
-                    className="text-sm text-gray-500"
+                  <div
+                    className="flex gap-x-2 flex-wrap"
                   >
-                    Gruenanlage
-                  </span>
+                    <span
+                      className="text-sm text-gray-500"
+                    >
+                      Gruenanlage
+                    </span>
+                    <span
+                      className="text-sm text-gray-400 italic"
+                    >
+                      ( 
+                      vergleichsweise windig und abends kühl
+                       )
+                    </span>
+                  </div>
                 </div>
               </button>
             </li>
@@ -360,11 +448,22 @@ exports[`Storyshots Pages/Search Default 1`] = `
                   >
                     Britzer Garten
                   </h6>
-                  <span
-                    className="text-sm text-gray-500"
+                  <div
+                    className="flex gap-x-2 flex-wrap"
                   >
-                    Gruenanlage
-                  </span>
+                    <span
+                      className="text-sm text-gray-500"
+                    >
+                      Gruenanlage
+                    </span>
+                    <span
+                      className="text-sm text-gray-400 italic"
+                    >
+                      ( 
+                      vergleichsweise kühl und schattig
+                       )
+                    </span>
+                  </div>
                 </div>
               </button>
             </li>
@@ -394,11 +493,22 @@ exports[`Storyshots Pages/Search Default 1`] = `
                   >
                     Kinderbad im Bürgerpark Marzahn
                   </h6>
-                  <span
-                    className="text-sm text-gray-500"
+                  <div
+                    className="flex gap-x-2 flex-wrap"
                   >
-                    Freibad
-                  </span>
+                    <span
+                      className="text-sm text-gray-500"
+                    >
+                      Freibad
+                    </span>
+                    <span
+                      className="text-sm text-gray-400 italic"
+                    >
+                      ( 
+                      vormittags kühl, zum Planschen
+                       )
+                    </span>
+                  </div>
                 </div>
               </button>
             </li>
@@ -428,11 +538,22 @@ exports[`Storyshots Pages/Search Default 1`] = `
                   >
                     Badestelle am Tegler See
                   </h6>
-                  <span
-                    className="text-sm text-gray-500"
+                  <div
+                    className="flex gap-x-2 flex-wrap"
                   >
-                    Badestelle
-                  </span>
+                    <span
+                      className="text-sm text-gray-500"
+                    >
+                      Badestelle
+                    </span>
+                    <span
+                      className="text-sm text-gray-400 italic"
+                    >
+                      ( 
+                      kühl und windig
+                       )
+                    </span>
+                  </div>
                 </div>
               </button>
             </li>
@@ -462,11 +583,22 @@ exports[`Storyshots Pages/Search Default 1`] = `
                   >
                     Wasserspielplatz im Mellenseepark
                   </h6>
-                  <span
-                    className="text-sm text-gray-500"
+                  <div
+                    className="flex gap-x-2 flex-wrap"
                   >
-                    Wasserspielplatz
-                  </span>
+                    <span
+                      className="text-sm text-gray-500"
+                    >
+                      Wasserspielplatz
+                    </span>
+                    <span
+                      className="text-sm text-gray-400 italic"
+                    >
+                      ( 
+                      zum Planschen
+                       )
+                    </span>
+                  </div>
                 </div>
               </button>
             </li>
@@ -496,11 +628,22 @@ exports[`Storyshots Pages/Search Default 1`] = `
                   >
                     Kaskade am Lietzensee
                   </h6>
-                  <span
-                    className="text-sm text-gray-500"
+                  <div
+                    className="flex gap-x-2 flex-wrap"
                   >
-                    Brunnen
-                  </span>
+                    <span
+                      className="text-sm text-gray-500"
+                    >
+                      Brunnen
+                    </span>
+                    <span
+                      className="text-sm text-gray-400 italic"
+                    >
+                      ( 
+                      vergleichsweise kühl und windig
+                       )
+                    </span>
+                  </div>
                 </div>
               </button>
             </li>
@@ -530,11 +673,22 @@ exports[`Storyshots Pages/Search Default 1`] = `
                   >
                     Badestelle an der Unterhavel
                   </h6>
-                  <span
-                    className="text-sm text-gray-500"
+                  <div
+                    className="flex gap-x-2 flex-wrap"
                   >
-                    Badestelle
-                  </span>
+                    <span
+                      className="text-sm text-gray-500"
+                    >
+                      Badestelle
+                    </span>
+                    <span
+                      className="text-sm text-gray-400 italic"
+                    >
+                      ( 
+                      kühl und windig
+                       )
+                    </span>
+                  </div>
                 </div>
               </button>
             </li>
