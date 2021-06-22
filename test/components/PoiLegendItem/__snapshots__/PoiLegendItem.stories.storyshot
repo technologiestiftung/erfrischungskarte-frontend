@@ -5,7 +5,7 @@ exports[`Storyshots UI Elements/PoiLegendItem Default 1`] = `
   className="flex items-center"
 >
   <span
-    className="inline-block w-5 h-5 self-baseline rounded-full shadow-md border-4 border-white"
+    className="inline-block w-4 h-4 self-baseline rounded-full shadow-md border-4 border-white"
     style={
       Object {
         "backgroundColor": "#ff0000",
@@ -13,7 +13,7 @@ exports[`Storyshots UI Elements/PoiLegendItem Default 1`] = `
     }
   />
   <span
-    className="ml-1 text-gray-700"
+    className="ml-1 text-gray-700 text-sm"
   >
     I am a label
   </span>
