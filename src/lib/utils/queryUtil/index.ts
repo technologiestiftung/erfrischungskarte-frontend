@@ -1,3 +1,5 @@
+import { NumberHourType } from '@lib/hooks/useCurrentTime'
+
 interface PageQueryType {
   latitude: number | null
   longitude: number | null
@@ -6,7 +8,7 @@ interface PageQueryType {
   showShadows: boolean | null
   showTemperature: boolean | null
   showWind: boolean | null
-  visibleHour: 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | null
+  visibleHour: NumberHourType | null
   searchTerm: string | null
 }
 

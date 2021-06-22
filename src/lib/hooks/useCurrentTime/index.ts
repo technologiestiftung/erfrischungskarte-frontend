@@ -1,4 +1,18 @@
-export const useCurrentTime = (): number => {
+export type NumberHourType =
+  | 10
+  | 11
+  | 12
+  | 13
+  | 14
+  | 15
+  | 16
+  | 17
+  | 18
+  | 19
+  | 20
+  | 21
+
+export const useCurrentTime = (): NumberHourType => {
   const coeff = 1000 * 60 * 60
 
   const berlinTime = new Date(
@@ -9,7 +23,8 @@ export const useCurrentTime = (): number => {
     Math.round(berlinTime.getTime() / coeff) * coeff
   ).getHours()
 
-  if (roundedTime >= 10 && 21 >= roundedTime) return roundedTime
+  if (roundedTime >= 10 && 21 >= roundedTime)
+    return roundedTime as NumberHourType
   else if (roundedTime > 3) return 10
   else return 21
 }
