@@ -20,6 +20,9 @@ interface MapProps extends InteractiveMapProps {
 
 type URLViewportType = Pick<ViewportProps, 'latitude' | 'longitude' | 'zoom'>
 
+const easeInOutQuad = (t: number): number =>
+  t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1
+
 export const Map: FC<MapProps> = ({
   initialViewportProps,
   staticViewportProps,
@@ -36,8 +39,7 @@ export const Map: FC<MapProps> = ({
   const mappedQuery = mapRawQueryToState(query)
   const transitionProps = {
     transitionDuration: 2000,
-    transitionEasing: (t: number) =>
-      t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1,
+    transitionEasing: easeInOutQuad,
     transitionInterpolator: new FlyToInterpolator(),
   }
   const [viewport, setViewport] = useState<ViewportProps>({
