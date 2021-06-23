@@ -10,7 +10,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
   }
 >
   <aside
-    className="fixed transform z-10 transition inset-0 opacity-100 right-auto"
+    className="fixed transform z-10 transition-all inset-0 opacity-100 right-auto"
     style={
       Object {
         "height": "var(--screenHeight)",

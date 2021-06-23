@@ -40,7 +40,7 @@ export const Sidebar: FC<SidebarPropType> = ({ title, children }) => {
       <aside
         className={classNames(
           'fixed transform z-10',
-          'transition inset-0 opacity-100',
+          'transition-all inset-0 opacity-100',
           hasMobileSize ? 'top-auto bottom-16' : 'right-auto',
           !isOpened && hasMobileSize && 'opacity-0 pointer-events-none'
         )}
@@ -49,7 +49,9 @@ export const Sidebar: FC<SidebarPropType> = ({ title, children }) => {
           padding: 'var(--sidebarPadding, 20px)',
           paddingRight: hasMobileSize ? 'var(--sidebarPadding, 20px)' : 0,
           height: hasMobileSize
-            ? 'var(--screenSemiHeight)'
+            ? pathname === '/filters' || pathname === '/map'
+              ? 'var(--screenSemiHeight)'
+              : 'calc(var(--screenHeight) - 64px)'
             : 'var(--screenHeight)',
           transform: classNames(
             !isOpened &&
