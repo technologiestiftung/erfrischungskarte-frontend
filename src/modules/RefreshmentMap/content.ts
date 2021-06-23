@@ -61,10 +61,9 @@ export const HOURS = {
     shadeTilesetId: 'mapbox://technologiestiftung.9gfkjbpe',
   },
   '21': {
-    //here are some errors, needs to be replaced!
     displayName: '21 Uhr',
     vectorTilesetKey: '21Uhr',
-    shadeTilesetId: 'mapbox://technologiestiftung.cri2jkh2',
+    shadeTilesetId: 'mapbox://technologiestiftung.ahaboiuz',
   },
 }
 
