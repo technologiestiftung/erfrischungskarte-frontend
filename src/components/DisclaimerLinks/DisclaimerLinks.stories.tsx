@@ -10,7 +10,7 @@ export default {
 } as Meta
 
 const Template: Story = () => (
-  <div className="p-4 bg-gray-400">
+  <div className="p-4 bg-gray-400 h-96 w-full relative">
     <DisclaimerLinks />
   </div>
 )

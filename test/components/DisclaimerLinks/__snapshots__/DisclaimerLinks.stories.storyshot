@@ -2,7 +2,7 @@
 
 exports[`Storyshots UI Elements/DisclaimerLinks Default 1`] = `
 <div
-  className="p-4 bg-gray-400"
+  className="p-4 bg-gray-400 h-96 w-full relative"
 >
   <div
     className="absolute bottom-2 left-28"
