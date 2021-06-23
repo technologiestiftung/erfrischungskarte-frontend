@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots UI Elements/LayerLegendFigure With Color Scale 1`] = `
+<div
+  className="w-72"
+>
+  <div
+    className="pt-2 pr-2 pl-2 pb-1 flex flex-wrap place-content-between"
+  >
+    <div
+      className="w-full rounded-full"
+    >
+      <div
+        className="h-[10px] grid grid-cols-5"
+      >
+        <div
+          className="bg-layer-green-400 opacity-50"
+        />
+        <div
+          className="bg-layer-green-300 opacity-50"
+        />
+        <div
+          className="bg-layer-green-200 opacity-50"
+        />
+        <div
+          className="bg-layer-green-100 opacity-50"
+        />
+        <div
+          className="bg-white opacity-50"
+        />
+      </div>
+    </div>
+    <div
+      className="text-xs mt-1"
+    >
+      Maximum
+    </div>
+    <div
+      className="text-xs mt-1"
+    >
+      Minimum
+    </div>
+  </div>
+</div>
+`;

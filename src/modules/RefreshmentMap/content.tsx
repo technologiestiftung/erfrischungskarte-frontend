@@ -1,7 +1,13 @@
+import { TemperatureIcon, WindIcon, ShadeIcon } from '@components/Icons'
+import { LayerLegendBlockType } from '@components/LayerLegendBlock'
 import { MapPointLayerType } from '@components/MapPointLayer'
+import classNames from 'classnames'
 import { MapExtrusionLayerType } from '../../components/MapExtrusionLayer'
 import { MapFilledPolygonLayerType } from '../../components/MapFilledPolygonLayer'
 import colors from '../../style/colors'
+import { LayerLegendFigure } from '@components/LayerLegendFigure'
+import Image from 'next/image'
+import shadeImage from '../../../public/images/shade-legend.png'
 
 export interface SearchSuggestionItemType {
   type: string
@@ -157,7 +163,7 @@ export const EXTRUDED_BUILDINGS_DATA: MapExtrusionLayerType = {
   extrusionColor: '#ddd',
 }
 
-type PoiCategory =
+export type PoiCategory =
   | 'Sitzbank'
   | 'Picknicktisch'
   | 'Gruenanlage'
@@ -168,6 +174,19 @@ type PoiCategory =
   | 'Strandbad'
   | 'Freibad'
   | 'Schwimmhalle'
+
+export const POI_CATEGORIES: Map<PoiCategory, string> = new Map([
+  ['Badestelle', colors['poi-darkblue']],
+  ['Strandbad', colors['poi-darkblue']],
+  ['Freibad', colors['poi-darkblue']],
+  ['Schwimmhalle', colors['poi-darkblue']],
+  ['Wasserspielplatz', colors['poi-pink']],
+  ['Trinkbrunnen', colors['poi-lightblue']],
+  ['Brunnen', colors['poi-turquoise']],
+  ['Gruenanlage', colors['poi-green']],
+  ['Sitzbank', colors['poi-yellow']],
+  ['Picknicktisch', colors['poi-red']],
+])
 
 export interface PoiDataType extends MapPointLayerType {
   id: string
@@ -183,19 +202,7 @@ export const POI_DATA: PoiDataType = {
   },
   minzoom: 11.5,
   fillColorProperty: 'category',
-  fillColorMap: new Map([
-    ['Gruenanlage', colors['poi-green']],
-    ['Badestelle', colors['poi-darkblue']],
-    ['Strandbad', colors['poi-darkblue']],
-    ['Badestelle', colors['poi-darkblue']],
-    ['Freibad', colors['poi-darkblue']],
-    ['Schwimmhalle', colors['poi-darkblue']],
-    ['Wasserspielplatz', colors['poi-pink']],
-    ['Brunnen', colors['poi-turquoise']],
-    ['Trinkbrunnen', colors['poi-lightblue']],
-    ['Sitzbank', colors['poi-yellow']],
-    ['Picknicktisch', colors['poi-red']],
-  ]),
+  fillColorMap: POI_CATEGORIES,
   activePropertyKeys: [
     'Sitzbank',
     'Picknicktisch',
@@ -530,3 +537,88 @@ export const SEARCH_SUGGESTIONS: SearchSuggestionItemType[] = [
     },
   },
 ]
+
+const maxShadeLabel = (
+  <div className="flex items-center">
+    <div className="w-2 h-2 bg-[#808080] rounded-full"></div>
+    <span className="ml-1">Schattig</span>
+  </div>
+)
+
+const minShadeLabel = (
+  <div className="flex items-center">
+    <div className="w-2 h-2 bg-[#F4F4F2] rounded-full"></div>
+    <span className="ml-1">Sonnig</span>
+  </div>
+)
+
+export const LAYER_LEGEND_ITEMS: {
+  shade: Pick<
+    LayerLegendBlockType,
+    'title' | 'description' | 'icon' | 'legendFigure'
+  >
+  temperature: Pick<
+    LayerLegendBlockType,
+    'title' | 'description' | 'icon' | 'legendFigure'
+  >
+  wind: Pick<
+    LayerLegendBlockType,
+    'title' | 'description' | 'icon' | 'legendFigure'
+  >
+} = {
+  shade: {
+    title: 'Schatten',
+    description: 'Zeigt, wie die Schatten fallen.',
+    icon: <ShadeIcon />,
+    legendFigure: (
+      <LayerLegendFigure maxLabel={maxShadeLabel} minLabel={minShadeLabel}>
+        <Image
+          src={shadeImage}
+          alt="Beispiel von Schatten auf der Karte"
+          width={400}
+          height={30}
+        />
+      </LayerLegendFigure>
+    ),
+  },
+  temperature: {
+    title: 'Kühle Bereiche',
+    description: 'Zeigt die vergleichsweise kühlsten Bereiche in der Stadt.',
+    icon: <TemperatureIcon />,
+    legendFigure: (
+      <LayerLegendFigure maxLabel="Kühl" minLabel="Weniger kühl">
+        <div className={classNames('h-[10px]', 'grid grid-cols-5')}>
+          <div className={classNames('bg-layer-blue-400 opacity-50')}></div>
+          <div className={classNames('bg-layer-blue-300 opacity-50')}></div>
+          <div className={classNames('bg-layer-blue-200 opacity-50')}></div>
+          <div className={classNames('bg-layer-blue-100 opacity-50')}></div>
+          <div className={classNames('bg-white opacity-50')}></div>
+        </div>
+      </LayerLegendFigure>
+    ),
+  },
+  wind: {
+    title: 'Windige Bereiche',
+    description: 'Zeigt die vergleichsweise windigsten Bereiche in der Stadt.',
+    icon: <WindIcon />,
+    legendFigure: (
+      <LayerLegendFigure maxLabel="Windig" minLabel="Weniger windig">
+        <div className={classNames('h-[10px]', 'grid grid-cols-5')}>
+          <div className={classNames('bg-layer-green-400 opacity-50')}></div>
+          <div className={classNames('bg-layer-green-300 opacity-50')}></div>
+          <div className={classNames('bg-layer-green-200 opacity-50')}></div>
+          <div className={classNames('bg-layer-green-100 opacity-50')}></div>
+          <div className={classNames('bg-white opacity-50')}></div>
+        </div>
+      </LayerLegendFigure>
+    ),
+  },
+}
+
+export const SHADE_SUPPORT_NOTE = (
+  <p className="text-sm">
+    Leider können die Schatten auf diesem Endgerät oder in diesem Browser nicht
+    dargestellt werden. Bitte versuche ein anderes Endgerät oder einen anderen
+    Browser, um die Karte zu öffnen.
+  </p>
+)
