@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots UI Elements/DisclaimerLinks Default 1`] = `
+<div
+  className="p-4 bg-gray-400"
+>
+  <div
+    className=""
+  >
+    <a
+      className="bg-white p-1 text-sm rounded bg-opacity-75 hover:bg-opacity-100 underline mr-2"
+      href="https://www.technologiestiftung-berlin.de/de/impressum/"
+    >
+      Impressum
+    </a>
+    <a
+      className="bg-white p-1 text-sm rounded bg-opacity-75 hover:bg-opacity-100 underline"
+      href="https://www.technologiestiftung-berlin.de/de/datenschutz/"
+    >
+      Datenschutz
+    </a>
+  </div>
+</div>
+`;
