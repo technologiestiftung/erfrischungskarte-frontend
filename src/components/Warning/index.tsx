@@ -7,7 +7,7 @@ export const Warning: FC = ({ children, ...otherWarningProps }) => {
     <div
       className={classNames(
         'flex',
-        'w-max max-w-prose p-3',
+        'max-w-prose p-3',
         'border border-[#ff7300] border-opacity-40 rounded'
       )}
       {...otherWarningProps}
