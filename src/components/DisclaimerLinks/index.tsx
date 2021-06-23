@@ -16,18 +16,24 @@ export const DisclaimerLinks: FC<{ className: string }> = ({ className }) => {
       )}
     >
       <a
+        target="_blank"
+        rel="noreferrer"
         className="bg-white p-1 text-xs rounded bg-opacity-75 hover:bg-opacity-100 underline mr-2"
         href="https://www.technologiestiftung-berlin.de/de/impressum/"
       >
         Impressum
       </a>
       <a
+        target="_blank"
+        rel="noreferrer"
         className="bg-white p-1 text-xs rounded bg-opacity-75 hover:bg-opacity-100 underline mr-2"
         href="https://www.technologiestiftung-berlin.de/de/datenschutz/"
       >
         Datenschutz
       </a>
       <a
+        target="_blank"
+        rel="noreferrer"
         className="bg-white p-1 text-xs rounded bg-opacity-75 hover:bg-opacity-100 underline"
         href="https://github.com/technologiestiftung/erfrischungskarte-frontend/"
       >
