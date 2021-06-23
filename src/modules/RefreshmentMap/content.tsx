@@ -85,33 +85,29 @@ export const HOURS: HourDataType = {
     shadeTilesetId: 'mapbox://technologiestiftung.b7kilqew',
   },
   '17': {
-    //missing, this is just a placeholder!
     displayName: '17 Uhr',
     vectorTilesetKey: '17Uhr',
-    shadeTilesetId: 'mapbox://technologiestiftung.atdnvldm',
+    shadeTilesetId: 'mapbox://technologiestiftung.9vqcrksk',
   },
   '18': {
-    //missing, this is just a placeholder!
     displayName: '18 Uhr',
     vectorTilesetKey: '18Uhr',
-    shadeTilesetId: 'mapbox://technologiestiftung.4tg8dy6l',
+    shadeTilesetId: 'mapbox://technologiestiftung.5w67kmqm',
   },
   '19': {
-    //missing, this is just a placeholder!
     displayName: '19 Uhr',
     vectorTilesetKey: '19Uhr',
-    shadeTilesetId: 'mapbox://technologiestiftung.atdnvldm',
+    shadeTilesetId: 'mapbox://technologiestiftung.6291ii6g',
   },
   '20': {
     displayName: '20 Uhr',
     vectorTilesetKey: '20Uhr',
-    shadeTilesetId: 'mapbox://technologiestiftung.atdnvldm',
+    shadeTilesetId: 'mapbox://technologiestiftung.9gfkjbpe',
   },
   '21': {
-    //missing, this is just a placeholder!
     displayName: '21 Uhr',
     vectorTilesetKey: '21Uhr',
-    shadeTilesetId: 'mapbox://technologiestiftung.atdnvldm',
+    shadeTilesetId: 'mapbox://technologiestiftung.ahaboiuz',
   },
 }
 
