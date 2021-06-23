@@ -1,12 +1,12 @@
 import classNames from 'classnames'
 import { FC, HTMLProps, ReactNode } from 'react'
 
-export interface LayerLegendContentType extends HTMLProps<HTMLDivElement> {
+export interface LayerLegendFigureType extends HTMLProps<HTMLDivElement> {
   maxLabel?: string | ReactNode
   minLabel?: string | ReactNode
 }
 
-export const LayerLegendContent: FC<LayerLegendContentType> = ({
+export const LayerLegendFigure: FC<LayerLegendFigureType> = ({
   maxLabel,
   minLabel,
   children,

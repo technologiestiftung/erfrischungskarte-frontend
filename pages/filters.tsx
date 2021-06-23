@@ -96,9 +96,9 @@ export const Filters: FC<{
               title={shadeLegendContent.title}
               description={shadeLegendContent.description}
               icon={shadeLegendContent.icon}
-              legendContent={
+              legendFigure={
                 hasWebPSupport ? (
-                  shadeLegendContent.legendContent
+                  shadeLegendContent.legendFigure
                 ) : (
                   <Warning>{SHADE_SUPPORT_NOTE}</Warning>
                 )
@@ -113,7 +113,7 @@ export const Filters: FC<{
               title={temperatureLegendContent.title}
               description={temperatureLegendContent.description}
               icon={temperatureLegendContent.icon}
-              legendContent={temperatureLegendContent.legendContent}
+              legendFigure={temperatureLegendContent.legendFigure}
               handleToggle={() => console.log('clicked')}
             />
           </div>
@@ -124,7 +124,7 @@ export const Filters: FC<{
               title={windLegendContent.title}
               description={windLegendContent.description}
               icon={windLegendContent.icon}
-              legendContent={windLegendContent.legendContent}
+              legendFigure={windLegendContent.legendFigure}
               handleToggle={() => console.log('clicked')}
             />
           </div>

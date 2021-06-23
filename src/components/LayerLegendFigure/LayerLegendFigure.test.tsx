@@ -1,12 +1,12 @@
 import { render, screen } from '@testing-library/react'
-import { LayerLegendContent } from '.'
+import { LayerLegendFigure } from '.'
 
-describe('LayerLegendContent', () => {
+describe('LayerLegendFigure', () => {
   it('renders min and max label if provided', () => {
     render(
-      <LayerLegendContent minLabel="min" maxLabel="max">
+      <LayerLegendFigure minLabel="min" maxLabel="max">
         <div className="h-3 bg-gray-400"></div>
-      </LayerLegendContent>
+      </LayerLegendFigure>
     )
 
     const min = screen.getByText(/min/i)
@@ -18,9 +18,9 @@ describe('LayerLegendContent', () => {
 
   it('renders its children', () => {
     render(
-      <LayerLegendContent minLabel="min" maxLabel="max">
+      <LayerLegendFigure minLabel="min" maxLabel="max">
         <div className="h-3 bg-gray-400" id="test"></div>
-      </LayerLegendContent>
+      </LayerLegendFigure>
     )
 
     const children = document.querySelector('#test')

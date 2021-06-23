@@ -8,7 +8,7 @@ export interface LayerLegendBlockType {
   title: string
   description: string
   icon: ReactNode
-  legendContent: ReactNode | HTMLElement
+  legendFigure: ReactNode | HTMLElement
   handleToggle: () => void
 }
 
@@ -16,7 +16,7 @@ export const LayerLegendBlock: FC<LayerLegendBlockType> = ({
   title,
   description,
   icon,
-  legendContent,
+  legendFigure,
   handleToggle,
 }) => {
   const hasMobileSize = useHasMobileSize()
@@ -55,7 +55,7 @@ export const LayerLegendBlock: FC<LayerLegendBlockType> = ({
             otherClassNames="w-full"
             handleClick={handleToggle}
           >
-            {legendContent}
+            {legendFigure}
           </FilterChip>
         </div>
       </div>

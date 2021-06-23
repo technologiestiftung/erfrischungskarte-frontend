@@ -5,7 +5,7 @@ import classNames from 'classnames'
 import { MapExtrusionLayerType } from '../../components/MapExtrusionLayer'
 import { MapFilledPolygonLayerType } from '../../components/MapFilledPolygonLayer'
 import colors from '../../style/colors'
-import { LayerLegendContent } from '@components/LayerLegendContent'
+import { LayerLegendFigure } from '@components/LayerLegendFigure'
 import Image from 'next/image'
 import shadeImage from '../../../public/images/shade-legend.png'
 
@@ -554,38 +554,38 @@ const minShadeLabel = (
 export const LAYER_LEGEND_ITEMS: {
   shade: Pick<
     LayerLegendBlockType,
-    'title' | 'description' | 'icon' | 'legendContent'
+    'title' | 'description' | 'icon' | 'legendFigure'
   >
   temperature: Pick<
     LayerLegendBlockType,
-    'title' | 'description' | 'icon' | 'legendContent'
+    'title' | 'description' | 'icon' | 'legendFigure'
   >
   wind: Pick<
     LayerLegendBlockType,
-    'title' | 'description' | 'icon' | 'legendContent'
+    'title' | 'description' | 'icon' | 'legendFigure'
   >
 } = {
   shade: {
     title: 'Schatten',
     description: 'Zeigt, wie die Schatten fallen.',
     icon: <ShadeIcon />,
-    legendContent: (
-      <LayerLegendContent maxLabel={maxShadeLabel} minLabel={minShadeLabel}>
+    legendFigure: (
+      <LayerLegendFigure maxLabel={maxShadeLabel} minLabel={minShadeLabel}>
         <Image
           src={shadeImage}
           alt="Beispiel von Schatten auf der Karte"
           width={400}
           height={30}
         />
-      </LayerLegendContent>
+      </LayerLegendFigure>
     ),
   },
   temperature: {
     title: 'Kühle Bereiche',
     description: 'Zeigt die vergleichsweise kühlsten Bereiche in der Stadt.',
     icon: <TemperatureIcon />,
-    legendContent: (
-      <LayerLegendContent maxLabel="Kühl" minLabel="Weniger kühl">
+    legendFigure: (
+      <LayerLegendFigure maxLabel="Kühl" minLabel="Weniger kühl">
         <div className={classNames('h-[10px]', 'grid grid-cols-5')}>
           <div className={classNames('bg-layer-blue-400 opacity-50')}></div>
           <div className={classNames('bg-layer-blue-300 opacity-50')}></div>
@@ -593,15 +593,15 @@ export const LAYER_LEGEND_ITEMS: {
           <div className={classNames('bg-layer-blue-100 opacity-50')}></div>
           <div className={classNames('bg-white opacity-50')}></div>
         </div>
-      </LayerLegendContent>
+      </LayerLegendFigure>
     ),
   },
   wind: {
     title: 'Windige Bereiche',
     description: 'Zeigt die vergleichsweise windigsten Bereiche in der Stadt.',
     icon: <WindIcon />,
-    legendContent: (
-      <LayerLegendContent maxLabel="Windig" minLabel="Weniger windig">
+    legendFigure: (
+      <LayerLegendFigure maxLabel="Windig" minLabel="Weniger windig">
         <div className={classNames('h-[10px]', 'grid grid-cols-5')}>
           <div className={classNames('bg-layer-green-400 opacity-50')}></div>
           <div className={classNames('bg-layer-green-300 opacity-50')}></div>
@@ -609,7 +609,7 @@ export const LAYER_LEGEND_ITEMS: {
           <div className={classNames('bg-layer-green-100 opacity-50')}></div>
           <div className={classNames('bg-white opacity-50')}></div>
         </div>
-      </LayerLegendContent>
+      </LayerLegendFigure>
     ),
   },
 }

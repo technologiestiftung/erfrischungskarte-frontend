@@ -25,7 +25,7 @@ describe('LayerLegendItem', () => {
         title={testContent.title}
         description={testContent.description}
         icon={testContent.icon}
-        legendContent={testContent.legendContent}
+        legendFigure={testContent.legendContent}
         handleToggle={mockToggle}
       />
     )
@@ -48,7 +48,7 @@ describe('LayerLegendItem', () => {
         title={testContent.title}
         description={testContent.description}
         icon={testContent.icon}
-        legendContent={testContent.legendContent}
+        legendFigure={testContent.legendContent}
         handleToggle={mockToggle}
       />
     )
@@ -63,12 +63,12 @@ describe('LayerLegendItem', () => {
         title={testContent.title}
         description={testContent.description}
         icon={testContent.icon}
-        legendContent={testContent.legendContent}
+        legendFigure={testContent.legendContent}
         handleToggle={mockToggle}
       />
     )
 
-    const legendContent = screen.getByText(/Fill this with the actual legend/i)
-    expect(legendContent).toBeInTheDocument()
+    const legendFigure = screen.getByText(/Fill this with the actual legend/i)
+    expect(legendFigure).toBeInTheDocument()
   })
 })
