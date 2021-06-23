@@ -1,6 +1,7 @@
 import React, { FC } from 'react'
 import { InternalLink } from '@components/InternalLink'
 import { CrossIcon, OpenDataIcon, SunIcon } from '@components/Icons'
+import classNames from 'classnames'
 
 export const SplashScreen: FC = () => {
   return (
@@ -28,22 +29,40 @@ export const SplashScreen: FC = () => {
           <b className="text-gray-800"> schattige</b> Flächen in der Stadt, und
           führt zu Orten zum Erfrischen und Verweilen im Sommer.
         </p>
-        <div className="mt-4 md:mt-16 gap-2 text-center grid grid-cols-2 grid-rows-2 md:flex">
+        <div className="mt-4 md:mt-16 flex flex-wrap place-items-start">
           <InternalLink
             href="/map"
-            className="md:px-4 col-start-1 col-end-3 cursor-pointer p-1.5 rounded-lg border-2 bg-layer-turquoise-300 border-layer-turquoise-300 hover:bg-layer-turquoise-400 hover:border-layer-turquoise-400 text-white transition-colors"
+            className={classNames(
+              'md:px-4 mr-2 mb-2 cursor-pointer px-2.5 py-1 rounded-lg border-2',
+              'bg-layer-turquoise-300 border-layer-turquoise-300',
+              'hover:bg-layer-turquoise-400 hover:border-layer-turquoise-400',
+              'text-white transition-colors inline-block flex-grow sm:flex-grow-0',
+              'text-center w-full sm:w-auto'
+            )}
           >
             Erkunden
           </InternalLink>
           <InternalLink
             href="/search"
-            className='className="md:px-4 cursor-pointer bg-white p-1.5 rounded-lg border-2 border-layer-turquoise-300 text-layer-turquoise-300 hover:border-layer-turquoise-400 hover:text-layer-turquoise-400 transition transition-colors"'
+            className={classNames(
+              'className="md:px-4 mr-2 mb-2 cursor-pointer bg-white px-2.5 py-1',
+              'border-2 border-layer-turquoise-300 text-layer-turquoise-300',
+              'hover:border-layer-turquoise-400 hover:text-layer-turquoise-400',
+              'transition-colors rounded-lg inline-block flex-grow sm:flex-grow-0',
+              'text-center'
+            )}
           >
             Standortsuche
           </InternalLink>
           <InternalLink
             href="/about"
-            className="md:px-4 cursor-pointer bg-white p-1.5 rounded-lg border-2 border-gray-400 text-gray-400 hover:border-gray-500 hover:text-gray-500 transition-colors"
+            className={classNames(
+              'className="md:px-4 mr-2 cursor-pointer bg-white px-2.5 py-1',
+              'border-2 border-gray-400 text-gray-400',
+              'hover:border-gray-500 hover:text-gray-500',
+              'transition-colors rounded-lg inline-block flex-grow sm:flex-grow-0',
+              'text-center'
+            )}
           >
             Mehr Infos
           </InternalLink>

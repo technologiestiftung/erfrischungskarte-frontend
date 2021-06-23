@@ -83,14 +83,14 @@ const SearchResultItem: FC<SearchResultItemPropType> = ({
     <button
       onClick={onClick}
       className={classNames(
-        'flex gap-2 items-center pt-3 text-left w-full',
+        'flex items-center pt-3 text-left w-full',
         'hover:bg-gray-100 rounded transition px-4 -ml-4',
         'group focus:outline-none focus:ring-2 focus:ring-gray-800',
         'focus:ring-gray-800 focus:z-10 relative'
       )}
       style={{ width: 'calc(100% + 32px)' }}
     >
-      <span className="text-gray-300 transform -translate-y-2">
+      <span className="text-gray-300 transform -translate-y-2 mr-2">
         <GeoPinIcon />
       </span>
       <div

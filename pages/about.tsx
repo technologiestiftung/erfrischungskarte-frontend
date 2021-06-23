@@ -41,16 +41,18 @@ export const About: FC = () => (
     <footer
       className={classNames(
         'mt-8 bg-gray-100 p-8 -ml-6 -mb-6 sm:-ml-8 sm:-mb-8',
-        'flex flex-wrap gap-4'
+        'flex flex-wrap'
       )}
       style={{
         width: 'var(--sidebarWidth, 320px)',
       }}
     >
-      <span className="text-xs w-full">© 2021 Technologiestiftung Berlin</span>
+      <span className="text-xs w-full mb-4">
+        © 2021 Technologiestiftung Berlin
+      </span>
       <a
         href="https://www.technologiestiftung-berlin.de/de/impressum/"
-        className={`text-xs hover:underline ${focusStyles}`}
+        className={`text-xs hover:underline ${focusStyles} mr-4`}
         target="_blank"
         rel="noreferrer"
       >
