@@ -1,4 +1,6 @@
-interface PageQueryType {
+import { NumberHourType } from '@lib/hooks/useCurrentTime'
+
+export interface PageQueryType {
   latitude: number | null
   longitude: number | null
   zoom: number | null
@@ -6,7 +8,7 @@ interface PageQueryType {
   showShadows: boolean | null
   showTemperature: boolean | null
   showWind: boolean | null
-  visibleHour: 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | null
+  visibleHour: NumberHourType | null
   searchTerm: string | null
 }
 
@@ -44,7 +46,7 @@ const parseVisibleHour = (
   val: number | undefined | null
 ): PageQueryType['visibleHour'] | null => {
   if (!val) return null
-  const allHours = [12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
+  const allHours = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
   if (allHours.includes(val)) return val as PageQueryType['visibleHour']
   return null
 }
