@@ -323,11 +323,12 @@ export const ABOUT_ACCORDION_ITEMS = [
     title: 'Kühle und kaltluftproduzierende Bereiche',
     content: ABOUT_COOL_WINDY_TEXT,
   },
-  {
-    id: 'places',
-    title: 'Orte',
-    content: 'this part is coming soon...',
-  },
+  // Coming soom
+  // {
+  //   id: 'places',
+  //   title: 'Orte',
+  //   content: 'this part is coming soon...',
+  // },
 ]
 
 export const SEARCH_SUGGESTIONS: SearchSuggestionItemType[] = [
