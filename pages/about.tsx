@@ -51,12 +51,16 @@ export const About: FC = () => (
       <a
         href="https://www.technologiestiftung-berlin.de/de/impressum/"
         className={`text-xs hover:underline ${focusStyles}`}
+        target="_blank"
+        rel="noreferrer"
       >
         Impressum
       </a>
       <a
         href="https://www.technologiestiftung-berlin.de/de/datenschutz/"
         className={`text-xs hover:underline ${focusStyles}`}
+        target="_blank"
+        rel="noreferrer"
       >
         Datenschutzerklärung
       </a>
