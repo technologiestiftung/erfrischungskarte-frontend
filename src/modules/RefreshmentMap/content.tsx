@@ -216,33 +216,126 @@ export const POI_DATA: PoiDataType = {
   ],
 }
 
-export const ABOUT_INTRODUCTION_TEXT =
-  'Eine Webkarte vom Berliner Stadtgebiet, die Temperatur(-verhältnisse), Wind(-verhältnisse) und Schattenbereiche anzeigt. Diese Daten können für jede Stunde des Tages zwischen 9 -22 Uhr angezeigt werden. Die Karte gibt also Informationen darüber an welchen Orten vergleichsweise höhere oder niedrigere Temperaturen und Windstärken vorherrschen und zu welchen Uhrzeiten wo Schatten und Sonne zu erwarten sind. Mit der Karte werden also unter anderem Bereiche visualisieren, in denen sich die Bürger in Berlin an heißen Tagen erfrischen können.'
+export const ABOUT_INTRODUCTION_TEXT = (
+  <>
+    Der Klimawandel sorgt an vielen Orten für immer heißeres, trockenes Wetter.
+    Auch Berlin erlebte in den vergangenen Jahren so viele Hitzetage wie nie
+    zuvor.<br></br>
+    Wo, wann und wie ihr an solchen Tagen Erfrischung findet, seht ihr in dieser
+    Karte, denn aufgrund der differenzierten Topographie kann es zum Teil
+    erhebliche Unterschiede innerhalb des Stadtgebietes geben. Sie zeigt euch
+    für jede Stunde von 10 bis 21 Uhr, wo es tendeziell eher kühl ist, wo für
+    gewöhnlich eine frische Brise weht und wo gerade Schatten ist. Entdeckt
+    außerdem erfrischende Orte, wie Badestellen, Trinkbrunnen und Parks. Mit
+    einem Klick über die Teilenfunktion könnt ihr euren neuen Lieblingsplatz mit
+    anderen teilen.<br></br>
+    <br></br>
+    Diese Anwendung basiert komplett auf offenen Daten, ein Großteil davon sind
+    Verwaltungsdaten. Open Data ist heute ein wichtige Bestandteil im
+    Verwaltungshandeln Berlins und schafft nicht nur Transparenz und Offenheit,
+    sondern ermöglicht auch Analysen und Anwendungen wie diese, um den Alltag
+    ein kleines bisschen angenehmer zu machen. Mehr offene Daten findet ihr im{' '}
+    <a
+      target="blank"
+      href="https://daten.berlin.de"
+      className="text-gray-800 underline"
+    >
+      Berliner Datenportal
+    </a>{' '}
+  </>
+)
 
-const dummyParagraph =
-  'Temperaturen und Windstärken vorherrschen und zu welchen Uhrzeiten wo Schatten und Sonne zu erwarten sind. Mit der Karte werden also unter anderem Bereiche visualisieren, in denen sich die Bürger in Berlin an heißen Tagen erfrischen können.'
+export const ABOUT_SHADOW_TEXT = (
+  <>
+    Die Schatten wurden mit dem r.sun-Tool des{' '}
+    <a
+      target="blank"
+      href="https://grass.osgeo.org"
+      className="text-gray-800 underline"
+    >
+      Geographic Resources Analysis Support System (GRASS)
+    </a>{' '}
+    geschätzt, einem Open-Source-GIS. Unsere Karte zeigt alle Gebiete ohne
+    direkte Sonneneinstrahlung, berechnet für den 1. Juli. Die Schatten
+    variieren im Laufe des Jahres, unsere Darstellung kann also je nach
+    Zeitpunkt der Betrachtung von der Realität abweichen. Die Berechnungen
+    wurden auf Grundlage der Topographie, nämlich des{' '}
+    <a
+      target="blank"
+      href="https://fbinter.stadt-berlin.de/fb/index.jsp?loginkey=zoomStart&mapId=k_dom@senstadt&bbox=387046,5818588,391547,5821400"
+      className="text-gray-800 underline"
+    >
+      bildbasierten Digitalen Oberflächenmodells (bDOM)
+    </a>{' '}
+    von Berlin erstellt. Dieser enthält die Höhen der Erdoberfläche mit allen
+    natürlichen (z.B. Vegetation) und künstlichen Objekten (z.B. Bauwerken) für
+    das gesamte Stadtgebiet und hat eine Auflösung von 2 Metern.
+  </>
+)
+
+export const ABOUT_COOL_WINDY_TEXT = (
+  <>
+    Die Klassifizierung der kühlen und kaltluftproduzierenden Bereiche beruht
+    auf dem{' '}
+    <a
+      target="blank"
+      href="https://www.berlin.de/umweltatlas/klima/klimaanalyse/2014/zusammenfassung/"
+      className="text-gray-800 underline"
+    >
+      Datensatz zum Klimamodell Berlin
+    </a>
+    . Die Temperaturen des originalen Datensatzes wurden in 2 Metern Höhe über
+    dem Boden gemessen. Der Kaltluftvolumenstrom wurde in der Anzahl der
+    Kubikmeter des kalten Windes gemessen, der pro Sekunde einer 10-Meter-Zelle
+    zuströmt. Gebiete mit mehr Vegetation – wie Wälder und Parks – weisen
+    durchschnittlich mehr Wind auf. Der Datensatz enthält Kaltluftvolumen- und
+    Temperaturdaten für 4:00 Uhr, 14:00 Uhr (nur für Temperaturdaten) und 22:00
+    Uhr. Die Werte für weitere in unserer Anwendung dargestellten Stunden wurden
+    zwischen den Beobachtungszeitpunkten interpoliert. Alle Datenwerte wurden in
+    Quantile unterteilt und dadurch neu klassifiziert: Die Werte sind also
+    relative Einstufungen im Vergleich zu den anderen Beobachtungen (1-20%,
+    21-40%, 41-60%, 61-80% oder 81-100%).
+  </>
+)
+
+export const ABOUT_POINTS_TEXT = (
+  <>
+    Die Daten der Erfrischungsorte stammen aus einer Vielzahl verschiedener
+    Quellen für offene Daten. Die Daten zu Grünanlagen und Brunnen werden über
+    den FIS-Broker, dem Berliner Geodatenportal
+    (https://www.stadtentwicklung.berlin.de/geoinformation/fis-broker/)
+    heruntergeladen. Die Badestelle und Strandbäder stammen vom LaGeSo und
+    können aus dem Berliner Datenportal heruntergeladen werden, der zentralen
+    Plattform für offene Daten (https://www.govdata.de/). Bänke, Picknicktische
+    und Trinkbrunnen wurden aus Open Street Map exportiert, einer frei
+    zugänglichen Sammlung von Geodaten (https://www.openstreetmap.org/). Die
+    Daten zu Freibädern und Schwimmhallen liegen nicht als maschinenlesbarer
+    Datensatz vor. Sie wurden direkt von der Berlin.de-Website
+    (https://www.berlin.de/special/sport-und-fitness/schwimmen/schwimmbad/a-z/)
+    gescrapt.
+    <ul className="bullet-list">
+      <li> Test</li>
+    </ul>
+  </>
+)
 
 export const ABOUT_ACCORDION_ITEMS = [
   {
     id: 'shadows',
     title: 'Schatten',
-    content: dummyParagraph,
+    content: ABOUT_SHADOW_TEXT,
   },
   {
-    id: 'cool-areas',
-    title: 'Kühle Bereiche',
-    content: dummyParagraph,
+    id: 'cool-windy-areas',
+    title: 'Kühle und kaltluftproduzierende Bereiche',
+    content: ABOUT_COOL_WINDY_TEXT,
   },
-  {
-    id: 'windy-areas',
-    title: 'Windige Bereiche',
-    content: dummyParagraph,
-  },
-  {
-    id: 'places',
-    title: 'Orte',
-    content: dummyParagraph,
-  },
+  // Coming soom
+  // {
+  //   id: 'places',
+  //   title: 'Orte',
+  //   content: 'this part is coming soon...',
+  // },
 ]
 
 export const SEARCH_SUGGESTIONS: SearchSuggestionItemType[] = [
