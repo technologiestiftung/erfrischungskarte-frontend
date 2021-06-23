@@ -25,7 +25,10 @@ export const MapPoiTooltip: FC<MapPoiTooltipType> = ({
       className="w-64"
     >
       <h4 className="text-xl leading-6 text-gray-900">{title}</h4>
-      <p className="text-gray-400">{category}</p>
+      {category.toLowerCase() !== title.toLowerCase() && (
+        <p className="text-gray-400">{category}</p>
+      )}
+
       {info && (
         <p className="text-xs text-gray-900 pt-2 mt-2 border-t">{info}</p>
       )}
