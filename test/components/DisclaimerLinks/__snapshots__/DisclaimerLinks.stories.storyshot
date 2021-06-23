@@ -14,10 +14,16 @@ exports[`Storyshots UI Elements/DisclaimerLinks Default 1`] = `
       Impressum
     </a>
     <a
-      className="bg-white p-1 text-xs rounded bg-opacity-75 hover:bg-opacity-100 underline"
+      className="bg-white p-1 text-xs rounded bg-opacity-75 hover:bg-opacity-100 underline mr-2"
       href="https://www.technologiestiftung-berlin.de/de/datenschutz/"
     >
       Datenschutz
+    </a>
+    <a
+      className="bg-white p-1 text-xs rounded bg-opacity-75 hover:bg-opacity-100 underline"
+      href="https://github.com/technologiestiftung/erfrischungskarte-frontend/"
+    >
+      GitHub
     </a>
   </div>
 </div>
