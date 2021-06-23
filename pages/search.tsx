@@ -34,7 +34,7 @@ const SearchSuggestionItem: FC<SearchSuggestionItemPropType> = ({
 }) => (
   <button
     className={classNames(
-      'flex gap-4 items-center pt-3 text-left w-full',
+      'flex items-center pt-3 text-left w-full',
       'hover:bg-gray-100 rounded transition px-4 -ml-4',
       'group focus:outline-none focus:ring-2 focus:ring-gray-800',
       'focus:ring-gray-800 focus:z-10 relative'
@@ -45,7 +45,7 @@ const SearchSuggestionItem: FC<SearchSuggestionItemPropType> = ({
     <span
       className={classNames(
         'rounded-full w-4 h-4 border-4 border-white shadow-md',
-        'transform -translate-y-2'
+        'transform -translate-y-2 mr-3'
       )}
       style={{
         backgroundColor: POI_DATA.fillColorMap.get(properties.category),
@@ -57,9 +57,11 @@ const SearchSuggestionItem: FC<SearchSuggestionItemPropType> = ({
         'group-hover:border-opacity-0 group-focus:border-opacity-0 transition'
       )}
     >
-      <h6 className="text-sm leading-4">{properties.name}</h6>
-      <div className="flex gap-x-2 flex-wrap">
-        <span className="text-sm text-gray-500">{properties.category}</span>
+      <h6 className="text-sm leading-4 mb-1">{properties.name}</h6>
+      <div className="flex flex-wrap">
+        <span className="text-sm text-gray-500 inline-block mr-1">
+          {properties.category}
+        </span>
         <span className="text-sm text-gray-400 italic">
           (&thinsp;{properties.conditions}&thinsp;)
         </span>

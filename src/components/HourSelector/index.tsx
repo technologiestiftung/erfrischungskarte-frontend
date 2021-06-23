@@ -145,6 +145,7 @@ export const HourSelector: FC<HourSelectorPropType> = ({
                 'focus:ring-3 focus:ring-gray-800',
                 'hover:bg-gray-800 hover:text-white',
                 'select-none cursor-pointer pointer-events-auto',
+                'shadow-none border-2 border-gray-300',
               ]
             )}
             style={{
@@ -153,7 +154,7 @@ export const HourSelector: FC<HourSelectorPropType> = ({
                 !isOpened &&
                   !hasMobileSize &&
                   'scale(.75) translate(80px, -80px)',
-                !isOpened && hasMobileSize && 'scale(.5) translate(145%, 348px)'
+                !isOpened && hasMobileSize && 'scale(.5) translate(145%, 346px)'
               ),
             }}
           >

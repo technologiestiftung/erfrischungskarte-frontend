@@ -24,17 +24,17 @@ export const About: FC = () => (
   <div>
     <p className="text-gray-500 text-sm pb-6">{ABOUT_INTRODUCTION_TEXT}</p>
     <Accordion items={ABOUT_ACCORDION_ITEMS} />
-    <section className="mt-16 flex gap-6 flex-wrap">
-      <div className="flex flex-col gap-3">
-        <span className="text-sm">Ein Projekt der</span>
+    <section className="mt-16 flex flex-wrap">
+      <div className="flex flex-col mr-6 mb-6">
+        <span className="text-sm mb-2">Ein Projekt der</span>
         <TsbLogo className={focusStyles} />
       </div>
-      <div className="flex flex-col gap-3">
-        <span className="text-sm">Durchgeführt von</span>
+      <div className="flex flex-col mb-6">
+        <span className="text-sm mb-2">Durchgeführt von</span>
         <OdisLogo className={focusStyles} />
       </div>
-      <div className="flex flex-col gap-3">
-        <span className="text-sm">Gefördert von</span>
+      <div className="flex flex-col">
+        <span className="text-sm mb-2">Gefördert von</span>
         <SenWebLogo className={focusStyles} />
       </div>
     </section>
