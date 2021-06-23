@@ -1,5 +1,6 @@
 import { GeoPinIcon } from '@components/Icons'
 import { SearchResultType, useGeocodedPlace } from '@lib/hooks/useGeocodedPlace'
+import { useHasMobileSize } from '@lib/hooks/useHasMobileSize'
 import { mapRawQueryToState } from '@lib/utils/queryUtil'
 import {
   POI_DATA,
@@ -117,6 +118,7 @@ const SearchResultItem: FC<SearchResultItemPropType> = ({
 export const Search: FC = () => {
   const [inputVal, setInpuval] = useState('')
   const { pathname, push, query } = useRouter()
+  const hasMobileSize = useHasMobileSize()
   const mappedQuery = mapRawQueryToState(query)
   const { results } = useGeocodedPlace(inputVal)
 
@@ -128,9 +130,13 @@ export const Search: FC = () => {
         longitude: coordinates[0],
         zoom: 16,
       }
-      void push({ pathname, query: nextQuery }, undefined, { shallow: true })
+      void push(
+        { pathname: hasMobileSize ? '/map' : pathname, query: nextQuery },
+        undefined,
+        { shallow: true }
+      )
     },
-    [push, pathname, mappedQuery]
+    [push, pathname, mappedQuery, hasMobileSize]
   )
 
   return (
