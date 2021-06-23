@@ -197,6 +197,7 @@ export const POI_DATA: PoiDataType = {
     ['Picknicktisch', colors['poi-red']],
   ]),
   activePropertyKeys: [
+    'Sitzbank',
     'Picknicktisch',
     'Gruenanlage',
     'Trinkbrunnen',
