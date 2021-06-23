@@ -256,7 +256,8 @@ export const ABOUT_SHADOW_TEXT = (
 
 export const ABOUT_COOL_WINDY_TEXT = (
   <>
-    Die Klassifizierung der kühlen und windigen Bereiche beruht auf dem{' '}
+    Die Klassifizierung der kühlen und kaltluftproduzierenden Bereiche beruht
+    auf dem{' '}
     <a
       target="blank"
       href="https://www.berlin.de/umweltatlas/klima/klimaanalyse/2014/zusammenfassung/"
@@ -266,15 +267,36 @@ export const ABOUT_COOL_WINDY_TEXT = (
     </a>
     . Die Temperaturen des originalen Datensatzes wurden in 2 Metern Höhe über
     dem Boden gemessen. Der Kaltluftvolumenstrom wurde in der Anzahl der
-    Quadratmeter des kalten Windes gemessen, der pro Sekunde einen
-    10x10-Meter-Bereich passiert. Gebiete mit mehr Vegetation – wie Wälder und
-    Parks – weisen durchschnittlich mehr Wind auf. Der Datensatz enthält
-    Kaltluftvolumen- und Temperaturdaten für 4:00 Uhr, 14:00 Uhr (nur für
-    Temperaturdaten) und 22:00 Uhr. Die Werte für weitere in unserer Anwendung
-    dargestellten Stunden wurden zwischen den Beobachtungszeitpunkten
-    interpoliert. Alle Datenwerte wurden in Quantile unterteilt und dadurch neu
-    klassifiziert: Die Werte sind also relative Einstufungen im Vergleich zu den
-    anderen Beobachtungen (1-20%, 21-40%, 41-60%, 61-80% oder 81-100%).
+    Kubikmeter des kalten Windes gemessen, der pro Sekunde einer 10-Meter-Zelle
+    zuströmt. Gebiete mit mehr Vegetation – wie Wälder und Parks – weisen
+    durchschnittlich mehr Wind auf. Der Datensatz enthält Kaltluftvolumen- und
+    Temperaturdaten für 4:00 Uhr, 14:00 Uhr (nur für Temperaturdaten) und 22:00
+    Uhr. Die Werte für weitere in unserer Anwendung dargestellten Stunden wurden
+    zwischen den Beobachtungszeitpunkten interpoliert. Alle Datenwerte wurden in
+    Quantile unterteilt und dadurch neu klassifiziert: Die Werte sind also
+    relative Einstufungen im Vergleich zu den anderen Beobachtungen (1-20%,
+    21-40%, 41-60%, 61-80% oder 81-100%).
+  </>
+)
+
+export const ABOUT_POINTS_TEXT = (
+  <>
+    Die Daten der Erfrischungsorte stammen aus einer Vielzahl verschiedener
+    Quellen für offene Daten. Die Daten zu Grünanlagen und Brunnen werden über
+    den FIS-Broker, dem Berliner Geodatenportal
+    (https://www.stadtentwicklung.berlin.de/geoinformation/fis-broker/)
+    heruntergeladen. Die Badestelle und Strandbäder stammen vom LaGeSo und
+    können aus dem Berliner Datenportal heruntergeladen werden, der zentralen
+    Plattform für offene Daten (https://www.govdata.de/). Bänke, Picknicktische
+    und Trinkbrunnen wurden aus Open Street Map exportiert, einer frei
+    zugänglichen Sammlung von Geodaten (https://www.openstreetmap.org/). Die
+    Daten zu Freibädern und Schwimmhallen liegen nicht als maschinenlesbarer
+    Datensatz vor. Sie wurden direkt von der Berlin.de-Website
+    (https://www.berlin.de/special/sport-und-fitness/schwimmen/schwimmbad/a-z/)
+    gescrapt.
+    <ul className="bullet-list">
+      <li> Test</li>
+    </ul>
   </>
 )
 
@@ -286,12 +308,12 @@ export const ABOUT_ACCORDION_ITEMS = [
   },
   {
     id: 'cool-windy-areas',
-    title: 'Kühle und Kaltluft-Bereiche',
+    title: 'Kühle und kaltluftproduzierende Bereiche',
     content: ABOUT_COOL_WINDY_TEXT,
   },
   {
     id: 'places',
     title: 'Orte',
-    content: 'this section is coming soon...',
+    content: 'this part is coming soon...',
   },
 ]
