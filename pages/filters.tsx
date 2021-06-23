@@ -7,10 +7,13 @@ import {
   LAYER_LEGEND_ITEMS,
   PoiCategory,
   POI_CATEGORIES,
+  SHADE_SUPPORT_NOTE,
 } from '@modules/RefreshmentMap/content'
 import { useHasMobileSize } from '@lib/hooks/useHasMobileSize'
+import { useHasWebPSupport } from '@lib/hooks/useHasWebPSupport'
 import classNames from 'classnames'
 import { LayerLegendBlock } from '@components/LayerLegendBlock'
+import { Warning } from '@components/Warning'
 
 // eslint-disable-next-line @typescript-eslint/require-await
 export const getServerSideProps: GetServerSideProps = async ({ query }) => ({
@@ -26,6 +29,13 @@ export const Filters: FC<{
   query: ReturnType<typeof mapRawQueryToState>
 }> = () => {
   const hasMobileSize = useHasMobileSize()
+  const hasWebPSupport = useHasWebPSupport()
+
+  const {
+    shade: shadeLegendContent,
+    temperature: temperatureLegendContent,
+    wind: windLegendContent,
+  } = LAYER_LEGEND_ITEMS
 
   return (
     <div className="grid grid-cols-1">
@@ -80,26 +90,44 @@ export const Filters: FC<{
             </p>
           </>
         )}
-        {LAYER_LEGEND_ITEMS.map(
-          ({ title, description, icon, legendContent }, index) => {
-            return (
-              <div
-                key={title}
-                className={classNames(
-                  hasMobileSize ? 'mt-4' : 'mt-6',
-                  index === 0 && hasMobileSize ? '!mt-0' : 'mt-6'
-                )}
-              >
-                <LayerLegendBlock
-                  title={title}
-                  description={description}
-                  icon={icon}
-                  legendContent={legendContent}
-                  handleToggle={() => console.log('clicked')}
-                />
-              </div>
-            )
-          }
+        {shadeLegendContent && (
+          <div className={classNames(hasMobileSize ? 'mt-4' : 'mt-6')}>
+            <LayerLegendBlock
+              title={shadeLegendContent.title}
+              description={shadeLegendContent.description}
+              icon={shadeLegendContent.icon}
+              legendContent={
+                hasWebPSupport ? (
+                  shadeLegendContent.legendContent
+                ) : (
+                  <Warning>{SHADE_SUPPORT_NOTE}</Warning>
+                )
+              }
+              handleToggle={() => console.log('clicked')}
+            />
+          </div>
+        )}
+        {temperatureLegendContent && (
+          <div className={classNames(hasMobileSize ? 'mt-4' : 'mt-6')}>
+            <LayerLegendBlock
+              title={temperatureLegendContent.title}
+              description={temperatureLegendContent.description}
+              icon={temperatureLegendContent.icon}
+              legendContent={temperatureLegendContent.legendContent}
+              handleToggle={() => console.log('clicked')}
+            />
+          </div>
+        )}
+        {windLegendContent && (
+          <div className={classNames(hasMobileSize ? 'mt-4' : 'mt-6')}>
+            <LayerLegendBlock
+              title={windLegendContent.title}
+              description={windLegendContent.description}
+              icon={windLegendContent.icon}
+              legendContent={windLegendContent.legendContent}
+              handleToggle={() => console.log('clicked')}
+            />
+          </div>
         )}
       </section>
     </div>

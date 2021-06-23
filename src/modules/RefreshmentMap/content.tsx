@@ -551,11 +551,21 @@ const minShadeLabel = (
   </div>
 )
 
-export const LAYER_LEGEND_ITEMS: Pick<
-  LayerLegendBlockType,
-  'title' | 'description' | 'icon' | 'legendContent'
->[] = [
-  {
+export const LAYER_LEGEND_ITEMS: {
+  shade: Pick<
+    LayerLegendBlockType,
+    'title' | 'description' | 'icon' | 'legendContent'
+  >
+  temperature: Pick<
+    LayerLegendBlockType,
+    'title' | 'description' | 'icon' | 'legendContent'
+  >
+  wind: Pick<
+    LayerLegendBlockType,
+    'title' | 'description' | 'icon' | 'legendContent'
+  >
+} = {
+  shade: {
     title: 'Schatten',
     description: 'Zeigt, wie die Schatten fallen.',
     icon: <ShadeIcon />,
@@ -570,7 +580,7 @@ export const LAYER_LEGEND_ITEMS: Pick<
       </LayerLegendContent>
     ),
   },
-  {
+  temperature: {
     title: 'Kühle Bereiche',
     description: 'Zeigt die vergleichsweise kühlsten Bereiche in der Stadt.',
     icon: <TemperatureIcon />,
@@ -586,7 +596,7 @@ export const LAYER_LEGEND_ITEMS: Pick<
       </LayerLegendContent>
     ),
   },
-  {
+  wind: {
     title: 'Windige Bereiche',
     description: 'Zeigt die vergleichsweise windigsten Bereiche in der Stadt.',
     icon: <WindIcon />,
@@ -602,4 +612,12 @@ export const LAYER_LEGEND_ITEMS: Pick<
       </LayerLegendContent>
     ),
   },
-]
+}
+
+export const SHADE_SUPPORT_NOTE = (
+  <p className="text-sm">
+    Leider können die Schatten auf diesem Endgerät oder in diesem Browser nicht
+    dargestellt werden. Bitte versuche ein anderes Endgerät oder einen anderen
+    Browser, um die Karte zu öffnen.
+  </p>
+)
