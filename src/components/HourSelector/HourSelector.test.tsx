@@ -4,11 +4,14 @@ import * as nextRouter from 'next/router'
 import * as hasMobileSize from '@lib/hooks/useHasMobileSize'
 
 const useRouter = jest.fn()
+const routerPush = jest.fn().mockResolvedValue(true)
+const routerReplace = jest.fn().mockResolvedValue(true)
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 nextRouter.useRouter = useRouter.mockReturnValue({
   query: {},
-  push: jest.fn().mockResolvedValue(true),
+  push: routerPush,
+  replace: routerReplace,
   pathname: '/map',
 })
 
@@ -20,7 +23,7 @@ hasMobileSize.useHasMobileSize = useHasMobileSize.mockReturnValue(true)
 describe('HourSelector', () => {
   test('should render a close button', async () => {
     useHasMobileSize.mockReturnValue(false)
-    render(<HourSelector activeHourKey="10" onChange={jest.fn()} />)
+    render(<HourSelector activeHourKey="10" />)
 
     const closeButton = screen.getByLabelText('close-hour-selector')
 
@@ -31,7 +34,7 @@ describe('HourSelector', () => {
     await waitFor(() => expect(closeButton).not.toBeInTheDocument())
   })
   test('should render an open button', async () => {
-    render(<HourSelector activeHourKey="10" onChange={jest.fn()} />)
+    render(<HourSelector activeHourKey="10" />)
 
     const closeButton = screen.getByLabelText('close-hour-selector')
 
@@ -55,10 +58,11 @@ describe('HourSelector', () => {
     useRouter.mockReturnValue({
       query: testQuery,
       push: testPush,
+      replace: routerReplace,
       pathname: '/about',
     })
     useHasMobileSize.mockReturnValue(true)
-    render(<HourSelector activeHourKey="10" onChange={jest.fn()} />)
+    render(<HourSelector activeHourKey="10" />)
 
     const openButtonBefore = screen.getByLabelText('open-hour-selector')
 
@@ -78,9 +82,10 @@ describe('HourSelector', () => {
     useRouter.mockReturnValue({
       query: {},
       push: testPush,
+      replace: routerReplace,
       pathname: '/map',
     })
-    render(<HourSelector activeHourKey="10" onChange={jest.fn()} />)
+    render(<HourSelector activeHourKey="10" />)
 
     const openButton = screen.getByLabelText('open-hour-selector')
 
@@ -98,20 +103,67 @@ describe('HourSelector', () => {
     await waitFor(() => expect(testPush).toHaveBeenCalledTimes(1))
   })
   test('should render an active item', async () => {
-    render(<HourSelector activeHourKey="10" onChange={jest.fn()} />)
+    render(<HourSelector activeHourKey="10" />)
 
     const activeEl = screen.getByLabelText('active-hour-10')
 
     await waitFor(() => expect(activeEl).toBeInTheDocument())
   })
-  test('should call onChange when an item is clicked', async () => {
-    const onChange = jest.fn()
-    render(<HourSelector activeHourKey="21" onChange={onChange} />)
+  test('should call router replace when an item is clicked', async () => {
+    const testReplace = jest.fn().mockResolvedValue(true)
+    useRouter.mockReturnValue({
+      query: {},
+      push: routerPush,
+      replace: testReplace,
+      pathname: '/map',
+    })
+    render(<HourSelector activeHourKey="21" />)
 
     const clickEl = screen.getByLabelText('select-hour-10')
 
+    await waitFor(() => expect(clickEl).toBeInTheDocument())
+
     fireEvent.click(clickEl)
 
-    await waitFor(() => expect(onChange).toHaveBeenCalledWith('10'))
+    await waitFor(() =>
+      expect(testReplace).toHaveBeenCalledWith(
+        { query: { visibleHour: '10' } },
+        undefined
+      )
+    )
+  })
+  test('should reset all filters when an item is clicked and all filters are false', async () => {
+    const testReplace = jest.fn().mockResolvedValue(true)
+    useRouter.mockReturnValue({
+      query: {
+        showTemperature: 'false',
+        showShadows: 'false',
+        showWind: 'false',
+      },
+      push: routerPush,
+      replace: testReplace,
+      pathname: '/map',
+    })
+    render(<HourSelector activeHourKey="21" />)
+
+    const clickEl = screen.getByLabelText('select-hour-10')
+
+    await waitFor(() => expect(clickEl).toBeInTheDocument())
+
+    fireEvent.click(clickEl)
+
+    await waitFor(() =>
+      expect(testReplace).toHaveBeenCalledWith(
+        {
+          query: {
+            visibleHour: '10',
+            showTemperature: true,
+            showShadows: true,
+            showWind: true,
+          },
+        },
+        undefined
+      )
+    )
   })
 })

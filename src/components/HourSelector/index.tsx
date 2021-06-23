@@ -4,12 +4,11 @@ import { mapRawQueryToState } from '@lib/utils/queryUtil'
 import { HOURS } from '@modules/RefreshmentMap/content'
 import classNames from 'classnames'
 import { useRouter } from 'next/router'
-import React, { FC, useEffect, useRef, useState } from 'react'
+import React, { FC, useCallback, useEffect, useRef, useState } from 'react'
 import styles from './HourSelector.module.css'
 
 interface HourSelectorPropType {
   activeHourKey: keyof typeof HOURS
-  onChange: (newKey: keyof typeof HOURS) => void
 }
 
 interface HourPositionType {
@@ -57,12 +56,13 @@ const HourButtonShadow: FC<{ x: number; y: number; id: string }> = ({
   </filter>
 )
 
-export const HourSelector: FC<HourSelectorPropType> = ({
-  activeHourKey,
-  onChange,
-}) => {
+export const HourSelector: FC<HourSelectorPropType> = ({ activeHourKey }) => {
   const hasMobileSize = useHasMobileSize()
-  const router = useRouter()
+  const { pathname, replace, push, query } = useRouter()
+  const mappedQuery = mapRawQueryToState(query)
+  const { showShadows, showTemperature, showWind } = mappedQuery
+  const areAllHourBasedFiltersDisabled =
+    showShadows === false && showTemperature === false && showWind === false
   const componentIsMounted = useRef(true)
   const [isOpened, setIsOpened] = useState<boolean>(true)
 
@@ -73,14 +73,36 @@ export const HourSelector: FC<HourSelectorPropType> = ({
     []
   )
 
+  const onChange = useCallback(
+    (hour: keyof typeof HOURS): void => {
+      const allFiltersOn = {
+        showShadows: true,
+        showTemperature: true,
+        showWind: true,
+      }
+      const filterReset = areAllHourBasedFiltersDisabled ? allFiltersOn : {}
+      void replace(
+        {
+          query: {
+            ...mappedQuery,
+            ...filterReset,
+            visibleHour: hour,
+          },
+        },
+        undefined
+      )
+    },
+    [areAllHourBasedFiltersDisabled, mappedQuery, replace]
+  )
+
   useEffect(() => {
     if (hasMobileSize) setIsOpened(false)
     if (!hasMobileSize) setIsOpened(true)
   }, [hasMobileSize])
 
   useEffect(() => {
-    if (hasMobileSize && router.pathname !== '/map') setIsOpened(false)
-  }, [hasMobileSize, router.pathname])
+    if (hasMobileSize && pathname !== '/map') setIsOpened(false)
+  }, [hasMobileSize, pathname])
 
   return (
     <div
@@ -128,10 +150,7 @@ export const HourSelector: FC<HourSelectorPropType> = ({
             onClick={async () => {
               if (isOpened) return
               if (!hasMobileSize) return setIsOpened(true)
-              await router.push({
-                pathname: '/map',
-                query: mapRawQueryToState(router.query),
-              })
+              await push({ pathname: '/map', query: mappedQuery })
               componentIsMounted && setIsOpened(true)
             }}
             tabIndex={isOpened ? -1 : 0}

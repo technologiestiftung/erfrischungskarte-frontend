@@ -54,7 +54,7 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
   const currentTime = useCurrentTime()
   const { width: windowWidth, height: windowHeight } = useWindowSize()
 
-  const { pathname, query, replace: routerReplace } = useRouter()
+  const { pathname, query } = useRouter()
   const mappedQuery = mapRawQueryToState(query)
 
   const activeHourKey = `${
@@ -171,17 +171,7 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
       {pathname !== '/' && (
         <>
           <Sidebar {...pageProps} />
-          <HourSelector
-            activeHourKey={activeHourKey}
-            onChange={(hour) => {
-              void routerReplace(
-                {
-                  query: { ...mappedQuery, visibleHour: hour },
-                },
-                undefined
-              )
-            }}
-          />
+          <HourSelector activeHourKey={activeHourKey} />
         </>
       )}
     </>
