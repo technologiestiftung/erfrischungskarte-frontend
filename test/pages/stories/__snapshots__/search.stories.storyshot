@@ -25,11 +25,35 @@ exports[`Storyshots Pages/Search Default 1`] = `
       className="rounded bg-white shadow-lg relative h-full overflow-x-hidden overflow-y-auto"
       id="sidebar-scroll-container"
     >
-      <h1
+      <header
         className="sticky inset-0 bottom-auto transition p-6 sm:p-8 pb-4 sm:pb-6 z-10 text-xl sm:text-2xl font-bold bg-white"
       >
-        Suche
-      </h1>
+        <h1>
+          Suche
+        </h1>
+        <a
+          className="absolute top-5 sm:top-7 right-5 sm:right-7 cursor-pointer w-10 h-10 grid place-content-center rounded-full focus:outline-none focus:ring-2 focus:ring-gray-800 hover:bg-gray-200 transition"
+          href="/map"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+        >
+          <svg
+            fill="none"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6 6L18 18M6 18L18 6L6 18Z"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+            />
+          </svg>
+        </a>
+      </header>
       <div
         className="p-6 sm:p-8 pt-0 sm:pt-0"
         style={
@@ -64,7 +88,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
           <ul>
             <li>
               <button
-                className="flex gap-4 items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                className="flex items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
                 onClick={[Function]}
                 style={
                   Object {
@@ -73,7 +97,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
                 }
               >
                 <span
-                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2"
+                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2 mr-3"
                   style={
                     Object {
                       "backgroundColor": "#85B858",
@@ -84,15 +108,15 @@ exports[`Storyshots Pages/Search Default 1`] = `
                   className="pb-2 border-b border-gray-300 flex-grow border-dashed group-hover:border-opacity-0 group-focus:border-opacity-0 transition"
                 >
                   <h6
-                    className="text-sm leading-4"
+                    className="text-sm leading-4 mb-1"
                   >
                     Volkspark Prenzlauer Berg
                   </h6>
                   <div
-                    className="flex gap-x-2 flex-wrap"
+                    className="flex flex-wrap"
                   >
                     <span
-                      className="text-sm text-gray-500"
+                      className="text-sm text-gray-500 inline-block mr-1"
                     >
                       Gruenanlage
                     </span>
@@ -109,7 +133,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
             </li>
             <li>
               <button
-                className="flex gap-4 items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                className="flex items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
                 onClick={[Function]}
                 style={
                   Object {
@@ -118,7 +142,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
                 }
               >
                 <span
-                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2"
+                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2 mr-3"
                   style={
                     Object {
                       "backgroundColor": "#83E5E2",
@@ -129,15 +153,15 @@ exports[`Storyshots Pages/Search Default 1`] = `
                   className="pb-2 border-b border-gray-300 flex-grow border-dashed group-hover:border-opacity-0 group-focus:border-opacity-0 transition"
                 >
                   <h6
-                    className="text-sm leading-4"
+                    className="text-sm leading-4 mb-1"
                   >
                     Wasserfall am Viktoriapark
                   </h6>
                   <div
-                    className="flex gap-x-2 flex-wrap"
+                    className="flex flex-wrap"
                   >
                     <span
-                      className="text-sm text-gray-500"
+                      className="text-sm text-gray-500 inline-block mr-1"
                     >
                       Brunnen
                     </span>
@@ -154,7 +178,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
             </li>
             <li>
               <button
-                className="flex gap-4 items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                className="flex items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
                 onClick={[Function]}
                 style={
                   Object {
@@ -163,7 +187,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
                 }
               >
                 <span
-                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2"
+                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2 mr-3"
                   style={
                     Object {
                       "backgroundColor": "#F63333",
@@ -174,15 +198,15 @@ exports[`Storyshots Pages/Search Default 1`] = `
                   className="pb-2 border-b border-gray-300 flex-grow border-dashed group-hover:border-opacity-0 group-focus:border-opacity-0 transition"
                 >
                   <h6
-                    className="text-sm leading-4"
+                    className="text-sm leading-4 mb-1"
                   >
                     Picknickplatz in der Wuhlheide
                   </h6>
                   <div
-                    className="flex gap-x-2 flex-wrap"
+                    className="flex flex-wrap"
                   >
                     <span
-                      className="text-sm text-gray-500"
+                      className="text-sm text-gray-500 inline-block mr-1"
                     >
                       Picknicktisch
                     </span>
@@ -199,7 +223,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
             </li>
             <li>
               <button
-                className="flex gap-4 items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                className="flex items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
                 onClick={[Function]}
                 style={
                   Object {
@@ -208,7 +232,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
                 }
               >
                 <span
-                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2"
+                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2 mr-3"
                   style={
                     Object {
                       "backgroundColor": "#FED914",
@@ -219,15 +243,15 @@ exports[`Storyshots Pages/Search Default 1`] = `
                   className="pb-2 border-b border-gray-300 flex-grow border-dashed group-hover:border-opacity-0 group-focus:border-opacity-0 transition"
                 >
                   <h6
-                    className="text-sm leading-4"
+                    className="text-sm leading-4 mb-1"
                   >
                     Schattenplatz auf der Insel der Jugend
                   </h6>
                   <div
-                    className="flex gap-x-2 flex-wrap"
+                    className="flex flex-wrap"
                   >
                     <span
-                      className="text-sm text-gray-500"
+                      className="text-sm text-gray-500 inline-block mr-1"
                     >
                       Sitzbank
                     </span>
@@ -244,7 +268,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
             </li>
             <li>
               <button
-                className="flex gap-4 items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                className="flex items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
                 onClick={[Function]}
                 style={
                   Object {
@@ -253,7 +277,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
                 }
               >
                 <span
-                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2"
+                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2 mr-3"
                   style={
                     Object {
                       "backgroundColor": "#FED914",
@@ -264,15 +288,15 @@ exports[`Storyshots Pages/Search Default 1`] = `
                   className="pb-2 border-b border-gray-300 flex-grow border-dashed group-hover:border-opacity-0 group-focus:border-opacity-0 transition"
                 >
                   <h6
-                    className="text-sm leading-4"
+                    className="text-sm leading-4 mb-1"
                   >
                     Bank am Neuen See im Tiergarten
                   </h6>
                   <div
-                    className="flex gap-x-2 flex-wrap"
+                    className="flex flex-wrap"
                   >
                     <span
-                      className="text-sm text-gray-500"
+                      className="text-sm text-gray-500 inline-block mr-1"
                     >
                       Sitzbank
                     </span>
@@ -289,7 +313,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
             </li>
             <li>
               <button
-                className="flex gap-4 items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                className="flex items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
                 onClick={[Function]}
                 style={
                   Object {
@@ -298,7 +322,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
                 }
               >
                 <span
-                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2"
+                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2 mr-3"
                   style={
                     Object {
                       "backgroundColor": "#85B858",
@@ -309,15 +333,15 @@ exports[`Storyshots Pages/Search Default 1`] = `
                   className="pb-2 border-b border-gray-300 flex-grow border-dashed group-hover:border-opacity-0 group-focus:border-opacity-0 transition"
                 >
                   <h6
-                    className="text-sm leading-4"
+                    className="text-sm leading-4 mb-1"
                   >
                     Tempelhofer Feld
                   </h6>
                   <div
-                    className="flex gap-x-2 flex-wrap"
+                    className="flex flex-wrap"
                   >
                     <span
-                      className="text-sm text-gray-500"
+                      className="text-sm text-gray-500 inline-block mr-1"
                     >
                       Gruenanlage
                     </span>
@@ -334,7 +358,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
             </li>
             <li>
               <button
-                className="flex gap-4 items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                className="flex items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
                 onClick={[Function]}
                 style={
                   Object {
@@ -343,7 +367,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
                 }
               >
                 <span
-                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2"
+                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2 mr-3"
                   style={
                     Object {
                       "backgroundColor": "#85B858",
@@ -354,15 +378,15 @@ exports[`Storyshots Pages/Search Default 1`] = `
                   className="pb-2 border-b border-gray-300 flex-grow border-dashed group-hover:border-opacity-0 group-focus:border-opacity-0 transition"
                 >
                   <h6
-                    className="text-sm leading-4"
+                    className="text-sm leading-4 mb-1"
                   >
                     Pfaueninsel
                   </h6>
                   <div
-                    className="flex gap-x-2 flex-wrap"
+                    className="flex flex-wrap"
                   >
                     <span
-                      className="text-sm text-gray-500"
+                      className="text-sm text-gray-500 inline-block mr-1"
                     >
                       Gruenanlage
                     </span>
@@ -379,7 +403,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
             </li>
             <li>
               <button
-                className="flex gap-4 items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                className="flex items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
                 onClick={[Function]}
                 style={
                   Object {
@@ -388,7 +412,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
                 }
               >
                 <span
-                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2"
+                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2 mr-3"
                   style={
                     Object {
                       "backgroundColor": "#85B858",
@@ -399,15 +423,15 @@ exports[`Storyshots Pages/Search Default 1`] = `
                   className="pb-2 border-b border-gray-300 flex-grow border-dashed group-hover:border-opacity-0 group-focus:border-opacity-0 transition"
                 >
                   <h6
-                    className="text-sm leading-4"
+                    className="text-sm leading-4 mb-1"
                   >
                     Freizeitpark Marienfelde
                   </h6>
                   <div
-                    className="flex gap-x-2 flex-wrap"
+                    className="flex flex-wrap"
                   >
                     <span
-                      className="text-sm text-gray-500"
+                      className="text-sm text-gray-500 inline-block mr-1"
                     >
                       Gruenanlage
                     </span>
@@ -424,7 +448,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
             </li>
             <li>
               <button
-                className="flex gap-4 items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                className="flex items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
                 onClick={[Function]}
                 style={
                   Object {
@@ -433,7 +457,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
                 }
               >
                 <span
-                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2"
+                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2 mr-3"
                   style={
                     Object {
                       "backgroundColor": "#85B858",
@@ -444,15 +468,15 @@ exports[`Storyshots Pages/Search Default 1`] = `
                   className="pb-2 border-b border-gray-300 flex-grow border-dashed group-hover:border-opacity-0 group-focus:border-opacity-0 transition"
                 >
                   <h6
-                    className="text-sm leading-4"
+                    className="text-sm leading-4 mb-1"
                   >
                     Britzer Garten
                   </h6>
                   <div
-                    className="flex gap-x-2 flex-wrap"
+                    className="flex flex-wrap"
                   >
                     <span
-                      className="text-sm text-gray-500"
+                      className="text-sm text-gray-500 inline-block mr-1"
                     >
                       Gruenanlage
                     </span>
@@ -469,7 +493,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
             </li>
             <li>
               <button
-                className="flex gap-4 items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                className="flex items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
                 onClick={[Function]}
                 style={
                   Object {
@@ -478,7 +502,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
                 }
               >
                 <span
-                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2"
+                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2 mr-3"
                   style={
                     Object {
                       "backgroundColor": "#1D80C3",
@@ -489,15 +513,15 @@ exports[`Storyshots Pages/Search Default 1`] = `
                   className="pb-2 border-b border-gray-300 flex-grow border-dashed group-hover:border-opacity-0 group-focus:border-opacity-0 transition"
                 >
                   <h6
-                    className="text-sm leading-4"
+                    className="text-sm leading-4 mb-1"
                   >
                     Kinderbad im Bürgerpark Marzahn
                   </h6>
                   <div
-                    className="flex gap-x-2 flex-wrap"
+                    className="flex flex-wrap"
                   >
                     <span
-                      className="text-sm text-gray-500"
+                      className="text-sm text-gray-500 inline-block mr-1"
                     >
                       Freibad
                     </span>
@@ -514,7 +538,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
             </li>
             <li>
               <button
-                className="flex gap-4 items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                className="flex items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
                 onClick={[Function]}
                 style={
                   Object {
@@ -523,7 +547,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
                 }
               >
                 <span
-                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2"
+                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2 mr-3"
                   style={
                     Object {
                       "backgroundColor": "#1D80C3",
@@ -534,15 +558,15 @@ exports[`Storyshots Pages/Search Default 1`] = `
                   className="pb-2 border-b border-gray-300 flex-grow border-dashed group-hover:border-opacity-0 group-focus:border-opacity-0 transition"
                 >
                   <h6
-                    className="text-sm leading-4"
+                    className="text-sm leading-4 mb-1"
                   >
                     Badestelle am Tegler See
                   </h6>
                   <div
-                    className="flex gap-x-2 flex-wrap"
+                    className="flex flex-wrap"
                   >
                     <span
-                      className="text-sm text-gray-500"
+                      className="text-sm text-gray-500 inline-block mr-1"
                     >
                       Badestelle
                     </span>
@@ -559,7 +583,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
             </li>
             <li>
               <button
-                className="flex gap-4 items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                className="flex items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
                 onClick={[Function]}
                 style={
                   Object {
@@ -568,7 +592,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
                 }
               >
                 <span
-                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2"
+                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2 mr-3"
                   style={
                     Object {
                       "backgroundColor": "#DB8DFF",
@@ -579,15 +603,15 @@ exports[`Storyshots Pages/Search Default 1`] = `
                   className="pb-2 border-b border-gray-300 flex-grow border-dashed group-hover:border-opacity-0 group-focus:border-opacity-0 transition"
                 >
                   <h6
-                    className="text-sm leading-4"
+                    className="text-sm leading-4 mb-1"
                   >
                     Wasserspielplatz im Mellenseepark
                   </h6>
                   <div
-                    className="flex gap-x-2 flex-wrap"
+                    className="flex flex-wrap"
                   >
                     <span
-                      className="text-sm text-gray-500"
+                      className="text-sm text-gray-500 inline-block mr-1"
                     >
                       Wasserspielplatz
                     </span>
@@ -604,7 +628,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
             </li>
             <li>
               <button
-                className="flex gap-4 items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                className="flex items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
                 onClick={[Function]}
                 style={
                   Object {
@@ -613,7 +637,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
                 }
               >
                 <span
-                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2"
+                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2 mr-3"
                   style={
                     Object {
                       "backgroundColor": "#83E5E2",
@@ -624,15 +648,15 @@ exports[`Storyshots Pages/Search Default 1`] = `
                   className="pb-2 border-b border-gray-300 flex-grow border-dashed group-hover:border-opacity-0 group-focus:border-opacity-0 transition"
                 >
                   <h6
-                    className="text-sm leading-4"
+                    className="text-sm leading-4 mb-1"
                   >
                     Kaskade am Lietzensee
                   </h6>
                   <div
-                    className="flex gap-x-2 flex-wrap"
+                    className="flex flex-wrap"
                   >
                     <span
-                      className="text-sm text-gray-500"
+                      className="text-sm text-gray-500 inline-block mr-1"
                     >
                       Brunnen
                     </span>
@@ -649,7 +673,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
             </li>
             <li>
               <button
-                className="flex gap-4 items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                className="flex items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
                 onClick={[Function]}
                 style={
                   Object {
@@ -658,7 +682,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
                 }
               >
                 <span
-                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2"
+                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2 mr-3"
                   style={
                     Object {
                       "backgroundColor": "#1D80C3",
@@ -669,15 +693,15 @@ exports[`Storyshots Pages/Search Default 1`] = `
                   className="pb-2 border-b border-gray-300 flex-grow border-dashed group-hover:border-opacity-0 group-focus:border-opacity-0 transition"
                 >
                   <h6
-                    className="text-sm leading-4"
+                    className="text-sm leading-4 mb-1"
                   >
                     Badestelle an der Unterhavel
                   </h6>
                   <div
-                    className="flex gap-x-2 flex-wrap"
+                    className="flex flex-wrap"
                   >
                     <span
-                      className="text-sm text-gray-500"
+                      className="text-sm text-gray-500 inline-block mr-1"
                     >
                       Badestelle
                     </span>

@@ -75,7 +75,6 @@ export const SharingOverlay: FC = () => {
           isOpened && 'focus:ring-white',
           !isOpened && 'focus:ring-gray-800'
         )}
-        style={{ bottom: 176 + 35 }}
       >
         <SharingIcon className="inline transform -translate-x-0.5" />
       </button>

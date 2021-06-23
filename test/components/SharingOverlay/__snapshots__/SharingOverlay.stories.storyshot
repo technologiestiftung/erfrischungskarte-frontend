@@ -8,11 +8,6 @@ exports[`Storyshots UI Elements/SharingOverlay With Google Maps Link 1`] = `
     aria-label="Diesen Kartenabschnitt teilen"
     className="rounded-full bg-white w-12 h-12 fixed right-4 text-center py-2 shadow-lg transition focus:outline-none focus:ring-2 focus:ring-gray-800"
     onClick={[Function]}
-    style={
-      Object {
-        "bottom": 211,
-      }
-    }
   >
     <svg
       className="inline transform -translate-x-0.5"
@@ -42,11 +37,6 @@ exports[`Storyshots UI Elements/SharingOverlay Without Google Maps Link 1`] = `
     aria-label="Diesen Kartenabschnitt teilen"
     className="rounded-full bg-white w-12 h-12 fixed right-4 text-center py-2 shadow-lg transition focus:outline-none focus:ring-2 focus:ring-gray-800"
     onClick={[Function]}
-    style={
-      Object {
-        "bottom": 211,
-      }
-    }
   >
     <svg
       className="inline transform -translate-x-0.5"
