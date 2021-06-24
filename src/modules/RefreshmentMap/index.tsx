@@ -190,13 +190,7 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
       {pathname !== '/' && (
         <>
           <DisclaimerLinks
-            className={
-              pathname === '/map'
-                ? ''
-                : hasMobileSize
-                ? 'hidden'
-                : 'ml-72 left-36'
-            }
+            className={pathname !== '/map' && hasMobileSize ? 'hidden' : ''}
           />
           <Sidebar {...pageProps} />
           <HourSelector
