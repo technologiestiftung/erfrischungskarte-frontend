@@ -6,7 +6,7 @@ export const AppTitle: FC = () => (
   <div
     className={classNames(
       'fixed top-4 sm:top-6 left-0 z-10 px-4',
-      'pointer-events-none w-screen grid',
+      'pointer-events-none w-screen flex',
       'place-items-start place-content-start',
       'sm:place-items-center sm:place-content-center'
     )}

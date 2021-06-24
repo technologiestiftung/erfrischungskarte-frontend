@@ -26,16 +26,16 @@ export const SharingOption: FC<SharingOptionPropType> = ({
 }) => {
   const { copyToClipboard, hasCopied } = useCopyToClipboard()
   return (
-    <div className="grid gap-4 grid-cols-2">
-      <div>
+    <div className="flex mb-4 last-of-type:mb-0">
+      <div className="pr-4">
         <h4 className="font-bold text-sm mb-1">{title}</h4>
         <p className="text-sm text-gray-400 italic">{description}</p>
       </div>
-      <div className="grid place-content-center">
+      <div className="grid justify-end items-center">
         <button
           className={classNames(
             'rounded-lg border-2 px-2 py-1 sm:text-xl transition',
-            'border-layer-turquoise-300 focus:outline-none',
+            'border-layer-turquoise-300 focus:outline-none whitespace-nowrap',
             !hasCopied && [
               'text-layer-turquoise-300',
               'hover:text-layer-turquoise-400 hover:border-layer-turquoise-400',
@@ -75,7 +75,6 @@ export const SharingOverlay: FC = () => {
           isOpened && 'focus:ring-white',
           !isOpened && 'focus:ring-gray-800'
         )}
-        style={{ bottom: 176 + 35 }}
       >
         <SharingIcon className="inline transform -translate-x-0.5" />
       </button>
@@ -84,11 +83,11 @@ export const SharingOverlay: FC = () => {
           className={classNames(
             'right-4 bottom-20 sm:bottom-4 sm:right-20',
             'rounded shadow-xl p-6 sm:p-8 w-96',
-            'fixed bg-white grid grid-flow-row gap-4'
+            'fixed bg-white flex flex-col'
           )}
           style={{ maxWidth: 'calc(100% - 32px)' }}
         >
-          <h3 className="font-bold text-xl sm:text-2xl pr-20">
+          <h3 className="font-bold text-xl sm:text-2xl pr-20 mb-4">
             Erfrischenden Ort gefunden?{' '}
             <span className="text-layer-turquoise-300">Teile ihn!</span>
           </h3>
