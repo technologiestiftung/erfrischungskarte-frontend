@@ -2,7 +2,7 @@ import { mapRawQueryToState } from '@lib/utils/queryUtil'
 import { RefreshmentMap } from '@modules/RefreshmentMap'
 import { ParsedUrlQuery } from 'querystring'
 import { StrictMode, FC, useEffect } from 'react'
-import Head from 'next/head'
+import { Head } from '@components/Head'
 import '../src/style/global.css'
 import '../src/components/MapControls/mapControls.css'
 import '../src/components/MapPoiTooltip/MapPoiTooltip.css'
@@ -31,18 +31,11 @@ const App: FC<{
     if (MATOMO_URL && MATOMO_SITE_ID)
       init({ url: MATOMO_URL, siteId: MATOMO_SITE_ID })
   }, [])
+
   return (
     <StrictMode>
       <RefreshmentMap {...pageProps} query={parsedQuery}>
-        <Head>
-          <title>{`${
-            pageProps.title ? `${pageProps.title} - ` : ' '
-          }Erfrischungskarte Berlin`}</title>
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-          />
-        </Head>
+        <Head pageTitle={pageProps.title || ''} />
         <Component {...pageProps} query={parsedQuery} />
       </RefreshmentMap>
     </StrictMode>

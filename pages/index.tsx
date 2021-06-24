@@ -4,7 +4,7 @@ import { FC } from 'react'
 // eslint-disable-next-line @typescript-eslint/require-await
 export const getServerSideProps: GetServerSideProps = async ({ query }) => ({
   props: {
-    title: 'Karte',
+    title: 'Willkommen',
     query,
   },
 })
