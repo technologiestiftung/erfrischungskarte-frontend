@@ -16,12 +16,23 @@ describe('FilterChip', () => {
     render(<FilterChip ariaLabel="aria label content">I am visible</FilterChip>)
 
     const button = screen.getByRole('button')
-    expect(button.getAttribute('class')?.includes('border-gray-400')).toBe(true)
+    expect(button.getAttribute('class')?.includes('opacity-100')).toBe(true)
   })
 
   it('has deselected styles if deselected', () => {
     render(
       <FilterChip ariaLabel="aria label content" isSelected={false}>
+        I am visible
+      </FilterChip>
+    )
+
+    const button = screen.getByRole('button')
+    expect(button.getAttribute('class')?.includes('opacity-50')).toBe(true)
+  })
+
+  it('has disbled styles if disabled', () => {
+    render(
+      <FilterChip ariaLabel="aria label content" isDisabled={true}>
         I am visible
       </FilterChip>
     )

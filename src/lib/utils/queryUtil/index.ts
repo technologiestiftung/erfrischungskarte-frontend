@@ -25,15 +25,17 @@ const parseSingleNumber = (
 }
 
 const parseNumbersArray = (
-  val: string | string[] | undefined
+  val: string | string[] | false | undefined
 ): number[] | null => {
-  if (!val) return null
+  if (typeof val === 'undefined') return null
   if (Array.isArray(val)) {
     return val.map(parseSingleNumber).filter(Boolean) as number[]
   }
+  if (val === 'false') return []
   if (typeof val !== 'string') return null
   try {
     const parsedJson = JSON.parse(val) as unknown
+    if (isNumber(parsedJson)) [parsedJson] as number[]
     if (!Array.isArray(parsedJson)) return null
     return parsedJson.map(parseSingleNumber).filter(Boolean) as number[]
   } catch (err) {

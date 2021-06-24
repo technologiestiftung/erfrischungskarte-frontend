@@ -40,8 +40,7 @@ export const MapPointLayer: FC<MapPointLayerType> = ({
   const flattenedCircleRadiusMap = Array.from(CircleRadiusMap).flat(2)
   const flattenedCircleStrokeWidthMap = Array.from(CircleStrokeWidthMap).flat(2)
 
-  const filterDataIsProvided =
-    !!activePropertyKeys && activePropertyKeys.length > 0
+  const filterDataIsProvided = !!activePropertyKeys
 
   const filteringExpression = [
     'in',

@@ -6,6 +6,7 @@ export interface FilterChipType extends HTMLAttributes<HTMLButtonElement> {
   isSelected?: boolean
   otherClassNames?: string
   handleClick?: () => void
+  isDisabled?: boolean
 }
 
 export const FilterChip: FC<FilterChipType> = ({
@@ -13,6 +14,7 @@ export const FilterChip: FC<FilterChipType> = ({
   isSelected = true,
   otherClassNames,
   handleClick = console.log,
+  isDisabled,
   children,
   ...otherButtonProps
 }) => {
@@ -24,12 +26,15 @@ export const FilterChip: FC<FilterChipType> = ({
         'focus:rounded focus:ring-2 focus:ring-gray-800 focus:outline-none',
         'focus:ring-offset-2 focus:ring-offset-white',
         otherClassNames,
-        isSelected
-          ? 'border-gray-400 text-gray-900'
-          : 'border-gray-200 text-gray-500'
+        isSelected ? 'border-gray-40' : 'border-gray-200',
+        'transition-opacity duration-75 ease-in-out',
+        isSelected ? 'opacity-100' : 'opacity-50',
+        'disabled:opacity-100 disabled:cursor-not-allowed',
+        isDisabled ? 'border-gray-200' : null
       )}
       aria-label={ariaLabel}
       onClick={handleClick}
+      disabled={isDisabled}
       {...otherButtonProps}
     >
       {children}
