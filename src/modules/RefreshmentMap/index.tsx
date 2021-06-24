@@ -29,6 +29,7 @@ import { AppTitle } from '@components/AppTitle'
 import { useHasWebPSupport } from '@lib/hooks/useHasWebPSupport'
 import { SharingOverlay } from '@components/SharingOverlay'
 import { useCurrentTime } from '@lib/hooks/useCurrentTime'
+import { DisclaimerLinks } from '@components/DisclaimerLinks'
 
 interface RefreshmentMapPropType {
   title?: string
@@ -188,6 +189,15 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
       </MapRoot>
       {pathname !== '/' && (
         <>
+          <DisclaimerLinks
+            className={
+              pathname === '/map'
+                ? ''
+                : hasMobileSize
+                ? 'hidden'
+                : 'ml-72 left-36'
+            }
+          />
           <Sidebar {...pageProps} />
           <HourSelector
             activeHourKey={activeHourKey}
