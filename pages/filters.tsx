@@ -107,6 +107,7 @@ export const Filters: FC<{
                 )
               }
               layerIsActive={mappedQuery.showShadows !== false}
+              layerIsDisabled={!hasWebPSupport}
               handleToggle={() => {
                 void routerReplace(
                   {

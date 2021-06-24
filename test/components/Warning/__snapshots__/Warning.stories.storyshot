@@ -2,7 +2,7 @@
 
 exports[`Storyshots UI Elements/Warning With Long Text Content 1`] = `
 <div
-  className="flex max-w-prose p-3 border border-[#ff7300] border-opacity-40 rounded"
+  className="flex max-w-prose p-3"
 >
   <div
     className="flex-grow-0 text-[#ff7300]"
@@ -23,7 +23,7 @@ exports[`Storyshots UI Elements/Warning With Long Text Content 1`] = `
     </svg>
   </div>
   <div
-    className="ml-2"
+    className="ml-2 text-left"
   >
     <p>
       A lot went wrong here. That's why there is a a long warning message. Very, very long message. A lot went wrong here. That's why there is a a long warning message. Very, very long message. A lot went wrong here. That's why there is a a long warning message. Very, very long message. A lot went wrong here. That's why there is a a long warning message. Very, very long message.
@@ -34,7 +34,7 @@ exports[`Storyshots UI Elements/Warning With Long Text Content 1`] = `
 
 exports[`Storyshots UI Elements/Warning With Short Text Content 1`] = `
 <div
-  className="flex max-w-prose p-3 border border-[#ff7300] border-opacity-40 rounded"
+  className="flex max-w-prose p-3"
 >
   <div
     className="flex-grow-0 text-[#ff7300]"
@@ -55,7 +55,7 @@ exports[`Storyshots UI Elements/Warning With Short Text Content 1`] = `
     </svg>
   </div>
   <div
-    className="ml-2"
+    className="ml-2 text-left"
   >
     <p>
       I am a short warning text.
