@@ -5,7 +5,10 @@ import colors from '../../style/colors'
 import { useRouter } from 'next/router'
 import { mapRawQueryToState } from '@lib/utils/queryUtil'
 
-const siteUrl = process.env.URL || 'http://localhost:3000'
+const siteUrl =
+  process.env.URL ||
+  (process.env.VERCEL_ENV === 'preview' && process.env.VERCEL_URL) ||
+  'http://localhost:3000'
 
 const faviconPath = '/favicon.ico'
 const faviconPathPNG16 = '/favicons/favicon-16x16.png'
