@@ -34,7 +34,7 @@ exports[`Storyshots Pages/FiveHundred Default 1`] = `
         }
       >
         <div
-          className="flex flex-col items-center justify-center relative gap-2 sm:gap-4"
+          className="flex flex-col items-center justify-center relative"
           style={
             Object {
               "height": "calc(var(--screenHeight) - (var(--sidebarPadding, 24px) * 2) - 32px)",
@@ -42,7 +42,7 @@ exports[`Storyshots Pages/FiveHundred Default 1`] = `
           }
         >
           <h1
-            className="text-5xl sm:text-7xl"
+            className="text-5xl sm:text-7xl mb-2 sm:mb-4"
           >
             500
           </h1>
