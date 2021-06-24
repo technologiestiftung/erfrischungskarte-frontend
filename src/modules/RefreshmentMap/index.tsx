@@ -157,7 +157,12 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
             />
           ))}
         <ExtrusionLayer {...EXTRUDED_BUILDINGS_DATA} />
-        <MapPointLayer {...POI_DATA} />
+        <MapPointLayer
+          {...POI_DATA}
+          activePropertyKeys={mappedQuery.places
+            ?.map((idx) => POI_DATA.activePropertyKeys[idx])
+            .filter(Boolean)}
+        />
         {poiTooltipCoordinates &&
           poiTooltipContent &&
           poiTooltipContentIsNotEmpty && (
