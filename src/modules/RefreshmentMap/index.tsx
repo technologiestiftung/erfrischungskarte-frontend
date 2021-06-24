@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react'
+import React, { FC, useState } from 'react'
 import { Map as MapRoot } from '@components/Map'
 import { Sidebar } from '@components/Sidebar'
 import { MapFilledPolygonLayer as FilledPolygonLayer } from '@components/MapFilledPolygonLayer'
@@ -55,17 +55,13 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
   const currentTime = useCurrentTime()
   const { width: windowWidth, height: windowHeight } = useWindowSize()
 
-  const { pathname, query, replace: routerReplace } = useRouter()
+  const { pathname, query } = useRouter()
   const mappedQuery = mapRawQueryToState(query)
 
-  const [activeHourKey, setActiveHourKey] = useState<HourType>(
-    `${mappedQuery.visibleHour || currentTime}`
-  )
+  const activeHourKey = `${
+    mappedQuery.visibleHour || currentTime
+  }` as keyof typeof HOURS
   const activeHour = HOURS[activeHourKey]
-
-  useEffect(() => {
-    setActiveHourKey(`${mappedQuery.visibleHour || currentTime}`)
-  }, [mappedQuery.visibleHour, currentTime])
 
   const hourKeys = Object.keys(HOURS) as HourType[]
   const [poiTooltipContent, setPoiTooltipContent] = useState<Pick<
@@ -137,42 +133,37 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
             <SharingOverlay />
           </>
         )}
-        <FilledPolygonLayer
-          {...WIND_DATA}
-          fillColorProperty={activeHour.vectorTilesetKey}
-        />
-        <FilledPolygonLayer
-          {...TEMPERATURE_DATA}
-          fillColorProperty={activeHour.vectorTilesetKey}
-        />
+        {mappedQuery.showWind !== false && (
+          <FilledPolygonLayer
+            {...WIND_DATA}
+            fillColorProperty={activeHour.vectorTilesetKey}
+          />
+        )}
+        {mappedQuery.showTemperature !== false && (
+          <FilledPolygonLayer
+            {...TEMPERATURE_DATA}
+            fillColorProperty={activeHour.vectorTilesetKey}
+          />
+        )}
         {hasWebPSupport &&
-          hourKeys.map((key) => {
-            const item = HOURS[key]
-            if (key !== activeHourKey) {
-              return (
-                <RasterLayer
-                  key={`shade-${key}`}
-                  id={`shade-${key}`}
-                  url={item.shadeTilesetId}
-                  bounds={[13.06, 52.33, 13.77, 52.69]}
-                  minZoom={14}
-                  opacity={0}
-                />
-              )
-            }
-            return (
-              <RasterLayer
-                key={`shade-${key}`}
-                id={`shade-${key}`}
-                url={item.shadeTilesetId}
-                bounds={[13.06, 52.33, 13.77, 52.69]}
-                minZoom={14}
-                opacity={0.5}
-              />
-            )
-          })}
+          mappedQuery.showShadows !== false &&
+          hourKeys.map((key) => (
+            <RasterLayer
+              key={`shade-${key}`}
+              id={`shade-${key}`}
+              url={HOURS[key].shadeTilesetId}
+              bounds={[13.06, 52.33, 13.77, 52.69]}
+              minZoom={14}
+              opacity={key !== activeHourKey ? 0 : 0.5}
+            />
+          ))}
         <ExtrusionLayer {...EXTRUDED_BUILDINGS_DATA} />
-        <MapPointLayer {...POI_DATA} />
+        <MapPointLayer
+          {...POI_DATA}
+          activePropertyKeys={mappedQuery.places
+            ?.map((idx) => POI_DATA.activePropertyKeys[idx])
+            .filter(Boolean)}
+        />
         {poiTooltipCoordinates &&
           poiTooltipContent &&
           poiTooltipContentIsNotEmpty && (
@@ -199,17 +190,7 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
             }
           />
           <Sidebar {...pageProps} />
-          <HourSelector
-            activeHourKey={activeHourKey}
-            onChange={(hour) => {
-              void routerReplace(
-                {
-                  query: { ...mappedQuery, visibleHour: hour },
-                },
-                undefined
-              )
-            }}
-          />
+          <HourSelector activeHourKey={activeHourKey} />
         </>
       )}
     </>
