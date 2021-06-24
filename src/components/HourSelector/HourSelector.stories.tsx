@@ -1,6 +1,4 @@
-import { HOURS } from '@modules/RefreshmentMap/content'
 import { Story, Meta } from '@storybook/react'
-import { useState } from 'react'
 import { withNextRouter } from 'storybook-addon-next-router'
 
 import { HourSelector } from '.'
@@ -12,10 +10,9 @@ export default {
 } as Meta
 
 const Template: Story = () => {
-  const [activeHourKey, setActiveHourKey] = useState<keyof typeof HOURS>('10')
   return (
     <div className="bg-gray-300 h-full fixed inset-0">
-      <HourSelector onChange={setActiveHourKey} activeHourKey={activeHourKey} />
+      <HourSelector activeHourKey="16" />
     </div>
   )
 }

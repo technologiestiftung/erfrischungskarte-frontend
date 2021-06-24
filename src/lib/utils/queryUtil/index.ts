@@ -27,7 +27,11 @@ const parseSingleNumber = (
 const parseNumbersArray = (
   val: string | string[] | undefined
 ): number[] | null => {
-  if (!val || typeof val !== 'string') return null
+  if (!val) return null
+  if (Array.isArray(val)) {
+    return val.map(parseSingleNumber).filter(Boolean) as number[]
+  }
+  if (typeof val !== 'string') return null
   try {
     const parsedJson = JSON.parse(val) as unknown
     if (!Array.isArray(parsedJson)) return null

@@ -82,6 +82,13 @@ describe('mapRawQueryToState', () => {
       }).places
     ).toMatchObject([1])
   })
+  test('should work with places as an array', () => {
+    expect(
+      mapRawQueryToState({
+        places: ['1', '2', '3'],
+      }).places
+    ).toMatchObject([1, 2, 3])
+  })
   test('should convert booleans to true, false or undefined', () => {
     expect(
       mapRawQueryToState({
@@ -114,11 +121,11 @@ describe('mapRawQueryToState', () => {
       )
     })
   })
-  test('should filter out places that are not valid', () => {
+  test('should only accept string search terms', () => {
     expect(
       mapRawQueryToState({
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignoressss
+        // @ts-ignore
         searchTerm: 123,
       }).searchTerm
     ).toBe(undefined)
