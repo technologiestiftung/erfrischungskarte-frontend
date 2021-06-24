@@ -1,7 +1,9 @@
 import { FC } from 'react'
+import querystring from 'querystring'
 import NextHead from 'next/head'
 import colors from '../../style/colors'
 import { useRouter } from 'next/router'
+import { mapRawQueryToState } from '@lib/utils/queryUtil'
 
 const siteUrl = process.env.URL || 'http://localhost:3000'
 
@@ -46,11 +48,12 @@ export const Head: FC<Partial<HeadPropType>> = ({
   twitterUsername = 'TSBBerlin',
   socialThumbnail = '',
 }) => {
-  const { pathname } = useRouter()
+  const { pathname, query } = useRouter()
+  const mappedQuery = mapRawQueryToState(query)
   const longTitle = [pageTitle, siteTitle].join(' ❄️ ')
   const formatedSocialImage = `${
     typeof window !== 'undefined' ? window.location.origin : siteUrl || ''
-  }/api/social-image?text=${encodeURI(`${pageTitle} - ${siteTitle}`)}`
+  }/api/social-image?${querystring.stringify(mappedQuery)}`
 
   return (
     <NextHead>
