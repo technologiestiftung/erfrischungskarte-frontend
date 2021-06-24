@@ -51,4 +51,4 @@ vim .env # Use your favourite editor here
 ```
 
 ## Deployment
-_Berliner Erfrischungskarte_ is deplyed to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+_Berliner Erfrischungskarte_ is deployed to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
