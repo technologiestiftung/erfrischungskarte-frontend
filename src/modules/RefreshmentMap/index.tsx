@@ -132,14 +132,18 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
             <SharingOverlay />
           </>
         )}
-        <FilledPolygonLayer
-          {...WIND_DATA}
-          fillColorProperty={activeHour.vectorTilesetKey}
-        />
-        <FilledPolygonLayer
-          {...TEMPERATURE_DATA}
-          fillColorProperty={activeHour.vectorTilesetKey}
-        />
+        {mappedQuery.showWind !== false && (
+          <FilledPolygonLayer
+            {...WIND_DATA}
+            fillColorProperty={activeHour.vectorTilesetKey}
+          />
+        )}
+        {mappedQuery.showTemperature !== false && (
+          <FilledPolygonLayer
+            {...TEMPERATURE_DATA}
+            fillColorProperty={activeHour.vectorTilesetKey}
+          />
+        )}
         {hasWebPSupport &&
           mappedQuery.showShadows !== false &&
           hourKeys.map((key) => (
