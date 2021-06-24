@@ -60,7 +60,7 @@ exports[`Storyshots UI Elements/HourSelector Default 1`] = `
           <span
             className="text-4xl leading-8"
           >
-            10
+            16
           </span>
           <span
             className="text-sm"
@@ -80,7 +80,7 @@ exports[`Storyshots UI Elements/HourSelector Default 1`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <g
-            aria-label="active-hour-10"
+            aria-label="select-hour-10"
             className=""
             onClick={[Function]}
             role="button"
@@ -254,7 +254,7 @@ exports[`Storyshots UI Elements/HourSelector Default 1`] = `
             </text>
           </g>
           <g
-            aria-label="select-hour-16"
+            aria-label="active-hour-16"
             className=""
             onClick={[Function]}
             role="button"
