@@ -12,6 +12,7 @@ import {
   WIND_DATA,
   POI_DATA,
   HourType,
+  POI_CATEGORY_ID_MAP,
 } from './content'
 import { MapRasterLayer as RasterLayer } from '../../components/MapRasterLayer'
 import { MapExtrusionLayer as ExtrusionLayer } from '../../components/MapExtrusionLayer'
@@ -102,6 +103,15 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
     poiTooltipContent.title !== '' &&
     poiTooltipContent.category !== ''
 
+  const activeCategories = mappedQuery.places
+    ?.map(
+      (poiId) =>
+        Object.entries(POI_CATEGORY_ID_MAP).find(
+          ([, id]) => id === poiId
+        )?.[0] || ''
+    )
+    .filter(Boolean)
+
   return (
     <>
       {pathname === '/map' && <AppTitle />}
@@ -158,12 +168,7 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
             />
           ))}
         <ExtrusionLayer {...EXTRUDED_BUILDINGS_DATA} />
-        <MapPointLayer
-          {...POI_DATA}
-          activePropertyKeys={mappedQuery.places
-            ?.map((idx) => POI_DATA.activePropertyKeys[idx])
-            .filter(Boolean)}
-        />
+        <MapPointLayer {...POI_DATA} activePropertyKeys={activeCategories} />
         {poiTooltipCoordinates &&
           poiTooltipContent &&
           poiTooltipContentIsNotEmpty && (
