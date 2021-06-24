@@ -14,6 +14,7 @@ import { useHasWebPSupport } from '@lib/hooks/useHasWebPSupport'
 import classNames from 'classnames'
 import { LayerLegendBlock } from '@components/LayerLegendBlock'
 import { Warning } from '@components/Warning'
+import { useRouter } from 'next/router'
 
 // eslint-disable-next-line @typescript-eslint/require-await
 export const getServerSideProps: GetServerSideProps = async ({ query }) => ({
@@ -30,6 +31,8 @@ export const Filters: FC<{
 }> = () => {
   const hasMobileSize = useHasMobileSize()
   const hasWebPSupport = useHasWebPSupport()
+  const { query, replace: routerReplace } = useRouter()
+  const mappedQuery = mapRawQueryToState(query)
 
   const {
     shade: shadeLegendContent,
@@ -103,7 +106,22 @@ export const Filters: FC<{
                   <Warning>{SHADE_SUPPORT_NOTE}</Warning>
                 )
               }
-              handleToggle={() => console.log('clicked')}
+              layerIsActive={mappedQuery.showShadows !== false}
+              handleToggle={() => {
+                void routerReplace(
+                  {
+                    query: {
+                      ...mappedQuery,
+                      showShadows: Object.keys(mappedQuery).includes(
+                        'showShadows'
+                      )
+                        ? !mappedQuery.showShadows
+                        : false,
+                    },
+                  },
+                  undefined
+                )
+              }}
             />
           </div>
         )}
@@ -114,7 +132,22 @@ export const Filters: FC<{
               description={temperatureLegendContent.description}
               icon={temperatureLegendContent.icon}
               legendFigure={temperatureLegendContent.legendFigure}
-              handleToggle={() => console.log('clicked')}
+              layerIsActive={mappedQuery.showTemperature !== false}
+              handleToggle={() => {
+                void routerReplace(
+                  {
+                    query: {
+                      ...mappedQuery,
+                      showTemperature: Object.keys(mappedQuery).includes(
+                        'showTemperature'
+                      )
+                        ? !mappedQuery.showTemperature
+                        : false,
+                    },
+                  },
+                  undefined
+                )
+              }}
             />
           </div>
         )}
@@ -125,7 +158,20 @@ export const Filters: FC<{
               description={windLegendContent.description}
               icon={windLegendContent.icon}
               legendFigure={windLegendContent.legendFigure}
-              handleToggle={() => console.log('clicked')}
+              layerIsActive={mappedQuery.showWind !== false}
+              handleToggle={() => {
+                void routerReplace(
+                  {
+                    query: {
+                      ...mappedQuery,
+                      showWind: Object.keys(mappedQuery).includes('showWind')
+                        ? !mappedQuery.showWind
+                        : false,
+                    },
+                  },
+                  undefined
+                )
+              }}
             />
           </div>
         )}
