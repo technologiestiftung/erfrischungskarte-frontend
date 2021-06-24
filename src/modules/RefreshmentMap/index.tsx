@@ -104,7 +104,7 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
 
   return (
     <>
-      {pathname === '/map' && <AppTitle />}
+      {(pathname === '/map' || pathname === '/social-image') && <AppTitle />}
       {pathname === '/' && <SplashScreen />}
       <MapRoot
         mapStyle="mapbox://styles/mapbox/light-v10"
@@ -123,7 +123,7 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
         handleMouseLeave={handleMouseLeave}
         handleHover={handleHover}
       >
-        {pathname !== '/' && (
+        {pathname !== '/' && pathname !== '/social-image' && (
           <>
             <MapControls
               className={`absolute right-4 ${
@@ -178,7 +178,7 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
             />
           )}
       </MapRoot>
-      {pathname !== '/' && (
+      {pathname !== '/' && pathname !== '/social-image' && (
         <>
           <DisclaimerLinks
             className={pathname !== '/map' && hasMobileSize ? 'hidden' : ''}

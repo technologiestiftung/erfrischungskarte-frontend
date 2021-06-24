@@ -25,7 +25,10 @@
   },
   "dependencies": {
     "@openpolitica/matomo-next": "1.2.1",
+    "chrome-aws-lambda": "10.0.0",
     "classnames": "2.3.1",
+    "puppeteer": "10.0.0",
+    "puppeteer-core": "10.0.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-map-gl": "6.1.16",
@@ -44,6 +47,7 @@
     "@testing-library/user-event": "13.1.9",
     "@types/jest": "26.0.23",
     "@types/node": "14.17.3",
+    "@types/puppeteer": "5.4.3",
     "@types/react": "17.0.11",
     "@types/react-dom": "17.0.8",
     "@types/react-map-gl": "5.2.9",

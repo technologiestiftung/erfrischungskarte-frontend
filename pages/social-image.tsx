@@ -9,6 +9,6 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => ({
   },
 })
 
-export const Home: FC = () => null
+export const SocialImage: FC = () => null
 
-export default Home
+export default SocialImage
