@@ -26,7 +26,9 @@ export const FilterChip: FC<FilterChipType> = ({
         otherClassNames,
         isSelected
           ? 'border-gray-400 text-gray-900'
-          : 'border-gray-200 text-gray-500'
+          : 'border-gray-200 text-gray-500',
+        'transition-opacity duration-75 ease-in-out',
+        isSelected ? 'opacity-100' : 'opacity-50'
       )}
       aria-label={ariaLabel}
       onClick={handleClick}
