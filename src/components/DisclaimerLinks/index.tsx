@@ -10,8 +10,8 @@ export const DisclaimerLinks: FC<{ className?: string }> = ({ className }) => {
       className={classNames(
         'absolute z-50',
         hasMobileSize
-          ? 'transform -rotate-90 -left-20 bottom-48 pt-3'
-          : 'bottom-2 left-28',
+          ? 'transform -rotate-90 -left-20 bottom-44 pt-1'
+          : 'w-full flex justify-center bottom-2',
         className
       )}
     >
