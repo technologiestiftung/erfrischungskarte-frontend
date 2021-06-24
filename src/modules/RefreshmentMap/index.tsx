@@ -137,12 +137,17 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
           <FilledPolygonLayer
             {...WIND_DATA}
             fillColorProperty={activeHour.vectorTilesetKey}
+            beforeId={
+              (mappedQuery.showTemperature !== false && TEMPERATURE_DATA.id) ||
+              undefined
+            }
           />
         )}
         {mappedQuery.showTemperature !== false && (
           <FilledPolygonLayer
             {...TEMPERATURE_DATA}
             fillColorProperty={activeHour.vectorTilesetKey}
+            beforeId={'shade-10'}
           />
         )}
         {hasWebPSupport &&
@@ -155,9 +160,10 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
               bounds={[13.06, 52.33, 13.77, 52.69]}
               minZoom={14}
               opacity={key !== activeHourKey ? 0 : 0.5}
+              beforeId={EXTRUDED_BUILDINGS_DATA.id}
             />
           ))}
-        <ExtrusionLayer {...EXTRUDED_BUILDINGS_DATA} />
+        <ExtrusionLayer {...EXTRUDED_BUILDINGS_DATA} beforeId={POI_DATA.id} />
         <MapPointLayer
           {...POI_DATA}
           activePropertyKeys={mappedQuery.places

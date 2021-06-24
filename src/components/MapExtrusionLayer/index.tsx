@@ -8,6 +8,7 @@ export interface MapExtrusionLayerType
   extends Required<RequiredLayerTypes>,
     Required<RequiredSourceTypes> {
   sourceLayer: string
+  beforeId?: string
   extrusionProperties: {
     base: string
     height: string
@@ -17,6 +18,7 @@ export interface MapExtrusionLayerType
 
 export const MapExtrusionLayer: FC<MapExtrusionLayerType> = ({
   id,
+  beforeId,
   url,
   source,
   sourceLayer,
@@ -28,6 +30,8 @@ export const MapExtrusionLayer: FC<MapExtrusionLayerType> = ({
     <>
       <Source id={id} type="vector" url={url} />
       <Layer
+        id={id}
+        beforeId={beforeId}
         type="fill-extrusion"
         source={source}
         source-layer={sourceLayer}

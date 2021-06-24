@@ -2,6 +2,7 @@ import { FC } from 'react'
 import { Source, Layer, LayerProps } from 'react-map-gl'
 export interface MapFilledPolygonLayerType {
   id: string
+  beforeId?: string
   tileset: {
     url: string
     layerName: string
@@ -12,6 +13,7 @@ export interface MapFilledPolygonLayerType {
 
 export const MapFilledPolygonLayer: FC<MapFilledPolygonLayerType> = ({
   id,
+  beforeId,
   tileset,
   fillColorMap,
   fillColorProperty,
@@ -19,7 +21,8 @@ export const MapFilledPolygonLayer: FC<MapFilledPolygonLayerType> = ({
   const flattenedFillColorMap = Array.from(fillColorMap).flat(2)
 
   const layerStyle: LayerProps = {
-    id: id,
+    id,
+    beforeId,
     type: 'fill',
     'source-layer': tileset.layerName,
     paint: {
@@ -36,7 +39,7 @@ export const MapFilledPolygonLayer: FC<MapFilledPolygonLayerType> = ({
 
   return (
     <Source id={id} type="vector" url={tileset.url}>
-      <Layer {...layerStyle} />
+      <Layer {...layerStyle} id={id} />
     </Source>
   )
 }

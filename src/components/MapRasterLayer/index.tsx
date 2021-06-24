@@ -2,6 +2,7 @@ import { FC } from 'react'
 import { Source, Layer, LayerProps, SourceProps } from 'react-map-gl'
 export interface MapRasterLayerType {
   id: string
+  beforeId?: string
   url: SourceProps['url']
   bounds?: SourceProps['bounds']
   minZoom?: SourceProps['minzoom']
@@ -11,13 +12,15 @@ export interface MapRasterLayerType {
 
 export const MapRasterLayer: FC<MapRasterLayerType> = ({
   id,
+  beforeId,
   url,
   bounds,
   minZoom,
   opacity,
 }) => {
   const layerStyle: LayerProps = {
-    id: id,
+    id,
+    beforeId,
     type: 'raster',
     paint: {
       'raster-opacity': opacity,
@@ -26,7 +29,7 @@ export const MapRasterLayer: FC<MapRasterLayerType> = ({
 
   return (
     <Source id={id} type="raster" url={url} bounds={bounds} minzoom={minZoom}>
-      <Layer {...layerStyle} />
+      <Layer {...layerStyle} id={id} />
     </Source>
   )
 }
