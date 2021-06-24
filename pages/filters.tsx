@@ -175,6 +175,23 @@ export const Filters: FC<{
             />
           </div>
         )}
+        {mappedQuery.showWind && mappedQuery.showTemperature && (
+          <p
+            className={classNames(
+              'text-xs',
+              'mt-4',
+              hasMobileSize ? 'ml-10' : null
+            )}
+          >
+            <strong className="italic text-layer-turquoise-300">
+              Aufgepasst:
+            </strong>
+            {` `}
+            {`Gleichzeitig kühle und windige Flächen werden ${
+              !hasMobileSize ? 'durch die Überlagerung von Blau und Grün' : ''
+            } Türkis dargestellt.`}
+          </p>
+        )}
       </section>
     </div>
   )
