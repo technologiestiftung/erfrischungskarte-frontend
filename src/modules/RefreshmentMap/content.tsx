@@ -324,22 +324,64 @@ export const ABOUT_COOL_WINDY_TEXT = (
 
 export const ABOUT_POINTS_TEXT = (
   <>
-    Die Daten der Erfrischungsorte stammen aus einer Vielzahl verschiedener
-    Quellen für offene Daten. Die Daten zu Grünanlagen und Brunnen werden über
-    den FIS-Broker, dem Berliner Geodatenportal
-    (https://www.stadtentwicklung.berlin.de/geoinformation/fis-broker/)
-    heruntergeladen. Die Badestelle und Strandbäder stammen vom LaGeSo und
-    können aus dem Berliner Datenportal heruntergeladen werden, der zentralen
-    Plattform für offene Daten (https://www.govdata.de/). Bänke, Picknicktische
-    und Trinkbrunnen wurden aus Open Street Map exportiert, einer frei
-    zugänglichen Sammlung von Geodaten (https://www.openstreetmap.org/). Die
-    Daten zu Freibädern und Schwimmhallen liegen nicht als maschinenlesbarer
-    Datensatz vor. Sie wurden direkt von der Berlin.de-Website
-    (https://www.berlin.de/special/sport-und-fitness/schwimmen/schwimmbad/a-z/)
-    gescrapt.
-    <ul className="bullet-list">
-      <li> Test</li>
-    </ul>
+    Die Erfrischungsorte stammen aus verschiedenen Quellen: Die Koordinaten der{' '}
+    <a
+      target="blank"
+      href="https://daten.berlin.de/datensaetze/grünanlagenbestand-berlin-einschl-der-öffentlichen-spielplätze-grünanlagen-wfs"
+      className="text-gray-800 underline"
+    >
+      Grünanlagen
+    </a>{' '}
+    wurden aus einem Datensatz zum öffentlichen Grünanlagenbestand erstellt.
+    Dieser wird durch die bezirklichen Straßen- und Grünflächenämter gepflegt
+    und im Berliner Geodatenportal zur Verfügung gestellt. Die Standorte der{' '}
+    <a
+      target="blank"
+      href="https://daten.berlin.de/datensaetze/atkis-sonstiges-bauwerk-oder-sonstige-einrichtung-punkte-wfs"
+      className="text-gray-800 underline"
+    >
+      Zierbrunnen
+    </a>{' '}
+    finden sich ebenfalls im Geodatenportal, und sind Bestandteil des
+    umfangreichen ATKIS-Datensatzes, der regelmäßig durch die bezirklichen
+    Vermessungsämter aktualisiert wird. Die Standorte der{' '}
+    <a
+      target="blank"
+      href="https://daten.berlin.de/datensaetze/liste-der-badestellen"
+      className="text-gray-800 underline"
+    >
+      Badestellen und Strandbäder
+    </a>{' '}
+    stammen vom Landesamt für Gesundheit und Soziales (LaGeSo). Die
+    Informationen zu{' '}
+    <a
+      target="blank"
+      href="https://www.berlin.de/special/sport-und-fitness/schwimmen/schwimmbad/a-z/"
+      className="text-gray-800 underline"
+    >
+      Freibädern und Schwimmhallen
+    </a>{' '}
+    stehen derzeit nur als Liste über Berlin.de bereit. Sie wurden mittels
+    Webscraping in einen Geodatensatz überführt.
+    <a
+      target="blank"
+      href="https://overpass-turbo.eu/"
+      className="text-gray-800 underline"
+    >
+      Bänke, Picknicktische und Trinkbrunnen
+    </a>{' '}
+    wurden aus Open Street Map exportiert, einer frei zugänglichen Sammlung von
+    Geodaten.
+    <br></br>
+    Den kompletten, für diese Anwendung aufbereiteten Datensatz findet ihr{' '}
+    <a
+      target="blank"
+      href="https://github.com/technologiestiftung/erfrischungskarte-daten/blob/main/POI's/erfrischungskarte_poi.geojson"
+      className="text-gray-800 underline"
+    >
+      hier
+    </a>
+    .
   </>
 )
 
@@ -354,12 +396,11 @@ export const ABOUT_ACCORDION_ITEMS = [
     title: 'Kühle und kaltluftproduzierende Bereiche',
     content: ABOUT_COOL_WINDY_TEXT,
   },
-  // Coming soom
-  // {
-  //   id: 'places',
-  //   title: 'Orte',
-  //   content: 'this part is coming soon...',
-  // },
+  {
+    id: 'places',
+    title: 'Orte',
+    content: ABOUT_POINTS_TEXT,
+  },
 ]
 
 export const SEARCH_SUGGESTIONS: SearchSuggestionItemType[] = [
