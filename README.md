@@ -1,5 +1,5 @@
 # _Berliner Erfrischungskarte_
-> The _Berliner Erfrischungskarte_ (Berlin refreshment map) is an interactive map of Berlin that shows shadows, wind areas and temperature intensities across a typical summer day.
+> The [_Berliner Erfrischungskarte_](https://erfrischungskarte.odis-berlin.de) (Berlin refreshment map) is an interactive map of Berlin that shows shadows, cold wind areas and temperature intensities across a typical summer day.
 
 ## Context
 Climate change is causing increasingly hot, dry weather in many places. In recent years, Berlin has also experienced more hot days than ever before.
@@ -17,7 +17,7 @@ This website is a NextJS app configured with:
 - Testing with [Jest](https://jestjs.io/) and [`react-testing-library`](https://testing-library.com/docs/react-testing-library/intro)
 
 ## Data
-This repository contains the **frontend** code of the _Berliner Erfrischungskarte_ app. All the **data** is contained in another repository: [erfrischungskarte-daten](https://github.com/technologiestiftung/erfrischungskarte-daten)
+This repository contains the **frontend** code of the _Berliner Erfrischungskarte_ app. The **data** and the data processing scripts are contained in another repository: [erfrischungskarte-daten](https://github.com/technologiestiftung/erfrischungskarte-daten). There you can also find further information about the original data sources.
 
 ## Install and contribute
 
