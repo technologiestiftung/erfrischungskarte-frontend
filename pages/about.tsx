@@ -30,7 +30,7 @@ export const About: FC = () => (
         <TsbLogo className={focusStyles} />
       </div>
       <div className="flex flex-col mb-6">
-        <span className="text-sm mb-2">Durchgeführt von</span>
+        <span className="text-sm mb-2">Durchgeführt von der</span>
         <OdisLogo className={focusStyles} />
       </div>
       <div className="flex flex-col">
