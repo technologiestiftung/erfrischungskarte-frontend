@@ -35,7 +35,7 @@ const parseNumbersArray = (
   if (typeof val !== 'string') return null
   try {
     const parsedJson = JSON.parse(val) as unknown
-    if (isNumber(parsedJson)) [parsedJson] as number[]
+    if (isNumber(parsedJson)) return [parsedJson] as number[]
     if (!Array.isArray(parsedJson)) return null
     return parsedJson.map(parseSingleNumber).filter(Boolean) as number[]
   } catch (err) {
