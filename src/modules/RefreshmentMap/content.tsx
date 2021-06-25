@@ -234,16 +234,19 @@ export const ABOUT_INTRODUCTION_TEXT = (
   <>
     Der Klimawandel sorgt an vielen Orten für immer heißeres, trockenes Wetter.
     Auch Berlin erlebte in den vergangenen Jahren so viele Hitzetage wie nie
-    zuvor.<br></br>
+    zuvor.
+    <br />
+    <br />
     Wo, wann und wie ihr an solchen Tagen Erfrischung findet, seht ihr in dieser
     Karte, denn aufgrund der differenzierten Topographie kann es zum Teil
-    erhebliche Unterschiede innerhalb des Stadtgebietes geben. Sie zeigt euch
-    für jede Stunde von 10 bis 21 Uhr, wo es tendeziell eher kühl ist, wo für
-    gewöhnlich eine frische Brise weht und wo gerade Schatten ist. Entdeckt
+    erhebliche Unterschiede innerhalb des Stadtgebietes geben. Die Karte zeigt
+    euch für jede Stunde von 10 bis 21 Uhr, wo es tendeziell eher kühl ist, wo
+    für gewöhnlich eine frische Brise weht und wo gerade Schatten ist. Entdeckt
     außerdem erfrischende Orte, wie Badestellen, Trinkbrunnen und Parks. Mit
     einem Klick über die Teilenfunktion könnt ihr euren neuen Lieblingsplatz mit
-    anderen teilen.<br></br>
-    <br></br>
+    anderen teilen.
+    <br />
+    <br />
     Diese Anwendung basiert komplett auf offenen Daten, ein Großteil davon sind
     Verwaltungsdaten. Open Data ist heute ein wichtige Bestandteil im
     Verwaltungshandeln Berlins und schafft nicht nur Transparenz und Offenheit,
@@ -581,7 +584,7 @@ export const LAYER_LEGEND_ITEMS: {
 } = {
   shade: {
     title: 'Schatten',
-    description: 'Zeigt, wie die Schatten fallen.',
+    description: 'Zeigt, wohin die Schatten fallen.',
     icon: <ShadeIcon />,
     legendFigure: (
       <LayerLegendFigure maxLabel={maxShadeLabel} minLabel={minShadeLabel}>
@@ -612,7 +615,7 @@ export const LAYER_LEGEND_ITEMS: {
   },
   wind: {
     title: 'Windige Bereiche',
-    description: 'Zeigt die vergleichsweise windigsten Bereiche in der Stadt.',
+    description: 'Zeigt, wo vergleichsweise viel kühler Wind weht.',
     icon: <WindIcon />,
     legendFigure: (
       <LayerLegendFigure maxLabel="Windig" minLabel="Weniger windig">
