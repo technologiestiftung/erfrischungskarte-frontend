@@ -244,18 +244,28 @@ export const ABOUT_INTRODUCTION_TEXT = (
     einem Klick über die Teilenfunktion könnt ihr euren neuen Lieblingsplatz mit
     anderen teilen.<br></br>
     <br></br>
-    Diese Anwendung basiert komplett auf offenen Daten, ein Großteil davon sind
-    Verwaltungsdaten. Open Data ist heute ein wichtige Bestandteil im
-    Verwaltungshandeln Berlins und schafft nicht nur Transparenz und Offenheit,
-    sondern ermöglicht auch Analysen und Anwendungen wie diese, um den Alltag
-    ein kleines bisschen angenehmer zu machen. Mehr offene Daten findet ihr im{' '}
+    Diese Anwendung basiert komplett auf offenen Daten. Open Data ist heute ein
+    wichtige Bestandteil im Verwaltungshandeln Berlins und schafft nicht nur
+    Transparenz und Offenheit, sondern ermöglicht auch Analysen und Anwendungen
+    wie diese, um den Alltag ein kleines bisschen angenehmer zu machen. Deshalb
+    unterstützt und berät die{' '}
+    <a
+      target="blank"
+      href="https://odis-berlin.de"
+      className="text-gray-800 underline"
+    >
+      Open Data Informationsstelle
+    </a>{' '}
+    Berliner Behörden und Ämter bei der Bereitstellung von Open Data. Mehr
+    offene Daten findet ihr im{' '}
     <a
       target="blank"
       href="https://daten.berlin.de"
       className="text-gray-800 underline"
     >
       Berliner Datenportal
-    </a>{' '}
+    </a>
+    .
   </>
 )
 
