@@ -119,8 +119,8 @@ export const WIND_DATA: Pick<
 > = {
   id: 'wind-data',
   tileset: {
-    url: 'mapbox://technologiestiftung.9s5puknr',
-    layerName: 'wind_data-221dgh',
+    url: 'mapbox://technologiestiftung.1hrk87mv',
+    layerName: 'wind_data-dgvmuc',
   },
   fillColorMap: new Map([
     // Note: the mapping here is different than the one for the temperature data.
@@ -138,8 +138,8 @@ export const TEMPERATURE_DATA: Pick<
 > = {
   id: 'temperature-data',
   tileset: {
-    url: 'mapbox://technologiestiftung.1ejpa7pd',
-    layerName: 'temperature_data-11wkut',
+    url: 'mapbox://technologiestiftung.4e9mfohk',
+    layerName: 'temperature_data-5k7yue',
   },
   fillColorMap: new Map([
     [1, colors['layer-blue'][400]],
