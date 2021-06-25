@@ -54,10 +54,9 @@ export const HOURS: HourDataType = {
     shadeTilesetId: 'mapbox://technologiestiftung.6pkd1c22',
   },
   '11': {
-    // incomplete, needs to be replaced!
     displayName: '11 Uhr',
     vectorTilesetKey: '11Uhr',
-    shadeTilesetId: 'mapbox://technologiestiftung.cgvhefjx',
+    shadeTilesetId: 'mapbox://technologiestiftung.a7c0dvqi',
   },
   '12': {
     displayName: '12 Uhr',
@@ -87,7 +86,7 @@ export const HOURS: HourDataType = {
   '17': {
     displayName: '17 Uhr',
     vectorTilesetKey: '17Uhr',
-    shadeTilesetId: 'mapbox://technologiestiftung.9vqcrksk',
+    shadeTilesetId: 'mapbox://technologiestiftung.77hu0gps',
   },
   '18': {
     displayName: '18 Uhr',
