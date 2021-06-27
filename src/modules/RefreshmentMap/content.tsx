@@ -232,20 +232,19 @@ export const POI_DATA: PoiDataType = {
 
 export const ABOUT_INTRODUCTION_TEXT = (
   <>
-    Der Klimawandel sorgt an vielen Orten für immer heißeres, trockenes Wetter.
-    Auch Berlin erlebte in den vergangenen Jahren so viele Hitzetage wie nie
-    zuvor.<br></br>
-    Wo, wann und wie ihr an solchen Tagen Erfrischung findet, seht ihr in dieser
-    Karte, denn aufgrund der differenzierten Topographie kann es zum Teil
-    erhebliche Unterschiede innerhalb des Stadtgebietes geben. Sie zeigt euch
-    für jede Stunde von 10 bis 21 Uhr, wo es tendeziell eher kühl ist, wo für
-    gewöhnlich eine frische Brise weht und wo gerade Schatten ist. Entdeckt
+    Der Klimawandel sorgt an vielen Orten für immer heißeres, trockeneres
+    Wetter. Auch Berlin erlebte in den vergangenen Jahren so viele Hitzetage wie
+    nie zuvor. Wo, wann und wie ihr an solchen Tagen Erfrischung findet, seht
+    ihr in dieser Karte. Sie zeigt euch für jede Stunde von 10 bis 21 Uhr, wo es
+    tendenziell eher kühl ist, wo für gewöhnlich eine frische Brise weht und wo
+    gerade Schatten ist. Aufgrund der differenzierten Topographie kann es zum
+    Teil erhebliche Unterschiede innerhalb des Stadtgebietes geben. Entdeckt
     außerdem erfrischende Orte, wie Badestellen, Trinkbrunnen und Parks. Mit
     einem Klick über die Teilenfunktion könnt ihr euren neuen Lieblingsplatz mit
     anderen teilen.<br></br>
     <br></br>
     Diese Anwendung basiert komplett auf offenen Daten. Open Data ist heute ein
-    wichtige Bestandteil im Verwaltungshandeln Berlins und schafft nicht nur
+    wichtiger Bestandteil im Verwaltungshandeln Berlins und schafft nicht nur
     Transparenz und Offenheit, sondern ermöglicht auch Analysen und Anwendungen
     wie diese, um den Alltag ein kleines bisschen angenehmer zu machen. Deshalb
     unterstützt und berät die{' '}
@@ -254,10 +253,10 @@ export const ABOUT_INTRODUCTION_TEXT = (
       href="https://odis-berlin.de"
       className="text-gray-800 underline"
     >
-      Open Data Informationsstelle
+      Open Data Infor&shy;mations&shy;stelle
     </a>{' '}
-    Berliner Behörden und Ämter bei der Bereitstellung von Open Data. Mehr
-    offene Daten findet ihr im{' '}
+    Berliner Behörden bei der Bereit&shy;stellung von Open Data. Mehr offene
+    Daten findet ihr im{' '}
     <a
       target="blank"
       href="https://daten.berlin.de"
@@ -269,21 +268,34 @@ export const ABOUT_INTRODUCTION_TEXT = (
   </>
 )
 
+export const ABOUT_HOW_TO = (
+  <>
+    Mit dieser Karte ist es möglich verschiedene Bereiche in Berlin im Hinblick
+    auf ihre klimatische Funktion (neu) zu entdecken. Die Untersuchung des
+    Stadtklimas ist ein wichtiger Aspekt in der Stadtentwicklung und -planung,
+    um die Lebensqualität zu erhöhen und uns Stadtbewohner*innen weniger
+    gesundheitlichem Risiko auszusetzen. Drei wichtige Faktoren, die ein lokales
+    Klima ausmachen sind Beschattung, Lufttemperatur und Kaltluftentstehung.
+    Über die Filterfunktion können die drei verschiedenen Faktoren einzeln
+    angezeigt oder ausgeblendet werden. Die Karte zeigt anhand der Farbskalen
+    wie sich Temperaturen und Menge an kühlem Wind an einem typischen Sommertag
+    an verschiedenen Orten der Stadt über den Tagesverlauf unterscheiden.
+    Prinzipiell zeigen dunklere Flächen an, dass dies ein erfrischender Ort für
+    heiße Sommertage mit einer positiven klimarelevanten Wirkung für die Stadt
+    ist. Helle Flächen dagegen sprechen für sich stark aufheizende, wenig
+    kaltluftproduzierende Flächen. Es handelt sich bei den zugrundeliegenden
+    Werten um Verhältnisse und keine absoluten Zahlen. Die Daten beruhen auf
+    Modellierungen für einen typischen Sommertag.
+  </>
+)
+
 export const ABOUT_SHADOW_TEXT = (
   <>
-    Die Schatten wurden mit dem r.sun-Tool des{' '}
-    <a
-      target="blank"
-      href="https://grass.osgeo.org"
-      className="text-gray-800 underline"
-    >
-      Geographic Resources Analysis Support System (GRASS)
-    </a>{' '}
-    geschätzt, einem Open-Source-GIS. Unsere Karte zeigt alle Gebiete ohne
-    direkte Sonneneinstrahlung, berechnet für den 1. Juli. Die Schatten
-    variieren im Laufe des Jahres, unsere Darstellung kann also je nach
-    Zeitpunkt der Betrachtung von der Realität abweichen. Die Berechnungen
-    wurden auf Grundlage der Topographie, nämlich des{' '}
+    Ein wichtiger Faktor für das lokale Aufheizen und die Entstehung von
+    Hitzeinseln an heißen Tagen ist, wie lange ein Bereich der Sonne ausgesetzt
+    oder beschattet ist. Klimatisch und für das Wohlbefinden von Vorteil sind
+    Parks und Straßenzüge mit vielen Bäumen, die Schatten spenden. Die Schatten
+    wurden auf Grundlage der Topographie, nämlich mittels eines{' '}
     <a
       target="blank"
       href="https://fbinter.stadt-berlin.de/fb/index.jsp?loginkey=zoomStart&mapId=k_dom@senstadt&bbox=387046,5818588,391547,5821400"
@@ -291,34 +303,94 @@ export const ABOUT_SHADOW_TEXT = (
     >
       bildbasierten Digitalen Oberflächenmodells (bDOM)
     </a>{' '}
-    von Berlin erstellt. Dieser enthält die Höhen der Erdoberfläche mit allen
-    natürlichen (z.B. Vegetation) und künstlichen Objekten (z.B. Bauwerken) für
-    das gesamte Stadtgebiet und hat eine Auflösung von 2 Metern.
+    von Berlin in Kombination mit Informationen zum Stand der Sonne zu jeder
+    Uhrzeit für den 1.Juli berechnet. Dafür wurde das r.sun-Tool des{' '}
+    <a
+      target="blank"
+      href="https://grass.osgeo.org"
+      className="text-gray-800 underline"
+    >
+      Geographic Resources Analysis Support System (GRASS)
+    </a>{' '}
+    , einem Open-Source-GIS, verwendet. Das bDOM enthält die Höhen der
+    Erdoberfläche mit allen natürlichen (wie z.B. Vegetation) und künstlichen
+    Objekten (Bauwerken) für das gesamte Stadtgebiet und hat eine Auflösung von
+    2 Metern. Die Schatten variieren im Laufe des Jahres, unsere Darstellung
+    kann also je nach Zeitpunkt der Betrachtung von der Realität abweichen.
   </>
 )
 
-export const ABOUT_COOL_WINDY_TEXT = (
+export const ABOUT_COOL_TEXT = (
   <>
-    Die Klassifizierung der kühlen und kaltluftproduzierenden Bereiche beruht
-    auf dem{' '}
+    Die Klassifizierung der kühlen Bereiche beruht auf Daten aus einem
+    numerischen{' '}
     <a
       target="blank"
-      href="https://www.berlin.de/umweltatlas/klima/klimaanalyse/2014/zusammenfassung/"
+      href="https://www.berlin.de/umweltatlas/klima/klimaanalyse/2014/karten/"
       className="text-gray-800 underline"
     >
-      Datensatz zum Klimamodell Berlin
-    </a>
-    . Die Temperaturen des originalen Datensatzes wurden in 2 Metern Höhe über
-    dem Boden gemessen. Der Kaltluftvolumenstrom wurde in der Anzahl der
-    Kubikmeter des kalten Windes gemessen, der pro Sekunde einer 10-Meter-Zelle
-    zuströmt. Gebiete mit mehr Vegetation – wie Wälder und Parks – weisen
-    durchschnittlich mehr Wind auf. Der Datensatz enthält Kaltluftvolumen- und
-    Temperaturdaten für 4:00 Uhr, 14:00 Uhr (nur für Temperaturdaten) und 22:00
-    Uhr. Die Werte für weitere in unserer Anwendung dargestellten Stunden wurden
-    zwischen den Beobachtungszeitpunkten interpoliert. Alle Datenwerte wurden in
-    Quantile unterteilt und dadurch neu klassifiziert: Die Werte sind also
-    relative Einstufungen im Vergleich zu den anderen Beobachtungen (1-20%,
-    21-40%, 41-60%, 61-80% oder 81-100%).
+      Klimamodell
+    </a>{' '}
+    der Senatsverwaltung für Stadtentwicklung und Wohnen von 2014. Die
+    Temperaturen wurden in 2 Metern Höhe über dem Boden bestimmt. Der Datensatz
+    enthält Temperaturdaten für 4 Uhr, 14 Uhr und 22 Uhr, modelliert für einen
+    typischen Sommertag, mit einer Auflösung von 10 Metern. Die Werte für
+    weitere in unserer Anwendung dargestellte Stunden wurden zwischen diesen
+    Beobachtungszeitpunkten interpoliert. Alle Datenwerte wurden dann in
+    Quintile unterteilt und anschließend fünf Klassen von kühl bis weniger kühl
+    zugeordnet. Die Farbskalen geben also eine relative Einstufung der
+    jeweiligen Stadtbereiche im Vergleich zu den anderen Beobachtungen wieder
+    und keine absoluten Werte. Das Script und die verarbeiteten Daten sind{' '}
+    <a
+      target="blank"
+      href="https://github.com/technologiestiftung/erfrischungskarte-daten/tree/main/Wind_Temperature"
+      className="text-gray-800 underline"
+    >
+      hier
+    </a>{' '}
+    zu finden. <br></br>
+    Für die Temperaturverteilung ausschlaggebend sind u.a. die Boden- und
+    Oberflächeneigenschaften. Waldflächen und größere Grünanlagen wie der Große
+    Tiergarten weisen deutlich niedrigere Temperaturen auf, als baulich geprägte
+    Gebiete, bei denen sich jedoch auch kleinräumige Unterschiede erkennen
+    lassen. Wasserflächen verhalten sich aufgrund ihrer spezifischen
+    Wärmekapazität sehr homogen und wirken tagsüber klimatisch ausgleichend.
+  </>
+)
+export const ABOUT_WINDY_TEXT = (
+  <>
+    Genau wie bei den kühlen Bereichen beruht die Klassifizierung der
+    sogenannten kaltluftproduzierenden Bereiche ebenfalls auf Daten aus einem{' '}
+    <a
+      target="blank"
+      href="https://www.berlin.de/umweltatlas/klima/klimaanalyse/2014/karten/"
+      className="text-gray-800 underline"
+    >
+      Klimamodell
+    </a>{' '}
+    der Senatsverwaltung für Stadtentwicklung und Wohnen von 2014. Der
+    Kaltluftvolumenstrom wird definiert durch die Anzahl der Kubikmeter des
+    kalten Windes, der pro Sekunde durch eine 10x10-Meter-Fläche strömt. Der
+    Datensatz enthält Kaltluftvolumendaten für 4 Uhr und 22 Uhr, modelliert für
+    einen typischen Sommertag, mit einer Auflösung von 10 Metern. Die Werte für
+    weitere in unserer Anwendung dargestellte Stunden wurden zwischen diesen
+    Beobachtungszeitpunkten interpoliert. Alle Datenwerte wurden dann in
+    Quintile unterteilt und anschließend fünf Klassen von viel Kaltluft bis
+    weniger Kaltluft zugeordnet. Die Farbskalen geben also eine relative
+    Einstufung der jeweilgen Stadtbereiche im Vergleich zu den anderen
+    Beobachtungen wieder und keine absoluten Werte. Das Script und die
+    verarbeiteten Daten sind{' '}
+    <a
+      target="blank"
+      href="https://github.com/technologiestiftung/erfrischungskarte-daten/tree/main/Wind_Temperature"
+      className="text-gray-800 underline"
+    >
+      hier
+    </a>{' '}
+    zu finden. <br></br>Es ist zu erkennen, dass die kaltluftproduzierenden
+    Bereiche häufig Freiflächen wie Wälder, Parkanlagen und Kleingartenflächen
+    sind. Die dadurch entstehende gute Durchlüftung kann die Hitzebelastung an
+    Sommertagen reduzieren und wirkt sich auch auf die umliegenden Bereiche aus.
   </>
 )
 
@@ -362,7 +434,7 @@ export const ABOUT_POINTS_TEXT = (
       Freibädern und Schwimmhallen
     </a>{' '}
     stehen derzeit nur als Liste über Berlin.de bereit. Sie wurden mittels
-    Webscraping in einen Geodatensatz überführt.
+    Webscraping in einen Geodatensatz überführt.{' '}
     <a
       target="blank"
       href="https://overpass-turbo.eu/"
@@ -371,9 +443,8 @@ export const ABOUT_POINTS_TEXT = (
       Bänke, Picknicktische und Trinkbrunnen
     </a>{' '}
     wurden aus Open Street Map exportiert, einer frei zugänglichen Sammlung von
-    Geodaten.
-    <br></br>
-    Den kompletten, für diese Anwendung aufbereiteten Datensatz findet ihr{' '}
+    Geodaten. Den kompletten, für diese Anwendung aufbereiteten Datensatz findet
+    ihr{' '}
     <a
       target="blank"
       href="https://github.com/technologiestiftung/erfrischungskarte-daten/blob/main/POI's/erfrischungskarte_poi.geojson"
@@ -387,14 +458,24 @@ export const ABOUT_POINTS_TEXT = (
 
 export const ABOUT_ACCORDION_ITEMS = [
   {
+    id: 'howto',
+    title: 'Wie liest man die Erfrischungskarte?',
+    content: ABOUT_HOW_TO,
+  },
+  {
     id: 'shadows',
     title: 'Schatten',
     content: ABOUT_SHADOW_TEXT,
   },
   {
-    id: 'cool-windy-areas',
-    title: 'Kühle und kaltluftproduzierende Bereiche',
-    content: ABOUT_COOL_WINDY_TEXT,
+    id: 'cool-areas',
+    title: 'Kühle Bereiche',
+    content: ABOUT_COOL_TEXT,
+  },
+  {
+    id: 'windy-areas',
+    title: 'Kalt-windige Bereiche',
+    content: ABOUT_WINDY_TEXT,
   },
   {
     id: 'places',
