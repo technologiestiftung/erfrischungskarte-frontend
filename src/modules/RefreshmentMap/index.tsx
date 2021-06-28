@@ -162,6 +162,7 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
               minZoom={14}
               opacity={key !== activeHourKey ? 0 : 0.5}
               isVisible={mappedQuery.showShadows !== false}
+              beforeId={EXTRUDED_BUILDINGS_DATA.id}
             />
           ))}
         <ExtrusionLayer {...EXTRUDED_BUILDINGS_DATA} />
