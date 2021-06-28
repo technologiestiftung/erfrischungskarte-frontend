@@ -114,7 +114,7 @@ describe('mapRawQueryToState', () => {
     expect(mapRawQueryToState({ visibleHour: '24' }).visibleHour).toBe(
       undefined
     )
-    const allHours = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
+    const allHours = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
     allHours.forEach((hour) => {
       expect(mapRawQueryToState({ visibleHour: `${hour}` }).visibleHour).toBe(
         hour

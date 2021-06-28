@@ -117,7 +117,7 @@ describe('HourSelector', () => {
       replace: testReplace,
       pathname: '/map',
     })
-    render(<HourSelector activeHourKey="21" />)
+    render(<HourSelector activeHourKey="20" />)
 
     const clickEl = screen.getByLabelText('select-hour-10')
 
@@ -144,7 +144,7 @@ describe('HourSelector', () => {
       replace: testReplace,
       pathname: '/map',
     })
-    render(<HourSelector activeHourKey="21" />)
+    render(<HourSelector activeHourKey="20" />)
 
     const clickEl = screen.getByLabelText('select-hour-10')
 

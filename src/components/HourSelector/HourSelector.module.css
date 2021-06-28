@@ -23,3 +23,8 @@
 .hourButton:hover text {
   fill: white;
 }
+
+.nightIndicator {
+  cursor: default;
+  pointer-events: none;
+}

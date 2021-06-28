@@ -5,6 +5,7 @@ import { HOURS } from '@modules/RefreshmentMap/content'
 import classNames from 'classnames'
 import { useRouter } from 'next/router'
 import React, { FC, useCallback, useEffect, useRef, useState } from 'react'
+import colors from '../../style/colors'
 import styles from './HourSelector.module.css'
 
 interface HourSelectorPropType {
@@ -28,7 +29,6 @@ const hoursPositions: Record<string, HourPositionType> = {
   '18': { x: 81.9568, y: 153.717 },
   '19': { x: 45.0767, y: 144.011 },
   '20': { x: 15.9611, y: 116.837 },
-  '21': { x: 8.19678, y: 79.9568 },
 }
 
 const buttonSize = 31.0568
@@ -228,6 +228,30 @@ export const HourSelector: FC<HourSelectorPropType> = ({ activeHourKey }) => {
                 </g>
               )
             })}
+            <g
+              role="button"
+              aria-label="night-indicator"
+              className={styles.nightIndicator}
+              transform={`translate(${8.19678}, ${79.9568})`}
+            >
+              <rect
+                x={0}
+                y={0}
+                {...hourButtonCommonProps}
+                fill={colors['night-indicator-sky']}
+              />
+              <g transform={`translate(${4}, ${6}) scale(0.9)`}>
+                <path
+                  d="M9.00032 19C15.0755 19 20.0003 14.0751 20.0003 7.99999C20.0003 6.1059 19.5216 4.32362 18.6785 2.76755C21.2894 4.57186 23.0001 7.58615 23.0001 11C23.0001 16.5228 18.5229 21 13.0001 21C10.6065 21 8.40939 20.1591 6.68799 18.7565C7.43356 18.916 8.20714 19 9.00032 19Z"
+                  fill={colors['night-indicator-moon']}
+                />
+                <path
+                  d="M7 0L7.44028 3.91389C7.59678 5.30518 8.69483 6.40322 10.0861 6.55972L14 7L10.0861 7.44028C8.69482 7.59678 7.59678 8.69483 7.44028 10.0861L7 14L6.55972 10.0861C6.40322 8.69482 5.30517 7.59678 3.91388 7.44028L0 7L3.91389 6.55972C5.30518 6.40322 6.40322 5.30517 6.55972 3.91388L7 0Z"
+                  fill={colors['night-indicator-moon']}
+                />
+              </g>
+            </g>
+
             <defs>
               {Object.keys(hoursPositions).map((key) => {
                 const { x, y } = hoursPositions[key]

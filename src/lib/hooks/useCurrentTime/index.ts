@@ -10,7 +10,6 @@ export type NumberHourType =
   | 18
   | 19
   | 20
-  | 21
 
 export const useCurrentTime = (): NumberHourType => {
   const coeff = 1000 * 60 * 60
@@ -23,8 +22,8 @@ export const useCurrentTime = (): NumberHourType => {
     Math.round(berlinTime.getTime() / coeff) * coeff
   ).getHours()
 
-  if (roundedTime >= 10 && 21 >= roundedTime)
+  if (roundedTime >= 10 && 20 >= roundedTime)
     return roundedTime as NumberHourType
   else if (roundedTime > 3 && 10 > roundedTime) return 10
-  else return 21
+  else return 20
 }

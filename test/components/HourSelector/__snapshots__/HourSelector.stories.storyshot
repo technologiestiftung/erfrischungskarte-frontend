@@ -399,33 +399,30 @@ exports[`Storyshots UI Elements/HourSelector Default 1`] = `
             </text>
           </g>
           <g
-            aria-label="select-hour-21"
-            className=""
-            onClick={[Function]}
+            aria-label="night-indicator"
             role="button"
+            transform="translate(8.19678, 79.9568)"
           >
+            <rect
+              fill="#4F6D95"
+              height={31.0568}
+              rx={15.5284}
+              width={31.0568}
+              x={0}
+              y={0}
+            />
             <g
-              filter="url(#shadow-21)"
+              transform="translate(4, 6) scale(0.9)"
             >
-              <rect
-                fill="white"
-                height={31.0568}
-                rx={15.5284}
-                width={31.0568}
-                x={8.19678}
-                y={79.9568}
+              <path
+                d="M9.00032 19C15.0755 19 20.0003 14.0751 20.0003 7.99999C20.0003 6.1059 19.5216 4.32362 18.6785 2.76755C21.2894 4.57186 23.0001 7.58615 23.0001 11C23.0001 16.5228 18.5229 21 13.0001 21C10.6065 21 8.40939 20.1591 6.68799 18.7565C7.43356 18.916 8.20714 19 9.00032 19Z"
+                fill="#FFFADD"
+              />
+              <path
+                d="M7 0L7.44028 3.91389C7.59678 5.30518 8.69483 6.40322 10.0861 6.55972L14 7L10.0861 7.44028C8.69482 7.59678 7.59678 8.69483 7.44028 10.0861L7 14L6.55972 10.0861C6.40322 8.69482 5.30517 7.59678 3.91388 7.44028L0 7L3.91389 6.55972C5.30518 6.40322 6.40322 5.30517 6.55972 3.91388L7 0Z"
+                fill="#FFFADD"
               />
             </g>
-            <text
-              dominantBaseline="middle"
-              fill="#000"
-              fontSize={14}
-              textAnchor="middle"
-              x={23.72518}
-              y={96.4852}
-            >
-              21
-            </text>
           </g>
           <defs>
             <filter
@@ -596,22 +593,6 @@ exports[`Storyshots UI Elements/HourSelector Default 1`] = `
               width={124.2272}
               x={-15.095699999999999}
               y={85.78020000000001}
-            >
-              <feDropShadow
-                dx="0"
-                dy="2"
-                floodColor="lightgrey"
-                stdDeviation="3"
-              />
-            </filter>
-            <filter
-              colorInterpolationFilters="sRGB"
-              filterUnits="userSpaceOnUse"
-              height={124.2272}
-              id="shadow-21"
-              width={124.2272}
-              x={-22.86002}
-              y={48.900000000000006}
             >
               <feDropShadow
                 dx="0"
