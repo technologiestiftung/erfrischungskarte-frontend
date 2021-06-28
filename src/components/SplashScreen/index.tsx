@@ -34,7 +34,7 @@ export const SplashScreen: FC = () => {
         </p>
         <div className="mt-4 md:mt-16 flex flex-wrap place-items-start">
           <InternalLink
-            href={hasMobileSize ? '/filters' : '/map'}
+            href={hasMobileSize ? '/map' : '/filters'}
             className={classNames(
               'md:px-4 mr-2 mb-2 cursor-pointer px-2.5 py-1 rounded-lg border-2',
               'bg-layer-turquoise-300 border-layer-turquoise-300',
