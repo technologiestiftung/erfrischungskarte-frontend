@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots CookieBanner Default 1`] = `
+<div
+  className="p-3 border border-gray-200 shadow-xl fixed left-1/2 transform -translate-x-1/2 bottom-0 sm:bottom-4 z-50 bg-white text-sm rounded container max-w-3xl flex justify-between z-50"
+>
+  <p
+    className="max-w-none sm:pr-4"
+  >
+    Diese Webseite verwendet Cookies, um bestimmte Funktionen zu ermöglichen und das Angebot zu verbessern. Indem Sie hier fortfahren, stimmen Sie der Nutzung von Cookies zu.  
+    <a
+      href="https://www.technologiestiftung-berlin.de/de/datenschutz/"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Weitere Informationen
+    </a>
+  </p>
+  <span
+    className="cursor-pointer opacity-100 hover:opacity-50 transition"
+  >
+    <svg
+      fill="none"
+      height="24"
+      onClick={[Function]}
+      viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M6 6L18 18M6 18L18 6L6 18Z"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+      />
+    </svg>
+  </span>
+</div>
+`;
