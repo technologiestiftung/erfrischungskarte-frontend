@@ -7,7 +7,6 @@ import '../src/style/global.css'
 import '../src/components/MapControls/mapControls.css'
 import '../src/components/MapPoiTooltip/MapPoiTooltip.css'
 import { init } from '@openpolitica/matomo-next'
-import { CookieBanner } from '@components/CookieBanner'
 
 interface PagePropType extends Record<string, unknown> {
   title?: string
@@ -39,7 +38,6 @@ const App: FC<{
         <Head pageTitle={pageProps.title || ''} />
         <Component {...pageProps} query={parsedQuery} />
       </RefreshmentMap>
-      <CookieBanner />
     </StrictMode>
   )
 }
