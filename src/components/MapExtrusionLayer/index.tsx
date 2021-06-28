@@ -13,6 +13,7 @@ export interface MapExtrusionLayerType
     height: string
   }
   extrusionColor: string
+  isVisible?: boolean
 }
 
 export const MapExtrusionLayer: FC<MapExtrusionLayerType> = ({
@@ -23,11 +24,13 @@ export const MapExtrusionLayer: FC<MapExtrusionLayerType> = ({
   minzoom,
   extrusionProperties,
   extrusionColor,
+  isVisible = true,
 }) => {
   return (
     <>
       <Source id={id} type="vector" url={url} />
       <Layer
+        id={id}
         type="fill-extrusion"
         source={source}
         source-layer={sourceLayer}
@@ -37,6 +40,9 @@ export const MapExtrusionLayer: FC<MapExtrusionLayerType> = ({
           'fill-extrusion-height': ['get', extrusionProperties.height],
           'fill-extrusion-base': ['get', extrusionProperties.base],
           'fill-extrusion-opacity': 1,
+        }}
+        layout={{
+          visibility: isVisible ? 'visible' : 'none',
         }}
       />
     </>
