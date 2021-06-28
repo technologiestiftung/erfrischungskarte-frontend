@@ -268,6 +268,20 @@ export const ABOUT_INTRODUCTION_TEXT = (
   </>
 )
 
+export const ABOUT_CONTACT_TEXT = (
+  <>
+    Eine Frage oder Feedback? Schreib uns an{' '}
+    <a
+      href="mailto:odis@technologiestiftung-berlin.de"
+      target="_blank"
+      rel="noreferrer"
+      className="text-gray-800 underline"
+    >
+      odis@technologiestiftung-berlin.de
+    </a>
+  </>
+)
+
 export const ABOUT_HOW_TO = (
   <>
     Mit dieser Karte ist es möglich verschiedene Bereiche in Berlin im Hinblick

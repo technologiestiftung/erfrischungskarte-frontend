@@ -4,6 +4,7 @@ import { SenWebLogo } from '@components/SenWebLogo'
 import { TsbLogo } from '@components/TsbLogo'
 import {
   ABOUT_ACCORDION_ITEMS,
+  ABOUT_CONTACT_TEXT,
   ABOUT_INTRODUCTION_TEXT,
 } from '@modules/RefreshmentMap/content'
 import classNames from 'classnames'
@@ -24,6 +25,7 @@ export const About: FC = () => (
   <div>
     <p className="text-gray-500 text-sm pb-6">{ABOUT_INTRODUCTION_TEXT}</p>
     <Accordion items={ABOUT_ACCORDION_ITEMS} />
+    <p className="text-gray-500 text-sm pt-6">{ABOUT_CONTACT_TEXT}</p>
     <section className="mt-16 flex flex-wrap">
       <div className="flex flex-col mr-6 mb-6">
         <span className="text-sm mb-2">Ein Projekt der</span>
