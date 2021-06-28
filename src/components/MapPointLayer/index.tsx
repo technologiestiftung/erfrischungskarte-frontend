@@ -85,7 +85,7 @@ export const MapPointLayer: FC<MapPointLayerType> = ({
 
   return (
     <Source id={id} type="vector" url={tileset.url}>
-      <Layer {...layerStyle} filter={filter} />
+      <Layer {...layerStyle} id={id} filter={filter} />
     </Source>
   )
 }

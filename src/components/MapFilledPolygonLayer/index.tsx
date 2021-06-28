@@ -8,6 +8,7 @@ export interface MapFilledPolygonLayerType {
   }
   fillColorMap: Map<number | string, string>
   fillColorProperty: string
+  isVisible?: boolean
 }
 
 export const MapFilledPolygonLayer: FC<MapFilledPolygonLayerType> = ({
@@ -15,11 +16,12 @@ export const MapFilledPolygonLayer: FC<MapFilledPolygonLayerType> = ({
   tileset,
   fillColorMap,
   fillColorProperty,
+  isVisible = true,
 }) => {
   const flattenedFillColorMap = Array.from(fillColorMap).flat(2)
 
   const layerStyle: LayerProps = {
-    id: id,
+    id,
     type: 'fill',
     'source-layer': tileset.layerName,
     paint: {
@@ -32,11 +34,14 @@ export const MapFilledPolygonLayer: FC<MapFilledPolygonLayerType> = ({
       ],
       'fill-opacity': 0.5,
     },
+    layout: {
+      visibility: isVisible ? 'visible' : 'none',
+    },
   }
 
   return (
     <Source id={id} type="vector" url={tileset.url}>
-      <Layer {...layerStyle} />
+      <Layer {...layerStyle} id={id} />
     </Source>
   )
 }

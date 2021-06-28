@@ -7,6 +7,8 @@ export interface MapRasterLayerType {
   minZoom?: SourceProps['minzoom']
   maxZoom?: SourceProps['maxzoom']
   opacity?: number
+  isVisible?: boolean
+  beforeId?: string
 }
 
 export const MapRasterLayer: FC<MapRasterLayerType> = ({
@@ -15,12 +17,18 @@ export const MapRasterLayer: FC<MapRasterLayerType> = ({
   bounds,
   minZoom,
   opacity,
+  isVisible = true,
+  beforeId,
 }) => {
   const layerStyle: LayerProps = {
-    id: id,
+    id,
+    beforeId,
     type: 'raster',
     paint: {
       'raster-opacity': opacity,
+    },
+    layout: {
+      visibility: isVisible ? 'visible' : 'none',
     },
   }
 
