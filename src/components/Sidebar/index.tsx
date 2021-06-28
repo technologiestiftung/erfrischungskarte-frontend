@@ -74,7 +74,7 @@ export const Sidebar: FC<SidebarPropType> = ({ title, children }) => {
             <header
               className={classNames(
                 'sticky inset-0 bottom-auto transition',
-                'p-6 sm:p-8 pb-4 sm:pb-6 z-10',
+                'p-6 pt-4 sm:p-8 pb-4 sm:pb-6 z-10',
                 'text-xl sm:text-2xl font-bold bg-white',
                 hasScrolled && 'shadow-md'
               )}
@@ -83,7 +83,7 @@ export const Sidebar: FC<SidebarPropType> = ({ title, children }) => {
               <InternalLink
                 href="/map"
                 className={classNames(
-                  'absolute top-5 sm:top-7 right-5 sm:right-7 cursor-pointer',
+                  'absolute top-3 sm:top-7 right-5 sm:right-7 cursor-pointer',
                   'w-10 h-10 grid place-content-center rounded-full',
                   'focus:outline-none focus:ring-2 focus:ring-gray-800',
                   'hover:bg-gray-200 transition'

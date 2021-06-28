@@ -318,13 +318,13 @@ exports[`Storyshots UI Elements/Sidebar With Title And Long Content 1`] = `
       id="sidebar-scroll-container"
     >
       <header
-        className="sticky inset-0 bottom-auto transition p-6 sm:p-8 pb-4 sm:pb-6 z-10 text-xl sm:text-2xl font-bold bg-white"
+        className="sticky inset-0 bottom-auto transition p-6 pt-4 sm:p-8 pb-4 sm:pb-6 z-10 text-xl sm:text-2xl font-bold bg-white"
       >
         <h1>
           About
         </h1>
         <a
-          className="absolute top-5 sm:top-7 right-5 sm:right-7 cursor-pointer w-10 h-10 grid place-content-center rounded-full focus:outline-none focus:ring-2 focus:ring-gray-800 hover:bg-gray-200 transition"
+          className="absolute top-3 sm:top-7 right-5 sm:right-7 cursor-pointer w-10 h-10 grid place-content-center rounded-full focus:outline-none focus:ring-2 focus:ring-gray-800 hover:bg-gray-200 transition"
           href="/map"
           onClick={[Function]}
           onMouseEnter={[Function]}
@@ -495,13 +495,13 @@ exports[`Storyshots UI Elements/Sidebar With Title And Short Content 1`] = `
       id="sidebar-scroll-container"
     >
       <header
-        className="sticky inset-0 bottom-auto transition p-6 sm:p-8 pb-4 sm:pb-6 z-10 text-xl sm:text-2xl font-bold bg-white"
+        className="sticky inset-0 bottom-auto transition p-6 pt-4 sm:p-8 pb-4 sm:pb-6 z-10 text-xl sm:text-2xl font-bold bg-white"
       >
         <h1>
           Hello
         </h1>
         <a
-          className="absolute top-5 sm:top-7 right-5 sm:right-7 cursor-pointer w-10 h-10 grid place-content-center rounded-full focus:outline-none focus:ring-2 focus:ring-gray-800 hover:bg-gray-200 transition"
+          className="absolute top-3 sm:top-7 right-5 sm:right-7 cursor-pointer w-10 h-10 grid place-content-center rounded-full focus:outline-none focus:ring-2 focus:ring-gray-800 hover:bg-gray-200 transition"
           href="/map"
           onClick={[Function]}
           onMouseEnter={[Function]}

@@ -147,7 +147,7 @@ export const Filters: FC<{
           </>
         )}
         {shadeLegendContent && (
-          <div className={classNames(hasMobileSize ? 'mt-4' : 'mt-6')}>
+          <div className={classNames(hasMobileSize ? 'mt-1' : 'mt-6')}>
             <LayerLegendBlock
               title={shadeLegendContent.title}
               description={shadeLegendContent.description}

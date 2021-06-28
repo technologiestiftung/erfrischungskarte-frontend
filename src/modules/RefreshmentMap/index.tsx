@@ -140,7 +140,6 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
                 hasMobileSize ? 'top-4' : 'bottom-4'
               }`}
             />
-            <SharingOverlay />
           </>
         )}
         {mappedQuery.showWind !== false && (
@@ -188,6 +187,7 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
           <DisclaimerLinks
             className={pathname !== '/map' && hasMobileSize ? 'hidden' : ''}
           />
+          <SharingOverlay />
           <Sidebar {...pageProps} />
           <HourSelector activeHourKey={activeHourKey} />
         </>
