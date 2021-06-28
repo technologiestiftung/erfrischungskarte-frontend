@@ -15,7 +15,7 @@ describe('mapRawQueryToState', () => {
       latitude: `${testLat}`,
       longitude: `${testLng}`,
       zoom: `${testZoom}`,
-      places: `[${testPlaces.join(',')}]`,
+      places: testPlaces.map((id) => id.toString()),
       showShadows: testShowShadows.toString(),
       showTemperature: testShowTemperature.toString(),
       showWind: testShowWind.toString(),
@@ -63,7 +63,7 @@ describe('mapRawQueryToState', () => {
   test('should return an array of numbers for places', () => {
     expect(
       mapRawQueryToState({
-        places: '[1,2,3,4]',
+        places: ['1', '2', '3', '4'],
       }).places
     ).toMatchObject([1, 2, 3, 4])
   })
@@ -78,7 +78,7 @@ describe('mapRawQueryToState', () => {
   test('should filter out places that are not valid', () => {
     expect(
       mapRawQueryToState({
-        places: '[1,null,"aa"]',
+        places: ['1', 'null', 'aa'],
       }).places
     ).toMatchObject([1])
   })

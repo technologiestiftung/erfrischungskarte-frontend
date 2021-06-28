@@ -45,6 +45,11 @@ export const Filters: FC<{
     wind: windLegendContent,
   } = LAYER_LEGEND_ITEMS
 
+  const windAndTemperatureFiltersAreActivated =
+    (!Object.keys(mappedQuery).includes('showWind') &&
+      !Object.keys(mappedQuery).includes('showTemperature')) ||
+    (mappedQuery.showWind === true && mappedQuery.showTemperature === true)
+
   return (
     <div className="grid grid-cols-1">
       <section
@@ -142,7 +147,7 @@ export const Filters: FC<{
           </>
         )}
         {shadeLegendContent && (
-          <div className={classNames(hasMobileSize ? 'mt-4' : 'mt-6')}>
+          <div className={classNames(hasMobileSize ? 'mt-1' : 'mt-6')}>
             <LayerLegendBlock
               title={shadeLegendContent.title}
               description={shadeLegendContent.description}
@@ -224,7 +229,7 @@ export const Filters: FC<{
             />
           </div>
         )}
-        {mappedQuery.showWind && mappedQuery.showTemperature && (
+        {windAndTemperatureFiltersAreActivated && (
           <p
             className={classNames(
               'text-xs',

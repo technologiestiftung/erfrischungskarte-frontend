@@ -8,9 +8,9 @@ export const DisclaimerLinks: FC<{ className?: string }> = ({ className }) => {
   return (
     <div
       className={classNames(
-        'absolute z-50',
+        'absolute text-[10px]',
         hasMobileSize
-          ? 'transform -rotate-90 -left-20 bottom-44 pt-1'
+          ? 'transform -rotate-90 -left-16 bottom-44'
           : 'w-full flex justify-center bottom-2',
         className
       )}
@@ -18,7 +18,7 @@ export const DisclaimerLinks: FC<{ className?: string }> = ({ className }) => {
       <a
         target="_blank"
         rel="noreferrer"
-        className="border border-transparent hover:border-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-2 focus:rounded-sm focus:ring-offset-gray-100 bg-white p-1 text-xs rounded bg-opacity-75 hover:bg-opacity-100 underline mr-2"
+        className="border border-transparent transition-all hover:border-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-2 focus:rounded-sm focus:ring-offset-gray-100 bg-white px-1 rounded bg-opacity-75 hover:bg-opacity-100 underline mr-2"
         href="https://www.technologiestiftung-berlin.de/de/impressum/"
       >
         Impressum
@@ -26,7 +26,7 @@ export const DisclaimerLinks: FC<{ className?: string }> = ({ className }) => {
       <a
         target="_blank"
         rel="noreferrer"
-        className="border border-transparent hover:border-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-2 focus:rounded-sm focus:ring-offset-gray-100 bg-white p-1 text-xs rounded bg-opacity-75 hover:bg-opacity-100 underline mr-2"
+        className="border border-transparent transition-all hover:border-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-2 focus:rounded-sm focus:ring-offset-gray-100 bg-white px-1 rounded bg-opacity-75 hover:bg-opacity-100 underline mr-2"
         href="https://www.technologiestiftung-berlin.de/de/datenschutz/"
       >
         Datenschutz
@@ -34,7 +34,7 @@ export const DisclaimerLinks: FC<{ className?: string }> = ({ className }) => {
       <a
         target="_blank"
         rel="noreferrer"
-        className="border border-transparent hover:border-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-2 focus:rounded-sm focus:ring-offset-gray-100 bg-white p-1 text-xs rounded bg-opacity-75 hover:bg-opacity-100 underline"
+        className="border border-transparent transition-all hover:border-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-2 focus:rounded-sm focus:ring-offset-gray-100 bg-white px-1 rounded bg-opacity-75 hover:bg-opacity-100 underline"
         href="https://github.com/technologiestiftung/erfrischungskarte-frontend/"
       >
         GitHub

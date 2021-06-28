@@ -54,10 +54,9 @@ export const HOURS: HourDataType = {
     shadeTilesetId: 'mapbox://technologiestiftung.6pkd1c22',
   },
   '11': {
-    // incomplete, needs to be replaced!
     displayName: '11 Uhr',
     vectorTilesetKey: '11Uhr',
-    shadeTilesetId: 'mapbox://technologiestiftung.cgvhefjx',
+    shadeTilesetId: 'mapbox://technologiestiftung.a7c0dvqi',
   },
   '12': {
     displayName: '12 Uhr',
@@ -87,7 +86,7 @@ export const HOURS: HourDataType = {
   '17': {
     displayName: '17 Uhr',
     vectorTilesetKey: '17Uhr',
-    shadeTilesetId: 'mapbox://technologiestiftung.9vqcrksk',
+    shadeTilesetId: 'mapbox://technologiestiftung.77hu0gps',
   },
   '18': {
     displayName: '18 Uhr',
@@ -119,8 +118,8 @@ export const WIND_DATA: Pick<
 > = {
   id: 'wind-data',
   tileset: {
-    url: 'mapbox://technologiestiftung.9s5puknr',
-    layerName: 'wind_data-221dgh',
+    url: 'mapbox://technologiestiftung.1hrk87mv',
+    layerName: 'wind_data-dgvmuc',
   },
   fillColorMap: new Map([
     // Note: the mapping here is different than the one for the temperature data.
@@ -138,8 +137,8 @@ export const TEMPERATURE_DATA: Pick<
 > = {
   id: 'temperature-data',
   tileset: {
-    url: 'mapbox://technologiestiftung.1ejpa7pd',
-    layerName: 'temperature_data-11wkut',
+    url: 'mapbox://technologiestiftung.4e9mfohk',
+    layerName: 'temperature_data-5k7yue',
   },
   fillColorMap: new Map([
     [1, colors['layer-blue'][400]],
@@ -241,8 +240,9 @@ export const ABOUT_INTRODUCTION_TEXT = (
     Teil erhebliche Unterschiede innerhalb des Stadtgebietes geben. Entdeckt
     außerdem erfrischende Orte, wie Badestellen, Trinkbrunnen und Parks. Mit
     einem Klick über die Teilenfunktion könnt ihr euren neuen Lieblingsplatz mit
-    anderen teilen.<br></br>
-    <br></br>
+    anderen teilen.
+    <br />
+    <br />
     Diese Anwendung basiert komplett auf offenen Daten. Open Data ist heute ein
     wichtiger Bestandteil im Verwaltungshandeln Berlins und schafft nicht nur
     Transparenz und Offenheit, sondern ermöglicht auch Analysen und Anwendungen
@@ -713,7 +713,7 @@ export const LAYER_LEGEND_ITEMS: {
 } = {
   shade: {
     title: 'Schatten',
-    description: 'Zeigt, wie die Schatten fallen.',
+    description: 'Zeigt, wohin die Schatten fallen.',
     icon: <ShadeIcon />,
     legendFigure: (
       <LayerLegendFigure maxLabel={maxShadeLabel} minLabel={minShadeLabel}>
@@ -744,7 +744,7 @@ export const LAYER_LEGEND_ITEMS: {
   },
   wind: {
     title: 'Windige Bereiche',
-    description: 'Zeigt die vergleichsweise windigsten Bereiche in der Stadt.',
+    description: 'Zeigt, wo vergleichsweise viel kühler Wind weht.',
     icon: <WindIcon />,
     legendFigure: (
       <LayerLegendFigure maxLabel="Windig" minLabel="Weniger windig">
