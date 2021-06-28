@@ -27,8 +27,6 @@
     "@datapunt/matomo-tracker-react": "0.4.0",
     "chrome-aws-lambda": "10.0.0",
     "classnames": "2.3.1",
-    "install": "0.13.0",
-    "npm": "7.19.0",
     "puppeteer": "10.0.0",
     "puppeteer-core": "10.0.0",
     "react": "17.0.2",
