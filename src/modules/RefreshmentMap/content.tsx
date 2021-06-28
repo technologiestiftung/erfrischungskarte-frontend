@@ -489,7 +489,7 @@ export const SEARCH_SUGGESTIONS: SearchSuggestionItemType[] = [
     type: 'Feature',
     properties: {
       name: 'Volkspark Prenzlauer Berg',
-      conditions: 'kühl und schattig',
+      conditions: 'kühl, viel Schatten',
       category: 'Gruenanlage',
       bezirk: 'Pankow',
       bezirksreg: 'Prenzlauer Berg Ost',
@@ -503,7 +503,7 @@ export const SEARCH_SUGGESTIONS: SearchSuggestionItemType[] = [
     type: 'Feature',
     properties: {
       name: 'Wasserfall am Viktoriapark',
-      conditions: 'vergleichsweise kühl und windig',
+      conditions: 'frische Brise, Ort zum Planschen',
       category: 'Brunnen',
       bezirk: 'Friedrichshain-Kreuz',
       bezirksreg: 'Tempelhofer Vorstadt',
@@ -517,7 +517,7 @@ export const SEARCH_SUGGESTIONS: SearchSuggestionItemType[] = [
     type: 'Feature',
     properties: {
       name: 'Picknickplatz in der Wuhlheide',
-      conditions: 'vergleichsweise kühl und schattig',
+      conditions: 'vergleichsweise kühl, Schattenplatz',
       category: 'Picknicktisch',
       bezirk: 'Treptow-Köpenick',
       bezirksreg: 'Oberschöneweide',
@@ -530,8 +530,8 @@ export const SEARCH_SUGGESTIONS: SearchSuggestionItemType[] = [
   {
     type: 'Feature',
     properties: {
-      name: 'Schattenplatz auf der Insel der Jugend',
-      conditions: 'abends kühl und windig, schattig',
+      name: 'Bank auf der Insel der Jugend',
+      conditions: 'abends kühl, frische Brise, Schattenplatz',
       category: 'Sitzbank',
       bezirk: 'Treptow-Köpenick',
       bezirksreg: 'Alt-Treptow',
@@ -545,7 +545,7 @@ export const SEARCH_SUGGESTIONS: SearchSuggestionItemType[] = [
     type: 'Feature',
     properties: {
       name: 'Bank am Neuen See im Tiergarten',
-      conditions: 'kühl, windig und schattig',
+      conditions: 'kühl, frische Brise, Schattenplatz',
       category: 'Sitzbank',
       bezirk: 'Mitte',
       bezirksreg: 'Tiergarten Süd',
@@ -559,7 +559,7 @@ export const SEARCH_SUGGESTIONS: SearchSuggestionItemType[] = [
     type: 'Feature',
     properties: {
       name: 'Tempelhofer Feld',
-      conditions: 'sonnig und abends kühl',
+      conditions: 'sonnig, abends kühl',
       category: 'Gruenanlage',
       bezirk: 'Tempelhof-Schöneberg',
       bezirksreg: 'Tempelhof',
@@ -573,7 +573,7 @@ export const SEARCH_SUGGESTIONS: SearchSuggestionItemType[] = [
     type: 'Feature',
     properties: {
       name: 'Pfaueninsel',
-      conditions: 'windig und schattig',
+      conditions: 'frische Brise, viel Schatten',
       category: 'Gruenanlage',
       bezirk: 'Steglitz-Zehlendorf',
       bezirksreg: 'Zehlendorf Südwest',
@@ -587,7 +587,7 @@ export const SEARCH_SUGGESTIONS: SearchSuggestionItemType[] = [
     type: 'Feature',
     properties: {
       name: 'Freizeitpark Marienfelde',
-      conditions: 'vergleichsweise windig und abends kühl',
+      conditions: 'frische Brise, abends kühl',
       category: 'Gruenanlage',
       bezirk: 'Tempelhof-Schöneberg',
       bezirksreg: 'Mariendorf',
@@ -601,7 +601,7 @@ export const SEARCH_SUGGESTIONS: SearchSuggestionItemType[] = [
     type: 'Feature',
     properties: {
       name: 'Britzer Garten',
-      conditions: 'vergleichsweise kühl und schattig',
+      conditions: 'vergleichsweise kühl',
       category: 'Gruenanlage',
       bezirk: 'Neukölln',
       bezirksreg: 'Britz',
@@ -615,7 +615,7 @@ export const SEARCH_SUGGESTIONS: SearchSuggestionItemType[] = [
     type: 'Feature',
     properties: {
       name: 'Kinderbad im Bürgerpark Marzahn',
-      conditions: 'vormittags kühl, zum Planschen',
+      conditions: 'vormittags kühl, Ort zum Planschen',
       category: 'Freibad',
       bezirk: 'Marzahn-Hellersdorf',
       bezirksreg: 'Marzahn Mitte',
@@ -629,7 +629,7 @@ export const SEARCH_SUGGESTIONS: SearchSuggestionItemType[] = [
     type: 'Feature',
     properties: {
       name: 'Badestelle am Tegler See',
-      conditions: 'kühl und windig',
+      conditions: 'kühl, frische Brise',
       category: 'Badestelle',
       bezirk: 'Reinickendorf',
       bezirksreg: 'Tegler Forst',
@@ -643,7 +643,7 @@ export const SEARCH_SUGGESTIONS: SearchSuggestionItemType[] = [
     type: 'Feature',
     properties: {
       name: 'Wasserspielplatz im Mellenseepark',
-      conditions: 'zum Planschen',
+      conditions: 'Ort zum Planschen',
       category: 'Wasserspielplatz',
       bezirk: 'Lichtenberg',
       bezirksreg: 'Freidrichsfelde Süd',
@@ -657,7 +657,7 @@ export const SEARCH_SUGGESTIONS: SearchSuggestionItemType[] = [
     type: 'Feature',
     properties: {
       name: 'Kaskade am Lietzensee',
-      conditions: 'vergleichsweise kühl und windig',
+      conditions: 'vergleichsweise kühl, frische Brise',
       category: 'Brunnen',
       bezirk: 'Charlottenburg-Wilmersdorf',
       bezirksreg: 'Neue Kantstraße',
@@ -671,7 +671,7 @@ export const SEARCH_SUGGESTIONS: SearchSuggestionItemType[] = [
     type: 'Feature',
     properties: {
       name: 'Badestelle an der Unterhavel',
-      conditions: 'kühl und windig',
+      conditions: 'kühl, frische Brise, Ort zum Planschen',
       category: 'Badestelle',
       bezirk: 'Spandau',
       bezirksreg: 'Gatow/Kladow',
