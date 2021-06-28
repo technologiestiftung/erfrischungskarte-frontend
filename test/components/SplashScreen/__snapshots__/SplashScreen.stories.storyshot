@@ -98,7 +98,7 @@ exports[`Storyshots Content/SplashScreen Default 1`] = `
     >
       <a
         className="md:px-4 mr-2 mb-2 cursor-pointer px-2.5 py-1 rounded-lg border-2 bg-layer-turquoise-300 border-layer-turquoise-300 hover:bg-layer-turquoise-400 hover:border-layer-turquoise-400 text-white transition-colors inline-block flex-grow sm:flex-grow-0 text-center w-full sm:w-auto"
-        href="/map"
+        href="/filters"
         onClick={[Function]}
         onMouseEnter={[Function]}
       >
