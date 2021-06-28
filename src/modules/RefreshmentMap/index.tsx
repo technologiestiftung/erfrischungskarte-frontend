@@ -133,25 +133,17 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
             <SharingOverlay />
           </>
         )}
-        {mappedQuery.showWind !== false && (
-          <FilledPolygonLayer
-            {...WIND_DATA}
-            fillColorProperty={activeHour.vectorTilesetKey}
-            beforeId={
-              (mappedQuery.showTemperature !== false && TEMPERATURE_DATA.id) ||
-              undefined
-            }
-          />
-        )}
-        {mappedQuery.showTemperature !== false && (
-          <FilledPolygonLayer
-            {...TEMPERATURE_DATA}
-            fillColorProperty={activeHour.vectorTilesetKey}
-            beforeId={'shade-10'}
-          />
-        )}
+        <FilledPolygonLayer
+          {...WIND_DATA}
+          fillColorProperty={activeHour.vectorTilesetKey}
+          isVisible={mappedQuery.showWind !== false}
+        />
+        <FilledPolygonLayer
+          {...TEMPERATURE_DATA}
+          fillColorProperty={activeHour.vectorTilesetKey}
+          isVisible={mappedQuery.showTemperature !== false}
+        />
         {hasWebPSupport &&
-          mappedQuery.showShadows !== false &&
           hourKeys.map((key) => (
             <RasterLayer
               key={`shade-${key}`}
@@ -160,10 +152,10 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
               bounds={[13.06, 52.33, 13.77, 52.69]}
               minZoom={14}
               opacity={key !== activeHourKey ? 0 : 0.5}
-              beforeId={EXTRUDED_BUILDINGS_DATA.id}
+              isVisible={mappedQuery.showShadows !== false}
             />
           ))}
-        <ExtrusionLayer {...EXTRUDED_BUILDINGS_DATA} beforeId={POI_DATA.id} />
+        <ExtrusionLayer {...EXTRUDED_BUILDINGS_DATA} />
         <MapPointLayer
           {...POI_DATA}
           activePropertyKeys={mappedQuery.places

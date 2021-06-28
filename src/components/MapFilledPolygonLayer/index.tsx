@@ -2,27 +2,26 @@ import { FC } from 'react'
 import { Source, Layer, LayerProps } from 'react-map-gl'
 export interface MapFilledPolygonLayerType {
   id: string
-  beforeId?: string
   tileset: {
     url: string
     layerName: string
   }
   fillColorMap: Map<number | string, string>
   fillColorProperty: string
+  isVisible?: boolean
 }
 
 export const MapFilledPolygonLayer: FC<MapFilledPolygonLayerType> = ({
   id,
-  beforeId,
   tileset,
   fillColorMap,
   fillColorProperty,
+  isVisible = true,
 }) => {
   const flattenedFillColorMap = Array.from(fillColorMap).flat(2)
 
   const layerStyle: LayerProps = {
     id,
-    beforeId,
     type: 'fill',
     'source-layer': tileset.layerName,
     paint: {
@@ -34,6 +33,9 @@ export const MapFilledPolygonLayer: FC<MapFilledPolygonLayerType> = ({
         'rgba(255,255,255,0)',
       ],
       'fill-opacity': 0.5,
+    },
+    layout: {
+      visibility: isVisible ? 'visible' : 'none',
     },
   }
 

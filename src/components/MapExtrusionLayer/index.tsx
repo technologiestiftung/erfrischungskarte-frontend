@@ -8,30 +8,29 @@ export interface MapExtrusionLayerType
   extends Required<RequiredLayerTypes>,
     Required<RequiredSourceTypes> {
   sourceLayer: string
-  beforeId?: string
   extrusionProperties: {
     base: string
     height: string
   }
   extrusionColor: string
+  isVisible?: boolean
 }
 
 export const MapExtrusionLayer: FC<MapExtrusionLayerType> = ({
   id,
-  beforeId,
   url,
   source,
   sourceLayer,
   minzoom,
   extrusionProperties,
   extrusionColor,
+  isVisible = true,
 }) => {
   return (
     <>
       <Source id={id} type="vector" url={url} />
       <Layer
         id={id}
-        beforeId={beforeId}
         type="fill-extrusion"
         source={source}
         source-layer={sourceLayer}
@@ -41,6 +40,9 @@ export const MapExtrusionLayer: FC<MapExtrusionLayerType> = ({
           'fill-extrusion-height': ['get', extrusionProperties.height],
           'fill-extrusion-base': ['get', extrusionProperties.base],
           'fill-extrusion-opacity': 1,
+        }}
+        layout={{
+          visibility: isVisible ? 'visible' : 'none',
         }}
       />
     </>
