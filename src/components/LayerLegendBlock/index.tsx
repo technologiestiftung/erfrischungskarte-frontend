@@ -9,6 +9,8 @@ export interface LayerLegendBlockType {
   description: string
   icon: ReactNode
   legendFigure: ReactNode | HTMLElement
+  layerIsActive?: boolean
+  layerIsDisabled?: boolean
   handleToggle: () => void
 }
 
@@ -17,6 +19,8 @@ export const LayerLegendBlock: FC<LayerLegendBlockType> = ({
   description,
   icon,
   legendFigure,
+  layerIsActive = true,
+  layerIsDisabled = false,
   handleToggle,
 }) => {
   const hasMobileSize = useHasMobileSize()
@@ -53,6 +57,8 @@ export const LayerLegendBlock: FC<LayerLegendBlockType> = ({
           <FilterChip
             ariaLabel={`${title} an oder auswählen`}
             otherClassNames="w-full"
+            isSelected={layerIsActive}
+            isDisabled={layerIsDisabled}
             handleClick={handleToggle}
           >
             {legendFigure}

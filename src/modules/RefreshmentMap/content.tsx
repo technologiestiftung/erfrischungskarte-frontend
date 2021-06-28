@@ -54,10 +54,9 @@ export const HOURS: HourDataType = {
     shadeTilesetId: 'mapbox://technologiestiftung.6pkd1c22',
   },
   '11': {
-    // incomplete, needs to be replaced!
     displayName: '11 Uhr',
     vectorTilesetKey: '11Uhr',
-    shadeTilesetId: 'mapbox://technologiestiftung.cgvhefjx',
+    shadeTilesetId: 'mapbox://technologiestiftung.a7c0dvqi',
   },
   '12': {
     displayName: '12 Uhr',
@@ -87,7 +86,7 @@ export const HOURS: HourDataType = {
   '17': {
     displayName: '17 Uhr',
     vectorTilesetKey: '17Uhr',
-    shadeTilesetId: 'mapbox://technologiestiftung.9vqcrksk',
+    shadeTilesetId: 'mapbox://technologiestiftung.77hu0gps',
   },
   '18': {
     displayName: '18 Uhr',
@@ -119,8 +118,8 @@ export const WIND_DATA: Pick<
 > = {
   id: 'wind-data',
   tileset: {
-    url: 'mapbox://technologiestiftung.9s5puknr',
-    layerName: 'wind_data-221dgh',
+    url: 'mapbox://technologiestiftung.1hrk87mv',
+    layerName: 'wind_data-dgvmuc',
   },
   fillColorMap: new Map([
     // Note: the mapping here is different than the one for the temperature data.
@@ -138,8 +137,8 @@ export const TEMPERATURE_DATA: Pick<
 > = {
   id: 'temperature-data',
   tileset: {
-    url: 'mapbox://technologiestiftung.1ejpa7pd',
-    layerName: 'temperature_data-11wkut',
+    url: 'mapbox://technologiestiftung.4e9mfohk',
+    layerName: 'temperature_data-5k7yue',
   },
   fillColorMap: new Map([
     [1, colors['layer-blue'][400]],
@@ -175,7 +174,7 @@ export type PoiCategory =
   | 'Freibad'
   | 'Schwimmhalle'
 
-export const POI_CATEGORIES: Map<PoiCategory, string> = new Map([
+export const POI_CATEGORY_COLOR_MAP: Map<PoiCategory, string> = new Map([
   ['Badestelle', colors['poi-darkblue']],
   ['Strandbad', colors['poi-darkblue']],
   ['Freibad', colors['poi-darkblue']],
@@ -187,6 +186,19 @@ export const POI_CATEGORIES: Map<PoiCategory, string> = new Map([
   ['Sitzbank', colors['poi-yellow']],
   ['Picknicktisch', colors['poi-red']],
 ])
+
+export const POI_CATEGORY_ID_MAP: { [key in PoiCategory]: number } = {
+  Badestelle: 1,
+  Strandbad: 2,
+  Freibad: 3,
+  Schwimmhalle: 4,
+  Wasserspielplatz: 5,
+  Trinkbrunnen: 6,
+  Brunnen: 7,
+  Gruenanlage: 8,
+  Sitzbank: 9,
+  Picknicktisch: 10,
+}
 
 export interface PoiDataType extends MapPointLayerType {
   id: string
@@ -202,18 +214,18 @@ export const POI_DATA: PoiDataType = {
   },
   minzoom: 11.5,
   fillColorProperty: 'category',
-  fillColorMap: POI_CATEGORIES,
+  fillColorMap: POI_CATEGORY_COLOR_MAP,
   activePropertyKeys: [
-    'Sitzbank',
-    'Picknicktisch',
-    'Gruenanlage',
-    'Trinkbrunnen',
-    'Brunnen',
-    'Wasserspielplatz',
     'Badestelle',
     'Strandbad',
     'Freibad',
     'Schwimmhalle',
+    'Wasserspielplatz',
+    'Trinkbrunnen',
+    'Brunnen',
+    'Gruenanlage',
+    'Sitzbank',
+    'Picknicktisch',
   ],
 }
 
@@ -221,16 +233,19 @@ export const ABOUT_INTRODUCTION_TEXT = (
   <>
     Der Klimawandel sorgt an vielen Orten für immer heißeres, trockenes Wetter.
     Auch Berlin erlebte in den vergangenen Jahren so viele Hitzetage wie nie
-    zuvor.<br></br>
+    zuvor.
+    <br />
+    <br />
     Wo, wann und wie ihr an solchen Tagen Erfrischung findet, seht ihr in dieser
     Karte, denn aufgrund der differenzierten Topographie kann es zum Teil
-    erhebliche Unterschiede innerhalb des Stadtgebietes geben. Sie zeigt euch
-    für jede Stunde von 10 bis 21 Uhr, wo es tendeziell eher kühl ist, wo für
-    gewöhnlich eine frische Brise weht und wo gerade Schatten ist. Entdeckt
+    erhebliche Unterschiede innerhalb des Stadtgebietes geben. Die Karte zeigt
+    euch für jede Stunde von 10 bis 21 Uhr, wo es tendeziell eher kühl ist, wo
+    für gewöhnlich eine frische Brise weht und wo gerade Schatten ist. Entdeckt
     außerdem erfrischende Orte, wie Badestellen, Trinkbrunnen und Parks. Mit
     einem Klick über die Teilenfunktion könnt ihr euren neuen Lieblingsplatz mit
-    anderen teilen.<br></br>
-    <br></br>
+    anderen teilen.
+    <br />
+    <br />
     Diese Anwendung basiert komplett auf offenen Daten, ein Großteil davon sind
     Verwaltungsdaten. Open Data ist heute ein wichtige Bestandteil im
     Verwaltungshandeln Berlins und schafft nicht nur Transparenz und Offenheit,
@@ -568,7 +583,7 @@ export const LAYER_LEGEND_ITEMS: {
 } = {
   shade: {
     title: 'Schatten',
-    description: 'Zeigt, wie die Schatten fallen.',
+    description: 'Zeigt, wohin die Schatten fallen.',
     icon: <ShadeIcon />,
     legendFigure: (
       <LayerLegendFigure maxLabel={maxShadeLabel} minLabel={minShadeLabel}>
@@ -599,7 +614,7 @@ export const LAYER_LEGEND_ITEMS: {
   },
   wind: {
     title: 'Windige Bereiche',
-    description: 'Zeigt die vergleichsweise windigsten Bereiche in der Stadt.',
+    description: 'Zeigt, wo vergleichsweise viel kühler Wind weht.',
     icon: <WindIcon />,
     legendFigure: (
       <LayerLegendFigure maxLabel="Windig" minLabel="Weniger windig">
@@ -616,7 +631,7 @@ export const LAYER_LEGEND_ITEMS: {
 }
 
 export const SHADE_SUPPORT_NOTE = (
-  <p className="text-sm">
+  <p className="text-xs">
     Leider können die Schatten auf diesem Endgerät oder in diesem Browser nicht
     dargestellt werden. Bitte versuche ein anderes Endgerät oder einen anderen
     Browser, um die Karte zu öffnen.
