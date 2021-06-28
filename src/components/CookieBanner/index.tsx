@@ -29,7 +29,7 @@ export const CookieBanner: React.FC<{
           'flex justify-between z-50',
         ].join(' ')}
       >
-        <p className="max-w-none sm:pr-4">
+        <p className="max-w-none sm:pr-4 text-gray-600">
           Diese Webseite verwendet Cookies, um bestimmte Funktionen zu
           ermöglichen und das Angebot zu verbessern. Indem Sie hier fortfahren,
           stimmen Sie der Nutzung von Cookies zu. &nbsp;
@@ -37,6 +37,7 @@ export const CookieBanner: React.FC<{
             href="https://www.technologiestiftung-berlin.de/de/datenschutz/"
             target="_blank"
             rel="noopener noreferrer"
+            className="text-gray-800 underline"
           >
             Weitere Informationen
           </a>
