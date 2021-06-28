@@ -124,7 +124,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
                       className="text-sm text-gray-400 italic"
                     >
                       ( 
-                      kühl und schattig
+                      kühl, viel Schatten
                        )
                     </span>
                   </div>
@@ -169,7 +169,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
                       className="text-sm text-gray-400 italic"
                     >
                       ( 
-                      vergleichsweise kühl und windig
+                      frische Brise, Ort zum Planschen
                        )
                     </span>
                   </div>
@@ -214,7 +214,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
                       className="text-sm text-gray-400 italic"
                     >
                       ( 
-                      vergleichsweise kühl und schattig
+                      vergleichsweise kühl, Schattenplatz
                        )
                     </span>
                   </div>
@@ -245,7 +245,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
                   <h6
                     className="text-sm leading-4 mb-1"
                   >
-                    Schattenplatz auf der Insel der Jugend
+                    Bank auf der Insel der Jugend
                   </h6>
                   <div
                     className="flex flex-wrap"
@@ -259,7 +259,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
                       className="text-sm text-gray-400 italic"
                     >
                       ( 
-                      abends kühl und windig, schattig
+                      abends kühl, frische Brise, Schattenplatz
                        )
                     </span>
                   </div>
@@ -304,7 +304,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
                       className="text-sm text-gray-400 italic"
                     >
                       ( 
-                      kühl, windig und schattig
+                      kühl, frische Brise, Schattenplatz
                        )
                     </span>
                   </div>
@@ -349,7 +349,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
                       className="text-sm text-gray-400 italic"
                     >
                       ( 
-                      sonnig und abends kühl
+                      sonnig, abends kühl
                        )
                     </span>
                   </div>
@@ -394,7 +394,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
                       className="text-sm text-gray-400 italic"
                     >
                       ( 
-                      windig und schattig
+                      frische Brise, viel Schatten
                        )
                     </span>
                   </div>
@@ -439,7 +439,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
                       className="text-sm text-gray-400 italic"
                     >
                       ( 
-                      vergleichsweise windig und abends kühl
+                      frische Brise, abends kühl
                        )
                     </span>
                   </div>
@@ -484,7 +484,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
                       className="text-sm text-gray-400 italic"
                     >
                       ( 
-                      vergleichsweise kühl und schattig
+                      vergleichsweise kühl
                        )
                     </span>
                   </div>
@@ -529,7 +529,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
                       className="text-sm text-gray-400 italic"
                     >
                       ( 
-                      vormittags kühl, zum Planschen
+                      vormittags kühl, Ort zum Planschen
                        )
                     </span>
                   </div>
@@ -574,7 +574,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
                       className="text-sm text-gray-400 italic"
                     >
                       ( 
-                      kühl und windig
+                      kühl, frische Brise
                        )
                     </span>
                   </div>
@@ -619,7 +619,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
                       className="text-sm text-gray-400 italic"
                     >
                       ( 
-                      zum Planschen
+                      Ort zum Planschen
                        )
                     </span>
                   </div>
@@ -664,7 +664,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
                       className="text-sm text-gray-400 italic"
                     >
                       ( 
-                      vergleichsweise kühl und windig
+                      vergleichsweise kühl, frische Brise
                        )
                     </span>
                   </div>
@@ -709,7 +709,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
                       className="text-sm text-gray-400 italic"
                     >
                       ( 
-                      kühl und windig
+                      kühl, frische Brise, Ort zum Planschen
                        )
                     </span>
                   </div>
