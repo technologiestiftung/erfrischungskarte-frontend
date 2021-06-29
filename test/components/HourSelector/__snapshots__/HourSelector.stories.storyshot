@@ -400,7 +400,6 @@ exports[`Storyshots UI Elements/HourSelector Default 1`] = `
           </g>
           <g
             aria-label="night-indicator"
-            role="button"
             transform="translate(8.19678, 79.9568)"
           >
             <rect
