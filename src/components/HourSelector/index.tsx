@@ -229,7 +229,6 @@ export const HourSelector: FC<HourSelectorPropType> = ({ activeHourKey }) => {
               )
             })}
             <g
-              role="button"
               aria-label="night-indicator"
               className={styles.nightIndicator}
               transform={`translate(${8.19678}, ${79.9568})`}

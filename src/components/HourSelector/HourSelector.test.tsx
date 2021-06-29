@@ -109,6 +109,13 @@ describe('HourSelector', () => {
 
     await waitFor(() => expect(activeEl).toBeInTheDocument())
   })
+  test('should render the night indicator', async () => {
+    render(<HourSelector activeHourKey="10" />)
+
+    const nightIndicator = screen.getByLabelText('night-indicator')
+
+    await waitFor(() => expect(nightIndicator).toBeInTheDocument())
+  })
   test('should call router replace when an item is clicked', async () => {
     const testReplace = jest.fn().mockResolvedValue(true)
     useRouter.mockReturnValue({
