@@ -1,6 +1,5 @@
 {
-  "name": "with-typescript-eslint-jest",
-  "author": "@erikdstock",
+  "name": "erfrischungskarte-frontend",
   "license": "MIT",
   "version": "1.0.0",
   "scripts": {
