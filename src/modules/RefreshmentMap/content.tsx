@@ -751,8 +751,8 @@ export const LAYER_LEGEND_ITEMS: {
     ),
   },
   wind: {
-    title: 'Windige Bereiche',
-    description: 'Zeigt, wo vergleichsweise viel kühler Wind weht.',
+    title: 'Frischer Wind',
+    description: 'Zeigt, wo vergleichsweise viel kalter Wind weht.',
     icon: <WindIcon />,
     legendFigure: (
       <LayerLegendFigure maxLabel="Windig" minLabel="Weniger windig">
