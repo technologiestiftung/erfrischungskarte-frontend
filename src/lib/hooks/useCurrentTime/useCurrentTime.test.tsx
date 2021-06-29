@@ -40,7 +40,7 @@ describe('useCurrentTime', () => {
     )
 
     render(<TestComponent />)
-    expect(onSuccess).toHaveBeenLastCalledWith(21)
+    expect(onSuccess).toHaveBeenLastCalledWith(20)
   })
   test('should round up from XX:30', () => {
     const onSuccess = jest.fn()

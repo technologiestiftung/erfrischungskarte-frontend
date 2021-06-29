@@ -52,7 +52,7 @@ const parseVisibleHour = (
   val: number | undefined | null
 ): PageQueryType['visibleHour'] | null => {
   if (!val) return null
-  const allHours = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
+  const allHours = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
   if (allHours.includes(val)) return val as PageQueryType['visibleHour']
   return null
 }

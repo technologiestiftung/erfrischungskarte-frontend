@@ -36,7 +36,6 @@ export type HourType =
   | '18'
   | '19'
   | '20'
-  | '21'
 
 export type HourDataType = {
   [key in HourType]: {
@@ -102,11 +101,6 @@ export const HOURS: HourDataType = {
     displayName: '20 Uhr',
     vectorTilesetKey: '20Uhr',
     shadeTilesetId: 'mapbox://technologiestiftung.9gfkjbpe',
-  },
-  '21': {
-    displayName: '21 Uhr',
-    vectorTilesetKey: '21Uhr',
-    shadeTilesetId: 'mapbox://technologiestiftung.ahaboiuz',
   },
 }
 
@@ -234,7 +228,7 @@ export const ABOUT_INTRODUCTION_TEXT = (
     Der Klimawandel sorgt an vielen Orten für immer heißeres, trockeneres
     Wetter. Auch Berlin erlebte in den vergangenen Jahren so viele Hitzetage wie
     nie zuvor. Wo, wann und wie ihr an solchen Tagen Erfrischung findet, seht
-    ihr in dieser Karte. Sie zeigt euch für jede Stunde von 10 bis 21 Uhr, wo es
+    ihr in dieser Karte. Sie zeigt euch für jede Stunde von 10 bis 20 Uhr, wo es
     tendenziell eher kühl ist, wo für gewöhnlich eine frische Brise weht und wo
     gerade Schatten ist. Aufgrund der differenzierten Topographie kann es zum
     Teil erhebliche Unterschiede innerhalb des Stadtgebietes geben. Entdeckt
