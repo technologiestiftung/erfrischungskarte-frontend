@@ -2,12 +2,13 @@ import { FC } from 'react'
 import { Source, Layer, LayerProps, SourceProps } from 'react-map-gl'
 
 type RequiredLayerTypes = Pick<LayerProps, 'id' | 'source'>
-type RequiredSourceTypes = Pick<SourceProps, 'url' | 'minzoom'>
+type RequiredSourceTypes = Pick<SourceProps, 'url'>
 
 export interface MapExtrusionLayerType
   extends Required<RequiredLayerTypes>,
     Required<RequiredSourceTypes> {
   sourceLayer: string
+  minzoom?: SourceProps['minzoom']
   extrusionProperties: {
     base: string
     height: string

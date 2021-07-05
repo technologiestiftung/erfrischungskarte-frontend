@@ -50,6 +50,14 @@ interface CustomMapEventType extends MapEvent {
   features: MapFeatureType[]
 }
 
+const MAP_CONFIG = {
+  minZoom: 11.5,
+  maxZoom: 17,
+  defaultZoom: 14,
+  defaultLatitude: 52.520952,
+  defaultLongitude: 13.400033,
+}
+
 export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
   const hasMobileSize = useHasMobileSize()
   const hasWebPSupport = useHasWebPSupport()
@@ -121,13 +129,13 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
         width={windowWidth}
         height={windowHeight}
         staticViewportProps={{
-          minZoom: 11.5,
-          maxZoom: 18,
+          minZoom: MAP_CONFIG.minZoom,
+          maxZoom: MAP_CONFIG.maxZoom,
         }}
         initialViewportProps={{
-          latitude: pageProps.query.latitude || 52.520952,
-          longitude: pageProps.query.longitude || 13.400033,
-          zoom: pageProps.query.zoom || 12,
+          latitude: pageProps.query.latitude || MAP_CONFIG.defaultLatitude,
+          longitude: pageProps.query.longitude || MAP_CONFIG.defaultLongitude,
+          zoom: pageProps.query.zoom || MAP_CONFIG.defaultZoom,
         }}
         interactiveLayerIds={[POI_DATA.id]}
         handleMouseLeave={handleMouseLeave}
@@ -159,14 +167,18 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
               id={`shade-${key}`}
               url={HOURS[key].shadeTilesetId}
               bounds={[13.06, 52.33, 13.77, 52.69]}
-              minZoom={14}
+              minZoom={MAP_CONFIG.defaultZoom}
               opacity={key !== activeHourKey ? 0 : 0.5}
               isVisible={mappedQuery.showShadows !== false}
               beforeId={EXTRUDED_BUILDINGS_DATA.id}
             />
           ))}
-        <ExtrusionLayer {...EXTRUDED_BUILDINGS_DATA} />
-        <MapPointLayer {...POI_DATA} activePropertyKeys={activeCategories} />
+        <ExtrusionLayer {...EXTRUDED_BUILDINGS_DATA} minzoom={15.5} />
+        <MapPointLayer
+          {...POI_DATA}
+          activePropertyKeys={activeCategories}
+          minzoom={MAP_CONFIG.minZoom}
+        />
         {poiTooltipCoordinates &&
           poiTooltipContent &&
           poiTooltipContentIsNotEmpty && (
