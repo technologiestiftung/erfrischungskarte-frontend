@@ -52,7 +52,7 @@ interface CustomMapEventType extends MapEvent {
 
 const MAP_CONFIG = {
   minZoom: 11.5,
-  maxZoom: 17,
+  maxZoom: 19,
   defaultZoom: 14,
   defaultLatitude: 52.520952,
   defaultLongitude: 13.400033,
