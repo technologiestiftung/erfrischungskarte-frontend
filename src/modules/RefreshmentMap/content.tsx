@@ -148,7 +148,6 @@ export const EXTRUDED_BUILDINGS_DATA: MapExtrusionLayerType = {
   url: 'mapbox://mapbox.mapbox-streets-v8',
   source: 'composite',
   sourceLayer: 'building',
-  minzoom: 15.5,
   extrusionProperties: {
     base: 'min_height',
     height: 'height',
@@ -206,7 +205,6 @@ export const POI_DATA: PoiDataType = {
     url: 'mapbox://technologiestiftung.a9f6qix2',
     layerName: 'erfrischungskarte_poi-0mftmq',
   },
-  minzoom: 11.5,
   fillColorProperty: 'category',
   fillColorMap: POI_CATEGORY_COLOR_MAP,
   activePropertyKeys: [
