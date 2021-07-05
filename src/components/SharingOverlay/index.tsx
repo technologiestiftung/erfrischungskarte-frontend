@@ -1,6 +1,7 @@
 import { CrossIcon, SharingIcon } from '@components/Icons'
 import { useCopyToClipboard } from '@lib/hooks/useCopyToClipboard'
 import { mapRawQueryToState } from '@lib/utils/queryUtil'
+import { MAP_CONFIG } from '@modules/RefreshmentMap'
 import classNames from 'classnames'
 import { useRouter } from 'next/router'
 import { FC, ReactNode, useState } from 'react'
@@ -14,10 +15,14 @@ interface SharingOptionPropType {
 
 const getGoogleMapsLinkByQuery = (
   query: ReturnType<typeof mapRawQueryToState>
-): string =>
-  `https://www.google.com/maps/place/${query.latitude || ''},${
-    query.longitude || ''
-  },${query.zoom || ''}z`
+): string => {
+  const latLonString = `${query.latitude || MAP_CONFIG.defaultLatitude},${
+    query.longitude || MAP_CONFIG.defaultLongitude
+  }`
+  return `https://maps.google.com/?q=${latLonString}&ll=${latLonString}&z=${
+    query.zoom || MAP_CONFIG.defaultZoom
+  }`
+}
 
 export const SharingOption: FC<SharingOptionPropType> = ({
   title,
