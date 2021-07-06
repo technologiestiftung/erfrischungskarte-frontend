@@ -15,7 +15,7 @@ describe('mapRawQueryToState', () => {
       latitude: `${testLat}`,
       longitude: `${testLng}`,
       zoom: `${testZoom}`,
-      places: `[${testPlaces.join(',')}]`,
+      places: testPlaces.map((id) => id.toString()),
       showShadows: testShowShadows.toString(),
       showTemperature: testShowTemperature.toString(),
       showWind: testShowWind.toString(),
@@ -63,7 +63,7 @@ describe('mapRawQueryToState', () => {
   test('should return an array of numbers for places', () => {
     expect(
       mapRawQueryToState({
-        places: '[1,2,3,4]',
+        places: ['1', '2', '3', '4'],
       }).places
     ).toMatchObject([1, 2, 3, 4])
   })
@@ -78,9 +78,16 @@ describe('mapRawQueryToState', () => {
   test('should filter out places that are not valid', () => {
     expect(
       mapRawQueryToState({
-        places: '[1,null,"aa"]',
+        places: ['1', 'null', 'aa'],
       }).places
     ).toMatchObject([1])
+  })
+  test('should work with places as an array', () => {
+    expect(
+      mapRawQueryToState({
+        places: ['1', '2', '3'],
+      }).places
+    ).toMatchObject([1, 2, 3])
   })
   test('should convert booleans to true, false or undefined', () => {
     expect(
@@ -107,18 +114,18 @@ describe('mapRawQueryToState', () => {
     expect(mapRawQueryToState({ visibleHour: '24' }).visibleHour).toBe(
       undefined
     )
-    const allHours = [12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
+    const allHours = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
     allHours.forEach((hour) => {
       expect(mapRawQueryToState({ visibleHour: `${hour}` }).visibleHour).toBe(
         hour
       )
     })
   })
-  test('should filter out places that are not valid', () => {
+  test('should only accept string search terms', () => {
     expect(
       mapRawQueryToState({
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignoressss
+        // @ts-ignore
         searchTerm: 123,
       }).searchTerm
     ).toBe(undefined)

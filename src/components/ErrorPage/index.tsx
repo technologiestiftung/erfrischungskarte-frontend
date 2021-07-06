@@ -12,14 +12,14 @@ export const ErrorPage: FC<ErrorPagePropType> = ({ statusCode, message }) => {
 
   return (
     <div
-      className="flex flex-col items-center justify-center relative gap-2 sm:gap-4"
+      className="flex flex-col items-center justify-center relative"
       style={{
         height: hasMobileSize
-          ? 'calc(var(--screenSemiHeight) - (var(--sidebarPadding, 24px) * 2) - 32px)'
+          ? 'calc(var(--screenHeight) - (var(--sidebarPadding, 24px) * 2) - 80px)'
           : 'calc(var(--screenHeight) - (var(--sidebarPadding, 24px) * 2) - 32px)',
       }}
     >
-      <h1 className="text-5xl sm:text-7xl">{statusCode}</h1>
+      <h1 className="text-5xl sm:text-7xl mb-2 sm:mb-4">{statusCode}</h1>
       <p className="px-8 text-center">{message}</p>
       <InternalLink
         href="/"

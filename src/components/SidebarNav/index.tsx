@@ -1,11 +1,6 @@
 import classNames from 'classnames'
 import { FC, ReactNode } from 'react'
-import {
-  FunnelIcon,
-  InfoIcon,
-  MagnifyingGlassIcon,
-  CrossIcon,
-} from '@components/Icons'
+import { FunnelIcon, InfoIcon, MagnifyingGlassIcon } from '@components/Icons'
 import { InternalLink } from '@components/InternalLink'
 
 interface SidebarNavPropType {
@@ -72,7 +67,7 @@ const SidebarNavLink: FC<SidebarNavLinkPropType> = ({
         isActive && 'bg-gray-800 text-white active'
       )}
     >
-      {isActive ? <CrossIcon /> : icon}
+      {icon}
     </InternalLink>
   </li>
 )

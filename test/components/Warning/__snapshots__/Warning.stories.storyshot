@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots UI Elements/Warning With Long Text Content 1`] = `
+<div
+  className="flex max-w-prose p-3"
+>
+  <div
+    className="flex-grow-0 text-[#ff7300]"
+  >
+    <svg
+      className="h-6 w-6"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+      />
+    </svg>
+  </div>
+  <div
+    className="ml-2 text-left"
+  >
+    <p>
+      A lot went wrong here. That's why there is a a long warning message. Very, very long message. A lot went wrong here. That's why there is a a long warning message. Very, very long message. A lot went wrong here. That's why there is a a long warning message. Very, very long message. A lot went wrong here. That's why there is a a long warning message. Very, very long message.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots UI Elements/Warning With Short Text Content 1`] = `
+<div
+  className="flex max-w-prose p-3"
+>
+  <div
+    className="flex-grow-0 text-[#ff7300]"
+  >
+    <svg
+      className="h-6 w-6"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+      />
+    </svg>
+  </div>
+  <div
+    className="ml-2 text-left"
+  >
+    <p>
+      I am a short warning text.
+    </p>
+  </div>
+</div>
+`;

@@ -1,0 +1,3 @@
+.mapboxgl-popup-content {
+  @apply rounded shadow-md p-4
+}

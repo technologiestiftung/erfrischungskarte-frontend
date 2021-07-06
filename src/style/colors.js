@@ -30,6 +30,8 @@ const colors = {
   'poi-yellow': '#FED914',
   'poi-red': '#F63333',
   'poi-turquoise': '#83E5E2',
+  'night-indicator-sky': '#4F6D95',
+  'night-indicator-moon': '#FFFADD',
 }
 
 module.exports = colors

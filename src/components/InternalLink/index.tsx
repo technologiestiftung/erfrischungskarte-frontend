@@ -8,15 +8,6 @@ interface InternalLinkPropType extends LinkProps {
   className?: string
 }
 
-const serialize = (obj: Record<string, unknown>): string => {
-  const str = []
-  for (const p in obj)
-    if (Object.prototype.hasOwnProperty.call(obj, p)) {
-      str.push(encodeURIComponent(p) + '=' + encodeURIComponent(String(obj[p])))
-    }
-  return str.join('&')
-}
-
 export const InternalLink: FC<InternalLinkPropType> = ({
   href,
   children,
@@ -24,14 +15,13 @@ export const InternalLink: FC<InternalLinkPropType> = ({
   ...rest
 }) => {
   const { query } = useRouter()
-  const cleanedQuery = mapRawQueryToState(query)
-  const queryAsString = serialize(cleanedQuery)
+  const mappedQuery = mapRawQueryToState(query)
 
   return (
     <Link
       href={{
         pathname: href,
-        query: queryAsString,
+        query: mappedQuery,
       }}
       {...rest}
     >

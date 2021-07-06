@@ -3,6 +3,8 @@ import classNames from 'classnames'
 import { useRouter } from 'next/router'
 import React, { FC, useEffect, useState } from 'react'
 import { useHasMobileSize } from '@lib/hooks/useHasMobileSize'
+import { InternalLink } from '@components/InternalLink'
+import { CrossIcon } from '@components/Icons'
 
 interface SidebarPropType {
   title?: string
@@ -14,7 +16,7 @@ export const Sidebar: FC<SidebarPropType> = ({ title, children }) => {
   const [hasScrolled, setHasScrolled] = useState<boolean>(false)
   const isOpened = pathname !== '/' && pathname !== '/map'
   const cssVariables = {
-    '--sidebarWidth': hasMobileSize ? '100vw' : '400px',
+    '--sidebarWidth': hasMobileSize ? '100vw' : '420px',
     '--sidebarPadding': hasMobileSize ? '16px' : '24px',
   } as React.CSSProperties
 
@@ -38,7 +40,7 @@ export const Sidebar: FC<SidebarPropType> = ({ title, children }) => {
       <aside
         className={classNames(
           'fixed transform z-10',
-          'transition inset-0 opacity-100',
+          'transition-all inset-0 opacity-100',
           hasMobileSize ? 'top-auto bottom-16' : 'right-auto',
           !isOpened && hasMobileSize && 'opacity-0 pointer-events-none'
         )}
@@ -47,7 +49,9 @@ export const Sidebar: FC<SidebarPropType> = ({ title, children }) => {
           padding: 'var(--sidebarPadding, 20px)',
           paddingRight: hasMobileSize ? 'var(--sidebarPadding, 20px)' : 0,
           height: hasMobileSize
-            ? 'var(--screenSemiHeight)'
+            ? pathname === '/filters' || pathname === '/map'
+              ? 'var(--screenSemiHeight)'
+              : 'calc(var(--screenHeight) - 64px)'
             : 'var(--screenHeight)',
           transform: classNames(
             !isOpened &&
@@ -67,16 +71,27 @@ export const Sidebar: FC<SidebarPropType> = ({ title, children }) => {
           )}
         >
           {title && (
-            <h1
+            <header
               className={classNames(
                 'sticky inset-0 bottom-auto transition',
-                'p-6 sm:p-8 pb-4 sm:pb-6',
+                'p-6 pt-4 sm:p-8 pb-4 sm:pb-6 z-10',
                 'text-xl sm:text-2xl font-bold bg-white',
                 hasScrolled && 'shadow-md'
               )}
             >
-              {title}
-            </h1>
+              <h1>{title}</h1>
+              <InternalLink
+                href="/map"
+                className={classNames(
+                  'absolute top-3 sm:top-7 right-5 sm:right-7 cursor-pointer',
+                  'w-10 h-10 grid place-content-center rounded-full',
+                  'focus:outline-none focus:ring-2 focus:ring-gray-800',
+                  'hover:bg-gray-200 transition'
+                )}
+              >
+                <CrossIcon />
+              </InternalLink>
+            </header>
           )}
           <div
             className="p-6 sm:p-8 pt-0 sm:pt-0"

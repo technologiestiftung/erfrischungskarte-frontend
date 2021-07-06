@@ -1,0 +1,834 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Pages/Search Default 1`] = `
+<div
+  style={
+    Object {
+      "--sidebarPadding": "24px",
+      "--sidebarWidth": "420px",
+    }
+  }
+>
+  <aside
+    className="fixed transform z-10 transition-all inset-0 opacity-100 right-auto"
+    style={
+      Object {
+        "height": "var(--screenHeight)",
+        "padding": "var(--sidebarPadding, 20px)",
+        "paddingRight": 0,
+        "transform": "translateX(0)",
+        "width": "var(--sidebarWidth, 320px)",
+      }
+    }
+  >
+    <div
+      className="rounded bg-white shadow-lg relative h-full overflow-x-hidden overflow-y-auto"
+      id="sidebar-scroll-container"
+    >
+      <header
+        className="sticky inset-0 bottom-auto transition p-6 pt-4 sm:p-8 pb-4 sm:pb-6 z-10 text-xl sm:text-2xl font-bold bg-white"
+      >
+        <h1>
+          Suche
+        </h1>
+        <a
+          className="absolute top-3 sm:top-7 right-5 sm:right-7 cursor-pointer w-10 h-10 grid place-content-center rounded-full focus:outline-none focus:ring-2 focus:ring-gray-800 hover:bg-gray-200 transition"
+          href="/map"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+        >
+          <svg
+            fill="none"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6 6L18 18M6 18L18 6L6 18Z"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+            />
+          </svg>
+        </a>
+      </header>
+      <div
+        className="p-6 sm:p-8 pt-0 sm:pt-0"
+        style={
+          Object {
+            "minHeight": "calc(var(--screenHeight) - (var(--sidebarPadding, 24px) * 2) - 88px)",
+          }
+        }
+      >
+        <div>
+          <h4
+            className="font-bold text-xl hidden sm:block"
+          >
+            Standort
+          </h4>
+          <p
+            className="text-sm text-gray-500 hidden sm:block"
+          >
+            Finde deinen Bezirk, deine Straße oder einen anderen Ort in Berlin.
+          </p>
+          <input
+            className="block px-3 py-2 border rounded border-gray-400 w-full my-4 focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-2 focus:ring-offset-white"
+            onChange={[Function]}
+            placeholder="Gib hier einen Ort an"
+            type="text"
+            value=""
+          />
+          <h5
+            className="font-bold text-sm mb-2"
+          >
+            Vorschläge für den Start:
+          </h5>
+          <ul>
+            <li>
+              <button
+                className="flex items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "width": "calc(100% + 32px)",
+                  }
+                }
+              >
+                <span
+                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2 mr-3"
+                  style={
+                    Object {
+                      "backgroundColor": "#85B858",
+                    }
+                  }
+                />
+                <div
+                  className="pb-2 border-b border-gray-300 flex-grow border-dashed group-hover:border-opacity-0 group-focus:border-opacity-0 transition"
+                >
+                  <h6
+                    className="text-sm leading-4 mb-1"
+                  >
+                    Volkspark Prenzlauer Berg
+                  </h6>
+                  <div
+                    className="flex flex-wrap"
+                  >
+                    <span
+                      className="text-sm text-gray-500 inline-block mr-1"
+                    >
+                      Gruenanlage
+                    </span>
+                    <span
+                      className="text-sm text-gray-400 italic"
+                    >
+                      ( 
+                      kühl, viel Schatten
+                       )
+                    </span>
+                  </div>
+                </div>
+              </button>
+            </li>
+            <li>
+              <button
+                className="flex items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "width": "calc(100% + 32px)",
+                  }
+                }
+              >
+                <span
+                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2 mr-3"
+                  style={
+                    Object {
+                      "backgroundColor": "#83E5E2",
+                    }
+                  }
+                />
+                <div
+                  className="pb-2 border-b border-gray-300 flex-grow border-dashed group-hover:border-opacity-0 group-focus:border-opacity-0 transition"
+                >
+                  <h6
+                    className="text-sm leading-4 mb-1"
+                  >
+                    Wasserfall am Viktoriapark
+                  </h6>
+                  <div
+                    className="flex flex-wrap"
+                  >
+                    <span
+                      className="text-sm text-gray-500 inline-block mr-1"
+                    >
+                      Brunnen
+                    </span>
+                    <span
+                      className="text-sm text-gray-400 italic"
+                    >
+                      ( 
+                      frische Brise, Ort zum Planschen
+                       )
+                    </span>
+                  </div>
+                </div>
+              </button>
+            </li>
+            <li>
+              <button
+                className="flex items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "width": "calc(100% + 32px)",
+                  }
+                }
+              >
+                <span
+                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2 mr-3"
+                  style={
+                    Object {
+                      "backgroundColor": "#F63333",
+                    }
+                  }
+                />
+                <div
+                  className="pb-2 border-b border-gray-300 flex-grow border-dashed group-hover:border-opacity-0 group-focus:border-opacity-0 transition"
+                >
+                  <h6
+                    className="text-sm leading-4 mb-1"
+                  >
+                    Picknickplatz in der Wuhlheide
+                  </h6>
+                  <div
+                    className="flex flex-wrap"
+                  >
+                    <span
+                      className="text-sm text-gray-500 inline-block mr-1"
+                    >
+                      Picknicktisch
+                    </span>
+                    <span
+                      className="text-sm text-gray-400 italic"
+                    >
+                      ( 
+                      vergleichsweise kühl, Schattenplatz
+                       )
+                    </span>
+                  </div>
+                </div>
+              </button>
+            </li>
+            <li>
+              <button
+                className="flex items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "width": "calc(100% + 32px)",
+                  }
+                }
+              >
+                <span
+                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2 mr-3"
+                  style={
+                    Object {
+                      "backgroundColor": "#FED914",
+                    }
+                  }
+                />
+                <div
+                  className="pb-2 border-b border-gray-300 flex-grow border-dashed group-hover:border-opacity-0 group-focus:border-opacity-0 transition"
+                >
+                  <h6
+                    className="text-sm leading-4 mb-1"
+                  >
+                    Bank auf der Insel der Jugend
+                  </h6>
+                  <div
+                    className="flex flex-wrap"
+                  >
+                    <span
+                      className="text-sm text-gray-500 inline-block mr-1"
+                    >
+                      Sitzbank
+                    </span>
+                    <span
+                      className="text-sm text-gray-400 italic"
+                    >
+                      ( 
+                      abends kühl, frische Brise, Schattenplatz
+                       )
+                    </span>
+                  </div>
+                </div>
+              </button>
+            </li>
+            <li>
+              <button
+                className="flex items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "width": "calc(100% + 32px)",
+                  }
+                }
+              >
+                <span
+                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2 mr-3"
+                  style={
+                    Object {
+                      "backgroundColor": "#FED914",
+                    }
+                  }
+                />
+                <div
+                  className="pb-2 border-b border-gray-300 flex-grow border-dashed group-hover:border-opacity-0 group-focus:border-opacity-0 transition"
+                >
+                  <h6
+                    className="text-sm leading-4 mb-1"
+                  >
+                    Bank am Neuen See im Tiergarten
+                  </h6>
+                  <div
+                    className="flex flex-wrap"
+                  >
+                    <span
+                      className="text-sm text-gray-500 inline-block mr-1"
+                    >
+                      Sitzbank
+                    </span>
+                    <span
+                      className="text-sm text-gray-400 italic"
+                    >
+                      ( 
+                      kühl, frische Brise, Schattenplatz
+                       )
+                    </span>
+                  </div>
+                </div>
+              </button>
+            </li>
+            <li>
+              <button
+                className="flex items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "width": "calc(100% + 32px)",
+                  }
+                }
+              >
+                <span
+                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2 mr-3"
+                  style={
+                    Object {
+                      "backgroundColor": "#85B858",
+                    }
+                  }
+                />
+                <div
+                  className="pb-2 border-b border-gray-300 flex-grow border-dashed group-hover:border-opacity-0 group-focus:border-opacity-0 transition"
+                >
+                  <h6
+                    className="text-sm leading-4 mb-1"
+                  >
+                    Tempelhofer Feld
+                  </h6>
+                  <div
+                    className="flex flex-wrap"
+                  >
+                    <span
+                      className="text-sm text-gray-500 inline-block mr-1"
+                    >
+                      Gruenanlage
+                    </span>
+                    <span
+                      className="text-sm text-gray-400 italic"
+                    >
+                      ( 
+                      sonnig, abends kühl
+                       )
+                    </span>
+                  </div>
+                </div>
+              </button>
+            </li>
+            <li>
+              <button
+                className="flex items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "width": "calc(100% + 32px)",
+                  }
+                }
+              >
+                <span
+                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2 mr-3"
+                  style={
+                    Object {
+                      "backgroundColor": "#85B858",
+                    }
+                  }
+                />
+                <div
+                  className="pb-2 border-b border-gray-300 flex-grow border-dashed group-hover:border-opacity-0 group-focus:border-opacity-0 transition"
+                >
+                  <h6
+                    className="text-sm leading-4 mb-1"
+                  >
+                    Pfaueninsel
+                  </h6>
+                  <div
+                    className="flex flex-wrap"
+                  >
+                    <span
+                      className="text-sm text-gray-500 inline-block mr-1"
+                    >
+                      Gruenanlage
+                    </span>
+                    <span
+                      className="text-sm text-gray-400 italic"
+                    >
+                      ( 
+                      frische Brise, viel Schatten
+                       )
+                    </span>
+                  </div>
+                </div>
+              </button>
+            </li>
+            <li>
+              <button
+                className="flex items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "width": "calc(100% + 32px)",
+                  }
+                }
+              >
+                <span
+                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2 mr-3"
+                  style={
+                    Object {
+                      "backgroundColor": "#85B858",
+                    }
+                  }
+                />
+                <div
+                  className="pb-2 border-b border-gray-300 flex-grow border-dashed group-hover:border-opacity-0 group-focus:border-opacity-0 transition"
+                >
+                  <h6
+                    className="text-sm leading-4 mb-1"
+                  >
+                    Freizeitpark Marienfelde
+                  </h6>
+                  <div
+                    className="flex flex-wrap"
+                  >
+                    <span
+                      className="text-sm text-gray-500 inline-block mr-1"
+                    >
+                      Gruenanlage
+                    </span>
+                    <span
+                      className="text-sm text-gray-400 italic"
+                    >
+                      ( 
+                      frische Brise, abends kühl
+                       )
+                    </span>
+                  </div>
+                </div>
+              </button>
+            </li>
+            <li>
+              <button
+                className="flex items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "width": "calc(100% + 32px)",
+                  }
+                }
+              >
+                <span
+                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2 mr-3"
+                  style={
+                    Object {
+                      "backgroundColor": "#85B858",
+                    }
+                  }
+                />
+                <div
+                  className="pb-2 border-b border-gray-300 flex-grow border-dashed group-hover:border-opacity-0 group-focus:border-opacity-0 transition"
+                >
+                  <h6
+                    className="text-sm leading-4 mb-1"
+                  >
+                    Britzer Garten
+                  </h6>
+                  <div
+                    className="flex flex-wrap"
+                  >
+                    <span
+                      className="text-sm text-gray-500 inline-block mr-1"
+                    >
+                      Gruenanlage
+                    </span>
+                    <span
+                      className="text-sm text-gray-400 italic"
+                    >
+                      ( 
+                      vergleichsweise kühl
+                       )
+                    </span>
+                  </div>
+                </div>
+              </button>
+            </li>
+            <li>
+              <button
+                className="flex items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "width": "calc(100% + 32px)",
+                  }
+                }
+              >
+                <span
+                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2 mr-3"
+                  style={
+                    Object {
+                      "backgroundColor": "#1D80C3",
+                    }
+                  }
+                />
+                <div
+                  className="pb-2 border-b border-gray-300 flex-grow border-dashed group-hover:border-opacity-0 group-focus:border-opacity-0 transition"
+                >
+                  <h6
+                    className="text-sm leading-4 mb-1"
+                  >
+                    Kinderbad im Bürgerpark Marzahn
+                  </h6>
+                  <div
+                    className="flex flex-wrap"
+                  >
+                    <span
+                      className="text-sm text-gray-500 inline-block mr-1"
+                    >
+                      Freibad
+                    </span>
+                    <span
+                      className="text-sm text-gray-400 italic"
+                    >
+                      ( 
+                      vormittags kühl, Ort zum Planschen
+                       )
+                    </span>
+                  </div>
+                </div>
+              </button>
+            </li>
+            <li>
+              <button
+                className="flex items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "width": "calc(100% + 32px)",
+                  }
+                }
+              >
+                <span
+                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2 mr-3"
+                  style={
+                    Object {
+                      "backgroundColor": "#1D80C3",
+                    }
+                  }
+                />
+                <div
+                  className="pb-2 border-b border-gray-300 flex-grow border-dashed group-hover:border-opacity-0 group-focus:border-opacity-0 transition"
+                >
+                  <h6
+                    className="text-sm leading-4 mb-1"
+                  >
+                    Badestelle am Tegler See
+                  </h6>
+                  <div
+                    className="flex flex-wrap"
+                  >
+                    <span
+                      className="text-sm text-gray-500 inline-block mr-1"
+                    >
+                      Badestelle
+                    </span>
+                    <span
+                      className="text-sm text-gray-400 italic"
+                    >
+                      ( 
+                      kühl, frische Brise
+                       )
+                    </span>
+                  </div>
+                </div>
+              </button>
+            </li>
+            <li>
+              <button
+                className="flex items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "width": "calc(100% + 32px)",
+                  }
+                }
+              >
+                <span
+                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2 mr-3"
+                  style={
+                    Object {
+                      "backgroundColor": "#DB8DFF",
+                    }
+                  }
+                />
+                <div
+                  className="pb-2 border-b border-gray-300 flex-grow border-dashed group-hover:border-opacity-0 group-focus:border-opacity-0 transition"
+                >
+                  <h6
+                    className="text-sm leading-4 mb-1"
+                  >
+                    Wasserspielplatz im Mellenseepark
+                  </h6>
+                  <div
+                    className="flex flex-wrap"
+                  >
+                    <span
+                      className="text-sm text-gray-500 inline-block mr-1"
+                    >
+                      Wasserspielplatz
+                    </span>
+                    <span
+                      className="text-sm text-gray-400 italic"
+                    >
+                      ( 
+                      Ort zum Planschen
+                       )
+                    </span>
+                  </div>
+                </div>
+              </button>
+            </li>
+            <li>
+              <button
+                className="flex items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "width": "calc(100% + 32px)",
+                  }
+                }
+              >
+                <span
+                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2 mr-3"
+                  style={
+                    Object {
+                      "backgroundColor": "#83E5E2",
+                    }
+                  }
+                />
+                <div
+                  className="pb-2 border-b border-gray-300 flex-grow border-dashed group-hover:border-opacity-0 group-focus:border-opacity-0 transition"
+                >
+                  <h6
+                    className="text-sm leading-4 mb-1"
+                  >
+                    Kaskade am Lietzensee
+                  </h6>
+                  <div
+                    className="flex flex-wrap"
+                  >
+                    <span
+                      className="text-sm text-gray-500 inline-block mr-1"
+                    >
+                      Brunnen
+                    </span>
+                    <span
+                      className="text-sm text-gray-400 italic"
+                    >
+                      ( 
+                      vergleichsweise kühl, frische Brise
+                       )
+                    </span>
+                  </div>
+                </div>
+              </button>
+            </li>
+            <li>
+              <button
+                className="flex items-center pt-3 text-left w-full hover:bg-gray-100 rounded transition px-4 -ml-4 group focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-gray-800 focus:z-10 relative"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "width": "calc(100% + 32px)",
+                  }
+                }
+              >
+                <span
+                  className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2 mr-3"
+                  style={
+                    Object {
+                      "backgroundColor": "#1D80C3",
+                    }
+                  }
+                />
+                <div
+                  className="pb-2 border-b border-gray-300 flex-grow border-dashed group-hover:border-opacity-0 group-focus:border-opacity-0 transition"
+                >
+                  <h6
+                    className="text-sm leading-4 mb-1"
+                  >
+                    Badestelle an der Unterhavel
+                  </h6>
+                  <div
+                    className="flex flex-wrap"
+                  >
+                    <span
+                      className="text-sm text-gray-500 inline-block mr-1"
+                    >
+                      Badestelle
+                    </span>
+                    <span
+                      className="text-sm text-gray-400 italic"
+                    >
+                      ( 
+                      kühl, frische Brise, Ort zum Planschen
+                       )
+                    </span>
+                  </div>
+                </div>
+              </button>
+            </li>
+          </ul>
+          
+        </div>
+      </div>
+    </div>
+  </aside>
+  <nav
+    className="fixed inset-0 transition box-content z-20 opened right-auto w-16"
+    style={
+      Object {
+        "left": "var(--sidebarWidth, 320px)",
+        "padding": "var(--sidebarPadding, 20px) 16px",
+        "transform": "translateX(0)",
+      }
+    }
+  >
+    <ul
+      className="flex bg-white rounded shadow-lg  flex-col"
+    >
+      <li
+        className="group relative h-16"
+      >
+        <span
+          className="transition opacity-0 px-3 py-1 rounded bg-gray-800 text-white transform absolute whitespace-nowrap delay-1000 pointer-events-none group-hover:opacity-100 group-hover:delay-0 bg-opacity-90 left-full top-1/2 translate-x-2 -translate-y-1/2"
+        >
+          Filters
+        </span>
+        <a
+          className="transition w-full h-full grid place-items-center group-first:rounded-t group-last:rounded-b focus:rounded focus:ring-2 focus:ring-gray-800 focus:outline-none focus:ring-offset-2 focus:ring-offset-white focus:z-10 relative hover:bg-gray-200 hover:text-gray-800"
+          href="/filters"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+        >
+          <svg
+            fill="none"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3 4C3 3.73478 3.10536 3.48043 3.29289 3.29289C3.48043 3.10536 3.73478 3 4 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4V6.586C20.9999 6.85119 20.8946 7.10551 20.707 7.293L14.293 13.707C14.1055 13.8945 14.0001 14.1488 14 14.414V17L10 21V14.414C9.99994 14.1488 9.89455 13.8945 9.707 13.707L3.293 7.293C3.10545 7.10551 3.00006 6.85119 3 6.586V4Z"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+            />
+          </svg>
+        </a>
+      </li>
+      <li
+        className="group relative h-16"
+      >
+        <span
+          className="transition opacity-0 px-3 py-1 rounded bg-gray-800 text-white transform absolute whitespace-nowrap delay-1000 pointer-events-none group-hover:opacity-100 group-hover:delay-0 bg-opacity-90 left-full top-1/2 translate-x-2 -translate-y-1/2"
+        >
+          Suche
+        </span>
+        <a
+          className="transition w-full h-full grid place-items-center group-first:rounded-t group-last:rounded-b focus:rounded focus:ring-2 focus:ring-gray-800 focus:outline-none focus:ring-offset-2 focus:ring-offset-white focus:z-10 relative hover:bg-gray-200 hover:text-gray-800"
+          href="/search"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+        >
+          <svg
+            fill="none"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M21 21L15 15L21 21ZM17 10C17 10.9193 16.8189 11.8295 16.4672 12.6788C16.1154 13.5281 15.5998 14.2997 14.9497 14.9497C14.2997 15.5998 13.5281 16.1154 12.6788 16.4672C11.8295 16.8189 10.9193 17 10 17C9.08075 17 8.1705 16.8189 7.32122 16.4672C6.47194 16.1154 5.70026 15.5998 5.05025 14.9497C4.40024 14.2997 3.88463 13.5281 3.53284 12.6788C3.18106 11.8295 3 10.9193 3 10C3 8.14348 3.7375 6.36301 5.05025 5.05025C6.36301 3.7375 8.14348 3 10 3C11.8565 3 13.637 3.7375 14.9497 5.05025C16.2625 6.36301 17 8.14348 17 10Z"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+            />
+          </svg>
+        </a>
+      </li>
+      <li
+        className="group relative h-16"
+      >
+        <span
+          className="transition opacity-0 px-3 py-1 rounded bg-gray-800 text-white transform absolute whitespace-nowrap delay-1000 pointer-events-none group-hover:opacity-100 group-hover:delay-0 bg-opacity-90 left-full top-1/2 translate-x-2 -translate-y-1/2"
+        >
+          Über das Projekt
+        </span>
+        <a
+          className="transition w-full h-full grid place-items-center group-first:rounded-t group-last:rounded-b focus:rounded focus:ring-2 focus:ring-gray-800 focus:outline-none focus:ring-offset-2 focus:ring-offset-white focus:z-10 relative hover:bg-gray-200 hover:text-gray-800"
+          href="/about"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+        >
+          <svg
+            fill="none"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M13 16H12V12H11L13 16ZM12 8H12.01H12ZM21 12C21 13.1819 20.7672 14.3522 20.3149 15.4442C19.8626 16.5361 19.1997 17.5282 18.364 18.364C17.5282 19.1997 16.5361 19.8626 15.4442 20.3149C14.3522 20.7672 13.1819 21 12 21C10.8181 21 9.64778 20.7672 8.55585 20.3149C7.46392 19.8626 6.47177 19.1997 5.63604 18.364C4.80031 17.5282 4.13738 16.5361 3.68508 15.4442C3.23279 14.3522 3 13.1819 3 12C3 9.61305 3.94821 7.32387 5.63604 5.63604C7.32387 3.94821 9.61305 3 12 3C14.3869 3 16.6761 3.94821 18.364 5.63604C20.0518 7.32387 21 9.61305 21 12Z"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+            />
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;

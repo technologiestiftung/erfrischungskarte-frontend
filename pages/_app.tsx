@@ -2,9 +2,11 @@ import { mapRawQueryToState } from '@lib/utils/queryUtil'
 import { RefreshmentMap } from '@modules/RefreshmentMap'
 import { ParsedUrlQuery } from 'querystring'
 import { StrictMode, FC } from 'react'
-import Head from 'next/head'
+import { Head } from '@components/Head'
 import '../src/style/global.css'
 import '../src/components/MapControls/mapControls.css'
+import '../src/components/MapPoiTooltip/MapPoiTooltip.css'
+import { useMatomo } from '@lib/hooks/useMatomo'
 
 interface PagePropType extends Record<string, unknown> {
   title?: string
@@ -20,24 +22,13 @@ const App: FC<{
   Component: FC<ComponentPropType>
   pageProps: PagePropType
 }> = ({ Component, pageProps }) => {
+  useMatomo()
   const parsedQuery = pageProps.query ? mapRawQueryToState(pageProps.query) : {}
+
   return (
     <StrictMode>
-      <RefreshmentMap {...pageProps}>
-        <Head>
-          <title>{`${
-            pageProps.title ? `${pageProps.title} - ` : ' '
-          }Erfrischungskarte Berlin`}</title>
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-          />
-          <link rel="preconnect" href="https://fonts.gstatic.com" />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-            rel="stylesheet"
-          />
-        </Head>
+      <RefreshmentMap {...pageProps} query={parsedQuery}>
+        <Head pageTitle={pageProps.title || ''} />
         <Component {...pageProps} query={parsedQuery} />
       </RefreshmentMap>
     </StrictMode>

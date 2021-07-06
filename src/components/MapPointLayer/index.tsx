@@ -12,20 +12,22 @@ export interface MapPointLayerType extends Omit<LayerProps, 'type' | 'paint'> {
   activePropertyKeys?: string[]
 }
 
-type ZoomThresholds = 12 | 15 | 18
+type ZoomThresholds = 12 | 15 | 17 | 18
 
 type CircleSizeMapType = Map<ZoomThresholds, number>
 
 const CircleRadiusMap: CircleSizeMapType = new Map([
   [12, 2],
   [15, 4],
-  [18, 5],
+  [17, 5],
+  [18, 7],
 ])
 
 const CircleStrokeWidthMap: CircleSizeMapType = new Map([
   [12, 1],
   [15, 4],
-  [18, 5],
+  [17, 5],
+  [18, 7],
 ])
 
 export const MapPointLayer: FC<MapPointLayerType> = ({
@@ -40,8 +42,7 @@ export const MapPointLayer: FC<MapPointLayerType> = ({
   const flattenedCircleRadiusMap = Array.from(CircleRadiusMap).flat(2)
   const flattenedCircleStrokeWidthMap = Array.from(CircleStrokeWidthMap).flat(2)
 
-  const filterDataIsProvided =
-    !!activePropertyKeys && activePropertyKeys.length > 0
+  const filterDataIsProvided = !!activePropertyKeys
 
   const filteringExpression = [
     'in',
@@ -86,7 +87,7 @@ export const MapPointLayer: FC<MapPointLayerType> = ({
 
   return (
     <Source id={id} type="vector" url={tileset.url}>
-      <Layer {...layerStyle} filter={filter} />
+      <Layer {...layerStyle} id={id} filter={filter} />
     </Source>
   )
 }

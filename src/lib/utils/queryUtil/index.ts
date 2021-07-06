@@ -1,4 +1,6 @@
-interface PageQueryType {
+import { NumberHourType } from '@lib/hooks/useCurrentTime'
+
+export interface PageQueryType {
   latitude: number | null
   longitude: number | null
   zoom: number | null
@@ -6,7 +8,7 @@ interface PageQueryType {
   showShadows: boolean | null
   showTemperature: boolean | null
   showWind: boolean | null
-  visibleHour: 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | null
+  visibleHour: NumberHourType | null
   searchTerm: string | null
 }
 
@@ -23,11 +25,17 @@ const parseSingleNumber = (
 }
 
 const parseNumbersArray = (
-  val: string | string[] | undefined
+  val: string | string[] | false | undefined
 ): number[] | null => {
-  if (!val || typeof val !== 'string') return null
+  if (typeof val === 'undefined') return null
+  if (Array.isArray(val)) {
+    return val.map(parseSingleNumber).filter(Boolean) as number[]
+  }
+  if (val === 'false') return []
+  if (typeof val !== 'string') return null
   try {
     const parsedJson = JSON.parse(val) as unknown
+    if (isNumber(parsedJson)) return [parsedJson] as number[]
     if (!Array.isArray(parsedJson)) return null
     return parsedJson.map(parseSingleNumber).filter(Boolean) as number[]
   } catch (err) {
@@ -44,7 +52,7 @@ const parseVisibleHour = (
   val: number | undefined | null
 ): PageQueryType['visibleHour'] | null => {
   if (!val) return null
-  const allHours = [12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
+  const allHours = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
   if (allHours.includes(val)) return val as PageQueryType['visibleHour']
   return null
 }
