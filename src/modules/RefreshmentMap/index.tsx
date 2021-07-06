@@ -2,7 +2,6 @@ import React, { FC, useState } from 'react'
 import { Map as MapRoot } from '@components/Map'
 import { Sidebar } from '@components/Sidebar'
 import { MapFilledPolygonLayer as FilledPolygonLayer } from '@components/MapFilledPolygonLayer'
-import { useWindowSize } from '@lib/hooks/useWindowSize'
 import { useHasMobileSize } from '@lib/hooks/useHasMobileSize'
 import { MapControls } from '@components/MapControls'
 import {
@@ -62,11 +61,6 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
   const hasMobileSize = useHasMobileSize()
   const hasWebPSupport = useHasWebPSupport()
   const currentTime = useCurrentTime()
-  const {
-    width: windowWidth,
-    height: windowHeight,
-    updateWindowSize,
-  } = useWindowSize()
 
   const { pathname, query } = useRouter()
   const mappedQuery = mapRawQueryToState(query)
@@ -130,8 +124,6 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
       {pathname === '/' && <SplashScreen />}
       <MapRoot
         mapStyle="mapbox://styles/mapbox/light-v10"
-        width={windowWidth}
-        height={windowHeight}
         staticViewportProps={{
           minZoom: MAP_CONFIG.minZoom,
           maxZoom: MAP_CONFIG.maxZoom,
@@ -144,7 +136,6 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
         interactiveLayerIds={[POI_DATA.id]}
         handleMouseLeave={handleMouseLeave}
         handleHover={handleHover}
-        onLoad={() => updateWindowSize()}
       >
         {pathname !== '/' && pathname !== '/social-image' && (
           <>

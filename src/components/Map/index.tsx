@@ -11,8 +11,6 @@ import { FlyToInterpolator } from 'react-map-gl'
 interface MapProps extends InteractiveMapProps {
   initialViewportProps: Partial<ViewportProps>
   staticViewportProps?: Partial<ViewportProps>
-  width: number
-  height: number
   mapStyle?: string
   handleHover?: (event: MapEvent) => void
   handleMouseLeave?: (event: MapEvent) => void
@@ -26,8 +24,6 @@ const easeInOutQuad = (t: number): number =>
 export const Map: FC<MapProps> = ({
   initialViewportProps,
   staticViewportProps,
-  width,
-  height,
   mapStyle,
   interactiveLayerIds,
   handleHover,
@@ -43,8 +39,6 @@ export const Map: FC<MapProps> = ({
     transitionInterpolator: new FlyToInterpolator(),
   }
   const [viewport, setViewport] = useState<ViewportProps>({
-    width,
-    height,
     ...staticViewportProps,
     ...initialViewportProps,
   })
@@ -68,22 +62,15 @@ export const Map: FC<MapProps> = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mappedQuery.latitude, mappedQuery.longitude, mappedQuery.zoom])
 
-  useEffect(() => {
-    setViewport({
-      ...viewport,
-      ...transitionProps,
-      width,
-      height,
-    })
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [width, height])
-
   return (
     <ReactMapGL
+      {...otherMapProps}
       {...viewport}
       mapStyle={mapStyle}
       mapboxApiAccessToken={process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN}
       onViewportChange={(nextViewport: ViewportProps) => {
+        delete nextViewport.width
+        delete nextViewport.height
         setViewport(nextViewport)
         debouncedViewportChange({
           latitude: nextViewport.latitude,
@@ -94,8 +81,8 @@ export const Map: FC<MapProps> = ({
       interactiveLayerIds={interactiveLayerIds}
       onHover={handleHover}
       onMouseLeave={handleMouseLeave}
-      reuseMaps
-      {...otherMapProps}
+      width="100vw"
+      height="100vh"
     >
       {children}
     </ReactMapGL>
