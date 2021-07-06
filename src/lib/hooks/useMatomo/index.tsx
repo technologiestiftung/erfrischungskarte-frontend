@@ -1,10 +1,26 @@
-import { useEffect } from 'react'
+import { useRouter } from 'next/router'
+import { useEffect, useRef } from 'react'
+
+interface MatomoClassType {
+  getTracker: (url: string, siteId: string) => MatomoInstanceType
+}
+interface MatomoInstanceType {
+  trackPageView: (val: string[]) => void
+}
 
 const MATOMO_URL =
   process.env.NEXT_PUBLIC_MATOMO_URL || 'https://piwik.example.com'
 const MATOMO_SITE_ID = process.env.NEXT_PUBLIC_MATOMO_SITE_ID || '1'
 
-export const useMatomo = (): void => {
+export const useMatomo = (pageTitle?: string): void => {
+  const { pathname } = useRouter()
+  const matomoInstance = useRef<MatomoInstanceType | null>(null)
+
+  useEffect(() => {
+    if (!matomoInstance.current) return
+    matomoInstance.current.trackPageView([pageTitle || pathname])
+  }, [pageTitle, pathname])
+
   useEffect(() => {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
@@ -29,5 +45,11 @@ export const useMatomo = (): void => {
     } else {
       document.body.appendChild(newScript)
     }
+
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    const matomoClass = window.Matomo as MatomoClassType
+    if (typeof matomoClass === 'undefined') return
+    matomoInstance.current = matomoClass.getTracker(MATOMO_URL, MATOMO_SITE_ID)
   }, [])
 }

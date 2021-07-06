@@ -22,7 +22,7 @@ const App: FC<{
   Component: FC<ComponentPropType>
   pageProps: PagePropType
 }> = ({ Component, pageProps }) => {
-  useMatomo()
+  useMatomo(pageProps.title)
   const parsedQuery = pageProps.query ? mapRawQueryToState(pageProps.query) : {}
 
   return (
