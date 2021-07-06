@@ -5,9 +5,9 @@ exports[`Storyshots UI Elements/MapPoiTooltip Default 1`] = `
   style={
     Object {
       "cursor": "grab",
-      "height": 500,
+      "height": "100vh",
       "position": "relative",
-      "width": 800,
+      "width": "100vw",
     }
   }
 >
@@ -41,9 +41,9 @@ exports[`Storyshots UI Elements/MapPoiTooltip With Identical Title And Category 
   style={
     Object {
       "cursor": "grab",
-      "height": 500,
+      "height": "100vh",
       "position": "relative",
-      "width": 800,
+      "width": "100vw",
     }
   }
 >
@@ -77,9 +77,9 @@ exports[`Storyshots UI Elements/MapPoiTooltip With Info 1`] = `
   style={
     Object {
       "cursor": "grab",
-      "height": 500,
+      "height": "100vh",
       "position": "relative",
-      "width": 800,
+      "width": "100vw",
     }
   }
 >
