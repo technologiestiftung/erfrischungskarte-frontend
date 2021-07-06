@@ -82,39 +82,51 @@ export const Filters: FC<{
                   ariaLabel={category}
                   isSelected={mappedQuery.places?.includes(poiId)}
                   handleClick={() => {
-                    let newPlacesArray
+                    let activePlaces
 
                     const noPlacesInQuery = !mappedQuery.places
 
-                    if (noPlacesInQuery) {
-                      newPlacesArray = defaultActivePoiIds.filter(
-                        (defaultPoiId) => defaultPoiId !== poiId
-                      )
-                    }
+                    const placesValueIsZero =
+                      mappedQuery.places && mappedQuery.places[0] === 0
+
+                    const onlyOnePlaceInQuery =
+                      mappedQuery.places && mappedQuery.places.length === 1
 
                     const clickedPlaceAlreadyInQuery =
                       mappedQuery.places && mappedQuery.places?.includes(poiId)
 
-                    if (clickedPlaceAlreadyInQuery) {
-                      newPlacesArray = mappedQuery.places?.filter(
-                        (placeId) => placeId !== poiId
+                    const clickedPlaceNotYetInQuery =
+                      mappedQuery.places && !mappedQuery.places.includes(poiId)
+
+                    if (noPlacesInQuery) {
+                      activePlaces = defaultActivePoiIds.filter(
+                        (defaultPoiId) => defaultPoiId !== poiId
                       )
                     }
 
-                    const clickedPlaceNotYetInQuery =
-                      !clickedPlaceAlreadyInQuery && !noPlacesInQuery
-
                     if (clickedPlaceNotYetInQuery) {
-                      newPlacesArray = mappedQuery.places?.concat(poiId)
+                      if (placesValueIsZero) {
+                        activePlaces = [poiId] // activates clicked place after all places were deactivated before
+                      } else {
+                        activePlaces = mappedQuery.places?.concat(poiId) // activates clicked place
+                      }
                     }
 
-                    const places = newPlacesArray || defaultActivePoiIds
+                    if (clickedPlaceAlreadyInQuery) {
+                      if (onlyOnePlaceInQuery && !placesValueIsZero) {
+                        activePlaces = [0] // deactivates all places
+                      } else {
+                        activePlaces = mappedQuery.places?.filter(
+                          (placeId) => placeId !== poiId // deactivates clicked place
+                        )
+                      }
+                    }
 
                     void routerReplace(
                       {
                         query: {
                           ...mappedQuery,
-                          places: places.length === 0 ? false : places,
+                          places: activePlaces,
                         },
                       },
                       undefined

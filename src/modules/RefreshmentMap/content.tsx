@@ -180,7 +180,9 @@ export const POI_CATEGORY_COLOR_MAP: Map<PoiCategory, string> = new Map([
   ['Picknicktisch', colors['poi-red']],
 ])
 
-export const POI_CATEGORY_ID_MAP: { [key in PoiCategory]: number } = {
+type PoiCategoryId = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10
+
+export const POI_CATEGORY_ID_MAP: { [key in PoiCategory]: PoiCategoryId } = {
   Badestelle: 1,
   Strandbad: 2,
   Freibad: 3,
