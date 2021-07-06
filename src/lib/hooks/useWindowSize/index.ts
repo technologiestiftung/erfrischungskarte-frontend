@@ -45,6 +45,7 @@ export const useWindowSize = (): UseResizeReturnType => {
 
     return () => {
       window.removeEventListener('resize', handleResize)
+      updateWindowSize.current = () => undefined
     }
   }, [])
 
