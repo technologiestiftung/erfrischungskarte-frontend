@@ -1,16 +1,15 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 interface WindowSizeType {
   width: number
   height: number
 }
 
-interface WindowSizePayloadType {
-  width: number
-  height: number
+interface UseResizeReturnType extends WindowSizeType {
+  updateWindowSize: () => void
 }
 
-const getWindowSize = (): WindowSizePayloadType => ({
+const getWindowSize = (): WindowSizeType => ({
   width: window.innerWidth,
   height: window.innerHeight,
 })
@@ -25,8 +24,11 @@ const setCssVariables = (): void => {
   )
 }
 
-export const useWindowSize = (): WindowSizeType => {
-  const [windowSize, setWindowSize] = useState<WindowSizePayloadType>({
+export const useWindowSize = (): UseResizeReturnType => {
+  const updateWindowSize = useRef<UseResizeReturnType['updateWindowSize']>(
+    () => undefined
+  )
+  const [windowSize, setWindowSize] = useState<WindowSizeType>({
     width: 1440,
     height: 960,
   })
@@ -36,8 +38,8 @@ export const useWindowSize = (): WindowSizeType => {
       setCssVariables()
       setWindowSize(getWindowSize())
     }
-    setCssVariables()
-    setWindowSize(getWindowSize())
+    handleResize()
+    updateWindowSize.current = handleResize
 
     window.addEventListener('resize', handleResize)
 
@@ -46,5 +48,8 @@ export const useWindowSize = (): WindowSizeType => {
     }
   }, [])
 
-  return windowSize
+  return {
+    ...windowSize,
+    updateWindowSize: updateWindowSize.current,
+  }
 }

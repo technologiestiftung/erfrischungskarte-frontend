@@ -62,7 +62,11 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
   const hasMobileSize = useHasMobileSize()
   const hasWebPSupport = useHasWebPSupport()
   const currentTime = useCurrentTime()
-  const { width: windowWidth, height: windowHeight } = useWindowSize()
+  const {
+    width: windowWidth,
+    height: windowHeight,
+    updateWindowSize,
+  } = useWindowSize()
 
   const { pathname, query } = useRouter()
   const mappedQuery = mapRawQueryToState(query)
@@ -140,6 +144,7 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
         interactiveLayerIds={[POI_DATA.id]}
         handleMouseLeave={handleMouseLeave}
         handleHover={handleHover}
+        onLoad={() => updateWindowSize()}
       >
         {pathname !== '/' && pathname !== '/social-image' && (
           <>
