@@ -23,7 +23,6 @@
     }
   },
   "dependencies": {
-    "@datapunt/matomo-tracker-react": "0.4.0",
     "chrome-aws-lambda": "10.0.0",
     "classnames": "2.3.1",
     "puppeteer": "10.0.0",

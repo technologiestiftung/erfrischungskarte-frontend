@@ -50,9 +50,9 @@ interface CustomMapEventType extends MapEvent {
   features: MapFeatureType[]
 }
 
-const MAP_CONFIG = {
+export const MAP_CONFIG = {
   minZoom: 11.5,
-  maxZoom: 17,
+  maxZoom: 19,
   defaultZoom: 14,
   defaultLatitude: 52.520952,
   defaultLongitude: 13.400033,
