@@ -124,77 +124,75 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
     <>
       {(pathname === '/map' || pathname === '/social-image') && <AppTitle />}
       {pathname === '/' && <SplashScreen />}
-      {windowHeight && windowWidth && (
-        <MapRoot
-          mapStyle="mapbox://styles/mapbox/light-v10"
-          width={windowWidth}
-          height={windowHeight}
-          staticViewportProps={{
-            minZoom: MAP_CONFIG.minZoom,
-            maxZoom: MAP_CONFIG.maxZoom,
-          }}
-          initialViewportProps={{
-            latitude: pageProps.query.latitude || MAP_CONFIG.defaultLatitude,
-            longitude: pageProps.query.longitude || MAP_CONFIG.defaultLongitude,
-            zoom: pageProps.query.zoom || MAP_CONFIG.defaultZoom,
-          }}
-          interactiveLayerIds={[POI_DATA.id]}
-          handleMouseLeave={handleMouseLeave}
-          handleHover={handleHover}
-        >
-          {pathname !== '/' && pathname !== '/social-image' && (
-            <>
-              <MapControls
-                className={`absolute right-4 ${
-                  hasMobileSize ? 'top-4' : 'bottom-4'
-                }`}
-              />
-            </>
+      <MapRoot
+        mapStyle="mapbox://styles/mapbox/light-v10"
+        width={windowWidth}
+        height={windowHeight}
+        staticViewportProps={{
+          minZoom: MAP_CONFIG.minZoom,
+          maxZoom: MAP_CONFIG.maxZoom,
+        }}
+        initialViewportProps={{
+          latitude: pageProps.query.latitude || MAP_CONFIG.defaultLatitude,
+          longitude: pageProps.query.longitude || MAP_CONFIG.defaultLongitude,
+          zoom: pageProps.query.zoom || MAP_CONFIG.defaultZoom,
+        }}
+        interactiveLayerIds={[POI_DATA.id]}
+        handleMouseLeave={handleMouseLeave}
+        handleHover={handleHover}
+      >
+        {pathname !== '/' && pathname !== '/social-image' && (
+          <>
+            <MapControls
+              className={`absolute right-4 ${
+                hasMobileSize ? 'top-4' : 'bottom-4'
+              }`}
+            />
+          </>
+        )}
+        <FilledPolygonLayer
+          {...WIND_DATA}
+          fillColorProperty={activeHour.vectorTilesetKey}
+          isVisible={mappedQuery.showWind !== false}
+        />
+        <FilledPolygonLayer
+          {...TEMPERATURE_DATA}
+          fillColorProperty={activeHour.vectorTilesetKey}
+          isVisible={mappedQuery.showTemperature !== false}
+        />
+        {hasWebPSupport &&
+          hourKeys.map((key) => (
+            <RasterLayer
+              key={`shade-${key}`}
+              id={`shade-${key}`}
+              url={HOURS[key].shadeTilesetId}
+              bounds={[13.06, 52.33, 13.77, 52.69]}
+              minZoom={MAP_CONFIG.defaultZoom}
+              opacity={key !== activeHourKey ? 0 : 0.5}
+              isVisible={mappedQuery.showShadows !== false}
+              beforeId={EXTRUDED_BUILDINGS_DATA.id}
+            />
+          ))}
+        <ExtrusionLayer {...EXTRUDED_BUILDINGS_DATA} minzoom={15.5} />
+        <MapPointLayer
+          {...POI_DATA}
+          activePropertyKeys={activeCategories}
+          minzoom={MAP_CONFIG.minZoom}
+        />
+        {poiTooltipCoordinates &&
+          poiTooltipContent &&
+          poiTooltipContentIsNotEmpty && (
+            <PoiTooltip
+              coordinates={{
+                latitude: poiTooltipCoordinates.latitude,
+                longitude: poiTooltipCoordinates.longitude,
+              }}
+              title={poiTooltipContent.title}
+              category={poiTooltipContent.category}
+              info={poiTooltipContent.info}
+            />
           )}
-          <FilledPolygonLayer
-            {...WIND_DATA}
-            fillColorProperty={activeHour.vectorTilesetKey}
-            isVisible={mappedQuery.showWind !== false}
-          />
-          <FilledPolygonLayer
-            {...TEMPERATURE_DATA}
-            fillColorProperty={activeHour.vectorTilesetKey}
-            isVisible={mappedQuery.showTemperature !== false}
-          />
-          {hasWebPSupport &&
-            hourKeys.map((key) => (
-              <RasterLayer
-                key={`shade-${key}`}
-                id={`shade-${key}`}
-                url={HOURS[key].shadeTilesetId}
-                bounds={[13.06, 52.33, 13.77, 52.69]}
-                minZoom={MAP_CONFIG.defaultZoom}
-                opacity={key !== activeHourKey ? 0 : 0.5}
-                isVisible={mappedQuery.showShadows !== false}
-                beforeId={EXTRUDED_BUILDINGS_DATA.id}
-              />
-            ))}
-          <ExtrusionLayer {...EXTRUDED_BUILDINGS_DATA} minzoom={15.5} />
-          <MapPointLayer
-            {...POI_DATA}
-            activePropertyKeys={activeCategories}
-            minzoom={MAP_CONFIG.minZoom}
-          />
-          {poiTooltipCoordinates &&
-            poiTooltipContent &&
-            poiTooltipContentIsNotEmpty && (
-              <PoiTooltip
-                coordinates={{
-                  latitude: poiTooltipCoordinates.latitude,
-                  longitude: poiTooltipCoordinates.longitude,
-                }}
-                title={poiTooltipContent.title}
-                category={poiTooltipContent.category}
-                info={poiTooltipContent.info}
-              />
-            )}
-        </MapRoot>
-      )}
+      </MapRoot>
       {pathname !== '/' && pathname !== '/social-image' && (
         <>
           <DisclaimerLinks

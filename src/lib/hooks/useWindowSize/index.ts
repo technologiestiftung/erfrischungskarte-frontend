@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react'
 
 interface WindowSizeType {
-  width: number | undefined
-  height: number | undefined
+  width: number
+  height: number
 }
 
 interface WindowSizePayloadType {
-  width: number | undefined
-  height: number | undefined
+  width: number
+  height: number
 }
 
 const getWindowSize = (): WindowSizePayloadType => ({
@@ -27,8 +27,8 @@ const setCssVariables = (): void => {
 
 export const useWindowSize = (): WindowSizeType => {
   const [windowSize, setWindowSize] = useState<WindowSizePayloadType>({
-    width: undefined,
-    height: undefined,
+    width: 1440,
+    height: 960,
   })
 
   useEffect(() => {
