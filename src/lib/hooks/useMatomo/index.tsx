@@ -16,9 +16,7 @@ const createImageNoscript = (pathname = ''): HTMLElement => {
     `action_name=${encodeURIComponent(
       `pageview/${pathname.replace('/', '') || 'splashscreen'}`
     )}`,
-    `url=${encodeURIComponent(
-      `${process.env.URL || 'http://localhost:3000'}${pathname}`
-    )}`,
+    `url=${encodeURIComponent(`${window.location.origin}${pathname}`)}`,
     `rand=${Date.now()}`,
   ].join('&')
   newImage.setAttribute('style', 'border:0;')
