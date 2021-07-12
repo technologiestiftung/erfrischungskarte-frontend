@@ -2,7 +2,7 @@
 
 exports[`Storyshots Content/SplashScreen Default 1`] = `
 <div
-  className="fixed z-10 inset-0 flex flex-col justify-center"
+  className="fixed z-10 inset-0 flex flex-col justify-center py-4"
 >
   <a
     className="fixed inset-0"
@@ -11,7 +11,7 @@ exports[`Storyshots Content/SplashScreen Default 1`] = `
     onMouseEnter={[Function]}
   />
   <div
-    className="bg-white p-6 max-w-xs md:max-w-none filter drop-shadow-lg rounded-lg md:min-w-xl md:w-1/2 mx-auto"
+    className="bg-white max-h-full overflow-y-auto p-6 max-w-xs md:max-w-none filter drop-shadow-lg rounded-lg md:min-w-xl md:w-1/2 mx-auto"
   >
     <a
       className=""
@@ -91,7 +91,7 @@ exports[`Storyshots Content/SplashScreen Default 1`] = `
       >
          schattige
       </b>
-       Flächen in der Stadt, und führt zu Orten zum Erfrischen und Verweilen im Sommer.
+       Flächen in der Stadt, und zeigt auf, welche Orten anhand ihrer natürlichen Eigenschaften oder ihrer Infrastruktur (Sitzbänke, Trinkbrunnen, usw.) besonders zum Erfrischen und Verweilen im Sommer geeignet sind.
     </p>
     <div
       className="mt-4 md:mt-16 flex flex-wrap place-items-start"
