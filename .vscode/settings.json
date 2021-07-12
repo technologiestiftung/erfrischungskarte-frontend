@@ -15,5 +15,7 @@
     "titleBar.inactiveBackground": "#84dcc699",
     "titleBar.inactiveForeground": "#15202b99"
   },
-  "peacock.color": "#84DCC6"
+  "peacock.color": "#84DCC6",
+  "workbench.colorTheme": "Nord",
+  "workbench.preferredDarkColorTheme": "Nord"
 }
