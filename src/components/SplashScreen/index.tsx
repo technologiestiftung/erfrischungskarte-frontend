@@ -8,9 +8,9 @@ export const SplashScreen: FC = () => {
   const hasMobileSize = useHasMobileSize()
 
   return (
-    <div className="fixed z-10 inset-0 flex flex-col justify-center">
+    <div className="fixed z-10 inset-0 flex flex-col justify-center py-4">
       <InternalLink href="/map" className="fixed inset-0" />
-      <div className="bg-white p-6 max-w-xs md:max-w-none filter drop-shadow-lg rounded-lg md:min-w-xl md:w-1/2 mx-auto">
+      <div className="bg-white max-h-full overflow-y-auto p-6 max-w-xs md:max-w-none filter drop-shadow-lg rounded-lg md:min-w-xl md:w-1/2 mx-auto">
         <InternalLink href="/map">
           <CrossIcon className="hidden md:block absolute right-8 top-8 cursor-pointer text-gray-700 hover:text-gray-500 transform active:scale-90" />
         </InternalLink>
@@ -30,7 +30,9 @@ export const SplashScreen: FC = () => {
           <b className="text-layer-blue-300"> kühle</b>,
           <b className="text-layer-green-300"> windige</b> und
           <b className="text-gray-800"> schattige</b> Flächen in der Stadt, und
-          führt zu Orten zum Erfrischen und Verweilen im Sommer.
+          zeigt auf, welche Orte anhand ihrer natürlichen Eigenschaften oder
+          ihrer Infrastruktur (Sitzbänke, Trinkbrunnen, usw.) besonders zum
+          Erfrischen und Verweilen im Sommer geeignet sind.
         </p>
         <div className="mt-4 md:mt-16 flex flex-wrap place-items-start">
           <InternalLink
