@@ -91,7 +91,7 @@ exports[`Storyshots Content/SplashScreen Default 1`] = `
       >
          schattige
       </b>
-       Flächen in der Stadt, und zeigt auf, welche Orten anhand ihrer natürlichen Eigenschaften oder ihrer Infrastruktur (Sitzbänke, Trinkbrunnen, usw.) besonders zum Erfrischen und Verweilen im Sommer geeignet sind.
+       Flächen in der Stadt, und zeigt auf, welche Orte anhand ihrer natürlichen Eigenschaften oder ihrer Infrastruktur (Sitzbänke, Trinkbrunnen, usw.) besonders zum Erfrischen und Verweilen im Sommer geeignet sind.
     </p>
     <div
       className="mt-4 md:mt-16 flex flex-wrap place-items-start"
