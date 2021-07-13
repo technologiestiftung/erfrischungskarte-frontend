@@ -30,7 +30,7 @@ export const SplashScreen: FC = () => {
           <b className="text-layer-blue-300"> kühle</b>,
           <b className="text-layer-green-300"> windige</b> und
           <b className="text-gray-800"> schattige</b> Flächen in der Stadt, und
-          zeigt auf, welche Orten anhand ihrer natürlichen Eigenschaften oder
+          zeigt auf, welche Orte anhand ihrer natürlichen Eigenschaften oder
           ihrer Infrastruktur (Sitzbänke, Trinkbrunnen, usw.) besonders zum
           Erfrischen und Verweilen im Sommer geeignet sind.
         </p>
