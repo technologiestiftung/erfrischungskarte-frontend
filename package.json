@@ -73,7 +73,7 @@
     "next": "11.0.1",
     "postcss": "8.3.5",
     "prettier": "2.3.2",
-    "storybook-addon-next-router": "2.0.4",
+    "storybook-addon-next-router": "3.0.5",
     "storybook-css-modules-preset": "1.1.1",
     "tailwindcss": "2.2.4",
     "tsconfig-paths-webpack-plugin": "3.5.1",
