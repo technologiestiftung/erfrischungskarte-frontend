@@ -1,4 +1,5 @@
 import { Accordion } from '@components/Accordion'
+import { CitylabLogo } from '@components/CitylabLogo'
 import { OdisLogo } from '@components/OdisLogo'
 import { SenWebLogo } from '@components/SenWebLogo'
 import { TsbLogo } from '@components/TsbLogo'
@@ -33,7 +34,27 @@ export const About: FC = () => (
       </div>
       <div className="flex flex-col mb-6">
         <span className="text-sm mb-2">Durchgeführt von der</span>
-        <OdisLogo className={focusStyles} />
+        <a
+          href="https://odis-berlin.de/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open Data Informationsstelle Berlin"
+          className={focusStyles}
+        >
+          <OdisLogo className={`w-40`} />
+        </a>
+      </div>
+      <div className="flex flex-col mb-6">
+        <span className="text-sm mb-2">In Zusammenarbeit mit dem</span>
+        <a
+          href="https://www.citylab-berlin.org"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="CityLAB Berlin"
+          className={focusStyles}
+        >
+          <CitylabLogo className={`w-36`} />
+        </a>
       </div>
       <div className="flex flex-col">
         <span className="text-sm mb-2">Gefördert von</span>
