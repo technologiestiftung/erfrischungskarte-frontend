@@ -1,16 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Brand/CitylabLogo Default 1`] = `
-<a
-  aria-label="CityLAB Berlin"
-  href="https://www.citylab-berlin.org"
-  rel="noopener noreferrer"
-  target="_blank"
->
+<div>
   <svg
-    height="36"
     viewBox="0 0 180 36"
-    width="180"
     xmlns="http://www.w3.org/2000/svg"
   >
     <g
@@ -42,5 +35,5 @@ exports[`Storyshots Brand/CitylabLogo Default 1`] = `
       />
     </g>
   </svg>
-</a>
+</div>
 `;
