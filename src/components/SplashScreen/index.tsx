@@ -73,10 +73,10 @@ export const SplashScreen: FC = () => {
           </InternalLink>
         </div>
         <div className="flex flex-col md:items-center justify-between md:flex-row mt-4 md:mt-6">
-          <p className="text-xs mb-2 md:mb-0 mr-2 text-gray-700">
+          <p className="text-xs mb-2 md:mb-0 mr-2 text-gray-700 max-w-md">
             <i>
               Eine prototypische Datenvisualisierung der Open Data
-              Informationsstelle Berlin
+              Informationsstelle Berlin in Zusammenarbeit mit dem CityLAB Berlin
             </i>
           </p>
           <OpenDataIcon />
