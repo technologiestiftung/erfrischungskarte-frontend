@@ -1,6 +1,5 @@
 import { WindIcon } from '@components/Icons'
 import { Story, Meta } from '@storybook/react'
-import { withNextRouter } from 'storybook-addon-next-router'
 
 import { LayerLegendBlock, LayerLegendBlockType } from '.'
 
@@ -14,7 +13,6 @@ const testContent = {
 export default {
   title: 'UI Elements/LayerLegendBlock',
   component: LayerLegendBlock,
-  decorators: [withNextRouter],
 } as Meta
 
 const Template: Story<LayerLegendBlockType> = (args) => {

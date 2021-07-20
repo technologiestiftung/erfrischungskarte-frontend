@@ -1,12 +1,10 @@
 import { useHasMobileSize } from '@lib/hooks/useHasMobileSize'
 import { Story, Meta } from '@storybook/react'
-import { withNextRouter } from 'storybook-addon-next-router'
 import { SidebarNav } from '.'
 
 export default {
   title: 'UI Elements/SidebarNav',
   component: SidebarNav,
-  decorators: [withNextRouter],
 } as Meta
 
 const Template: Story<{

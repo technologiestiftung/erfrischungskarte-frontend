@@ -1,5 +1,4 @@
 import { Story, Meta } from '@storybook/react'
-import { withNextRouter } from 'storybook-addon-next-router'
 import { Map } from '@components/Map'
 import '../MapPoiTooltip/MapPoiTooltip.css'
 
@@ -14,7 +13,6 @@ const initialViewportProps = {
 export default {
   title: 'UI Elements/MapPoiTooltip',
   component: MapPoiTooltip,
-  decorators: [withNextRouter],
 } as Meta
 
 const Template: Story<MapPoiTooltipType> = (args) => {
