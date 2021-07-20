@@ -1,12 +1,10 @@
 import { Story, Meta } from '@storybook/react'
-import { withNextRouter } from 'storybook-addon-next-router'
 
 import { HourSelector } from '.'
 
 export default {
   title: 'UI Elements/HourSelector',
   component: HourSelector,
-  decorators: [withNextRouter],
 } as Meta
 
 const Template: Story = () => {

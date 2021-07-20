@@ -1,12 +1,10 @@
 import { Story, Meta } from '@storybook/react'
-import { withNextRouter } from 'storybook-addon-next-router'
 
 import { AppTitle } from '.'
 
 export default {
   title: 'UI Elements/AppTitle',
   component: AppTitle,
-  decorators: [withNextRouter],
 } as Meta
 
 const Template: Story = () => <AppTitle />

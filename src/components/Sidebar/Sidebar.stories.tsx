@@ -1,12 +1,10 @@
 import { Story, Meta } from '@storybook/react'
 import { ReactNode } from 'react'
-import { withNextRouter } from 'storybook-addon-next-router'
 import { Sidebar } from '.'
 
 export default {
   title: 'UI Elements/Sidebar',
   component: Sidebar,
-  decorators: [withNextRouter],
 } as Meta
 
 const Template: Story<{

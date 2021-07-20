@@ -11,6 +11,7 @@ module.exports = {
     "@storybook/addon-essentials",
     "@storybook/addon-postcss",
     "storybook-css-modules-preset",
+    "storybook-addon-next-router"
   ],
   webpackFinal: async config => {
     config.resolve.plugins = [new TsconfigPathsPlugin({ extensions: config.resolve.extensions })]
