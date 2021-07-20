@@ -25,6 +25,6 @@ describe('SplashScreen component', () => {
     render(<SplashScreen />)
     const svgs = document.querySelectorAll('svg')
 
-    expect(svgs.length).toBe(3)
+    expect(svgs.length).toBe(4)
   })
 })
