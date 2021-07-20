@@ -1,16 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Brand/OdisLogo Default 1`] = `
-<a
-  href="https://odis-berlin.de/"
-  rel="noreferrer"
-  target="_blank"
->
+<div>
   <svg
     fill="none"
-    height="42"
     viewBox="0 0 165 42"
-    width="165"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
@@ -30,5 +24,5 @@ exports[`Storyshots Brand/OdisLogo Default 1`] = `
       strokeWidth="1.74242"
     />
   </svg>
-</a>
+</div>
 `;

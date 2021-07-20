@@ -1,8 +1,10 @@
 import React, { FC } from 'react'
 import { InternalLink } from '@components/InternalLink'
-import { CrossIcon, OpenDataIcon, SunIcon } from '@components/Icons'
+import { CrossIcon, SunIcon } from '@components/Icons'
 import classNames from 'classnames'
 import { useHasMobileSize } from '@lib/hooks/useHasMobileSize'
+import { CitylabLogo } from '@components/CitylabLogo'
+import { OdisLogo } from '@components/OdisLogo'
 
 export const SplashScreen: FC = () => {
   const hasMobileSize = useHasMobileSize()
@@ -72,14 +74,17 @@ export const SplashScreen: FC = () => {
             Mehr Infos
           </InternalLink>
         </div>
-        <div className="flex flex-col md:items-center justify-between md:flex-row mt-4 md:mt-6">
-          <p className="text-xs mb-2 md:mb-0 mr-2 text-gray-700">
+        <div className="grid md:grid-cols-[1fr,auto] gap-4 mt-4 md:mt-6">
+          <p className="text-xs mb-2 md:mb-0 text-gray-700 max-w-md">
             <i>
               Eine prototypische Datenvisualisierung der Open Data
-              Informationsstelle Berlin
+              Informationsstelle Berlin in Zusammenarbeit mit dem CityLAB Berlin
             </i>
           </p>
-          <OpenDataIcon />
+          <div className="inline-block md:flex">
+            <OdisLogo className="w-36 mr-4" />
+            <CitylabLogo className="w-32 mt-4 md:mt-0 self-center" />
+          </div>
         </div>
       </div>
     </div>
