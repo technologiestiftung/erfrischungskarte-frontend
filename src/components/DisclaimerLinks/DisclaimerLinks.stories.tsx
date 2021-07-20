@@ -1,12 +1,10 @@
 import { Story, Meta } from '@storybook/react'
-import { withNextRouter } from 'storybook-addon-next-router'
 
 import { DisclaimerLinks } from '.'
 
 export default {
   title: 'UI Elements/DisclaimerLinks',
   component: DisclaimerLinks,
-  decorators: [withNextRouter],
 } as Meta
 
 const Template: Story = () => (

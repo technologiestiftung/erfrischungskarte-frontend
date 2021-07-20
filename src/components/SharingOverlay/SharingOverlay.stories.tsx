@@ -1,13 +1,11 @@
 import { Story, Meta } from '@storybook/react'
 import classNames from 'classnames'
-import { withNextRouter } from 'storybook-addon-next-router'
 
 import { SharingOverlay } from '.'
 
 export default {
   title: 'UI Elements/SharingOverlay',
   component: SharingOverlay,
-  decorators: [withNextRouter],
 } as Meta
 
 const Template: Story = () => (
