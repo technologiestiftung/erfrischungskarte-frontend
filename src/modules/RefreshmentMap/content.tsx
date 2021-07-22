@@ -264,15 +264,29 @@ export const ABOUT_INTRODUCTION_TEXT = (
 
 export const ABOUT_CONTACT_TEXT = (
   <>
-    Eine Frage oder Feedback? Schreib uns an{' '}
-    <a
-      href="mailto:odis@technologiestiftung-berlin.de"
-      target="_blank"
-      rel="noreferrer"
-      className="text-gray-800 underline"
-    >
-      odis@technologiestiftung-berlin.de
-    </a>
+    <p>
+      Auf GitHub findest du den{' '}
+      <a
+        href="https://github.com/technologiestiftung/erfrischungskarte-frontend/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-gray-800 underline"
+      >
+        Quellcode des Projekts
+      </a>
+      .
+    </p>
+    <p className="mt-3">
+      Eine Frage oder Feedback? Schreib uns an{' '}
+      <a
+        href="mailto:odis@technologiestiftung-berlin.de"
+        target="_blank"
+        rel="noreferrer"
+        className="text-gray-800 underline"
+      >
+        odis@technologiestiftung-berlin.de
+      </a>
+    </p>
   </>
 )
 
