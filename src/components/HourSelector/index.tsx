@@ -1,15 +1,15 @@
 import { CrossIcon } from '@components/Icons'
 import { useHasMobileSize } from '@lib/hooks/useHasMobileSize'
 import { mapRawQueryToState } from '@lib/utils/queryUtil'
-import { HourType, SHADE_HOURS } from '@content/shade'
 import classNames from 'classnames'
 import { useRouter } from 'next/router'
 import React, { FC, useCallback, useEffect, useRef, useState } from 'react'
 import colors from '../../style/colors'
 import styles from './HourSelector.module.css'
+import { HOURS, AvailableHoursType } from '@content/general'
 
 interface HourSelectorPropType {
-  activeHourKey: keyof typeof SHADE_HOURS
+  activeHourKey: keyof typeof HOURS
 }
 
 interface HourPositionType {
@@ -17,7 +17,7 @@ interface HourPositionType {
   y: number
 }
 
-const hoursPositions: Record<HourType, HourPositionType> = {
+const hoursPositions: Record<AvailableHoursType, HourPositionType> = {
   '10': { x: 15.9611, y: 43.0767 },
   '11': { x: 45.0767, y: 15.9021 },
   '12': { x: 81.9568, y: 6.19678 },
@@ -74,7 +74,7 @@ export const HourSelector: FC<HourSelectorPropType> = ({ activeHourKey }) => {
   )
 
   const onChange = useCallback(
-    (hour: keyof typeof SHADE_HOURS): void => {
+    (hour: AvailableHoursType): void => {
       const allFiltersOn = {
         showShadows: true,
         showTemperature: true,
@@ -196,9 +196,14 @@ export const HourSelector: FC<HourSelectorPropType> = ({ activeHourKey }) => {
             xmlns="http://www.w3.org/2000/svg"
           >
             {Object.keys(hoursPositions).map((key) => {
-              if (!Object.keys(SHADE_HOURS).includes(key)) return null
+              if (
+                !(Object.keys(HOURS) as AvailableHoursType[]).includes(
+                  key as AvailableHoursType
+                )
+              )
+                return null
 
-              const { x, y } = hoursPositions[key as HourType]
+              const { x, y } = hoursPositions[key as AvailableHoursType]
               return (
                 <g
                   key={key}
@@ -212,7 +217,7 @@ export const HourSelector: FC<HourSelectorPropType> = ({ activeHourKey }) => {
                     styles.hourButton,
                     key === activeHourKey && styles.hourButtonActive
                   )}
-                  onClick={() => onChange(key as keyof typeof SHADE_HOURS)}
+                  onClick={() => onChange(key as AvailableHoursType)}
                 >
                   <g filter={`url(#shadow-${key})`}>
                     <rect x={x} y={y} {...hourButtonCommonProps} />
@@ -255,7 +260,7 @@ export const HourSelector: FC<HourSelectorPropType> = ({ activeHourKey }) => {
 
             <defs>
               {Object.keys(hoursPositions).map((key) => {
-                const { x, y } = hoursPositions[key as HourType]
+                const { x, y } = hoursPositions[key as AvailableHoursType]
                 return (
                   <HourButtonShadow
                     x={x}

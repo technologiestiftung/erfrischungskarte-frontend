@@ -47,7 +47,12 @@ export const POI_CATEGORY_ID_MAP: { [key in PoiCategory]: PoiCategoryId } = {
   Picknicktisch: 10,
 }
 
-export const POI_DATA: PoiDataType = {
+/*
+  If you have POI data, you can set it here. The POI data is a Mapbox vector tileset, derived from a Point-based GeoJSON. The fillColorProperty has to be set to the feature property that you want to sort your POIs by, e.g. by the key 'category'. Currently, we have the properties 'id', 'category' and 'name'.
+  
+  If you don't have any POIs, set POI_DATA to null. Remember to also remove any other POI-related content in that case.
+*/
+export const POI_DATA: PoiDataType | null = {
   id: 'poi-data',
   tileset: {
     url: 'mapbox://technologiestiftung.a9f6qix2',

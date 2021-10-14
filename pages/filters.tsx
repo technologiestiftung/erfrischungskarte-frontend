@@ -3,11 +3,12 @@ import { GetServerSideProps } from 'next'
 import React, { FC } from 'react'
 import { FilterChip } from '@components/FilterChip'
 import { PoiLegendItem } from '@components/PoiLegendItem'
-import { LAYER_LEGEND_ITEMS, SHADE_SUPPORT_NOTE } from '@content/index'
+import { LAYER_LEGEND_ITEMS } from '@content/legend'
 import {
   PoiCategory,
   POI_CATEGORY_COLOR_MAP,
   POI_CATEGORY_ID_MAP,
+  POI_DATA,
 } from '@content/pois'
 import { useHasMobileSize } from '@lib/hooks/useHasMobileSize'
 import { useHasWebPSupport } from '@lib/hooks/useHasWebPSupport'
@@ -15,6 +16,8 @@ import classNames from 'classnames'
 import { LayerLegendBlock } from '@components/LayerLegendBlock'
 import { Warning } from '@components/Warning'
 import { useRouter } from 'next/router'
+import { TEMPERATURE_DATA, WIND_DATA } from '@content/vectorLayers'
+import { SHADE_TILESETS } from '@content/shade'
 
 // eslint-disable-next-line @typescript-eslint/require-await
 export const getServerSideProps: GetServerSideProps = async ({ query }) => ({
@@ -51,94 +54,99 @@ export const Filters: FC<{
 
   return (
     <div className="grid grid-cols-1">
-      <section
-        aria-label="Angezeigte Orte auswählen"
-        className={classNames(
-          'col-span-1',
-          hasMobileSize ? 'row-start-2 mt-4' : 'row-start-1'
-        )}
-      >
-        {!hasMobileSize && (
-          <>
-            <h2 className="text-lg font-bold">Orte</h2>
-            <p className="text-gray-500">
-              Wähle aus, welche Orte zum Verweilen du auf der Karte sehen
-              möchtest.
-            </p>
-          </>
-        )}
-        <div
+      {POI_DATA && (
+        <section
+          aria-label="Angezeigte Orte auswählen"
           className={classNames(
-            'flex flex-wrap',
-            hasMobileSize ? 'mt-0' : 'mt-4'
+            'col-span-1',
+            hasMobileSize ? 'row-start-2 mt-4' : 'row-start-1'
           )}
         >
-          {poiCategoryColorArray.map(([category, color]) => {
-            const poiId = POI_CATEGORY_ID_MAP[category]
-            return (
-              <div key={category} className="mt-2 mr-2">
-                <FilterChip
-                  ariaLabel={category}
-                  isSelected={mappedQuery.places?.includes(poiId)}
-                  handleClick={() => {
-                    let activePlaces
+          {!hasMobileSize && (
+            <>
+              <h2 className="text-lg font-bold">Orte</h2>
+              <p className="text-gray-500">
+                Wähle aus, welche Orte zum Verweilen du auf der Karte sehen
+                möchtest.
+              </p>
+            </>
+          )}
+          <div
+            className={classNames(
+              'flex flex-wrap',
+              hasMobileSize ? 'mt-0' : 'mt-4'
+            )}
+          >
+            {POI_DATA &&
+              poiCategoryColorArray.map(([category, color]) => {
+                const poiId = POI_CATEGORY_ID_MAP[category]
+                return (
+                  <div key={category} className="mt-2 mr-2">
+                    <FilterChip
+                      ariaLabel={category}
+                      isSelected={mappedQuery.places?.includes(poiId)}
+                      handleClick={() => {
+                        let activePlaces
 
-                    const noPlacesInQuery = !mappedQuery.places
+                        const noPlacesInQuery = !mappedQuery.places
 
-                    const placesValueIsZero =
-                      mappedQuery.places && mappedQuery.places[0] === 0
+                        const placesValueIsZero =
+                          mappedQuery.places && mappedQuery.places[0] === 0
 
-                    const onlyOnePlaceInQuery =
-                      mappedQuery.places && mappedQuery.places.length === 1
+                        const onlyOnePlaceInQuery =
+                          mappedQuery.places && mappedQuery.places.length === 1
 
-                    const clickedPlaceAlreadyInQuery =
-                      mappedQuery.places && mappedQuery.places?.includes(poiId)
+                        const clickedPlaceAlreadyInQuery =
+                          mappedQuery.places &&
+                          mappedQuery.places?.includes(poiId)
 
-                    const clickedPlaceNotYetInQuery =
-                      mappedQuery.places && !mappedQuery.places.includes(poiId)
+                        const clickedPlaceNotYetInQuery =
+                          mappedQuery.places &&
+                          !mappedQuery.places.includes(poiId)
 
-                    if (noPlacesInQuery) {
-                      activePlaces = defaultActivePoiIds.filter(
-                        (defaultPoiId) => defaultPoiId !== poiId
-                      )
-                    }
+                        if (noPlacesInQuery) {
+                          activePlaces = defaultActivePoiIds.filter(
+                            (defaultPoiId) => defaultPoiId !== poiId
+                          )
+                        }
 
-                    if (clickedPlaceNotYetInQuery) {
-                      if (placesValueIsZero) {
-                        activePlaces = [poiId] // activates clicked place after all places were deactivated before
-                      } else {
-                        activePlaces = mappedQuery.places?.concat(poiId) // activates clicked place
-                      }
-                    }
+                        if (clickedPlaceNotYetInQuery) {
+                          if (placesValueIsZero) {
+                            activePlaces = [poiId] // activates clicked place after all places were deactivated before
+                          } else {
+                            activePlaces = mappedQuery.places?.concat(poiId) // activates clicked place
+                          }
+                        }
 
-                    if (clickedPlaceAlreadyInQuery) {
-                      if (onlyOnePlaceInQuery && !placesValueIsZero) {
-                        activePlaces = [0] // deactivates all places
-                      } else {
-                        activePlaces = mappedQuery.places?.filter(
-                          (placeId) => placeId !== poiId // deactivates clicked place
+                        if (clickedPlaceAlreadyInQuery) {
+                          if (onlyOnePlaceInQuery && !placesValueIsZero) {
+                            activePlaces = [0] // deactivates all places
+                          } else {
+                            activePlaces = mappedQuery.places?.filter(
+                              (placeId) => placeId !== poiId // deactivates clicked place
+                            )
+                          }
+                        }
+
+                        void routerReplace(
+                          {
+                            query: {
+                              ...mappedQuery,
+                              places: activePlaces,
+                            },
+                          },
+                          undefined
                         )
-                      }
-                    }
-
-                    void routerReplace(
-                      {
-                        query: {
-                          ...mappedQuery,
-                          places: activePlaces,
-                        },
-                      },
-                      undefined
-                    )
-                  }}
-                >
-                  <PoiLegendItem label={category} color={color} />
-                </FilterChip>
-              </div>
-            )
-          })}
-        </div>
-      </section>
+                      }}
+                    >
+                      <PoiLegendItem label={category} color={color} />
+                    </FilterChip>
+                  </div>
+                )
+              })}
+          </div>
+        </section>
+      )}
       <section
         aria-label="Angezeigte Flächen auswählen"
         className={classNames(
@@ -157,7 +165,7 @@ export const Filters: FC<{
             </p>
           </>
         )}
-        {shadeLegendContent && (
+        {SHADE_TILESETS && shadeLegendContent && (
           <div className={classNames(hasMobileSize ? 'mt-1' : 'mt-6')}>
             <LayerLegendBlock
               title={shadeLegendContent.title}
@@ -167,7 +175,14 @@ export const Filters: FC<{
                 hasWebPSupport ? (
                   shadeLegendContent.legendFigure
                 ) : (
-                  <Warning>{SHADE_SUPPORT_NOTE}</Warning>
+                  <Warning>
+                    <p className="text-xs">
+                      Leider können die Schatten auf diesem Endgerät oder in
+                      diesem Browser nicht dargestellt werden. Bitte versuche
+                      ein anderes Endgerät oder einen anderen Browser, um die
+                      Karte zu öffnen.
+                    </p>
+                  </Warning>
                 )
               }
               layerIsActive={mappedQuery.showShadows !== false}
@@ -190,7 +205,7 @@ export const Filters: FC<{
             />
           </div>
         )}
-        {temperatureLegendContent && (
+        {TEMPERATURE_DATA && temperatureLegendContent && (
           <div className={classNames(hasMobileSize ? 'mt-4' : 'mt-6')}>
             <LayerLegendBlock
               title={temperatureLegendContent.title}
@@ -216,7 +231,7 @@ export const Filters: FC<{
             />
           </div>
         )}
-        {windLegendContent && (
+        {WIND_DATA && windLegendContent && (
           <div className={classNames(hasMobileSize ? 'mt-4' : 'mt-6')}>
             <LayerLegendBlock
               title={windLegendContent.title}

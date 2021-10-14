@@ -5,6 +5,7 @@ import classNames from 'classnames'
 import { useHasMobileSize } from '@lib/hooks/useHasMobileSize'
 import { CitylabLogo } from '@components/CitylabLogo'
 import { OdisLogo } from '@components/OdisLogo'
+import { PROJECT_TITLE } from '@content/general'
 
 export const SplashScreen: FC = () => {
   const hasMobileSize = useHasMobileSize()
@@ -28,7 +29,7 @@ export const SplashScreen: FC = () => {
           </div>
         </div>
         <p className="mt-4 md:mr-12 text-gray-500">
-          Die Berliner Erfrischungskarte zeigt
+          Die {PROJECT_TITLE} zeigt
           <b className="text-layer-blue-300"> kühle</b>,
           <b className="text-layer-green-300"> windige</b> und
           <b className="text-gray-800"> schattige</b> Flächen in der Stadt, und

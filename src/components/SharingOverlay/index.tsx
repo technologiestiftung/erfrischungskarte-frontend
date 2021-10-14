@@ -1,7 +1,7 @@
 import { CrossIcon, SharingIcon } from '@components/Icons'
+import { MAP_CONFIG } from '@content/general'
 import { useCopyToClipboard } from '@lib/hooks/useCopyToClipboard'
 import { mapRawQueryToState } from '@lib/utils/queryUtil'
-import { MAP_CONFIG } from '@modules/RefreshmentMap'
 import classNames from 'classnames'
 import { useRouter } from 'next/router'
 import { FC, ReactNode, useState } from 'react'

@@ -1,64 +1,9 @@
 import { TemperatureIcon, WindIcon, ShadeIcon } from '@components/Icons'
 import { LayerLegendBlockType } from '@components/LayerLegendBlock'
 import classNames from 'classnames'
-import { MapExtrusionLayerType } from '../components/MapExtrusionLayer'
-import { MapFilledPolygonLayerType } from '../components/MapFilledPolygonLayer'
-import colors from '../style/colors'
 import { LayerLegendFigure } from '@components/LayerLegendFigure'
 import Image from 'next/image'
 import shadeImage from '../../public/images/shade-legend.png'
-
-export * from './generics'
-export * from './about'
-
-export const WIND_DATA: Pick<
-  MapFilledPolygonLayerType,
-  'id' | 'tileset' | 'fillColorMap'
-> = {
-  id: 'wind-data',
-  tileset: {
-    url: 'mapbox://technologiestiftung.1hrk87mv',
-    layerName: 'wind_data-dgvmuc',
-  },
-  fillColorMap: new Map([
-    // Note: the mapping here is different than the one for the temperature data.
-    [5, colors['layer-green'][400]],
-    [4, colors['layer-green'][300]],
-    [3, colors['layer-green'][200]],
-    [2, colors['layer-green'][100]],
-    [1, 'rgba(255,255,255,0)'],
-  ]),
-}
-
-export const TEMPERATURE_DATA: Pick<
-  MapFilledPolygonLayerType,
-  'id' | 'tileset' | 'fillColorMap'
-> = {
-  id: 'temperature-data',
-  tileset: {
-    url: 'mapbox://technologiestiftung.4e9mfohk',
-    layerName: 'temperature_data-5k7yue',
-  },
-  fillColorMap: new Map([
-    [1, colors['layer-blue'][400]],
-    [2, colors['layer-blue'][300]],
-    [3, colors['layer-blue'][200]],
-    [4, colors['layer-blue'][100]],
-    [5, 'rgba(255,255,255,0)'],
-  ]),
-}
-
-export const EXTRUDED_BUILDINGS_DATA: MapExtrusionLayerType = {
-  id: '3d-buildings',
-  url: 'mapbox://mapbox.mapbox-streets-v8',
-  source: 'composite',
-  sourceLayer: 'building',
-  extrusionProperties: {
-    base: 'min_height',
-    height: 'height',
-  },
-  extrusionColor: '#ddd',
-}
 
 const maxShadeLabel = (
   <div className="flex items-center">
@@ -74,6 +19,9 @@ const minShadeLabel = (
   </div>
 )
 
+/*
+  If a layer is removed, its corresponding layer legend item can be removed here. This will automatically remove it from the filter sidebar.
+*/
 export const LAYER_LEGEND_ITEMS: {
   shade: Pick<
     LayerLegendBlockType,

@@ -1,5 +1,4 @@
-import { HourType } from '@content/shade'
-
+import { AvailableHoursType } from '@content/general'
 export interface PageQueryType {
   latitude: number | null
   longitude: number | null
@@ -8,7 +7,7 @@ export interface PageQueryType {
   showShadows: boolean | null
   showTemperature: boolean | null
   showWind: boolean | null
-  visibleHour: HourType | null
+  visibleHour: AvailableHoursType | null
   searchTerm: string | null
 }
 

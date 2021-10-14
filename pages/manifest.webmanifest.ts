@@ -1,9 +1,10 @@
+import { PROJECT_TITLE } from '@content/general'
 import { NextApiResponse } from 'next'
 import { Component } from 'react'
 import colors from '../src/style/colors'
 
 const getManifest = ({
-  siteTitle = 'Berliner Erfrischungskarte',
+  siteTitle = PROJECT_TITLE,
   themeTextColor = colors['layer-turquoise']['300'],
   themeBackgroundColor = '#ffffff',
 }): string => `{

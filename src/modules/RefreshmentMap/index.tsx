@@ -7,10 +7,13 @@ import { MapControls } from '@components/MapControls'
 import {
   EXTRUDED_BUILDINGS_DATA,
   TEMPERATURE_DATA,
+  TEMPERATURE_HOUR_KEYS,
   WIND_DATA,
-} from '@content/index'
+  WIND_HOUR_KEYS,
+} from '@content/vectorLayers'
 import { POI_DATA, POI_CATEGORY_ID_MAP } from '@content/pois'
-import { SHADE_HOURS, HourType } from '@content/shade'
+import { SHADE_TILESETS } from '@content/shade'
+import { AvailableHoursType, HOURS, MAP_CONFIG } from '@content/general'
 import { MapRasterLayer as RasterLayer } from '@components/MapRasterLayer'
 import { MapExtrusionLayer as ExtrusionLayer } from '@components/MapExtrusionLayer'
 import { MapPointLayer } from '@components/MapPointLayer'
@@ -47,14 +50,6 @@ interface CustomMapEventType extends MapEvent {
   features: MapFeatureType[]
 }
 
-export const MAP_CONFIG = {
-  minZoom: 11.5,
-  maxZoom: 19,
-  defaultZoom: 14,
-  defaultLatitude: 52.520952,
-  defaultLongitude: 13.400033,
-}
-
 export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
   const hasMobileSize = useHasMobileSize()
   const hasWebPSupport = useHasWebPSupport()
@@ -63,12 +58,15 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
   const { pathname, query } = useRouter()
   const mappedQuery = mapRawQueryToState(query)
 
-  const activeHourKey = `${
-    mappedQuery.visibleHour || currentTime
-  }` as keyof typeof SHADE_HOURS
-  const activeHour = SHADE_HOURS[activeHourKey]
+  const hourKeys = Object.keys(HOURS) as AvailableHoursType[]
 
-  const hourKeys = Object.keys(SHADE_HOURS) as HourType[]
+  const activeHourKey = `${
+    // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+    mappedQuery.visibleHour || currentTime
+  }` as keyof typeof SHADE_TILESETS
+  const activeHour =
+    hourKeys.find((hour) => hour === activeHourKey) || hourKeys[0]
+
   const [poiTooltipContent, setPoiTooltipContent] = useState<Pick<
     MapPoiTooltipType,
     'title' | 'category' | 'info'
@@ -80,12 +78,12 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
   } | null>(null)
 
   const handleHover = (e: MapEvent): void => {
-    if (!e.features || !e.features.length) return
+    if (!POI_DATA || !e.features || !e.features.length) return
 
     const allHoveredFeatures = e.features as CustomMapEventType['features']
 
     const hoveredPoiFeatures = allHoveredFeatures.filter(
-      (f) => f.source === POI_DATA.id
+      (f) => f.source === POI_DATA?.id
     )
 
     setPoiTooltipContent({
@@ -131,7 +129,7 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
           longitude: pageProps.query.longitude || MAP_CONFIG.defaultLongitude,
           zoom: pageProps.query.zoom || MAP_CONFIG.defaultZoom,
         }}
-        interactiveLayerIds={[POI_DATA.id]}
+        interactiveLayerIds={POI_DATA ? [POI_DATA.id] : []}
         handleMouseLeave={handleMouseLeave}
         handleHover={handleHover}
       >
@@ -144,36 +142,49 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
             />
           </>
         )}
-        <FilledPolygonLayer
-          {...WIND_DATA}
-          fillColorProperty={activeHour.vectorTilesetKey}
-          isVisible={mappedQuery.showWind !== false}
-        />
-        <FilledPolygonLayer
-          {...TEMPERATURE_DATA}
-          fillColorProperty={activeHour.vectorTilesetKey}
-          isVisible={mappedQuery.showTemperature !== false}
-        />
+        {WIND_DATA && (
+          <FilledPolygonLayer
+            {...WIND_DATA}
+            fillColorProperty={WIND_HOUR_KEYS[activeHour]}
+            isVisible={mappedQuery.showWind !== false}
+          />
+        )}
+        {TEMPERATURE_DATA && (
+          <FilledPolygonLayer
+            {...TEMPERATURE_DATA}
+            fillColorProperty={TEMPERATURE_HOUR_KEYS[activeHour]}
+            isVisible={mappedQuery.showTemperature !== false}
+          />
+        )}
         {hasWebPSupport &&
-          hourKeys.map((key) => (
-            <RasterLayer
-              key={`shade-${key}`}
-              id={`shade-${key}`}
-              url={SHADE_HOURS[key].shadeTilesetId}
-              bounds={[13.06, 52.33, 13.77, 52.69]}
-              minZoom={MAP_CONFIG.defaultZoom}
-              opacity={key !== activeHourKey ? 0 : 0.5}
-              isVisible={mappedQuery.showShadows !== false}
-              beforeId={EXTRUDED_BUILDINGS_DATA.id}
-            />
-          ))}
-        <ExtrusionLayer {...EXTRUDED_BUILDINGS_DATA} minzoom={15.5} />
-        <MapPointLayer
-          {...POI_DATA}
-          activePropertyKeys={activeCategories}
-          minzoom={MAP_CONFIG.minZoom}
-        />
-        {poiTooltipCoordinates &&
+          hourKeys.map((key) => {
+            return (
+              SHADE_TILESETS && (
+                <RasterLayer
+                  key={`shade-${key}`}
+                  id={`shade-${key}`}
+                  url={SHADE_TILESETS[key]}
+                  bounds={[13.06, 52.33, 13.77, 52.69]}
+                  minZoom={MAP_CONFIG.defaultZoom}
+                  opacity={key !== activeHourKey ? 0 : 0.5}
+                  isVisible={mappedQuery.showShadows !== false}
+                  beforeId={EXTRUDED_BUILDINGS_DATA?.id}
+                />
+              )
+            )
+          })}
+        {EXTRUDED_BUILDINGS_DATA && (
+          <ExtrusionLayer {...EXTRUDED_BUILDINGS_DATA} minzoom={15.5} />
+        )}
+        {POI_DATA && (
+          <MapPointLayer
+            {...POI_DATA}
+            activePropertyKeys={activeCategories}
+            minzoom={MAP_CONFIG.minZoom}
+          />
+        )}
+        {POI_DATA &&
+          poiTooltipCoordinates &&
           poiTooltipContent &&
           poiTooltipContentIsNotEmpty && (
             <PoiTooltip

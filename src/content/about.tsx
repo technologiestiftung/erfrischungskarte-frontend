@@ -9,6 +9,9 @@ import { Accordion } from '@components/Accordion'
 const focusStyles =
   'focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-2 focus:rounded-sm focus:ring-offset-gray-100'
 
+/*
+  This part is the general introduction text that will be rendered as the first section in the About sidebar.
+*/
 export const ABOUT_INTRODUCTION: FC = () => (
   <p className="text-gray-500 text-sm pb-6">
     <>
@@ -50,6 +53,9 @@ export const ABOUT_INTRODUCTION: FC = () => (
   </p>
 )
 
+/*
+  The following ABOUT_HOW_TO, ABOUT_SHADOW_TEXT, ABOUT_COOL_TEXT, ABOUT_WINDY_TEXT, ABOUT_POINTS_TEXT are the content for the ACCORDION_ITEMS further down. Change the texts here if necessary.
+*/
 const ABOUT_HOW_TO = (
   <>
     Mit dieser Karte ist es möglich verschiedene Bereiche in Berlin im Hinblick
@@ -238,6 +244,9 @@ const ABOUT_POINTS_TEXT = (
   </>
 )
 
+/*
+  Remove items here if necessary. For example, if your not able to provide shade layers, simply remove the object here. Remember to remove other related sections, e.g. in the filter sidebar.
+*/
 export const ACCORDION_ITEMS = [
   {
     id: 'howto',
@@ -268,6 +277,9 @@ export const ACCORDION_ITEMS = [
 
 export const ABOUT_ACCORDION: FC = () => <Accordion items={ACCORDION_ITEMS} />
 
+/*
+  Update your contact details here.
+*/
 export const ABOUT_CONTACT: FC = () => (
   <p className="text-gray-500 text-sm pt-6">
     <p>
@@ -296,6 +308,9 @@ export const ABOUT_CONTACT: FC = () => (
   </p>
 )
 
+/*
+  Insert your logo(s) here. If desired, change the order/layout.
+*/
 export const ABOUT_LOGOS: FC = () => (
   <section className="mt-16 flex flex-wrap">
     <div className="flex flex-col mr-6 mb-6">
@@ -333,6 +348,9 @@ export const ABOUT_LOGOS: FC = () => (
   </section>
 )
 
+/*
+  This part is the footer. Insert things such as your imprint and data privacy statement here.
+*/
 export const ABOUT_FOOTER: FC = () => (
   <footer
     className={classNames(

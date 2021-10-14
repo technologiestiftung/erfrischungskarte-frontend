@@ -2,6 +2,7 @@ import { FC } from 'react'
 import NextHead from 'next/head'
 import colors from '../../style/colors'
 import { useRouter } from 'next/router'
+import { PROJECT_TITLE } from '@content/general'
 
 const siteUrl =
   process.env.URL ||
@@ -28,7 +29,7 @@ interface HeadPropType {
 
 export const Head: FC<Partial<HeadPropType>> = ({
   description = '',
-  siteTitle = 'Berliner Erfrischungskarte',
+  siteTitle = PROJECT_TITLE,
   pageTitle = 'Karte',
   fbAppId = '',
   keywords = [

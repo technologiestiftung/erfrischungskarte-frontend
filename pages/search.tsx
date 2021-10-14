@@ -46,7 +46,9 @@ const SearchSuggestionItem: FC<SearchSuggestionItemPropType> = ({
         'transform -translate-y-2 mr-3'
       )}
       style={{
-        backgroundColor: POI_DATA.fillColorMap.get(properties.category),
+        backgroundColor: POI_DATA
+          ? POI_DATA.fillColorMap.get(properties.category)
+          : '#000000',
       }}
     />
     <div
@@ -154,7 +156,7 @@ export const Search: FC = () => {
           'focus:ring-offset-2 focus:ring-offset-white'
         )}
       />
-      {!inputVal && (
+      {!inputVal && POI_DATA && (
         <>
           <h5 className="font-bold text-sm mb-2">Vorschläge für den Start:</h5>
           <ul>
