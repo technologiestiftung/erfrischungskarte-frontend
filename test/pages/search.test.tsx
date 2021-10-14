@@ -3,7 +3,7 @@ import React from 'react'
 import * as nextRouter from 'next/router'
 import * as geocodedPlace from '@lib/hooks/useGeocodedPlace'
 import { Search } from '../../pages/search'
-import { SEARCH_SUGGESTIONS } from '@modules/RefreshmentMap/content'
+import { SEARCH_SUGGESTIONS } from '@content/search'
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore

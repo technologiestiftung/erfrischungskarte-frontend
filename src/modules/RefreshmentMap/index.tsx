@@ -6,15 +6,13 @@ import { useHasMobileSize } from '@lib/hooks/useHasMobileSize'
 import { MapControls } from '@components/MapControls'
 import {
   EXTRUDED_BUILDINGS_DATA,
-  HOURS,
   TEMPERATURE_DATA,
   WIND_DATA,
-  POI_DATA,
-  HourType,
-  POI_CATEGORY_ID_MAP,
-} from './content'
-import { MapRasterLayer as RasterLayer } from '../../components/MapRasterLayer'
-import { MapExtrusionLayer as ExtrusionLayer } from '../../components/MapExtrusionLayer'
+} from '@content/index'
+import { POI_DATA, POI_CATEGORY_ID_MAP } from '@content/pois'
+import { SHADE_HOURS, HourType } from '@content/shade'
+import { MapRasterLayer as RasterLayer } from '@components/MapRasterLayer'
+import { MapExtrusionLayer as ExtrusionLayer } from '@components/MapExtrusionLayer'
 import { MapPointLayer } from '@components/MapPointLayer'
 import { HourSelector } from '@components/HourSelector'
 import { useRouter } from 'next/router'
@@ -67,10 +65,10 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
 
   const activeHourKey = `${
     mappedQuery.visibleHour || currentTime
-  }` as keyof typeof HOURS
-  const activeHour = HOURS[activeHourKey]
+  }` as keyof typeof SHADE_HOURS
+  const activeHour = SHADE_HOURS[activeHourKey]
 
-  const hourKeys = Object.keys(HOURS) as HourType[]
+  const hourKeys = Object.keys(SHADE_HOURS) as HourType[]
   const [poiTooltipContent, setPoiTooltipContent] = useState<Pick<
     MapPoiTooltipType,
     'title' | 'category' | 'info'
@@ -161,7 +159,7 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
             <RasterLayer
               key={`shade-${key}`}
               id={`shade-${key}`}
-              url={HOURS[key].shadeTilesetId}
+              url={SHADE_HOURS[key].shadeTilesetId}
               bounds={[13.06, 52.33, 13.77, 52.69]}
               minZoom={MAP_CONFIG.defaultZoom}
               opacity={key !== activeHourKey ? 0 : 0.5}

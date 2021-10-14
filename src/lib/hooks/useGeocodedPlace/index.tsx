@@ -1,3 +1,4 @@
+import { GEOCODING_BBOX } from '@content/search'
 import useSWR from 'swr'
 
 interface RawSearchResultType {
@@ -28,7 +29,7 @@ const mapRawResults = (rawResults: RawSearchResultType[]): SearchResultType[] =>
 const fetchSearch = async (searchTerm: string): Promise<SearchResultType[]> => {
   if (searchTerm.length < 3) return []
 
-  const geocodingUrl = `https://api.mapbox.com/geocoding/v5/mapbox.places/${searchTerm}.json?autocomplete=true&language=de&country=de&bbox=13.0824446341071,52.3281202651866,13.7682544186827,52.681600197973&access_token=${MAPBOX_TOKEN}`
+  const geocodingUrl = `https://api.mapbox.com/geocoding/v5/mapbox.places/${searchTerm}.json?autocomplete=true&language=de&country=de&bbox=${GEOCODING_BBOX.longitude.from},${GEOCODING_BBOX.latitude.from},${GEOCODING_BBOX.longitude.to},${GEOCODING_BBOX.latitude.to}&access_token=${MAPBOX_TOKEN}`
   const res = await fetch(geocodingUrl)
 
   if (!res.ok) return []

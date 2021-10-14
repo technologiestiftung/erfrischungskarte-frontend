@@ -3,13 +3,12 @@ import { GetServerSideProps } from 'next'
 import React, { FC } from 'react'
 import { FilterChip } from '@components/FilterChip'
 import { PoiLegendItem } from '@components/PoiLegendItem'
+import { LAYER_LEGEND_ITEMS, SHADE_SUPPORT_NOTE } from '@content/index'
 import {
-  LAYER_LEGEND_ITEMS,
   PoiCategory,
   POI_CATEGORY_COLOR_MAP,
   POI_CATEGORY_ID_MAP,
-  SHADE_SUPPORT_NOTE,
-} from '@modules/RefreshmentMap/content'
+} from '@content/pois'
 import { useHasMobileSize } from '@lib/hooks/useHasMobileSize'
 import { useHasWebPSupport } from '@lib/hooks/useHasWebPSupport'
 import classNames from 'classnames'

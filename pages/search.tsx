@@ -2,11 +2,8 @@ import { GeoPinIcon } from '@components/Icons'
 import { SearchResultType, useGeocodedPlace } from '@lib/hooks/useGeocodedPlace'
 import { useHasMobileSize } from '@lib/hooks/useHasMobileSize'
 import { mapRawQueryToState } from '@lib/utils/queryUtil'
-import {
-  POI_DATA,
-  SearchSuggestionItemType,
-  SEARCH_SUGGESTIONS,
-} from '@modules/RefreshmentMap/content'
+import { POI_DATA } from '@content/pois'
+import { SearchSuggestionItemType, SEARCH_SUGGESTIONS } from '@content/search'
 import classNames from 'classnames'
 import { GetServerSideProps } from 'next'
 import { useRouter } from 'next/router'
