@@ -4,16 +4,16 @@ import { Sidebar } from '@components/Sidebar'
 import { MapFilledPolygonLayer as FilledPolygonLayer } from '@components/MapFilledPolygonLayer'
 import { useHasMobileSize } from '@lib/hooks/useHasMobileSize'
 import { MapControls } from '@components/MapControls'
-import {
-  EXTRUDED_BUILDINGS_DATA,
-  TEMPERATURE_DATA,
-  TEMPERATURE_HOUR_KEYS,
-  WIND_DATA,
-  WIND_HOUR_KEYS,
-} from '@content/vectorLayers'
+import { WIND_DATA, WIND_HOUR_KEYS } from '@content/wind'
+import { TEMPERATURE_DATA, TEMPERATURE_HOUR_KEYS } from '@content/temperature'
 import { POI_DATA, POI_CATEGORY_ID_MAP } from '@content/pois'
 import { SHADE_TILESETS } from '@content/shade'
-import { AvailableHoursType, HOURS, MAP_CONFIG } from '@content/general'
+import {
+  AvailableHoursType,
+  HOURS,
+  MAP_CONFIG,
+  EXTRUDED_BUILDINGS_DATA,
+} from '@content/general'
 import { MapRasterLayer as RasterLayer } from '@components/MapRasterLayer'
 import { MapExtrusionLayer as ExtrusionLayer } from '@components/MapExtrusionLayer'
 import { MapPointLayer } from '@components/MapPointLayer'

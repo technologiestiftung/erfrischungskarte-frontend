@@ -1,5 +1,7 @@
+import { MapExtrusionLayerType } from '@components/MapExtrusionLayer'
+
 /*
-  If there is no data for a specific hour, it should first be excluded in AvailableHoursType and HOURS below, then in SHADE_TILESETS in ./shade.tsx and in WIND_HOUR_KEYS and TEMPERATURE_HOUR_KEYS in ./vectorLayers.ts. The HourSelector component respects this and doesn't render the hour if it is excluded here.
+  If there is no data for a specific hour, it should first be excluded in AvailableHoursType and HOURS below, then in SHADE_TILESETS in ./shade.tsx and in WIND_HOUR_KEYS in ./wind.ts and TEMPERATURE_HOUR_KEYS in ./temperature.ts. The HourSelector component respects this and doesn't render the hour if it is excluded here.
 
   Note that currently it is not possible to add additional hours due to space limitations in the HourSelector.
 */
@@ -47,6 +49,23 @@ export const MAP_CONFIG = {
   defaultZoom: 14,
   defaultLatitude: 52.520952,
   defaultLongitude: 13.400033,
+}
+
+/*
+  This is a Mapbox-provided layer used for rendering 3D images starting from a specific zoom level.
+
+  If no 3D extrusion is desired, EXTRUDED_BUILDINGS_DATA can be set to null.
+*/
+export const EXTRUDED_BUILDINGS_DATA: MapExtrusionLayerType | null = {
+  id: '3d-buildings',
+  url: 'mapbox://mapbox.mapbox-streets-v8',
+  source: 'composite',
+  sourceLayer: 'building',
+  extrusionProperties: {
+    base: 'min_height',
+    height: 'height',
+  },
+  extrusionColor: '#ddd',
 }
 
 /*

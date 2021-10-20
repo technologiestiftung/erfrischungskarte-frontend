@@ -16,7 +16,8 @@ import classNames from 'classnames'
 import { LayerLegendBlock } from '@components/LayerLegendBlock'
 import { Warning } from '@components/Warning'
 import { useRouter } from 'next/router'
-import { TEMPERATURE_DATA, WIND_DATA } from '@content/vectorLayers'
+import { WIND_DATA } from '@content/wind'
+import { TEMPERATURE_DATA } from '@content/temperature'
 import { SHADE_TILESETS } from '@content/shade'
 
 // eslint-disable-next-line @typescript-eslint/require-await
