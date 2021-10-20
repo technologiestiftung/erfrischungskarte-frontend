@@ -1,8 +1,8 @@
-import '../src/style/global.css';
-import { RouterContext } from "next/dist/next-server/lib/router-context";
+import '../src/style/global.css'
+import { RouterContext } from 'next/dist/shared/lib/router-context'
 
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
+  actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
     matchers: {
       color: /(background|color)$/i,
@@ -16,5 +16,5 @@ export const parameters = {
     query: {},
     push() {},
     replace() {},
-  }
+  },
 }
