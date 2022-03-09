@@ -73,7 +73,9 @@ exports[`Storyshots Content/SplashScreen Default 1`] = `
     <p
       className="mt-4 md:mr-12 text-gray-500"
     >
-      Die Berliner Erfrischungskarte zeigt
+      Die 
+      Berliner Erfrischungskarte
+       zeigt
       <b
         className="text-layer-blue-300"
       >

@@ -23,6 +23,9 @@ This repository contains the **frontend** code of the _Berliner Erfrischungskart
 
 ### Requirements
 
+#### [Node.js](https://nodejs.org)
+A recent version of Node.js is required. See `.nvmrc` for the version we currently use.
+
 #### [Mapbox](https://www.mapbox.com/)
 You will need a [Mapbox](https://www.mapbox.com/) account to render the map locally. You will need to put your [Mapbox](https://www.mapbox.com/) access token into the `NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN` environment variable. Make also sure to add whatever URL the app is run on to the list of allowed URLs in your [Mapbox](https://www.mapbox.com/) configuration.
 

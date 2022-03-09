@@ -2,11 +2,8 @@ import { GeoPinIcon } from '@components/Icons'
 import { SearchResultType, useGeocodedPlace } from '@lib/hooks/useGeocodedPlace'
 import { useHasMobileSize } from '@lib/hooks/useHasMobileSize'
 import { mapRawQueryToState } from '@lib/utils/queryUtil'
-import {
-  POI_DATA,
-  SearchSuggestionItemType,
-  SEARCH_SUGGESTIONS,
-} from '@modules/RefreshmentMap/content'
+import { POI_DATA } from '@content/pois'
+import { SearchSuggestionItemType, SEARCH_SUGGESTIONS } from '@content/search'
 import classNames from 'classnames'
 import { GetServerSideProps } from 'next'
 import { useRouter } from 'next/router'
@@ -49,7 +46,9 @@ const SearchSuggestionItem: FC<SearchSuggestionItemPropType> = ({
         'transform -translate-y-2 mr-3'
       )}
       style={{
-        backgroundColor: POI_DATA.fillColorMap.get(properties.category),
+        backgroundColor: POI_DATA
+          ? POI_DATA.fillColorMap.get(properties.category)
+          : '#000000',
       }}
     />
     <div
@@ -157,7 +156,7 @@ export const Search: FC = () => {
           'focus:ring-offset-2 focus:ring-offset-white'
         )}
       />
-      {!inputVal && (
+      {!inputVal && POI_DATA && (
         <>
           <h5 className="font-bold text-sm mb-2">Vorschläge für den Start:</h5>
           <ul>

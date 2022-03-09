@@ -1,5 +1,4 @@
-import { NumberHourType } from '@lib/hooks/useCurrentTime'
-
+import { AvailableHoursType } from '@content/general'
 export interface PageQueryType {
   latitude: number | null
   longitude: number | null
@@ -8,7 +7,7 @@ export interface PageQueryType {
   showShadows: boolean | null
   showTemperature: boolean | null
   showWind: boolean | null
-  visibleHour: NumberHourType | null
+  visibleHour: AvailableHoursType | null
   searchTerm: string | null
 }
 
@@ -37,7 +36,7 @@ const parseNumbersArray = (
     if (isNumber(parsedJson)) return [parsedJson] as number[]
     if (!Array.isArray(parsedJson)) return null
     return parsedJson.map(parseSingleNumber).filter(Boolean) as number[]
-  } catch (err) {
+  } catch (err: unknown) {
     console.error(
       'There was an error while parsing the query parameter "places":',
       Error(err as string).message,
@@ -52,7 +51,8 @@ const parseVisibleHour = (
 ): PageQueryType['visibleHour'] | null => {
   if (!val) return null
   const allHours = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
-  if (allHours.includes(val)) return val as PageQueryType['visibleHour']
+  if (allHours.includes(val))
+    return val as unknown as PageQueryType['visibleHour']
   return null
 }
 
