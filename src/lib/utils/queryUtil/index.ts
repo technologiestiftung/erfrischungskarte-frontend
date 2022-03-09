@@ -40,8 +40,8 @@ const parseNumbersArray = (
   } catch (err) {
     console.error(
       'There was an error while parsing the query parameter "places":',
-      Error(err).message,
-      Error(err).stack
+      Error(err as string).message,
+      Error(err as string).stack
     )
     return null
   }
