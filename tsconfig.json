@@ -44,8 +44,7 @@
     "./src/**/*.tsx",
     "./pages/**/*.ts",
     "./pages/**/*.tsx",
-    "./src/style/colors.js",
-    "./node_modules/@types/puppeteer/index.d.ts"
+    "./src/style/colors.js"
   ],
   "exclude": [
     "node_modules",
