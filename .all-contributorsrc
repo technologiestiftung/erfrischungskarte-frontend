@@ -11,15 +11,6 @@
   "commitConvention": "angular",
   "contributors": [
     {
-      "login": "vogelino",
-      "name": "Lucas Vogel",
-      "avatar_url": "https://avatars.githubusercontent.com/u/2759340?v=4",
-      "profile": "https://vogelino.com/",
-      "contributions": [
-        "code"
-      ]
-    },
-    {
       "login": "dnsos",
       "name": "Dennis Ostendorf",
       "avatar_url": "https://avatars.githubusercontent.com/u/15640196?v=4",
@@ -37,6 +28,16 @@
       "contributions": [
         "code",
         "data"
+      ]
+    },
+    {
+      "login": "vogelino",
+      "name": "Lucas Vogel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2759340?v=4",
+      "profile": "https://vogelino.com/",
+      "contributions": [
+        "code",
+        "doc"
       ]
     },
     {
