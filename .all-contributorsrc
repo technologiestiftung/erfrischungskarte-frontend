@@ -28,6 +28,16 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "Lisa-Stubert",
+      "name": "Lisa-Stubert",
+      "avatar_url": "https://avatars.githubusercontent.com/u/61182572?v=4",
+      "profile": "https://github.com/Lisa-Stubert",
+      "contributions": [
+        "code",
+        "data"
+      ]
     }
   ],
   "contributorsPerLine": 7
