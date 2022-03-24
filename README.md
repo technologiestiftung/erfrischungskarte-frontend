@@ -91,7 +91,7 @@ Texts and content available as [CC BY](https://creativecommons.org/licenses/by/3
       Made by <a src="https://odis-berlin.de/">
         <br />
         <br />
-        <img width="200" src="https://github.com/technologiestiftung/erfrischungskarte-frontend/raw/master/docs/odis-logo.svg" />
+        <img width="200" src="https://raw.githubusercontent.com/technologiestiftung/erfrischungskarte-frontend/main/docs/odis-logo.svg" />
       </a>
     </td>
     <td>
