@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/Build%20with%20%E2%9D%A4%EF%B8%8F-at%20Technologiesitftung%20Berlin-blue)
+![](https://img.shields.io/badge/Built%20with%20%E2%9D%A4%EF%B8%8F-at%20Technologiestiftung%20Berlin-blue)
 
 # _Berliner Erfrischungskarte_
 > The [_Berliner Erfrischungskarte_](https://erfrischungskarte.odis-berlin.de) (Berlin refreshment map) is an interactive map of Berlin that shows shadows, cold wind areas and temperature intensities across a typical summer day.
