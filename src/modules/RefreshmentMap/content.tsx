@@ -166,6 +166,7 @@ export type PoiCategory =
   | 'Strandbad'
   | 'Freibad'
   | 'Schwimmhalle'
+  | 'Toilette'
 
 export const POI_CATEGORY_COLOR_MAP: Map<PoiCategory, string> = new Map([
   ['Badestelle', colors['poi-darkblue']],
@@ -178,9 +179,10 @@ export const POI_CATEGORY_COLOR_MAP: Map<PoiCategory, string> = new Map([
   ['Gruenanlage', colors['poi-green']],
   ['Sitzbank', colors['poi-yellow']],
   ['Picknicktisch', colors['poi-red']],
+  ['Toilette', colors['poi-orange']],
 ])
 
-type PoiCategoryId = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10
+type PoiCategoryId = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11
 
 export const POI_CATEGORY_ID_MAP: { [key in PoiCategory]: PoiCategoryId } = {
   Badestelle: 1,
@@ -193,6 +195,7 @@ export const POI_CATEGORY_ID_MAP: { [key in PoiCategory]: PoiCategoryId } = {
   Gruenanlage: 8,
   Sitzbank: 9,
   Picknicktisch: 10,
+  Toilette: 11,
 }
 
 export interface PoiDataType extends MapPointLayerType {
@@ -204,8 +207,8 @@ export interface PoiDataType extends MapPointLayerType {
 export const POI_DATA: PoiDataType = {
   id: 'poi-data',
   tileset: {
-    url: 'mapbox://technologiestiftung.a9f6qix2',
-    layerName: 'erfrischungskarte_poi-0mftmq',
+    url: 'mapbox://technologiestiftung.8ci05kbc',
+    layerName: 'pois_jun2023-avs3l2',
   },
   fillColorProperty: 'category',
   fillColorMap: POI_CATEGORY_COLOR_MAP,
@@ -220,6 +223,7 @@ export const POI_DATA: PoiDataType = {
     'Gruenanlage',
     'Sitzbank',
     'Picknicktisch',
+    'Toilette',
   ],
 }
 
@@ -462,11 +466,11 @@ export const ABOUT_POINTS_TEXT = (
       href="https://overpass-turbo.eu/"
       className="text-gray-800 underline"
     >
-      Bänke, Picknicktische und Trinkbrunnen
+      Bänke, Picknicktische, Wasserspielplätze und Trinkbrunnen
     </a>{' '}
     wurden aus Open Street Map exportiert, einer frei zugänglichen Sammlung von
-    Geodaten. Den kompletten, für diese Anwendung aufbereiteten Datensatz findet
-    ihr{' '}
+    Geodaten. Den kompletten, für diese Anwendung aufbereiteten Datensatz
+    (letztes Update Juni 2023) findet ihr{' '}
     <a
       target="blank"
       href="https://github.com/technologiestiftung/erfrischungskarte-daten/blob/main/POI's/erfrischungskarte_poi.geojson"
