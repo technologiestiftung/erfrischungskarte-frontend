@@ -440,9 +440,17 @@ export const ABOUT_POINTS_TEXT = (
     >
       Zierbrunnen
     </a>{' '}
-    finden sich ebenfalls im Geodatenportal, und sind Bestandteil des
+    finden sich ebenfalls im Geodatenportal und sind Bestandteil des
     umfangreichen ATKIS-Datensatzes, der regelmäßig durch die bezirklichen
-    Vermessungsämter aktualisiert wird. Die Standorte der{' '}
+    Vermessungsämter aktualisiert wird. Auch die Positionen der{' '}
+    <a
+      target="blank"
+      href="https://fbinter.stadt-berlin.de/fb/index.jsp?loginkey=zoomStart&mapId=k_toiletten@senstadt&bbox=364921,5798767,421042,5838775"
+      className="text-gray-800 underline"
+    >
+      öffentlichen Toiletten
+    </a>{' '}
+    sind im Geodatenportal verfügbar. Die Standorte der{' '}
     <a
       target="blank"
       href="https://daten.berlin.de/datensaetze/liste-der-badestellen"
