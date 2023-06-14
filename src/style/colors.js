@@ -29,6 +29,7 @@ const colors = {
   'poi-pink': '#DB8DFF',
   'poi-yellow': '#FED914',
   'poi-red': '#F63333',
+  'poi-orange': '#FFA500',
   'poi-turquoise': '#83E5E2',
   'night-indicator-sky': '#4F6D95',
   'night-indicator-moon': '#FFFADD',
