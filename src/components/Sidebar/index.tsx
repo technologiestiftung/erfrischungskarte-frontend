@@ -50,7 +50,7 @@ export const Sidebar: FC<SidebarPropType> = ({ title, children }) => {
           paddingRight: hasMobileSize ? 'var(--sidebarPadding, 20px)' : 0,
           height: hasMobileSize
             ? pathname === '/filters' || pathname === '/map'
-              ? 'var(--screenSemiHeight)'
+              ? 'calc(var(--screenSemiHeight) - 25px)'
               : 'calc(var(--screenHeight) - 64px)'
             : 'var(--screenHeight)',
           transform: classNames(

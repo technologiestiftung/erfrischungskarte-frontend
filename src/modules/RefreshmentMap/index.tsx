@@ -28,6 +28,7 @@ import { mapRawQueryToState, PageQueryType } from '@lib/utils/queryUtil'
 import { AppTitle } from '@components/AppTitle'
 import { useHasWebPSupport } from '@lib/hooks/useHasWebPSupport'
 import { SharingOverlay } from '@components/SharingOverlay'
+import { WeatherOverlay } from '@components/WeatherOverlay'
 import { useCurrentTime } from '@lib/hooks/useCurrentTime'
 import { DisclaimerLinks } from '@components/DisclaimerLinks'
 
@@ -195,6 +196,7 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
             className={pathname !== '/map' && hasMobileSize ? 'hidden' : ''}
           />
           <SharingOverlay />
+          <WeatherOverlay />
           <Sidebar {...pageProps} />
           <HourSelector activeHourKey={activeHourKey} />
         </>
