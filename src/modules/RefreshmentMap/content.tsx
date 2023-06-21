@@ -283,12 +283,12 @@ export const ABOUT_CONTACT_TEXT = (
     <p className="mt-3">
       Eine Frage oder Feedback? Schreib uns an{' '}
       <a
-        href="mailto:odis@technologiestiftung-berlin.de"
+        href="mailto:odis@ts.berlin"
         target="_blank"
         rel="noreferrer"
         className="text-gray-800 underline"
       >
-        odis@technologiestiftung-berlin.de
+        odis@ts.berlin
       </a>
     </p>
   </>
@@ -428,7 +428,7 @@ export const ABOUT_WEATHER_TEXT = (
       href="https://www.dwd.de/DE/Home/home_node.html"
       className="text-gray-800 underline"
     >
-      deutschen Wetterdienst (DWD)
+      Deutschen Wetterdienst (DWD)
     </a>{' '}
     , der im Rahmen seines{' '}
     <a

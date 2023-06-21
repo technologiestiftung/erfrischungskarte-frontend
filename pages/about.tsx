@@ -1,7 +1,8 @@
 import { Accordion } from '@components/Accordion'
 import { CitylabLogo } from '@components/CitylabLogo'
 import { OdisLogo } from '@components/OdisLogo'
-import { SenWebLogo } from '@components/SenWebLogo'
+import { SenatskanzleiLogo } from '@components/SenatskanzleiLogo'
+
 import { TsbLogo } from '@components/TsbLogo'
 import {
   ABOUT_ACCORDION_ITEMS,
@@ -58,7 +59,7 @@ export const About: FC = () => (
       </div>
       <div className="flex flex-col">
         <span className="text-sm mb-2">Gefördert von</span>
-        <SenWebLogo className={focusStyles} />
+        <SenatskanzleiLogo className={focusStyles} />
       </div>
     </section>
     <footer
@@ -71,7 +72,7 @@ export const About: FC = () => (
       }}
     >
       <span className="text-xs w-full mb-4">
-        © 2021 Technologiestiftung Berlin
+        © 2023 Technologiestiftung Berlin
       </span>
       <a
         href="https://www.technologiestiftung-berlin.de/de/impressum/"
