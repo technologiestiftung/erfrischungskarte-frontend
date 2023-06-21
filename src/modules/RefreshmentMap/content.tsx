@@ -420,6 +420,42 @@ export const ABOUT_WINDY_TEXT = (
   </>
 )
 
+export const ABOUT_WEATHER_TEXT = (
+  <>
+    Die Wetterdaten stammen vom{' '}
+    <a
+      target="blank"
+      href="https://www.dwd.de/DE/Home/home_node.html"
+      className="text-gray-800 underline"
+    >
+      deutschen Wetterdienst (DWD)
+    </a>{' '}
+    , der im Rahmen seines{' '}
+    <a
+      target="blank"
+      href="https://www.dwd.de/DE/leistungen/opendata/opendata.html"
+      className="text-gray-800 underline"
+    >
+      Open-Data-Programms
+    </a>{' '}
+    eine Vielzahl von meteorologischen Beobachtungen und Berechnungen
+    veröffentlicht.
+    <br />
+    <br />
+    Das Open-Source-Projekt{' '}
+    <a
+      target="blank"
+      href="https://brightsky.dev/"
+      className="text-gray-800 underline"
+    >
+      BrightSky
+    </a>{' '}
+    , bietet eine kostenlose JSON-API an, um Wetterdaten ganz einfach
+    abzufragen. So können die Wettervorhersagen für Berlin stundengenau
+    dargestellt werden.
+  </>
+)
+
 export const ABOUT_POINTS_TEXT = (
   <>
     Die Erfrischungsorte stammen aus verschiedenen Quellen: Die Koordinaten der{' '}
@@ -510,6 +546,11 @@ export const ABOUT_ACCORDION_ITEMS = [
     id: 'windy-areas',
     title: 'Kalt-windige Bereiche',
     content: ABOUT_WINDY_TEXT,
+  },
+  {
+    id: 'weather',
+    title: 'Wetter',
+    content: ABOUT_WEATHER_TEXT,
   },
   {
     id: 'places',
