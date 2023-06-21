@@ -1,5 +1,6 @@
 import { CrossIcon, SharingIcon } from '@components/Icons'
 import { useCopyToClipboard } from '@lib/hooks/useCopyToClipboard'
+import useClickOutside from '@lib/hooks/useClickOutside'
 import { mapRawQueryToState } from '@lib/utils/queryUtil'
 import { MAP_CONFIG } from '@modules/RefreshmentMap'
 import classNames from 'classnames'
@@ -30,6 +31,7 @@ export const SharingOption: FC<SharingOptionPropType> = ({
   link,
 }) => {
   const { copyToClipboard, hasCopied } = useCopyToClipboard()
+
   return (
     <div className="flex mb-4 last-of-type:mb-0">
       <div className="pr-4">
@@ -64,9 +66,10 @@ export const SharingOverlay: FC = () => {
   const hasEnoughToCreateGMapsLink = Boolean(
     mappedQuery.latitude && mappedQuery.longitude && mappedQuery.zoom
   )
+  const elRef = useClickOutside<HTMLDivElement>(() => setIsOpened(false))
 
   return (
-    <>
+    <span ref={elRef}>
       <button
         onClick={() => setIsOpened(!isOpened)}
         aria-label="Diesen Kartenabschnitt teilen"
@@ -131,6 +134,6 @@ export const SharingOverlay: FC = () => {
           </button>
         </div>
       )}
-    </>
+    </span>
   )
 }
