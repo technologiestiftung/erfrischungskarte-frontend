@@ -14,6 +14,7 @@ import {
   PartlyCloudyNightIcon,
 } from '@components/Icons'
 import { mapRawQueryToState } from '@lib/utils/queryUtil'
+import useClickOutside from '@lib/hooks/useClickOutside'
 import classNames from 'classnames'
 import { useRouter } from 'next/router'
 import { FC, ReactNode, useEffect, useState } from 'react'
@@ -70,6 +71,7 @@ export const WeatherOverlay: FC = () => {
   const [isWeatherOpened, setIsWeatherOpened] = useState(false)
   const { query } = useRouter()
   const mappedQuery = mapRawQueryToState(query)
+  const elRef = useClickOutside<HTMLDivElement>(() => setIsWeatherOpened(false))
 
   const [weatherRecords, setWeatherRecords] = useState<WeatherType[] | null>(
     null
@@ -145,7 +147,7 @@ export const WeatherOverlay: FC = () => {
   }, [])
 
   return (
-    <>
+    <span ref={elRef}>
       {weatherRecords &&
         weatherRecords[hour] &&
         weatherRecords[hour].temperature && (
@@ -257,6 +259,6 @@ export const WeatherOverlay: FC = () => {
           </button>
         </div>
       )}
-    </>
+    </span>
   )
 }
