@@ -24,12 +24,12 @@
   },
   "dependencies": {
     "chrome-aws-lambda": "10.1.0",
-    "classnames": "2.3.1",
+    "classnames": "2.3.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-map-gl": "6.1.19",
-    "swr": "2.0.0",
-    "use-debounce": "8.0.1"
+    "react-map-gl": "6.1.21",
+    "swr": "2.2.4",
+    "use-debounce": "8.0.4"
   },
   "devDependencies": {
     "@storybook/addon-actions": "6.5.10",
