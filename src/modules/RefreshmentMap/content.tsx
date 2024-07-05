@@ -167,6 +167,7 @@ export type PoiCategory =
   | 'Freibad'
   | 'Schwimmhalle'
   | 'Toilette'
+  | 'Öffentlicher "Kühler Raum"'
 
 export const POI_CATEGORY_COLOR_MAP: Map<PoiCategory, string> = new Map([
   ['Badestelle', colors['poi-darkblue']],
@@ -180,9 +181,10 @@ export const POI_CATEGORY_COLOR_MAP: Map<PoiCategory, string> = new Map([
   ['Sitzbank', colors['poi-yellow']],
   ['Picknicktisch', colors['poi-red']],
   ['Toilette', colors['poi-orange']],
+  ['Öffentlicher "Kühler Raum"', colors['poi-darkgrey']],
 ])
 
-type PoiCategoryId = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11
+type PoiCategoryId = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
 
 export const POI_CATEGORY_ID_MAP: { [key in PoiCategory]: PoiCategoryId } = {
   Badestelle: 1,
@@ -196,6 +198,7 @@ export const POI_CATEGORY_ID_MAP: { [key in PoiCategory]: PoiCategoryId } = {
   Sitzbank: 9,
   Picknicktisch: 10,
   Toilette: 11,
+  'Öffentlicher "Kühler Raum"': 12,
 }
 
 export interface PoiDataType extends MapPointLayerType {
@@ -207,8 +210,8 @@ export interface PoiDataType extends MapPointLayerType {
 export const POI_DATA: PoiDataType = {
   id: 'poi-data',
   tileset: {
-    url: 'mapbox://technologiestiftung.8ci05kbc',
-    layerName: 'pois_jun2023-avs3l2',
+    url: 'mapbox://technologiestiftung.apu1fhjd',
+    layerName: 'pois_jun2024-4rd8bm',
   },
   fillColorProperty: 'category',
   fillColorMap: POI_CATEGORY_COLOR_MAP,
@@ -224,6 +227,7 @@ export const POI_DATA: PoiDataType = {
     'Sitzbank',
     'Picknicktisch',
     'Toilette',
+    'Öffentlicher "Kühler Raum"',
   ],
 }
 
@@ -269,16 +273,40 @@ export const ABOUT_INTRODUCTION_TEXT = (
 export const ABOUT_CONTACT_TEXT = (
   <>
     <p>
-      Auf GitHub findest du den{' '}
+      Informationen zum Thema Hitzeschutz findest du auch auf der{' '}
+      <a
+        target="blank"
+        href="https://www.berlin.de/baerenhitze/"
+        className="text-gray-800 underline"
+      >
+        Bärenhitze-Seite
+      </a>{' '}
+      des Landesamts für Gesundheit und Soziales (LaGeSo).
+    </p>
+    <p>
+      Bei{' '}
+      <a
+        target="blank"
+        href="https://refill-deutschland.de"
+        className="text-gray-800 underline"
+      >
+        Refill Deutschland
+      </a>{' '}
+      findest du Standorte von Geschäften, bei denen du kostenlos Wasserflaschen
+      auffüllen kannst.
+    </p>
+    <p className="mt-3">
+      {' '}
+      Den{' '}
       <a
         href="https://github.com/technologiestiftung/erfrischungskarte-frontend/"
         target="_blank"
         rel="noopener noreferrer"
         className="text-gray-800 underline"
       >
-        Quellcode des Projekts
-      </a>
-      .
+        Quellcode
+      </a>{' '}
+      der Erfrischungskarte findest du auf GitHub.
     </p>
     <p className="mt-3">
       Eine Frage oder Feedback? Schreib uns an{' '}
@@ -494,8 +522,15 @@ export const ABOUT_POINTS_TEXT = (
     >
       Badestellen und Strandbäder
     </a>{' '}
-    stammen vom Landesamt für Gesundheit und Soziales (LaGeSo). Die
-    Informationen zu{' '}
+    stammen vom Landesamt für Gesundheit und Soziales (LaGeSo), ebenso wie die{' '}
+    <a
+      target="blank"
+      href="https://www.berlin.de/baerenhitze/kuehle-raeume/"
+      className="text-gray-800 underline"
+    >
+      Öffentlichen &quot;Kühlen Räume&quot;
+    </a>
+    . Die Informationen zu{' '}
     <a
       target="blank"
       href="https://www.berlin.de/special/sport-und-fitness/schwimmen/schwimmbad/a-z/"
