@@ -292,7 +292,7 @@ export const ABOUT_CONTACT_TEXT = (
       >
         Refill Deutschland
       </a>{' '}
-      findest du Standorte von Geschäften, bei denen du kostenlos Wasserflaschen
+      findest du Standorte von Geschäften, bei denen du kostenlos Wasser
       auffüllen kannst.
     </p>
     <p className="mt-3">
