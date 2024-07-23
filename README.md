@@ -50,6 +50,9 @@ cp .env.example .env
 
 # Edit the .env file with your own values
 vim .env # Use your favourite editor here
+
+# To start developing use
+npm run dev
 ```
 
 ## Deployment
