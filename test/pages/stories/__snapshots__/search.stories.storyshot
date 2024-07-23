@@ -595,7 +595,7 @@ exports[`Storyshots Pages/Search Default 1`] = `
                   className="rounded-full w-4 h-4 border-4 border-white shadow-md transform -translate-y-2 mr-3"
                   style={
                     Object {
-                      "backgroundColor": "#DB8DFF",
+                      "backgroundColor": "#B58CFF",
                     }
                   }
                 />

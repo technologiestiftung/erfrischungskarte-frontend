@@ -26,7 +26,7 @@ const colors = {
   'poi-green': '#85B858',
   'poi-darkblue': '#1D80C3',
   'poi-lightblue': '#6CC2EF',
-  'poi-pink': '#DB8DFF',
+  'poi-pink': '#B58CFF',
   'poi-yellow': '#FED914',
   'poi-red': '#F63333',
   'poi-orange': '#FFA500',
