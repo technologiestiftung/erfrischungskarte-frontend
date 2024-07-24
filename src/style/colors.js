@@ -34,6 +34,7 @@ const colors = {
   'night-indicator-sky': '#4F6D95',
   'night-indicator-moon': '#FFFADD',
   'poi-darkgrey': '#323232',
+  'poi-border-blue': '#cf1515',
 }
 
 module.exports = colors

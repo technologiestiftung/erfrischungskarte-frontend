@@ -7,7 +7,7 @@ export interface MapPointLayerType extends Omit<LayerProps, 'type' | 'paint'> {
     url: SourceProps['url']
     layerName: string
   }
-  fillColorMap: Map<number | string, string>
+  fillColorMap: Map<number | string, { fill: string; border: string }>
   fillColorProperty: string
   activePropertyKeys?: string[]
 }

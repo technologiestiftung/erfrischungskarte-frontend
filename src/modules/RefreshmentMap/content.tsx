@@ -169,19 +169,28 @@ export type PoiCategory =
   | 'Toilette'
   | 'Öffentlicher "Kühler Raum"'
 
-export const POI_CATEGORY_COLOR_MAP: Map<PoiCategory, string> = new Map([
-  ['Badestelle', colors['poi-darkblue']],
-  ['Strandbad', colors['poi-darkblue']],
-  ['Freibad', colors['poi-darkblue']],
-  ['Schwimmhalle', colors['poi-darkblue']],
-  ['Wasserspielplatz', colors['poi-pink']],
-  ['Trinkbrunnen', colors['poi-lightblue']],
-  ['Brunnen', colors['poi-turquoise']],
-  ['Gruenanlage', colors['poi-green']],
-  ['Sitzbank', colors['poi-yellow']],
-  ['Picknicktisch', colors['poi-red']],
-  ['Toilette', colors['poi-orange']],
-  ['Öffentlicher "Kühler Raum"', colors['poi-darkgrey']],
+export const POI_CATEGORY_COLOR_MAP: Map<
+  PoiCategory,
+  { fill: string; border: string }
+> = new Map([
+  [
+    'Badestelle',
+    {
+      fill: colors['poi-darkblue'],
+      border: colors['poi-border-blue'],
+    },
+  ],
+  // ['Strandbad', colors['poi-darkblue']],
+  // ['Freibad', colors['poi-darkblue']],
+  // ['Schwimmhalle', colors['poi-darkblue']],
+  // ['Wasserspielplatz', colors['poi-pink']],
+  // ['Trinkbrunnen', colors['poi-lightblue']],
+  // ['Brunnen', colors['poi-turquoise']],
+  // ['Gruenanlage', colors['poi-green']],
+  // ['Sitzbank', colors['poi-yellow']],
+  // ['Picknicktisch', colors['poi-red']],
+  // ['Toilette', colors['poi-orange']],
+  // ['Öffentlicher "Kühler Raum"', colors['poi-darkgrey']],
 ])
 
 type PoiCategoryId = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
@@ -203,7 +212,7 @@ export const POI_CATEGORY_ID_MAP: { [key in PoiCategory]: PoiCategoryId } = {
 
 export interface PoiDataType extends MapPointLayerType {
   id: string
-  fillColorMap: Map<PoiCategory, string>
+  fillColorMap: Map<PoiCategory, { fill: string; border: string }>
   activePropertyKeys: Partial<PoiCategory>[]
 }
 

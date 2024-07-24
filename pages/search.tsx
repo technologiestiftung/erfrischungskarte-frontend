@@ -49,7 +49,7 @@ const SearchSuggestionItem: FC<SearchSuggestionItemPropType> = ({
         'transform -translate-y-2 mr-3'
       )}
       style={{
-        backgroundColor: POI_DATA.fillColorMap.get(properties.category),
+        backgroundColor: POI_DATA.fillColorMap.get(properties.category)?.fill,
       }}
     />
     <div
