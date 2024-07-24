@@ -177,27 +177,86 @@ export const POI_CATEGORY_COLOR_MAP: Map<
     'Badestelle',
     {
       fill: colors['poi-darkblue'],
-      border: colors['poi-border-blue'],
+      border: colors['poi-border-darkblue'],
     },
   ],
   [
     'Strandbad',
     {
       fill: colors['poi-darkblue'],
-      border: colors['poi-border-blue'],
+      border: colors['poi-border-darkblue'],
     },
   ],
-
-  // ['Freibad', colors['poi-darkblue']],
-  // ['Schwimmhalle', colors['poi-darkblue']],
-  // ['Wasserspielplatz', colors['poi-pink']],
-  // ['Trinkbrunnen', colors['poi-lightblue']],
-  // ['Brunnen', colors['poi-turquoise']],
-  // ['Gruenanlage', colors['poi-green']],
-  // ['Sitzbank', colors['poi-yellow']],
-  // ['Picknicktisch', colors['poi-red']],
-  // ['Toilette', colors['poi-orange']],
-  // ['Öffentlicher "Kühler Raum"', colors['poi-darkgrey']],
+  [
+    'Freibad',
+    {
+      fill: colors['poi-darkblue'],
+      border: colors['poi-border-darkblue'],
+    },
+  ],
+  [
+    'Schwimmhalle',
+    {
+      fill: colors['poi-darkblue'],
+      border: colors['poi-border-darkblue'],
+    },
+  ],
+  [
+    'Trinkbrunnen',
+    {
+      fill: colors['poi-lightblue'],
+      border: colors['poi-border-lightblue'],
+    },
+  ],
+  [
+    'Brunnen',
+    {
+      fill: colors['poi-turquoise'],
+      border: colors['poi-border-turquoise'],
+    },
+  ],
+  [
+    'Wasserspielplatz',
+    {
+      fill: colors['poi-pink'],
+      border: colors['poi-border-pink'],
+    },
+  ],
+  [
+    'Gruenanlage',
+    {
+      fill: colors['poi-green'],
+      border: colors['poi-border-green'],
+    },
+  ],
+  [
+    'Sitzbank',
+    {
+      fill: colors['poi-yellow'],
+      border: colors['poi-border-yellow'],
+    },
+  ],
+  [
+    'Picknicktisch',
+    {
+      fill: colors['poi-red'],
+      border: colors['poi-border-red'],
+    },
+  ],
+  [
+    'Toilette',
+    {
+      fill: colors['poi-orange'],
+      border: colors['poi-border-orange'],
+    },
+  ],
+  [
+    'Öffentlicher "Kühler Raum"',
+    {
+      fill: colors['poi-darkgrey'],
+      border: colors['poi-border-darkgrey'],
+    },
+  ],
 ])
 
 type PoiCategoryId = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
