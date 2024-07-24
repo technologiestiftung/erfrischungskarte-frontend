@@ -180,7 +180,14 @@ export const POI_CATEGORY_COLOR_MAP: Map<
       border: colors['poi-border-blue'],
     },
   ],
-  // ['Strandbad', colors['poi-darkblue']],
+  [
+    'Strandbad',
+    {
+      fill: colors['poi-darkblue'],
+      border: colors['poi-border-blue'],
+    },
+  ],
+
   // ['Freibad', colors['poi-darkblue']],
   // ['Schwimmhalle', colors['poi-darkblue']],
   // ['Wasserspielplatz', colors['poi-pink']],
