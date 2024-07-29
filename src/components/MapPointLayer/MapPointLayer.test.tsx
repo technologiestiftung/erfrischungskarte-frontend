@@ -30,9 +30,9 @@ const testPointLayerData: MapPointLayerType = {
   minzoom: 11.5,
   fillColorProperty: 'some-fill-prop',
   fillColorMap: new Map([
-    ['key-1', 'value-1'],
-    ['key-2', 'value-2'],
-    ['key-3', 'value-3'],
+    ['key-1', { fill: 'value-1', border: 'value-1a' }],
+    ['key-2', { fill: 'value-2', border: 'value-1b' }],
+    ['key-3', { fill: 'value-3', border: 'value-1c' }],
   ]),
 }
 describe('MapPointLayer component', () => {
