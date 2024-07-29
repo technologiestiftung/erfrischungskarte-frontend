@@ -38,7 +38,18 @@ export const MapPointLayer: FC<MapPointLayerType> = ({
   fillColorProperty,
   activePropertyKeys,
 }) => {
-  const flattenedFillColorMap = Array.from(fillColorMap).flat(2)
+  const fillColorArray = Array.from(fillColorMap)
+
+  const flattenedFillColorMap: (string | number)[] = []
+  fillColorArray.forEach((d) => {
+    flattenedFillColorMap.push(...[d[0], d[1].fill])
+  })
+
+  const flattenedBorderColorMap: (string | number)[] = []
+  fillColorArray.forEach((d) => {
+    flattenedBorderColorMap.push(...[d[0], d[1].border])
+  })
+
   const flattenedCircleRadiusMap = Array.from(CircleRadiusMap).flat(2)
   const flattenedCircleStrokeWidthMap = Array.from(CircleStrokeWidthMap).flat(2)
 
@@ -81,7 +92,13 @@ export const MapPointLayer: FC<MapPointLayerType> = ({
         ['zoom'],
         ...flattenedCircleStrokeWidthMap,
       ],
-      'circle-stroke-color': '#ffffff',
+      'circle-stroke-color': [
+        'match',
+        ['get', `${fillColorProperty}`],
+        ...flattenedBorderColorMap,
+        /* fallback color */
+        'rgba(100,100,100,100)',
+      ],
     },
   }
 
