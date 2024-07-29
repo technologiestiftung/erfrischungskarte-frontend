@@ -7,7 +7,7 @@ export interface MapPointLayerType extends Omit<LayerProps, 'type' | 'paint'> {
     url: SourceProps['url']
     layerName: string
   }
-  fillColorMap: Map<number | string, string>
+  fillColorMap: Map<number | string, { fill: string; border: string }>
   fillColorProperty: string
   activePropertyKeys?: string[]
 }
@@ -17,10 +17,10 @@ type ZoomThresholds = 12 | 15 | 17 | 18
 type CircleSizeMapType = Map<ZoomThresholds, number>
 
 const CircleRadiusMap: CircleSizeMapType = new Map([
-  [12, 2],
-  [15, 4],
-  [17, 5],
-  [18, 7],
+  [12, 4],
+  [15, 6],
+  [17, 7],
+  [18, 9],
 ])
 
 const CircleStrokeWidthMap: CircleSizeMapType = new Map([
@@ -38,7 +38,18 @@ export const MapPointLayer: FC<MapPointLayerType> = ({
   fillColorProperty,
   activePropertyKeys,
 }) => {
-  const flattenedFillColorMap = Array.from(fillColorMap).flat(2)
+  const fillColorArray = Array.from(fillColorMap)
+
+  const flattenedFillColorMap: (string | number)[] = []
+  fillColorArray.forEach((d) => {
+    flattenedFillColorMap.push(...[d[0], d[1].fill])
+  })
+
+  const flattenedBorderColorMap: (string | number)[] = []
+  fillColorArray.forEach((d) => {
+    flattenedBorderColorMap.push(...[d[0], d[1].border])
+  })
+
   const flattenedCircleRadiusMap = Array.from(CircleRadiusMap).flat(2)
   const flattenedCircleStrokeWidthMap = Array.from(CircleStrokeWidthMap).flat(2)
 
@@ -81,7 +92,13 @@ export const MapPointLayer: FC<MapPointLayerType> = ({
         ['zoom'],
         ...flattenedCircleStrokeWidthMap,
       ],
-      'circle-stroke-color': '#ffffff',
+      'circle-stroke-color': [
+        'match',
+        ['get', `${fillColorProperty}`],
+        ...flattenedBorderColorMap,
+        /* fallback color */
+        'rgba(100,100,100,100)',
+      ],
     },
   }
 

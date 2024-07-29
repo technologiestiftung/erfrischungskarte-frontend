@@ -25,9 +25,8 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => ({
   },
 })
 
-const poiCategoryColorArray: [PoiCategory, string][] = Array.from(
-  POI_CATEGORY_COLOR_MAP
-)
+const poiCategoryColorArray: [PoiCategory, { fill: string; border: string }][] =
+  Array.from(POI_CATEGORY_COLOR_MAP)
 
 const defaultActivePoiIds = Object.values(POI_CATEGORY_ID_MAP)
 
@@ -73,7 +72,7 @@ export const Filters: FC<{
             hasMobileSize ? 'mt-0' : 'mt-4'
           )}
         >
-          {poiCategoryColorArray.map(([category, color]) => {
+          {poiCategoryColorArray.map(([category, { fill, border }]) => {
             const poiId = POI_CATEGORY_ID_MAP[category]
             return (
               <div key={category} className="mt-2 mr-2">
@@ -132,7 +131,7 @@ export const Filters: FC<{
                     )
                   }}
                 >
-                  <PoiLegendItem label={category} color={color} />
+                  <PoiLegendItem label={category} fill={fill} border={border} />
                 </FilterChip>
               </div>
             )
