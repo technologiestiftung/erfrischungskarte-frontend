@@ -17,10 +17,10 @@ type ZoomThresholds = 12 | 15 | 17 | 18
 type CircleSizeMapType = Map<ZoomThresholds, number>
 
 const CircleRadiusMap: CircleSizeMapType = new Map([
-  [12, 2],
-  [15, 4],
-  [17, 5],
-  [18, 7],
+  [12, 4],
+  [15, 6],
+  [17, 7],
+  [18, 9],
 ])
 
 const CircleStrokeWidthMap: CircleSizeMapType = new Map([
