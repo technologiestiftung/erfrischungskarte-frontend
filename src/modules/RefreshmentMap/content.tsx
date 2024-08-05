@@ -543,7 +543,16 @@ export const ABOUT_POINTS_TEXT = (
       Freibädern und Schwimmhallen
     </a>{' '}
     stehen derzeit nur als Liste über Berlin.de bereit. Sie wurden mittels
-    Webscraping in einen Geodatensatz überführt.{' '}
+    Webscraping in einen Geodatensatz überführt. Die Daten für die Refill
+    Stationen stammen von dem Projekt{' '}
+    <a
+      target="blank"
+      href="https://refill-deutschland.de/"
+      className="text-gray-800 underline"
+    >
+      Refill Deutschland
+    </a>
+    {'. '}
     <a
       target="blank"
       href="https://overpass-turbo.eu/"
