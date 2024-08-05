@@ -84,9 +84,9 @@ export const WeatherOverlay: FC = () => {
   const date = `${current.getDate()}.${
     current.getMonth() + 1
   }.${current.getFullYear()}`
-  const dateAPI = `${current.getFullYear()}-${(
+  const dateAPI = `${current.getFullYear()}${(
     '0' + (current.getMonth() + 1).toString()
-  ).slice(-2)}-${current.getDate()}`
+  ).slice(-2)}${current.getDate()}`
 
   const currentHour = current.getHours()
   const hour = mappedQuery.visibleHour || currentHour

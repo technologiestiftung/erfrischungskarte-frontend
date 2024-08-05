@@ -79,7 +79,7 @@ export const SidebarNav: FC<SidebarNavPropType> = ({
 }) => (
   <nav
     className={classNames(
-      'fixed inset-0 transition box-content z-20',
+      'fixed inset-0 transition box-content z-20 pointer-events-none',
       isOpened ? 'opened' : 'closed',
       hasMobileSize ? 'top-auto h-14' : 'right-auto w-16'
     )}
@@ -98,7 +98,7 @@ export const SidebarNav: FC<SidebarNavPropType> = ({
   >
     <ul
       className={classNames(
-        'flex bg-white rounded shadow-lg',
+        'flex bg-white rounded shadow-lg pointer-events-auto',
         hasMobileSize ? ' flex-row' : ' flex-col'
       )}
     >
