@@ -161,6 +161,7 @@ export type PoiCategory =
   | 'Gruenanlage'
   | 'Trinkbrunnen'
   | 'Brunnen'
+  | 'Refill Station'
   | 'Wasserspielplatz'
   | 'Badestelle'
   | 'Strandbad'
@@ -177,6 +178,7 @@ export const POI_CATEGORY_COLOR_MAP: Map<PoiCategory, string> = new Map([
   ['Wasserspielplatz', colors['poi-pink']],
   ['Trinkbrunnen', colors['poi-lightblue']],
   ['Brunnen', colors['poi-turquoise']],
+  ['Refill Station', colors['poi-lightblue']],
   ['Gruenanlage', colors['poi-green']],
   ['Sitzbank', colors['poi-yellow']],
   ['Picknicktisch', colors['poi-red']],
@@ -184,7 +186,7 @@ export const POI_CATEGORY_COLOR_MAP: Map<PoiCategory, string> = new Map([
   ['Öffentlicher "Kühler Raum"', colors['poi-darkgrey']],
 ])
 
-type PoiCategoryId = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
+type PoiCategoryId = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13
 
 export const POI_CATEGORY_ID_MAP: { [key in PoiCategory]: PoiCategoryId } = {
   Badestelle: 1,
@@ -199,6 +201,7 @@ export const POI_CATEGORY_ID_MAP: { [key in PoiCategory]: PoiCategoryId } = {
   Picknicktisch: 10,
   Toilette: 11,
   'Öffentlicher "Kühler Raum"': 12,
+  'Refill Station': 13,
 }
 
 export interface PoiDataType extends MapPointLayerType {
@@ -210,8 +213,8 @@ export interface PoiDataType extends MapPointLayerType {
 export const POI_DATA: PoiDataType = {
   id: 'poi-data',
   tileset: {
-    url: 'mapbox://technologiestiftung.apu1fhjd',
-    layerName: 'pois_jun2024-4rd8bm',
+    url: 'mapbox://technologiestiftung.ag1bdks7',
+    layerName: 'pois_aug2024b-58jpos',
   },
   fillColorProperty: 'category',
   fillColorMap: POI_CATEGORY_COLOR_MAP,
@@ -223,6 +226,7 @@ export const POI_DATA: PoiDataType = {
     'Wasserspielplatz',
     'Trinkbrunnen',
     'Brunnen',
+    'Refill Station',
     'Gruenanlage',
     'Sitzbank',
     'Picknicktisch',
@@ -539,7 +543,16 @@ export const ABOUT_POINTS_TEXT = (
       Freibädern und Schwimmhallen
     </a>{' '}
     stehen derzeit nur als Liste über Berlin.de bereit. Sie wurden mittels
-    Webscraping in einen Geodatensatz überführt.{' '}
+    Webscraping in einen Geodatensatz überführt. Die Daten für die Refill
+    Stationen stammen von dem Projekt{' '}
+    <a
+      target="blank"
+      href="https://refill-deutschland.de/"
+      className="text-gray-800 underline"
+    >
+      Refill Deutschland
+    </a>
+    {'. '}
     <a
       target="blank"
       href="https://overpass-turbo.eu/"
