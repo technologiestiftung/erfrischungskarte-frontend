@@ -138,13 +138,48 @@ export const Filters: FC<{
             )
           })}
         </div>
+        <div className="mt-6">
+          <button
+            className="px-2 py-1 border rounded-md focus:rounded focus:ring-2 focus:ring-gray-800 focus:outline-none focus:ring-offset-2 focus:ring-offset-white border-gray-200 transition-opacity duration-75 ease-in-out mr-2"
+            onClick={() => {
+              void routerReplace(
+                {
+                  query: {
+                    ...mappedQuery,
+                    places: [0],
+                  },
+                },
+                undefined
+              )
+            }}
+          >
+            <span className="ml-1 text-gray-700 text-sm">alle ausbleden</span>
+          </button>
+          <button
+            className="px-2 py-1 border rounded-md focus:rounded focus:ring-2 focus:ring-gray-800 focus:outline-none focus:ring-offset-2 focus:ring-offset-white border-gray-200 transition-opacity duration-75 ease-in-out mr-2"
+            onClick={() => {
+              delete mappedQuery.places
+
+              void routerReplace(
+                {
+                  query: {
+                    ...mappedQuery,
+                  },
+                },
+                undefined
+              )
+            }}
+          >
+            <span className="ml-1 text-gray-700 text-sm">alle anzeigen</span>
+          </button>
+        </div>
       </section>
       <section
         aria-label="Angezeigte Flächen auswählen"
         className={classNames(
           'col-span-1',
           hasMobileSize ? 'row-start-1' : 'row-start-2',
-          hasMobileSize ? 'pb-6' : 'mt-14',
+          hasMobileSize ? 'pb-6' : 'mt-12',
           hasMobileSize ? 'border-b border-gray-400 border-dotted' : 'border-0'
         )}
       >
