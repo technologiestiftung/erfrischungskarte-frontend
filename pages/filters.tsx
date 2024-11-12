@@ -153,7 +153,7 @@ export const Filters: FC<{
               )
             }}
           >
-            <span className="ml-1 text-gray-700 text-sm">alle ausbleden</span>
+            <span className="ml-1 text-gray-700 text-sm">alle ausblenden</span>
           </button>
           <button
             className="px-2 py-1 border rounded-md focus:rounded focus:ring-2 focus:ring-gray-800 focus:outline-none focus:ring-offset-2 focus:ring-offset-white border-gray-200 transition-opacity duration-75 ease-in-out mr-2"
