@@ -7,7 +7,7 @@
 Climate change is causing increasingly hot, dry weather in many places. In recent years, Berlin has also experienced more hot days than ever before.
 This map shows you where, when and how you can find refreshment on such days, because due to the differentiated topography there can be considerable differences within the city. For each hour from 10 a.m. to 9 p.m., it shows you where it tends to be cool, where a fresh breeze usually blows and where there is shade. Also discover refreshing places like swimming spots, drinking fountains and parks. With one click via the share function, you can share your new favorite place with others.
 
-This application is completely based on open data, much of which is administrative data. Open data is now an important part of Berlin's administrative activities and not only creates transparency and openness, but also enables analysis and applications like this to make everyday life a little bit more pleasant. You can find more open data at the [Berlin Open Data Portal](https://daten.berlin.de/).
+This application is completely based on open data, much of which is administrative data. Open data is now an important part of Berlin's administrative activities and not only creates transparency and openness, but also enables analysis and applications like this to make everyday life a little bit more pleasant. You can find more open data at the [Berlin Open Data Portal](https://daten.berlin.de/). 
 
 ## Tech stack
 This website is a NextJS app configured with:
