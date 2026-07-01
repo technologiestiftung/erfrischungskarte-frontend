@@ -160,7 +160,7 @@ export type PoiCategory =
   | 'Picknicktisch'
   | 'Gruenanlage'
   | 'Trinkbrunnen'
-  | 'Brunnen'
+  | 'Straßenbrunnen'
   | 'Refill Station'
   | 'Wasserspielplatz'
   | 'Badestelle'
@@ -177,7 +177,7 @@ export const POI_CATEGORY_COLOR_MAP: Map<PoiCategory, string> = new Map([
   ['Schwimmhalle', colors['poi-darkblue']],
   ['Wasserspielplatz', colors['poi-pink']],
   ['Trinkbrunnen', colors['poi-lightblue']],
-  ['Brunnen', colors['poi-turquoise']],
+  ['Straßenbrunnen', colors['poi-turquoise']],
   ['Refill Station', colors['poi-lightblue']],
   ['Gruenanlage', colors['poi-green']],
   ['Sitzbank', colors['poi-yellow']],
@@ -195,7 +195,7 @@ export const POI_CATEGORY_ID_MAP: { [key in PoiCategory]: PoiCategoryId } = {
   Schwimmhalle: 4,
   Wasserspielplatz: 5,
   Trinkbrunnen: 6,
-  Brunnen: 7,
+  Straßenbrunnen: 7,
   Gruenanlage: 8,
   Sitzbank: 9,
   Picknicktisch: 10,
@@ -225,7 +225,7 @@ export const POI_DATA: PoiDataType = {
     'Schwimmhalle',
     'Wasserspielplatz',
     'Trinkbrunnen',
-    'Brunnen',
+    'Straßenbrunnen',
     'Refill Station',
     'Gruenanlage',
     'Sitzbank',
@@ -627,7 +627,7 @@ export const SEARCH_SUGGESTIONS: SearchSuggestionItemType[] = [
     properties: {
       name: 'Wasserfall am Viktoriapark',
       conditions: 'frische Brise, Ort zum Planschen',
-      category: 'Brunnen',
+      category: 'Straßenbrunnen',
       bezirk: 'Friedrichshain-Kreuz',
       bezirksreg: 'Tempelhofer Vorstadt',
     },
@@ -781,7 +781,7 @@ export const SEARCH_SUGGESTIONS: SearchSuggestionItemType[] = [
     properties: {
       name: 'Kaskade am Lietzensee',
       conditions: 'vergleichsweise kühl, frische Brise',
-      category: 'Brunnen',
+      category: 'Straßenbrunnen',
       bezirk: 'Charlottenburg-Wilmersdorf',
       bezirksreg: 'Neue Kantstraße',
     },
