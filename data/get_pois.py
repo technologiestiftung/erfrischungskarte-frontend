@@ -103,76 +103,92 @@ OSM_SOURCES: dict[str, dict[str, Any]] = {
 }
 
 WFS_SOURCES: list[dict[str, Any]] = [
+    # {
+    #     "source_id": "Badestelle",
+    #     "url": "https://gdi.berlin.de/services/wfs/badegewaesser",
+    #     "layer":  "badegewaesser:aa_badestellen",
+    #     "category": "Badestelle",
+    #     "default_name": "",
+    #     "name_fields": [
+    #         "badegewaes"
+    #     ],
+    #     "info_fields": [
+    #         "hinweis_zu_oeffnungszeiten"
+    #     ],
+    #     "source":"berlin"
+    # },
+    # # hinweis_zu_oeffnungszeiten
+    # {
+    #     "source_id": "Strandbad",
+    #     "url": "https://gdi.berlin.de/services/wfs/schwimmbaeder_berlin",
+    #     "layer":  "schwimmbaeder_berlin:schwimmbaeder",
+    #     "category": "Strandbad",
+    #     "default_name": "",
+    #     "name_fields": [
+    #         "name_des_schwimmbads"
+    #     ],
+    #     "filters": [
+    #         {"property": "badkategorie", "value": "Strandbad", "case_sensitive": False},
+    #     ],
+    # },
+    # {
+    #     "source_id": "Freibad",
+    #     "url": "https://gdi.berlin.de/services/wfs/schwimmbaeder_berlin",
+    #     "layer":  "schwimmbaeder_berlin:schwimmbaeder",
+    #     "category": "Freibad",
+    #     "default_name": "",
+    #     "name_fields": [
+    #         "name_des_schwimmbads"
+    #     ],
+    #     "filters": [
+    #         {"property": "badkategorie", "value": "Freibad", "case_sensitive": False},
+    #     ],
+    # },
+    # {
+    #     "source_id": "Schwimmhalle",
+    #     "url": "https://gdi.berlin.de/services/wfs/schwimmbaeder_berlin",
+    #     "layer":  "schwimmbaeder_berlin:schwimmbaeder",
+    #     "category": "Schwimmhalle",
+    #     "default_name": "",
+    #     "name_fields": [
+    #         "name_des_schwimmbads"
+    #     ],
+    #     "filters": [
+    #         {"property": "badkategorie", "value": "Hallenbad", "case_sensitive": False},
+    #         {"property": "badkategorie", "value": "Hallenbad, Schul- und Vereinsbad", "case_sensitive": False},
+    #         {"property": "badkategorie", "value": "Hallenbad, Freizeit- und Familienbad", "case_sensitive": False},
+    #     ],
+    # },
+    # {
+    #     "source_id": "Trinkbrunnen",
+    #     "url": "https://gdi.berlin.de/services/wfs/atkis",
+    #     "layer":  "atkis:a11_ax_sonstigesbauwerkodersonstigeeinrichtung_p",
+    #     "category": "Trinkbrunnen",
+    #     "default_name": "Trinkbrunnen",
+    #     "filters": [
+    #         {"property": "bezbwf", "value": "Brunnen (Trinkwasserversorgung)", "case_sensitive": True},
+    #     ],
+    # },
+    # {
+    #     "source_id": "Straßenbrunnen",
+    #     "url": "https://gdi.berlin.de/services/wfs/atkis",
+    #     "layer":  "atkis:a11_ax_sonstigesbauwerkodersonstigeeinrichtung_p",
+    #     "category": "Straßenbrunnen",
+    #     "default_name": "Straßenbrunnen",
+    #     "filters": [
+    #         {"property": "bezbwf", "value": "Brunnen", "case_sensitive": True},
+    #     ],
+    # },
     {
-        "source_id": "Badestelle",
-        "url": "https://gdi.berlin.de/services/wfs/badegewaesser",
-        "layer":  "badegewaesser:aa_badestellen",
-        "category": "Badestelle",
-        "default_name": "",
-        "name_fields": [
-            "badegewaes"
+        "source_id": "Kühler Raum",
+        "url": "https://gdi.berlin.de/services/wfs/kuehle_raeume",
+        "layer":  "kuehle_raeume:kuehle_raeume",
+        "category": "Öffentlicher \"Kühler Raum\"",
+        "default_name": "Öffentlicher \"Kühler Raum\"",
+        "name_fields": ["kuehle_raeume"],
+        "info_fields": [
+            "rollstuhlgerechter_zugang","hinweis","oeffnungszeiten"
         ]
-    },
-    {
-        "source_id": "Strandbad",
-        "url": "https://gdi.berlin.de/services/wfs/schwimmbaeder_berlin",
-        "layer":  "schwimmbaeder_berlin:schwimmbaeder",
-        "category": "Strandbad",
-        "default_name": "",
-        "name_fields": [
-            "name_des_schwimmbads"
-        ],
-        "filters": [
-            {"property": "badkategorie", "value": "Strandbad", "case_sensitive": False},
-        ],
-    },
-    {
-        "source_id": "Freibad",
-        "url": "https://gdi.berlin.de/services/wfs/schwimmbaeder_berlin",
-        "layer":  "schwimmbaeder_berlin:schwimmbaeder",
-        "category": "Freibad",
-        "default_name": "",
-        "name_fields": [
-            "name_des_schwimmbads"
-        ],
-        "filters": [
-            {"property": "badkategorie", "value": "Freibad", "case_sensitive": False},
-        ],
-    },
-    {
-        "source_id": "Schwimmhalle",
-        "url": "https://gdi.berlin.de/services/wfs/schwimmbaeder_berlin",
-        "layer":  "schwimmbaeder_berlin:schwimmbaeder",
-        "category": "Schwimmhalle",
-        "default_name": "",
-        "name_fields": [
-            "name_des_schwimmbads"
-        ],
-        "filters": [
-            {"property": "badkategorie", "value": "Hallenbad", "case_sensitive": False},
-            {"property": "badkategorie", "value": "Hallenbad, Schul- und Vereinsbad", "case_sensitive": False},
-            {"property": "badkategorie", "value": "Hallenbad, Freizeit- und Familienbad", "case_sensitive": False},
-        ],
-    },
-    {
-        "source_id": "Trinkbrunnen",
-        "url": "https://gdi.berlin.de/services/wfs/atkis",
-        "layer":  "atkis:a11_ax_sonstigesbauwerkodersonstigeeinrichtung_p",
-        "category": "Trinkbrunnen",
-        "default_name": "Trinkbrunnen",
-        "filters": [
-            {"property": "bezbwf", "value": "Brunnen (Trinkwasserversorgung)", "case_sensitive": True},
-        ],
-    },
-    {
-        "source_id": "Straßenbrunnen",
-        "url": "https://gdi.berlin.de/services/wfs/atkis",
-        "layer":  "atkis:a11_ax_sonstigesbauwerkodersonstigeeinrichtung_p",
-        "category": "Straßenbrunnen",
-        "default_name": "Straßenbrunnen",
-        "filters": [
-            {"property": "bezbwf", "value": "Brunnen", "case_sensitive": True},
-        ],
     },
     # {
     #     "source_id": "toiletten",
@@ -622,7 +638,7 @@ def derive_info(properties: dict[str, Any], *, info_fields: Sequence[str]) -> st
             parts.append(f"{humanize_key(actual_key)}: {format_property_value(value)}")
 
     if parts:
-        return "; ".join(unique_preserve_order(parts))
+        return "| ".join(unique_preserve_order(parts))
 
     return ""
 
