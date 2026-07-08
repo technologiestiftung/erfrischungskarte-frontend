@@ -40,3 +40,7 @@ yarn-error.log*
 
 # Storybook
 storybook-static
+
+/data/pois.geojson
+/data/README.md
+/public/data/pois.geojson
