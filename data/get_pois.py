@@ -108,6 +108,7 @@ WFS_SOURCES: list[dict[str, Any]] = [
     #     "url": "https://gdi.berlin.de/services/wfs/badegewaesser",
     #     "layer":  "badegewaesser:aa_badestellen",
     #     "category": "Badestelle",
+    #     "source": "Berlin",
     #     "default_name": "",
     #     "name_fields": [
     #         "badegewaes"
@@ -123,6 +124,7 @@ WFS_SOURCES: list[dict[str, Any]] = [
     #     "url": "https://gdi.berlin.de/services/wfs/schwimmbaeder_berlin",
     #     "layer":  "schwimmbaeder_berlin:schwimmbaeder",
     #     "category": "Strandbad",
+    #     "source": "Berlin",
     #     "default_name": "",
     #     "name_fields": [
     #         "name_des_schwimmbads"
@@ -136,6 +138,7 @@ WFS_SOURCES: list[dict[str, Any]] = [
     #     "url": "https://gdi.berlin.de/services/wfs/schwimmbaeder_berlin",
     #     "layer":  "schwimmbaeder_berlin:schwimmbaeder",
     #     "category": "Freibad",
+    #     "source": "Berlin",
     #     "default_name": "",
     #     "name_fields": [
     #         "name_des_schwimmbads"
@@ -149,6 +152,7 @@ WFS_SOURCES: list[dict[str, Any]] = [
     #     "url": "https://gdi.berlin.de/services/wfs/schwimmbaeder_berlin",
     #     "layer":  "schwimmbaeder_berlin:schwimmbaeder",
     #     "category": "Schwimmhalle",
+    #     "source": "Berlin",
     #     "default_name": "",
     #     "name_fields": [
     #         "name_des_schwimmbads"
@@ -164,6 +168,7 @@ WFS_SOURCES: list[dict[str, Any]] = [
     #     "url": "https://gdi.berlin.de/services/wfs/atkis",
     #     "layer":  "atkis:a11_ax_sonstigesbauwerkodersonstigeeinrichtung_p",
     #     "category": "Trinkbrunnen",
+    #     "source": "Berlin",
     #     "default_name": "Trinkbrunnen",
     #     "filters": [
     #         {"property": "bezbwf", "value": "Brunnen (Trinkwasserversorgung)", "case_sensitive": True},
@@ -174,65 +179,49 @@ WFS_SOURCES: list[dict[str, Any]] = [
     #     "url": "https://gdi.berlin.de/services/wfs/atkis",
     #     "layer":  "atkis:a11_ax_sonstigesbauwerkodersonstigeeinrichtung_p",
     #     "category": "Straßenbrunnen",
+    #     "source": "Berlin",
     #     "default_name": "Straßenbrunnen",
     #     "filters": [
     #         {"property": "bezbwf", "value": "Brunnen", "case_sensitive": True},
     #     ],
     # },
-    {
-        "source_id": "Kühler Raum",
-        "url": "https://gdi.berlin.de/services/wfs/kuehle_raeume",
-        "layer":  "kuehle_raeume:kuehle_raeume",
-        "category": "Öffentlicher \"Kühler Raum\"",
-        "default_name": "Öffentlicher \"Kühler Raum\"",
-        "name_fields": ["kuehle_raeume"],
-        "info_fields": [
-            "rollstuhlgerechter_zugang","hinweis","oeffnungszeiten"
-        ]
-    },
     # {
-    #     "source_id": "toiletten",
-    #     "url": "https://gdi.berlin.de/services/wfs/toiletten",
-    #     "layer": "toiletten:toiletten",
-    #     "category": "toilette",
-    #     "default_name": "Öffentliche Toilette",
-    #     "version": "2.0.0",
-    #     "srs_name": "EPSG:4326",
-    #     "output_format": "application/json",
-    #     "filters": [],
-    #     "name_fields": [
-    #         "name",
-    #         "bezeichnung",
-    #         "standort",
-    #         "adresse",
-    #         "strasse",
-    #         "straße",
-    #     ],
+    #     "source_id": "Kühler Raum",
+    #     "url": "https://gdi.berlin.de/services/wfs/kuehle_raeume",
+    #     "layer":  "kuehle_raeume:kuehle_raeume",
+    #     "category": "Öffentlicher \"Kühler Raum\"",
+    #     "source": "Berlin",
+    #     "default_name": "Öffentlicher \"Kühler Raum\"",
+    #     "name_fields": ["kuehle_raeume"],
     #     "info_fields": [
-    #         "adresse",
-    #         "strasse",
-    #         "straße",
-    #         "hausnummer",
-    #         "hausnr",
-    #         "plz",
-    #         "bezirk",
-    #         "ortsteil",
-    #         "typ",
-    #         "art",
-    #         "betreiber",
-    #         "barrierefrei",
-    #         "rollstuhlgerecht",
-    #         "wheelchair",
-    #         "wickeltisch",
-    #         "gebuehr",
-    #         "gebühr",
-    #         "kosten",
-    #         "opening_hours",
-    #         "oeffnungszeiten",
-    #         "öffnungszeiten",
-    #         "bemerkung",
+    #         ("adresse", "postleitzahl"),
+    #         "rollstuhlgerechter_zugang",
+    #         "hinweis",
+    #         "oeffnungszeiten"
     #     ],
+    #     "info_templates": {
+    #         ("adresse", "postleitzahl"): "Adresse: {} {} ",
+    #         "rollstuhlgerechter_zugang": "Rollstuhlgerecht: {}",
+    #         "hinweis": "Hinweis: {}",
+    #         "oeffnungszeiten": "Öffnungszeiten: {}"
+    #     }
     # },
+    {
+        "source_id": "Toiletten",
+        "url": "https://gdi.berlin.de/services/wfs/toiletten",
+        "layer": "toiletten:toiletten",
+        "category": "Toilette",
+        "source": "Berlin",
+        "default_name": "Öffentliche Toilette",
+        "info_fields": [
+            "barrierefrei",
+            "nutzungsentgelt"
+        ],
+        "info_templates": {
+            "barrierefrei": "Barrierefrei: {}",
+            "nutzungsentgelt": "Preis: {} €"
+        }
+    }
 ]
 
 INFO_FALLBACK_MAX_ITEMS = 8
@@ -417,9 +406,11 @@ def query_overpass_source(
             cleaned = clean_feature(
                 raw_feature,
                 category=source_config["category"],
+                source=source_config["source"],
                 default_name=source_config["default_name"],
                 name_fields=source_config.get("name_fields", []),
                 info_fields=source_config.get("info_fields", []),
+                info_templates=source_config.get("info_templates"),
             )
 
             if cleaned:
@@ -549,9 +540,11 @@ def query_wfs_source(
         cleaned = clean_feature(
             point_feature,
             category=source_config["category"],
+            source=source_config["source"],
             default_name=source_config["default_name"],
             name_fields=source_config.get("name_fields", []),
             info_fields=source_config.get("info_fields", []),
+            info_templates=source_config.get("info_templates"),
         )
 
         if cleaned:
@@ -564,9 +557,11 @@ def clean_feature(
     feature: dict[str, Any],
     *,
     category: str,
+    source: str,
     default_name: str,
     name_fields: Sequence[str],
-    info_fields: Sequence[str],
+    info_fields: Sequence[str | tuple[str, ...]],
+    info_templates: dict[str | tuple[str, ...] | str, str] | None = None,
 ) -> dict[str, Any] | None:
     """
     Normalize a raw GeoJSON feature to the stable output schema.
@@ -594,6 +589,7 @@ def clean_feature(
     info = derive_info(
         raw_properties,
         info_fields=info_fields,
+        info_templates=info_templates,
     )
 
     return {
@@ -603,6 +599,7 @@ def clean_feature(
             "name": name,
             "info": info,
             "category": category,
+            "source": source
         },
     }
 
@@ -623,22 +620,87 @@ def derive_name(
     return default_name
 
 
-def derive_info(properties: dict[str, Any], *, info_fields: Sequence[str]) -> str:
+def derive_info(
+    properties: dict[str, Any],
+    *,
+    info_fields: Sequence[str | tuple[str, ...]],
+    info_templates: dict[str | tuple[str, ...] | str, str] | None = None,
+) -> str:
     """
     Build a compact info string from configured fields.
 
     If none of the configured fields exist or are useful, returns an empty string.
     """
     parts: list[str] = []
+    templates = info_templates or {}
 
-    for field in info_fields:
-        actual_key, value = get_property_with_actual_key(properties, field)
+    for field_entry in info_fields:
+        if isinstance(field_entry, tuple):
+            # It's a tuple of fields to group together in a single template
+            values: list[str] = []
+            for sub_field in field_entry:
+                _, val = get_property_with_actual_key(properties, sub_field)
+                if is_useful_value(val):
+                    values.append(format_property_value(val))
 
-        if is_useful_value(value):
-            parts.append(f"{humanize_key(actual_key)}: {format_property_value(value)}")
+            if values:
+                # Try exact tuple lookup
+                template = templates.get(field_entry)
+                if not template:
+                    # Try comma-separated string lookup
+                    template = templates.get(",".join(field_entry)) or templates.get(", ".join(field_entry))
+                if not template:
+                    # Case-insensitive tuple or string fallback
+                    lower_field_entry = tuple(f.lower() for f in field_entry)
+                    for k, v in templates.items():
+                        if isinstance(k, tuple) and tuple(sk.lower() for sk in k) == lower_field_entry:
+                            template = v
+                            break
+                        elif isinstance(k, str):
+                            k_parts = [sk.strip().lower() for sk in k.split(",") if sk.strip()]
+                            if tuple(k_parts) == lower_field_entry:
+                                template = v
+                                break
+
+                if template:
+                    placeholders_count = template.count("{}")
+                    if placeholders_count > 0:
+                        # Pad values list if there are fewer values than placeholders to avoid IndexError
+                        while len(values) < placeholders_count:
+                            values.append("")
+                        formatted_args = values[:placeholders_count]
+                        parts.append(template.format(*formatted_args).strip().replace("  ", " "))
+                    elif "{value}" in template:
+                        parts.append(template.format(value=" ".join(values)))
+                    else:
+                        parts.append(f"{template}: {' '.join(values)}")
+                else:
+                    parts.append(" ".join(values))
+        else:
+            # It's a single field
+            actual_key, value = get_property_with_actual_key(properties, field_entry)
+
+            if is_useful_value(value):
+                formatted_value = format_property_value(value)
+
+                # Match template by key (case-insensitively)
+                template = templates.get(field_entry) or templates.get(actual_key)
+                if not template:
+                    lower_templates = {k.lower(): v for k, v in templates.items() if isinstance(k, str)}
+                    template = lower_templates.get(field_entry.lower()) or lower_templates.get(actual_key.lower())
+
+                if template:
+                    if "{}" in template:
+                        parts.append(template.format(formatted_value))
+                    elif "{value}" in template:
+                        parts.append(template.format(value=formatted_value))
+                    else:
+                        parts.append(f"{template}: {formatted_value}")
+                else:
+                    parts.append(f"{humanize_key(actual_key)}: {formatted_value}")
 
     if parts:
-        return "| ".join(unique_preserve_order(parts))
+        return " | ".join(unique_preserve_order(parts))
 
     return ""
 
