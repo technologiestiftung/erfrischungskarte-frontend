@@ -80,102 +80,143 @@ OSM_SOURCES: dict[str, dict[str, Any]] = {
     #         "covered",
     #     ],
     # },
-    "wasserspielplatz": {
-        "category": "wasserspielplatz",
-        "default_name": "Wasserspielplatz",
-        "selectors": [
-            '["playground"="water"]',
-            '["playground"="splash_pad"]',
-            '["fountain"="splash_pad"]',
-            '["leisure"="playground"]["name"~"Wasserspielplatz",i]',
-        ],
-        "name_fields": ["name"],
-        "info_fields": [
-            "description",
-            "playground",
-            "opening_hours",
-            "access",
-            "operator",
-            "fee",
-            "website",
-        ],
-    },
+    # "wasserspielplatz": {
+    #     "category": "wasserspielplatz",
+    #     "default_name": "Wasserspielplatz",
+    #     "selectors": [
+    #         '["playground"="water"]',
+    #         '["playground"="splash_pad"]',
+    #         '["fountain"="splash_pad"]',
+    #         '["leisure"="playground"]["name"~"Wasserspielplatz",i]',
+    #     ],
+    #     "name_fields": ["name"],
+    #     "info_fields": [
+    #         "description",
+    #         "playground",
+    #         "opening_hours",
+    #         "access",
+    #         "operator",
+    #         "fee",
+    #         "website",
+    #     ],
+    # },
 }
 
 WFS_SOURCES: list[dict[str, Any]] = [
     {
-        "source_id": "atkis_brunnen",
-        "url": "https://gdi.berlin.de/services/wfs/atkis",
-        "layer":  "atkis:a11_ax_sonstigesbauwerkodersonstigeeinrichtung_p",
-        "category": "brunnen",
-        "default_name": "Brunnen",
-        "version": "2.0.0",
-        "srs_name": "EPSG:4326",
-        "output_format": "application/json",
-        "filters": [
-            {"property": "bezbwf", "value": "Brunnen", "case_sensitive": True},
-        ],
+        "source_id": "Badestelle",
+        "url": "https://gdi.berlin.de/services/wfs/badegewaesser",
+        "layer":  "badegewaesser:aa_badestellen",
+        "category": "Badestelle",
+        "default_name": "",
         "name_fields": [
-            "name",
-            "nam",
-            "bezeichnung",
-            "objektname",
-            "objektnam",
-            "bez",
-            "bezbwf",
+            "badegewaes"
+        ]
+    },
+    {
+        "source_id": "Strandbad",
+        "url": "https://gdi.berlin.de/services/wfs/schwimmbaeder_berlin",
+        "layer":  "schwimmbaeder_berlin:schwimmbaeder",
+        "category": "Strandbad",
+        "default_name": "",
+        "name_fields": [
+            "name_des_schwimmbads"
         ],
-        "info_fields": [
-            "bezbwf",
-            "bezeichnung",
-            "objektname",
-            "objektnam",
-            "funktion",
-            "fkt",
+        "filters": [
+            {"property": "badkategorie", "value": "Strandbad", "case_sensitive": False},
         ],
     },
     {
-        "source_id": "toiletten",
-        "url": "https://gdi.berlin.de/services/wfs/toiletten",
-        "layer": "toiletten:toiletten",
-        "category": "toilette",
-        "default_name": "Öffentliche Toilette",
-        "version": "2.0.0",
-        "srs_name": "EPSG:4326",
-        "output_format": "application/json",
-        "filters": [],
+        "source_id": "Freibad",
+        "url": "https://gdi.berlin.de/services/wfs/schwimmbaeder_berlin",
+        "layer":  "schwimmbaeder_berlin:schwimmbaeder",
+        "category": "Freibad",
+        "default_name": "",
         "name_fields": [
-            "name",
-            "bezeichnung",
-            "standort",
-            "adresse",
-            "strasse",
-            "straße",
+            "name_des_schwimmbads"
         ],
-        "info_fields": [
-            "adresse",
-            "strasse",
-            "straße",
-            "hausnummer",
-            "hausnr",
-            "plz",
-            "bezirk",
-            "ortsteil",
-            "typ",
-            "art",
-            "betreiber",
-            "barrierefrei",
-            "rollstuhlgerecht",
-            "wheelchair",
-            "wickeltisch",
-            "gebuehr",
-            "gebühr",
-            "kosten",
-            "opening_hours",
-            "oeffnungszeiten",
-            "öffnungszeiten",
-            "bemerkung",
+        "filters": [
+            {"property": "badkategorie", "value": "Freibad", "case_sensitive": False},
         ],
     },
+    {
+        "source_id": "Schwimmhalle",
+        "url": "https://gdi.berlin.de/services/wfs/schwimmbaeder_berlin",
+        "layer":  "schwimmbaeder_berlin:schwimmbaeder",
+        "category": "Schwimmhalle",
+        "default_name": "",
+        "name_fields": [
+            "name_des_schwimmbads"
+        ],
+        "filters": [
+            {"property": "badkategorie", "value": "Hallenbad", "case_sensitive": False},
+            {"property": "badkategorie", "value": "Hallenbad, Schul- und Vereinsbad", "case_sensitive": False},
+            {"property": "badkategorie", "value": "Hallenbad, Freizeit- und Familienbad", "case_sensitive": False},
+        ],
+    },
+    {
+        "source_id": "Trinkbrunnen",
+        "url": "https://gdi.berlin.de/services/wfs/atkis",
+        "layer":  "atkis:a11_ax_sonstigesbauwerkodersonstigeeinrichtung_p",
+        "category": "Trinkbrunnen",
+        "default_name": "Trinkbrunnen",
+        "filters": [
+            {"property": "bezbwf", "value": "Brunnen (Trinkwasserversorgung)", "case_sensitive": True},
+        ],
+    },
+    {
+        "source_id": "Straßenbrunnen",
+        "url": "https://gdi.berlin.de/services/wfs/atkis",
+        "layer":  "atkis:a11_ax_sonstigesbauwerkodersonstigeeinrichtung_p",
+        "category": "Straßenbrunnen",
+        "default_name": "Straßenbrunnen",
+        "filters": [
+            {"property": "bezbwf", "value": "Brunnen", "case_sensitive": True},
+        ],
+    },
+    # {
+    #     "source_id": "toiletten",
+    #     "url": "https://gdi.berlin.de/services/wfs/toiletten",
+    #     "layer": "toiletten:toiletten",
+    #     "category": "toilette",
+    #     "default_name": "Öffentliche Toilette",
+    #     "version": "2.0.0",
+    #     "srs_name": "EPSG:4326",
+    #     "output_format": "application/json",
+    #     "filters": [],
+    #     "name_fields": [
+    #         "name",
+    #         "bezeichnung",
+    #         "standort",
+    #         "adresse",
+    #         "strasse",
+    #         "straße",
+    #     ],
+    #     "info_fields": [
+    #         "adresse",
+    #         "strasse",
+    #         "straße",
+    #         "hausnummer",
+    #         "hausnr",
+    #         "plz",
+    #         "bezirk",
+    #         "ortsteil",
+    #         "typ",
+    #         "art",
+    #         "betreiber",
+    #         "barrierefrei",
+    #         "rollstuhlgerecht",
+    #         "wheelchair",
+    #         "wickeltisch",
+    #         "gebuehr",
+    #         "gebühr",
+    #         "kosten",
+    #         "opening_hours",
+    #         "oeffnungszeiten",
+    #         "öffnungszeiten",
+    #         "bemerkung",
+    #     ],
+    # },
 ]
 
 INFO_FALLBACK_MAX_ITEMS = 8
@@ -426,46 +467,40 @@ def fetch_wfs_geojson(
     )
 
 
-def filter_feature_collection_by_property(
-    feature_collection: dict[str, Any],
-    property_name: str,
-    property_value: Any,
-    *,
-    case_sensitive: bool = True,
-) -> dict[str, Any]:
-    """Filter a GeoJSON FeatureCollection by one exact property value."""
-
-    def matches(value: Any) -> bool:
-        if case_sensitive:
-            return value == property_value
-
-        return str(value).casefold() == str(property_value).casefold()
-
-    filtered_features = [
-        feature
-        for feature in feature_collection.get("features", [])
-        if matches((feature.get("properties") or {}).get(property_name))
-    ]
-
-    return {"type": "FeatureCollection", "features": filtered_features}
-
-
 def apply_property_filters(
     feature_collection: dict[str, Any],
     filters: Sequence[dict[str, Any]],
 ) -> dict[str, Any]:
-    """Apply zero or more exact property filters to a FeatureCollection."""
-    filtered = feature_collection
+    """
+    Apply exact property filters to a FeatureCollection using OR logic.
 
-    for filter_config in filters:
-        filtered = filter_feature_collection_by_property(
-            filtered,
-            filter_config["property"],
-            filter_config["value"],
-            case_sensitive=filter_config.get("case_sensitive", True),
-        )
+    A feature is kept if it matches at least one of the filters in the list.
+    If no filters are provided, all features are returned.
+    """
+    if not filters:
+        return feature_collection
 
-    return filtered
+    def matches_filter(feature: dict[str, Any], filter_config: dict[str, Any]) -> bool:
+        property_name = filter_config["property"]
+        property_value = filter_config["value"]
+        case_sensitive = filter_config.get("case_sensitive", True)
+
+        feature_value = (feature.get("properties") or {}).get(property_name)
+        if feature_value is None:
+            return False
+
+        if case_sensitive:
+            return feature_value == property_value
+
+        return str(feature_value).casefold() == str(property_value).casefold()
+
+    filtered_features = [
+        feature
+        for feature in feature_collection.get("features", [])
+        if any(matches_filter(feature, f_config) for f_config in filters)
+    ]
+
+    return {"type": "FeatureCollection", "features": filtered_features}
 
 
 def query_wfs_source(
@@ -576,8 +611,7 @@ def derive_info(properties: dict[str, Any], *, info_fields: Sequence[str]) -> st
     """
     Build a compact info string from configured fields.
 
-    If none of the configured fields exist, fall back to a short generic summary
-    of primitive properties so new WFS layers still produce useful information.
+    If none of the configured fields exist or are useful, returns an empty string.
     """
     parts: list[str] = []
 
@@ -590,16 +624,7 @@ def derive_info(properties: dict[str, Any], *, info_fields: Sequence[str]) -> st
     if parts:
         return "; ".join(unique_preserve_order(parts))
 
-    fallback_parts: list[str] = []
-
-    for key, value in properties.items():
-        if len(fallback_parts) >= INFO_FALLBACK_MAX_ITEMS:
-            break
-
-        if is_useful_value(value) and isinstance(value, (str, int, float, bool)):
-            fallback_parts.append(f"{humanize_key(key)}: {format_property_value(value)}")
-
-    return "; ".join(fallback_parts)
+    return ""
 
 
 def get_property_case_insensitive(properties: dict[str, Any], key: str) -> Any:
