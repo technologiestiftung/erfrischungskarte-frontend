@@ -193,12 +193,6 @@ WFS_SOURCES: list[dict[str, Any]] = [
     #     "source": "Berlin",
     #     "default_name": "Öffentlicher \"Kühler Raum\"",
     #     "name_fields": ["kuehle_raeume"],
-    #     "info_fields": [
-    #         ("adresse", "postleitzahl"),
-    #         "rollstuhlgerechter_zugang",
-    #         "hinweis",
-    #         "oeffnungszeiten"
-    #     ],
     #     "info_templates": {
     #         ("adresse", "postleitzahl"): "Adresse: {} {} ",
     #         "rollstuhlgerechter_zugang": "Rollstuhlgerecht: {}",
@@ -213,10 +207,6 @@ WFS_SOURCES: list[dict[str, Any]] = [
         "category": "Toilette",
         "source": "Berlin",
         "default_name": "Öffentliche Toilette",
-        "info_fields": [
-            "barrierefrei",
-            "nutzungsentgelt"
-        ],
         "info_templates": {
             "barrierefrei": "Barrierefrei: {}",
             "nutzungsentgelt": "Preis: {} €"
@@ -409,7 +399,7 @@ def query_overpass_source(
                 source=source_config["source"],
                 default_name=source_config["default_name"],
                 name_fields=source_config.get("name_fields", []),
-                info_fields=source_config.get("info_fields", []),
+                info_fields=source_config.get("info_fields") or list(source_config.get("info_templates", {}).keys()),
                 info_templates=source_config.get("info_templates"),
             )
 
@@ -543,7 +533,7 @@ def query_wfs_source(
             source=source_config["source"],
             default_name=source_config["default_name"],
             name_fields=source_config.get("name_fields", []),
-            info_fields=source_config.get("info_fields", []),
+            info_fields=source_config.get("info_fields") or list(source_config.get("info_templates", {}).keys()),
             info_templates=source_config.get("info_templates"),
         )
 
