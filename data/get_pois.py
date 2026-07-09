@@ -44,61 +44,68 @@ import urllib.request
 OVERPASS_URL = "https://overpass-api.de/api/interpreter"
 
 OSM_SOURCES: dict[str, dict[str, Any]] = {
-    # "trinkbrunnen": {
-    #     "category": "trinkbrunnen",
-    #     "default_name": "Trinkbrunnen",
-    #     "selectors": [
-    #         '["amenity"="drinking_water"]',
-    #         '["amenity"="fountain"]["drinking_water"="yes"]',
-    #         '["fountain"="drinking"]',
-    #     ],
-    #     "name_fields": ["name", "operator"],
-    #     "info_fields": [
-    #         "description",
-    #         "operator",
-    #         "opening_hours",
-    #         "access",
-    #         "bottle",
-    #         "indoor",
-    #         "fee",
-    #     ],
-    # },
+    "trinkbrunnen_osm": {
+        "category": "Trinkbrunnen OSM",
+        "default_name": "Trinkbrunnen",
+        "name_fields": ["name"],
+        "info_fields": [
+            "description",
+        ],
+        "source": "osm",
+        "query": """
+            [out:json][timeout:60];
+            area["wikidata"="Q64"]->.a;
+            (
+            nwr(area.a)["amenity"="drinking_water"];
+            nwr(area.a)["amenity"="fountain"]["drinking_water"~"^(yes|true|drinkable)$",i];
+            nwr(area.a)["amenity"="fountain"]["fountain"="drinking"];
+            )->.drinks;
+            .drinks out tags center;
+        """.strip(),
+    },
     # "sitzbank": {
-    #     "category": "sitzbank",
+    #     "category": "Sitzbank",
     #     "default_name": "Sitzbank",
-    #     "selectors": [
-    #         '["amenity"="bench"]',
-    #     ],
-    #     "name_fields": ["name"],
-    #     "info_fields": [
-    #         "backrest",
-    #         "seats",
-    #         "material",
-    #         "colour",
-    #         "direction",
-    #         "operator",
-    #         "covered",
-    #     ],
+    #     "source": "osm",
+    #     "query": """
+    #         [out:json][timeout:120];
+    #         area["wikidata"="Q64"]->.a;
+    #         nwr(area.a)["amenity"="bench"]["indoor"!="yes"][access!~"^(no|private|customers|members|permit|destination|restricted)$",i][!"disused:amenity"][!"abandoned:amenity"][!"removed:amenity"][!"demolished:amenity"][!"construction:amenity"]["disused"!="yes"]["abandoned"!="yes"]["removed"!="yes"]["demolished"!="yes"]["destroyed"!="yes"]["condition"!~"^(broken|bad|damaged|ruined|dilapidated)$",i]["broken"!="yes"]["damaged"!="yes"]->.benches_ok;
+    #         .benches_ok out tags center;
+    #     """.strip(),
     # },
     # "wasserspielplatz": {
-    #     "category": "wasserspielplatz",
+    #     "category": "Wasserspielplatz",
     #     "default_name": "Wasserspielplatz",
-    #     "selectors": [
-    #         '["playground"="water"]',
-    #         '["playground"="splash_pad"]',
-    #         '["fountain"="splash_pad"]',
-    #         '["leisure"="playground"]["name"~"Wasserspielplatz",i]',
-    #     ],
     #     "name_fields": ["name"],
     #     "info_fields": [
-    #         "description",
-    #         "playground",
-    #         "opening_hours",
-    #         "access",
-    #         "operator",
-    #         "fee",
-    #         "website",
+    #         "description"
     #     ],
+    #     "source": "osm",
+    #     "query": """
+    #         [out:json][timeout:250];
+    #         area["ISO3166-2"="DE-BE"][admin_level=4]->.searchArea;
+    #         (
+    #         nwr(area.searchArea)["playground"="splash_pad"];
+    #         nwr(area.searchArea)["name"~"wasserspielplatz",i];
+    #         nwr(area.searchArea)["description"~"wasserspielplatz",i];
+    #         )->.splash;
+    #         .splash out center;
+    #     """.strip(),
+    # },
+    # "picknicktisch": {
+    #     "category": "Picknicktisch",
+    #     "default_name": "Picknicktisch",
+    #     "source": "OSM",
+    #     "query": """
+    #         [out:json][timeout:120];
+    #         area["wikidata"="Q64"]->.a;
+    #         (
+    #         nwr(area.a)["leisure"="picnic_table"]["indoor"!="yes"][access!~"^(no|private|customers|members|permit|destination|restricted)$",i][!"disused:leisure"][!"abandoned:leisure"][!"removed:leisure"][!"demolished:leisure"][!"construction:leisure"]["disused"!="yes"]["abandoned"!="yes"]["removed"!="yes"]["demolished"!="yes"]["destroyed"!="yes"]["condition"!~"^(broken|bad|damaged|ruined|dilapidated)$",i]["broken"!="yes"]["damaged"!="yes"];
+    #         nwr(area.a)["tourism"="picnic_site"]["indoor"!="yes"][access!~"^(no|private|customers|members|permit|destination|restricted)$",i][!"disused:tourism"][!"abandoned:tourism"][!"removed:tourism"][!"demolished:tourism"][!"construction:tourism"]["disused"!="yes"]["abandoned"!="yes"]["removed"!="yes"]["demolished"!="yes"]["destroyed"!="yes"]["condition"!~"^(broken|bad|damaged|ruined|dilapidated)$",i]["broken"!="yes"]["damaged"!="yes"];
+    #         )->.picnic_ok;
+    #         .picnic_ok out tags center;
+    #     """.strip(),
     # },
 }
 
@@ -163,17 +170,18 @@ WFS_SOURCES: list[dict[str, Any]] = [
     #         {"property": "badkategorie", "value": "Hallenbad, Freizeit- und Familienbad", "case_sensitive": False},
     #     ],
     # },
-    # {
-    #     "source_id": "Trinkbrunnen",
-    #     "url": "https://gdi.berlin.de/services/wfs/atkis",
-    #     "layer":  "atkis:a11_ax_sonstigesbauwerkodersonstigeeinrichtung_p",
-    #     "category": "Trinkbrunnen",
-    #     "source": "Berlin",
-    #     "default_name": "Trinkbrunnen",
-    #     "filters": [
-    #         {"property": "bezbwf", "value": "Brunnen (Trinkwasserversorgung)", "case_sensitive": True},
-    #     ],
-    # },
+    {
+        "source_id": "Trinkbrunnen",
+        "url": "https://gdi.berlin.de/services/wfs/trinkwasserbrunnen",
+        "layer":  "trinkwasserbrunnen:trinkwasserbrunnen",
+        "category": "Trinkbrunnen",
+        "source": "Berlin",
+        "default_name": "Trinkbrunnen",
+        "info_templates": {
+            "einschraenkungen": "Einschraenkungen: {} ",
+            "informationen": "Informationen: {}",
+        }
+    },
     # {
     #     "source_id": "Straßenbrunnen",
     #     "url": "https://gdi.berlin.de/services/wfs/atkis",
@@ -200,18 +208,18 @@ WFS_SOURCES: list[dict[str, Any]] = [
     #         "oeffnungszeiten": "Öffnungszeiten: {}"
     #     }
     # },
-    {
-        "source_id": "Toiletten",
-        "url": "https://gdi.berlin.de/services/wfs/toiletten",
-        "layer": "toiletten:toiletten",
-        "category": "Toilette",
-        "source": "Berlin",
-        "default_name": "Öffentliche Toilette",
-        "info_templates": {
-            "barrierefrei": "Barrierefrei: {}",
-            "nutzungsentgelt": "Preis: {} €"
-        }
-    }
+    # {
+    #     "source_id": "Toiletten",
+    #     "url": "https://gdi.berlin.de/services/wfs/toiletten",
+    #     "layer": "toiletten:toiletten",
+    #     "category": "Toilette",
+    #     "source": "Berlin",
+    #     "default_name": "Öffentliche Toilette",
+    #     "info_templates": {
+    #         "barrierefrei": "Barrierefrei: {}",
+    #         "nutzungsentgelt": "Preis: {} €"
+    #     }
+    # }
 ]
 
 INFO_FALLBACK_MAX_ITEMS = 8
@@ -364,12 +372,14 @@ def query_overpass_source(
     overpass_timeout: int = 180,
 ) -> dict[str, Any]:
     """Query one OSM source from Overpass and return a cleaned FeatureCollection."""
-    query = build_overpass_query(
-        source_config["selectors"],
-        area_name=area_name,
-        admin_level=admin_level,
-        overpass_timeout=overpass_timeout,
-    )
+    query = source_config.get("query")
+    if not query:
+        query = build_overpass_query(
+            source_config["selectors"],
+            area_name=area_name,
+            admin_level=admin_level,
+            overpass_timeout=overpass_timeout,
+        )
 
     data = request_json(
         client,
@@ -687,7 +697,7 @@ def derive_info(
                     else:
                         parts.append(f"{template}: {formatted_value}")
                 else:
-                    parts.append(f"{humanize_key(actual_key)}: {formatted_value}")
+                    parts.append(f"{formatted_value}")
 
     if parts:
         return " | ".join(unique_preserve_order(parts))
