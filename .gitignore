@@ -42,5 +42,5 @@ yarn-error.log*
 storybook-static
 
 /data/pois.geojson
-/data/README.md
+/data/NOTES.md
 /public/data/pois.geojson

@@ -47,7 +47,8 @@ OVERPASS_URL = "https://overpass-api.de/api/interpreter"
 # These will be loaded and merged into the final GeoJSON.
 EXISTING_DATASETS: list[str] = [
     # E.g. "data/data/user.geojson"
-    "data/data/user.geojson"
+    "data/data/user.geojson",
+    "data/data/gruenanlagen.geojson"
 ]
 
 ALT_TEXT_REFILL: dict[str, str] = {
