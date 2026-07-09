@@ -43,26 +43,106 @@ import urllib.request
 
 OVERPASS_URL = "https://overpass-api.de/api/interpreter"
 
+# List of existing JSON/GeoJSON dataset filenames relative to the workspace root or the script's directory.
+# These will be loaded and merged into the final GeoJSON.
+EXISTING_DATASETS: list[str] = [
+    # E.g. "data/data/user.geojson"
+    "data/data/user.geojson"
+]
+
+ALT_TEXT_REFILL: dict[str, str] = {
+    "NaturFreunde Berlin e. V.": "Bürozeiten: montags bis freitags, je von 10.00 Uhr bis 16.00 Uhr",
+    "Ormado Kaffeehaus": "",
+    "Atelier cocon coloré": "",
+    "Original Unverpackt": "",
+    "Supermarché - Fair Trade Streetwear": "",
+    "Kollateralschaden": "",
+    "Nachbarschaftstreff Lützowstraße 27": "Mo-Fr von 11-18 Uhr geöffnet",
+    "Erica Naturkosmetik": "Öffnungszeiten\nMo-Fr  11-18 Uhr\nSa 11-16 Uhr",
+    "martas Gästehäuser Hauptbahnhof Berlin": "Es gibt die Möglichkeit seine Wasserflasche nachzufüllen, da wir einen Wasserspender haben.",
+    "soulbottles": "",
+    "Der Sache wegen": "Mo-Fr. 12:00-20:00 Sa. 10:00-20:00",
+    "Caf' Dritter Raum": "Bio Café (vegan) mit Hofgarten. Öffnungszeiten: \nDi - Fr: 09:00h - 20:00h\nSa + So: 10:00h - 20:00h",
+    "Nachbarschaftsladen Berlinickestraße, Mittelhof e. V.": "Unsere Refill-Station ist für alle Menschen da, wenn wir da sind.",
+    "Morgenstern - Antiquariat und Café": "",
+    "Fruitbox": "",
+    "Kühn Keramik": "",
+}
+
+
+def resolve_file_path(path_str: str) -> Path | None:
+    """Resolve a file path relative to workspace root or script directory."""
+    # 1. Try relative to current working directory
+    p = Path(path_str)
+    if p.exists():
+        return p
+    # 2. Try relative to script parent directory
+    script_dir = Path(__file__).parent
+    p2 = script_dir / path_str
+    if p2.exists():
+        return p2
+    # 3. Try stripped data prefix relative to script directory
+    if path_str.startswith("data/"):
+        p3 = script_dir / path_str.removeprefix("data/")
+        if p3.exists():
+            return p3
+    return None
+
+
+def query_refill_stations(client: HttpClient) -> dict[str, Any]:
+    """Fetch refill stations from api.ofdb.io and clean them to match GeoJSON format."""
+    url = "https://api.ofdb.io/v0/search?bbox=52.33826%2C13.08835%2C52.67550%2C13.76116&text=refill-station&limit=10000"
+    try:
+        data = request_json(client, "GET", url)
+    except Exception as exc:
+        print(f"Warning: Could not fetch Refill Stations from api.ofdb.io: {exc}")
+        return {"type": "FeatureCollection", "features": []}
+
+    features = []
+    for item in data.get("visible", []):
+        description = item.get("description") or ""
+        if description.strip() in ("Refil Station", "Refill Station"):
+            description = ""
+
+        title = item.get("title") or ""
+        info = ALT_TEXT_REFILL.get(title) if title in ALT_TEXT_REFILL else description
+
+        features.append({
+            "type": "Feature",
+            "properties": {
+                "name": title,
+                "info": info,
+                "category": "Refill Station",
+                "source": "A TIP: TAB"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [float(item["lng"]), float(item["lat"])]
+            }
+        })
+
+    return {"type": "FeatureCollection", "features": features}
+
 OSM_SOURCES: dict[str, dict[str, Any]] = {
-    "trinkbrunnen_osm": {
-        "category": "Trinkbrunnen OSM",
-        "default_name": "Trinkbrunnen",
-        "name_fields": ["name"],
-        "info_fields": [
-            "description",
-        ],
-        "source": "osm",
-        "query": """
-            [out:json][timeout:60];
-            area["wikidata"="Q64"]->.a;
-            (
-            nwr(area.a)["amenity"="drinking_water"];
-            nwr(area.a)["amenity"="fountain"]["drinking_water"~"^(yes|true|drinkable)$",i];
-            nwr(area.a)["amenity"="fountain"]["fountain"="drinking"];
-            )->.drinks;
-            .drinks out tags center;
-        """.strip(),
-    },
+    # "trinkbrunnen_osm": {
+    #     "category": "Trinkbrunnen OSM",
+    #     "default_name": "Trinkbrunnen",
+    #     "name_fields": ["name"],
+    #     "info_fields": [
+    #         "description",
+    #     ],
+    #     "source": "osm",
+    #     "query": """
+    #         [out:json][timeout:60];
+    #         area["wikidata"="Q64"]->.a;
+    #         (
+    #         nwr(area.a)["amenity"="drinking_water"];
+    #         nwr(area.a)["amenity"="fountain"]["drinking_water"~"^(yes|true|drinkable)$",i];
+    #         nwr(area.a)["amenity"="fountain"]["fountain"="drinking"];
+    #         )->.drinks;
+    #         .drinks out tags center;
+    #     """.strip(),
+    # },
     # "sitzbank": {
     #     "category": "Sitzbank",
     #     "default_name": "Sitzbank",
@@ -170,18 +250,18 @@ WFS_SOURCES: list[dict[str, Any]] = [
     #         {"property": "badkategorie", "value": "Hallenbad, Freizeit- und Familienbad", "case_sensitive": False},
     #     ],
     # },
-    {
-        "source_id": "Trinkbrunnen",
-        "url": "https://gdi.berlin.de/services/wfs/trinkwasserbrunnen",
-        "layer":  "trinkwasserbrunnen:trinkwasserbrunnen",
-        "category": "Trinkbrunnen",
-        "source": "Berlin",
-        "default_name": "Trinkbrunnen",
-        "info_templates": {
-            "einschraenkungen": "Einschraenkungen: {} ",
-            "informationen": "Informationen: {}",
-        }
-    },
+    # {
+    #     "source_id": "Trinkbrunnen",
+    #     "url": "https://gdi.berlin.de/services/wfs/trinkwasserbrunnen",
+    #     "layer":  "trinkwasserbrunnen:trinkwasserbrunnen",
+    #     "category": "Trinkbrunnen",
+    #     "source": "Berlin",
+    #     "default_name": "Trinkbrunnen",
+    #     "info_templates": {
+    #         "einschraenkungen": "Einschraenkungen: {}",
+    #         "informationen": "{}",
+    #     }
+    # },
     # {
     #     "source_id": "Straßenbrunnen",
     #     "url": "https://gdi.berlin.de/services/wfs/atkis",
@@ -641,7 +721,9 @@ def derive_info(
             for sub_field in field_entry:
                 _, val = get_property_with_actual_key(properties, sub_field)
                 if is_useful_value(val):
-                    values.append(format_property_value(val))
+                    f_val = format_property_value(val)
+                    if is_useful_value(f_val):
+                        values.append(f_val)
 
             if values:
                 # Try exact tuple lookup
@@ -683,21 +765,22 @@ def derive_info(
             if is_useful_value(value):
                 formatted_value = format_property_value(value)
 
-                # Match template by key (case-insensitively)
-                template = templates.get(field_entry) or templates.get(actual_key)
-                if not template:
-                    lower_templates = {k.lower(): v for k, v in templates.items() if isinstance(k, str)}
-                    template = lower_templates.get(field_entry.lower()) or lower_templates.get(actual_key.lower())
+                if is_useful_value(formatted_value):
+                    # Match template by key (case-insensitively)
+                    template = templates.get(field_entry) or templates.get(actual_key)
+                    if not template:
+                        lower_templates = {k.lower(): v for k, v in templates.items() if isinstance(k, str)}
+                        template = lower_templates.get(field_entry.lower()) or lower_templates.get(actual_key.lower())
 
-                if template:
-                    if "{}" in template:
-                        parts.append(template.format(formatted_value))
-                    elif "{value}" in template:
-                        parts.append(template.format(value=formatted_value))
+                    if template:
+                        if "{}" in template:
+                            parts.append(template.format(formatted_value))
+                        elif "{value}" in template:
+                            parts.append(template.format(value=formatted_value))
+                        else:
+                            parts.append(f"{template}: {formatted_value}")
                     else:
-                        parts.append(f"{template}: {formatted_value}")
-                else:
-                    parts.append(f"{formatted_value}")
+                        parts.append(f"{formatted_value}")
 
     if parts:
         return " | ".join(unique_preserve_order(parts))
@@ -940,6 +1023,31 @@ def build_berlin_geojson(args: argparse.Namespace) -> dict[str, Any]:
             print(f"  {len(collection['features'])} cleaned features")
             collections.append(collection)
             time.sleep(args.pause_between_requests)
+
+    # Query Refill Stations from api.ofdb.io
+    print("Querying Refill Stations: api.ofdb.io")
+    refill_collection = query_refill_stations(client)
+    print(f"  {len(refill_collection['features'])} cleaned features")
+    collections.append(refill_collection)
+
+    # Merge existing datasets
+    for filename in EXISTING_DATASETS:
+        file_path = resolve_file_path(filename)
+        if file_path:
+            print(f"Merging existing dataset: {file_path}")
+            try:
+                with file_path.open("r", encoding="utf-8") as file:
+                    data = json.load(file)
+                if isinstance(data, dict) and data.get("type") == "FeatureCollection":
+                    collections.append(data)
+                elif isinstance(data, list):
+                    collections.append({"type": "FeatureCollection", "features": data})
+                else:
+                    print(f"Warning: Dataset format in {file_path} not recognized (expected FeatureCollection or list of features)")
+            except Exception as exc:
+                print(f"Warning: Could not load existing dataset {file_path}: {exc}")
+        else:
+            print(f"Warning: Could not find existing dataset: {filename}")
 
     return merge_feature_collections(collections)
 
