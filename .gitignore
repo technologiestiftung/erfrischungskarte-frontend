@@ -44,3 +44,7 @@ storybook-static
 /data/pois.geojson
 /data/NOTES.md
 /public/data/pois.geojson
+
+# Python cache
+__pycache__/
+*.pyc
