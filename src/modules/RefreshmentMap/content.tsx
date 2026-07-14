@@ -490,87 +490,169 @@ export const ABOUT_WEATHER_TEXT = (
 
 export const ABOUT_POINTS_TEXT = (
   <>
-    Die Erfrischungsorte stammen aus verschiedenen Quellen: Die Koordinaten der{' '}
-    <a
-      target="blank"
-      href="https://daten.berlin.de/datensaetze/grünanlagenbestand-berlin-einschl-der-öffentlichen-spielplätze-grünanlagen-wfs"
-      className="text-gray-800 underline"
-    >
-      Grünanlagen
-    </a>{' '}
-    wurden aus einem Datensatz zum öffentlichen Grünanlagenbestand erstellt.
-    Dieser wird durch die bezirklichen Straßen- und Grünflächenämter gepflegt
-    und im Berliner Geodatenportal zur Verfügung gestellt. Die Standorte der{' '}
-    <a
-      target="blank"
-      href="https://daten.berlin.de/datensaetze/atkis-sonstiges-bauwerk-oder-sonstige-einrichtung-punkte-wfs"
-      className="text-gray-800 underline"
-    >
-      Zierbrunnen
-    </a>{' '}
-    finden sich ebenfalls im Geodatenportal und sind Bestandteil des
-    umfangreichen ATKIS-Datensatzes, der regelmäßig durch die bezirklichen
-    Vermessungsämter aktualisiert wird. Auch die Positionen der{' '}
-    <a
-      target="blank"
-      href="https://fbinter.stadt-berlin.de/fb/index.jsp?loginkey=zoomStart&mapId=k_toiletten@senstadt&bbox=364921,5798767,421042,5838775"
-      className="text-gray-800 underline"
-    >
-      öffentlichen Toiletten
-    </a>{' '}
-    sind im Geodatenportal verfügbar. Die Standorte der{' '}
-    <a
-      target="blank"
-      href="https://daten.berlin.de/datensaetze/liste-der-badestellen"
-      className="text-gray-800 underline"
-    >
-      Badestellen und Strandbäder
-    </a>{' '}
-    stammen vom Landesamt für Gesundheit und Soziales (LaGeSo), ebenso wie die{' '}
-    <a
-      target="blank"
-      href="https://www.berlin.de/baerenhitze/kuehle-raeume/"
-      className="text-gray-800 underline"
-    >
-      Öffentlichen &quot;Kühlen Räume&quot;
-    </a>
-    . Die Informationen zu{' '}
-    <a
-      target="blank"
-      href="https://www.berlin.de/special/sport-und-fitness/schwimmen/schwimmbad/a-z/"
-      className="text-gray-800 underline"
-    >
-      Freibädern und Schwimmhallen
-    </a>{' '}
-    stehen derzeit nur als Liste über Berlin.de bereit. Sie wurden mittels
-    Webscraping in einen Geodatensatz überführt. Die Daten für die Refill
-    Stationen stammen von dem Projekt{' '}
-    <a
-      target="blank"
-      href="https://refill-deutschland.de/"
-      className="text-gray-800 underline"
-    >
-      Refill Deutschland
-    </a>
-    {'. '}
-    <a
-      target="blank"
-      href="https://overpass-turbo.eu/"
-      className="text-gray-800 underline"
-    >
-      Bänke, Picknicktische, Wasserspielplätze und Trinkbrunnen
-    </a>{' '}
-    wurden aus Open Street Map exportiert, einer frei zugänglichen Sammlung von
-    Geodaten. Den kompletten, für diese Anwendung aufbereiteten Datensatz
-    (letztes Update Juni 2023) findet ihr{' '}
-    <a
-      target="blank"
-      href="https://github.com/technologiestiftung/erfrischungskarte-daten/blob/main/POI's/erfrischungskarte_poi.geojson"
-      className="text-gray-800 underline"
-    >
-      hier
-    </a>
-    .
+    Die Erfrischungsorte stammen aus verschiedenen Quellen:
+    
+    <div className="space-y-2 mt-2">
+      <p>
+        Die Koordinaten der <strong>Grünanlagen</strong> wurden aus einem
+        {' '}
+        <a
+          target="_blank"
+          href="https://daten.berlin.de/datensaetze/grunanlagenbestand-berlin-einschliesslich-der-offentlichen-spielplatze-wfs-737fd0a4"
+          className="text-gray-800 underline"
+          rel="noopener noreferrer"
+        >
+          Datensatz 
+        </a>
+        {' '}  zum öffentlichen
+        Grünanlagenbestand erstellt. Dieser wird von den bezirklichen Straßen- und Grünflächenämtern
+        gepflegt und im Berliner Geodatenportal bereitgestellt.
+      </p>
+      
+      <p>
+        Die Standorte der <strong>Brunnen</strong> setzen sich aus unterschiedlichen Quellen zusammen:
+        Zum einen sind sie Teil des umfangreichen 
+        {' '}
+        <a
+          target="_blank"
+          href="https://wfsexplorer.odis-berlin.de/?wfs=https%3A%2F%2Fgdi.berlin.de%2Fservices%2Fwfs%2Fatkis&layer=atkis%3Aa11_ax_sonstigesbauwerkodersonstigeeinrichtung_p&filters=%5B%7B%22attribute%22%3A%22bezbwf%22%2C%22operator%22%3A%22equals%22%2C%22value%22%3A%22Brunnen%22%7D%5D"
+          className="text-gray-800 underline"
+          rel="noopener noreferrer"
+        >
+          ATKIS-Datensatzes
+        </a>
+        {''}, der regelmäßig durch die
+        bezirklichen Vermessungsämter aktualisiert wird. Zum anderen gibt es einen gesonderten Datensatz zu
+        {' '}
+        <a
+          target="_blank"
+          href="https://daten.berlin.de/datensaetze/zierbrunnen-wfs-30f65b64"
+          className="text-gray-800 underline"
+          rel="noopener noreferrer"
+        >
+          Zierbrunnen
+        </a>
+        . Zusätzlich werden Datenpunkte zu Straßenbrunnen auf
+        {' '}
+        <a
+          target="_blank"
+          href="https://umap.openstreetmap.de/de/map/strassenbrunnen-berlin_2234#12/52.508490/13.303070"
+          className="text-gray-800 underline"
+          rel="noopener noreferrer"
+        >
+          Open Street Map
+        </a>
+        {' '}integriert.
+      </p>
+      
+      <p>
+        Die Positionen der <strong>öffentlichen Toiletten</strong> sind ebenfalls im
+        {' '}
+        <a
+          target="_blank"
+          href="https://fbinter.stadt-berlin.de/fb/index.jsp?loginkey=zoomStart&mapId=k_toiletten@senstadt&bbox=364921,5798767,421042,5838775"
+          className="text-gray-800 underline"
+          rel="noopener noreferrer"
+        >
+          Geodatenportal
+        </a>
+        {' '}verfügbar. Der
+        {' '}
+        <a
+          target="_blank"
+          href="https://daten.berlin.de/datensaetze/offentliche-toiletten-wfs-ad2c0c24"
+          className="text-gray-800 underline"
+          rel="noopener noreferrer"
+        >
+          Datensatz
+        </a>
+        {' '} ist auch auf Berlin Open Data einsehbar.
+      </p>
+      
+      <p>
+        Die        
+        {' '}
+        <a
+          target="_blank"
+          href="https://daten.berlin.de/datensaetze/liste-der-badestellen-opendata-1568631"
+          className="text-gray-800 underline"
+          rel="noopener noreferrer"
+        >
+        Standorte
+        </a>
+        {' '}der <strong>Badestellen und Strandbäder</strong> stammen vom Landesamt für
+        Gesundheit und Soziales (LaGeSo), ebenso wie die 
+        {' '}
+        <a
+          target="_blank"
+          href="https://daten.berlin.de/datensaetze/kuhle-raume-hitzeschutz-wfs-89e7079b"
+          className="text-gray-800 underline"
+          rel="noopener noreferrer"
+        >
+          Datenpunkte
+        </a>
+        {' '} der <strong>Öffentlichen "Kühlen Räume"</strong>.
+      </p>
+      
+      <p>
+        Die Informationen zu <strong>Freibädern und Schwimmhallen</strong> liegen derzeit nur als
+        {' '}
+        <a
+          target="_blank"
+          href="https://www.berlinerbaeder.de/baeder/?tx_bbbfacility_flist%5Baction%5D=list&tx_bbbfacility_flist%5Bcontroller%5D=Facility&cHash=9ec8da068e3a82e6496f9a1c531626f3"
+          className="text-gray-800 underline"
+          rel="noopener noreferrer"
+        >
+        Liste auf berlin.de
+        </a>
+        {' '} vor. Sie wurden mittels Webscraping in einen Geodatensatz überführt.
+      </p>
+      
+      <p>
+        Die Daten für die <strong>Refill Stationen</strong> stammen aus dem Projekt
+        {' '}
+        <a
+          target="_blank"
+          href="https://refill-deutschland.de/"
+          className="text-gray-800 underline"
+          rel="noopener noreferrer"
+        >
+          Refill Deutschland
+        </a>.
+      </p>
+      
+      <p>
+        <strong>Bänke, Picknicktische, Wasserspielplätze und Trinkbrunnen</strong> wurden aus
+        {' '}
+        <a
+          target="_blank"
+          href="https://overpass-turbo.eu/"
+          className="text-gray-800 underline"
+          rel="noopener noreferrer"
+        >
+          Open Street Map
+        </a>
+        {' '}exportiert, einer frei zugänglichen Sammlung von Geodaten. Wenn ihr in diesen
+        Kategorien fehlende Datenpunkte eintragen wollt, könnt ihr das direkt auf Open Street Map
+        tun. Nach dem nächsten Datenupdate werden diese dann auch auf der Erfrischungskarte sichtbar.
+      </p>
+      
+      <p>
+      Den kompletten, für diese Anwendung aufbereiteten Datensatz (letztes Update: Juli 2026) findet ihr
+    {' '}
+      <a
+        target="_blank"
+        href="https://github.com/technologiestiftung/erfrischungskarte-daten/tree/main/POIs/2026"
+        className="text-gray-800 underline"
+        rel="noopener noreferrer"
+      >
+        hier
+      </a>.
+      
+      </p>
+    </div>
+    
+
   </>
 )
 
