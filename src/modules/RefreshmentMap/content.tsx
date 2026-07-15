@@ -491,28 +491,26 @@ export const ABOUT_WEATHER_TEXT = (
 export const ABOUT_POINTS_TEXT = (
   <>
     Die Erfrischungsorte stammen aus verschiedenen Quellen:
-    
     <div className="space-y-2 mt-2">
       <p>
-        Die Koordinaten der <strong>Grünanlagen</strong> wurden aus einem
-        {' '}
+        Die Koordinaten der <strong>Grünanlagen</strong> wurden aus einem{' '}
         <a
           target="_blank"
           href="https://daten.berlin.de/datensaetze/grunanlagenbestand-berlin-einschliesslich-der-offentlichen-spielplatze-wfs-737fd0a4"
           className="text-gray-800 underline"
           rel="noopener noreferrer"
         >
-          Datensatz 
-        </a>
-        {' '}  zum öffentlichen
-        Grünanlagenbestand erstellt. Dieser wird von den bezirklichen Straßen- und Grünflächenämtern
-        gepflegt und im Berliner Geodatenportal bereitgestellt.
+          Datensatz
+        </a>{' '}
+        zum öffentlichen Grünanlagenbestand erstellt. Dieser wird von den
+        bezirklichen Straßen- und Grünflächenämtern gepflegt und im Berliner
+        Geodatenportal bereitgestellt.
       </p>
-      
+
       <p>
-        Die Standorte der <strong>Brunnen</strong> setzen sich aus unterschiedlichen Quellen zusammen:
-        Zum einen sind sie Teil des umfangreichen 
-        {' '}
+        Die Standorte der <strong>Brunnen</strong> setzen sich aus
+        unterschiedlichen Quellen zusammen: Zum einen sind sie Teil des
+        umfangreichen{' '}
         <a
           target="_blank"
           href="https://wfsexplorer.odis-berlin.de/?wfs=https%3A%2F%2Fgdi.berlin.de%2Fservices%2Fwfs%2Fatkis&layer=atkis%3Aa11_ax_sonstigesbauwerkodersonstigeeinrichtung_p&filters=%5B%7B%22attribute%22%3A%22bezbwf%22%2C%22operator%22%3A%22equals%22%2C%22value%22%3A%22Brunnen%22%7D%5D"
@@ -521,9 +519,8 @@ export const ABOUT_POINTS_TEXT = (
         >
           ATKIS-Datensatzes
         </a>
-        {''}, der regelmäßig durch die
-        bezirklichen Vermessungsämter aktualisiert wird. Zum anderen gibt es einen gesonderten Datensatz zu
-        {' '}
+        {''}, der regelmäßig durch die bezirklichen Vermessungsämter
+        aktualisiert wird. Zum anderen gibt es einen gesonderten Datensatz zu{' '}
         <a
           target="_blank"
           href="https://daten.berlin.de/datensaetze/zierbrunnen-wfs-30f65b64"
@@ -532,8 +529,7 @@ export const ABOUT_POINTS_TEXT = (
         >
           Zierbrunnen
         </a>
-        . Zusätzlich werden Datenpunkte zu Straßenbrunnen auf
-        {' '}
+        . Zusätzlich werden Datenpunkte zu Straßenbrunnen auf{' '}
         <a
           target="_blank"
           href="https://umap.openstreetmap.de/de/map/strassenbrunnen-berlin_2234#12/52.508490/13.303070"
@@ -541,13 +537,13 @@ export const ABOUT_POINTS_TEXT = (
           rel="noopener noreferrer"
         >
           Open Street Map
-        </a>
-        {' '}integriert.
+        </a>{' '}
+        integriert.
       </p>
-      
+
       <p>
-        Die Positionen der <strong>öffentlichen Toiletten</strong> sind ebenfalls im
-        {' '}
+        Die Positionen der <strong>öffentlichen Toiletten</strong> sind
+        ebenfalls im{' '}
         <a
           target="_blank"
           href="https://fbinter.stadt-berlin.de/fb/index.jsp?loginkey=zoomStart&mapId=k_toiletten@senstadt&bbox=364921,5798767,421042,5838775"
@@ -555,9 +551,8 @@ export const ABOUT_POINTS_TEXT = (
           rel="noopener noreferrer"
         >
           Geodatenportal
-        </a>
-        {' '}verfügbar. Der
-        {' '}
+        </a>{' '}
+        verfügbar. Der{' '}
         <a
           target="_blank"
           href="https://daten.berlin.de/datensaetze/offentliche-toiletten-wfs-ad2c0c24"
@@ -565,24 +560,22 @@ export const ABOUT_POINTS_TEXT = (
           rel="noopener noreferrer"
         >
           Datensatz
-        </a>
-        {' '} ist auch auf Berlin Open Data einsehbar.
+        </a>{' '}
+        ist auch auf Berlin Open Data einsehbar.
       </p>
-      
+
       <p>
-        Die        
-        {' '}
+        Die{' '}
         <a
           target="_blank"
           href="https://daten.berlin.de/datensaetze/liste-der-badestellen-opendata-1568631"
           className="text-gray-800 underline"
           rel="noopener noreferrer"
         >
-        Standorte
-        </a>
-        {' '}der <strong>Badestellen und Strandbäder</strong> stammen vom Landesamt für
-        Gesundheit und Soziales (LaGeSo), ebenso wie die 
-        {' '}
+          Standorte
+        </a>{' '}
+        der <strong>Badestellen und Strandbäder</strong> stammen vom Landesamt
+        für Gesundheit und Soziales (LaGeSo), ebenso wie die{' '}
         <a
           target="_blank"
           href="https://daten.berlin.de/datensaetze/kuhle-raume-hitzeschutz-wfs-89e7079b"
@@ -590,27 +583,27 @@ export const ABOUT_POINTS_TEXT = (
           rel="noopener noreferrer"
         >
           Datenpunkte
-        </a>
-        {' '} der <strong>Öffentlichen "Kühlen Räume"</strong>.
+        </a>{' '}
+        der <strong>Öffentlichen &quot;Kühlen Räume&quot;</strong>.
       </p>
-      
+
       <p>
-        Die Informationen zu <strong>Freibädern und Schwimmhallen</strong> liegen derzeit nur als
-        {' '}
+        Die Informationen zu <strong>Freibädern und Schwimmhallen</strong>{' '}
+        liegen derzeit nur als{' '}
         <a
           target="_blank"
           href="https://www.berlinerbaeder.de/baeder/?tx_bbbfacility_flist%5Baction%5D=list&tx_bbbfacility_flist%5Bcontroller%5D=Facility&cHash=9ec8da068e3a82e6496f9a1c531626f3"
           className="text-gray-800 underline"
           rel="noopener noreferrer"
         >
-        Liste auf berlin.de
-        </a>
-        {' '} vor. Sie wurden mittels Webscraping in einen Geodatensatz überführt.
+          Liste auf berlin.de
+        </a>{' '}
+        vor. Sie wurden mittels Webscraping in einen Geodatensatz überführt.
       </p>
-      
+
       <p>
-        Die Daten für die <strong>Refill Stationen</strong> stammen aus dem Projekt
-        {' '}
+        Die Daten für die <strong>Refill Stationen</strong> stammen aus dem
+        Projekt{' '}
         <a
           target="_blank"
           href="https://refill-deutschland.de/"
@@ -618,12 +611,15 @@ export const ABOUT_POINTS_TEXT = (
           rel="noopener noreferrer"
         >
           Refill Deutschland
-        </a>.
+        </a>
+        .
       </p>
-      
+
       <p>
-        <strong>Bänke, Picknicktische, Wasserspielplätze und Trinkbrunnen</strong> wurden aus
-        {' '}
+        <strong>
+          Bänke, Picknicktische, Wasserspielplätze und Trinkbrunnen
+        </strong>{' '}
+        wurden aus{' '}
         <a
           target="_blank"
           href="https://overpass-turbo.eu/"
@@ -631,28 +627,27 @@ export const ABOUT_POINTS_TEXT = (
           rel="noopener noreferrer"
         >
           Open Street Map
-        </a>
-        {' '}exportiert, einer frei zugänglichen Sammlung von Geodaten. Wenn ihr in diesen
-        Kategorien fehlende Datenpunkte eintragen wollt, könnt ihr das direkt auf Open Street Map
-        tun. Nach dem nächsten Datenupdate werden diese dann auch auf der Erfrischungskarte sichtbar.
+        </a>{' '}
+        exportiert, einer frei zugänglichen Sammlung von Geodaten. Wenn ihr in
+        diesen Kategorien fehlende Datenpunkte eintragen wollt, könnt ihr das
+        direkt auf Open Street Map tun. Nach dem nächsten Datenupdate werden
+        diese dann auch auf der Erfrischungskarte sichtbar.
       </p>
-      
+
       <p>
-      Den kompletten, für diese Anwendung aufbereiteten Datensatz (letztes Update: Juli 2026) findet ihr
-    {' '}
-      <a
-        target="_blank"
-        href="https://github.com/technologiestiftung/erfrischungskarte-daten/tree/main/POIs/2026"
-        className="text-gray-800 underline"
-        rel="noopener noreferrer"
-      >
-        hier
-      </a>.
-      
+        Den kompletten, für diese Anwendung aufbereiteten Datensatz (letztes
+        Update: Juli 2026) findet ihr{' '}
+        <a
+          target="_blank"
+          href="https://github.com/technologiestiftung/erfrischungskarte-daten/tree/main/POIs/2026"
+          className="text-gray-800 underline"
+          rel="noopener noreferrer"
+        >
+          hier
+        </a>
+        .
       </p>
     </div>
-    
-
   </>
 )
 
