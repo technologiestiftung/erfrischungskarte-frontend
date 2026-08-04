@@ -106,6 +106,7 @@ export const WeatherOverlay: FC = () => {
     'partly-cloudy-night': <PartlyCloudyNightIcon />,
   }
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (!mappedQuery.latitude || !mappedQuery.longitude) return
 
