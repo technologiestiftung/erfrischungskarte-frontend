@@ -169,6 +169,7 @@ export type PoiCategory =
   | 'Schwimmhalle'
   | 'Toilette'
   | 'Öffentlicher "Kühler Raum"'
+  | 'Mein Tip'
 
 export const POI_CATEGORY_COLOR_MAP: Map<PoiCategory, string> = new Map([
   ['Badestelle', colors['poi-darkblue']],
@@ -184,9 +185,10 @@ export const POI_CATEGORY_COLOR_MAP: Map<PoiCategory, string> = new Map([
   ['Picknicktisch', colors['poi-red']],
   ['Toilette', colors['poi-orange']],
   ['Öffentlicher "Kühler Raum"', colors['poi-darkgrey']],
+  ['Mein Tip', colors['poi-pink']],
 ])
 
-type PoiCategoryId = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13
+type PoiCategoryId = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14
 
 export const POI_CATEGORY_ID_MAP: { [key in PoiCategory]: PoiCategoryId } = {
   Badestelle: 1,
@@ -202,6 +204,7 @@ export const POI_CATEGORY_ID_MAP: { [key in PoiCategory]: PoiCategoryId } = {
   Toilette: 11,
   'Öffentlicher "Kühler Raum"': 12,
   'Refill Station': 13,
+  'Mein Tip': 14,
 }
 
 export interface PoiDataType extends MapPointLayerType {
@@ -243,6 +246,7 @@ export const POI_DATA: PoiDataType = {
     'Picknicktisch',
     'Toilette',
     'Öffentlicher "Kühler Raum"',
+    'Mein Tip',
   ],
 }
 

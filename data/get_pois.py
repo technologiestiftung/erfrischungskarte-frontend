@@ -90,7 +90,7 @@ OSM_SOURCES: dict[str, dict[str, Any]] = {
     "sitzbank": {
         "category": "Sitzbank",
         "default_name": "Sitzbank",
-        "source": "osm",
+        "source": "OpenStreetMap & Mitwirkende",
         "query": """
             [out:json][timeout:120];
             area["wikidata"="Q64"]->.a;
@@ -105,7 +105,7 @@ OSM_SOURCES: dict[str, dict[str, Any]] = {
         "info_fields": [
             "description"
         ],
-        "source": "osm",
+        "source": "OpenStreetMap & Mitwirkende",
         "query": """
             [out:json][timeout:250];
             area["ISO3166-2"="DE-BE"][admin_level=4]->.searchArea;
@@ -120,7 +120,7 @@ OSM_SOURCES: dict[str, dict[str, Any]] = {
     "picknicktisch": {
         "category": "Picknicktisch",
         "default_name": "Picknicktisch",
-        "source": "OSM",
+        "source": "OpenStreetMap & Mitwirkende",
         "query": """
             [out:json][timeout:120];
             area["wikidata"="Q64"]->.a;
@@ -143,7 +143,7 @@ WFS_SOURCES: list[dict[str, Any]] = [
     #     "url": "https://gdi.berlin.de/services/wfs/badegewaesser",
     #     "layer":  "badegewaesser:aa_badestellen",
     #     "category": "Badestelle",
-    #     "source": "Berlin",
+    #     "source": "Öffentlicher Datensatz Berlins",
     #     "default_name": "",
     #     "name_fields": [
     #         "badegewaes"
@@ -165,7 +165,7 @@ WFS_SOURCES: list[dict[str, Any]] = [
     #     "url": "https://gdi.berlin.de/services/wfs/schwimmbaeder_berlin",
     #     "layer":  "schwimmbaeder_berlin:schwimmbaeder",
     #     "category": "Strandbad",
-    #     "source": "Berlin",
+    #     "source": "Öffentlicher Datensatz Berlins",
     #     "default_name": "",
     #     "name_fields": [
     #         "name_des_schwimmbads"
@@ -179,7 +179,7 @@ WFS_SOURCES: list[dict[str, Any]] = [
     #     "url": "https://gdi.berlin.de/services/wfs/schwimmbaeder_berlin",
     #     "layer":  "schwimmbaeder_berlin:schwimmbaeder",
     #     "category": "Freibad",
-    #     "source": "Berlin",
+    #     "source": "Öffentlicher Datensatz Berlins",
     #     "default_name": "",
     #     "name_fields": [
     #         "name_des_schwimmbads"
@@ -193,7 +193,7 @@ WFS_SOURCES: list[dict[str, Any]] = [
     #     "url": "https://gdi.berlin.de/services/wfs/schwimmbaeder_berlin",
     #     "layer":  "schwimmbaeder_berlin:schwimmbaeder",
     #     "category": "Schwimmhalle",
-    #     "source": "Berlin",
+    #     "source": "Öffentlicher Datensatz Berlins",
     #     "default_name": "",
     #     "name_fields": [
     #         "name_des_schwimmbads"
@@ -212,7 +212,7 @@ WFS_SOURCES: list[dict[str, Any]] = [
     #     "url": "https://gdi.berlin.de/services/wfs/kuehle_raeume",
     #     "layer":  "kuehle_raeume:kuehle_raeume",
     #     "category": "Öffentlicher \"Kühler Raum\"",
-    #     "source": "Berlin",
+    #     "source": "Öffentlicher Datensatz Berlins",
     #     "default_name": "Öffentlicher \"Kühler Raum\"",
     #     "name_fields": ["kuehle_raeume"],
     #     "info_templates": {
@@ -227,7 +227,7 @@ WFS_SOURCES: list[dict[str, Any]] = [
     #     "url": "https://gdi.berlin.de/services/wfs/toiletten",
     #     "layer": "toiletten:toiletten",
     #     "category": "Toilette",
-    #     "source": "Berlin",
+    #     "source": "Öffentlicher Datensatz Berlins",
     #     "default_name": "Öffentliche Toilette",
     #     "info_templates": {
     #         "barrierefrei": "Barrierefrei: {}",
@@ -239,7 +239,7 @@ WFS_SOURCES: list[dict[str, Any]] = [
     #     "url": "https://gdi.berlin.de/services/wfs/trinkwasserbrunnen",
     #     "layer":  "trinkwasserbrunnen:trinkwasserbrunnen",
     #     "category": "Trinkbrunnen",
-    #     "source": "Berlin",
+    #     "source": "Öffentlicher Datensatz Berlins",
     #     "default_name": "Trinkbrunnen",
     #     "info_templates": {
     #         "einschraenkungen": "Einschraenkungen: {}",
@@ -251,13 +251,23 @@ WFS_SOURCES: list[dict[str, Any]] = [
     #     "url": "https://gdi.berlin.de/services/wfs/atkis",
     #     "layer":  "atkis:a11_ax_sonstigesbauwerkodersonstigeeinrichtung_p",
     #     "category": "Straßenbrunnen",
-    #     "source": "Berlin",
+    #     "source": "Öffentlicher Datensatz Berlins",
     #     "default_name": "Straßenbrunnen",
     #     "filters": [
     #         {"property": "bezbwf", "value": "Brunnen", "case_sensitive": True},
     #     ],
     # }
-    ## Zierbrunnen?
+    # {
+    #     "source_id": "Zierbrunnen",
+    #     "url": "https://gdi.berlin.de/services/wfs/zierbrunnen",
+    #     "layer":  "zierbrunnen",
+    #     "category": "Straßenbrunnen",
+    #     "source": "Öffentlicher Datensatz Berlins",
+    #     "default_name": "Brunnen",
+    #     "filters": [
+    #         {"property": "bezbwf", "value": "Brunnen", "case_sensitive": True},
+    #     ],
+    # }
 ]
 
 

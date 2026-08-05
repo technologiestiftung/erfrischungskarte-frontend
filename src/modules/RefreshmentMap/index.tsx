@@ -43,6 +43,7 @@ interface MapFeatureType {
     name?: string
     category?: string
     info?: string
+    source?: string
   }
   [key: string]: unknown
 }
@@ -74,7 +75,7 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
   const hourKeys = Object.keys(HOURS) as HourType[]
   const [poiTooltipContent, setPoiTooltipContent] = useState<Pick<
     MapPoiTooltipType,
-    'title' | 'category' | 'info'
+    'title' | 'category' | 'info' | 'source'
   > | null>(null)
 
   const [poiTooltipCoordinates, setPoiTooltipCoordinates] = useState<{
@@ -95,6 +96,7 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
       title: hoveredPoiFeatures[0].properties.name || '',
       category: hoveredPoiFeatures[0].properties.category || '',
       info: hoveredPoiFeatures[0].properties.info || '',
+      source: hoveredPoiFeatures[0].properties.source || '',
     })
 
     setPoiTooltipCoordinates({
@@ -119,12 +121,18 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
     )
     .filter(Boolean)
 
-  const interactiveLayerIds =
-    activeCategories && activeCategories.length > 0
-      ? activeCategories.map((category) => `${POI_DATA.id}-${category}`)
-      : Object.keys(POI_DATA.geojsonUrls).map(
-          (category) => `${POI_DATA.id}-${category}`
-        )
+  const categoriesToRender =
+    activeCategories !== undefined
+      ? activeCategories
+      : (POI_DATA.activePropertyKeys as string[])
+
+  const interactiveLayerIds: string[] = []
+  categoriesToRender.forEach((category) => {
+    if (POI_DATA.geojsonUrls[category]) {
+      interactiveLayerIds.push(`${POI_DATA.id}-${category}`)
+    }
+    interactiveLayerIds.push(`${POI_DATA.id}-user-${category}`)
+  })
 
   return (
     <>
@@ -194,6 +202,7 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
               title={poiTooltipContent.title}
               category={poiTooltipContent.category}
               info={poiTooltipContent.info}
+              source={poiTooltipContent.source}
             />
           )}
       </MapRoot>

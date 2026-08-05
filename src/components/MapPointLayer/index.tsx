@@ -42,9 +42,9 @@ export const MapPointLayer: FC<MapPointLayerType> = ({
   const flattenedCircleStrokeWidthMap = Array.from(CircleStrokeWidthMap).flat(2)
 
   const categoriesToRender =
-    activePropertyKeys && activePropertyKeys.length > 0
+    activePropertyKeys !== undefined
       ? activePropertyKeys
-      : Object.keys(geojsonUrls)
+      : (Array.from(fillColorMap.keys()) as string[])
 
   return (
     <>
@@ -84,6 +84,35 @@ export const MapPointLayer: FC<MapPointLayerType> = ({
           </Source>
         )
       })}
+
+      <Source id={`${id}-user`} type="geojson" data="/data/user.geojson">
+        {categoriesToRender.map((category) => (
+          <Layer
+            key={`${id}-user-${category}`}
+            id={`${id}-user-${category}`}
+            type="circle"
+            minzoom={minzoom}
+            filter={['==', ['get', 'category'], category]}
+            paint={{
+              'circle-color':
+                fillColorMap.get(category) || 'rgba(100,100,100,100)',
+              'circle-radius': [
+                'interpolate',
+                ['exponential', 0.5],
+                ['zoom'],
+                ...flattenedCircleRadiusMap,
+              ],
+              'circle-stroke-width': [
+                'interpolate',
+                ['exponential', 0.5],
+                ['zoom'],
+                ...flattenedCircleStrokeWidthMap,
+              ],
+              'circle-stroke-color': '#ffffff',
+            }}
+          />
+        ))}
+      </Source>
     </>
   )
 }

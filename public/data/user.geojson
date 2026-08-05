@@ -6,15 +6,31 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.2059831,
-          52.5461978
+          13.4127555,
+          52.5220209
         ]
       },
       "properties": {
-        "name": "Trinkbrunnen",
+        "name": "Trinkbrunnen Test",
         "info": "Trinkbrunnen",
-        "category": "Trinkbrunnen OSM",
-        "source": "User: Timmy Tester"
+        "category": "Trinkbrunnen",
+        "source": "Timmy Tester"
+      }
+    },
+        {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4094081,
+          52.5208263
+        ]
+      },
+      "properties": {
+        "name": "Turm",
+        "info": "Tolle Aussicht hier und kühl!",
+        "category": "Mein Tip",
+        "source": "Timmy Tester"
       }
     }
   ]
