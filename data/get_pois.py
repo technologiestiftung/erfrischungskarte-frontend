@@ -25,9 +25,9 @@ from poi_builder import run_pipeline, write_geojson
 # ==============================================================================
 # Easily toggle on/off entire data pipelines here:
 SCRAPE_OSM = True         # Set to True to scrape OpenStreetMap (OSM_SOURCES)
-SCRAPE_WFS = True         # Set to True to scrape Berlin WFS (WFS_SOURCES)
-SCRAPE_REFILL = True      # Set to True to scrape api.ofdb.io Refill Stations
-MERGE_LOCAL = True        # Set to True to merge existing datasets (EXISTING_DATASETS)
+SCRAPE_WFS = False         # Set to True to scrape Berlin WFS (WFS_SOURCES)
+SCRAPE_REFILL = False      # Set to True to scrape api.ofdb.io Refill Stations
+MERGE_LOCAL = False        # Set to True to merge existing datasets (EXISTING_DATASETS)
 
 # ==============================================================================
 # LOCAL DATASETS TO MERGE
@@ -36,8 +36,8 @@ MERGE_LOCAL = True        # Set to True to merge existing datasets (EXISTING_DAT
 # into the final output GeoJSON file.
 EXISTING_DATASETS: list[str] = [
     # E.g. "data/data/user.geojson"
-    "data/data/user.geojson",
-    "data/data/gruenanlagen.geojson"
+    "data/data/in/user.geojson",
+    "data/data/in/gruenanlagen.geojson"
 ]
 
 # ==============================================================================
@@ -86,50 +86,50 @@ OSM_SOURCES: dict[str, dict[str, Any]] = {
     #         .drinks out tags center;
     #     """.strip(),
     # },
-    # "sitzbank": {
-    #     "category": "Sitzbank",
-    #     "default_name": "Sitzbank",
-    #     "source": "osm",
-    #     "query": """
-    #         [out:json][timeout:120];
-    #         area["wikidata"="Q64"]->.a;
-    #         nwr(area.a)["amenity"="bench"]["indoor"!="yes"][access!~"^(no|private|customers|members|permit|destination|restricted)$",i][!"disused:amenity"][!"abandoned:amenity"][!"removed:amenity"][!"demolished:amenity"][!"construction:amenity"]["disused"!="yes"]["abandoned"!="yes"]["removed"!="yes"]["demolished"!="yes"]["destroyed"!="yes"]["condition"!~"^(broken|bad|damaged|ruined|dilapidated)$",i]["broken"!="yes"]["damaged"!="yes"]->.benches_ok;
-    #         .benches_ok out tags center;
-    #     """.strip(),
-    # },
-    # "wasserspielplatz": {
-    #     "category": "Wasserspielplatz",
-    #     "default_name": "Wasserspielplatz",
-    #     "name_fields": ["name"],
-    #     "info_fields": [
-    #         "description"
-    #     ],
-    #     "source": "osm",
-    #     "query": """
-    #         [out:json][timeout:250];
-    #         area["ISO3166-2"="DE-BE"][admin_level=4]->.searchArea;
-    #         (
-    #         nwr(area.searchArea)["playground"="splash_pad"];
-    #         nwr(area.searchArea)["name"~"wasserspielplatz",i];
-    #         nwr(area.searchArea)["description"~"wasserspielplatz",i];
-    #         )->.splash;
-    #         .splash out center;
-    #     """.strip(),
-    # },
-    # "picknicktisch": {
-    #     "category": "Picknicktisch",
-    #     "default_name": "Picknicktisch",
-    #     "source": "OSM",
-    #     "query": """
-    #         [out:json][timeout:120];
-    #         area["wikidata"="Q64"]->.a;
-    #         (
-    #         nwr(area.a)["leisure"="picnic_table"]["indoor"!="yes"][access!~"^(no|private|customers|members|permit|destination|restricted)$",i][!"disused:leisure"][!"abandoned:leisure"][!"removed:leisure"][!"demolished:leisure"][!"construction:leisure"]["disused"!="yes"]["abandoned"!="yes"]["removed"!="yes"]["demolished"!="yes"]["destroyed"!="yes"]["condition"!~"^(broken|bad|damaged|ruined|dilapidated)$",i]["broken"!="yes"]["damaged"!="yes"];
-    #         nwr(area.a)["tourism"="picnic_site"]["indoor"!="yes"][access!~"^(no|private|customers|members|permit|destination|restricted)$",i][!"disused:tourism"][!"abandoned:tourism"][!"removed:tourism"][!"demolished:tourism"][!"construction:tourism"]["disused"!="yes"]["abandoned"!="yes"]["removed"!="yes"]["demolished"!="yes"]["destroyed"!="yes"]["condition"!~"^(broken|bad|damaged|ruined|dilapidated)$",i]["broken"!="yes"]["damaged"!="yes"];
-    #         )->.picnic_ok;
-    #         .picnic_ok out tags center;
-    #     """.strip(),
-    # },
+    "sitzbank": {
+        "category": "Sitzbank",
+        "default_name": "Sitzbank",
+        "source": "osm",
+        "query": """
+            [out:json][timeout:120];
+            area["wikidata"="Q64"]->.a;
+            nwr(area.a)["amenity"="bench"]["indoor"!="yes"][access!~"^(no|private|customers|members|permit|destination|restricted)$",i][!"disused:amenity"][!"abandoned:amenity"][!"removed:amenity"][!"demolished:amenity"][!"construction:amenity"]["disused"!="yes"]["abandoned"!="yes"]["removed"!="yes"]["demolished"!="yes"]["destroyed"!="yes"]["condition"!~"^(broken|bad|damaged|ruined|dilapidated)$",i]["broken"!="yes"]["damaged"!="yes"]->.benches_ok;
+            .benches_ok out tags center;
+        """.strip(),
+    },
+    "wasserspielplatz": {
+        "category": "Wasserspielplatz",
+        "default_name": "Wasserspielplatz",
+        "name_fields": ["name"],
+        "info_fields": [
+            "description"
+        ],
+        "source": "osm",
+        "query": """
+            [out:json][timeout:250];
+            area["ISO3166-2"="DE-BE"][admin_level=4]->.searchArea;
+            (
+            nwr(area.searchArea)["playground"="splash_pad"];
+            nwr(area.searchArea)["name"~"wasserspielplatz",i];
+            nwr(area.searchArea)["description"~"wasserspielplatz",i];
+            )->.splash;
+            .splash out center;
+        """.strip(),
+    },
+    "picknicktisch": {
+        "category": "Picknicktisch",
+        "default_name": "Picknicktisch",
+        "source": "OSM",
+        "query": """
+            [out:json][timeout:120];
+            area["wikidata"="Q64"]->.a;
+            (
+            nwr(area.a)["leisure"="picnic_table"]["indoor"!="yes"][access!~"^(no|private|customers|members|permit|destination|restricted)$",i][!"disused:leisure"][!"abandoned:leisure"][!"removed:leisure"][!"demolished:leisure"][!"construction:leisure"]["disused"!="yes"]["abandoned"!="yes"]["removed"!="yes"]["demolished"!="yes"]["destroyed"!="yes"]["condition"!~"^(broken|bad|damaged|ruined|dilapidated)$",i]["broken"!="yes"]["damaged"!="yes"];
+            nwr(area.a)["tourism"="picnic_site"]["indoor"!="yes"][access!~"^(no|private|customers|members|permit|destination|restricted)$",i][!"disused:tourism"][!"abandoned:tourism"][!"removed:tourism"][!"demolished:tourism"][!"construction:tourism"]["disused"!="yes"]["abandoned"!="yes"]["removed"!="yes"]["demolished"!="yes"]["destroyed"!="yes"]["condition"!~"^(broken|bad|damaged|ruined|dilapidated)$",i]["broken"!="yes"]["damaged"!="yes"];
+            )->.picnic_ok;
+            .picnic_ok out tags center;
+        """.strip(),
+    },
 }
 
 # ==============================================================================
@@ -325,8 +325,11 @@ def parse_args() -> argparse.Namespace:
 def main() -> None:
     args = parse_args()
 
+    out_dir = Path("data/out")
+    out_dir.mkdir(parents=True, exist_ok=True)
+
     # Run core build pipeline with configuration parameters
-    merged = run_pipeline(
+    written_files = run_pipeline(
         scrape_osm=SCRAPE_OSM,
         scrape_wfs=SCRAPE_WFS,
         scrape_refill=SCRAPE_REFILL,
@@ -335,11 +338,13 @@ def main() -> None:
         wfs_sources=WFS_SOURCES,
         alt_text_refill=ALT_TEXT_REFILL,
         existing_datasets=EXISTING_DATASETS,
+        out_dir=out_dir,
         args=args,
     )
 
-    write_geojson(merged, args.out)
-    print(f"Wrote {len(merged['features'])} features to {args.out}")
+    print(f"Finished! Wrote {len(written_files)} separate datasets to: {out_dir}/")
+    for f in written_files:
+        print(f"  - {f.name}")
 
 
 if __name__ == "__main__":

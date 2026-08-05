@@ -759,16 +759,19 @@ def run_pipeline(
     wfs_sources: list[dict[str, Any]],
     alt_text_refill: dict[str, str],
     existing_datasets: list[str],
+    out_dir: str | Path = "data/data/out",
     args: Any,
-) -> dict[str, Any]:
-    """Execute the POI build pipeline according to configured toggles and sources."""
+) -> list[Path]:
+    """Execute the POI build pipeline, writing each dataset into a separate file in out_dir."""
     client = HttpClient(
         headers={
             "User-Agent": args.user_agent,
         }
     )
 
-    collections: list[dict[str, Any]] = []
+    out_path = Path(out_dir)
+    out_path.mkdir(parents=True, exist_ok=True)
+    written_files: list[Path] = []
 
     if scrape_osm and not args.skip_overpass:
         for source_id, source_config in osm_sources.items():
@@ -783,8 +786,10 @@ def run_pipeline(
                 overpass_timeout=args.overpass_timeout,
             )
 
-            print(f"  {len(collection['features'])} cleaned features")
-            collections.append(collection)
+            file_dest = out_path / f"{source_id}.geojson"
+            print(f"  Writing {len(collection['features'])} cleaned features to {file_dest}")
+            write_geojson(collection, file_dest)
+            written_files.append(file_dest)
             time.sleep(args.pause_between_requests)
 
     if scrape_wfs and not args.skip_wfs:
@@ -804,28 +809,40 @@ def run_pipeline(
                 timeout=args.wfs_timeout,
             )
 
-            print(f"  {len(collection['features'])} cleaned features")
-            collections.append(collection)
+            file_dest = out_path / f"{source_id}.geojson"
+            print(f"  Writing {len(collection['features'])} cleaned features to {file_dest}")
+            write_geojson(collection, file_dest)
+            written_files.append(file_dest)
             time.sleep(args.pause_between_requests)
 
     if scrape_refill:
         print("Querying Refill Stations: api.ofdb.io")
         refill_collection = query_refill_stations(client, alt_text_refill)
-        print(f"  {len(refill_collection['features'])} cleaned features")
-        collections.append(refill_collection)
+        file_dest = out_path / "refill_stations.geojson"
+        print(f"  Writing {len(refill_collection['features'])} cleaned features to {file_dest}")
+        write_geojson(refill_collection, file_dest)
+        written_files.append(file_dest)
 
     if merge_local:
         for filename in existing_datasets:
             file_path = resolve_file_path(filename)
             if file_path:
-                print(f"Merging existing dataset: {file_path}")
+                print(f"Loading existing dataset: {file_path}")
                 try:
                     with file_path.open("r", encoding="utf-8") as file:
                         data = json.load(file)
+                    
+                    collection = None
                     if isinstance(data, dict) and data.get("type") == "FeatureCollection":
-                        collections.append(data)
+                        collection = data
                     elif isinstance(data, list):
-                        collections.append({"type": "FeatureCollection", "features": data})
+                        collection = {"type": "FeatureCollection", "features": data}
+                    
+                    if collection:
+                        file_dest = out_path / Path(filename).name
+                        print(f"  Writing {len(collection['features'])} features to {file_dest}")
+                        write_geojson(collection, file_dest)
+                        written_files.append(file_dest)
                     else:
                         print(f"Warning: Dataset format in {file_path} not recognized (expected FeatureCollection or list of features)")
                 except Exception as exc:
@@ -833,4 +850,4 @@ def run_pipeline(
             else:
                 print(f"Warning: Could not find existing dataset: {filename}")
 
-    return merge_feature_collections(collections)
+    return written_files

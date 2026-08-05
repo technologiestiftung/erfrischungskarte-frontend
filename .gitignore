@@ -41,8 +41,8 @@ yarn-error.log*
 # Storybook
 storybook-static
 
-/data/pois.geojson
 /data/NOTES.md
+/data/data/out/
 /public/data/pois.geojson
 
 # Python cache
