@@ -257,17 +257,19 @@ WFS_SOURCES: list[dict[str, Any]] = [
     #         {"property": "bezbwf", "value": "Brunnen", "case_sensitive": True},
     #     ],
     # }
-    # {
-    #     "source_id": "Zierbrunnen",
-    #     "url": "https://gdi.berlin.de/services/wfs/zierbrunnen",
-    #     "layer":  "zierbrunnen",
-    #     "category": "Straßenbrunnen",
-    #     "source": "Öffentlicher Datensatz Berlins",
-    #     "default_name": "Brunnen",
-    #     "filters": [
-    #         {"property": "bezbwf", "value": "Brunnen", "case_sensitive": True},
-    #     ],
-    # }
+    {
+        "source_id": "zierbrunnen",
+        "url": "https://gdi.berlin.de/services/wfs/zierbrunnen",
+        "layer":  "zierbrunnen",
+        "category": "Straßenbrunnen",
+        "source": "Öffentlicher Datensatz Berlins",
+        "default_name": "Brunnen",
+        "filters": [
+            {"property": "kategorie", "value": "Zierbrunnen", "case_sensitive": True},
+            {"property": "kategorie", "value": "Wasseranlage", "case_sensitive": True},
+
+        ]
+    }
 ]
 
 
@@ -346,7 +348,7 @@ def parse_args() -> argparse.Namespace:
 def main() -> None:
     args = parse_args()
 
-    out_dir = Path("data/out")
+    out_dir = Path("../public/data")
     out_dir.mkdir(parents=True, exist_ok=True)
 
     # Run core build pipeline with configuration parameters
