@@ -1,0 +1,3877 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.415048,
+          52.43135104
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Einschraenkungen: zur Zeit wegen Reparatur außer Betrieb | Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.415048,
+          52.43135104
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.327725,
+          52.50326204
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.435318,
+          52.52929004
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.502551,
+          52.56613504
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.418931,
+          52.49856704
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Einschraenkungen: zur Zeit wegen Reparatur außer Betrieb | Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.318058,
+          52.42522004
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.56245,
+          52.55503804
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.410771,
+          52.51549604
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.492139,
+          52.42021704
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Einschraenkungen: zur Zeit wegen Reparatur außer Betrieb | Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.446165,
+          52.47220904
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.286387,
+          52.59001004
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.20702,
+          52.53467604
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.206,
+          52.54625004
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.27345,
+          52.52014304
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.197262,
+          52.52503004
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.305358,
+          52.45883404
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.265879,
+          52.57534704
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.381296,
+          52.55251304
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.325001,
+          52.50267904
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.210373,
+          52.47776204
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.330358,
+          52.50341104
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.426999,
+          52.48834104
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.372958,
+          52.49938604
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.526772,
+          52.48207804
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.23595,
+          52.49224004
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.342751,
+          52.52553704
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.296481,
+          52.51845104
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.58109,
+          52.45813004
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.526672,
+          52.45863904
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.625264,
+          52.45284304
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.346288,
+          52.52670404
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.548048,
+          52.46211804
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.499024,
+          52.51021804
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Einschraenkungen: zur Zeit wegen Reparatur außer Betrieb | Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.575449,
+          52.54024804
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.401817,
+          52.51103004
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.404666,
+          52.56969404
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Einschraenkungen: zur Zeit wegen Reparatur außer Betrieb | Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.387266,
+          52.54912604
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.574819,
+          52.53451504
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.398702,
+          52.54119704
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.41139,
+          52.56733504
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.287352,
+          52.58527204
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.274756,
+          52.58676104
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.448724,
+          52.51135404
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.37617,
+          52.49530804
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.431231,
+          52.49311404
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.487097,
+          52.50130904
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.471391,
+          52.52996004
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.483912,
+          52.50224804
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Einschraenkungen: wegen Baumaßnahme der DB AG außer Betrieb | Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.520824,
+          52.50386104
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.560743,
+          52.50603304
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.538564,
+          52.52794004
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.543539,
+          52.54315604
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.603953,
+          52.53717504
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.380463,
+          52.52569704
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.379394,
+          52.50963104
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.390238,
+          52.50796304
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.386043,
+          52.51673704
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.36416,
+          52.54376804
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.447429,
+          52.51020804
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.335542,
+          52.44858504
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.313541,
+          52.49043904
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.274036,
+          52.50868404
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.322796,
+          52.49764404
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.433995,
+          52.51157504
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.423177,
+          52.49089604
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.57377,
+          52.51323404
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.306013,
+          52.50877104
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.306938,
+          52.50578004
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.424648,
+          52.50367404
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.324595,
+          52.58879904
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.335247,
+          52.47203004
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.406459,
+          52.51663104
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.304122,
+          52.45863404
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.290011,
+          52.45792004
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.258964,
+          52.43335604
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.435418,
+          52.48096404
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.318921,
+          52.48334304
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.290271,
+          52.63439804
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.361912,
+          52.56332304
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.31705,
+          52.43417504
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Einschraenkungen: wegen Baumaßnahme der NBB außer Betrieb | Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.211134,
+          52.54609504
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.241332,
+          52.52579604
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.196968,
+          52.51331404
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.335429,
+          52.53047604
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.198919,
+          52.53605104
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.460949,
+          52.51990504
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.307344,
+          52.50076804
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.306367,
+          52.50782004
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.451041,
+          52.54870304
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.410037,
+          52.54888604
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.395851,
+          52.48900704
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.312794,
+          52.44297304
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.257834,
+          52.43544404
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.319599,
+          52.48934904
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.172288,
+          52.52137404
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.43812,
+          52.47209104
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.43755,
+          52.47004104
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.435509,
+          52.46981504
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.322057,
+          52.45674404
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.324599,
+          52.46131604
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.478319,
+          52.51906204
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.429307,
+          52.51870204
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.438653,
+          52.51778704
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.444908,
+          52.51720904
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.466938,
+          52.52009404
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.46673,
+          52.51714404
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.442812,
+          52.51604704
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.407814,
+          52.48947904
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.439191,
+          52.48945704
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.422234,
+          52.47661304
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.39212,
+          52.55543604
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.367565,
+          52.55195304
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.369039,
+          52.54444104
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.359816,
+          52.55070704
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.386741,
+          52.47160504
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.407019,
+          52.48231804
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.493198,
+          52.46044704
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7209,
+          52.43904304
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.418305,
+          52.53670304
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.422361,
+          52.54435304
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.377941,
+          52.49648404
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.314957,
+          52.49940704
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.39162,
+          52.50098604
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.206147,
+          52.53869504
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.508135,
+          52.40675204
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.51303,
+          52.56774204
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.519056,
+          52.56712104
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.478267,
+          52.51913404
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.411902,
+          52.56234504
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.396116,
+          52.56890404
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Einschraenkungen: zur Zeit wegen Reparatur außer Betrieb | Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.391295,
+          52.50415804
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.304054,
+          52.52578604
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.397924,
+          52.57104804
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.42995,
+          52.54237404
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.553602,
+          52.43524304
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.589086,
+          52.44084704
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.446343,
+          52.54201204
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.440618,
+          52.52656404
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.509175,
+          52.57171804
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.240269,
+          52.44241204
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.566124,
+          52.56991204
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.424365,
+          52.53486304
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.420266,
+          52.55202704
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.343146,
+          52.43898904
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.353194,
+          52.60009104
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.360174,
+          52.57222804
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.42188,
+          52.53784604
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.339381,
+          52.53293504
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.570387,
+          52.54885404
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.556812,
+          52.54661904
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.585824,
+          52.52736704
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.446437,
+          52.48359204
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.482354,
+          52.50348504
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.486094,
+          52.51133804
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.496404,
+          52.50352604
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.510869,
+          52.49199304
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.448475,
+          52.48187804
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.207905,
+          52.55548804
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.206759,
+          52.54275904
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.178263,
+          52.55023104
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.432122,
+          52.55020104
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.301302,
+          52.50511204
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.455524,
+          52.50433504
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.360842,
+          52.54165304
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.362864,
+          52.54888704
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.495309,
+          52.54201104
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.484279,
+          52.53551204
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.498549,
+          52.53547504
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.475479,
+          52.52617104
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.406199,
+          52.49799904
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.554688,
+          52.55731004
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.539102,
+          52.53595904
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.418498,
+          52.47652004
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.420108,
+          52.47097104
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.217567,
+          52.55942204
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.198132,
+          52.55517804
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.400291,
+          52.38655804
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.482062,
+          52.48925004
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.415032,
+          52.49495404
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.474309,
+          52.52742304
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.478717,
+          52.51513604
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.19999,
+          52.52848904
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.30617,
+          52.60183104
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.35222,
+          52.54626004
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.352908,
+          52.53987804
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.431536,
+          52.50046704
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.430566,
+          52.50082504
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.405741,
+          52.49683604
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.402045,
+          52.54310804
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.49255,
+          52.54820704
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.491901,
+          52.54636604
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.453942,
+          52.54640704
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.472324,
+          52.51552004
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.365102,
+          52.48778804
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.360309,
+          52.48512704
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.34817,
+          52.48539804
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.193374,
+          52.52033904
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.484616,
+          52.41229304
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.405684,
+          52.50311504
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.369114,
+          52.49259004
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.53477,
+          52.46426804
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.400392,
+          52.54392204
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.489023,
+          52.51530504
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.279561,
+          52.53684804
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.506301,
+          52.49399604
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.21438,
+          52.44016904
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.521274,
+          52.49764604
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.423795,
+          52.49924804
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3609,
+          52.54844204
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.40658,
+          52.51444904
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.437703,
+          52.46298004
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.33326,
+          52.49351904
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.28566,
+          52.50661804
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.291079,
+          52.51018504
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.262449,
+          52.54176804
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.187081,
+          52.51890304
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3743,
+          52.50838404
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.334465,
+          52.51756204
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.309489,
+          52.47327504
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.299113,
+          52.51527304
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.347818,
+          52.46760104
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.349031,
+          52.45673404
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.591908,
+          52.53981204
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.493651,
+          52.48226504
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.489811,
+          52.54034304
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.525957,
+          52.40324404
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.382991,
+          52.46329304
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.487548,
+          52.61807004
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.462334,
+          52.55274104
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.336133,
+          52.52339104
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.503449,
+          52.57665204
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.503875,
+          52.57179304
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.24128,
+          52.51821404
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.243664,
+          52.51437104
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.240515,
+          52.51202004
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.322137,
+          52.48428704
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.437521,
+          52.54483004
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.230222,
+          52.44711404
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.378655,
+          52.56092404
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.378683,
+          52.55832004
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3831,
+          52.55951504
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Betriebszeit: Mai bis Oktober, Link: https://www.bwb.de/de/trinkbrunnen.php",
+        "category": "Trinkbrunnen",
+        "source": "Berlin"
+      }
+    }
+  ]
+}

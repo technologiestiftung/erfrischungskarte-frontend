@@ -212,9 +212,20 @@ export interface PoiDataType extends MapPointLayerType {
 
 export const POI_DATA: PoiDataType = {
   id: 'poi-data',
-  tileset: {
-    url: 'mapbox://technologiestiftung.8zk96hlq',
-    layerName: 'pois_jun2025-bkayoz',
+  geojsonUrls: {
+    Badestelle: '/data/badestelle.geojson',
+    Strandbad: '/data/strandbad.geojson',
+    Freibad: '/data/freibad.geojson',
+    Schwimmhalle: '/data/schwimmhalle.geojson',
+    Wasserspielplatz: '/data/wasserspielplatz.geojson',
+    Trinkbrunnen: '/data/trinkbrunnen.geojson',
+    Straßenbrunnen: '/data/strassenbrunnen.geojson',
+    'Refill Station': '/data/refill_stations.geojson',
+    Gruenanlage: '/data/gruenanlagen.geojson',
+    Sitzbank: '/data/sitzbank.geojson',
+    Picknicktisch: '/data/picknicktisch.geojson',
+    Toilette: '/data/toiletten.geojson',
+    'Öffentlicher "Kühler Raum"': '/data/kuehler_raum.geojson',
   },
   fillColorProperty: 'category',
   fillColorMap: POI_CATEGORY_COLOR_MAP,

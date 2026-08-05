@@ -48,3 +48,5 @@ storybook-static
 # Python cache
 __pycache__/
 *.pyc
+/test/
+tsconfig.tsbuildinfo

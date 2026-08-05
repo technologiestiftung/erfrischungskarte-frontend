@@ -1,0 +1,21 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2059831,
+          52.5461978
+        ]
+      },
+      "properties": {
+        "name": "Trinkbrunnen",
+        "info": "Trinkbrunnen",
+        "category": "Trinkbrunnen OSM",
+        "source": "User: Timmy Tester"
+      }
+    }
+  ]
+}

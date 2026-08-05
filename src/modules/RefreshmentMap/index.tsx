@@ -87,8 +87,8 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
 
     const allHoveredFeatures = e.features as CustomMapEventType['features']
 
-    const hoveredPoiFeatures = allHoveredFeatures.filter(
-      (f) => f.source === POI_DATA.id
+    const hoveredPoiFeatures = allHoveredFeatures.filter((f) =>
+      f.source.startsWith(`${POI_DATA.id}-`)
     )
 
     setPoiTooltipContent({
@@ -119,6 +119,13 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
     )
     .filter(Boolean)
 
+  const interactiveLayerIds =
+    activeCategories && activeCategories.length > 0
+      ? activeCategories.map((category) => `${POI_DATA.id}-${category}`)
+      : Object.keys(POI_DATA.geojsonUrls).map(
+          (category) => `${POI_DATA.id}-${category}`
+        )
+
   return (
     <>
       {(pathname === '/map' || pathname === '/social-image') && <AppTitle />}
@@ -134,7 +141,7 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
           longitude: pageProps.query.longitude || MAP_CONFIG.defaultLongitude,
           zoom: pageProps.query.zoom || MAP_CONFIG.defaultZoom,
         }}
-        interactiveLayerIds={[POI_DATA.id]}
+        interactiveLayerIds={interactiveLayerIds}
         handleMouseLeave={handleMouseLeave}
         handleHover={handleHover}
       >

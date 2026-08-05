@@ -1,0 +1,277 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.396222,
+          52.52276404
+        ]
+      },
+      "properties": {
+        "name": "Kinderbad Monbijou",
+        "info": "",
+        "category": "Freibad",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.382076,
+          52.54559404
+        ]
+      },
+      "properties": {
+        "name": "Sommerbad Humboldthain",
+        "info": "",
+        "category": "Freibad",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.405773,
+          52.49774004
+        ]
+      },
+      "properties": {
+        "name": "Sommerbad Kreuzberg",
+        "info": "",
+        "category": "Freibad",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.239061,
+          52.51644204
+        ]
+      },
+      "properties": {
+        "name": "Sommerbad Olympiastadion",
+        "info": "",
+        "category": "Freibad",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.131183,
+          52.53381904
+        ]
+      },
+      "properties": {
+        "name": "Sommerbad Staaken-West",
+        "info": "",
+        "category": "Freibad",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.302201,
+          52.48179504
+        ]
+      },
+      "properties": {
+        "name": "Sommerbad Wilmersdorf",
+        "info": "",
+        "category": "Freibad",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.351495,
+          52.45590904
+        ]
+      },
+      "properties": {
+        "name": "Sommerbad am Insulaner",
+        "info": "",
+        "category": "Freibad",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.397263,
+          52.44372004
+        ]
+      },
+      "properties": {
+        "name": "Sommerbad Mariendorf",
+        "info": "",
+        "category": "Freibad",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.473949,
+          52.44010504
+        ]
+      },
+      "properties": {
+        "name": "Sportbad Britz",
+        "info": "",
+        "category": "Freibad",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4169,
+          52.48026804
+        ]
+      },
+      "properties": {
+        "name": "Sommerbad Neukölln",
+        "info": "",
+        "category": "Freibad",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.519194,
+          52.47027704
+        ]
+      },
+      "properties": {
+        "name": "Sommerbad Wuhlheide",
+        "info": "",
+        "category": "Freibad",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.413191,
+          52.57582904
+        ]
+      },
+      "properties": {
+        "name": "Sommerbad Pankow",
+        "info": "",
+        "category": "Freibad",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.562655,
+          52.55182804
+        ]
+      },
+      "properties": {
+        "name": "Kinderbad Marzahn (Platsch)",
+        "info": "",
+        "category": "Freibad",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.36132,
+          52.55687004
+        ]
+      },
+      "properties": {
+        "name": "Kombibad Seestraße - Sommerbad",
+        "info": "",
+        "category": "Freibad",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.188406,
+          52.51820904
+        ]
+      },
+      "properties": {
+        "name": "Kombibad Spandau Süd - Sommerbad",
+        "info": "",
+        "category": "Freibad",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.401606,
+          52.41999204
+        ]
+      },
+      "properties": {
+        "name": "Kombibad Mariendorf - Sommerbad",
+        "info": "",
+        "category": "Freibad",
+        "source": "Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.469969,
+          52.42770604
+        ]
+      },
+      "properties": {
+        "name": "Kombibad Gropiusstadt - Sommerbad",
+        "info": "",
+        "category": "Freibad",
+        "source": "Berlin"
+      }
+    }
+  ]
+}
