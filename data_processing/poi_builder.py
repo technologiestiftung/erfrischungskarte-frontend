@@ -816,7 +816,7 @@ def run_pipeline(
     out_dir: str | Path = "data/data/out",
     args: Any,
 ) -> list[Path]:
-    """Execute the POI build pipeline, writing each dataset into a separate file in out_dir."""
+    """Execute the POI build pipeline, writing each consolidated dataset into a separate file in out_dir."""
     client = HttpClient(
         headers={
             "User-Agent": args.user_agent,
@@ -825,7 +825,9 @@ def run_pipeline(
 
     out_path = Path(out_dir)
     out_path.mkdir(parents=True, exist_ok=True)
-    written_files: list[Path] = []
+    
+    # Accumulate features by their target ID/filename
+    grouped_features: dict[str, list[dict[str, Any]]] = {}
 
     if scrape_osm and not args.skip_overpass:
         for source_id, source_config in osm_sources.items():
@@ -840,10 +842,8 @@ def run_pipeline(
                 overpass_timeout=args.overpass_timeout,
             )
 
-            file_dest = out_path / f"{source_id}.geojson"
-            print(f"  Writing {len(collection['features'])} cleaned features to {file_dest}")
-            write_geojson(collection, file_dest)
-            written_files.append(file_dest)
+            print(f"  Acquired {len(collection['features'])} cleaned features")
+            grouped_features.setdefault(source_id, []).extend(collection["features"])
             time.sleep(args.pause_between_requests)
 
     if scrape_wfs and not args.skip_wfs:
@@ -863,19 +863,15 @@ def run_pipeline(
                 timeout=args.wfs_timeout,
             )
 
-            file_dest = out_path / f"{source_id}.geojson"
-            print(f"  Writing {len(collection['features'])} cleaned features to {file_dest}")
-            write_geojson(collection, file_dest)
-            written_files.append(file_dest)
+            print(f"  Acquired {len(collection['features'])} cleaned features")
+            grouped_features.setdefault(source_id, []).extend(collection["features"])
             time.sleep(args.pause_between_requests)
 
     if scrape_refill:
         print("Querying Refill Stations: api.ofdb.io")
         refill_collection = query_refill_stations(client, alt_text_refill)
-        file_dest = out_path / "refill_stations.geojson"
-        print(f"  Writing {len(refill_collection['features'])} cleaned features to {file_dest}")
-        write_geojson(refill_collection, file_dest)
-        written_files.append(file_dest)
+        print(f"  Acquired {len(refill_collection['features'])} cleaned features")
+        grouped_features.setdefault("refill_stations", []).extend(refill_collection["features"])
 
     if merge_local:
         for filename in existing_datasets:
@@ -886,22 +882,27 @@ def run_pipeline(
                     with file_path.open("r", encoding="utf-8") as file:
                         data = json.load(file)
                     
-                    collection = None
+                    features = []
                     if isinstance(data, dict) and data.get("type") == "FeatureCollection":
-                        collection = data
+                        features = data.get("features", [])
                     elif isinstance(data, list):
-                        collection = {"type": "FeatureCollection", "features": data}
+                        features = data
                     
-                    if collection:
-                        file_dest = out_path / Path(filename).name
-                        print(f"  Writing {len(collection['features'])} features to {file_dest}")
-                        write_geojson(collection, file_dest)
-                        written_files.append(file_dest)
-                    else:
-                        print(f"Warning: Dataset format in {file_path} not recognized (expected FeatureCollection or list of features)")
+                    target_id = Path(filename).stem
+                    print(f"  Acquired {len(features)} features from local dataset")
+                    grouped_features.setdefault(target_id, []).extend(features)
                 except Exception as exc:
                     print(f"Warning: Could not load existing dataset {file_path}: {exc}")
             else:
                 print(f"Warning: Could not find existing dataset: {filename}")
+
+    # Write each consolidated dataset to its separate file
+    written_files: list[Path] = []
+    for target_id, features_list in grouped_features.items():
+        file_dest = out_path / f"{target_id}.geojson"
+        consolidated = {"type": "FeatureCollection", "features": features_list}
+        print(f"Writing consolidated dataset: {file_dest} ({len(features_list)} features)")
+        write_geojson(consolidated, file_dest)
+        written_files.append(file_dest)
 
     return written_files

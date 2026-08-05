@@ -27,7 +27,7 @@ from poi_builder import run_pipeline, write_geojson
 SCRAPE_OSM = False         # Set to True to scrape OpenStreetMap (OSM_SOURCES)
 SCRAPE_WFS = False         # Set to True to scrape Berlin WFS (WFS_SOURCES)
 SCRAPE_REFILL = False      # Set to True to scrape api.ofdb.io Refill Stations
-MERGE_LOCAL = False        # Set to True to merge existing datasets (EXISTING_DATASETS)
+MERGE_LOCAL = True        # Set to True to merge existing datasets (EXISTING_DATASETS)
 
 # ==============================================================================
 # LOCAL DATASETS TO MERGE
@@ -138,138 +138,144 @@ OSM_SOURCES: dict[str, dict[str, Any]] = {
 # ==============================================================================
 # Comment or uncomment WFS sources to enable/disable them individually
 WFS_SOURCES: list[dict[str, Any]] = [
-    # {
-    #     "source_id": "badestelle",
-    #     "url": "https://gdi.berlin.de/services/wfs/badegewaesser",
-    #     "layer":  "badegewaesser:aa_badestellen",
-    #     "category": "Badestelle",
-    #     "source": "Öffentlicher Datensatz Berlins",
-    #     "default_name": "",
-    #     "name_fields": [
-    #         "badegewaes"
-    #     ],
-    #     "info_fields": [
-    #         "hinweis_zu_oeffnungszeiten"
-    #     ],
-    #     "filters": [
-    #         {
-    #             "property": "badegewaes",
-    #             "operator": "not_contains",
-    #             "value": "Strandbad",
-    #             "case_sensitive": False
-    #         }
-    #     ]
-    # },
-    # {
-    #     "source_id": "strandbad",
-    #     "url": "https://gdi.berlin.de/services/wfs/schwimmbaeder_berlin",
-    #     "layer":  "schwimmbaeder_berlin:schwimmbaeder",
-    #     "category": "Strandbad",
-    #     "source": "Öffentlicher Datensatz Berlins",
-    #     "default_name": "",
-    #     "name_fields": [
-    #         "name_des_schwimmbads"
-    #     ],
-    #     "filters": [
-    #         {"property": "badkategorie", "value": "Strandbad", "case_sensitive": False},
-    #     ],
-    # },
-    # {
-    #     "source_id": "freibad",
-    #     "url": "https://gdi.berlin.de/services/wfs/schwimmbaeder_berlin",
-    #     "layer":  "schwimmbaeder_berlin:schwimmbaeder",
-    #     "category": "Freibad",
-    #     "source": "Öffentlicher Datensatz Berlins",
-    #     "default_name": "",
-    #     "name_fields": [
-    #         "name_des_schwimmbads"
-    #     ],
-    #     "filters": [
-    #         {"property": "badkategorie", "value": "Freibad", "case_sensitive": False},
-    #     ],
-    # },
-    # {
-    #     "source_id": "schwimmhalle",
-    #     "url": "https://gdi.berlin.de/services/wfs/schwimmbaeder_berlin",
-    #     "layer":  "schwimmbaeder_berlin:schwimmbaeder",
-    #     "category": "Schwimmhalle",
-    #     "source": "Öffentlicher Datensatz Berlins",
-    #     "default_name": "",
-    #     "name_fields": [
-    #         "name_des_schwimmbads"
-    #     ],
-    #     "filters": [
-    #         {"property": "badkategorie", "value": "Hallenbad", "case_sensitive": False},
-    #         {"property": "badkategorie", "value": "Hallenbad, Schul- und Vereinsbad", "case_sensitive": False},
-    #         {"property": "badkategorie", "value": "Hallenbad, Freizeit- und Familienbad", "case_sensitive": False},
-    #     ],
-    #     "info_templates": {
-    #         "hinweis_zu_oeffnungszeiten": "Hinweis: {}"
-    #     }
-    # },
-    # {
-    #     "source_id": "kuehler_raum",
-    #     "url": "https://gdi.berlin.de/services/wfs/kuehle_raeume",
-    #     "layer":  "kuehle_raeume:kuehle_raeume",
-    #     "category": "Öffentlicher \"Kühler Raum\"",
-    #     "source": "Öffentlicher Datensatz Berlins",
-    #     "default_name": "Öffentlicher \"Kühler Raum\"",
-    #     "name_fields": ["kuehle_raeume"],
-    #     "info_templates": {
-    #         ("adresse", "postleitzahl"): "Adresse: {} {} ",
-    #         "rollstuhlgerechter_zugang": "Rollstuhlgerecht: {}",
-    #         "hinweis": "Hinweis: {}",
-    #         "oeffnungszeiten": "Öffnungszeiten: {}"
-    #     }
-    # },
-    # {
-    #     "source_id": "toiletten",
-    #     "url": "https://gdi.berlin.de/services/wfs/toiletten",
-    #     "layer": "toiletten:toiletten",
-    #     "category": "Toilette",
-    #     "source": "Öffentlicher Datensatz Berlins",
-    #     "default_name": "Öffentliche Toilette",
-    #     "info_templates": {
-    #         "barrierefrei": "Barrierefrei: {}",
-    #         "nutzungsentgelt": "Preis: {} €"
-    #     }
-    # },
-    # {
-    #     "source_id": "trinkbrunnen",
-    #     "url": "https://gdi.berlin.de/services/wfs/trinkwasserbrunnen",
-    #     "layer":  "trinkwasserbrunnen:trinkwasserbrunnen",
-    #     "category": "Trinkbrunnen",
-    #     "source": "Öffentlicher Datensatz Berlins",
-    #     "default_name": "Trinkbrunnen",
-    #     "info_templates": {
-    #         "einschraenkungen": "Einschraenkungen: {}",
-    #         "informationen": "{}",
-    #     }
-    # },
-    # {
-    #     "source_id": "strassenbrunnen",
-    #     "url": "https://gdi.berlin.de/services/wfs/atkis",
-    #     "layer":  "atkis:a11_ax_sonstigesbauwerkodersonstigeeinrichtung_p",
-    #     "category": "Straßenbrunnen",
-    #     "source": "Öffentlicher Datensatz Berlins",
-    #     "default_name": "Straßenbrunnen",
-    #     "filters": [
-    #         {"property": "bezbwf", "value": "Brunnen", "case_sensitive": True},
-    #     ],
-    # }
     {
-        "source_id": "zierbrunnen",
+        "source_id": "badestelle",
+        "url": "https://gdi.berlin.de/services/wfs/badegewaesser",
+        "layer":  "badegewaesser:aa_badestellen",
+        "category": "Badestelle",
+        "source": "Öffentlicher Datensatz Berlins",
+        "default_name": "",
+        "name_fields": [
+            "badegewaes"
+        ],
+        "info_fields": [
+            "hinweis_zu_oeffnungszeiten"
+        ],
+        "filters": [
+            {
+                "property": "badegewaes",
+                "operator": "not_contains",
+                "value": "Strandbad",
+                "case_sensitive": False
+            }
+        ]
+    },
+    {
+        "source_id": "strandbad",
+        "url": "https://gdi.berlin.de/services/wfs/schwimmbaeder_berlin",
+        "layer":  "schwimmbaeder_berlin:schwimmbaeder",
+        "category": "Strandbad",
+        "source": "Öffentlicher Datensatz Berlins",
+        "default_name": "",
+        "name_fields": [
+            "name_des_schwimmbads"
+        ],
+        "filters": [
+            {"property": "badkategorie", "value": "Strandbad", "case_sensitive": False},
+        ],
+    },
+    {
+        "source_id": "freibad",
+        "url": "https://gdi.berlin.de/services/wfs/schwimmbaeder_berlin",
+        "layer":  "schwimmbaeder_berlin:schwimmbaeder",
+        "category": "Freibad",
+        "source": "Öffentlicher Datensatz Berlins",
+        "default_name": "",
+        "name_fields": [
+            "name_des_schwimmbads"
+        ],
+        "filters": [
+            {"property": "badkategorie", "value": "Freibad", "case_sensitive": False},
+        ],
+    },
+    {
+        "source_id": "schwimmhalle",
+        "url": "https://gdi.berlin.de/services/wfs/schwimmbaeder_berlin",
+        "layer":  "schwimmbaeder_berlin:schwimmbaeder",
+        "category": "Schwimmhalle",
+        "source": "Öffentlicher Datensatz Berlins",
+        "default_name": "",
+        "name_fields": [
+            "name_des_schwimmbads"
+        ],
+        "filters": [
+            {"property": "badkategorie", "value": "Hallenbad", "case_sensitive": False},
+            {"property": "badkategorie", "value": "Hallenbad, Schul- und Vereinsbad", "case_sensitive": False},
+            {"property": "badkategorie", "value": "Hallenbad, Freizeit- und Familienbad", "case_sensitive": False},
+        ],
+        "info_templates": {
+            "hinweis_zu_oeffnungszeiten": "Hinweis: {}"
+        }
+    },
+    {
+        "source_id": "kuehler_raum",
+        "url": "https://gdi.berlin.de/services/wfs/kuehle_raeume",
+        "layer":  "kuehle_raeume:kuehle_raeume",
+        "category": "Öffentlicher \"Kühler Raum\"",
+        "source": "Öffentlicher Datensatz Berlins",
+        "default_name": "Öffentlicher \"Kühler Raum\"",
+        "name_fields": ["kuehle_raeume"],
+        "info_templates": {
+            ("adresse", "postleitzahl"): "Adresse: {} {} ",
+            "rollstuhlgerechter_zugang": "Rollstuhlgerecht: {}",
+            "hinweis": "Hinweis: {}",
+            "oeffnungszeiten": "Öffnungszeiten: {}"
+        }
+    },
+    {
+        "source_id": "toiletten",
+        "url": "https://gdi.berlin.de/services/wfs/toiletten",
+        "layer": "toiletten:toiletten",
+        "category": "Toilette",
+        "source": "Öffentlicher Datensatz Berlins",
+        "default_name": "Öffentliche Toilette",
+        "info_templates": {
+            "barrierefrei": "Barrierefrei: {}",
+            "nutzungsentgelt": "Preis: {} €"
+        }
+    },
+    {
+        "source_id": "trinkbrunnen",
+        "url": "https://gdi.berlin.de/services/wfs/trinkwasserbrunnen",
+        "layer":  "trinkwasserbrunnen:trinkwasserbrunnen",
+        "category": "Trinkbrunnen",
+        "source": "Öffentlicher Datensatz Berlins",
+        "default_name": "Trinkbrunnen",
+        "info_templates": {
+            "einschraenkungen": "Einschraenkungen: {}",
+            "informationen": "{}",
+        }
+    },
+    {
+        "source_id": "strassenbrunnen",
+        "url": "https://gdi.berlin.de/services/wfs/atkis",
+        "layer":  "atkis:a11_ax_sonstigesbauwerkodersonstigeeinrichtung_p",
+        "category": "Straßenbrunnen",
+        "source": "Öffentlicher Datensatz Berlins",
+        "default_name": "Brunnen",
+        "filters": [
+            {"property": "bezbwf", "value": "Brunnen", "case_sensitive": True},
+            {"property": "bezbwf", "value": "Brunnen (Trinkwasserversorgung)", "case_sensitive": True},
+        ],
+        "info_templates": {
+            "bezbwf": "Brunnentyp: {}",
+        }
+    },
+    {
+        "source_id": "strassenbrunnen",
         "url": "https://gdi.berlin.de/services/wfs/zierbrunnen",
-        "layer":  "zierbrunnen",
+        "layer":  "zierbrunnen:bez_zierbrunnen",
         "category": "Straßenbrunnen",
         "source": "Öffentlicher Datensatz Berlins",
         "default_name": "Brunnen",
         "filters": [
             {"property": "kategorie", "value": "Zierbrunnen", "case_sensitive": True},
             {"property": "kategorie", "value": "Wasseranlage", "case_sensitive": True},
-
-        ]
-    }
+        ],
+        "info_templates": {
+            "kategorie": "Brunnentyp: {}",
+        }
+    },
 ]
 
 

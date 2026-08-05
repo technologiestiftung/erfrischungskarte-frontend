@@ -6,31 +6,47 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.4127555,
-          52.5220209
+          13.466660933445619,
+          52.505243104246254
         ]
       },
       "properties": {
-        "name": "Trinkbrunnen Test",
-        "info": "Trinkbrunnen",
+        "name": "Trinkbrunnen",
+        "info": "Neuer Trinkbrunnen (Stand August 2026)",
         "category": "Trinkbrunnen",
-        "source": "Timmy Tester"
+        "source": "CityLAB"
       }
     },
-        {
+    {
       "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.4094081,
-          52.5208263
+          13.418394778742833,
+          52.47096199838943
         ]
       },
       "properties": {
-        "name": "Turm",
-        "info": "Tolle Aussicht hier und kühl!",
+        "name": "Wasserpumpe",
+        "info": "In dem Naturerfahrungsraum aufm THF ist auch ne Wasserpumpe.",
         "category": "Mein Tip",
-        "source": "Timmy Tester"
+        "source": "CityLAB"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.402169476440225,
+          52.54029560142377
+        ]
+      },
+      "properties": {
+        "name": "Wasserpumpe",
+        "info": "Wassersprüher. Sehr erfrischend.",
+        "category": "Mein Tip",
+        "source": "CityLAB"
       }
     }
   ]
