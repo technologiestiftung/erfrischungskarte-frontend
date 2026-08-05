@@ -43,8 +43,8 @@
         ]
       },
       "properties": {
-        "name": "Wasserpumpe",
-        "info": "Wassersprüher. Sehr erfrischend.",
+        "name": "Wassersprüher",
+        "info": "Sehr erfrischend.",
         "category": "Mein Tip",
         "source": "CityLAB"
       }
