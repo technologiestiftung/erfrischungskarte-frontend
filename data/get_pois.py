@@ -24,7 +24,7 @@ from poi_builder import run_pipeline, write_geojson
 # USER SCAPER & MERGER TOGGLES
 # ==============================================================================
 # Easily toggle on/off entire data pipelines here:
-SCRAPE_OSM = True         # Set to True to scrape OpenStreetMap (OSM_SOURCES)
+SCRAPE_OSM = False         # Set to True to scrape OpenStreetMap (OSM_SOURCES)
 SCRAPE_WFS = False         # Set to True to scrape Berlin WFS (WFS_SOURCES)
 SCRAPE_REFILL = False      # Set to True to scrape api.ofdb.io Refill Stations
 MERGE_LOCAL = False        # Set to True to merge existing datasets (EXISTING_DATASETS)
@@ -67,6 +67,7 @@ ALT_TEXT_REFILL: dict[str, str] = {
 # ==============================================================================
 # Comment or uncomment sources to enable/disable them individually
 OSM_SOURCES: dict[str, dict[str, Any]] = {
+    ## Not in use
     # "trinkbrunnen_osm": {
     #     "category": "Trinkbrunnen OSM",
     #     "default_name": "Trinkbrunnen",
@@ -138,7 +139,7 @@ OSM_SOURCES: dict[str, dict[str, Any]] = {
 # Comment or uncomment WFS sources to enable/disable them individually
 WFS_SOURCES: list[dict[str, Any]] = [
     # {
-    #     "source_id": "Badestelle",
+    #     "source_id": "badestelle",
     #     "url": "https://gdi.berlin.de/services/wfs/badegewaesser",
     #     "layer":  "badegewaesser:aa_badestellen",
     #     "category": "Badestelle",
@@ -150,11 +151,17 @@ WFS_SOURCES: list[dict[str, Any]] = [
     #     "info_fields": [
     #         "hinweis_zu_oeffnungszeiten"
     #     ],
-    #     "source":"berlin"
+    #     "filters": [
+    #         {
+    #             "property": "badegewaes",
+    #             "operator": "not_contains",
+    #             "value": "Strandbad",
+    #             "case_sensitive": False
+    #         }
+    #     ]
     # },
-    # # hinweis_zu_oeffnungszeiten
     # {
-    #     "source_id": "Strandbad",
+    #     "source_id": "strandbad",
     #     "url": "https://gdi.berlin.de/services/wfs/schwimmbaeder_berlin",
     #     "layer":  "schwimmbaeder_berlin:schwimmbaeder",
     #     "category": "Strandbad",
@@ -168,7 +175,7 @@ WFS_SOURCES: list[dict[str, Any]] = [
     #     ],
     # },
     # {
-    #     "source_id": "Freibad",
+    #     "source_id": "freibad",
     #     "url": "https://gdi.berlin.de/services/wfs/schwimmbaeder_berlin",
     #     "layer":  "schwimmbaeder_berlin:schwimmbaeder",
     #     "category": "Freibad",
@@ -182,7 +189,7 @@ WFS_SOURCES: list[dict[str, Any]] = [
     #     ],
     # },
     # {
-    #     "source_id": "Schwimmhalle",
+    #     "source_id": "schwimmhalle",
     #     "url": "https://gdi.berlin.de/services/wfs/schwimmbaeder_berlin",
     #     "layer":  "schwimmbaeder_berlin:schwimmbaeder",
     #     "category": "Schwimmhalle",
@@ -196,32 +203,12 @@ WFS_SOURCES: list[dict[str, Any]] = [
     #         {"property": "badkategorie", "value": "Hallenbad, Schul- und Vereinsbad", "case_sensitive": False},
     #         {"property": "badkategorie", "value": "Hallenbad, Freizeit- und Familienbad", "case_sensitive": False},
     #     ],
-    # },
-    # {
-    #     "source_id": "Trinkbrunnen",
-    #     "url": "https://gdi.berlin.de/services/wfs/trinkwasserbrunnen",
-    #     "layer":  "trinkwasserbrunnen:trinkwasserbrunnen",
-    #     "category": "Trinkbrunnen",
-    #     "source": "Berlin",
-    #     "default_name": "Trinkbrunnen",
     #     "info_templates": {
-    #         "einschraenkungen": "Einschraenkungen: {}",
-    #         "informationen": "{}",
+    #         "hinweis_zu_oeffnungszeiten": "Hinweis: {}"
     #     }
     # },
     # {
-    #     "source_id": "Straßenbrunnen",
-    #     "url": "https://gdi.berlin.de/services/wfs/atkis",
-    #     "layer":  "atkis:a11_ax_sonstigesbauwerkodersonstigeeinrichtung_p",
-    #     "category": "Straßenbrunnen",
-    #     "source": "Berlin",
-    #     "default_name": "Straßenbrunnen",
-    #     "filters": [
-    #         {"property": "bezbwf", "value": "Brunnen", "case_sensitive": True},
-    #     ],
-    # },
-    # {
-    #     "source_id": "Kühler Raum",
+    #     "source_id": "kuehler_raum",
     #     "url": "https://gdi.berlin.de/services/wfs/kuehle_raeume",
     #     "layer":  "kuehle_raeume:kuehle_raeume",
     #     "category": "Öffentlicher \"Kühler Raum\"",
@@ -235,18 +222,42 @@ WFS_SOURCES: list[dict[str, Any]] = [
     #         "oeffnungszeiten": "Öffnungszeiten: {}"
     #     }
     # },
-    {
-        "source_id": "Toiletten",
-        "url": "https://gdi.berlin.de/services/wfs/toiletten",
-        "layer": "toiletten:toiletten",
-        "category": "Toilette",
-        "source": "Berlin",
-        "default_name": "Öffentliche Toilette",
-        "info_templates": {
-            "barrierefrei": "Barrierefrei: {}",
-            "nutzungsentgelt": "Preis: {} €"
-        }
-    }
+    # {
+    #     "source_id": "toiletten",
+    #     "url": "https://gdi.berlin.de/services/wfs/toiletten",
+    #     "layer": "toiletten:toiletten",
+    #     "category": "Toilette",
+    #     "source": "Berlin",
+    #     "default_name": "Öffentliche Toilette",
+    #     "info_templates": {
+    #         "barrierefrei": "Barrierefrei: {}",
+    #         "nutzungsentgelt": "Preis: {} €"
+    #     }
+    # },
+    # {
+    #     "source_id": "trinkbrunnen",
+    #     "url": "https://gdi.berlin.de/services/wfs/trinkwasserbrunnen",
+    #     "layer":  "trinkwasserbrunnen:trinkwasserbrunnen",
+    #     "category": "Trinkbrunnen",
+    #     "source": "Berlin",
+    #     "default_name": "Trinkbrunnen",
+    #     "info_templates": {
+    #         "einschraenkungen": "Einschraenkungen: {}",
+    #         "informationen": "{}",
+    #     }
+    # },
+    # {
+    #     "source_id": "strassenbrunnen",
+    #     "url": "https://gdi.berlin.de/services/wfs/atkis",
+    #     "layer":  "atkis:a11_ax_sonstigesbauwerkodersonstigeeinrichtung_p",
+    #     "category": "Straßenbrunnen",
+    #     "source": "Berlin",
+    #     "default_name": "Straßenbrunnen",
+    #     "filters": [
+    #         {"property": "bezbwf", "value": "Brunnen", "case_sensitive": True},
+    #     ],
+    # }
+    ## Zierbrunnen?
 ]
 
 

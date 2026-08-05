@@ -94,3 +94,42 @@ If you need to make specific text corrections on the fly (for example, stripping
 }
 ```
 This will automatically find and remove that exact text from any description before showing it!
+
+---
+
+## 🔍 6. Filtering Scraped Places (Advanced Filters)
+You can define exact criteria to include or exclude specific locations from being processed and appearing on the map by using the `"filters"` property in your source configurations. 
+
+Filters support different logical operators, case-sensitivity switches, and automatically handle inclusions and exclusions:
+
+### A. Exclude Places (Negation Filters)
+If you want to exclude certain places—for example, filtering out any bathing spots that contain the word `"Strandbad"`—you can use the `"not_contains"` operator:
+```python
+"filters": [
+    {
+        "property": "badegewaes",
+        "operator": "not_contains",
+        "value": "Strandbad",
+        "case_sensitive": False
+    }
+]
+```
+If **any** exclusion filter matches, the feature is immediately discarded.
+
+### B. Include Places (Matching Filters)
+By default, filters match values exactly. If you specify multiple inclusion filters, they use **OR** logic (a place is kept if it matches *at least one* of the specified categories):
+```python
+"filters": [
+    {"property": "badkategorie", "value": "Hallenbad", "case_sensitive": False},
+    {"property": "badkategorie", "value": "Hallenbad, Schul- und Vereinsbad", "case_sensitive": False}
+]
+```
+
+### C. Supported Operators
+You can choose from four filter operators:
+* **`"equals"`** (default): Keeps features whose property matches the exact filter value.
+* **`"contains"`**: Keeps features whose property includes the filter value as a substring.
+* **`"not_equals"`**: Excludes features whose property is exactly equal to the filter value.
+* **`"not_contains"`**: Excludes features whose property includes the filter value as a substring (perfect for filtering out unwanted keywords!).
+
+*Tip: Set `"case_sensitive": False` inside any filter to ignore capital letters when matching values.*

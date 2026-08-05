@@ -266,33 +266,87 @@ def apply_property_filters(
     filters: Sequence[dict[str, Any]],
 ) -> dict[str, Any]:
     """
-    Apply exact property filters to a FeatureCollection using OR logic.
+    Apply property filters to a FeatureCollection using combined OR/AND logic.
 
-    A feature is kept if it matches at least one of the filters in the list.
-    If no filters are provided, all features are returned.
+    - Inclusion filters (equals, contains) are grouped with OR logic:
+      A feature is kept if it matches at least one of the inclusion filters.
+      If no inclusion filters are provided, all features pass this check.
+      
+    - Exclusion filters (not_equals, not_contains) are grouped with AND logic:
+      A feature is excluded if it matches any of the exclusion filters.
+      If no exclusion filters are provided, all features pass this check.
     """
     if not filters:
         return feature_collection
 
-    def matches_filter(feature: dict[str, Any], filter_config: dict[str, Any]) -> bool:
+    inclusion_filters = [f for f in filters if f.get("operator", "equals") in ("equals", "contains")]
+    exclusion_filters = [f for f in filters if f.get("operator") in ("not_equals", "not_contains")]
+
+    def matches_inclusion(feature: dict[str, Any], filter_config: dict[str, Any]) -> bool:
         property_name = filter_config["property"]
         property_value = filter_config["value"]
+        operator = filter_config.get("operator", "equals")
         case_sensitive = filter_config.get("case_sensitive", True)
 
         feature_value = (feature.get("properties") or {}).get(property_name)
         if feature_value is None:
             return False
 
-        if case_sensitive:
-            return feature_value == property_value
+        val_str = str(feature_value)
+        target_str = str(property_value)
+        if not case_sensitive:
+            val_str = val_str.casefold()
+            target_str = target_str.casefold()
 
-        return str(feature_value).casefold() == str(property_value).casefold()
+        if operator == "equals":
+            if case_sensitive:
+                return feature_value == property_value
+            return val_str == target_str
+        elif operator == "contains":
+            return target_str in val_str
 
-    filtered_features = [
-        feature
-        for feature in feature_collection.get("features", [])
-        if any(matches_filter(feature, f_config) for f_config in filters)
-    ]
+        return False
+
+    def matches_exclusion(feature: dict[str, Any], filter_config: dict[str, Any]) -> bool:
+        property_name = filter_config["property"]
+        property_value = filter_config["value"]
+        operator = filter_config["operator"]
+        case_sensitive = filter_config.get("case_sensitive", True)
+
+        feature_value = (feature.get("properties") or {}).get(property_name)
+        if feature_value is None:
+            # If the property is missing, it doesn't contain/equal the excluded value
+            return False
+
+        val_str = str(feature_value)
+        target_str = str(property_value)
+        if not case_sensitive:
+            val_str = val_str.casefold()
+            target_str = target_str.casefold()
+
+        if operator == "not_equals" or operator == "not_equal":
+            if case_sensitive:
+                return feature_value == property_value
+            return val_str == target_str
+        elif operator == "not_contains":
+            return target_str in val_str
+
+        return False
+
+    filtered_features = []
+    for feature in feature_collection.get("features", []):
+        # 1. Check inclusion (OR logic across inclusion filters)
+        inc_pass = True
+        if inclusion_filters:
+            inc_pass = any(matches_inclusion(feature, f) for f in inclusion_filters)
+
+        # 2. Check exclusion (AND logic: must NOT match any exclusion filters)
+        exc_pass = True
+        if exclusion_filters:
+            exc_pass = not any(matches_exclusion(feature, f) for f in exclusion_filters)
+
+        if inc_pass and exc_pass:
+            filtered_features.append(feature)
 
     return {"type": "FeatureCollection", "features": filtered_features}
 
