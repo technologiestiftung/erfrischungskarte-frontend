@@ -40,8 +40,8 @@
         ]
       },
       "properties": {
-        "name": "Wassersprüher",
-        "info": "Sehr erfrischend.",
+        "name": "Cooling Point",
+        "info": "Vernebelungsanlage",
         "category": "Mein Tip",
         "source": "CityLAB"
       }
