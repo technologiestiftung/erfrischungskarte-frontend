@@ -5,6 +5,7 @@ export interface MapPoiTooltipType {
   title: string
   category: string
   info?: string
+  source?: string
   coordinates: {
     latitude: number
     longitude: number
@@ -15,6 +16,7 @@ export const MapPoiTooltip: FC<MapPoiTooltipType> = ({
   title,
   category,
   info,
+  source,
   coordinates,
 }) => {
   return (
@@ -29,8 +31,12 @@ export const MapPoiTooltip: FC<MapPoiTooltipType> = ({
         <p className="text-gray-400">{category}</p>
       )}
 
-      {info && (
-        <p className="text-xs text-gray-900 pt-2 mt-2 border-t">{info}</p>
+      {(info || source) && <hr className="mt-2" />}
+
+      {info && <p className="text-xs text-gray-900 pt-2">{info}</p>}
+
+      {source && (
+        <p className="text-xs text-gray-400 pt-1 mt-1">Quelle: {source}</p>
       )}
     </Popup>
   )

@@ -30,7 +30,6 @@ import { useHasWebPSupport } from '@lib/hooks/useHasWebPSupport'
 import { SharingOverlay } from '@components/SharingOverlay'
 import { WeatherOverlay } from '@components/WeatherOverlay'
 import { useCurrentTime } from '@lib/hooks/useCurrentTime'
-import { DisclaimerLinks } from '@components/DisclaimerLinks'
 
 interface RefreshmentMapPropType {
   title?: string
@@ -43,6 +42,7 @@ interface MapFeatureType {
     name?: string
     category?: string
     info?: string
+    source?: string
   }
   [key: string]: unknown
 }
@@ -74,7 +74,7 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
   const hourKeys = Object.keys(HOURS) as HourType[]
   const [poiTooltipContent, setPoiTooltipContent] = useState<Pick<
     MapPoiTooltipType,
-    'title' | 'category' | 'info'
+    'title' | 'category' | 'info' | 'source'
   > | null>(null)
 
   const [poiTooltipCoordinates, setPoiTooltipCoordinates] = useState<{
@@ -87,14 +87,15 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
 
     const allHoveredFeatures = e.features as CustomMapEventType['features']
 
-    const hoveredPoiFeatures = allHoveredFeatures.filter(
-      (f) => f.source === POI_DATA.id
+    const hoveredPoiFeatures = allHoveredFeatures.filter((f) =>
+      f.source.startsWith(`${POI_DATA.id}-`)
     )
 
     setPoiTooltipContent({
       title: hoveredPoiFeatures[0].properties.name || '',
       category: hoveredPoiFeatures[0].properties.category || '',
       info: hoveredPoiFeatures[0].properties.info || '',
+      source: hoveredPoiFeatures[0].properties.source || '',
     })
 
     setPoiTooltipCoordinates({
@@ -119,6 +120,23 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
     )
     .filter(Boolean)
 
+  const categoriesToRender =
+    activeCategories !== undefined
+      ? activeCategories
+      : (POI_DATA.activePropertyKeys as string[]).filter((category) => {
+          const id =
+            POI_CATEGORY_ID_MAP[category as keyof typeof POI_CATEGORY_ID_MAP]
+          return id !== 9 && id !== 10 && id !== 11
+        })
+
+  const interactiveLayerIds: string[] = []
+  categoriesToRender.forEach((category) => {
+    if (POI_DATA.geojsonUrls[category]) {
+      interactiveLayerIds.push(`${POI_DATA.id}-${category}`)
+    }
+    interactiveLayerIds.push(`${POI_DATA.id}-user-${category}`)
+  })
+
   return (
     <>
       {(pathname === '/map' || pathname === '/social-image') && <AppTitle />}
@@ -134,7 +152,7 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
           longitude: pageProps.query.longitude || MAP_CONFIG.defaultLongitude,
           zoom: pageProps.query.zoom || MAP_CONFIG.defaultZoom,
         }}
-        interactiveLayerIds={[POI_DATA.id]}
+        interactiveLayerIds={interactiveLayerIds}
         handleMouseLeave={handleMouseLeave}
         handleHover={handleHover}
       >
@@ -173,7 +191,7 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
         <ExtrusionLayer {...EXTRUDED_BUILDINGS_DATA} minzoom={15.5} />
         <MapPointLayer
           {...POI_DATA}
-          activePropertyKeys={activeCategories}
+          activePropertyKeys={categoriesToRender}
           minzoom={MAP_CONFIG.minZoom}
         />
         {poiTooltipCoordinates &&
@@ -187,14 +205,12 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
               title={poiTooltipContent.title}
               category={poiTooltipContent.category}
               info={poiTooltipContent.info}
+              source={poiTooltipContent.source}
             />
           )}
       </MapRoot>
       {pathname !== '/' && pathname !== '/social-image' && (
         <>
-          <DisclaimerLinks
-            className={pathname !== '/map' && hasMobileSize ? 'hidden' : ''}
-          />
           <SharingOverlay />
           <WeatherOverlay />
           <Sidebar {...pageProps} />

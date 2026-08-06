@@ -169,6 +169,7 @@ export type PoiCategory =
   | 'Schwimmhalle'
   | 'Toilette'
   | 'Öffentlicher "Kühler Raum"'
+  | 'Eure Tipps'
 
 export const POI_CATEGORY_COLOR_MAP: Map<PoiCategory, string> = new Map([
   ['Badestelle', colors['poi-darkblue']],
@@ -184,9 +185,10 @@ export const POI_CATEGORY_COLOR_MAP: Map<PoiCategory, string> = new Map([
   ['Picknicktisch', colors['poi-red']],
   ['Toilette', colors['poi-orange']],
   ['Öffentlicher "Kühler Raum"', colors['poi-darkgrey']],
+  ['Eure Tipps', colors['poi-darkgrey']],
 ])
 
-type PoiCategoryId = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13
+type PoiCategoryId = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14
 
 export const POI_CATEGORY_ID_MAP: { [key in PoiCategory]: PoiCategoryId } = {
   Badestelle: 1,
@@ -202,6 +204,7 @@ export const POI_CATEGORY_ID_MAP: { [key in PoiCategory]: PoiCategoryId } = {
   Toilette: 11,
   'Öffentlicher "Kühler Raum"': 12,
   'Refill Station': 13,
+  'Eure Tipps': 14,
 }
 
 export interface PoiDataType extends MapPointLayerType {
@@ -212,9 +215,20 @@ export interface PoiDataType extends MapPointLayerType {
 
 export const POI_DATA: PoiDataType = {
   id: 'poi-data',
-  tileset: {
-    url: 'mapbox://technologiestiftung.8zk96hlq',
-    layerName: 'pois_jun2025-bkayoz',
+  geojsonUrls: {
+    Badestelle: '/data/badestelle.geojson',
+    Strandbad: '/data/strandbad.geojson',
+    Freibad: '/data/freibad.geojson',
+    Schwimmhalle: '/data/schwimmhalle.geojson',
+    Wasserspielplatz: '/data/wasserspielplatz.geojson',
+    Trinkbrunnen: '/data/trinkbrunnen.geojson',
+    Straßenbrunnen: '/data/strassenbrunnen.geojson',
+    'Refill Station': '/data/refill_stations.geojson',
+    Gruenanlage: '/data/gruenanlagen.geojson',
+    Sitzbank: '/data/sitzbank.geojson',
+    Picknicktisch: '/data/picknicktisch.geojson',
+    Toilette: '/data/toiletten.geojson',
+    'Öffentlicher "Kühler Raum"': '/data/kuehler_raum.geojson',
   },
   fillColorProperty: 'category',
   fillColorMap: POI_CATEGORY_COLOR_MAP,
@@ -232,6 +246,7 @@ export const POI_DATA: PoiDataType = {
     'Picknicktisch',
     'Toilette',
     'Öffentlicher "Kühler Raum"',
+    'Eure Tipps',
   ],
 }
 
@@ -344,6 +359,27 @@ export const ABOUT_HOW_TO = (
     kaltluftproduzierende Flächen. Es handelt sich bei den zugrundeliegenden
     Werten um Verhältnisse und keine absoluten Zahlen. Die Daten beruhen auf
     Modellierungen für einen typischen Sommertag.
+  </>
+)
+
+export const ABOUT_SUGGESTIONS = (
+  <>
+    Unsere Daten stammen zum großen Teil von der Berliner Verwaltung sowie aus
+    offenen Quellen wie Open Street Map. Es kann vorkommen, dass einzelne Orte
+    fehlen, veraltet sind oder sich die Bedingungen vor Ort geändert haben.
+    <br />
+    <br />
+    Kennst du einen erfrischenden Ort, der auf der Karte noch fehlt, oder
+    möchtest du uns auf einen Fehler in den Daten hinweisen? Dann fülle gerne
+    unser{' '}
+    <a
+      target="blank"
+      href="https://citylabberlin.typeform.com/to/sFu9ZIKh"
+      className="text-gray-800 underline"
+    >
+      Formular
+    </a>{' '}
+    aus.
   </>
 )
 
@@ -529,16 +565,6 @@ export const ABOUT_POINTS_TEXT = (
         >
           Zierbrunnen
         </a>
-        . Zusätzlich werden Datenpunkte zu Straßenbrunnen auf{' '}
-        <a
-          target="_blank"
-          href="https://umap.openstreetmap.de/de/map/strassenbrunnen-berlin_2234#12/52.508490/13.303070"
-          className="text-gray-800 underline"
-          rel="noopener noreferrer"
-        >
-          Open Street Map
-        </a>{' '}
-        integriert.
       </p>
 
       <p>
@@ -568,14 +594,14 @@ export const ABOUT_POINTS_TEXT = (
         Die{' '}
         <a
           target="_blank"
-          href="https://daten.berlin.de/datensaetze/liste-der-badestellen-opendata-1568631"
+          href="https://daten.berlin.de/datensaetze/badegewasserqualitat-wfs-6ba85d36"
           className="text-gray-800 underline"
           rel="noopener noreferrer"
         >
           Standorte
         </a>{' '}
-        der <strong>Badestellen und Strandbäder</strong> stammen vom Landesamt
-        für Gesundheit und Soziales (LaGeSo), ebenso wie die{' '}
+        der <strong>Badestellen</strong> stammen vom Landesamt für Gesundheit
+        und Soziales (LaGeSo), ebenso wie die{' '}
         <a
           target="_blank"
           href="https://daten.berlin.de/datensaetze/kuhle-raume-hitzeschutz-wfs-89e7079b"
@@ -588,17 +614,17 @@ export const ABOUT_POINTS_TEXT = (
       </p>
 
       <p>
-        Die Informationen zu <strong>Freibädern und Schwimmhallen</strong>{' '}
-        liegen derzeit nur als{' '}
+        Die{' '}
         <a
           target="_blank"
-          href="https://www.berlinerbaeder.de/baeder/?tx_bbbfacility_flist%5Baction%5D=list&tx_bbbfacility_flist%5Bcontroller%5D=Facility&cHash=9ec8da068e3a82e6496f9a1c531626f3"
+          href="https://daten.berlin.de/datensaetze/schwimmbader-der-berliner-bader-betriebe-wfs-2b934eb7"
           className="text-gray-800 underline"
           rel="noopener noreferrer"
         >
-          Liste auf berlin.de
+          Informationen
         </a>{' '}
-        vor. Sie wurden mittels Webscraping in einen Geodatensatz überführt.
+        zu <strong>Strandbädern, Freibädern und Schwimmhallen</strong> stammen
+        von den Berliner Bäderbetriebe.
       </p>
 
       <p>
@@ -635,11 +661,11 @@ export const ABOUT_POINTS_TEXT = (
       </p>
 
       <p>
-        Den kompletten, für diese Anwendung aufbereiteten Datensatz (letztes
-        Update: Juli 2026) findet ihr{' '}
+        Die kompletten, für diese Anwendung aufbereiteten Daten inklusive der
+        Daten die uns Berliner:innen geschickt haben, findet ihr{' '}
         <a
           target="_blank"
-          href="https://github.com/technologiestiftung/erfrischungskarte-daten/tree/main/POIs/2026"
+          href="https://github.com/technologiestiftung/erfrischungskarte-frontend/tree/main/public/data"
           className="text-gray-800 underline"
           rel="noopener noreferrer"
         >
@@ -647,6 +673,7 @@ export const ABOUT_POINTS_TEXT = (
         </a>
         .
       </p>
+      <p>Letztes Update: 06.08.2026</p>
     </div>
   </>
 )
@@ -656,6 +683,11 @@ export const ABOUT_ACCORDION_ITEMS = [
     id: 'howto',
     title: 'Wie liest man die Erfrischungskarte?',
     content: ABOUT_HOW_TO,
+  },
+  {
+    id: 'suggestions',
+    title: 'Ort vorschlagen',
+    content: ABOUT_SUGGESTIONS,
   },
   {
     id: 'shadows',

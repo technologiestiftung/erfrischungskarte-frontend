@@ -19,7 +19,7 @@ describe('SplashScreen component', () => {
     render(<SplashScreen />)
     const links = screen.getAllByRole('link')
 
-    expect(links.length).toBe(5)
+    expect(links.length).toBe(6)
   })
   it('renders all the svgs', () => {
     render(<SplashScreen />)

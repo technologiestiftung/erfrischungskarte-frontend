@@ -23,9 +23,10 @@ const mapProps = {
 }
 const testPointLayerData: MapPointLayerType = {
   id: 'some-id',
-  tileset: {
-    url: 'some-url',
-    layerName: 'some-layer-name',
+  geojsonUrls: {
+    'key-1': 'some-url-1',
+    'key-2': 'some-url-2',
+    'key-3': 'some-url-3',
   },
   minzoom: 11.5,
   fillColorProperty: 'some-fill-prop',

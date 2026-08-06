@@ -22,8 +22,15 @@ export const AppTitle: FC = () => (
         'focus:ring-2 focus:ring-gray-800'
       )}
     >
-      <span>Berliner</span>
-      <span className="text-layer-turquoise-300">Erfrischungskarte</span>
+      <img
+        src="./favicons/android-chrome-512x512.png"
+        alt=""
+        className="w-6 sm:hidden"
+      />
+      <span className="hidden sm:inline">Berliner</span>
+      <span className="text-layer-turquoise-300 hidden sm:inline">
+        Erfrischungskarte
+      </span>
     </InternalLink>
   </div>
 )

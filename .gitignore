@@ -40,3 +40,14 @@ yarn-error.log*
 
 # Storybook
 storybook-static
+
+/data/NOTES.md
+/data/data/out/
+/public/data/pois.geojson
+
+# Python cache
+__pycache__/
+*.pyc
+/test/
+tsconfig.tsbuildinfo
+.tsconfig-lint.tsbuildinfo

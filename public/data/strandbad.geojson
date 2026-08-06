@@ -1,0 +1,181 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.32734,
+          52.54435604
+        ]
+      },
+      "properties": {
+        "name": "Strandbad Plötzensee",
+        "info": "",
+        "category": "Strandbad",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.274509,
+          52.54388004
+        ]
+      },
+      "properties": {
+        "name": "Strandbad Jungfernheide",
+        "info": "",
+        "category": "Strandbad",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.282339,
+          52.49406304
+        ]
+      },
+      "properties": {
+        "name": "Strandbad Halensee",
+        "info": "",
+        "category": "Strandbad",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.179439,
+          52.43817504
+        ]
+      },
+      "properties": {
+        "name": "Strandbad Wannsee",
+        "info": "",
+        "category": "Strandbad",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.335334,
+          52.61821604
+        ]
+      },
+      "properties": {
+        "name": "Strandbad Lübars",
+        "info": "",
+        "category": "Strandbad",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.244339,
+          52.57831604
+        ]
+      },
+      "properties": {
+        "name": "Strandbad Tegeler See",
+        "info": "",
+        "category": "Strandbad",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.630605,
+          52.44650204
+        ]
+      },
+      "properties": {
+        "name": "Strandbad Friedrichshagen",
+        "info": "",
+        "category": "Strandbad",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.599475,
+          52.41541104
+        ]
+      },
+      "properties": {
+        "name": "Strandbad Wendenschloss",
+        "info": "",
+        "category": "Strandbad",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.606855,
+          52.40887704
+        ]
+      },
+      "properties": {
+        "name": "Strandbad Grünau",
+        "info": "",
+        "category": "Strandbad",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.465549,
+          52.55396304
+        ]
+      },
+      "properties": {
+        "name": "Strandbad Weißensee",
+        "info": "",
+        "category": "Strandbad",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.484221,
+          52.54960504
+        ]
+      },
+      "properties": {
+        "name": "Strandbad Orankesee",
+        "info": "",
+        "category": "Strandbad",
+        "source": "Land Berlin"
+      }
+    }
+  ]
+}

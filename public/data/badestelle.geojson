@@ -1,0 +1,421 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.67733744,
+          52.42804652
+        ]
+      },
+      "properties": {
+        "name": "Kleiner Müggelsee",
+        "info": "",
+        "category": "Badestelle",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.65335939,
+          52.37319777
+        ]
+      },
+      "properties": {
+        "name": "Schmöckwitz",
+        "info": "",
+        "category": "Badestelle",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6225357,
+          52.40747358
+        ]
+      },
+      "properties": {
+        "name": "Bammelecke",
+        "info": "",
+        "category": "Badestelle",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2467056,
+          52.56214588
+        ]
+      },
+      "properties": {
+        "name": "Saatwinkel",
+        "info": "",
+        "category": "Badestelle",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.21120181,
+          52.58502264
+        ]
+      },
+      "properties": {
+        "name": "Bürgerablage",
+        "info": "",
+        "category": "Badestelle",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1859348,
+          52.48435463
+        ]
+      },
+      "properties": {
+        "name": "Kleine Badewiese",
+        "info": "",
+        "category": "Badestelle",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.19065805,
+          52.45192927
+        ]
+      },
+      "properties": {
+        "name": "Große Steinlanke",
+        "info": "",
+        "category": "Badestelle",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.28405588,
+          52.56919876
+        ]
+      },
+      "properties": {
+        "name": "Flughafensee",
+        "info": "",
+        "category": "Badestelle",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.11871206,
+          52.4717879
+        ]
+      },
+      "properties": {
+        "name": "Groß Glienicker See, nördlich",
+        "info": "",
+        "category": "Badestelle",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.11338251,
+          52.45904276
+        ]
+      },
+      "properties": {
+        "name": "Groß Glienicker See, südlich",
+        "info": "",
+        "category": "Badestelle",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2085056,
+          52.44121296
+        ]
+      },
+      "properties": {
+        "name": "Schlachtensee",
+        "info": "",
+        "category": "Badestelle",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.23160733,
+          52.45217046
+        ]
+      },
+      "properties": {
+        "name": "Krumme Lanke",
+        "info": "",
+        "category": "Badestelle",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.14325596,
+          52.43282713
+        ]
+      },
+      "properties": {
+        "name": "Alter Hof",
+        "info": "",
+        "category": "Badestelle",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.17972283,
+          52.46581505
+        ]
+      },
+      "properties": {
+        "name": "Breitehorn",
+        "info": "",
+        "category": "Badestelle",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.73113564,
+          52.42226487
+        ]
+      },
+      "properties": {
+        "name": "Dämeritzsee",
+        "info": "",
+        "category": "Badestelle",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.57594529,
+          52.44086996
+        ]
+      },
+      "properties": {
+        "name": "Flussbad Gartenstraße",
+        "info": "",
+        "category": "Badestelle",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.65253373,
+          52.38920435
+        ]
+      },
+      "properties": {
+        "name": "Große Krampe",
+        "info": "",
+        "category": "Badestelle",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.19473955,
+          52.48224994
+        ]
+      },
+      "properties": {
+        "name": "Grunewaldturm",
+        "info": "",
+        "category": "Badestelle",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.19755243,
+          52.46974833
+        ]
+      },
+      "properties": {
+        "name": "Lieper Bucht",
+        "info": "",
+        "category": "Badestelle",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.19012272,
+          52.46005077
+        ]
+      },
+      "properties": {
+        "name": "Radfahrerwiese",
+        "info": "",
+        "category": "Badestelle",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.22082319,
+          52.59459624
+        ]
+      },
+      "properties": {
+        "name": "Sandhauser Straße",
+        "info": "",
+        "category": "Badestelle",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.25598269,
+          52.56830963
+        ]
+      },
+      "properties": {
+        "name": "Reiswerder",
+        "info": "",
+        "category": "Badestelle",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.24432949,
+          52.57571715
+        ]
+      },
+      "properties": {
+        "name": "Scharfenberg",
+        "info": "",
+        "category": "Badestelle",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2551712,
+          52.58568555
+        ]
+      },
+      "properties": {
+        "name": "Reiherwerder",
+        "info": "",
+        "category": "Badestelle",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.23451885,
+          52.49053733
+        ]
+      },
+      "properties": {
+        "name": "Teufelssee",
+        "info": "",
+        "category": "Badestelle",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.67557345,
+          52.38283218
+        ]
+      },
+      "properties": {
+        "name": "Seddinsee",
+        "info": "",
+        "category": "Badestelle",
+        "source": "Land Berlin"
+      }
+    }
+  ]
+}
