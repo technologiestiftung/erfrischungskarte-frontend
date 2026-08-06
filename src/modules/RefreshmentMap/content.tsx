@@ -655,7 +655,7 @@ export const ABOUT_POINTS_TEXT = (
       </p>
 
       <p>
-        Den kompletten, für diese Anwendung aufbereiteten Daten inklusive der
+        Die kompletten, für diese Anwendung aufbereiteten Daten inklusive der
         Daten die uns Berliner:innen geschickt haben, findet ihr{' '}
         <a
           target="_blank"
@@ -667,6 +667,7 @@ export const ABOUT_POINTS_TEXT = (
         </a>
         .
       </p>
+      <p>Letztes Update: 06.08.2026</p>
     </div>
   </>
 )

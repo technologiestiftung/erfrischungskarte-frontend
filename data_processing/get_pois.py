@@ -14,7 +14,9 @@ Usage:
 from __future__ import annotations
 
 import argparse
+from datetime import datetime
 from pathlib import Path
+import re
 from typing import Any
 
 # Import the core logic engine from the other file
@@ -351,6 +353,29 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
+def update_last_update_date() -> None:
+    current_date = datetime.now().strftime("%d.%m.%Y")
+    script_dir = Path(__file__).resolve().parent
+    content_path = script_dir.parent / "src" / "modules" / "RefreshmentMap" / "content.tsx"
+
+    if not content_path.exists():
+        print(f"Warning: Could not find content.tsx at {content_path}")
+        return
+
+    try:
+        content = content_path.read_text(encoding="utf-8")
+        pattern = r"(<p>Letztes Update:\s*)[^<]*(</p>)"
+        new_content, count = re.subn(pattern, rf"\g<1>{current_date}\g<2>", content)
+
+        if count > 0:
+            content_path.write_text(new_content, encoding="utf-8")
+            print(f"Updated 'Letztes Update' in {content_path.name} to {current_date}")
+        else:
+            print("Warning: Could not find '<p>Letztes Update: ...</p>' tag in content.tsx")
+    except Exception as e:
+        print(f"Error updating content.tsx: {e}")
+
+
 def main() -> None:
     args = parse_args()
 
@@ -374,6 +399,8 @@ def main() -> None:
     print(f"Finished! Wrote {len(written_files)} separate datasets to: {out_dir}/")
     for f in written_files:
         print(f"  - {f.name}")
+
+    update_last_update_date()
 
 
 if __name__ == "__main__":
