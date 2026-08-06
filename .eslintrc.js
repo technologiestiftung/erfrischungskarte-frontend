@@ -7,7 +7,7 @@ module.exports = {
 	},
 	parserOptions: { ecmaVersion: 8, project: './tsconfig.json', tsconfigRootDir: './' }, // to enable features such as async/await
 	ignorePatterns: ['node_modules/*', '.next/*', '.out/*', '!.prettierrc.js'], // We don't want to lint generated files nor node_modules, but we want to lint .prettierrc.js (ignored by default by eslint)
-	extends: ['eslint:recommended'],
+	extends: ['eslint:recommended','next', 'next/core-web-vitals'],
 	overrides: [
 		// This configuration will apply only to TypeScript files
 		{

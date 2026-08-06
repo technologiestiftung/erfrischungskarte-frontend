@@ -31,7 +31,14 @@ export const About: FC = () => (
     <section className="mt-16 flex flex-wrap">
       <div className="flex flex-col mr-6 mb-6">
         <span className="text-sm mb-2">Ein Projekt der</span>
-        <TsbLogo className={focusStyles} />
+        <a
+          href="https://www.technologiestiftung-berlin.de/"
+          target="_blank"
+          rel="noreferrer"
+          className={focusStyles}
+        >
+          <TsbLogo className={`w-36`} />
+        </a>
       </div>
       <div className="flex flex-col mb-6">
         <span className="text-sm mb-2">Durchgeführt von der</span>
@@ -54,7 +61,7 @@ export const About: FC = () => (
           aria-label="CityLAB Berlin"
           className={focusStyles}
         >
-          <CitylabLogo className={`w-36`} />
+          <CitylabLogo className={`w-28`} />
         </a>
       </div>
       <div className="flex flex-col">
