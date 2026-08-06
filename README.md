@@ -19,7 +19,9 @@ This website is a NextJS app configured with:
 - Testing with [Jest](https://jestjs.io/) and [`react-testing-library`](https://testing-library.com/docs/react-testing-library/intro)
 
 ## Data
-This repository contains the **frontend** code of the _Berliner Erfrischungskarte_ app. The **data** and the data processing scripts are contained in another repository: [erfrischungskarte-daten](https://github.com/technologiestiftung/erfrischungskarte-daten). There you can also find further information about the original data sources.
+The point data is processed in the _data_processing_ folder. You can read more about it [here](data_processing/README.md). 
+
+The other **data** and the data processing scripts are contained in another repository: [erfrischungskarte-daten](https://github.com/technologiestiftung/erfrischungskarte-daten). There you can also find further information about the original data sources.
 
 ## Install and contribute
 
