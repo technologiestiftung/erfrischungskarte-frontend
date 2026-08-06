@@ -29,7 +29,9 @@ const poiCategoryColorArray: [PoiCategory, string][] = Array.from(
   POI_CATEGORY_COLOR_MAP
 )
 
-const defaultActivePoiIds = Object.values(POI_CATEGORY_ID_MAP)
+const defaultActivePoiIds = Object.values(POI_CATEGORY_ID_MAP).filter(
+  (id) => id !== 9 && id !== 10 && id !== 11
+)
 
 export const Filters: FC<{
   query: ReturnType<typeof mapRawQueryToState>
@@ -75,11 +77,19 @@ export const Filters: FC<{
         >
           {poiCategoryColorArray.map(([category, color]) => {
             const poiId = POI_CATEGORY_ID_MAP[category]
+            const isSelectedByDefault =
+              poiId !== 9 && poiId !== 10 && poiId !== 11
+
             return (
               <div key={category} className="mt-2 mr-2">
                 <FilterChip
                   ariaLabel={category}
-                  isSelected={mappedQuery.places?.includes(poiId)}
+                  isSelected={
+                    mappedQuery.places !== undefined &&
+                    mappedQuery.places !== null
+                      ? mappedQuery.places.includes(poiId)
+                      : isSelectedByDefault
+                  }
                   handleClick={() => {
                     let activePlaces
 
@@ -98,9 +108,16 @@ export const Filters: FC<{
                       mappedQuery.places && !mappedQuery.places.includes(poiId)
 
                     if (noPlacesInQuery) {
-                      activePlaces = defaultActivePoiIds.filter(
-                        (defaultPoiId) => defaultPoiId !== poiId
-                      )
+                      const isClickedPlaceActiveByDefault =
+                        poiId !== 9 && poiId !== 10 && poiId !== 11
+
+                      if (isClickedPlaceActiveByDefault) {
+                        activePlaces = defaultActivePoiIds.filter(
+                          (defaultPoiId) => defaultPoiId !== poiId
+                        )
+                      } else {
+                        activePlaces = [...defaultActivePoiIds, poiId]
+                      }
                     }
 
                     if (clickedPlaceNotYetInQuery) {
@@ -158,12 +175,11 @@ export const Filters: FC<{
           <button
             className="px-2 py-1 border rounded-md focus:rounded focus:ring-2 focus:ring-gray-800 focus:outline-none focus:ring-offset-2 focus:ring-offset-white border-gray-200 transition-opacity duration-75 ease-in-out mr-2"
             onClick={() => {
-              delete mappedQuery.places
-
               void routerReplace(
                 {
                   query: {
                     ...mappedQuery,
+                    places: Object.values(POI_CATEGORY_ID_MAP),
                   },
                 },
                 undefined

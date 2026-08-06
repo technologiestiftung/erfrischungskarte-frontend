@@ -123,7 +123,11 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
   const categoriesToRender =
     activeCategories !== undefined
       ? activeCategories
-      : (POI_DATA.activePropertyKeys as string[])
+      : (POI_DATA.activePropertyKeys as string[]).filter((category) => {
+          const id =
+            POI_CATEGORY_ID_MAP[category as keyof typeof POI_CATEGORY_ID_MAP]
+          return id !== 9 && id !== 10 && id !== 11
+        })
 
   const interactiveLayerIds: string[] = []
   categoriesToRender.forEach((category) => {
@@ -187,7 +191,7 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
         <ExtrusionLayer {...EXTRUDED_BUILDINGS_DATA} minzoom={15.5} />
         <MapPointLayer
           {...POI_DATA}
-          activePropertyKeys={activeCategories}
+          activePropertyKeys={categoriesToRender}
           minzoom={MAP_CONFIG.minZoom}
         />
         {poiTooltipCoordinates &&
