@@ -108,7 +108,7 @@ export const HourSelector: FC<HourSelectorPropType> = ({ activeHourKey }) => {
     <div
       className={classNames(
         'absolute transform z-50',
-        hasMobileSize && 'right-16 bottom-24',
+        hasMobileSize && 'right-12 bottom-[6.3rem]',
         !hasMobileSize && 'top-8 right-8',
         !isOpened && 'pointer-events-none'
       )}

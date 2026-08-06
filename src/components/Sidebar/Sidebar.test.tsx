@@ -105,12 +105,12 @@ describe('SidebarNav', () => {
 
     expect(headline).toBeInTheDocument()
   })
-  test('should render 3 links', () => {
+  test('should render 4 links', () => {
     render(<Sidebar />)
 
     const links = screen.getAllByRole('link')
 
-    expect(links).toHaveLength(3)
+    expect(links).toHaveLength(4)
   })
   test('should render no active link if no active page', () => {
     testRouter.mockReturnValue({

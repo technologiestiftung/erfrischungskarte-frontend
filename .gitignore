@@ -50,3 +50,4 @@ __pycache__/
 *.pyc
 /test/
 tsconfig.tsbuildinfo
+.tsconfig-lint.tsbuildinfo

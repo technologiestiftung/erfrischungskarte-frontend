@@ -73,6 +73,20 @@ export const SplashScreen: FC = () => {
           >
             Mehr Infos
           </InternalLink>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            className={classNames(
+              'className="md:px-4 mr-2 cursor-pointer bg-white px-2.5 py-1',
+              'border-2 border-gray-400 text-gray-400',
+              'hover:border-gray-500 hover:text-gray-500',
+              'transition-colors rounded-lg inline-block flex-grow sm:flex-grow-0',
+              'text-center'
+            )}
+            href="https://www.technologiestiftung-berlin.de/de/datenschutz/"
+          >
+            Ort Vorschlagen
+          </a>
         </div>
         <div className="grid md:grid-cols-[1fr,auto] gap-4 mt-4 md:mt-6">
           <p className="text-xs mb-2 md:mb-0 text-gray-700 max-w-md">
