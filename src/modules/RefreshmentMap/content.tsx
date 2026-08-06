@@ -362,6 +362,21 @@ export const ABOUT_HOW_TO = (
   </>
 )
 
+export const ABOUT_SUGGESTIONS = (
+  <>
+    Du kennst weitere kühle Orte die du uns gerne vorschlagen möchtest? Dann
+    fülle geren unser{' '}
+    <a
+      target="blank"
+      href="https://example.com"
+      className="text-gray-800 underline"
+    >
+      Formular
+    </a>{' '}
+    aus.
+  </>
+)
+
 export const ABOUT_SHADOW_TEXT = (
   <>
     Ein wichtiger Faktor für das lokale Aufheizen und die Entstehung von
@@ -544,16 +559,6 @@ export const ABOUT_POINTS_TEXT = (
         >
           Zierbrunnen
         </a>
-        . Zusätzlich werden Datenpunkte zu Straßenbrunnen auf{' '}
-        <a
-          target="_blank"
-          href="https://umap.openstreetmap.de/de/map/strassenbrunnen-berlin_2234#12/52.508490/13.303070"
-          className="text-gray-800 underline"
-          rel="noopener noreferrer"
-        >
-          Open Street Map
-        </a>{' '}
-        integriert.
       </p>
 
       <p>
@@ -583,14 +588,14 @@ export const ABOUT_POINTS_TEXT = (
         Die{' '}
         <a
           target="_blank"
-          href="https://daten.berlin.de/datensaetze/liste-der-badestellen-opendata-1568631"
+          href="https://daten.berlin.de/datensaetze/badegewasserqualitat-wfs-6ba85d36"
           className="text-gray-800 underline"
           rel="noopener noreferrer"
         >
           Standorte
         </a>{' '}
-        der <strong>Badestellen und Strandbäder</strong> stammen vom Landesamt
-        für Gesundheit und Soziales (LaGeSo), ebenso wie die{' '}
+        der <strong>Badestellen</strong> stammen vom Landesamt für Gesundheit
+        und Soziales (LaGeSo), ebenso wie die{' '}
         <a
           target="_blank"
           href="https://daten.berlin.de/datensaetze/kuhle-raume-hitzeschutz-wfs-89e7079b"
@@ -603,17 +608,17 @@ export const ABOUT_POINTS_TEXT = (
       </p>
 
       <p>
-        Die Informationen zu <strong>Freibädern und Schwimmhallen</strong>{' '}
-        liegen derzeit nur als{' '}
+        Die{' '}
         <a
           target="_blank"
-          href="https://www.berlinerbaeder.de/baeder/?tx_bbbfacility_flist%5Baction%5D=list&tx_bbbfacility_flist%5Bcontroller%5D=Facility&cHash=9ec8da068e3a82e6496f9a1c531626f3"
+          href="https://daten.berlin.de/datensaetze/schwimmbader-der-berliner-bader-betriebe-wfs-2b934eb7"
           className="text-gray-800 underline"
           rel="noopener noreferrer"
         >
-          Liste auf berlin.de
+          Informationen
         </a>{' '}
-        vor. Sie wurden mittels Webscraping in einen Geodatensatz überführt.
+        zu <strong>Strandbädern, Freibädern und Schwimmhallen</strong> stammen
+        von den Berliner Bäderbetriebe.
       </p>
 
       <p>
@@ -650,11 +655,11 @@ export const ABOUT_POINTS_TEXT = (
       </p>
 
       <p>
-        Den kompletten, für diese Anwendung aufbereiteten Datensatz (letztes
-        Update: Juli 2026) findet ihr{' '}
+        Den kompletten, für diese Anwendung aufbereiteten Daten inklusive der
+        Daten die uns Berliner:innen geschickt haben, findet ihr{' '}
         <a
           target="_blank"
-          href="https://github.com/technologiestiftung/erfrischungskarte-daten/tree/main/POIs/2026"
+          href="https://github.com/technologiestiftung/erfrischungskarte-frontend/tree/main/public/data"
           className="text-gray-800 underline"
           rel="noopener noreferrer"
         >
@@ -671,6 +676,11 @@ export const ABOUT_ACCORDION_ITEMS = [
     id: 'howto',
     title: 'Wie liest man die Erfrischungskarte?',
     content: ABOUT_HOW_TO,
+  },
+  {
+    id: 'suggestions',
+    title: 'Orte Vorschlagen',
+    content: ABOUT_SUGGESTIONS,
   },
   {
     id: 'shadows',
