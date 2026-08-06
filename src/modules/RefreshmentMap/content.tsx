@@ -686,7 +686,7 @@ export const ABOUT_ACCORDION_ITEMS = [
   },
   {
     id: 'suggestions',
-    title: 'Orte vorschlagen',
+    title: 'Ort vorschlagen',
     content: ABOUT_SUGGESTIONS,
   },
   {
