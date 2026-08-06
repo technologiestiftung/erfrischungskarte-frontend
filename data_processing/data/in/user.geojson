@@ -27,7 +27,7 @@
       "properties": {
         "name": "Wasserpumpe",
         "info": "In dem Naturerfahrungsraum aufm THF ist auch ne Wasserpumpe.",
-        "category": "Mein Tip",
+        "category": "Eure Tipps",
         "source": "CityLAB"
       }
     },
@@ -42,7 +42,7 @@
       "properties": {
         "name": "Cooling Point",
         "info": "Vernebelungsanlage",
-        "category": "Mein Tip",
+        "category": "Eure Tipps",
         "source": "CityLAB"
       }
     }
