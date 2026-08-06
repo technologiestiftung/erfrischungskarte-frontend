@@ -83,7 +83,7 @@ export const SplashScreen: FC = () => {
               'transition-colors rounded-lg inline-block flex-grow sm:flex-grow-0',
               'text-center'
             )}
-            href="https://www.technologiestiftung-berlin.de/de/datenschutz/"
+            href="https://citylabberlin.typeform.com/to/sFu9ZIKh"
           >
             Ort Vorschlagen
           </a>

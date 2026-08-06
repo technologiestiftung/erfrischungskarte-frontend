@@ -368,7 +368,7 @@ export const ABOUT_SUGGESTIONS = (
     fülle geren unser{' '}
     <a
       target="blank"
-      href="https://example.com"
+      href="https://citylabberlin.typeform.com/to/sFu9ZIKh"
       className="text-gray-800 underline"
     >
       Formular

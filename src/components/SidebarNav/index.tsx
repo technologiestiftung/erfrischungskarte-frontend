@@ -29,7 +29,7 @@ const pages: Omit<SidebarNavLinkPropType, 'isActive' | 'hasMobileSize'>[] = [
   { title: 'Über das Projekt', path: '/about', icon: <InfoIcon /> },
   {
     title: 'Ort vorschlagen',
-    path: 'https://example.com',
+    path: 'https://citylabberlin.typeform.com/to/sFu9ZIKh',
     icon: <GeoPinPlusIcon />,
     isExternal: true,
   },
