@@ -364,8 +364,14 @@ export const ABOUT_HOW_TO = (
 
 export const ABOUT_SUGGESTIONS = (
   <>
-    Du kennst weitere kühle Orte die du uns gerne vorschlagen möchtest? Dann
-    fülle geren unser{' '}
+    Unsere Daten stammen zum großen Teil von der Berliner Verwaltung sowie aus
+    offenen Quellen wie Open Street Map. Es kann vorkommen, dass einzelne Orte
+    fehlen, veraltet sind oder sich die Bedingungen vor Ort geändert haben.
+    <br />
+    <br />
+    Kennst du einen erfrischenden Ort, der auf der Karte noch fehlt, oder
+    möchtest du uns auf einen Fehler in den Daten hinweisen? Dann fülle gerne
+    unser{' '}
     <a
       target="blank"
       href="https://citylabberlin.typeform.com/to/sFu9ZIKh"
@@ -680,7 +686,7 @@ export const ABOUT_ACCORDION_ITEMS = [
   },
   {
     id: 'suggestions',
-    title: 'Orte Vorschlagen',
+    title: 'Orte vorschlagen',
     content: ABOUT_SUGGESTIONS,
   },
   {

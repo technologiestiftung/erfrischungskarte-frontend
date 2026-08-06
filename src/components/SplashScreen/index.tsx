@@ -85,7 +85,7 @@ export const SplashScreen: FC = () => {
             )}
             href="https://citylabberlin.typeform.com/to/sFu9ZIKh"
           >
-            Ort Vorschlagen
+            Ort vorschlagen
           </a>
         </div>
         <div className="grid md:grid-cols-[1fr,auto] gap-4 mt-4 md:mt-6">
