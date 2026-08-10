@@ -25,9 +25,9 @@ interface SidebarNavLinkPropType {
 }
 
 const pages: Omit<SidebarNavLinkPropType, 'isActive' | 'hasMobileSize'>[] = [
+  { title: 'Über das Projekt', path: '/about', icon: <InfoIcon /> },
   { title: 'Filters', path: '/filters', icon: <FunnelIcon /> },
   { title: 'Suche', path: '/search', icon: <MagnifyingGlassIcon /> },
-  { title: 'Über das Projekt', path: '/about', icon: <InfoIcon /> },
   {
     title: 'Ort vorschlagen',
     path: 'https://citylabberlin.typeform.com/to/sFu9ZIKh',
@@ -71,7 +71,7 @@ const SidebarNavLink: FC<SidebarNavLinkPropType> = ({
     <li
       className={classNames(
         'group relative',
-        hasMobileSize ? 'h-16 w-1/5' : 'h-16'
+        hasMobileSize ? 'h-16 w-1/4' : 'h-16'
       )}
     >
       {!hasMobileSize && (
@@ -114,42 +114,85 @@ export const SidebarNav: FC<SidebarNavPropType> = ({
   isOpened,
   hasMobileSize,
   pathname,
-}) => (
-  <nav
-    className={classNames(
-      'fixed inset-0 transition box-content z-20 pointer-events-none',
-      isOpened ? 'opened' : 'closed',
-      hasMobileSize ? 'top-auto h-16' : 'right-auto w-16'
-    )}
-    style={{
-      left: hasMobileSize ? 0 : 'var(--sidebarWidth, 320px)',
-      padding: hasMobileSize
-        ? 'var(--sidebarPadding, 20px)'
-        : 'var(--sidebarPadding, 20px) 16px',
-      transform: classNames(
-        !hasMobileSize && isOpened && `translateX(0)`,
-        !hasMobileSize &&
-          !isOpened &&
-          `translateX(calc(var(--sidebarWidth, 320px) * -1 + (var(--sidebarPadding, 20px) / 2)))`
-      ),
-    }}
-  >
-    <ul
+}) => {
+  const renderedItems = []
+
+  // 1. Über das Projekt
+  renderedItems.push(
+    <SidebarNavLink
+      key={pages[0].path}
+      {...pages[0]}
+      isActive={pages[0].path === pathname}
+      hasMobileSize={hasMobileSize}
+    />
+  )
+
+  // 2. Sharing button here
+  renderedItems.push(
+    <SharingOverlay key="sharing" hasMobileSize={hasMobileSize} />
+  )
+
+  // 3. Filters
+  renderedItems.push(
+    <SidebarNavLink
+      key={pages[1].path}
+      {...pages[1]}
+      isActive={pages[1].path === pathname}
+      hasMobileSize={hasMobileSize}
+    />
+  )
+
+  // 4. Suche (only desktop)
+  if (!hasMobileSize) {
+    renderedItems.push(
+      <SidebarNavLink
+        key={pages[2].path}
+        {...pages[2]}
+        isActive={pages[2].path === pathname}
+        hasMobileSize={hasMobileSize}
+      />
+    )
+  }
+
+  // 5. Ort vorschlagen
+  renderedItems.push(
+    <SidebarNavLink
+      key={pages[3].path}
+      {...pages[3]}
+      isActive={pages[3].path === pathname}
+      hasMobileSize={hasMobileSize}
+    />
+  )
+
+  return (
+    <nav
       className={classNames(
-        'flex bg-white rounded shadow-lg pointer-events-auto',
-        hasMobileSize ? ' flex-row' : ' flex-col',
-        hasMobileSize ? ' pr-14' : ' '
+        'fixed inset-0 transition box-content z-20 pointer-events-none',
+        isOpened ? 'opened' : 'closed',
+        hasMobileSize ? 'top-auto h-16' : 'right-auto w-16'
       )}
+      style={{
+        left: hasMobileSize ? 0 : 'var(--sidebarWidth, 320px)',
+        padding: hasMobileSize
+          ? 'var(--sidebarPadding, 20px)'
+          : 'var(--sidebarPadding, 20px) 16px',
+        transform: classNames(
+          !hasMobileSize && isOpened && `translateX(0)`,
+          !hasMobileSize &&
+            !isOpened &&
+            `translateX(calc(var(--sidebarWidth, 320px) * -1 + (var(--sidebarPadding, 20px) / 2)))`
+        ),
+      }}
     >
-      {pages.map((page) => (
-        <SidebarNavLink
-          key={page.path}
-          {...page}
-          isActive={page.path === pathname}
-          hasMobileSize={hasMobileSize}
-        />
-      ))}
-      <SharingOverlay hasMobileSize={hasMobileSize} />
-    </ul>
-  </nav>
-)
+      <ul
+        className={classNames(
+          'flex bg-white rounded shadow-lg pointer-events-auto',
+          hasMobileSize ? ' flex-row' : ' flex-col',
+          hasMobileSize ? ' pr-14' : ' '
+        )}
+      >
+        {renderedItems}
+      </ul>
+    </nav>
+  )
+}

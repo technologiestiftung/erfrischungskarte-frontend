@@ -108,7 +108,7 @@ export const SharingOverlay: FC<SharingOverlayPropType> = ({
       ref={elRef}
       className={classNames(
         'group relative',
-        hasMobileSize ? 'h-16 w-1/5' : 'h-16'
+        hasMobileSize ? 'h-16 w-1/4' : 'h-16'
       )}
     >
       {!hasMobileSize && (
