@@ -5,8 +5,8 @@ import { mapRawQueryToState } from '@lib/utils/queryUtil'
 import { MAP_CONFIG } from '@modules/RefreshmentMap'
 import classNames from 'classnames'
 import { useRouter } from 'next/router'
-import { FC, ReactNode, useState } from 'react'
-import styles from './SharingOverlay.module.css'
+import { FC, ReactNode, useState, useEffect } from 'react'
+import { createPortal } from 'react-dom'
 
 interface SharingOptionPropType {
   title: string
@@ -59,81 +59,131 @@ export const SharingOption: FC<SharingOptionPropType> = ({
   )
 }
 
-export const SharingOverlay: FC = () => {
+interface SharingOverlayPropType {
+  hasMobileSize?: boolean
+}
+
+export const SharingOverlay: FC<SharingOverlayPropType> = ({
+  hasMobileSize = false,
+}) => {
   const [isOpened, setIsOpened] = useState(false)
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => {
+    setMounted(true)
+  }, [])
   const { query } = useRouter()
   const mappedQuery = mapRawQueryToState(query)
   const hasEnoughToCreateGMapsLink = Boolean(
     mappedQuery.latitude && mappedQuery.longitude && mappedQuery.zoom
   )
-  const elRef = useClickOutside<HTMLDivElement>(() => setIsOpened(false))
+  const elRef = useClickOutside<HTMLLIElement>(() => setIsOpened(false))
+
+  const title = 'Teilen'
+
+  const linkContent = (
+    <>
+      <SharingIcon />
+      {hasMobileSize && (
+        <span className="text-[10px] mt-1 text-center font-medium leading-none hidden xs:inline">
+          {title}
+        </span>
+      )}
+    </>
+  )
+
+  const commonClassName = classNames(
+    'transition w-full h-full flex flex-col items-center justify-center',
+    hasMobileSize && 'group-first:rounded-l',
+    !hasMobileSize && [
+      'group-first:rounded-t group-last:rounded-b',
+      'focus:rounded focus:ring-2 focus:ring-gray-800 focus:outline-none',
+      'focus:ring-offset-2 focus:ring-offset-white focus:z-10 relative',
+      'hover:bg-gray-200 hover:text-gray-800',
+    ],
+    isOpened && 'bg-gray-800 text-white active'
+  )
 
   return (
-    <span ref={elRef}>
+    <li
+      ref={elRef}
+      className={classNames(
+        'group relative',
+        hasMobileSize ? 'h-16 w-1/5' : 'h-16'
+      )}
+    >
+      {!hasMobileSize && (
+        <span
+          className={classNames(
+            'transition opacity-0 px-3 py-1',
+            'rounded bg-gray-800 text-white transform',
+            'absolute whitespace-nowrap',
+            'delay-1000 pointer-events-none',
+            'group-hover:opacity-100',
+            'group-hover:delay-0 bg-opacity-90',
+            'left-full top-1/2 translate-x-2 -translate-y-1/2'
+          )}
+        >
+          {title}
+        </span>
+      )}
       <button
         onClick={() => setIsOpened(!isOpened)}
         aria-label="Diesen Kartenabschnitt teilen"
-        className={classNames(
-          styles.sharingButton,
-          'rounded-full bg-white w-12 h-12',
-          'fixed right-4 text-center py-2',
-          'shadow-lg transition',
-          'focus:outline-none focus:ring-2',
-          isOpened && 'text-white bg-gray-800',
-          isOpened && 'focus:ring-white',
-          !isOpened && 'focus:ring-gray-800'
-        )}
+        className={commonClassName}
       >
-        <SharingIcon className="inline transform -translate-x-0.5" />
+        {linkContent}
       </button>
-      {isOpened && (
-        <div
-          className={classNames(
-            'right-4 bottom-20 sm:bottom-4 sm:right-20',
-            'rounded shadow-xl p-6 sm:p-8 w-96',
-            'fixed bg-white flex flex-col'
-          )}
-          style={{ maxWidth: 'calc(100% - 32px)' }}
-        >
-          <h3 className="font-bold text-xl sm:text-2xl pr-20 mb-4">
-            Erfrischenden Ort gefunden?{' '}
-            <span className="text-layer-turquoise-300">Teile ihn!</span>
-          </h3>
-          <SharingOption
-            title="Kartenausschnitt"
-            description={
-              <>
-                Mit diesem Link sehen andere deinen aktu&shy;ellen
-                Karten&shy;aus&shy;schnitt.
-              </>
-            }
-            link={`${window.location.href}`}
-          />
-          {hasEnoughToCreateGMapsLink && (
+      {isOpened &&
+        mounted &&
+        createPortal(
+          <div
+            className={classNames(
+              'right-4 bottom-20 sm:bottom-4 sm:right-20',
+              'rounded shadow-xl p-6 sm:p-8 w-96',
+              'fixed bg-white flex flex-col z-30 text-left'
+            )}
+            style={{ maxWidth: 'calc(100% - 32px)' }}
+          >
+            <h3 className="font-bold text-xl sm:text-2xl pr-20 mb-4 text-gray-800">
+              Erfrischenden Ort gefunden?{' '}
+              <span className="text-layer-turquoise-300">Teile ihn!</span>
+            </h3>
             <SharingOption
-              title="Google Maps"
+              title="Kartenausschnitt"
               description={
                 <>
-                  Gibt dir die Koor&shy;di&shy;naten, die sich in der Mitte
-                  deines Karten&shy;aus&shy;schnitts be&shy;finden.
+                  Mit diesem Link sehen andere deinen aktu&shy;ellen
+                  Karten&shy;aus&shy;schnitt.
                 </>
               }
-              link={getGoogleMapsLinkByQuery(mappedQuery)}
+              link={`${window.location.href}`}
             />
-          )}
-          <button
-            className={classNames(
-              'absolute top-6 sm:top-8 right-6 sm:right-8 cursor-pointer',
-              'w-10 h-10 grid place-content-center rounded-full',
-              'focus:outline-none focus:ring-2 focus:ring-gray-800',
-              'hover:bg-gray-200 transition'
+            {hasEnoughToCreateGMapsLink && (
+              <SharingOption
+                title="Google Maps"
+                description={
+                  <>
+                    Gibt dir die Koor&shy;di&shy;naten, die sich in der Mitte
+                    deines Karten&shy;aus&shy;schnitts be&shy;finden.
+                  </>
+                }
+                link={getGoogleMapsLinkByQuery(mappedQuery)}
+              />
             )}
-            onClick={() => setIsOpened(false)}
-          >
-            <CrossIcon />
-          </button>
-        </div>
-      )}
-    </span>
+            <button
+              className={classNames(
+                'absolute top-6 sm:top-8 right-6 sm:right-8 cursor-pointer',
+                'w-10 h-10 grid place-content-center rounded-full',
+                'focus:outline-none focus:ring-2 focus:ring-gray-800',
+                'hover:bg-gray-200 transition text-gray-800'
+              )}
+              onClick={() => setIsOpened(false)}
+            >
+              <CrossIcon />
+            </button>
+          </div>,
+          document.body
+        )}
+    </li>
   )
 }

@@ -27,7 +27,6 @@ import { MapEvent } from 'react-map-gl'
 import { mapRawQueryToState, PageQueryType } from '@lib/utils/queryUtil'
 import { AppTitle } from '@components/AppTitle'
 import { useHasWebPSupport } from '@lib/hooks/useHasWebPSupport'
-import { SharingOverlay } from '@components/SharingOverlay'
 import { WeatherOverlay } from '@components/WeatherOverlay'
 import { useCurrentTime } from '@lib/hooks/useCurrentTime'
 
@@ -160,7 +159,7 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
           <>
             <MapControls
               className={`absolute right-4 ${
-                hasMobileSize ? 'top-4' : 'bottom-4'
+                hasMobileSize ? 'bottom-24' : 'bottom-4'
               }`}
             />
           </>
@@ -211,7 +210,6 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
       </MapRoot>
       {pathname !== '/' && pathname !== '/social-image' && (
         <>
-          <SharingOverlay />
           <WeatherOverlay />
           <Sidebar {...pageProps} />
           <HourSelector activeHourKey={activeHourKey} />

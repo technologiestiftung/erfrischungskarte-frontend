@@ -7,6 +7,7 @@ import {
   GeoPinPlusIcon,
 } from '@components/Icons'
 import { InternalLink } from '@components/InternalLink'
+import { SharingOverlay } from '@components/SharingOverlay'
 
 interface SidebarNavPropType {
   isOpened: boolean
@@ -70,7 +71,7 @@ const SidebarNavLink: FC<SidebarNavLinkPropType> = ({
     <li
       className={classNames(
         'group relative',
-        hasMobileSize ? 'h-16 w-1/4' : 'h-16'
+        hasMobileSize ? 'h-16 w-1/5' : 'h-16'
       )}
     >
       {!hasMobileSize && (
@@ -148,6 +149,7 @@ export const SidebarNav: FC<SidebarNavPropType> = ({
           hasMobileSize={hasMobileSize}
         />
       ))}
+      <SharingOverlay hasMobileSize={hasMobileSize} />
     </ul>
   </nav>
 )
