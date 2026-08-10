@@ -26,7 +26,7 @@ interface SidebarNavLinkPropType {
 
 const pages: Omit<SidebarNavLinkPropType, 'isActive' | 'hasMobileSize'>[] = [
   { title: 'Über das Projekt', path: '/about', icon: <InfoIcon /> },
-  { title: 'Filters', path: '/filters', icon: <FunnelIcon /> },
+  { title: 'Filter', path: '/filters', icon: <FunnelIcon /> },
   { title: 'Suche', path: '/search', icon: <MagnifyingGlassIcon /> },
   {
     title: 'Ort vorschlagen',
