@@ -1,10 +1,10 @@
 .weatherButton {
-  bottom: 272px;
+  bottom: 195px;
 }
 
 @media screen and (max-width: 640px) {
   .weatherButton {
     bottom: auto;
-    top: 257px
+    top: 15px
   }
 }

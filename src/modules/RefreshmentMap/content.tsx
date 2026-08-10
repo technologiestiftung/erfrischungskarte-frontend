@@ -651,10 +651,7 @@ export const ABOUT_POINTS_TEXT = (
       </p>
 
       <p>
-        <strong>
-          Bänke, Picknicktische, Wasserspielplätze und Trinkbrunnen
-        </strong>{' '}
-        wurden aus{' '}
+        <strong>Bänke, Picknicktische und Wasserspielplätze</strong> wurden aus{' '}
         <a
           target="_blank"
           href="https://overpass-turbo.eu/"

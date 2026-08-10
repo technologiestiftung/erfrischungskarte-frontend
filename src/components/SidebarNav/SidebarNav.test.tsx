@@ -9,9 +9,18 @@ nextRouter.useRouter = jest.fn().mockReturnValue({
 })
 
 describe('SidebarNav', () => {
-  test('should render 4 links', () => {
+  test('should render 3 links on mobile', () => {
     render(
       <SidebarNav hasMobileSize={true} isOpened={true} pathname="/about" />
+    )
+
+    const links = screen.getAllByRole('link')
+
+    expect(links).toHaveLength(3)
+  })
+  test('should render 4 links on desktop', () => {
+    render(
+      <SidebarNav hasMobileSize={false} isOpened={true} pathname="/about" />
     )
 
     const links = screen.getAllByRole('link')
