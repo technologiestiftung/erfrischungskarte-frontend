@@ -1,17 +1,17 @@
 import { CrossIcon, SharingIcon } from '@components/Icons'
 import { useCopyToClipboard } from '@lib/hooks/useCopyToClipboard'
-import useClickOutside from '@lib/hooks/useClickOutside'
 import { mapRawQueryToState } from '@lib/utils/queryUtil'
 import { MAP_CONFIG } from '@modules/RefreshmentMap'
 import classNames from 'classnames'
 import { useRouter } from 'next/router'
-import { FC, ReactNode, useState, useEffect } from 'react'
+import { FC, ReactNode, useState, useRef, useEffect } from 'react'
 import { createPortal } from 'react-dom'
 
 interface SharingOptionPropType {
   title: string
   description: ReactNode
   link: string
+  onCopy?: () => void
 }
 
 const getGoogleMapsLinkByQuery = (
@@ -29,8 +29,16 @@ export const SharingOption: FC<SharingOptionPropType> = ({
   title,
   description,
   link,
+  onCopy,
 }) => {
   const { copyToClipboard, hasCopied } = useCopyToClipboard()
+
+  const handleCopy = () => {
+    copyToClipboard(link)
+    if (onCopy) {
+      setTimeout(onCopy, 300)
+    }
+  }
 
   return (
     <div className="flex mb-4 last-of-type:mb-0">
@@ -50,7 +58,7 @@ export const SharingOption: FC<SharingOptionPropType> = ({
             ],
             hasCopied && 'bg-layer-turquoise-300 text-white cursor-default'
           )}
-          onClick={() => copyToClipboard(link)}
+          onClick={handleCopy}
         >
           {hasCopied ? 'Link kopiert!' : 'Link kopieren'}
         </button>
@@ -68,15 +76,41 @@ export const SharingOverlay: FC<SharingOverlayPropType> = ({
 }) => {
   const [isOpened, setIsOpened] = useState(false)
   const [mounted, setMounted] = useState(false)
+
   useEffect(() => {
     setMounted(true)
   }, [])
+
+  const elRef = useRef<HTMLLIElement>(null)
+  const popupRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (!isOpened) return
+
+    const handleEvent = (e: MouseEvent | TouchEvent) => {
+      const target = e.target as Node
+      if (
+        (elRef.current && elRef.current.contains(target)) ||
+        (popupRef.current && popupRef.current.contains(target))
+      ) {
+        return
+      }
+      setIsOpened(false)
+    }
+
+    const isTouch = 'ontouchstart' in document.documentElement
+    const eventType = isTouch ? 'touchend' : 'click'
+    document.addEventListener(eventType, handleEvent, true)
+    return () => {
+      document.removeEventListener(eventType, handleEvent, true)
+    }
+  }, [isOpened])
+
   const { query } = useRouter()
   const mappedQuery = mapRawQueryToState(query)
   const hasEnoughToCreateGMapsLink = Boolean(
     mappedQuery.latitude && mappedQuery.longitude && mappedQuery.zoom
   )
-  const elRef = useClickOutside<HTMLLIElement>(() => setIsOpened(false))
 
   const title = 'Teilen'
 
@@ -137,6 +171,7 @@ export const SharingOverlay: FC<SharingOverlayPropType> = ({
         mounted &&
         createPortal(
           <div
+            ref={popupRef}
             className={classNames(
               'right-4 bottom-20 sm:bottom-4 sm:right-20',
               'rounded shadow-xl p-6 sm:p-8 w-96',
@@ -157,6 +192,7 @@ export const SharingOverlay: FC<SharingOverlayPropType> = ({
                 </>
               }
               link={`${window.location.href}`}
+              onCopy={() => setIsOpened(false)}
             />
             {hasEnoughToCreateGMapsLink && (
               <SharingOption
@@ -168,6 +204,7 @@ export const SharingOverlay: FC<SharingOverlayPropType> = ({
                   </>
                 }
                 link={getGoogleMapsLinkByQuery(mappedQuery)}
+                onCopy={() => setIsOpened(false)}
               />
             )}
             <button
