@@ -380,6 +380,15 @@ export const ABOUT_SUGGESTIONS = (
       Formular
     </a>{' '}
     aus.
+    <br />
+    <br />
+    Geeignet sind kostenlose, frei zugängliche Orte im öffentlichen Raum z. B.
+    eine noch nicht erfasste Wasserplansche, ein Wasserspender, eine
+    Kiezinitiative die ein schattiges Plätzchen an heißen Tagen bereitstellt
+    oder ein Museum mit kostenlos zugänglichen Ausstellungsbereichen. Orte mit
+    Eintritt oder auf nicht frei zugänglichem Privatgrund nehmen wir nicht auf.
+    Wir prüfen alle Einreichungen und ergänzen passende Orte laufend. Es besteht
+    kein Anspruch auf Aufnahme.
   </>
 )
 

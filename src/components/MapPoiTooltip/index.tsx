@@ -35,7 +35,7 @@ export const MapPoiTooltip: FC<MapPoiTooltipType> = ({
 
       {info && <p className="text-xs text-gray-900 pt-2">{info}</p>}
 
-      {source && (
+      {source && category !== 'Eure Tipps' && (
         <p className="text-xs text-gray-400 pt-1 mt-1">Quelle: {source}</p>
       )}
     </Popup>

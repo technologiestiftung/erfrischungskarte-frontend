@@ -11,9 +11,9 @@
       },
       "properties": {
         "name": "Trinkbrunnen",
-        "info": "Neuer Trinkbrunnen (Stand August 2026)",
-        "category": "Trinkbrunnen",
-        "source": "CityLAB"
+        "info": "Neuer Trinkbrunnen (Stand 08.2026)",
+        "category": "Eure Tipps",
+        "source": ""
       }
     },
     {
@@ -26,9 +26,9 @@
       },
       "properties": {
         "name": "Wasserpumpe",
-        "info": "In dem Naturerfahrungsraum aufm THF ist auch ne Wasserpumpe.",
+        "info": "In dem Naturerfahrungsraum aufm THF ist auch ne Wasserpumpe (Stand 08.2026)",
         "category": "Eure Tipps",
-        "source": "CityLAB"
+        "source": ""
       }
     },
     {
@@ -41,9 +41,9 @@
       },
       "properties": {
         "name": "Cooling Point",
-        "info": "Vernebelungsanlage",
+        "info": "Vernebelungsanlage (Stand 08.2026)",
         "category": "Eure Tipps",
-        "source": "CityLAB"
+        "source": ""
       }
     }
   ]

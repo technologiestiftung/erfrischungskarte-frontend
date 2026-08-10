@@ -6,15 +6,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.466660933445619,
-          52.505243104246254
+          13.466660933445619, 52.505243104246254
         ]
       },
       "properties": {
         "name": "Trinkbrunnen",
-        "info": "Neuer Trinkbrunnen (Stand August 2026)",
-        "category": "Trinkbrunnen",
-        "source": "CityLAB"
+        "info": "Neuer Trinkbrunnen (Stand 08.2026)",
+        "category": "Eure Tipps",
+        "source": ""
       }
     },
     {
@@ -22,15 +21,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.418394778742833,
-          52.47096199838943
+          13.418394778742833, 52.47096199838943
         ]
       },
       "properties": {
         "name": "Wasserpumpe",
-        "info": "In dem Naturerfahrungsraum aufm THF ist auch ne Wasserpumpe.",
+        "info": "In dem Naturerfahrungsraum aufm THF ist auch ne Wasserpumpe (Stand 08.2026)",
         "category": "Eure Tipps",
-        "source": "CityLAB"
+        "source": ""
       }
     },
     {
@@ -38,15 +36,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.402169476440225,
-          52.54029560142377
+          13.402169476440225, 52.54029560142377
         ]
       },
       "properties": {
         "name": "Cooling Point",
-        "info": "Vernebelungsanlage",
+        "info": "Vernebelungsanlage (Stand 08.2026)",
         "category": "Eure Tipps",
-        "source": "CityLAB"
+        "source": ""
       }
     }
   ]
