@@ -97,7 +97,7 @@ export const SplashScreen: FC = () => {
           </p>
           <div className="inline-block md:flex">
             <OdisLogo className="w-36 mr-4" />
-            <CitylabLogo className="w-20 md:-mt-3 self-center" />
+            <CitylabLogo className="w-20 md:-mt-3 self-center mt-2" />
           </div>
         </div>
       </div>
