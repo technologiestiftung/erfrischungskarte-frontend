@@ -48,6 +48,22 @@
         "category": "Eure Tipps",
         "source": ""
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4028,
+          52.5175
+        ]
+      },
+      "properties": {
+        "name": "Humboldt Forum",
+        "info": "Das Humboldt Forum hat klimatisierte Räume. | Öffnungszeiten: Mittwoch bis Montag: 10:30 – 18:30 UhrDienstag: Geschlossen (regulärer Schließtag). | Wird betrieben von der Stiftung Humboldt Forum im Berliner Schloss.",
+        "category": "Eure Tipps",
+        "source": ""
+      }
     }
   ]
 }
