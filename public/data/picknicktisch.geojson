@@ -10982,6 +10982,38 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          13.5610969,
+          52.4530929
+        ]
+      },
+      "properties": {
+        "name": "Picknicktisch",
+        "info": "",
+        "category": "Picknicktisch",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3085885,
+          52.5704435
+        ]
+      },
+      "properties": {
+        "name": "Picknicktisch",
+        "info": "",
+        "category": "Picknicktisch",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           13.6190585,
           52.5425582
         ]
