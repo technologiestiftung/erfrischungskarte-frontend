@@ -1,0 +1,44 @@
+name: Update User Data
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data_processing/data/in/**'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  update-user-data:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run POI scraper (Merge Local Only)
+        working-directory: data_processing
+        env:
+          SCRAPE_OSM: "False"
+          SCRAPE_WFS: "False"
+          SCRAPE_REFILL: "False"
+          MERGE_LOCAL: "True"
+        run: python get_pois.py
+
+      - name: Commit and push if changed
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add public/data/ src/modules/RefreshmentMap/content.tsx
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: update user POI data [skip ci]"
+            git push
+          else
+            echo "No changes in POI data."
+          fi

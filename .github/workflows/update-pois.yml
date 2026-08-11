@@ -1,0 +1,53 @@
+name: Update POI Data
+
+on:
+  schedule:
+    - cron: '0 3 * * 0' # Run every Sunday at 3:00 AM UTC (filtered to last Sunday of month below)
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  update-pois:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check if last Sunday of the month
+        id: check-date
+        run: |
+          TODAY_MONTH=$(date +%m)
+          NEXT_WEEK_MONTH=$(date -d "+7 days" +%m)
+          if [ "$TODAY_MONTH" = "$NEXT_WEEK_MONTH" ] && [ "${{ github.event_name }}" = "schedule" ]; then
+            echo "is_last_sunday=false" >> $GITHUB_OUTPUT
+            echo "Today is not the last Sunday of the month. Skipping subsequent steps."
+          else
+            echo "is_last_sunday=true" >> $GITHUB_OUTPUT
+            echo "Proceeding with POI update."
+          fi
+
+      - name: Set up Python
+        if: steps.check-date.outputs.is_last_sunday == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run POI scraper
+        if: steps.check-date.outputs.is_last_sunday == 'true'
+        working-directory: data_processing
+        run: python get_pois.py
+
+      - name: Commit and push if changed
+        if: steps.check-date.outputs.is_last_sunday == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add public/data/ src/modules/RefreshmentMap/content.tsx
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: update POI data [skip ci]"
+            git push
+          else
+            echo "No changes in POI data."
+          fi

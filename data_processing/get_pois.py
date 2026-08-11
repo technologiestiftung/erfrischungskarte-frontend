@@ -14,6 +14,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import os
 from datetime import datetime
 from pathlib import Path
 import re
@@ -26,10 +27,10 @@ from poi_builder import run_pipeline, write_geojson
 # USER SCAPER & MERGER TOGGLES
 # ==============================================================================
 # Easily toggle on/off entire data pipelines here:
-SCRAPE_OSM = False         # Set to True to scrape OpenStreetMap (OSM_SOURCES)
-SCRAPE_WFS = True         # Set to True to scrape Berlin WFS (WFS_SOURCES)
-SCRAPE_REFILL = False      # Set to True to scrape api.ofdb.io Refill Stations
-MERGE_LOCAL = True        # Set to True to merge existing datasets (EXISTING_DATASETS)
+SCRAPE_OSM = os.environ.get("SCRAPE_OSM", "True").lower() == "true"         # Set to True to scrape OpenStreetMap (OSM_SOURCES)
+SCRAPE_WFS = os.environ.get("SCRAPE_WFS", "True").lower() == "true"         # Set to True to scrape Berlin WFS (WFS_SOURCES)
+SCRAPE_REFILL = os.environ.get("SCRAPE_REFILL", "True").lower() == "true"   # Set to True to scrape api.ofdb.io Refill Stations
+MERGE_LOCAL = os.environ.get("MERGE_LOCAL", "True").lower() == "true"       # Set to True to merge existing datasets (EXISTING_DATASETS)
 
 # ==============================================================================
 # LOCAL DATASETS TO MERGE

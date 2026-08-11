@@ -133,3 +133,33 @@ You can choose from four filter operators:
 * **`"not_contains"`**: Excludes features whose property includes the filter value as a substring (perfect for filtering out unwanted keywords!).
 
 *Tip: Set `"case_sensitive": False` inside any filter to ignore capital letters when matching values.*
+
+---
+
+## 🛠️ 7. Running the Scripts Locally
+
+To run the data processing pipeline on your local machine:
+
+1. **Navigate to the `data_processing` directory:**
+   ```bash
+   cd data_processing
+   ```
+2. **Execute the scraper script:**
+   ```bash
+   python get_pois.py
+   ```
+This will run the active scrapers, fetch external data, merge local files under `data/in/`, update the files in `public/data/`, and update the "Letztes Update" timestamp in the app's `content.tsx`.
+
+---
+
+## 🤖 8. GitHub Actions Automation Workflows
+
+We have automated the scraping and user data integration pipelines using GitHub Actions. Both workflows can also be triggered manually under the "Actions" tab in your GitHub repository.
+
+### A. 🌍 Update POI Data (`update-pois.yml`)
+* **Trigger:** Scheduled to run automatically **once a month on the last Sunday at night** (3:00 AM UTC). It can also be run manually at any time.
+* **What it does:** Runs the complete scraper (Overpass API, Berlin WFS, and api.ofdb.io Refill API), processes all datasets, updates `content.tsx`, and automatically commits/pushes the freshly scraped GeoJSON data to the `main` branch.
+
+### B. 👥 Update User Data (`update-user-data.yml`)
+* **Trigger:** Runs automatically whenever local user input files (such as `data_processing/data/in/user.geojson` or `gruenanlagen.geojson`) are modified and pushed to `main`. It can also be run manually.
+* **What it does:** Executes the pipeline with only local merging enabled (`MERGE_LOCAL = True` and all scrapers disabled). This makes it extremely fast and lightweight, updating and committing user-submitted data without scraping external APIs.
