@@ -60,7 +60,23 @@
       },
       "properties": {
         "name": "Humboldt Forum",
-        "info": "Das Humboldt Forum hat klimatisierte Räume. | Öffnungszeiten: Mittwoch bis Montag: 10:30 – 18:30 UhrDienstag: Geschlossen (regulärer Schließtag). | Wird betrieben von der Stiftung Humboldt Forum im Berliner Schloss.",
+        "info": "Das Humboldt Forum hat klimatisierte Räume. | Öffnungszeiten: Mittwoch bis Montag: 10:30 – 18:30 Uhr; Dienstag: Geschlossen | Wird betrieben von der Stiftung Humboldt Forum im Berliner Schloss.",
+        "category": "Eure Tipps",
+        "source": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.374328,
+          52.524273
+        ]
+      },
+      "properties": {
+        "name": "Futurium",
+        "info": "Der Eintritt ist frei. | Öffnungszeiten: Mo, Mi, Fr, Wochenende: 10:00 - 18:00 Uhr; Do: 10:00 - 20:00 Uhr; Dienstag: Geschlossen",
         "category": "Eure Tipps",
         "source": ""
       }
