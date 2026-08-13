@@ -23,7 +23,7 @@ import {
   MapPoiTooltip as PoiTooltip,
   MapPoiTooltipType,
 } from '@components/MapPoiTooltip'
-import { MapEvent } from 'react-map-gl'
+import { MapEvent, Source, Layer } from 'react-map-gl'
 import { mapRawQueryToState, PageQueryType } from '@lib/utils/queryUtil'
 import { AppTitle } from '@components/AppTitle'
 import { useHasWebPSupport } from '@lib/hooks/useHasWebPSupport'
@@ -69,6 +69,11 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
     mappedQuery.visibleHour || currentTime
   }` as keyof typeof HOURS
   const activeHour = HOURS[activeHourKey]
+
+  const treesTileUrl =
+    typeof window !== 'undefined'
+      ? `${window.location.origin}/trees/{z}/{x}/{y}.pbf`
+      : ''
 
   const hourKeys = Object.keys(HOURS) as HourType[]
   const [poiTooltipContent, setPoiTooltipContent] = useState<Pick<
@@ -188,6 +193,44 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
             />
           ))}
         <ExtrusionLayer {...EXTRUDED_BUILDINGS_DATA} minzoom={15.5} />
+        {mappedQuery.showTrees !== false && treesTileUrl && (
+          <Source
+            id="tree-shade"
+            type="vector"
+            tiles={[treesTileUrl]}
+            minzoom={0}
+            maxzoom={12}
+          >
+            <Layer
+              id="tree-shade-line"
+              type="line"
+              source-layer="shaded_paths"
+              paint={{
+                'line-color': '#328917',
+                'line-width': [
+                  'interpolate',
+                  ['exponential', 0.5],
+                  ['zoom'],
+                  12,
+                  1.5,
+                  15,
+                  3.5,
+                  18,
+                  6,
+                ],
+                'line-opacity': [
+                  'interpolate',
+                  ['linear'],
+                  ['get', 'prop_shaded'],
+                  0,
+                  0,
+                  1,
+                  0.8,
+                ],
+              }}
+            />
+          </Source>
+        )}
         <MapPointLayer
           {...POI_DATA}
           activePropertyKeys={categoriesToRender}
