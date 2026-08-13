@@ -206,7 +206,21 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
               type="line"
               source-layer="shaded_paths"
               paint={{
-                'line-color': '#328917',
+                'line-color': [
+                  'interpolate',
+                  ['linear'],
+                  ['get', 'prop_shaded'],
+                  0,
+                  '#E60032',
+                  // 0.3,
+                  // '#ccc',
+                  // 0.6,
+                  // '#ccc',
+                  0.5,
+                  '#99C48B',
+                  1,
+                  '#328917',
+                ],
                 'line-width': [
                   'interpolate',
                   ['exponential', 0.5],
@@ -218,15 +232,7 @@ export const RefreshmentMap: FC<RefreshmentMapPropType> = (pageProps) => {
                   18,
                   6,
                 ],
-                'line-opacity': [
-                  'interpolate',
-                  ['linear'],
-                  ['get', 'prop_shaded'],
-                  0,
-                  0,
-                  1,
-                  0.8,
-                ],
+                'line-opacity': 0.8,
               }}
             />
           </Source>

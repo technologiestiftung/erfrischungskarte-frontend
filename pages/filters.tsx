@@ -309,7 +309,7 @@ export const Filters: FC<{
                     'w-full',
                     'bg-gradient-to-r',
                     'from-[#328917]',
-                    'to-transparent',
+                    'to-[#E60032]',
                     'opacity-80',
                     'rounded-full'
                   )}
