@@ -96,6 +96,22 @@
         "category": "Eure Tipps",
         "source": ""
       }
+    }, 
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.239178,
+          52.542979
+        ]
+      },
+      "properties": {
+        "name": "Stadtteilbibliothek Haselhorst",
+        "info": "Hier steht ein Wasserspender der Berliner Wasserbetriebe. (Stand: 18.08.26)",
+        "category": "Eure Tipps",
+        "source": ""
+      }
     }
   ]
 }
