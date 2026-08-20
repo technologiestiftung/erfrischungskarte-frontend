@@ -16,6 +16,8 @@ import classNames from 'classnames'
 import { LayerLegendBlock } from '@components/LayerLegendBlock'
 import { Warning } from '@components/Warning'
 import { useRouter } from 'next/router'
+import { ShadeIcon } from '@components/Icons'
+import { LayerLegendFigure } from '@components/LayerLegendFigure'
 
 // eslint-disable-next-line @typescript-eslint/require-await
 export const getServerSideProps: GetServerSideProps = async ({ query }) => ({
@@ -291,6 +293,45 @@ export const Filters: FC<{
             />
           </div>
         )}
+        <div className={classNames(hasMobileSize ? 'mt-4' : 'mt-6')}>
+          <LayerLegendBlock
+            title="Baum Schatten"
+            description="Zeigt den Schattenwurf von Straßenbäumen auf Straßen an."
+            icon={<ShadeIcon />}
+            legendFigure={
+              <LayerLegendFigure
+                maxLabel="Viel Schatten"
+                minLabel="Wenig Schatten"
+              >
+                <div
+                  className={classNames(
+                    'h-[10px]',
+                    'w-full',
+                    'bg-gradient-to-r',
+                    'from-[#328917]',
+                    'to-[#E60032]',
+                    'opacity-80',
+                    'rounded-full'
+                  )}
+                ></div>
+              </LayerLegendFigure>
+            }
+            layerIsActive={mappedQuery.showTrees !== false}
+            handleToggle={() => {
+              void routerReplace(
+                {
+                  query: {
+                    ...mappedQuery,
+                    showTrees: Object.keys(mappedQuery).includes('showTrees')
+                      ? !mappedQuery.showTrees
+                      : false,
+                  },
+                },
+                undefined
+              )
+            }}
+          />
+        </div>
         {windAndTemperatureFiltersAreActivated && (
           <p
             className={classNames(
