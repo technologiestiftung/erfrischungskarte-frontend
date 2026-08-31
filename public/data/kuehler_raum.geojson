@@ -28,7 +28,7 @@
       },
       "properties": {
         "name": "Museum - Gropius Bau",
-        "info": "Adresse: Niederkirchnerstraße 7, 10963 Berlin | Rollstuhlgerecht: rollstuhlgerecht | Hinweis: Es sind barrierefreie/ rollstuhlgerechte Toiletten im Untergeschoss und im ersten Obergeschoss zu finden.\nEs erfolgt keine medizinische Betreuung. | Öffnungszeiten: Mo: 12:00 - 19:00 Uhr; \nMi - Fr: 12:00 - 19:00 Uhr; \nSa, So, Feiertage: 10:00 - 19:00 Uhr",
+        "info": "Adresse: Niederkirchnerstraße 7, 10963 Berlin | Rollstuhlgerecht: rollstuhlgerecht | Hinweis: Es sind barrierefreie/ rollstuhlgerechte Toiletten im Untergeschoss und im ersten Obergeschoss zu finden.\nEs erfolgt keine medizinische Betreuung. | Öffnungszeiten: Mo: 12:00 - 20:00 Uhr; \nMi - Fr: 12:00 - 20:00 Uhr; \nSa, So, Feiertage: 10:00 - 20:00 Uhr",
         "category": "Öffentlicher \"Kühler Raum\"",
         "source": "Land Berlin"
       }
@@ -166,13 +166,93 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.36348,
-          52.50374704
+          13.605521,
+          52.52899504
         ]
       },
       "properties": {
-        "name": "Nachbarschaftstreff Lützowstraße",
-        "info": "Adresse: Lützowstr. 27, 10758 Berlin | Rollstuhlgerecht: rollstuhlgerecht | Hinweis: Es ist ein rollstuhlgerechtes WC vorhanden.\nEs erfolgt keine medizinische Betreuung. | Öffnungszeiten: Mo - Fr: 11:00 - 18:00 Uhr",
+        "name": "Evangelische Kirche Berlin-Hellersdorf",
+        "info": "Adresse: Glauchauer Str. 7, 12627 Berlin | Rollstuhlgerecht: rollstuhlgerecht | Hinweis: Um 10:00 Uhr findet normalerweise ein Gottesdienst statt.\nEs gibt Trinkwasser, Kaffee, Sitzgelegenheiten, Toiletten und Unterhaltungsangebote/Spiele und W-LAN. \nEs erfolgt keine medizinische Betreuung. | Öffnungszeiten: So: 9:30 - 18:00 Uhr",
+        "category": "Öffentlicher \"Kühler Raum\"",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.572322,
+          52.54245404
+        ]
+      },
+      "properties": {
+        "name": "Stadtteilzentrum MOSAIK",
+        "info": "Adresse: Altlandsberger Platz 2, 12685 Berlin\n(Eingang über Pritzhagener Weg) | Rollstuhlgerecht: rollstuhlgerecht | Hinweis: Es gibt eine verschattete Terasse, Trinkwasser, Sitzgelegenheiten, Toiletten, Unterhaltungsmöglichkeiten/Spiele und W-LAN.\nBei Bedarf sind Besuche außerhalb der regulären Öffnungszeiten nach vorheriger Anmeldung möglich. Bitte kontaktieren Sie hierzu das Stadtteilzentrum unter mosaik@wuhletal.de oder 030/54988183.\nEs erfolgt keine medizinische Betreuung. | Öffnungszeiten: Mo-Fr: 8:30-18:00 Uhr",
+        "category": "Öffentlicher \"Kühler Raum\"",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.551669,
+          52.54500704
+        ]
+      },
+      "properties": {
+        "name": "Stadtteilzentrum Marzahn-Mitte",
+        "info": "Adresse: Marzahner Promenade 38, 12679 Berlin | Rollstuhlgerecht: rollstuhlgerecht | Hinweis: Es gibt Trinkwasser, Sitzgelegenheiten, Toiletten, Unterhaltungsmöglichkeiten/Spiele und W-LAN.\nEs erfolgt keine medizinische Betreuung. | Öffnungszeiten: Mo - Do: 10:00 - 16:00 Uhr\nFr: 10:00 - 14:00 Uhr",
+        "category": "Öffentlicher \"Kühler Raum\"",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.60008,
+          52.53986804
+        ]
+      },
+      "properties": {
+        "name": "AWO Stadtteilzentrum Hellersdorf-Nord",
+        "info": "Adresse: Kastanienallee 53, 12627 Berlin | Rollstuhlgerecht: eingeschränkt rollstuhlgerecht | Hinweis: Es gibt Trinkwasser, Sitzgelegenheiten, Toiletten und W-LAN. \nDer Zugang ist über eine Rampe möglich. Bei Bedarf helfen Ihnen die Mitarbeitenden bei der Bedienung der Tür. \nEin rollstuhlgerechtes WC ist vorhanden.\nEs erfolgt keine medizinische Betreuung. | Öffnungszeiten: Mo: 09:00 - 15:30 Uhr\nDi: 09:00 - 15:00 Uhr (jeden 2. und 4. Di von 09:00 - 16:00 Uhr)\nMi: 09:00 - 15:30 Uhr\nDo: 09:00 - 16:00 Uhr\nFr: 09:00 - 13:00 Uhr",
+        "category": "Öffentlicher \"Kühler Raum\"",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.591606,
+          52.54044504
+        ]
+      },
+      "properties": {
+        "name": "SOS Familienzentrum- Stadtteilzentrum Hellersdorf Nord",
+        "info": "Adresse: Alte Hellersdorferstr. 77, 12629 Berlin | Rollstuhlgerecht: rollstuhlgerecht | Hinweis: Es gibt Trinkwasser, Sitzgelegenheiten, Toiletten und Unterhaltungsmöglichkeiten/Spiele und W-LAN.\nEs erfolgt keine medizinische Betreuung. | Öffnungszeiten: Mo- Fr: 9:00 - 18:00 Uhr",
+        "category": "Öffentlicher \"Kühler Raum\"",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.556384,
+          52.50865604
+        ]
+      },
+      "properties": {
+        "name": "Stadtteilzentrum Biesdorf",
+        "info": "Adresse: Heino-Schmieden-Weg 3, 12683 Berlin | Rollstuhlgerecht: rollstuhlgerecht | Hinweis: Es gibt Trinkwasser, Sitzgelegenheiten, Toiletten und Unterhaltungsmöglichkeiten/Spiele.\nAn Wochenenden finden regelmäßig Veranstaltungen statt.\nEs erfolgt keine medizinische Betreuung. | Öffnungszeiten: Mo- Fr: 08:30 - 19:00 Uhr",
         "category": "Öffentlicher \"Kühler Raum\"",
         "source": "Land Berlin"
       }
@@ -285,6 +365,54 @@
       "properties": {
         "name": "Stadtteilzentrum KREATIVHAUS",
         "info": "Adresse: Fischerinsel 3, 10179 Berlin | Rollstuhlgerecht: rollstuhlgerecht | Hinweis: Es gibt Trinkwasser, Sitzgelegenheiten, Toiletten, Unterhaltung/Spiele und W-LAN.\nEs erfolgt keine medizinische Betreuung. | Öffnungszeiten: Mo - Fr: 09:00 – 18:00 Uhr",
+        "category": "Öffentlicher \"Kühler Raum\"",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.401139,
+          52.51570704
+        ]
+      },
+      "properties": {
+        "name": "European School of Management and Technology (ESMT) im ehemaligen Staatsratsgebäude der DDR",
+        "info": "Adresse: Schlossplatz 1, 10178 Berlin | Rollstuhlgerecht: rollstuhlgerecht | Hinweis: Im Foyer im Erdgeschoss der Hochschule gibt es Trinkwasser, Sitzgelegenheiten, Toiletten und W-LAN.\nDort befindet sich außerdem ein Café, welches Mo - Fr: 8:00 - 16:00 Uhr geöffnet ist.\nEs erfolgt keine medizinische Betreuung. | Öffnungszeiten: Eingangsbereich und Gartenanlage: \nMo bis Fr: 8:00 - 21:00 Uhr \nSa, So, Feiertage: 10:00 - 21:00 Uhr",
+        "category": "Öffentlicher \"Kühler Raum\"",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.401131,
+          52.51449204
+        ]
+      },
+      "properties": {
+        "name": "Flussbadgarten",
+        "info": "Adresse: Friedrichsgracht/Sperlingsgasse\n10117 Berlin | Rollstuhlgerecht: rollstuhlgerecht | Hinweis: Hinweis: Beim Flussbadgarten handelt es sich ausschließlich um einen Außenbereich! \nZahlreiche Bäume sorgen hier für viel Schatten und es stehen Liegestühle zur Verfügung. \nZudem gibt es Duschen und Wasserbecken zur Abkühlung, sowie Trinkwasser und Toiletten.\nDirekt nebenan befindet sich die ESMT Hochschule, die als Kühler Raum zur Verfügung steht. | Öffnungszeiten: Mo - So: 08:00 - 19:00 Uhr",
+        "category": "Öffentlicher \"Kühler Raum\"",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.34943,
+          52.54866004
+        ]
+      },
+      "properties": {
+        "name": "Ev. Kapernaumkirche",
+        "info": "Adresse: Seestr. 34, 13353, Berlin | Rollstuhlgerecht: eingeschränkt rollstuhlgerecht | Hinweis: Im Gemeindehaus in der Nähe (Kladower Damm 369, 14089 Berlin) ist ein Plattformlift vorhanden.\nEs erfolgt keine medizinische Betreuung. | Öffnungszeiten: Mi: 16:00 - 18:30 Uhr",
         "category": "Öffentlicher \"Kühler Raum\"",
         "source": "Land Berlin"
       }
@@ -502,22 +630,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.437826,
-          52.44592904
-        ]
-      },
-      "properties": {
-        "name": "Museum Neukölln",
-        "info": "Adresse: Alt-Britz 81, 12359 Berlin | Rollstuhlgerecht: rollstuhlgerecht | Hinweis: Es erfolgt keine medizinische Betreuung. | Öffnungszeiten: Mo - So: 10:00 - 18:00 Uhr",
-        "category": "Öffentlicher \"Kühler Raum\"",
-        "source": "Land Berlin"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           13.475718,
           52.42323804
         ]
@@ -540,7 +652,39 @@
       },
       "properties": {
         "name": "Evangelische Kirchengemeinde *Nikodemus - Kulturkirche* im Reuterkiez",
-        "info": "Adresse: Nansenstraße 12, 12047 Berlin | Rollstuhlgerecht: nicht rollstuhlgerecht | Hinweis: Es gibt Spiele und Spielgeräte, WLAN sowie ein Café mit Snacks und Getränken.\nDie Mitnahme von Hunden ist erlaubt.\nEs erfolgt keine medizinische Betreuung. | Öffnungszeiten: Di-Fr: 12:00 - 17:00 Uhr",
+        "info": "Adresse: Nansenstraße 12, 12047 Berlin | Rollstuhlgerecht: nicht rollstuhlgerecht | Hinweis: Es gibt Spiele und Spielgeräte, WLAN sowie ein Café mit Snacks und Getränken.\nDie Mitnahme von Hunden ist erlaubt.\nEs erfolgt keine medizinische Betreuung. | Öffnungszeiten: Di-Do: 12:00 - 15:00 Uhr",
+        "category": "Öffentlicher \"Kühler Raum\"",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.441695,
+          52.47213904
+        ]
+      },
+      "properties": {
+        "name": "Magdalenenkirche - Ev. Kirchengemeinde Rixdorf",
+        "info": "Adresse: Karl-Marx-Str. 201- 203, 12055 Berlin | Rollstuhlgerecht: eingeschränkt rollstuhlgerecht | Hinweis: Bei Bedarf kann eine mobile Rampe zur Verfügung gestellt werden.\nEin rollstuhlgerechtes WC ist nicht vorhanden.\nEs gibt Trinkwasser, Sitzgelegenheiten, Toiletten, sowie Klappliegen. \nDie Mitnahme von Haustieren ist erlaubt.\nEs erfolgt keine medizinische Betreuung. | Öffnungszeiten: Mo - Fr: 13:00 - 18:00 Uhr (bis 28.08. geöffnet)",
+        "category": "Öffentlicher \"Kühler Raum\"",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.430656,
+          52.48483504
+        ]
+      },
+      "properties": {
+        "name": "Quartiersmanagement Donaustraße Nord",
+        "info": "Adresse: Donaustraße 7, 12043 Berlin | Rollstuhlgerecht: eingeschränkt rollstuhlgerecht | Hinweis: Am Eingang befindet sich eine kleine Türschwelle.\nBei geschlossener Eingangstür kann die Klingel betätigt werden.\nEin rollstuhlgerechtes WC ist nicht vorhanden.\nEs gibt Trinkwasser, Sitzgelegenheiten, Toiletten. Unterhaltungsmöglichkeiten/Spiele und W-LAN.  \nDie Mitnahme von Haustieren ist erlaubt.\nEs erfolgt keine medizinische Betreuung. | Öffnungszeiten: Mo, Di, Do: 10:00 - 13:00 Uhr;  14:00 - 17:00 Uhr\nMi: 10:00 - 13:00 Uhr; 14:00 - 18:00 Uhr\nFr: 10:00 - 14:00 Uhr",
         "category": "Öffentlicher \"Kühler Raum\"",
         "source": "Land Berlin"
       }
@@ -637,6 +781,22 @@
       "properties": {
         "name": "Stadtteilzentrum Prenzlauer Berg",
         "info": "Adresse: Fehrbelliner Str. 92, 10119 Berlin | Rollstuhlgerecht: eingeschränkt rollstuhlgerecht | Hinweis: Der Zugang ist barrierefrei in Hochparterre (1. Stock) durch einen Aufzug im Hof möglich. Die Türen dorthin können alle mit einem Türöffner geöffnet werden. Es ist ein barrierefreies WC sowie ein Wickeltisch vorhanden. Es gibt Trinkwasser, Sitzgelegenheiten, Toiletten, Unterhaltung/Spiele und W-LAN. Die Mitarbeiter*innen können auch vor Ort zur Unterstützung angefragt werden (Tel.: 030-44383 - 713).\nEs erfolgt keine medizinische Betreuung. | Öffnungszeiten: Mo - Do: 09:00 - 18:00 Uhr;\nFr: 09:00 - 15:00 Uhr",
+        "category": "Öffentlicher \"Kühler Raum\"",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.43799,
+          52.57205904
+        ]
+      },
+      "properties": {
+        "name": "Nachbarschaftshaus Heinersdorf Alte Apotheke",
+        "info": "Adresse: Romain-Rolland-Str. 112, 13089 Berlin | Rollstuhlgerecht: rollstuhlgerecht | Hinweis: Es gibt Trinkwasser, Sitzgelegenheiten, Toiletten, Unterhaltungsmöglichkeiten/Spiele,  W-LAN, sowie eine Bibliothek.\nEs erfolgt keine medizinische Betreuung. | Öffnungszeiten: Mo - Fr: 11:00 - 16:00 Uhr",
         "category": "Öffentlicher \"Kühler Raum\"",
         "source": "Land Berlin"
       }
@@ -918,13 +1078,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.248884,
-          52.61016404
+          13.248284,
+          52.60991504
         ]
       },
       "properties": {
         "name": "Raum der Stille im Diakoniezentrum Heiligensee",
-        "info": "Adresse: Keilerstr. 19, 13503 Berlin | Rollstuhlgerecht: Rollstuhlgerecht | Hinweis: Es gibt Trinkwasser, Sitzgelegenheiten, Toiletten und Unterhaltungsangebote/Spiele.\nEs erfolgt keine medizinische Betreuung. | Öffnungszeiten: Mo - So: 08:00 - 21:00 Uhr",
+        "info": "Adresse: Keilerstr. 21, 13503 Berlin | Rollstuhlgerecht: Rollstuhlgerecht | Hinweis: Es gibt Trinkwasser, Sitzgelegenheiten, Toiletten und Unterhaltungsangebote/Spiele.\nEs erfolgt keine medizinische Betreuung. | Öffnungszeiten: Mo - So: 08:00 - 21:00 Uhr",
         "category": "Öffentlicher \"Kühler Raum\"",
         "source": "Land Berlin"
       }
@@ -982,6 +1142,22 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          13.314909,
+          52.56989004
+        ]
+      },
+      "properties": {
+        "name": "Kapelle St. Rita",
+        "info": "Adresse: General-Woyna-Straße 55, 13403 Berlin | Rollstuhlgerecht: rollstuhlgerecht | Hinweis: Es gibt Trinkwasser, Sitzgelegenheiten und W-LAN. \nAn Tagen mit Hitzewarnstufe bietet das angrenzende Stadtteilzentrum Quäkerkiez eine Betreuung zu folgenden Öffnungszeiten an: \nMo: 8:30 - 15:00 Uhr\nDi-Do: 8:30 - 17:00 Uhr \nFr: 8:30 - 16:00 Uhr\nEs erfolgt keine medizinische Betreuung. | Öffnungszeiten: Mo - So: 8:30 - 18:00 Uhr",
+        "category": "Öffentlicher \"Kühler Raum\"",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           13.272686,
           52.54183304
         ]
@@ -1004,7 +1180,7 @@
       },
       "properties": {
         "name": "Dorfkirche Alt-Staaken",
-        "info": "Adresse: Nennhauser Damm 72, 13591 Berlin | Rollstuhlgerecht: rollstuhlgerecht | Hinweis: Es ist ein rollstuhlgerechter Zugang vorhanden.\nEs ist keine Toilette vorhanden.\nEs erfolgt keine medizinische Betreuung. | Öffnungszeiten: Von April bis September an ausgewählten Samstagen und Sonntagen geöffnet:\n20.06.: 10:00 - 16:00 Uhr \n04.07.: 10:00 - 16:00 Uhr \n18.07.: 10:00 - 16:00 Uhr \n01.08.: 10:00 - 15:00 Uhr \n29.08.: 10:00 - 15:00 Uhr \n12.09.: 10:00 - 15:00 Uhr \n26.09.: 10:00 - 15:00 Uhr",
+        "info": "Adresse: Nennhauser Damm 72, 13591 Berlin | Rollstuhlgerecht: rollstuhlgerecht | Hinweis: Es ist ein rollstuhlgerechter Zugang vorhanden.\nEs ist keine Toilette vorhanden.\nEs erfolgt keine medizinische Betreuung. | Öffnungszeiten: Von April bis September an ausgewählten Samstagen und Sonntagen geöffnet:\n29.08.: 10:00 - 15:00 Uhr \n12.09.: 10:00 - 15:00 Uhr \n26.09.: 10:00 - 15:00 Uhr",
         "category": "Öffentlicher \"Kühler Raum\"",
         "source": "Land Berlin"
       }
@@ -1132,7 +1308,7 @@
       },
       "properties": {
         "name": "Quartiersmanagement Falkenhagener Feld West - Kiezstube",
-        "info": "Adresse: Kraepelinweg 1, 13589 Berlin | Rollstuhlgerecht: eingeschränkt rollstuhlgerecht | Hinweis: Der Zugang ist eingeschränkt rollstuhlgerecht (ebenerdig, jedoch ohne elektrische Türen). \nEs ist kein rollstuhlgerechtes WC vorhanden.\nEin Zugang zu kostenlosem Trinkwasser ist vorhanden.\nEine Erste-Hilfe-Kasten ist vorhanden.\nEine Büchertauschregal ist vorhanden.\nDas Mitbringen von Haustieren ist gestattet.\nEs erfolgt keine medizinische Betreuung. | Öffnungszeiten: Mo, Mi, Do: 11:00 – 15:00 Uhr\nBitte beachten Sie, dass es aufgrund terminlicher Verpflichtungen der Mitarbeitenden des Quartiersmanagements zu Abweichungen von den genannten Öffnungszeiten kommen kann. Ziel ist es jedoch, die angegebenen Zeitfenster möglichst verlässlich abzudecken und – sofern die personellen Ressourcen es zulassen – auch zusätzliche Öffnungszeiten anzubieten.",
+        "info": "Adresse: Kraepelinweg 1, 13589 Berlin | Rollstuhlgerecht: eingeschränkt rollstuhlgerecht | Hinweis: Der Zugang ist eingeschränkt rollstuhlgerecht (ebenerdig, jedoch ohne elektrische Türen). \nEs ist kein rollstuhlgerechtes WC vorhanden.\nEin Zugang zu kostenlosem Trinkwasser ist vorhanden.\nEine Erste-Hilfe-Kasten ist vorhanden.\nEine Büchertauschregal ist vorhanden.\nDas Mitbringen von Haustieren ist gestattet.\nEs erfolgt keine medizinische Betreuung. | Öffnungszeiten: Mo, Mi, Do: 11:00 – 15:00 Uhr\n\nBitte beachten Sie, dass es aufgrund terminlicher Verpflichtungen der Mitarbeitenden des Quartiersmanagements zu Abweichungen von den genannten Öffnungszeiten kommen kann. Ziel ist es jedoch, die angegebenen Zeitfenster möglichst verlässlich abzudecken und – sofern die personellen Ressourcen es zulassen – auch zusätzliche Öffnungszeiten anzubieten.",
         "category": "Öffentlicher \"Kühler Raum\"",
         "source": "Land Berlin"
       }
@@ -1180,7 +1356,55 @@
       },
       "properties": {
         "name": "LVM Service-Büro Michael Klages",
-        "info": "Adresse: Streitstr. 28, 13587 Berlin | Rollstuhlgerecht: nicht rollstuhlgerecht | Hinweis: Es gibt Trinkwasser, Sitzgelegenheiten und Toiletten. Der Raum ist klimatisiert.\nEs erfolgt keine medizinische Betreuung. | Öffnungszeiten: Mo: 10:00 - 18:00 Uhr;\nDi, Mi: 10:00 - 15:00 Uhr;\nDo: 10:00 - 17:00 Uhr;\nFr: 10:00 - 15:00 Uhr",
+        "info": "Adresse: Streitstr. 28, 13587 Berlin | Rollstuhlgerecht: nicht rollstuhlgerecht | Hinweis: Es gibt Trinkwasser, Sitzgelegenheiten und Toiletten. Der Raum ist klimatisiert.\nEs erfolgt keine medizinische Betreuung. | Öffnungszeiten: Mo: 10:00 - 18:00 Uhr;\nDi, Mi: 10:00 - 15:00 Uhr;\nDo: 10:00 -17:00 Uhr;\nFr: 10:00 - 15:00 Uhr",
+        "category": "Öffentlicher \"Kühler Raum\"",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.182543,
+          52.55054404
+        ]
+      },
+      "properties": {
+        "name": "Temporäres Stadtteilzentrum Falkenhagener Feld Ost",
+        "info": "Adresse: Elmweg 10, 13589 Bezirk Spandau | Rollstuhlgerecht: rollstuhlgerecht | Hinweis: Es gibt Trinkwasser, Sitzgelegenheiten, Unterhaltungsmöglichkeiten/Spiele und Toiletten.\nDa sich die Angebote ändern können und teilweise unregelmäßig sowie außerhalb der regulären Öffnungszeiten stattfinden, wird gebeten die aktuellen Aushänge am Stadtteilzentrum zu beachten.\nOb das Stadtteilzentrum geöffnet ist, lässt sich am Aufsteller vor dem Eingang erkennen.\nEs erfolgt keine medizinische Betreuung. | Öffnungszeiten: Mo, Di, Do, Fr: 10:00 - 14:00 Uhr\nMi: 10:00 - 18:00 Uhr",
+        "category": "Öffentlicher \"Kühler Raum\"",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.169944,
+          52.52321704
+        ]
+      },
+      "properties": {
+        "name": "Katholische Kirche St. Maximilian Kolbe",
+        "info": "Adresse: Maulbeerallee 15, 13593 Berlin | Rollstuhlgerecht: rollstuhlgerecht | Hinweis: Bitte klingeln Sie im Pfarrbüro.\nEine Anpassung der Öffnungszeiten während einer Hitzewelle kann nicht garantiert werden. Es wird gebeten, außerhalb der angegebenen Öffnungszeiten vorab telefonisch Kontakt aufzunehmen.\nEs gibt Trinkwasser, Toiletten und Sitzegelegenheiten. \nDas Mitbringen von Haustieren ist erlaubt.\nEs erfolgt keine medizinische Betreuung. | Öffnungszeiten: Fr: 15:00-17:00 Uhr",
+        "category": "Öffentlicher \"Kühler Raum\"",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.163983,
+          52.54936804
+        ]
+      },
+      "properties": {
+        "name": "Katholische Kirche St. Markus",
+        "info": "Adresse: Am Kiesteich 50 , 13589 Berlin | Rollstuhlgerecht: rollstuhlgerecht | Hinweis: Eine Anpassung der Öffnungszeiten während einer Hitzewelle kann nicht garantiert werden. Es wird gebeten, außerhalb der angegebenen Öffnungszeiten vorab telefonisch Kontakt aufzunehmen.\nEs gibt Trinkwasser, Toiletten und Sitzegelegenheiten. \nDas Mitbringen von Haustieren ist erlaubt.\nEs erfolgt keine medizinische Betreuung. | Öffnungszeiten: Di - Fr: 10:00 - 15:00 Uhr",
         "category": "Öffentlicher \"Kühler Raum\"",
         "source": "Land Berlin"
       }
@@ -1478,6 +1702,22 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          13.355862,
+          52.42790204
+        ]
+      },
+      "properties": {
+        "name": "Nachbarschaftstreff Emmi",
+        "info": "Adresse: Emmichstraße 2A, 12249 Berlin | Rollstuhlgerecht: rollstuhlgerecht | Hinweis: Es gibt Trinkwasser, Sitzgelegenheiten, Toiletten und W-LAN.\nDas aktuelle Wochenprogramm und weitere Hinweise sind auf der Website zu finden: https://sophia-berlin.de/nachbarschaftstreff-emmi/\nEs erfolgt keine medizinische Betreuung. | Öffnungszeiten: Mo - Do: 10:00 - 16:00 Uhr\nFr: 09:00 - 13:00 Uhr\nÖffnungszeiten können variieren.",
+        "category": "Öffentlicher \"Kühler Raum\"",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           13.352746,
           52.48917604
         ]
@@ -1750,13 +1990,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.5731,
-          52.44989204
+          13.515799,
+          52.46510004
         ]
       },
       "properties": {
         "name": "Katholische Kirche St. Antonius",
-        "info": "Adresse: Lindenstraße 43, 12555 | Rollstuhlgerecht: eingeschränkt rollstuhlgerecht | Hinweis: Es gibt Trinkwasser, Sitzgelegenheiten und Toiletten.\nDie Kirche ist täglich über das Angebot \"Offene Kirche\" zugänglich und wird von verschiedenen \"Kirchenhüter:innen\" begleitet, feste Zeiten sind 14:00-16:00 Uhr.\nJeden Donnerstag gibt es das Angebot eines Kirchencafés, welches von der Sozialarbeiterin und Praktikantin in der Pfarrei begleitet wird.\nWeitere Zeiten sind jederzeit spontan möglich und werden dann durch einen Aufsteller vor der Kirchentür sichtbar gemacht. Bei fehlenden Kirchenhüter:innen bleibt die Kirche leider geschlossen.\nEs erfolgt keine medizinische Betreuung. | Öffnungszeiten: Mo - So: 14:00 - 16:00 Uhr",
+        "info": "Adresse: Roedernstraße 2, 12459 Berlin | Rollstuhlgerecht: eingeschränkt rollstuhlgerecht | Hinweis: Es gibt Trinkwasser, Sitzgelegenheiten und Toiletten.\nDie Kirche ist täglich über das Angebot \"Offene Kirche\" zugänglich und wird von verschiedenen \"Kirchenhüter:innen\" begleitet, feste Zeiten sind 14:00-16:00 Uhr.\nJeden Donnerstag gibt es das Angebot eines Kirchencafés, welches von der Sozialarbeiterin und Praktikantin in der Pfarrei begleitet wird.\nWeitere Zeiten sind jederzeit spontan möglich und werden dann durch einen Aufsteller vor der Kirchentür sichtbar gemacht. Bei fehlenden Kirchenhüter:innen bleibt die Kirche leider geschlossen.\nEs erfolgt keine medizinische Betreuung. | Öffnungszeiten: Mo - So: 14:00 - 16:00 Uhr",
         "category": "Öffentlicher \"Kühler Raum\"",
         "source": "Land Berlin"
       }

@@ -512,6 +512,22 @@
         "category": "Wasserspielplatz",
         "source": "OpenStreetMap & Mitwirkende"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2887513,
+          52.4591799
+        ]
+      },
+      "properties": {
+        "name": "Wasserspielplatz",
+        "info": "",
+        "category": "Wasserspielplatz",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
     }
   ]
 }
