@@ -767,7 +767,11 @@ def resolve_file_path(path_str: str) -> Path | None:
     return None
 
 
-def query_refill_stations(client: HttpClient, alt_text_refill: dict[str, str]) -> dict[str, Any]:
+def query_refill_stations(
+    client: HttpClient,
+    alt_text_refill: dict[str, str],
+    ids_to_remove_refill: set[str] | None = None,
+) -> dict[str, Any]:
     """Fetch refill stations from api.ofdb.io and clean them to match GeoJSON format."""
     # Add limit=10000 to fetch all stations instead of the default 100 limit!
     url = "https://api.ofdb.io/v0/search?bbox=52.33826%2C13.08835%2C52.67550%2C13.76116&text=refill-station&limit=10000"
@@ -779,6 +783,10 @@ def query_refill_stations(client: HttpClient, alt_text_refill: dict[str, str]) -
 
     features = []
     for item in data.get("visible", []):
+        station_id = item.get("id")
+        if ids_to_remove_refill and station_id in ids_to_remove_refill:
+            continue
+
         description = item.get("description") or ""
         if description.strip() in ("Refil Station", "Refill Station"):
             description = ""
@@ -813,6 +821,7 @@ def run_pipeline(
     wfs_sources: list[dict[str, Any]],
     alt_text_refill: dict[str, str],
     existing_datasets: list[str],
+    ids_to_remove_refill: set[str] | None = None,
     out_dir: str | Path = "data/data/out",
     args: Any,
 ) -> list[Path]:
@@ -869,7 +878,7 @@ def run_pipeline(
 
     if scrape_refill:
         print("Querying Refill Stations: api.ofdb.io")
-        refill_collection = query_refill_stations(client, alt_text_refill)
+        refill_collection = query_refill_stations(client, alt_text_refill, ids_to_remove_refill)
         print(f"  Acquired {len(refill_collection['features'])} cleaned features")
         grouped_features.setdefault("refill_stations", []).extend(refill_collection["features"])
 

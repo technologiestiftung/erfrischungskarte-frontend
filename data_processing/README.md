@@ -47,6 +47,10 @@ ALT_TEXT_REFILL: dict[str, str] = {
 * If you set it to `""`, it will show nothing (blank description).
 * If a station is not listed here, it will default to showing their raw description.
 
+If you want to remove an entry you can add the ID to `IDS_TO_REMOVE_REFILL`.
+Find the ids in the raw data [here](https://api.ofdb.io/v0/search?bbox=52.33826%2C13.08835%2C52.67550%2C13.76116&text=refill-station&limit=10000).
+
+
 ---
 
 ## 📍 4. Adding or Removing Data Sources (OSM / WFS)

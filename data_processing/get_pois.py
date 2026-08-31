@@ -66,6 +66,11 @@ ALT_TEXT_REFILL: dict[str, str] = {
 }
 
 # ==============================================================================
+# REFILL STATIONS IDS THAT OBSOLETE 
+# ==============================================================================
+IDS_TO_REMOVE_REFILL: set[str] = {"b9e39eee7e7b4decb916bffe87e28794"}
+
+# ==============================================================================
 # OPENSTREETMAP (OVERPASS) SOURCES
 # ==============================================================================
 # Comment or uncomment sources to enable/disable them individually
@@ -393,6 +398,7 @@ def main() -> None:
         wfs_sources=WFS_SOURCES,
         alt_text_refill=ALT_TEXT_REFILL,
         existing_datasets=EXISTING_DATASETS,
+        ids_to_remove_refill=IDS_TO_REMOVE_REFILL,
         out_dir=out_dir,
         args=args,
     )
