@@ -597,6 +597,20 @@ export const ABOUT_POINTS_TEXT = (
           Datensatz
         </a>{' '}
         ist auch auf Berlin Open Data einsehbar.
+        <br />
+        <br />
+        Über das &quot;Berlin WC Kooperationsprogramm&quot; werden auch private
+        Betriebe gelistet, die ihre Toiletten öffentlich verfügbar machen.
+        Schaut{' '}
+        <a
+          target="_blank"
+          href="https://www.berlin.de/sen/uvk/mobilitaet-und-verkehr/infrastruktur/oeffentliche-toiletten/berlin-wc-kooperationsprogramm/"
+          className="text-gray-800 underline"
+          rel="noopener noreferrer"
+        >
+          hier
+        </a>{' '}
+        vorbei, wenn ihr Teil des Netzwerkes werden möchtet.
       </p>
 
       <p>
