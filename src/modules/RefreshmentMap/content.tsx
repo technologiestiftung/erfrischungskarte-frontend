@@ -693,7 +693,7 @@ export const ABOUT_POINTS_TEXT = (
         </a>
         .
       </p>
-      <p>Letztes Update: 31.08.2026</p>
+      <p>Letztes Update: 27.09.2026</p>
     </div>
   </>
 )
