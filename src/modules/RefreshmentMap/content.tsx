@@ -579,6 +579,20 @@ export const ABOUT_POINTS_TEXT = (
       */}
 
       <p>
+        Die Standorte der <strong>Trinkbrunnen</strong> sind als Datensatz auf{' '}
+        {''}
+        <a
+          target="_blank"
+          href="https://daten.berlin.de/datensaetze/trinkwasserbrunnen-wfs-47dba2c3"
+          className="text-gray-800 underline"
+          rel="noopener noreferrer"
+        >
+          Berlin Open Data
+        </a>
+        {''} verfügbar.
+      </p>
+
+      <p>
         Die Positionen der <strong>öffentlichen Toiletten</strong> sind
         ebenfalls im{' '}
         <a
