@@ -178,7 +178,7 @@ export const POI_CATEGORY_COLOR_MAP: Map<PoiCategory, string> = new Map([
   ['Schwimmhalle', colors['poi-darkblue']],
   ['Wasserspielplatz', colors['poi-pink']],
   ['Trinkbrunnen', colors['poi-lightblue']],
-  ['Straßenbrunnen', colors['poi-turquoise']],
+  //['Straßenbrunnen', colors['poi-turquoise']],
   ['Refill Station', colors['poi-lightblue']],
   ['Grünanlage', colors['poi-green']],
   ['Sitzbank', colors['poi-yellow']],
@@ -222,7 +222,7 @@ export const POI_DATA: PoiDataType = {
     Schwimmhalle: '/data/schwimmhalle.geojson',
     Wasserspielplatz: '/data/wasserspielplatz.geojson',
     Trinkbrunnen: '/data/trinkbrunnen.geojson',
-    Straßenbrunnen: '/data/strassenbrunnen.geojson',
+    //Straßenbrunnen: '/data/strassenbrunnen.geojson',
     'Refill Station': '/data/refill_stations.geojson',
     Grünanlage: '/data/gruenanlagen.geojson',
     Sitzbank: '/data/sitzbank.geojson',
@@ -239,7 +239,7 @@ export const POI_DATA: PoiDataType = {
     'Schwimmhalle',
     'Wasserspielplatz',
     'Trinkbrunnen',
-    'Straßenbrunnen',
+    //'Straßenbrunnen',
     'Refill Station',
     'Grünanlage',
     'Sitzbank',
@@ -552,6 +552,7 @@ export const ABOUT_POINTS_TEXT = (
         Geodatenportal bereitgestellt.
       </p>
 
+      {/*
       <p>
         Die Standorte der <strong>Brunnen</strong> setzen sich aus
         unterschiedlichen Quellen zusammen: Zum einen sind sie Teil des
@@ -574,6 +575,21 @@ export const ABOUT_POINTS_TEXT = (
         >
           Zierbrunnen
         </a>
+      </p>
+      */}
+
+      <p>
+        Die Standorte der <strong>Trinkbrunnen</strong> sind als Datensatz auf{' '}
+        {''}
+        <a
+          target="_blank"
+          href="https://daten.berlin.de/datensaetze/trinkwasserbrunnen-wfs-47dba2c3"
+          className="text-gray-800 underline"
+          rel="noopener noreferrer"
+        >
+          Berlin Open Data
+        </a>
+        {''} verfügbar.
       </p>
 
       <p>
