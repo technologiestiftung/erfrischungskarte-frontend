@@ -11462,6 +11462,150 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          13.4341472,
+          52.4748908
+        ]
+      },
+      "properties": {
+        "name": "Picknicktisch",
+        "info": "",
+        "category": "Picknicktisch",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4350952,
+          52.4753715
+        ]
+      },
+      "properties": {
+        "name": "Picknicktisch",
+        "info": "",
+        "category": "Picknicktisch",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4351341,
+          52.4753512
+        ]
+      },
+      "properties": {
+        "name": "Picknicktisch",
+        "info": "",
+        "category": "Picknicktisch",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4347154,
+          52.4750665
+        ]
+      },
+      "properties": {
+        "name": "Picknicktisch",
+        "info": "",
+        "category": "Picknicktisch",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4345458,
+          52.4750404
+        ]
+      },
+      "properties": {
+        "name": "Picknicktisch",
+        "info": "",
+        "category": "Picknicktisch",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1471504,
+          52.4545482
+        ]
+      },
+      "properties": {
+        "name": "Picknicktisch",
+        "info": "",
+        "category": "Picknicktisch",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1470552,
+          52.4546263
+        ]
+      },
+      "properties": {
+        "name": "Picknicktisch",
+        "info": "",
+        "category": "Picknicktisch",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1471695,
+          52.4545585
+        ]
+      },
+      "properties": {
+        "name": "Picknicktisch",
+        "info": "",
+        "category": "Picknicktisch",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2359075,
+          52.5577725
+        ]
+      },
+      "properties": {
+        "name": "Picknicktisch",
+        "info": "",
+        "category": "Picknicktisch",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           13.6190585,
           52.5425582
         ]
@@ -11848,6 +11992,22 @@
         "coordinates": [
           13.4376427,
           52.4646567
+        ]
+      },
+      "properties": {
+        "name": "Picknicktisch",
+        "info": "",
+        "category": "Picknicktisch",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4341393,
+          52.4748899
         ]
       },
       "properties": {

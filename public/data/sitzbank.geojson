@@ -17318,22 +17318,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.2910967,
-          52.4765388
-        ]
-      },
-      "properties": {
-        "name": "Sitzbank",
-        "info": "",
-        "category": "Sitzbank",
-        "source": "OpenStreetMap & Mitwirkende"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           13.6833036,
           52.3771377
         ]
@@ -31734,22 +31718,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.4191866,
-          52.4333656
-        ]
-      },
-      "properties": {
-        "name": "Sitzbank",
-        "info": "",
-        "category": "Sitzbank",
-        "source": "OpenStreetMap & Mitwirkende"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           13.4209014,
           52.4325582
         ]
@@ -35958,8 +35926,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.3729775,
-          52.4917766
+          13.3729723,
+          52.4917771
         ]
       },
       "properties": {
@@ -38822,8 +38790,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.3729813,
-          52.4917982
+          13.3729749,
+          52.4917996
         ]
       },
       "properties": {
@@ -41542,8 +41510,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.30529,
-          52.4512728
+          13.3052521,
+          52.4512215
         ]
       },
       "properties": {
@@ -45302,8 +45270,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.2438596,
-          52.5145393
+          13.2438164,
+          52.5145314
         ]
       },
       "properties": {
@@ -46040,22 +46008,6 @@
         "coordinates": [
           13.4697538,
           52.6154859
-        ]
-      },
-      "properties": {
-        "name": "Sitzbank",
-        "info": "",
-        "category": "Sitzbank",
-        "source": "OpenStreetMap & Mitwirkende"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.3268613,
-          52.4487588
         ]
       },
       "properties": {
@@ -55478,8 +55430,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.1949403,
-          52.5694626
+          13.1955097,
+          52.5695487
         ]
       },
       "properties": {
@@ -57670,24 +57622,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.3053828,
-          52.45136
-        ]
-      },
-      "properties": {
-        "name": "Sitzbank",
-        "info": "",
-        "category": "Sitzbank",
-        "source": "OpenStreetMap & Mitwirkende"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.3055297,
-          52.4514219
+          13.3054304,
+          52.4513451
         ]
       },
       "properties": {
@@ -57750,8 +57686,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.3056104,
-          52.4535353
+          13.3056574,
+          52.453549
         ]
       },
       "properties": {
@@ -68022,8 +67958,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.6139254,
-          52.421165
+          13.6138178,
+          52.4212943
         ]
       },
       "properties": {
@@ -68038,8 +67974,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.6140056,
-          52.4211502
+          13.6138686,
+          52.4212263
         ]
       },
       "properties": {
@@ -104406,40 +104342,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.3047386,
-          52.4559736
-        ]
-      },
-      "properties": {
-        "name": "Sitzbank",
-        "info": "",
-        "category": "Sitzbank",
-        "source": "OpenStreetMap & Mitwirkende"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           13.3047843,
           52.4559706
-        ]
-      },
-      "properties": {
-        "name": "Sitzbank",
-        "info": "",
-        "category": "Sitzbank",
-        "source": "OpenStreetMap & Mitwirkende"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.3048324,
-          52.4559776
         ]
       },
       "properties": {
@@ -106520,22 +106424,6 @@
         "coordinates": [
           13.3068168,
           52.4546246
-        ]
-      },
-      "properties": {
-        "name": "Sitzbank",
-        "info": "",
-        "category": "Sitzbank",
-        "source": "OpenStreetMap & Mitwirkende"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.3069502,
-          52.454513
         ]
       },
       "properties": {
@@ -122646,8 +122534,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.2358522,
-          52.5576429
+          13.2358333,
+          52.557265
         ]
       },
       "properties": {
@@ -122968,22 +122856,6 @@
         "coordinates": [
           13.3565024,
           52.518825
-        ]
-      },
-      "properties": {
-        "name": "Sitzbank",
-        "info": "",
-        "category": "Sitzbank",
-        "source": "OpenStreetMap & Mitwirkende"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.3565168,
-          52.5187934
         ]
       },
       "properties": {
@@ -138454,8 +138326,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.5393268,
-          52.4864175
+          13.5390578,
+          52.4863669
         ]
       },
       "properties": {
@@ -150710,38 +150582,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.4346041,
-          52.4750427
-        ]
-      },
-      "properties": {
-        "name": "Sitzbank",
-        "info": "",
-        "category": "Sitzbank",
-        "source": "OpenStreetMap & Mitwirkende"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.4346819,
-          52.4750547
-        ]
-      },
-      "properties": {
-        "name": "Sitzbank",
-        "info": "",
-        "category": "Sitzbank",
-        "source": "OpenStreetMap & Mitwirkende"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           13.4344072,
           52.4751744
         ]
@@ -150774,8 +150614,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.4342221,
-          52.47514
+          13.4344035,
+          52.4752164
         ]
       },
       "properties": {
@@ -150790,8 +150630,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.434233,
-          52.4751039
+          13.4344366,
+          52.475091
         ]
       },
       "properties": {
@@ -150806,40 +150646,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.4344767,
-          52.4757074
-        ]
-      },
-      "properties": {
-        "name": "Sitzbank",
-        "info": "",
-        "category": "Sitzbank",
-        "source": "OpenStreetMap & Mitwirkende"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.434784,
-          52.4757218
-        ]
-      },
-      "properties": {
-        "name": "Sitzbank",
-        "info": "",
-        "category": "Sitzbank",
-        "source": "OpenStreetMap & Mitwirkende"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.4350802,
-          52.4755437
+          13.4345323,
+          52.4758343
         ]
       },
       "properties": {
@@ -179430,8 +179238,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.154405,
-          52.5154437
+          13.1544866,
+          52.5155315
         ]
       },
       "properties": {
@@ -179446,8 +179254,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.1543729,
-          52.5154121
+          13.1545057,
+          52.5154964
         ]
       },
       "properties": {
@@ -180712,22 +180520,6 @@
         "coordinates": [
           13.3322917,
           52.4645875
-        ]
-      },
-      "properties": {
-        "name": "Sitzbank",
-        "info": "",
-        "category": "Sitzbank",
-        "source": "OpenStreetMap & Mitwirkende"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.3269844,
-          52.4534993
         ]
       },
       "properties": {
@@ -184104,54 +183896,6 @@
         "coordinates": [
           13.4636945,
           52.4710036
-        ]
-      },
-      "properties": {
-        "name": "Sitzbank",
-        "info": "",
-        "category": "Sitzbank",
-        "source": "OpenStreetMap & Mitwirkende"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.2727376,
-          52.533993
-        ]
-      },
-      "properties": {
-        "name": "Sitzbank",
-        "info": "",
-        "category": "Sitzbank",
-        "source": "OpenStreetMap & Mitwirkende"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.2727987,
-          52.5339791
-        ]
-      },
-      "properties": {
-        "name": "Sitzbank",
-        "info": "",
-        "category": "Sitzbank",
-        "source": "OpenStreetMap & Mitwirkende"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.2728577,
-          52.533971
         ]
       },
       "properties": {
@@ -248822,8 +248566,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.3976565,
-          52.5795978
+          13.3976436,
+          52.5795849
         ]
       },
       "properties": {
@@ -262694,22 +262438,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.4072593,
-          52.4964491
-        ]
-      },
-      "properties": {
-        "name": "Sitzbank",
-        "info": "",
-        "category": "Sitzbank",
-        "source": "OpenStreetMap & Mitwirkende"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           13.4075895,
           52.4963986
         ]
@@ -265142,8 +264870,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.3445211,
-          52.5255956
+          13.3445241,
+          52.5255828
         ]
       },
       "properties": {
@@ -265190,8 +264918,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.3461887,
-          52.5252576
+          13.3461011,
+          52.5252525
         ]
       },
       "properties": {
@@ -265222,8 +264950,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.3460034,
-          52.5253003
+          13.3459608,
+          52.5252822
         ]
       },
       "properties": {
@@ -265606,8 +265334,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.3977136,
-          52.5796234
+          13.3977007,
+          52.5796139
         ]
       },
       "properties": {
@@ -265622,8 +265350,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.3977269,
-          52.5795888
+          13.3977342,
+          52.5795882
         ]
       },
       "properties": {
@@ -269750,22 +269478,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.3753215,
-          52.5195202
-        ]
-      },
-      "properties": {
-        "name": "Sitzbank",
-        "info": "",
-        "category": "Sitzbank",
-        "source": "OpenStreetMap & Mitwirkende"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           13.374167,
           52.5195254
         ]
@@ -269832,22 +269544,6 @@
         "coordinates": [
           13.3744411,
           52.5195241
-        ]
-      },
-      "properties": {
-        "name": "Sitzbank",
-        "info": "",
-        "category": "Sitzbank",
-        "source": "OpenStreetMap & Mitwirkende"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.3752335,
-          52.5195206
         ]
       },
       "properties": {
@@ -270824,38 +270520,6 @@
         "coordinates": [
           13.3751586,
           52.5194368
-        ]
-      },
-      "properties": {
-        "name": "Sitzbank",
-        "info": "",
-        "category": "Sitzbank",
-        "source": "OpenStreetMap & Mitwirkende"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.3752467,
-          52.5194366
-        ]
-      },
-      "properties": {
-        "name": "Sitzbank",
-        "info": "",
-        "category": "Sitzbank",
-        "source": "OpenStreetMap & Mitwirkende"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.3753347,
-          52.5194363
         ]
       },
       "properties": {
@@ -273702,8 +273366,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.3469135,
-          52.5252767
+          13.3469204,
+          52.5252717
         ]
       },
       "properties": {
@@ -312168,38 +311832,6 @@
         "coordinates": [
           13.3979956,
           52.4977871
-        ]
-      },
-      "properties": {
-        "name": "Sitzbank",
-        "info": "",
-        "category": "Sitzbank",
-        "source": "OpenStreetMap & Mitwirkende"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.3766749,
-          52.491685
-        ]
-      },
-      "properties": {
-        "name": "Sitzbank",
-        "info": "",
-        "category": "Sitzbank",
-        "source": "OpenStreetMap & Mitwirkende"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.3767087,
-          52.4916981
         ]
       },
       "properties": {
@@ -392358,8 +391990,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.3828051,
-          52.542002
+          13.3827998,
+          52.5420188
         ]
       },
       "properties": {
@@ -408824,22 +408456,6 @@
         "coordinates": [
           13.2159572,
           52.5790456
-        ]
-      },
-      "properties": {
-        "name": "Sitzbank",
-        "info": "",
-        "category": "Sitzbank",
-        "source": "OpenStreetMap & Mitwirkende"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.1954201,
-          52.56933
         ]
       },
       "properties": {
@@ -437606,22 +437222,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.324629,
-          52.4545136
-        ]
-      },
-      "properties": {
-        "name": "Sitzbank",
-        "info": "",
-        "category": "Sitzbank",
-        "source": "OpenStreetMap & Mitwirkende"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           13.3650965,
           52.601899
         ]
@@ -450022,8 +449622,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.4362576,
-          52.598912
+          13.4364302,
+          52.5989368
         ]
       },
       "properties": {
@@ -452774,8 +452374,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.3021203,
-          52.4554398
+          13.3020679,
+          52.455461
         ]
       },
       "properties": {
@@ -493590,8 +493190,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.3765557,
-          52.4970393
+          13.3765621,
+          52.4970372
         ]
       },
       "properties": {
@@ -518134,8 +517734,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.4602555,
-          52.5076761
+          13.4602663,
+          52.5076833
         ]
       },
       "properties": {
@@ -518150,8 +517750,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.4601683,
-          52.5077233
+          13.4601786,
+          52.5077296
         ]
       },
       "properties": {
@@ -521798,8 +521398,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.4252526,
-          52.5462314
+          13.4252444,
+          52.5462116
         ]
       },
       "properties": {
@@ -521814,8 +521414,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.4250994,
-          52.5460564
+          13.4250809,
+          52.546059
         ]
       },
       "properties": {
@@ -521830,8 +521430,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.4250684,
-          52.5460214
+          13.4250512,
+          52.5460335
         ]
       },
       "properties": {
@@ -521846,8 +521446,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.4256255,
-          52.5463753
+          13.4256382,
+          52.5463796
         ]
       },
       "properties": {
@@ -521862,8 +521462,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.425375,
-          52.5463377
+          13.4253687,
+          52.5463115
         ]
       },
       "properties": {
@@ -521878,8 +521478,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.425222,
-          52.5462037
+          13.4252168,
+          52.5461949
         ]
       },
       "properties": {
@@ -521944,6 +521544,2918 @@
         "coordinates": [
           13.3651938,
           52.5294741
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4348242,
+          52.4755814
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4347357,
+          52.4756823
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4343795,
+          52.4754245
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4347622,
+          52.475583
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4348311,
+          52.4755571
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4348387,
+          52.4755016
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4343563,
+          52.475419
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4342976,
+          52.4754813
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4348339,
+          52.4755273
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4347355,
+          52.475258
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4342735,
+          52.4754563
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4348245,
+          52.475251
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4343313,
+          52.4753836
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4342669,
+          52.4754104
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4347762,
+          52.4756815
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4342753,
+          52.4754001
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4345792,
+          52.475826
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4347267,
+          52.4755982
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4342492,
+          52.4753983
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4342841,
+          52.4754889
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4347698,
+          52.4752444
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4348006,
+          52.475685
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4342893,
+          52.475462
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4351022,
+          52.4751583
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4342747,
+          52.4754998
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4342976,
+          52.4754709
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3925827,
+          52.4968674
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4362552,
+          52.4470112
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4203799,
+          52.5220888
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.420284,
+          52.5221194
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4203524,
+          52.5220964
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4204594,
+          52.521911
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3269173,
+          52.4533434
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3266326,
+          52.4531898
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3272156,
+          52.461557
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2064126,
+          52.5296879
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.206407,
+          52.5297252
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2064878,
+          52.5296892
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4885954,
+          52.4716585
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4886969,
+          52.4717258
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4886231,
+          52.4716105
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4887949,
+          52.4717212
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3699135,
+          52.4480196
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3667633,
+          52.4498439
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4063967,
+          52.5195801
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4060161,
+          52.5199499
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5938769,
+          52.440607
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5938348,
+          52.4406057
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5938438,
+          52.4406927
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5939012,
+          52.4406919
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3385108,
+          52.5895811
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2177253,
+          52.5248895
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2135406,
+          52.5243093
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2165201,
+          52.5242182
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2151073,
+          52.5241605
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2177736,
+          52.5249016
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2058993,
+          52.5289818
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4017246,
+          52.5334072
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4015247,
+          52.5337786
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5751881,
+          52.4655451
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4486382,
+          52.504543
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4488264,
+          52.5047747
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4486283,
+          52.5045473
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4488176,
+          52.5047779
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4668692,
+          52.5070786
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4629389,
+          52.5096522
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4628977,
+          52.5097223
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4353401,
+          52.5161151
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4031406,
+          52.5809299
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4047392,
+          52.5727402
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3997976,
+          52.5727913
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3998224,
+          52.5727893
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3997825,
+          52.5723604
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3998073,
+          52.5723583
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3993164,
+          52.5725444
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3992846,
+          52.5725495
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3107227,
+          52.5989769
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3101483,
+          52.598512
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.310326,
+          52.5982119
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2988012,
+          52.4642607
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3323416,
+          52.4722802
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3324465,
+          52.4722762
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3323943,
+          52.472277
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3008401,
+          52.507843
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3008884,
+          52.5078436
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.300938,
+          52.507845
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.349315,
+          52.4888045
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.345011,
+          52.5255902
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3453548,
+          52.5254507
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3449137,
+          52.5253339
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.344103,
+          52.5256712
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3450456,
+          52.5254872
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.344998,
+          52.5255007
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3467907,
+          52.5250703
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3453336,
+          52.5253049
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3449793,
+          52.5255323
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3449934,
+          52.5255584
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3449416,
+          52.5253536
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3453794,
+          52.5254906
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3449553,
+          52.525316
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3450939,
+          52.5254746
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3453019,
+          52.5253012
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3448154,
+          52.525304
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4566176,
+          52.5262127
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3703594,
+          52.4448062
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3694911,
+          52.4447325
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3694593,
+          52.4447505
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3695029,
+          52.4447605
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4137673,
+          52.4298405
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1530573,
+          52.5153862
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.153089,
+          52.5157659
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5494706,
+          52.4359691
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6502597,
+          52.3696453
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4355303,
+          52.6067464
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4354646,
+          52.6067464
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1467897,
+          52.454512
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1468155,
+          52.45453
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3284051,
+          52.5468864
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.457477,
+          52.5312962
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4575713,
+          52.5313268
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3954128,
+          52.5518884
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3954125,
+          52.551866
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3953843,
+          52.5518786
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3492713,
+          52.4881388
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3517821,
+          52.578172
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3600448,
+          52.5040505
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3605331,
+          52.503953
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3612347,
+          52.503822
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.367173,
+          52.4936555
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3429333,
+          52.5024496
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3428232,
+          52.5024714
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3774677,
+          52.5237311
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4348662,
+          52.4749476
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3065838,
+          52.4559893
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3062219,
+          52.4562064
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3063525,
+          52.4562306
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3062452,
+          52.4562176
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3061806,
+          52.4561556
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3078474,
+          52.451501
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3084757,
+          52.4513327
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3065443,
+          52.45596
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3052973,
+          52.4572718
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3070838,
+          52.453969
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3036869,
+          52.4565809
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3055327,
+          52.4570851
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3059066,
+          52.4515929
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3064743,
+          52.4559461
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3045292,
+          52.4559652
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3061861,
+          52.456171
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3062747,
+          52.4562251
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3064089,
+          52.4559513
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3080987,
+          52.4520129
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3051627,
+          52.4515143
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3065627,
+          52.4559706
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3065188,
+          52.4559534
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3065068,
+          52.4547496
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3063152,
+          52.4562325
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3065978,
+          52.4560123
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3048337,
+          52.4576826
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3063403,
+          52.4562327
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3047154,
+          52.4521852
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3061955,
+          52.4561859
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.30644,
+          52.4547669
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3060039,
+          52.4550909
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3065939,
+          52.455998
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3064464,
+          52.4559466
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3063281,
+          52.4548422
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3760298,
+          52.5383416
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3940861,
+          52.5372981
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3850286,
+          52.5199552
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3849148,
+          52.5199132
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3848041,
+          52.5198803
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3845711,
+          52.5198117
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3847405,
+          52.5198621
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3846756,
+          52.5198451
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3846235,
+          52.5198208
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3845196,
+          52.5198077
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3775372,
+          52.5191567
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3774155,
+          52.5191661
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3765991,
+          52.5130308
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.381478,
+          52.5143175
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3814526,
+          52.5143546
         ]
       },
       "properties": {
@@ -530934,310 +533446,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.3558167,
-          52.5460208
-        ]
-      },
-      "properties": {
-        "name": "Sitzbank",
-        "info": "",
-        "category": "Sitzbank",
-        "source": "OpenStreetMap & Mitwirkende"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.3560155,
-          52.5458968
-        ]
-      },
-      "properties": {
-        "name": "Sitzbank",
-        "info": "",
-        "category": "Sitzbank",
-        "source": "OpenStreetMap & Mitwirkende"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.355931,
-          52.5459487
-        ]
-      },
-      "properties": {
-        "name": "Sitzbank",
-        "info": "",
-        "category": "Sitzbank",
-        "source": "OpenStreetMap & Mitwirkende"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.3559572,
-          52.5460081
-        ]
-      },
-      "properties": {
-        "name": "Sitzbank",
-        "info": "",
-        "category": "Sitzbank",
-        "source": "OpenStreetMap & Mitwirkende"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.3560475,
-          52.5459497
-        ]
-      },
-      "properties": {
-        "name": "Sitzbank",
-        "info": "",
-        "category": "Sitzbank",
-        "source": "OpenStreetMap & Mitwirkende"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.3559079,
-          52.5459666
-        ]
-      },
-      "properties": {
-        "name": "Sitzbank",
-        "info": "",
-        "category": "Sitzbank",
-        "source": "OpenStreetMap & Mitwirkende"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.3556863,
-          52.5461201
-        ]
-      },
-      "properties": {
-        "name": "Sitzbank",
-        "info": "",
-        "category": "Sitzbank",
-        "source": "OpenStreetMap & Mitwirkende"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.3557437,
-          52.5461435
-        ]
-      },
-      "properties": {
-        "name": "Sitzbank",
-        "info": "",
-        "category": "Sitzbank",
-        "source": "OpenStreetMap & Mitwirkende"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.355695,
-          52.5461785
-        ]
-      },
-      "properties": {
-        "name": "Sitzbank",
-        "info": "",
-        "category": "Sitzbank",
-        "source": "OpenStreetMap & Mitwirkende"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.3557721,
-          52.5461114
-        ]
-      },
-      "properties": {
-        "name": "Sitzbank",
-        "info": "",
-        "category": "Sitzbank",
-        "source": "OpenStreetMap & Mitwirkende"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.3557945,
-          52.546105
-        ]
-      },
-      "properties": {
-        "name": "Sitzbank",
-        "info": "",
-        "category": "Sitzbank",
-        "source": "OpenStreetMap & Mitwirkende"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.3558051,
-          52.5460984
-        ]
-      },
-      "properties": {
-        "name": "Sitzbank",
-        "info": "",
-        "category": "Sitzbank",
-        "source": "OpenStreetMap & Mitwirkende"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.3558147,
-          52.5460921
-        ]
-      },
-      "properties": {
-        "name": "Sitzbank",
-        "info": "",
-        "category": "Sitzbank",
-        "source": "OpenStreetMap & Mitwirkende"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.3555578,
-          52.5462742
-        ]
-      },
-      "properties": {
-        "name": "Sitzbank",
-        "info": "",
-        "category": "Sitzbank",
-        "source": "OpenStreetMap & Mitwirkende"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.3554156,
-          52.5462292
-        ]
-      },
-      "properties": {
-        "name": "Sitzbank",
-        "info": "",
-        "category": "Sitzbank",
-        "source": "OpenStreetMap & Mitwirkende"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.3554601,
-          52.5461903
-        ]
-      },
-      "properties": {
-        "name": "Sitzbank",
-        "info": "",
-        "category": "Sitzbank",
-        "source": "OpenStreetMap & Mitwirkende"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.3555143,
-          52.5462984
-        ]
-      },
-      "properties": {
-        "name": "Sitzbank",
-        "info": "",
-        "category": "Sitzbank",
-        "source": "OpenStreetMap & Mitwirkende"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.3554918,
-          52.5461684
-        ]
-      },
-      "properties": {
-        "name": "Sitzbank",
-        "info": "",
-        "category": "Sitzbank",
-        "source": "OpenStreetMap & Mitwirkende"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.3555963,
-          52.5462356
-        ]
-      },
-      "properties": {
-        "name": "Sitzbank",
-        "info": "",
-        "category": "Sitzbank",
-        "source": "OpenStreetMap & Mitwirkende"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           13.2968937,
           52.4555371
         ]
@@ -532568,6 +534776,54 @@
         "coordinates": [
           13.4392502,
           52.5295737
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4222203,
+          52.5489704
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2911076,
+          52.4765619
+        ]
+      },
+      "properties": {
+        "name": "Sitzbank",
+        "info": "",
+        "category": "Sitzbank",
+        "source": "OpenStreetMap & Mitwirkende"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4342685,
+          52.4754359
         ]
       },
       "properties": {

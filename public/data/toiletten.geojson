@@ -5238,8 +5238,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.40936285,
-          52.54141376
+          13.40934583,
+          52.54139492
         ]
       },
       "properties": {
@@ -5302,8 +5302,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.41571673,
-          52.51324823
+          13.36137482,
+          52.49508898
         ]
       },
       "properties": {
@@ -5414,8 +5414,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.40936285,
-          52.54141376
+          13.44007233,
+          52.51284257
         ]
       },
       "properties": {
@@ -5432,6 +5432,38 @@
         "coordinates": [
           13.39028678,
           52.52590422
+        ]
+      },
+      "properties": {
+        "name": "Öffentliche Toilette",
+        "info": "Barrierefrei: nein | Preis: 0 €",
+        "category": "Toilette",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.43939611,
+          52.46967015
+        ]
+      },
+      "properties": {
+        "name": "Öffentliche Toilette",
+        "info": "Barrierefrei: nein | Preis: 0 €",
+        "category": "Toilette",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.57911452,
+          52.44354195
         ]
       },
       "properties": {
@@ -5485,6 +5517,54 @@
       "properties": {
         "name": "Öffentliche Toilette",
         "info": "Barrierefrei: ja | Preis: 0 €",
+        "category": "Toilette",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.44266199,
+          52.50145303
+        ]
+      },
+      "properties": {
+        "name": "Öffentliche Toilette",
+        "info": "Barrierefrei: nein | Preis: 0 €",
+        "category": "Toilette",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.36418587,
+          52.54984704
+        ]
+      },
+      "properties": {
+        "name": "Öffentliche Toilette",
+        "info": "Barrierefrei: nein | Preis: 0 €",
+        "category": "Toilette",
+        "source": "Land Berlin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.43327929,
+          52.49257086
+        ]
+      },
+      "properties": {
+        "name": "Öffentliche Toilette",
+        "info": "Barrierefrei: nein | Preis: 0 €",
         "category": "Toilette",
         "source": "Land Berlin"
       }
